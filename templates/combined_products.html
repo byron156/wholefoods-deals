@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whole Foods Combined Products</title>
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="icon" href="/static/favicon.ico">
+</head>
+
+<body>
+
+<h1>Whole Foods Deals</h1>
+<div class="page-nav">
+    <a href="/">Combined Products</a>
+    <a href="/flyer">Flyer</a>
+    <a href="/all-deals">All Deals</a>
+    <a href="/search-deals">Search Deals</a>
+</div>
+<h2 style="text-align: center;">{{ page_subtitle }}</h2>
+
+<div class="toolbar">
+    <input
+        id="product-search"
+        class="search-input"
+        type="search"
+        placeholder="Search by product name, ASIN, or source..."
+        aria-label="Search combined products"
+    >
+    <div id="search-meta" class="search-meta">Showing {{ deal_count }} products</div>
+</div>
+
+<div class="grid" id="product-grid">
+{% for p in products %}
+<div
+    class="card combined-card"
+    data-name="{{ (p.name or '')|lower }}"
+    data-asin="{{ (p.asin or '')|lower }}"
+    data-sources="{{ (' '.join(p.sources or []))|lower }}"
+>
+
+{% if p.image %}
+<div class="product-image">
+    <img src="{{ p.image }}">
+</div>
+{% endif %}
+
+<h2>{{ p.emoji }} {{ p.name }}</h2>
+
+<div class="source-list">
+{% for source in p.sources %}
+    <span class="source-pill">{{ source }}</span>
+{% endfor %}
+</div>
+
+{% if p.prime_price %}
+<p class="prime">
+    🔥 {{ p.prime_price }}
+</p>
+{% endif %}
+
+{% if p.basis_price %}
+<p class="regular regular-prominent">
+    Regular {{ p.basis_price }}
+</p>
+{% endif %}
+
+{% if p.discount %}
+<p class="discount">
+    {{ p.discount }}
+</p>
+{% endif %}
+
+<div class="card-meta">
+    {% if p.asin %}<div>ASIN: {{ p.asin }}</div>{% endif %}
+    {% if p.unit_price %}<div>Unit: {{ p.unit_price }}</div>{% endif %}
+    {% if p.url %}<div><a href="{{ p.url }}" target="_blank" rel="noreferrer">Open product</a></div>{% endif %}
+</div>
+
+</div>
+{% endfor %}
+</div>
+
+<script>
+const input = document.getElementById("product-search");
+const meta = document.getElementById("search-meta");
+const cards = Array.from(document.querySelectorAll(".combined-card"));
+
+function applySearch() {
+    const query = (input.value || "").trim().toLowerCase();
+    let visible = 0;
+
+    for (const card of cards) {
+        const haystack = [
+            card.dataset.name || "",
+            card.dataset.asin || "",
+            card.dataset.sources || "",
+        ].join(" ");
+
+        const match = !query || haystack.includes(query);
+        card.style.display = match ? "" : "none";
+        if (match) visible += 1;
+    }
+
+    meta.textContent = query
+        ? `Showing ${visible} matching products`
+        : `Showing ${visible} products`;
+}
+
+input.addEventListener("input", applySearch);
+</script>
+
+</body>
+</html>

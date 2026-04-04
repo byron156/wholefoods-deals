@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whole Foods Weekly Sales Newsletter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f6f3ee;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0b6b45, #157347);
+            color: white;
+            border-radius: 20px;
+            padding: 32px 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+            line-height: 1.1;
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .meta {
+            margin-top: 14px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            font-size: 26px;
+            margin: 28px 0 18px;
+            color: #0b6b45;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .image-wrap {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #faf8f4;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+
+        .image-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .emoji {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-size: 21px;
+            line-height: 1.25;
+            font-weight: 700;
+            margin: 0 0 14px 0;
+        }
+
+        .prime {
+            font-size: 30px;
+            line-height: 1.1;
+            font-weight: 900;
+            color: #d62828;
+            margin: 0 0 8px 0;
+        }
+
+        .regular {
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 700;
+            color: #444;
+            margin: 0 0 8px 0;
+        }
+
+        .discount {
+            font-size: 18px;
+            line-height: 1.2;
+            font-weight: 800;
+            color: #157347;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .prime {
+                font-size: 26px;
+            }
+
+            .regular,
+            .discount {
+                font-size: 16px;
+            }
+
+            .name {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Whole Foods Weekly Sales</h1>
+            <p>Columbus Circle flyer, turned into a cleaner digest.</p>
+            <div class="meta">
+                Showing {{ deal_count }} deals
+            </div>
+        </div>
+
+        <h2 class="section-title">This Week’s Highlights</h2>
+
+        <div class="newsletter-copy">
+            <p>
+                Save on
+                {% for p in products %}
+                    <strong>{{ p.name }}</strong>{% if p.prime_price %} for <strong>{{ p.prime_price }}</strong>{% endif %}{% if p.basis_price %} (regularly {{ p.basis_price }}){% endif %}{% if p.discount %} — {{ p.discount }}{% endif %}{% if not loop.last %}, {% else %}.{% endif %}
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</body>
+</html>

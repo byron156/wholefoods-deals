@@ -1,0 +1,49 @@
+{
+  "search_url": "https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type:23566065011&s=relevanceblender",
+  "product_count": 1414,
+  "network_batch_count": 0,
+  "sort_runs": [
+    {
+      "sort_label": "Featured",
+      "sort_rank": "relevanceblender",
+      "new_products_found": 409,
+      "captured_events": 409,
+      "total_products_after_sort": 409
+    },
+    {
+      "sort_label": "Price: Low to High",
+      "sort_rank": "price-asc-rank",
+      "new_products_found": 330,
+      "captured_events": 330,
+      "total_products_after_sort": 739
+    },
+    {
+      "sort_label": "Price: High to Low",
+      "sort_rank": "price-desc-rank",
+      "new_products_found": 361,
+      "captured_events": 361,
+      "total_products_after_sort": 1100
+    },
+    {
+      "sort_label": "Newest Arrivals",
+      "sort_rank": "date-desc-rank",
+      "new_products_found": 241,
+      "captured_events": 241,
+      "total_products_after_sort": 1341
+    },
+    {
+      "sort_label": "Low prices",
+      "sort_rank": "low-prices-rank",
+      "new_products_found": 44,
+      "captured_events": 44,
+      "total_products_after_sort": 1385
+    },
+    {
+      "sort_label": "Best Sellers",
+      "sort_rank": "exact-aware-popularity-rank",
+      "new_products_found": 29,
+      "captured_events": 29,
+      "total_products_after_sort": 1414
+    }
+  ]
+}

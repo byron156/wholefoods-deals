@@ -1,0 +1,23 @@
+{
+  "routes": [
+    "/",
+    "/all-deals",
+    "/all-deals-newsletter",
+    "/combined-products",
+    "/flyer",
+    "/newsletter",
+    "/search-deals"
+  ],
+  "copied_data_files": [
+    "flyer_products.json",
+    "flyer_report.json",
+    "discovered_products.json",
+    "discovered_recommendations.json",
+    "captured_batches.json",
+    "search_deals_products.json",
+    "search_deals_report.json",
+    "combined_products.json",
+    "combined_report.json",
+    "flyer_vs_all_deals_report.json"
+  ]
+}

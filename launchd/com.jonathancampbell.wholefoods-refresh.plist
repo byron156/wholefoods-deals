@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.jonathancampbell.wholefoods-refresh</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/jonathancampbell/Documents/wholefoods_deals/scripts/daily_refresh.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/jonathancampbell/Documents/wholefoods_deals</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/jonathancampbell/Documents/wholefoods_deals/logs/daily_refresh.stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/jonathancampbell/Documents/wholefoods_deals/logs/daily_refresh.stderr.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
