@@ -180,6 +180,9 @@ def clean_regular_price_text(text):
     cleaned = re.sub(r"^\s*regular\s+", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned).strip()
 
+    if "prices vary" in cleaned.lower():
+        return "prices vary"
+
     if not cleaned:
         return None
 
@@ -520,6 +523,21 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
     candidate_regular = clean_regular_price_text(regular_price)
     candidate_prime = prime_price or current_price
     candidate_discount = clean_discount_text(discount_text)
+    candidate_current = current_price
+
+    promo_candidates = [
+        clean_discount_text(candidate_discount),
+        clean_discount_text(candidate_prime if is_percent_off_text(candidate_prime) else None),
+        clean_discount_text(candidate_current if is_percent_off_text(candidate_current) else None),
+    ]
+    promo_candidates = [value for value in promo_candidates if value and value != "0% off"]
+    strongest_promo = None
+    if promo_candidates:
+        strongest_promo = max(promo_candidates, key=extract_discount_sort_value)
+
+    if candidate_prime and is_percent_off_text(candidate_prime):
+        display_regular_price = add_ea_if_needed(candidate_regular) if candidate_regular else None
+        return display_regular_price, None, strongest_promo
 
     if candidate_regular and candidate_prime:
         display_prime_price, computed_discount, display_regular_price = compute_discount_and_prime(
@@ -559,12 +577,14 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
         return display_regular_price, display_prime_price, final_discount
 
     if candidate_regular:
-        return add_ea_if_needed(candidate_regular), None, candidate_discount
+        return add_ea_if_needed(candidate_regular), None, strongest_promo or candidate_discount
 
     if candidate_prime:
-        return None, ensure_price_has_suffix(candidate_prime, regular_price), candidate_discount
+        if is_percent_off_text(candidate_prime):
+            return None, None, strongest_promo or clean_percent_text(candidate_prime)
+        return None, ensure_price_has_suffix(candidate_prime, regular_price), strongest_promo or candidate_discount
 
-    return None, None, candidate_discount
+    return None, None, strongest_promo or candidate_discount
 
 
 def standardize_product_record(
