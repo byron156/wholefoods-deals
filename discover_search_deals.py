@@ -2,7 +2,7 @@ import json
 import re
 from pathlib import Path
 from typing import Optional
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
 
 from playwright.sync_api import sync_playwright
 
@@ -16,7 +16,11 @@ from category_shop import (
 )
 
 
-SEARCH_DEALS_URL = "https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type:23566065011&s=relevanceblender"
+BASE_DEALS_RH = "p_n_deal_type:23566065011"
+SEARCH_DEALS_BASE_URL = "https://www.wholefoodsmarket.com/grocery/search"
+SEARCH_DEALS_URL = (
+    f"{SEARCH_DEALS_BASE_URL}?{urlencode({'k': '', 'rh': BASE_DEALS_RH, 's': 'relevanceblender'})}"
+)
 GOOGLE_CHROME_EXECUTABLE = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 HEADLESS_CHROME_USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -35,13 +39,88 @@ SCROLL_PAUSE_MS = 700
 LOAD_MORE_SETTLE_MS = 1800
 FINAL_SETTLE_MS = 1500
 POST_STORE_SET_WAIT_MS = 2500
-SORT_RUNS = [
-    ("Featured", "relevanceblender"),
+BASE_SORT_RUNS = [
+    ("Relevance", "relevanceblender"),
     ("Price: Low to High", "price-asc-rank"),
     ("Price: High to Low", "price-desc-rank"),
     ("Newest Arrivals", "date-desc-rank"),
+    ("Get it fast", "get-it-fast-rank"),
+    ("Most purchased", "most-purchased-rank"),
     ("Low prices", "low-prices-rank"),
     ("Best Sellers", "exact-aware-popularity-rank"),
+]
+FILTER_RUNS = [
+    {
+        "filter_label": "Amazon Brands",
+        "rh_values": ["p_n_g-1001321510111:24677333011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "FSA or HSA Eligible",
+        "rh_values": ["p_n_hba_program:17904039011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Any Feature",
+        "rh_values": ["p_n_cpf_labels:121136630011"],
+        "sorts": [
+            ("Price: Low to High", "price-asc-rank"),
+            ("Price: High to Low", "price-desc-rank"),
+        ],
+    },
+    {
+        "filter_label": "Animal Welfare",
+        "rh_values": ["p_n_cpf_labels:116845695011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Biodiversity",
+        "rh_values": ["p_n_cpf_labels:116845691011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Carbon Impact",
+        "rh_values": ["p_n_cpf_labels:116845688011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Farming Practices",
+        "rh_values": ["p_n_cpf_labels:121191385011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Forestry Practices",
+        "rh_values": ["p_n_cpf_labels:116845687011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Manufacturing Practices",
+        "rh_values": ["p_n_cpf_labels:116845690011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Organic Content",
+        "rh_values": ["p_n_cpf_labels:116845684011"],
+        "sorts": [
+            ("Price: Low to High", "price-asc-rank"),
+            ("Price: High to Low", "price-desc-rank"),
+        ],
+    },
+    {
+        "filter_label": "Packaging Efficiency",
+        "rh_values": ["p_n_cpf_labels:116845682011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Safer Chemicals",
+        "rh_values": ["p_n_cpf_labels:116845683011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
+    {
+        "filter_label": "Worker Wellbeing",
+        "rh_values": ["p_n_cpf_labels:116845686011"],
+        "sorts": [("Relevance", "relevanceblender")],
+    },
 ]
 
 
@@ -518,6 +597,39 @@ def wait_for_results_growth(page, previous_height: int, previous_tile_count: int
         remaining -= 350
 
     return False
+
+
+def build_search_url(sort_rank: str, extra_rh_values: Optional[list[str]] = None) -> str:
+    rh_values = [BASE_DEALS_RH]
+    if extra_rh_values:
+        rh_values.extend(extra_rh_values)
+
+    return f"{SEARCH_DEALS_BASE_URL}?{urlencode({'k': '', 'rh': ','.join(rh_values), 's': sort_rank})}"
+
+
+def open_search_run(page, run_label: str, sort_label: str, sort_rank: str, extra_rh_values: Optional[list[str]] = None) -> None:
+    target_url = build_search_url(sort_rank, extra_rh_values=extra_rh_values)
+    print(f"Opening run: {run_label} ({sort_label})")
+    print(f"Run URL: {target_url}")
+
+    page.goto(target_url, wait_until="domcontentloaded")
+    page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
+    dismiss_popups(page)
+
+    if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=5000):
+        print(f"{run_label}: store check failed after navigation; retrying the store modal flow.")
+        set_store_from_search_page(page)
+        page.goto(target_url, wait_until="domcontentloaded")
+        page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
+        dismiss_popups(page)
+
+        if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=6000):
+            raise RuntimeError(
+                f'The page did not keep "Columbus Circle" selected while opening the run "{run_label}".'
+            )
+
+    if not wait_for_grid_to_appear(page, timeout_ms=12000):
+        raise RuntimeError(f'Products did not render for the run "{run_label}".')
 
 
 def format_money(value):
@@ -1025,16 +1137,16 @@ def launch_browser(playwright):
         try:
             browser = playwright.chromium.launch(
                 executable_path=str(GOOGLE_CHROME_EXECUTABLE),
-                headless=True,
+                headless=False,
                 slow_mo=35,
             )
-            print("Using installed Google Chrome in headless mode.")
+            print("Using installed Google Chrome in visible mode.")
             return browser
         except Exception as e:
             print(f"Installed Google Chrome launch failed, falling back to Chromium: {e}")
 
-    print("Using Playwright Chromium in headless mode.")
-    return playwright.chromium.launch(headless=True, slow_mo=35)
+    print("Using Playwright Chromium in visible mode.")
+    return playwright.chromium.launch(headless=False, slow_mo=35)
 
 
 def wait_for_store_modal(page, timeout_ms: int = 8000):
@@ -1329,6 +1441,14 @@ def discover_search_deals() -> dict:
     products_by_asin = {}
     captured_batch_urls = []
     sort_runs_summary = []
+    run_plans = [
+        {
+            "filter_label": None,
+            "rh_values": [],
+            "sorts": BASE_SORT_RUNS,
+        },
+        *FILTER_RUNS,
+    ]
 
     with sync_playwright() as p:
         browser = launch_browser(p)
@@ -1360,21 +1480,34 @@ def discover_search_deals() -> dict:
         dismiss_popups(page)
         wait_for_grid_to_appear(page, timeout_ms=10000)
 
-        for sort_index, (sort_label, sort_rank) in enumerate(SORT_RUNS):
-            if sort_index > 0:
-                change_sort(page, sort_label, sort_rank)
+        for plan_index, plan in enumerate(run_plans):
+            filter_label = plan["filter_label"]
+            rh_values = plan["rh_values"]
+            sorts = plan["sorts"]
 
-            before_sort_count = len(products_by_asin)
-            added_for_sort = crawl_current_sort(page, products_by_asin, sort_label)
-            sort_runs_summary.append(
-                {
-                    "sort_label": sort_label,
-                    "sort_rank": sort_rank,
-                    "new_products_found": len(products_by_asin) - before_sort_count,
-                    "captured_events": added_for_sort,
-                    "total_products_after_sort": len(products_by_asin),
-                }
-            )
+            if plan_index == 0:
+                print("\nRunning base search deals crawl across all requested sorts.")
+            else:
+                print(f"\nRunning filtered crawl for: {filter_label}")
+
+            for sort_label, sort_rank in sorts:
+                run_label = sort_label if not filter_label else f"{filter_label} / {sort_label}"
+                open_search_run(page, run_label, sort_label, sort_rank, extra_rh_values=rh_values)
+
+                before_sort_count = len(products_by_asin)
+                added_for_sort = crawl_current_sort(page, products_by_asin, run_label)
+                sort_runs_summary.append(
+                    {
+                        "filter_label": filter_label,
+                        "rh_values": rh_values,
+                        "sort_label": sort_label,
+                        "sort_rank": sort_rank,
+                        "run_label": run_label,
+                        "new_products_found": len(products_by_asin) - before_sort_count,
+                        "captured_events": added_for_sort,
+                        "total_products_after_sort": len(products_by_asin),
+                    }
+                )
 
         browser.close()
 
