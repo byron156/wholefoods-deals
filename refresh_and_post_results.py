@@ -90,7 +90,6 @@ def main():
     print("  /flyer")
     print("  /all-deals")
     print("  /search-deals")
-    print("  /combined-products")
 
 
 if __name__ == "__main__":
