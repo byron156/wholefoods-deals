@@ -172,6 +172,29 @@ def clean_discount_text(text):
     return text
 
 
+def extract_discount_sort_value(text):
+    if not text:
+        return -1
+
+    matches = [int(value) for value in re.findall(r"(\d+)\s*%", text, re.IGNORECASE)]
+    if not matches:
+        return -1
+
+    return max(matches)
+
+
+def sort_products_for_display(products):
+    ordered = list(products)
+    ordered.sort(
+        key=lambda product: (
+            -extract_discount_sort_value(product.get("discount")),
+            -product.get("source_count", 0),
+            normalize_text_key(product.get("name")),
+        )
+    )
+    return ordered
+
+
 def format_price(value, suffix=""):
     if value is None:
         return None
@@ -826,7 +849,7 @@ def validate_product_fields(products, label="products"):
 
 @app.route("/")
 def combined_products_home():
-    products = load_combined_products()
+    products = sort_products_for_display(load_combined_products())
     deal_count = len(products)
     return render_template(
         "combined_products.html",
@@ -838,7 +861,7 @@ def combined_products_home():
 
 @app.route("/flyer")
 def deals():
-    products = load_saved_flyer_products()
+    products = sort_products_for_display(load_saved_flyer_products())
     deal_count = len(products)
     return render_template(
         "deals.html",
@@ -857,7 +880,7 @@ def newsletter():
 
 @app.route("/all-deals")
 def all_deals():
-    products = load_all_deals()
+    products = sort_products_for_display(load_all_deals())
     deal_count = len(products)
     return render_template(
         "all_deals.html",
@@ -869,7 +892,7 @@ def all_deals():
 
 @app.route("/search-deals")
 def search_deals():
-    products = load_search_deals()
+    products = sort_products_for_display(load_search_deals())
     deal_count = len(products)
     return render_template(
         "search_deals.html",
@@ -888,7 +911,7 @@ def all_deals_newsletter():
 
 @app.route("/combined-products")
 def combined_products():
-    products = load_combined_products()
+    products = sort_products_for_display(load_combined_products())
     deal_count = len(products)
     return render_template(
         "combined_products.html",

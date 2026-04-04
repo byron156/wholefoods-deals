@@ -1137,16 +1137,16 @@ def launch_browser(playwright):
         try:
             browser = playwright.chromium.launch(
                 executable_path=str(GOOGLE_CHROME_EXECUTABLE),
-                headless=False,
+                headless=True,
                 slow_mo=35,
             )
-            print("Using installed Google Chrome in visible mode.")
+            print("Using installed Google Chrome in headless mode.")
             return browser
         except Exception as e:
             print(f"Installed Google Chrome launch failed, falling back to Chromium: {e}")
 
-    print("Using Playwright Chromium in visible mode.")
-    return playwright.chromium.launch(headless=False, slow_mo=35)
+    print("Using Playwright Chromium in headless mode.")
+    return playwright.chromium.launch(headless=True, slow_mo=35)
 
 
 def wait_for_store_modal(page, timeout_ms: int = 8000):
