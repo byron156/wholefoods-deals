@@ -25,7 +25,6 @@ ROUTES = {
     "/flyer": DIST_DIR / "flyer" / "index.html",
     "/all-deals": DIST_DIR / "all-deals" / "index.html",
     "/search-deals": DIST_DIR / "search-deals" / "index.html",
-    "/combined-products": DIST_DIR / "combined-products" / "index.html",
     "/newsletter": DIST_DIR / "newsletter" / "index.html",
     "/all-deals-newsletter": DIST_DIR / "all-deals-newsletter" / "index.html",
 }

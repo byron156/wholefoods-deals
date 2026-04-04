@@ -172,6 +172,20 @@ def clean_discount_text(text):
     return text
 
 
+def clean_regular_price_text(text):
+    if not text:
+        return None
+
+    cleaned = text.strip()
+    cleaned = re.sub(r"^\s*regular\s+", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+
+    if not cleaned:
+        return None
+
+    return cleaned
+
+
 def extract_discount_sort_value(text):
     if not text:
         return -1
@@ -309,6 +323,9 @@ def add_ea_if_needed(price_str):
     if is_non_price_promo_text(s):
         return clean_percent_text(s) if is_percent_off_text(s) else s
 
+    if "prices vary" in lowered:
+        return clean_regular_price_text(s)
+
     if "/lb" in lowered or " ea" in lowered or lowered.endswith("ea"):
         return s
 
@@ -336,6 +353,9 @@ def ensure_price_has_suffix(price_str, regular_price=None):
 
     if is_non_price_promo_text(s):
         return clean_percent_text(s) if is_percent_off_text(s) else s
+
+    if "prices vary" in lowered:
+        return clean_regular_price_text(s)
 
     if "/lb" in lowered or " ea" in lowered or lowered.endswith("ea"):
         return s
@@ -497,7 +517,7 @@ def compute_discount_and_prime(regular_price, prime_price):
 
 
 def resolve_display_pricing(regular_price=None, prime_price=None, current_price=None, discount_text=None):
-    candidate_regular = regular_price
+    candidate_regular = clean_regular_price_text(regular_price)
     candidate_prime = prime_price or current_price
     candidate_discount = clean_discount_text(discount_text)
 
@@ -510,8 +530,12 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
         if not display_regular_price:
             display_regular_price = add_ea_if_needed(candidate_regular or current_price or candidate_prime)
 
-        if not computed_discount and display_prime_price and display_regular_price:
-            computed_discount = "0% off"
+        if computed_discount == "0% off":
+            computed_discount = None
+
+        if display_regular_price and display_prime_price:
+            if normalize_text_key(display_regular_price) == normalize_text_key(display_prime_price):
+                display_regular_price = None
 
         return display_regular_price, display_prime_price, computed_discount
 
@@ -524,7 +548,15 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
         if not display_regular_price:
             display_regular_price = add_ea_if_needed(candidate_regular)
 
-        return display_regular_price, display_prime_price, computed_discount or candidate_discount
+        final_discount = computed_discount or candidate_discount
+        if final_discount == "0% off":
+            final_discount = None
+
+        if display_regular_price and display_prime_price:
+            if normalize_text_key(display_regular_price) == normalize_text_key(display_prime_price):
+                display_regular_price = None
+
+        return display_regular_price, display_prime_price, final_discount
 
     if candidate_regular:
         return add_ea_if_needed(candidate_regular), None, candidate_discount
@@ -604,7 +636,7 @@ def load_all_deals():
                 url=p.get("url"),
                 unit_price=p.get("unit_price"),
                 current_price=p.get("current_price"),
-                regular_price=p.get("basis_price") or p.get("current_price"),
+                regular_price=p.get("basis_price"),
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
@@ -637,7 +669,7 @@ def load_search_deals():
                 url=p.get("url"),
                 unit_price=p.get("unit_price"),
                 current_price=p.get("current_price"),
-                regular_price=p.get("basis_price") or p.get("current_price"),
+                regular_price=p.get("basis_price"),
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
@@ -670,7 +702,7 @@ def load_saved_flyer_products():
                 url=p.get("url"),
                 unit_price=p.get("unit_price"),
                 current_price=p.get("current_price") or p.get("sale_price"),
-                regular_price=p.get("basis_price") or p.get("sale_price"),
+                regular_price=p.get("basis_price"),
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
@@ -734,7 +766,7 @@ def normalized_product_for_source(product, source_name):
         url=product.get("url"),
         unit_price=product.get("unit_price"),
         current_price=product.get("current_price") or product.get("sale_price"),
-        regular_price=product.get("basis_price") or product.get("sale_price"),
+        regular_price=product.get("basis_price"),
         prime_price=product.get("prime_price"),
         discount_text=product.get("discount"),
         emoji=product.get("emoji"),
@@ -782,7 +814,27 @@ def load_combined_products():
         return build_combined_products(flyer_products, all_deals_products, search_deals_products)
 
     print("Loaded", len(products), "combined products")
-    return products
+    normalized_products = []
+    for p in products:
+        normalized = standardize_product_record(
+            asin=p.get("asin"),
+            asins=p.get("asins"),
+            name=p.get("name"),
+            image=p.get("image"),
+            url=p.get("url"),
+            unit_price=p.get("unit_price"),
+            current_price=p.get("current_price") or p.get("sale_price"),
+            regular_price=p.get("basis_price"),
+            prime_price=p.get("prime_price"),
+            discount_text=p.get("discount"),
+            emoji=p.get("emoji"),
+        )
+        sources = list(p.get("sources") or [])
+        normalized["sources"] = sources
+        normalized["source_count"] = len(sources)
+        normalized_products.append(normalized)
+
+    return normalized_products
 
 
 def fetch_products():
@@ -804,7 +856,7 @@ def fetch_products():
             standardize_product_record(
                 name=p.get("productName", "Unknown Product"),
                 image=p.get("productImage"),
-                regular_price=p.get("regularPrice") or p.get("salePrice"),
+                regular_price=p.get("regularPrice"),
                 current_price=p.get("salePrice"),
                 prime_price=p.get("primePrice"),
                 asins=p.get("asinsList", []),
@@ -907,18 +959,6 @@ def all_deals_newsletter():
     products = load_all_deals()
     deal_count = len(products)
     return render_template("all_deals_newsletter.html", products=products, deal_count=deal_count)
-
-
-@app.route("/combined-products")
-def combined_products():
-    products = sort_products_for_display(load_combined_products())
-    deal_count = len(products)
-    return render_template(
-        "combined_products.html",
-        products=products,
-        deal_count=deal_count,
-        page_subtitle="Search combined products across flyer, all deals, and search deals",
-    )
 
 
 if __name__ == "__main__":
