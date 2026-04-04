@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-PROJECT_DIR="/Users/jonathancampbell/Documents/wholefoods_deals"
+PROJECT_DIR="/Users/jonathancampbell/Code/wholefoods_deals"
 PYTHON_BIN="$PROJECT_DIR/.venv/bin/python3"
 LOG_DIR="$PROJECT_DIR/logs"
 
@@ -36,8 +36,8 @@ if ! git remote get-url origin >/dev/null 2>&1; then
   exit 1
 fi
 
-"$PYTHON_BIN" refresh_and_post_results.py
-"$PYTHON_BIN" build_static_site.py
+"$PYTHON_BIN" -u refresh_and_post_results.py
+"$PYTHON_BIN" -u build_static_site.py
 
 git add \
   flyer_products.json \

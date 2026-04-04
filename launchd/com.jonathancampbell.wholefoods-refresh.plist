@@ -7,11 +7,11 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/jonathancampbell/Documents/wholefoods_deals/scripts/daily_refresh.sh</string>
+        <string>/Users/jonathancampbell/Code/wholefoods_deals/scripts/daily_refresh.sh</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/jonathancampbell/Documents/wholefoods_deals</string>
+    <string>/Users/jonathancampbell/Code/wholefoods_deals</string>
 
     <key>StartCalendarInterval</key>
     <dict>
@@ -22,10 +22,10 @@
     </dict>
 
     <key>StandardOutPath</key>
-    <string>/Users/jonathancampbell/Documents/wholefoods_deals/logs/daily_refresh.stdout.log</string>
+    <string>/Users/jonathancampbell/Code/wholefoods_deals/logs/daily_refresh.stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/Users/jonathancampbell/Documents/wholefoods_deals/logs/daily_refresh.stderr.log</string>
+    <string>/Users/jonathancampbell/Code/wholefoods_deals/logs/daily_refresh.stderr.log</string>
 
     <key>RunAtLoad</key>
     <false/>
