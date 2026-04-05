@@ -1,7 +1,24 @@
 {
   "subcategory_overrides_by_key": {},
-  "subcategory_overrides_by_signature": {},
+  "subcategory_overrides_by_signature": {
+    "subcategory:whole foods:whole foods market:milk & creamers": "Candy & Gummies"
+  },
   "brand_overrides_by_key": {},
   "brand_overrides_by_signature": {},
-  "category_order": {}
+  "category_order": {
+    "Whole Foods": [
+      "Snacks",
+      "Pantry",
+      "Supplements & Wellness",
+      "Dairy & Eggs",
+      "Beverages",
+      "Produce",
+      "Meat & Seafood",
+      "Bakery",
+      "Beauty & Personal Care",
+      "Frozen",
+      "Household",
+      "Prepared Foods"
+    ]
+  }
 }
