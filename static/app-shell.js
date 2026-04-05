@@ -4,7 +4,7 @@
     return;
   }
 
-  const STORAGE_KEY = "wholefoods-deals-profile-v5";
+  const STORAGE_KEY = "wholefoods-deals-profile-v6";
   const rawData = JSON.parse(appDataNode.textContent || "{}");
   const products = (rawData.products || []).map((product, index) => ({
     ...product,
@@ -30,15 +30,23 @@
     searchMeta: document.getElementById("search-meta"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
     feedGrid: document.getElementById("feed-grid"),
-    feedCount: document.getElementById("feed-count"),
-    feedTitle: document.getElementById("feed-title"),
+    categorySheetBackdrop: document.getElementById("category-sheet-backdrop"),
+    categorySheet: document.getElementById("category-sheet"),
+    categorySheetTitle: document.getElementById("category-sheet-title"),
+    categorySheetCopy: document.getElementById("category-sheet-copy"),
+    categoryScopeRow: document.getElementById("category-scope-row"),
+    categoryChoiceRow: document.getElementById("category-choice-row"),
+    categorySheetClose: document.getElementById("category-sheet-close"),
   };
+  const categoryList = Array.from(new Set(products.map((product) => product.category || "Pantry"))).sort((left, right) => left.localeCompare(right));
 
   function getDefaultProfile() {
     return {
       selectedStoreIds: stores.filter((store) => store.is_active).map((store) => store.id),
       likedKeys: [],
       dislikedKeys: [],
+      categoryOverridesByKey: {},
+      categoryOverridesBySignature: {},
     };
   }
 
@@ -55,6 +63,8 @@
     profile: loadProfile(),
     query: "",
     activeRetailer: retailerList[0] || "Whole Foods",
+    categoryTargetKey: null,
+    categoryScope: "similar",
   };
 
   function saveProfile() {
@@ -88,7 +98,7 @@
     const haystack = [
       product.name,
       product.brand,
-      product.category,
+      effectiveCategory(product),
       product.subcategory,
       product.asin,
       (product.tags || []).join(" "),
@@ -179,6 +189,7 @@
 
   function preferenceScore(product, liked, disliked) {
     let score = 0;
+    const category = effectiveCategory(product);
 
     if ((state.profile.likedKeys || []).includes(product.key)) {
       score += 24;
@@ -187,8 +198,8 @@
       score -= 90;
     }
 
-    score += (liked.categories[product.category] || 0) * 16;
-    score -= (disliked.categories[product.category] || 0) * 20;
+    score += (liked.categories[category] || 0) * 16;
+    score -= (disliked.categories[category] || 0) * 20;
 
     if (product.brand) {
       score += (liked.brands[product.brand] || 0) * 16;
@@ -218,6 +229,35 @@
     return retailerProducts().filter((product) => textContainsQuery(product, state.query));
   }
 
+  function similarSignature(product) {
+    const retailer = (product.retailer || "Unknown").toLowerCase();
+    if (product.brand) {
+      return `brand:${retailer}:${product.brand.toLowerCase()}`;
+    }
+    if (product.subcategory) {
+      return `subcategory:${retailer}:${product.subcategory.toLowerCase()}`;
+    }
+    if ((product.tags || []).length) {
+      return `tag:${retailer}:${product.tags[0].toLowerCase()}`;
+    }
+    return null;
+  }
+
+  function effectiveCategory(product) {
+    const itemOverride = (state.profile.categoryOverridesByKey || {})[product.key];
+    if (itemOverride) {
+      return itemOverride;
+    }
+    const signature = similarSignature(product);
+    if (signature) {
+      const similarOverride = (state.profile.categoryOverridesBySignature || {})[signature];
+      if (similarOverride) {
+        return similarOverride;
+      }
+    }
+    return product.category || "Pantry";
+  }
+
   function rankProductList(list) {
     const liked = buildAffinityCounts(state.profile.likedKeys);
     const disliked = buildAffinityCounts(state.profile.dislikedKeys);
@@ -239,12 +279,10 @@
   }
 
   function buildCategoryShelves() {
-    const liked = buildAffinityCounts(state.profile.likedKeys);
-    const disliked = buildAffinityCounts(state.profile.dislikedKeys);
     const grouped = new Map();
 
     retailerProducts().forEach((product) => {
-      const category = product.category || "Pantry";
+      const category = effectiveCategory(product);
       if (!grouped.has(category)) {
         grouped.set(category, []);
       }
@@ -255,13 +293,9 @@
       .map(([category, items]) => ({
         category,
         total: items.length,
-        preferenceWeight: (liked.categories[category] || 0) - (disliked.categories[category] || 0),
         items: rankProductList(items).slice(0, 18),
       }))
       .sort((left, right) => {
-        if (right.preferenceWeight !== left.preferenceWeight) {
-          return right.preferenceWeight - left.preferenceWeight;
-        }
         if (right.total !== left.total) {
           return right.total - left.total;
         }
@@ -355,6 +389,7 @@
           <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">More</button>
           <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">Less</button>
         </div>
+        <button class="link-action" data-action="change-category" data-key="${escapeHtml(product.key)}" type="button">This doesn't belong here</button>
       </article>
     `;
   }
@@ -369,8 +404,6 @@
     nodes.feedGrid.className = "product-grid is-search-results";
     nodes.feedGrid.innerHTML = ranked.map(renderProductCard).join("");
     nodes.searchMeta.textContent = `${visibleProducts().length.toLocaleString()} results`;
-    nodes.feedTitle.textContent = `Search in ${state.activeRetailer}`;
-    nodes.feedCount.textContent = `${ranked.length.toLocaleString()} shown`;
   }
 
   function renderShelves() {
@@ -386,7 +419,6 @@
         <section class="category-section">
           <div class="category-section-head">
             <h3>${escapeHtml(shelf.category)}</h3>
-            <span class="mini-pill">${shelf.total.toLocaleString()}</span>
           </div>
           <div class="category-track">
             ${shelf.items.map(renderProductCard).join("")}
@@ -397,8 +429,58 @@
 
     const liveCount = retailerProducts().length;
     nodes.searchMeta.textContent = `${liveCount.toLocaleString()} live deals`;
-    nodes.feedTitle.textContent = `Top deals in ${state.activeRetailer}`;
-    nodes.feedCount.textContent = `${shelves.length.toLocaleString()} categories`;
+  }
+
+  function openCategorySheet(product) {
+    state.categoryTargetKey = product.key;
+    state.categoryScope = similarSignature(product) ? "similar" : "item";
+    nodes.categorySheetTitle.textContent = "Move this item";
+    nodes.categorySheetCopy.textContent = "Choose a better shelf for this item or similar items.";
+    renderCategorySheet(product);
+    nodes.categorySheetBackdrop.classList.remove("hidden");
+    nodes.categorySheet.classList.remove("hidden");
+    nodes.categorySheet.setAttribute("aria-hidden", "false");
+  }
+
+  function closeCategorySheet() {
+    state.categoryTargetKey = null;
+    nodes.categorySheetBackdrop.classList.add("hidden");
+    nodes.categorySheet.classList.add("hidden");
+    nodes.categorySheet.setAttribute("aria-hidden", "true");
+  }
+
+  function renderCategorySheet(product) {
+    const hasSimilar = Boolean(similarSignature(product));
+    const displayCategory = effectiveCategory(product);
+    nodes.categoryScopeRow.innerHTML = [
+      `<button class="chip ${state.categoryScope === "item" ? "is-selected" : ""}" data-category-scope="item" type="button">Just this item</button>`,
+      hasSimilar
+        ? `<button class="chip ${state.categoryScope === "similar" ? "is-selected" : ""}" data-category-scope="similar" type="button">Similar items too</button>`
+        : "",
+    ].join("");
+    nodes.categoryChoiceRow.innerHTML = categoryList
+      .map((category) => `<button class="chip ${displayCategory === category ? "is-selected" : ""}" data-category-choice="${escapeHtml(category)}" type="button">${escapeHtml(category)}</button>`)
+      .join("");
+  }
+
+  function applyCategoryOverride(product, category) {
+    if (state.categoryScope === "similar") {
+      const signature = similarSignature(product);
+      if (signature) {
+        state.profile.categoryOverridesBySignature = {
+          ...(state.profile.categoryOverridesBySignature || {}),
+          [signature]: category,
+        };
+      }
+    } else {
+      state.profile.categoryOverridesByKey = {
+        ...(state.profile.categoryOverridesByKey || {}),
+        [product.key]: category,
+      };
+    }
+    saveProfile();
+    closeCategorySheet();
+    renderFeed();
   }
 
   function applyPreferenceSignals(product, direction) {
@@ -436,6 +518,11 @@
     if (action === "less-like-this") {
       applyPreferenceSignals(product, "down");
       renderFeed();
+      return;
+    }
+
+    if (action === "change-category") {
+      openCategorySheet(product);
     }
   }
 
@@ -450,8 +537,27 @@
     if (retailerButton) {
       state.activeRetailer = retailerButton.dataset.retailer;
       renderFeed();
+      return;
+    }
+
+    const scopeButton = event.target.closest("[data-category-scope]");
+    if (scopeButton && state.categoryTargetKey) {
+      state.categoryScope = scopeButton.dataset.categoryScope;
+      renderCategorySheet(productByKey.get(state.categoryTargetKey));
+      return;
+    }
+
+    const categoryButton = event.target.closest("[data-category-choice]");
+    if (categoryButton && state.categoryTargetKey) {
+      const product = productByKey.get(state.categoryTargetKey);
+      if (product) {
+        applyCategoryOverride(product, categoryButton.dataset.categoryChoice);
+      }
     }
   });
+
+  nodes.categorySheetBackdrop.addEventListener("click", closeCategorySheet);
+  nodes.categorySheetClose.addEventListener("click", closeCategorySheet);
 
   nodes.searchInput.addEventListener("input", () => {
     state.query = (nodes.searchInput.value || "").trim().toLowerCase();

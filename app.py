@@ -35,14 +35,15 @@ CATEGORY_PROFILES = {
             "romaine", "broccoli florets", "cauliflower florets", "avocado", "apple",
             "banana", "grapes", "berries", "blueberries", "strawberries", "raspberries",
             "blackberries", "cherries", "fresh cherries", "citrus", "lettuce", "tomato", "onion", "carrot", "mango",
-            "kiwi", "pear", "peach", "plum", "melon", "pineapple", "fresh mushroom", "mushroom", "mushrooms",
+            "kiwi", "pear", "peach", "plum", "melon", "pineapple", "fresh mushroom", "mushroom", "mushrooms", "asparagus",
         ],
         "medium": ["produce", "fruit", "vegetable", "salad", "greens", "herbs"],
         "weak": ["cherry", "lemon", "orange", "lime"],
         "exclude": [
             "cherry cola", "cherry gummies", "gummy", "candy", "chocolate", "cookie",
             "granola bar", "protein bar", "sparkling", "seltzer", "juice box",
-            "mushroom coffee", "mushroom powder", "mushroom supplement",
+            "mushroom coffee", "mushroom powder", "mushroom supplement", "broth",
+            "pasta", "sauce", "soup", "canned", "meal", "cheese",
         ],
     },
     "Meat & Seafood": {
@@ -53,7 +54,11 @@ CATEGORY_PROFILES = {
         ],
         "medium": ["meat", "seafood", "poultry", "jerky"],
         "weak": [],
-        "exclude": ["dog food"],
+        "exclude": [
+            "dog food", "chips", "chip", "cracker", "crackers", "pretzel", "pretzels",
+            "popcorn", "crisps", "dip", "dipping sauce", "pasta sauce", "bolognese sauce",
+            "queso", "dressing", "marinade", "alfredo", "sauce dip", "protein chips",
+        ],
     },
     "Dairy & Eggs": {
         "strong": [
@@ -63,7 +68,7 @@ CATEGORY_PROFILES = {
         ],
         "medium": ["dairy", "creamer"],
         "weak": [],
-        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter", "chocolate egg", "chocolate eggs", "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar"],
+        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter", "chocolate egg", "chocolate eggs", "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar", "tea", "herbal tea", "milk thistle", "soup", "broth", "liquid extract", "herbal supplement", "liver support"],
     },
     "Bakery": {
         "strong": [
@@ -72,7 +77,11 @@ CATEGORY_PROFILES = {
         ],
         "medium": ["bakery", "baked"],
         "weak": [],
-        "exclude": ["ice cream cake", "pancake mix", "waffle mix"],
+        "exclude": [
+            "ice cream cake", "pancake mix", "waffle mix", "chips", "chip", "tortilla chips",
+            "rolled tortilla chips", "pretzel", "pretzels", "popcorn", "crisps", "puffs",
+            "chickpea puffs", "cracker", "crackers",
+        ],
     },
     "Prepared Foods": {
         "strong": [
@@ -111,6 +120,8 @@ CATEGORY_PROFILES = {
             "dressing", "salsa", "fruit spread", "spread", "preserves", "seed butter",
             "sunflower butter", "almond butter", "cashew butter", "nut butter", "hommus",
             "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar",
+            "dip", "dipping sauce", "pasta sauce", "bolognese", "bolognese sauce", "avocado oil",
+            "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "oats", "overnight oats",
         ],
         "medium": ["pantry", "mix", "canned", "jarred"],
         "weak": [],
@@ -153,7 +164,7 @@ CATEGORY_PROFILES = {
         "strong": [
             "shampoo", "conditioner", "deodorant", "lotion", "serum", "hand soap",
             "body wash", "toothpaste", "mouthwash", "cleanser", "moisturizer",
-            "lip balm", "sunscreen",
+            "lip balm", "sunscreen", "for face", "for body", "face and body", "skin care",
         ],
         "medium": ["beauty", "personal care", "soap"],
         "weak": [],
@@ -199,7 +210,7 @@ SUBCATEGORY_PROFILES = {
     },
     "Snacks": {
         "Candy & Gummies": ["candy", "gummy", "fruit snacks", "chews", "chocolate"],
-        "Chips & Crackers": ["chips", "cracker", "pretzel", "popcorn", "crisps"],
+        "Chips & Crackers": ["chips", "cracker", "pretzel", "popcorn", "crisps", "tortilla chips", "puffs", "rolled tortilla chips"],
         "Cookies & Sweet Snacks": ["cookies", "cookie", "bites"],
         "Bars": ["granola bar", "protein bar", "snack bar", "bar"],
         "Nuts & Trail Mix": ["nuts", "trail mix", "almonds", "cashews", "pistachio"],
@@ -241,6 +252,32 @@ SUBCATEGORY_PROFILES = {
 }
 
 DIRECT_CATEGORY_HINTS = [
+    {
+        "category": "Supplements & Wellness",
+        "include": ["multivitamin", "vitamin", "multimineral", "supplement", "enzyme", "probiotic", "collagen", "electrolyte", "protein powder"],
+        "exclude": ["protein bar", "snack bar"],
+    },
+    {
+        "category": "Beauty & Personal Care",
+        "include": [
+            "sunscreen", "body lotion", "face lotion", "for face", "for body", "face and body", "skin care",
+            "hair", "scalp", "conditioner", "detangler", "curl", "hair styling", "cleanser", "water spray",
+        ],
+        "exclude": ["dish soap", "laundry"],
+    },
+    {
+        "category": "Snacks",
+        "include": [
+            "tortilla chips", "rolled tortilla chips", "potato chips", "corn chips",
+            "pretzels", "popcorn", "crisps", "crackers", "chickpea puffs", "puffs",
+        ],
+        "exclude": ["chocolate chips", "baking chips"],
+    },
+    {
+        "category": "Pantry",
+        "include": ["dipping sauce", "dip", "sauce dip", "queso", "pasta sauce", "bolognese sauce", "alfredo", "dressing", "marinade", "avocado oil", "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "overnight oats", "oats"],
+        "exclude": ["chip dipper", "frozen meal"],
+    },
     {
         "category": "Pantry",
         "include": ["macaroni and cheese", "mac and cheese", "mac cheese", "shells and cheddar"],
@@ -287,6 +324,8 @@ def text_contains_phrase(haystack, phrase):
         plural_variants = set()
         if last.endswith("y") and len(last) > 1:
             plural_variants.add(last[:-1] + "ies")
+        elif last.endswith("o") and len(last) > 1:
+            plural_variants.add(last + "es")
         if last.endswith(("s", "x", "z", "ch", "sh")):
             plural_variants.add(last + "es")
         else:
@@ -506,18 +545,22 @@ def derive_brand(name, explicit_brand=None):
             return None
         if candidate_is_generic_brand(cleaned_explicit_brand):
             return None
-        return cleaned_explicit_brand
+        return clean_brand_display(cleaned_explicit_brand)
 
     if not name:
         return None
 
+    all_caps_prefix = extract_all_caps_brand_prefix(name)
+    if all_caps_prefix:
+        return clean_brand_display(all_caps_prefix)
+
     canonical = canonical_brand_for_alias(name)
     if canonical:
-        return canonical
+        return clean_brand_display(canonical)
 
     brand_candidate = extract_brand_candidate(name)
     if brand_candidate:
-        return trim_brand_candidate(brand_candidate)
+        return clean_brand_display(trim_brand_candidate(brand_candidate))
 
     return None
 
@@ -538,6 +581,7 @@ BRAND_STOP_WORDS = {
     "select", "fresh", "organic", "sale", "buy", "chicken", "pork", "beef", "turkey", "coffee", "tea",
     "water", "juice", "milk", "cheese", "yogurt", "bread", "chips", "snacks", "meatballs", "sausages",
     "burrata", "mascarpone", "multivitamin", "vitamin", "supplement", "cucumbers", "oranges", "potatoes",
+    "bone-in", "boneless", "spiral-cut", "spiral", "cut", "sunscreen", "lotion", "spray", "face", "body",
 }
 GENERIC_BRAND_WORDS = {
     "ancient", "baby", "bacon", "bar", "basil", "berry", "biscuits", "black", "blend", "block", "broth",
@@ -550,6 +594,7 @@ GENERIC_BRAND_WORDS = {
     "produce", "protein", "queso", "recovery", "rice", "salmon", "salt", "seasoning", "serum", "shell", "shots", "shrimp", "single",
     "small", "snacks", "soap", "source", "spread", "stress", "supplement", "supplements", "superfood", "tablets", "tea",
     "tonic", "turkey", "vanilla", "variety", "vitamin", "vitamins", "wellness", "white", "womens", "yogurt",
+    "bone", "boneless", "bone-in", "spiral", "spiral-cut", "cut", "select", "sunscreen", "lotion", "spray", "sensitive", "face", "body",
 }
 BRAND_FAMILY_ALIASES = {
     "Annie's": ["annie's homegrown", "annies homegrown", "annie's", "annies"],
@@ -561,7 +606,7 @@ BRAND_FAMILY_ALIASES = {
     "CREDO FOODS": ["credo foods", "credo"],
     "Garden of Life": ["garden of life"],
     "Health-Ade": ["health ade", "health-ade"],
-    "MaryRuth's": ["maryruth's", "maryruths", "maryruth"],
+    "MaryRuth's": ["maryruth's", "maryruths", "maryruth", "mary ruth's", "mary ruths"],
     "Mrs. Meyer's": ["mrs. meyer's", "mrs meyers", "mrs. meyers"],
     "New Chapter": ["new chapter"],
     "OM Mushroom Superfood": ["om mushroom superfood"],
@@ -573,10 +618,16 @@ BRAND_FAMILY_ALIASES = {
 }
 BRAND_DESCRIPTOR_STARTERS = {
     "alfredo", "aged", "and", "bar", "bars", "bernie", "blanco", "bowl", "cheddar", "cheese", "chicken",
-    "classic", "coffee", "cookies", "crackers", "deluxe", "frozen", "garlic", "growth", "homegrown", "item",
-    "items", "liquid", "mac", "macaroni", "medium", "mineral", "mix", "multivitamin", "oatmilk", "organic",
-    "pasta", "pepper", "pizza", "plant", "poppers", "powder", "pretzels", "protein", "queso", "real", "roasted",
-    "sauce", "shells", "snack", "soup", "super", "supplement", "tomato", "uncured", "vitamin", "with",
+    "classic", "coffee", "cookies", "crackers", "deluxe", "dressing", "drink", "frozen", "garlic", "growth",
+    "homegrown", "item", "items", "liquid", "lotion", "mac", "macaroni", "medium", "mineral", "mix", "multivitamin",
+    "oatmilk", "organic", "pasta", "pepper", "pizza", "plant", "poppers", "powder", "pretzels", "protein",
+    "queso", "real", "roasted", "sauce", "shells", "snack", "soda", "soup", "spray", "super", "supplement",
+    "sunscreen", "tomato", "uncured", "vitamin", "with", "for", "face", "body", "sensitive", "kids", "baby",
+    "boneless", "bone-in", "spiral", "spiral-cut", "select", "smoked", "sliced", "vegan", "gluten", "free",
+    "fig", "dark", "chocolate", "oatmeal", "overnight", "cashew", "almond", "blueberry", "honey",
+    "vinaigrette", "mayo", "mayonnaise", "aioli", "onion", "throat", "caramelized", "salad", "avocado",
+    "dipping", "lime", "rosemary", "leave-in", "mask", "defining", "gel", "cleanser", "milk", "ranch",
+    "caesar", "greek", "goddess", "creamy",
 }
 
 
@@ -644,6 +695,42 @@ def trim_brand_candidate(candidate):
     return clean_brand_display(trimmed)
 
 
+def looks_all_caps_brand_token(token):
+    cleaned = token.strip(" ,.:;()[]{}-")
+    if not cleaned:
+        return False
+    if cleaned.lower() in BRAND_CONNECTORS:
+        return True
+    letters = re.sub(r"[^A-Za-z]", "", cleaned)
+    if not letters:
+        return cleaned.isupper()
+    return letters.upper() == letters
+
+
+def extract_all_caps_brand_prefix(name):
+    if not name:
+        return None
+
+    tokens = re.split(r"\s+", name.strip())
+    brand_tokens = []
+    for token in tokens[:6]:
+        cleaned = token.strip(" ,.:;()[]{}")
+        if not cleaned:
+            continue
+        if looks_all_caps_brand_token(cleaned):
+            brand_tokens.append(cleaned)
+            continue
+        break
+
+    if not brand_tokens:
+        return None
+
+    candidate = trim_brand_candidate(" ".join(brand_tokens))
+    if not candidate or candidate_is_generic_brand(candidate):
+        return None
+    return candidate
+
+
 def extract_brand_candidate(name):
     if not name:
         return None
@@ -688,6 +775,27 @@ def extract_brand_candidate(name):
         return None
 
     candidate = trim_brand_candidate(" ".join(brand_tokens).strip())
+    if not candidate:
+        return None
+
+    remainder = strip_brand_from_name(name.strip(), candidate)
+    normalized_remainder = normalize_text_key(remainder)
+    if not remainder or normalized_remainder == normalize_text_key(name):
+        return None
+    if re.fullmatch(r"\d+(?:\.\d+)?\s*(?:oz|fl oz|lb|lbs|count|ct|pack|ea)\b.*", normalized_remainder):
+        return None
+    if len(normalized_remainder.split()) <= 1 and len(normalized_remainder) <= 12:
+        shrinking_tokens = candidate.split()
+        while len(shrinking_tokens) > 1:
+            shrinking_tokens.pop()
+            smaller_candidate = trim_brand_candidate(" ".join(shrinking_tokens))
+            smaller_remainder = strip_brand_from_name(name.strip(), smaller_candidate)
+            smaller_remainder_key = normalize_text_key(smaller_remainder)
+            if len(smaller_remainder_key.split()) >= 2 and smaller_remainder_key != normalize_text_key(name):
+                candidate = smaller_candidate
+                normalized_remainder = smaller_remainder_key
+                break
+
     if normalize_text_key(candidate) in BRAND_STOP_WORDS:
         return None
     if candidate_is_generic_brand(candidate):
@@ -749,34 +857,115 @@ def smart_title_case(text):
 def clean_brand_display(brand):
     if not brand:
         return brand
+
     brand = re.sub(r"\s+", " ", brand).strip(" ,")
-    if brand.upper() == brand and len(brand.split()) >= 2:
-        return smart_title_case(brand)
-    return brand
+    canonical = canonical_brand_for_alias(brand)
+    if canonical:
+        brand = canonical
+
+    tokens = re.split(r"(\s+)", brand)
+    formatted = []
+    for token in tokens:
+        if not token or token.isspace():
+            formatted.append(token)
+            continue
+
+        match = re.match(r"^([^A-Za-z0-9]*)([A-Za-z0-9’'&+/-]+)([^A-Za-z0-9]*)$", token)
+        if not match:
+            formatted.append(token)
+            continue
+
+        prefix, core, suffix = match.groups()
+        if core.isupper():
+            if any(ch.isdigit() for ch in core) or "&" in core:
+                formatted_core = core
+            else:
+                formatted_core = title_case_token(core.lower(), is_first=True)
+        elif core.islower():
+            formatted_core = title_case_token(core, is_first=True)
+        elif any(ch.isupper() for ch in core[1:]) and any(ch.islower() for ch in core):
+            formatted_core = core[0].upper() + core[1:]
+        else:
+            formatted_core = title_case_token(core, is_first=True)
+        formatted.append(f"{prefix}{formatted_core}{suffix}")
+
+    return "".join(formatted).strip()
+
+
+def extend_incomplete_brand_with_name(brand, source_name):
+    if not brand or not source_name:
+        return brand
+
+    brand_tokens = brand.split()
+    if not brand_tokens:
+        return brand
+    if normalize_text_key(brand_tokens[-1]) not in BRAND_CONNECTORS:
+        return brand
+
+    remainder = strip_brand_from_name(source_name, brand)
+    if not remainder or remainder == source_name:
+        return brand
+
+    first_token = remainder.split()[0].strip(" ,.:;()[]{}")
+    first_key = normalize_text_key(first_token)
+    if not first_key or any(ch.isdigit() for ch in first_token):
+        return brand
+
+    extended = trim_brand_candidate(f"{brand} {first_token}")
+    if not extended or candidate_is_generic_brand(extended):
+        return brand
+    return clean_brand_display(extended)
+
+
+def brand_variants(brand):
+    if not brand:
+        return []
+
+    variants = {brand.strip()}
+    canonical = canonical_brand_for_alias(brand) or brand
+    variants.add(canonical)
+
+    for alias in BRAND_FAMILY_ALIASES.get(canonical, []):
+        variants.add(alias)
+
+    return [variant for variant in sorted(variants, key=len, reverse=True) if variant]
 
 
 def strip_brand_from_name(name, brand):
     if not name or not brand:
         return name
 
-    if not name.lower().startswith(brand.lower()):
-        return name
+    remainder = name
+    stripped_any = False
 
-    remainder = name[len(brand):].lstrip(" ,:-–—")
-    if not remainder:
-        return name
-
-    connector_pattern = r"^(?:" + "|".join(re.escape(word) for word in sorted(BRAND_CONNECTORS, key=len, reverse=True)) + r")\b[\s,:-]*"
     while True:
-        updated = re.sub(connector_pattern, "", remainder, flags=re.IGNORECASE)
-        if updated == remainder:
+        matched_variant = None
+        for variant in brand_variants(brand):
+            if remainder.lower().startswith(variant.lower()):
+                matched_variant = variant
+                break
+        if not matched_variant:
             break
-        remainder = updated.lstrip(" ,:-–—")
-        if not remainder:
-            return name
+
+        stripped_any = True
+        remainder = remainder[len(matched_variant):].lstrip(" ,:-–—")
+        connector_pattern = r"^(?:" + "|".join(re.escape(word) for word in sorted(BRAND_CONNECTORS, key=len, reverse=True)) + r")\b[\s,:-]*"
+        while True:
+            updated = re.sub(connector_pattern, "", remainder, flags=re.IGNORECASE)
+            if updated == remainder:
+                break
+            remainder = updated.lstrip(" ,:-–—")
+            if not remainder:
+                return name
+
+    if not stripped_any:
+        return name
 
     normalized_remainder = normalize_text_key(remainder)
     if normalized_remainder in GENERIC_REMAINDER_NAMES:
+        return name
+
+    if re.fullmatch(r"\d+(?:\.\d+)?\s*(?:oz|fl oz|lb|lbs|count|ct|pack)\b.*", normalized_remainder):
         return name
 
     remainder_word_count = len(normalized_remainder.split())
@@ -812,19 +1001,47 @@ def clean_display_name(name, brand=None):
 
     cleaned = re.sub(r"\s*\((?:\d+\s*servings?|pack of \d+|[0-9.]+\s*(?:oz|fl oz|lb|g|kg).*)\)\s*$", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned).strip(" ,;-–—")
+
+    if brand and normalize_text_key(cleaned) == normalize_text_key(clean_brand_display(brand)):
+        return smart_title_case(name)
+
     return smart_title_case(cleaned)
 
 
 def normalize_brands_across_products(products):
+    family_map = {}
+    unique_brands = sorted(
+        {product.get("brand") for product in products if product.get("brand")},
+        key=lambda brand: (len(normalize_text_key(brand).split()), len(normalize_text_key(brand))),
+    )
+
+    for brand in unique_brands:
+        brand_key = normalize_text_key(brand)
+        for candidate in unique_brands:
+            if brand == candidate:
+                continue
+            candidate_key = normalize_text_key(candidate)
+            if not candidate_key.startswith(brand_key + " "):
+                continue
+
+            remainder = candidate_key[len(brand_key):].strip()
+            remainder_first = remainder.split()[0] if remainder else ""
+            if remainder_first in BRAND_DESCRIPTOR_STARTERS or remainder_first in GENERIC_BRAND_WORDS:
+                family_map[candidate] = brand
+
     for product in products:
         canonical_brand = trim_brand_candidate(product.get("brand")) if product.get("brand") else None
+        canonical_brand = family_map.get(canonical_brand, canonical_brand)
         if canonical_brand and candidate_is_generic_brand(canonical_brand):
             canonical_brand = None
 
-        product["brand"] = canonical_brand
         source_name = product.get("raw_name") or product.get("name")
+        if canonical_brand and source_name:
+            canonical_brand = extend_incomplete_brand_with_name(canonical_brand, source_name)
+
+        product["brand"] = clean_brand_display(canonical_brand) if canonical_brand else None
         if source_name:
-            product["name"] = clean_display_name(source_name, canonical_brand)
+            product["name"] = clean_display_name(source_name, product["brand"])
         product["tags"] = derive_tags(
             name=product.get("name"),
             brand=product.get("brand"),
@@ -837,7 +1054,7 @@ def normalize_brands_across_products(products):
 
 
 def build_classification_haystack(name=None, brand=None, variation=None, url=None):
-    haystack = normalize_text_key(" ".join(filter(None, [name, brand, variation, url])))
+    haystack = normalize_text_key(" ".join(filter(None, [name, variation, url])))
     if not haystack:
         return ""
 

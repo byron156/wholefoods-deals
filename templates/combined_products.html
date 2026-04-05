@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260405d">
+<link rel="stylesheet" href="/static/styles.css?v=20260405e">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260405d">
+<link rel="manifest" href="/manifest.webmanifest?v=20260405e">
 </head>
 
 <body class="app-body">
@@ -28,13 +28,22 @@
     </section>
 
     <section class="panel is-active single-feed-panel">
-        <div class="section-head">
-            <h2 id="feed-title">Top Deals</h2>
-            <div class="mini-pill" id="feed-count">0 deals</div>
-        </div>
         <div class="product-grid" id="feed-grid"></div>
     </section>
 </div>
+
+<div class="sheet-backdrop hidden" id="category-sheet-backdrop"></div>
+<section class="category-sheet hidden" id="category-sheet" aria-hidden="true">
+    <div class="sheet-header">
+        <div>
+            <h3 id="category-sheet-title">Move this item</h3>
+            <p id="category-sheet-copy">Choose a better shelf for this item or similar items.</p>
+        </div>
+        <button class="ghost-button" type="button" id="category-sheet-close">Close</button>
+    </div>
+    <div class="chip-row" id="category-scope-row"></div>
+    <div class="chip-row" id="category-choice-row"></div>
+</section>
 
 <script id="app-data" type="application/json">
 {{ {"products": products, "stores": available_stores}|tojson }}
@@ -55,7 +64,7 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/app-shell.js?v=20260405d"></script>
+<script src="/static/app-shell.js?v=20260405e"></script>
 
 <noscript>
     <section class="noscript-fallback">
