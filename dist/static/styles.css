@@ -618,6 +618,28 @@ p {
   line-height: 1.45;
 }
 
+.sheet-field {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.sheet-field label {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.sheet-select {
+  width: 100%;
+  border: 1px solid rgba(17, 61, 41, 0.14);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font-size: 15px;
+}
+
 .sheet-header {
   display: flex;
   justify-content: space-between;
@@ -672,6 +694,12 @@ p {
   margin: 0;
   font-size: 18px;
   line-height: 1.2;
+}
+
+.category-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .category-track {

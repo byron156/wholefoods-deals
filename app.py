@@ -12,6 +12,7 @@ FLYER_PRODUCTS_FILE = os.path.join(BASE_DIR, "flyer_products.json")
 COMBINED_PRODUCTS_FILE = os.path.join(BASE_DIR, "combined_products.json")
 TARGET_DEALS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
 HMART_DEALS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
+FIXES_TO_DEPLOY_FILE = os.path.join(BASE_DIR, "fixes_to_deploy.json")
 
 app = Flask(__name__)
 
@@ -249,6 +250,11 @@ SUBCATEGORY_PROFILES = {
         "Oral Care": ["toothpaste", "mouthwash"],
         "Soap & Deodorant": ["hand soap", "soap bar", "deodorant"],
     },
+}
+SUBCATEGORY_TO_CATEGORY = {
+    subcategory: category
+    for category, subcategories in SUBCATEGORY_PROFILES.items()
+    for subcategory in subcategories.keys()
 }
 
 DIRECT_CATEGORY_HINTS = [
@@ -1927,6 +1933,96 @@ def combined_key_for_product(product):
     return "name:" + normalize_text_key(product.get("name"))
 
 
+def subcategory_signature(product):
+    retailer = normalize_text_key(product.get("retailer") or "Whole Foods")
+    brand = normalize_text_key(product.get("brand"))
+    subcategory = normalize_text_key(product.get("subcategory") or product.get("category") or "Pantry")
+    if brand:
+        return f"subcategory:{retailer}:{brand}:{subcategory}"
+    return f"subcategory:{retailer}:{subcategory}"
+
+
+def brand_signature(product):
+    retailer = normalize_text_key(product.get("retailer") or "Whole Foods")
+    brand = normalize_text_key(product.get("brand"))
+    if brand:
+        return f"brand:{retailer}:{brand}"
+    return f"name:{retailer}:{normalize_text_key(product.get('raw_name') or product.get('name'))}"
+
+
+def default_fixes_to_deploy():
+    return {
+        "subcategory_overrides_by_key": {},
+        "subcategory_overrides_by_signature": {},
+        "brand_overrides_by_key": {},
+        "brand_overrides_by_signature": {},
+        "category_order": {},
+    }
+
+
+def load_fixes_to_deploy():
+    try:
+        with open(FIXES_TO_DEPLOY_FILE, "r", encoding="utf-8") as fixes_file:
+            data = json.load(fixes_file)
+    except FileNotFoundError:
+        return default_fixes_to_deploy()
+    except json.JSONDecodeError:
+        return default_fixes_to_deploy()
+
+    fixes = default_fixes_to_deploy()
+    for key, default_value in fixes.items():
+        value = data.get(key)
+        if isinstance(default_value, dict) and isinstance(value, dict):
+            fixes[key] = value
+    return fixes
+
+
+def save_fixes_to_deploy(fixes):
+    with open(FIXES_TO_DEPLOY_FILE, "w", encoding="utf-8") as fixes_file:
+        json.dump(fixes, fixes_file, indent=2, ensure_ascii=False)
+
+
+def apply_fixes_to_products(products):
+    fixes = load_fixes_to_deploy()
+    subcategory_by_key = fixes.get("subcategory_overrides_by_key", {})
+    subcategory_by_signature = fixes.get("subcategory_overrides_by_signature", {})
+    brand_by_key = fixes.get("brand_overrides_by_key", {})
+    brand_by_signature = fixes.get("brand_overrides_by_signature", {})
+
+    for product in products:
+        item_key = combined_key_for_product(product)
+
+        brand_override = brand_by_key.get(item_key) or brand_by_signature.get(brand_signature(product))
+        if brand_override:
+            normalized_brand = clean_brand_display(trim_brand_candidate(brand_override) or brand_override)
+            product["brand"] = normalized_brand
+            product["name"] = clean_display_name(product.get("raw_name") or product.get("name"), normalized_brand)
+
+        subcategory_override = (
+            subcategory_by_key.get(item_key)
+            or subcategory_by_signature.get(subcategory_signature(product))
+        )
+        if subcategory_override and subcategory_override in SUBCATEGORY_TO_CATEGORY:
+            category = SUBCATEGORY_TO_CATEGORY[subcategory_override]
+            product["category"] = category
+            product["subcategory"] = subcategory_override
+            product["category_confidence"] = 1.0
+            signals = list(product.get("category_signals") or [])
+            signals.insert(0, "queued fix")
+            product["category_signals"] = signals[:6]
+
+        product["tags"] = derive_tags(
+            name=product.get("name"),
+            brand=product.get("brand"),
+            category=product.get("category"),
+            sources=product.get("sources"),
+            source_count=product.get("source_count", 0),
+            prime_price=product.get("prime_price"),
+        )
+
+    return products
+
+
 def normalized_product_for_source(product, source_name):
     normalized = standardize_product_record(
         asin=product.get("asin"),
@@ -1990,6 +2086,7 @@ def build_combined_products(
 
     ordered = list(combined.values())
     ordered = normalize_brands_across_products(ordered)
+    ordered = apply_fixes_to_products(ordered)
     ordered.sort(
         key=lambda product: (
             -product.get("source_count", 0),
@@ -2059,6 +2156,7 @@ def load_combined_products():
         )
         normalized_products.append(normalized)
 
+    normalized_products = apply_fixes_to_products(normalized_products)
     return normalized_products
 
 
@@ -2236,15 +2334,82 @@ def api_product(asin):
     return jsonify({"error": "Product not found"}), 404
 
 
+@app.route("/fixes-to-deploy", methods=["POST"])
+@app.route("/api/category-feedback", methods=["POST"])
+def api_fixes_to_deploy():
+    payload = request.get_json(silent=True) or {}
+    kind = (payload.get("kind") or "").strip().lower()
+    scope = (payload.get("scope") or "similar").strip().lower()
+    product_key = (payload.get("product_key") or "").strip()
+    signature = (payload.get("signature") or "").strip()
+    fixes = load_fixes_to_deploy()
+
+    if kind == "subcategory":
+        subcategory = (payload.get("subcategory") or "").strip()
+        if subcategory not in SUBCATEGORY_TO_CATEGORY:
+            return jsonify({"error": "Invalid subcategory"}), 400
+        if scope not in {"item", "similar"}:
+            return jsonify({"error": "Invalid scope"}), 400
+        if scope == "item" and not product_key:
+            return jsonify({"error": "Missing product key"}), 400
+        if scope == "similar" and not signature:
+            return jsonify({"error": "Missing signature"}), 400
+
+        if scope == "item":
+            fixes["subcategory_overrides_by_key"][product_key] = subcategory
+        else:
+            fixes["subcategory_overrides_by_signature"][signature] = subcategory
+
+        save_fixes_to_deploy(fixes)
+        return jsonify({"ok": True, "kind": kind, "scope": scope, "subcategory": subcategory})
+
+    if kind == "brand":
+        brand = clean_brand_display((payload.get("brand") or "").strip())
+        if not brand:
+            return jsonify({"error": "Invalid brand"}), 400
+        if scope not in {"item", "similar"}:
+            return jsonify({"error": "Invalid scope"}), 400
+        if scope == "item" and not product_key:
+            return jsonify({"error": "Missing product key"}), 400
+        if scope == "similar" and not signature:
+            return jsonify({"error": "Missing signature"}), 400
+
+        if scope == "item":
+            fixes["brand_overrides_by_key"][product_key] = brand
+        else:
+            fixes["brand_overrides_by_signature"][signature] = brand
+
+        save_fixes_to_deploy(fixes)
+        return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand})
+
+    if kind == "category_order":
+        retailer = (payload.get("retailer") or "").strip()
+        order = payload.get("order")
+        if not retailer:
+            return jsonify({"error": "Missing retailer"}), 400
+        if not isinstance(order, list) or not all(isinstance(item, str) for item in order):
+            return jsonify({"error": "Invalid order"}), 400
+        fixes["category_order"][retailer] = order
+        save_fixes_to_deploy(fixes)
+        return jsonify({"ok": True, "kind": kind, "retailer": retailer, "order": order})
+
+    return jsonify({"error": "Invalid fix kind"}), 400
+
+
 @app.route("/")
 def combined_products_home():
     products = sort_products_for_display(load_combined_products())
     deal_count = len(products)
+    fixes = load_fixes_to_deploy()
     return render_template(
         "combined_products.html",
         products=products,
         deal_count=deal_count,
         available_stores=SUPPORTED_STORES,
+        category_names=sorted(CATEGORY_PROFILES.keys()),
+        subcategory_options=SUBCATEGORY_PROFILES,
+        category_order=fixes.get("category_order", {}),
+        feedback_endpoint="/fixes-to-deploy",
         page_subtitle="Browse Whole Foods, Target, and H Mart deals in one place.",
     )
 

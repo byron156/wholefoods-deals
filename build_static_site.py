@@ -26,6 +26,7 @@ DATA_FILES = [
     "hmart_deals_report.json",
     "combined_products.json",
     "combined_report.json",
+    "fixes_to_deploy.json",
     "flyer_vs_all_deals_report.json",
 ]
 ROUTES = {

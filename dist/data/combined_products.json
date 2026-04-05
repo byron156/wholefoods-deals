@@ -3105,42 +3105,6 @@
     "source_count": 2
   },
   {
-    "asin": "B0CQTNM8N4",
-    "name": "Global EVOO Chefs Bottle, 16.9 FZ",
-    "raw_name": "CALIFORNIA OLIVE RANCH Global EVOO Chefs Bottle, 16.9 FZ",
-    "brand": "California Olive Ranch",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": null,
-    "category_confidence": 0.25,
-    "category_signals": [],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71ycRL3bMHL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/CALIFORNIA-OLIVE-RANCH-Global-Bottle/dp/B0CQTNM8N4?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0CQTNM8N4&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_405_i",
-    "unit_price": null,
-    "current_price": "$13.93",
-    "basis_price": "$16.99 ea",
-    "prime_price": "$11.80 ea",
-    "discount": "18% off",
-    "discount_percent": 18,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "multi-source deal",
-      "prime deal"
-    ],
-    "retailer": "Whole Foods",
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals",
-      "Search Deals"
-    ],
-    "source_count": 2
-  },
-  {
     "asin": "B004SIASZM",
     "name": "Gluten-Free Brown Rice Organic Rice Cakes -- 8.5 Oz",
     "raw_name": "Lundberg Gluten-Free Brown Rice Organic Rice Cakes -- 8.5 oz",
@@ -8534,44 +8498,6 @@
     "source_count": 2
   },
   {
-    "asin": "B08PCT41NY",
-    "name": "Pork Pulled Smoked No Sauce, 12 Ounce",
-    "raw_name": "Niman Ranch, Pork Pulled Smoked No Sauce, 12 Ounce",
-    "brand": "Niman Ranch",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Beef, Pork & Lamb",
-    "category_confidence": 0.65,
-    "category_signals": [
-      "pork"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/91mQU52Wg-L.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/NIMAN-RANCH-Smoked-Pulled-Pork/dp/B08PCT41NY?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B08PCT41NY&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_491_i",
-    "unit_price": null,
-    "current_price": "$9.44",
-    "basis_price": "$9.99 ea",
-    "prime_price": "$8.50 ea",
-    "discount": "6% off",
-    "discount_percent": 6,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "multi-source deal",
-      "prime deal"
-    ],
-    "retailer": "Whole Foods",
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals",
-      "Search Deals"
-    ],
-    "source_count": 2
-  },
-  {
     "asin": "B07FZKXQT2",
     "name": "Potato Sweet Orange Organic",
     "raw_name": "Potato Sweet Orange Organic",
@@ -8951,6 +8877,118 @@
     ],
     "tags": [
       "high-protein",
+      "multi-source deal",
+      "prime deal"
+    ],
+    "retailer": "Whole Foods",
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals",
+      "Search Deals"
+    ],
+    "source_count": 2
+  },
+  {
+    "asin": "B0CQTNM8N4",
+    "name": "Ranch Global EVOO Chefs Bottle, 16.9 FZ",
+    "raw_name": "CALIFORNIA OLIVE RANCH Global EVOO Chefs Bottle, 16.9 FZ",
+    "brand": "California Olive",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71ycRL3bMHL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/CALIFORNIA-OLIVE-RANCH-Global-Bottle/dp/B0CQTNM8N4?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0CQTNM8N4&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_405_i",
+    "unit_price": null,
+    "current_price": "$13.93",
+    "basis_price": "$16.99 ea",
+    "prime_price": "$11.80 ea",
+    "discount": "18% off",
+    "discount_percent": 18,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "multi-source deal",
+      "prime deal"
+    ],
+    "retailer": "Whole Foods",
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals",
+      "Search Deals"
+    ],
+    "source_count": 2
+  },
+  {
+    "asin": "B08PCT41NY",
+    "name": "Ranch, Pork Pulled Smoked No Sauce, 12 Ounce",
+    "raw_name": "Niman Ranch, Pork Pulled Smoked No Sauce, 12 Ounce",
+    "brand": "Niman",
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.65,
+    "category_signals": [
+      "pork"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/91mQU52Wg-L.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/NIMAN-RANCH-Smoked-Pulled-Pork/dp/B08PCT41NY?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B08PCT41NY&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_491_i",
+    "unit_price": null,
+    "current_price": "$9.44",
+    "basis_price": "$9.99 ea",
+    "prime_price": "$8.50 ea",
+    "discount": "6% off",
+    "discount_percent": 6,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "multi-source deal",
+      "prime deal"
+    ],
+    "retailer": "Whole Foods",
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals",
+      "Search Deals"
+    ],
+    "source_count": 2
+  },
+  {
+    "asin": "B01LXX6LV8",
+    "name": "Ranch Salad Dressing & Marinade Made with Avocado Oil",
+    "raw_name": "Primal Kitchen Ranch Salad Dressing & Marinade made with Avocado Oil, Whole30 Approved, Paleo Friendly, and Keto Certified, 8 Fluid Ounces",
+    "brand": "Primal Kitchen",
+    "variation": "1 Flavors, 1 Sizes",
+    "category": "Pantry",
+    "subcategory": "Sauces, Broth & Soup",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71jBxEQYOZL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Oil-Based-Dressing-Marinade/dp/B01LXX6LV8?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B01LXX6LV8&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_12_i",
+    "unit_price": null,
+    "current_price": "$6.51",
+    "basis_price": "$8.39 ea",
+    "prime_price": "$5.58 ea",
+    "discount": "22% off",
+    "discount_percent": 22,
+    "emoji": "🥑",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
       "multi-source deal",
       "prime deal"
     ],
@@ -9365,44 +9403,6 @@
     "discount": "7% off",
     "discount_percent": 7,
     "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "multi-source deal",
-      "prime deal"
-    ],
-    "retailer": "Whole Foods",
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals",
-      "Search Deals"
-    ],
-    "source_count": 2
-  },
-  {
-    "asin": "B01LXX6LV8",
-    "name": "Salad Dressing & Marinade Made with Avocado Oil",
-    "raw_name": "Primal Kitchen Ranch Salad Dressing & Marinade made with Avocado Oil, Whole30 Approved, Paleo Friendly, and Keto Certified, 8 Fluid Ounces",
-    "brand": "Primal Kitchen Ranch",
-    "variation": "1 Flavors, 1 Sizes",
-    "category": "Pantry",
-    "subcategory": "Sauces, Broth & Soup",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71jBxEQYOZL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Oil-Based-Dressing-Marinade/dp/B01LXX6LV8?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B01LXX6LV8&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_12_i",
-    "unit_price": null,
-    "current_price": "$6.51",
-    "basis_price": "$8.39 ea",
-    "prime_price": "$5.58 ea",
-    "discount": "22% off",
-    "discount_percent": 22,
-    "emoji": "🥑",
     "available_store_ids": [
       "10160"
     ],
@@ -13269,42 +13269,6 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B0046IIIMO",
-    "name": "Almond Butter, 16 Ounce Jar",
-    "raw_name": "MaraNatha Natural Creamy Raw Almond Butter, 16 Ounce Jar",
-    "brand": "MaraNatha Natural Creamy Raw",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": null,
-    "category_confidence": 0.98,
-    "category_signals": [
-      "almond butter"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81Cr6uTSfYL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/MaraNatha-Natural-Creamy-Almond-Butter/dp/B0046IIIMO?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0046IIIMO&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_483_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$13.00 ea",
-    "discount": "15% off",
-    "discount_percent": 15,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
     ],
     "source_count": 1
   },
@@ -17720,46 +17684,10 @@
     "source_count": 1
   },
   {
-    "asin": "B07NS3KTZL",
-    "name": "Bone in Spiral Sliced Half Ham with Glaze",
-    "raw_name": "Niman Ranch Bone In Spiral Sliced Half Ham With Glaze",
-    "brand": "Niman Ranch",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Beef, Pork & Lamb",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "ham"
-    ],
-    "image": "https://m.media-amazon.com/images/I/71+IxUnkWuL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/niman-ranch-niman-ranch-bone-in-spiral-sliced-half-ham-with-glaze-b07ns3ktzl?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "unit_price": "$6.20/lb",
-    "current_price": "$6.20/lb",
-    "basis_price": "$7.99/lb",
-    "prime_price": "$5.58/lb",
-    "discount": "30% off",
-    "discount_percent": 30,
-    "emoji": "🥩",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": "Whole Foods",
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
     "asin": "B078B3V2PJ",
     "name": "Boneless Whole Petite Ham",
     "raw_name": "Boneless Whole Petite Ham",
-    "brand": "Niman Ranch",
+    "brand": "Niman",
     "variation": null,
     "category": "Meat & Seafood",
     "subcategory": "Beef, Pork & Lamb",
@@ -18259,43 +18187,6 @@
     "discount": "25% off",
     "discount_percent": 25,
     "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": "Whole Foods",
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B0872VBCQL",
-    "name": "Breakfast Sausage Links",
-    "raw_name": "Teton Waters Ranch Breakfast Sausage Links, 100% Grass-Fed Beef, Fully Cooked Breakfast Sausage, Frozen, No Sugar Added, No Nitrites or Nitrates Added, Gluten Free, Certified Humane - 5.6 oz",
-    "brand": "Teton Waters Ranch",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Beef, Pork & Lamb",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "beef",
-      "sausage"
-    ],
-    "image": "https://m.media-amazon.com/images/I/71WymMz1o6L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/teton-waters-ranch-teton-waters-ranch-breakfast-sausage-links-100-grass-fed-beef-fully-cooked-breakfast-sausage-frozen-no-sugar-added-no-nitrites-or-nitrates-added-gluten-free-certified-humane-5-6-oz-b0872vbcql?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "unit_price": null,
-    "current_price": "$6.13",
-    "basis_price": "$6.49 ea",
-    "prime_price": "$5.52 ea",
-    "discount": "15% off",
-    "discount_percent": 15,
-    "emoji": "🥩",
     "available_store_ids": [
       "10160"
     ],
@@ -19730,42 +19621,6 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B0876PPPCT",
-    "name": "California Olive Ranch",
-    "raw_name": "California Olive Ranch, California Collection, Olive Oil (1L (Pack of 1))",
-    "brand": null,
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": "Condiments & Spreads",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61lc0QORWzL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/California-Olive-Ranch-Extra-Virgin/dp/B0876PPPCT?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0876PPPCT&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_211_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$26.56 ea",
-    "discount": "18% off",
-    "discount_percent": 18,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
     ],
     "source_count": 1
   },
@@ -26793,6 +26648,78 @@
     "source_count": 1
   },
   {
+    "asin": "B0046IIIMO",
+    "name": "Creamy Raw Almond Butter, 16 Ounce Jar",
+    "raw_name": "MaraNatha Natural Creamy Raw Almond Butter, 16 Ounce Jar",
+    "brand": "MaraNatha Natural",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.98,
+    "category_signals": [
+      "almond butter"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81Cr6uTSfYL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/MaraNatha-Natural-Creamy-Almond-Butter/dp/B0046IIIMO?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0046IIIMO&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_483_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$13.00 ea",
+    "discount": "15% off",
+    "discount_percent": 15,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B0FQ85P2CW",
+    "name": "Creamy Sriracha Dipping Sauce, 10 Oz",
+    "raw_name": "Primal Kitchen Creamy Sriracha Dipping Sauce, 10 oz",
+    "brand": "Primal Kitchen",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Sauces, Broth & Soup",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71wKmLJjPyL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Creamy-Sriracha-Dipping/dp/B0FQ85P2CW?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0FQ85P2CW&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_465_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$6.99 ea",
+    "discount": "22% off",
+    "discount_percent": 22,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
+    ],
+    "source_count": 1
+  },
+  {
     "asin": "B0C5G9NL8Z",
     "name": "Crisp Almond Rosemary Raisin, 5.3 Ounce",
     "raw_name": "Crisp Almond Rosemary Raisin, 5.3 Ounce",
@@ -28573,42 +28500,6 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B0FQ85P2CW",
-    "name": "Dipping Sauce, 10 Oz",
-    "raw_name": "Primal Kitchen Creamy Sriracha Dipping Sauce, 10 oz",
-    "brand": "Primal Kitchen Creamy Sriracha",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": "Sauces, Broth & Soup",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71wKmLJjPyL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Creamy-Sriracha-Dipping/dp/B0FQ85P2CW?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0FQ85P2CW&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_465_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$6.99 ea",
-    "discount": "22% off",
-    "discount_percent": 22,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
     ],
     "source_count": 1
   },
@@ -30658,42 +30549,6 @@
     "prime_price": "$3.50 ea",
     "discount": "33% off",
     "discount_percent": 33,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": "Whole Foods",
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B0CS6YMY8Y",
-    "name": "Fig Balsamic Vinaigrette Dressing, 8 FZ",
-    "raw_name": "CALIFORNIA OLIVE RANCH Fig Balsamic Vinaigrette Dressing, 8 FZ",
-    "brand": "California Olive Ranch",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": "Sauces, Broth & Soup",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://m.media-amazon.com/images/I/61kHCU-5BiL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/california-olive-ranch-california-olive-ranch-fig-balsamic-vinaigrette-dressing-8-fz-b0cs6ymy8y?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "unit_price": null,
-    "current_price": "$5.27",
-    "basis_price": "$6.79 ea",
-    "prime_price": "$4.74 ea",
-    "discount": "30% off",
-    "discount_percent": 30,
     "emoji": "🛒",
     "available_store_ids": [
       "10160"
@@ -34072,6 +33927,42 @@
     "source_count": 1
   },
   {
+    "asin": "B0725X1TL6",
+    "name": "Goddess Salad Dressing & Marinade Made with Avocado Oil",
+    "raw_name": "Primal Kitchen Green Goddess Salad Dressing & Marinade made with Avocado Oil, Whole30 Approved, Paleo Friendly, and Keto Certified, 8 Fluid Ounces",
+    "brand": "Primal Kitchen Green",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Sauces, Broth & Soup",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71UTC4LbLLL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Dressing-Marinade-Certified/dp/B0725X1TL6?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0725X1TL6&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_274_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$5.58 ea",
+    "discount": "22% off",
+    "discount_percent": 22,
+    "emoji": "🥑",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
+    ],
+    "source_count": 1
+  },
+  {
     "asin": "B000MN4Z38",
     "name": "Gold",
     "raw_name": "Gold, Pillow Tea Bags, 40 Count (Pack of 1), Premium Blend, Rich, Smooth, and Satisfying, Classic British Breakfast Blend, Caffeinated, Enjoy Hot or Iced, 40 Teabags",
@@ -34736,6 +34627,42 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B01D22EEQ8",
+    "name": "Greek Vinaigrette & Marinade Salad Dressing Made with Avocado Oil",
+    "raw_name": "Primal Kitchen Greek Vinaigrette & Marinade Salad Dressing made with Avocado Oil, Whole30 Approved, Certified Paleo, and Keto Certified, 8 Fluid Ounces, 8 Fl Oz (Pack of 1) (PKDRESS-GV6)",
+    "brand": "Primal Kitchen",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Sauces, Broth & Soup",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71rnJ0nQ5uL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Oil-Based-Dressing-Marinade/dp/B01D22EEQ8?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B01D22EEQ8&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_416_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$5.58 ea",
+    "discount": "22% off",
+    "discount_percent": 22,
+    "emoji": "🥑",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
     ],
     "source_count": 1
   },
@@ -45558,12 +45485,10 @@
     "raw_name": "Herb Pharm Milk Thistle Seed Liquid Extract for Liver Function Support - 1 Ounce",
     "brand": "Herb Pharm",
     "variation": null,
-    "category": "Dairy & Eggs",
-    "subcategory": "Milk & Creamers",
-    "category_confidence": 0.47,
-    "category_signals": [
-      "milk"
-    ],
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/71PI2YZq7WL._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-milk-thistle-seed-liquid-extract-for-liver-function-support-1-ounce-b0014au67w?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
     "unit_price": null,
@@ -67160,7 +67085,7 @@
     "asin": "B07XLPZNQN",
     "name": "Pork Ham Steak Bnls Smoked Uncured, 8 Ounce",
     "raw_name": "Pork Ham Steak Bnls Smoked Uncured, 8 Ounce",
-    "brand": "Niman Ranch",
+    "brand": "Niman",
     "variation": null,
     "category": "Meat & Seafood",
     "subcategory": "Beef, Pork & Lamb",
@@ -67303,42 +67228,6 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B07814HZY1",
-    "name": "Pork Pulled Cooked Barbecue Sauce, 14 Ounce",
-    "raw_name": "Niman Ranch, Pork Pulled Cooked Barbecue Sauce, 14 Ounce",
-    "brand": "Niman Ranch",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Beef, Pork & Lamb",
-    "category_confidence": 0.65,
-    "category_signals": [
-      "pork"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81ap2PeG2RL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/Niman-Ranch-Pulled-Cooked-Barbecue/dp/B07814HZY1?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B07814HZY1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_92_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$8.50 ea",
-    "discount": "6% off",
-    "discount_percent": 6,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
     ],
     "source_count": 1
   },
@@ -69581,6 +69470,115 @@
     "source_count": 1
   },
   {
+    "asin": "B07NS3KTZL",
+    "name": "Ranch Bone in Spiral Sliced Half Ham with Glaze",
+    "raw_name": "Niman Ranch Bone In Spiral Sliced Half Ham With Glaze",
+    "brand": "Niman",
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "ham"
+    ],
+    "image": "https://m.media-amazon.com/images/I/71+IxUnkWuL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/niman-ranch-niman-ranch-bone-in-spiral-sliced-half-ham-with-glaze-b07ns3ktzl?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "unit_price": "$6.20/lb",
+    "current_price": "$6.20/lb",
+    "basis_price": "$7.99/lb",
+    "prime_price": "$5.58/lb",
+    "discount": "30% off",
+    "discount_percent": 30,
+    "emoji": "🥩",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": "Whole Foods",
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B0872VBCQL",
+    "name": "Ranch Breakfast Sausage Links",
+    "raw_name": "Teton Waters Ranch Breakfast Sausage Links, 100% Grass-Fed Beef, Fully Cooked Breakfast Sausage, Frozen, No Sugar Added, No Nitrites or Nitrates Added, Gluten Free, Certified Humane - 5.6 oz",
+    "brand": "Teton Waters",
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "beef",
+      "sausage"
+    ],
+    "image": "https://m.media-amazon.com/images/I/71WymMz1o6L._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/teton-waters-ranch-teton-waters-ranch-breakfast-sausage-links-100-grass-fed-beef-fully-cooked-breakfast-sausage-frozen-no-sugar-added-no-nitrites-or-nitrates-added-gluten-free-certified-humane-5-6-oz-b0872vbcql?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "unit_price": null,
+    "current_price": "$6.13",
+    "basis_price": "$6.49 ea",
+    "prime_price": "$5.52 ea",
+    "discount": "15% off",
+    "discount_percent": 15,
+    "emoji": "🥩",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": "Whole Foods",
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B0876PPPCT",
+    "name": "Ranch, California Collection, Olive Oil (1L (Pack of 1))",
+    "raw_name": "California Olive Ranch, California Collection, Olive Oil (1L (Pack of 1))",
+    "brand": "California Olive",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Condiments & Spreads",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61lc0QORWzL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/California-Olive-Ranch-Extra-Virgin/dp/B0876PPPCT?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0876PPPCT&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_211_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$26.56 ea",
+    "discount": "18% off",
+    "discount_percent": 18,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
+    ],
+    "source_count": 1
+  },
+  {
     "asin": "B07JH3BJXV",
     "name": "Ranch Dressing & Dip, 12 OZ",
     "raw_name": "TOBYS Ranch Dressing & Dip, 12 OZ",
@@ -69613,6 +69611,114 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B00CO1YXL0",
+    "name": "Ranch Everyday Extra Virgin Olive Oil, 25.4 Oz",
+    "raw_name": "California Olive Ranch Everyday Extra Virgin Olive Oil, 25.4 oz",
+    "brand": "California Olive",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Condiments & Spreads",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51sRzku3jfL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/California-Olive-Ranch-Everyday-Virgin/dp/B00CO1YXL0?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B00CO1YXL0&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_428_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$16.23 ea",
+    "discount": "18% off",
+    "discount_percent": 18,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B0CS6YMY8Y",
+    "name": "Ranch Fig Balsamic Vinaigrette Dressing, 8 FZ",
+    "raw_name": "CALIFORNIA OLIVE RANCH Fig Balsamic Vinaigrette Dressing, 8 FZ",
+    "brand": "California Olive",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Sauces, Broth & Soup",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://m.media-amazon.com/images/I/61kHCU-5BiL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/california-olive-ranch-california-olive-ranch-fig-balsamic-vinaigrette-dressing-8-fz-b0cs6ymy8y?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "unit_price": null,
+    "current_price": "$5.27",
+    "basis_price": "$6.79 ea",
+    "prime_price": "$4.74 ea",
+    "discount": "30% off",
+    "discount_percent": 30,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": "Whole Foods",
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1
+  },
+  {
+    "asin": "B07814HZY1",
+    "name": "Ranch, Pork Pulled Cooked Barbecue Sauce, 14 Ounce",
+    "raw_name": "Niman Ranch, Pork Pulled Cooked Barbecue Sauce, 14 Ounce",
+    "brand": "Niman",
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.65,
+    "category_signals": [
+      "pork"
+    ],
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81ap2PeG2RL.AC_SL300_.jpg",
+    "url": "https://www.wholefoodsmarket.com/Niman-Ranch-Pulled-Cooked-Barbecue/dp/B07814HZY1?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B07814HZY1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_92_i",
+    "unit_price": null,
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": "$8.50 ea",
+    "discount": "6% off",
+    "discount_percent": 6,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [
+      "prime deal"
+    ],
+    "retailer": null,
+    "expires": null,
+    "retail_source_url": null,
+    "source_categories": [],
+    "sources": [
+      "All Deals"
     ],
     "source_count": 1
   },
@@ -72424,42 +72530,6 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B0725X1TL6",
-    "name": "Salad Dressing & Marinade Made with Avocado Oil",
-    "raw_name": "Primal Kitchen Green Goddess Salad Dressing & Marinade made with Avocado Oil, Whole30 Approved, Paleo Friendly, and Keto Certified, 8 Fluid Ounces",
-    "brand": "Primal Kitchen Green Goddess",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": "Sauces, Broth & Soup",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71UTC4LbLLL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Dressing-Marinade-Certified/dp/B0725X1TL6?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B0725X1TL6&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_274_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$5.58 ea",
-    "discount": "22% off",
-    "discount_percent": 22,
-    "emoji": "🥑",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
     ],
     "source_count": 1
   },
@@ -86246,7 +86316,7 @@
     "asin": "B000XTNNZ2",
     "name": "Uncured Sausage Sweet Italian, 12 Oz",
     "raw_name": "Uncured Sausage Sweet Italian, 12 oz",
-    "brand": "Niman Ranch",
+    "brand": "Niman",
     "variation": null,
     "category": "Meat & Seafood",
     "subcategory": "Beef, Pork & Lamb",
@@ -87512,42 +87582,6 @@
     "source_count": 1
   },
   {
-    "asin": "B01D22EEQ8",
-    "name": "Vinaigrette & Marinade Salad Dressing Made with Avocado Oil",
-    "raw_name": "Primal Kitchen Greek Vinaigrette & Marinade Salad Dressing made with Avocado Oil, Whole30 Approved, Certified Paleo, and Keto Certified, 8 Fluid Ounces, 8 Fl Oz (Pack of 1) (PKDRESS-GV6)",
-    "brand": "Primal Kitchen Greek",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": "Sauces, Broth & Soup",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71rnJ0nQ5uL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/Primal-Kitchen-Oil-Based-Dressing-Marinade/dp/B01D22EEQ8?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B01D22EEQ8&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_416_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$5.58 ea",
-    "discount": "22% off",
-    "discount_percent": 22,
-    "emoji": "🥑",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
-    ],
-    "source_count": 1
-  },
-  {
     "asin": "B000R73XZ0",
     "name": "Vinegar Apple Cider UNF ORG, 16 OZ",
     "raw_name": "BRAGG VINEGAR APPLE CIDER UNF ORG, 16 OZ",
@@ -87655,42 +87689,6 @@
     "source_categories": [],
     "sources": [
       "Search Deals"
-    ],
-    "source_count": 1
-  },
-  {
-    "asin": "B00CO1YXL0",
-    "name": "Virgin Olive Oil, 25.4 Oz",
-    "raw_name": "California Olive Ranch Everyday Extra Virgin Olive Oil, 25.4 oz",
-    "brand": "California Olive Ranch Everyday Extra",
-    "variation": null,
-    "category": "Pantry",
-    "subcategory": "Condiments & Spreads",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: dipping sauce"
-    ],
-    "image": "https://images-na.ssl-images-amazon.com/images/I/51sRzku3jfL.AC_SL300_.jpg",
-    "url": "https://www.wholefoodsmarket.com/California-Olive-Ranch-Everyday-Virgin/dp/B00CO1YXL0?pd_rd_w=N8h4y&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=3KF3AC3J2KVE65JTCDHT&pd_rd_wg=1pcqR&pd_rd_r=96d58bde-3892-45bc-aca9-e6eb347bf5d9&pd_rd_i=B00CO1YXL0&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_428_i",
-    "unit_price": null,
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": "$16.23 ea",
-    "discount": "18% off",
-    "discount_percent": 18,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "tags": [
-      "prime deal"
-    ],
-    "retailer": null,
-    "expires": null,
-    "retail_source_url": null,
-    "source_categories": [],
-    "sources": [
-      "All Deals"
     ],
     "source_count": 1
   },
