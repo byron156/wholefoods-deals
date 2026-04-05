@@ -8,6 +8,10 @@ from app import app
 BASE_DIR = Path(__file__).resolve().parent
 DIST_DIR = BASE_DIR / "dist"
 STATIC_DIR = BASE_DIR / "static"
+ROOT_STATIC_FILES = [
+    "manifest.webmanifest",
+    "service-worker.js",
+]
 DATA_FILES = [
     "flyer_products.json",
     "flyer_report.json",
@@ -46,6 +50,11 @@ def copy_static_assets() -> None:
     target = DIST_DIR / "static"
     shutil.copytree(STATIC_DIR, target, dirs_exist_ok=True)
 
+    for filename in ROOT_STATIC_FILES:
+        src = STATIC_DIR / filename
+        if src.exists():
+            shutil.copy2(src, DIST_DIR / filename)
+
 
 def copy_data_files() -> None:
     data_dir = DIST_DIR / "data"
@@ -61,6 +70,7 @@ def write_metadata() -> None:
     metadata = {
         "routes": sorted(ROUTES.keys()),
         "copied_data_files": [name for name in DATA_FILES if (BASE_DIR / name).exists()],
+        "root_static_files": [name for name in ROOT_STATIC_FILES if (STATIC_DIR / name).exists()],
     }
     write_text(DIST_DIR / "build-meta.json", json.dumps(metadata, indent=2))
 

@@ -18,5 +18,9 @@
     "combined_products.json",
     "combined_report.json",
     "flyer_vs_all_deals_report.json"
+  ],
+  "root_static_files": [
+    "manifest.webmanifest",
+    "service-worker.js"
   ]
 }

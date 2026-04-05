@@ -1,0 +1,16 @@
+{
+  "name": "Whole Foods Deals",
+  "short_name": "WF Deals",
+  "description": "A personalized iPhone-first Whole Foods deals app.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe6",
+  "theme_color": "#0b6b45",
+  "icons": [
+    {
+      "src": "/static/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

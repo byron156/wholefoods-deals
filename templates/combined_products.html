@@ -1,109 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0b6b45">
 <title>Whole Foods Deals</title>
 <link rel="stylesheet" href="/static/styles.css">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
 </head>
 
-<body>
+<body class="app-body">
+<div class="app-shell">
+    <header class="app-header">
+        <div>
+            <div class="app-kicker">Personalized Weekly Grocery Picks</div>
+            <h1>Whole Foods Deals</h1>
+            <p class="app-summary-line" id="summary-line">Curated deals that learn from what you save, hide and search.</p>
+        </div>
+        <div class="header-actions">
+            <button class="ghost-button" id="install-trigger" type="button">Add to Home Screen</button>
+            <button class="primary-button" id="preferences-trigger" type="button">Tune Feed</button>
+        </div>
+    </header>
 
-<h1>Whole Foods Deals</h1>
+    <section class="search-panel">
+        <label class="sr-only" for="global-search">Search deals</label>
+        <input id="global-search" class="search-input app-search" type="search" placeholder="Search products, brands or categories...">
+        <div class="status-row">
+            <div class="search-meta" id="search-meta">Showing {{ deal_count }} products</div>
+            <div class="mini-pill" id="store-summary">Store: Columbus Circle</div>
+        </div>
+    </section>
 
-<div class="toolbar">
-    <input
-        id="product-search"
-        class="search-input"
-        type="search"
-        placeholder="Search by product name, ASIN, or source..."
-        aria-label="Search combined products"
-    >
-    <div id="search-meta" class="search-meta">Showing {{ deal_count }} products</div>
+    <nav class="tab-strip" aria-label="App sections">
+        <button class="tab-button is-active" data-tab="for-you" type="button">For You</button>
+        <button class="tab-button" data-tab="categories" type="button">Categories</button>
+        <button class="tab-button" data-tab="saved" type="button">Saved</button>
+        <button class="tab-button" data-tab="hidden" type="button">Hidden</button>
+        <button class="tab-button" data-tab="search" type="button">Search</button>
+    </nav>
+
+    <section class="panel is-active" data-panel="for-you">
+        <div class="section-head">
+            <div>
+                <h2>For You</h2>
+                <p id="for-you-copy">Your best matches, blending discounts with your tastes.</p>
+            </div>
+            <div class="mini-pill" id="for-you-count">0 picks</div>
+        </div>
+        <div class="chip-row" id="for-you-highlights"></div>
+        <div class="product-grid" id="for-you-grid"></div>
+    </section>
+
+    <section class="panel" data-panel="categories">
+        <div class="section-head">
+            <div>
+                <h2>Categories</h2>
+                <p>Browse by aisle and quickly tune what appears in your feed.</p>
+            </div>
+            <div class="mini-pill" id="category-summary">All categories</div>
+        </div>
+        <div class="chip-row" id="category-chip-row"></div>
+        <div class="product-grid" id="category-grid"></div>
+    </section>
+
+    <section class="panel" data-panel="saved">
+        <div class="section-head">
+            <div>
+                <h2>Saved</h2>
+                <p>Your shortlist of deals worth revisiting.</p>
+            </div>
+            <div class="mini-pill" id="saved-count">0 saved</div>
+        </div>
+        <div class="product-grid" id="saved-grid"></div>
+    </section>
+
+    <section class="panel" data-panel="hidden">
+        <div class="section-head">
+            <div>
+                <h2>Hidden</h2>
+                <p>Anything you hide teaches the app what to stop recommending.</p>
+            </div>
+            <div class="mini-pill" id="hidden-count">0 hidden</div>
+        </div>
+        <div class="product-grid" id="hidden-grid"></div>
+    </section>
+
+    <section class="panel" data-panel="search">
+        <div class="section-head">
+            <div>
+                <h2>Search Results</h2>
+                <p id="search-copy">Search across the combined catalog of flyer, all deals and search deals.</p>
+            </div>
+            <div class="mini-pill" id="search-count">0 results</div>
+        </div>
+        <div class="product-grid" id="search-grid"></div>
+    </section>
 </div>
 
-<div class="grid" id="product-grid">
-{% for p in products %}
-<div
-    class="card combined-card"
-    data-name="{{ (p.name or '')|lower }}"
-    data-asin="{{ (p.asin or '')|lower }}"
-    data-sources="{{ (' '.join(p.sources or []))|lower }}"
->
+<div class="sheet-backdrop hidden" id="sheet-backdrop"></div>
 
-{% if p.image %}
-<div class="product-image">
-    <img src="{{ p.image }}">
+<aside class="preferences-sheet hidden" id="preferences-sheet" aria-hidden="true">
+    <div class="sheet-header">
+        <div>
+            <div class="app-kicker">Personalize</div>
+            <h2>Your Deal Profile</h2>
+        </div>
+        <button class="ghost-button" id="preferences-close" type="button">Close</button>
+    </div>
+
+    <div class="sheet-section">
+        <h3>Stores</h3>
+        <p>Choose your main stores. The app is ready for multi-store compare as more store coverage comes online.</p>
+        <div class="chip-row" id="store-chip-row"></div>
+    </div>
+
+    <div class="sheet-section">
+        <h3>Favorite Categories</h3>
+        <p>Boost the kinds of products you want to see first.</p>
+        <div class="chip-row" id="preference-category-row"></div>
+    </div>
+
+    <div class="sheet-section">
+        <h3>Diet & Lifestyle Tags</h3>
+        <p>Prioritize deals that match how you actually shop.</p>
+        <div class="chip-row" id="diet-chip-row"></div>
+    </div>
+
+    <div class="sheet-section">
+        <h3>Favorite Brands</h3>
+        <p>Save your most-loved brands and the feed will bias toward them.</p>
+        <div class="chip-row" id="brand-chip-row"></div>
+    </div>
+
+    <div class="sheet-actions">
+        <button class="ghost-button" id="reset-profile" type="button">Reset Personalization</button>
+        <button class="primary-button" id="save-profile" type="button">Save Preferences</button>
+    </div>
+</aside>
+
+<div class="install-sheet hidden" id="install-sheet" aria-hidden="true">
+    <div class="sheet-header">
+        <div>
+            <div class="app-kicker">Install</div>
+            <h2>Add to Your iPhone Home Screen</h2>
+        </div>
+        <button class="ghost-button" id="install-close" type="button">Close</button>
+    </div>
+    <p>In Safari, tap the share button, then choose <strong>Add to Home Screen</strong>. This app is optimized for iPhone and saves your preferences on device.</p>
 </div>
-{% endif %}
 
-<h2>{{ p.emoji }} {{ p.name }}</h2>
-
-<div class="source-list">
-{% for source in p.sources %}
-    <span class="source-pill">{{ source }}</span>
-{% endfor %}
-</div>
-
-{% if p.prime_price %}
-<p class="prime">
-    🔥 {{ p.prime_price }}
-</p>
-{% endif %}
-
-{% if p.basis_price %}
-<p class="regular regular-prominent">
-    Regular {{ p.basis_price }}
-</p>
-{% endif %}
-
-{% if p.discount %}
-<p class="discount">
-    {{ p.discount }}
-</p>
-{% endif %}
-
-<div class="card-meta">
-    {% if p.asin %}<div>ASIN: {{ p.asin }}</div>{% endif %}
-    {% if p.unit_price %}<div>Unit: {{ p.unit_price }}</div>{% endif %}
-    {% if p.url %}<div><a href="{{ p.url }}" target="_blank" rel="noreferrer">Open product</a></div>{% endif %}
-</div>
-
-</div>
-{% endfor %}
-</div>
-
-<script>
-const input = document.getElementById("product-search");
-const meta = document.getElementById("search-meta");
-const cards = Array.from(document.querySelectorAll(".combined-card"));
-
-function applySearch() {
-    const query = (input.value || "").trim().toLowerCase();
-    let visible = 0;
-
-    for (const card of cards) {
-        const haystack = [
-            card.dataset.name || "",
-            card.dataset.asin || "",
-            card.dataset.sources || "",
-        ].join(" ");
-
-        const match = !query || haystack.includes(query);
-        card.style.display = match ? "" : "none";
-        if (match) visible += 1;
-    }
-
-    meta.textContent = query
-        ? `Showing ${visible} matching products`
-        : `Showing ${visible} products`;
-}
-
-input.addEventListener("input", applySearch);
+<script id="app-data" type="application/json">
+{{ {"products": products, "stores": available_stores}|tojson }}
 </script>
+<script src="/static/app-shell.js"></script>
 
+<noscript>
+    <section class="noscript-fallback">
+        <h2>Deals</h2>
+        <div class="grid">
+        {% for p in products[:48] %}
+            <div class="card">
+                {% if p.image %}
+                <div class="product-image">
+                    <img src="{{ p.image }}" alt="{{ p.name }}">
+                </div>
+                {% endif %}
+                <h2>{{ p.emoji }} {{ p.name }}</h2>
+                {% if p.prime_price %}<p class="prime">🔥 {{ p.prime_price }}</p>{% endif %}
+                {% if p.basis_price %}<p class="regular regular-prominent">Regular {{ p.basis_price }}</p>{% endif %}
+                {% if p.discount %}<p class="discount">{{ p.discount }}</p>{% endif %}
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+</noscript>
 </body>
 </html>

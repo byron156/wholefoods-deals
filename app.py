@@ -3,7 +3,7 @@ import re
 import requests
 import os
 import math
-from flask import Flask, render_template
+from flask import Flask, jsonify, render_template, request, send_from_directory
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DISCOVERED_DEALS_FILE = os.path.join(BASE_DIR, "discovered_products.json")
@@ -14,6 +14,72 @@ COMBINED_PRODUCTS_FILE = os.path.join(BASE_DIR, "combined_products.json")
 app = Flask(__name__)
 
 SALES_FLYER_URL = "https://www.wholefoodsmarket.com/sales-flyer?store-id=10160"
+SUPPORTED_STORES = [
+    {
+        "id": "10160",
+        "slug": "columbus-circle",
+        "name": "Columbus Circle",
+        "city": "New York",
+        "state": "NY",
+        "label": "Columbus Circle, NYC",
+        "is_active": True,
+    }
+]
+DEFAULT_STORE_IDS = [SUPPORTED_STORES[0]["id"]]
+CATEGORY_RULES = {
+    "Produce": [
+        "apple", "banana", "berries", "berry", "melon", "grape", "avocado", "lettuce",
+        "salad", "spinach", "broccoli", "cauliflower", "pepper", "tomato", "onion",
+        "carrot", "mango", "kiwi", "lemon", "orange", "fruit", "vegetable",
+    ],
+    "Meat & Seafood": [
+        "chicken", "beef", "steak", "salmon", "tuna", "fish", "shrimp", "bacon",
+        "turkey", "ham", "lamb", "sausage", "pork", "scallop", "seafood",
+    ],
+    "Dairy & Eggs": [
+        "milk", "cheese", "butter", "yogurt", "egg", "cream", "creamer", "kefir",
+    ],
+    "Bakery": [
+        "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie", "pie", "pastry",
+    ],
+    "Frozen": [
+        "frozen", "ice cream", "gelato", "pizza", "waffle", "popsicle",
+    ],
+    "Snacks": [
+        "chips", "cracker", "pretzel", "popcorn", "snack", "granola bar", "candy",
+        "chocolate", "jerky", "bites", "crisps",
+    ],
+    "Pantry": [
+        "pasta", "rice", "sauce", "vinegar", "oil", "flour", "spice", "seasoning",
+        "broth", "beans", "soup", "hummus", "bruschetta", "oatmeal", "cereal",
+    ],
+    "Beverages": [
+        "coffee", "tea", "juice", "water", "seltzer", "soda", "kombucha", "drink",
+        "smoothie", "ipa", "beer", "wine", "latte",
+    ],
+    "Supplements & Wellness": [
+        "vitamin", "supplement", "enzyme", "probiotic", "collagen", "magnesium",
+        "omega", "capsule", "wellness", "multivitamin", "shots", "shot",
+    ],
+    "Household": [
+        "detergent", "cleaner", "soap refill", "paper towel", "trash bag", "dish", "laundry",
+    ],
+    "Beauty & Personal Care": [
+        "soap", "shampoo", "conditioner", "deodorant", "lotion", "serum", "clean day",
+        "hand soap", "multiservice gels",
+    ],
+}
+TAG_KEYWORDS = {
+    "organic": ["organic"],
+    "vegan": ["vegan"],
+    "vegetarian": ["vegetarian"],
+    "gluten-free": ["gluten free", "gluten-free"],
+    "keto": ["keto"],
+    "paleo": ["paleo"],
+    "non-gmo": ["non-gmo", "non gmo"],
+    "dairy-free": ["dairy free", "dairy-free"],
+    "high-protein": ["protein"],
+}
 
 
 def emoji_for_product(name):
@@ -204,12 +270,73 @@ def sort_products_for_display(products):
     ordered = list(products)
     ordered.sort(
         key=lambda product: (
-            -extract_discount_sort_value(product.get("discount")),
+            -(product.get("discount_percent") or extract_discount_sort_value(product.get("discount"))),
             -product.get("source_count", 0),
             normalize_text_key(product.get("name")),
         )
     )
     return ordered
+
+
+def derive_brand(name, explicit_brand=None):
+    if explicit_brand:
+        return explicit_brand.strip()
+
+    if not name:
+        return None
+
+    lowered = name.lower()
+    known_prefixes = [
+        "365 by whole foods market",
+        "whole foods market",
+        "mrs. meyer's",
+        "simply organic",
+        "fresh produce",
+        "brooklyn brewery",
+        "wellshire farms",
+        "yumearth",
+        "maryruth's",
+        "health ade",
+        "bobo's",
+        "siete",
+    ]
+    for prefix in known_prefixes:
+        if lowered.startswith(prefix):
+            return name[: len(prefix)].strip(" ,")
+
+    return None
+
+
+def derive_category(name, brand=None):
+    haystack = " ".join(filter(None, [name, brand])).lower()
+    if not haystack:
+        return "Pantry"
+
+    for category, keywords in CATEGORY_RULES.items():
+        if any(keyword in haystack for keyword in keywords):
+            return category
+
+    return "Pantry"
+
+
+def derive_tags(name, brand=None, category=None, sources=None, source_count=0, prime_price=None):
+    haystack = " ".join(filter(None, [name, brand, category])).lower()
+    tags = []
+
+    for tag, keywords in TAG_KEYWORDS.items():
+        if any(keyword in haystack for keyword in keywords):
+            tags.append(tag)
+
+    sources = sources or []
+    if source_count > 1 and "multi-source deal" not in tags:
+        tags.append("multi-source deal")
+    elif len(sources) == 1 and sources[0] == "Flyer":
+        tags.append("flyer-only deal")
+
+    if prime_price:
+        tags.append("prime deal")
+
+    return sorted(dict.fromkeys(tags))
 
 
 def format_price(value, suffix=""):
@@ -594,6 +721,8 @@ def standardize_product_record(
     url=None,
     asin=None,
     asins=None,
+    brand=None,
+    variation=None,
     regular_price=None,
     prime_price=None,
     current_price=None,
@@ -608,10 +737,16 @@ def standardize_product_record(
         current_price=current_price,
         discount_text=discount_text,
     )
+    normalized_brand = derive_brand(name, explicit_brand=brand)
+    category = derive_category(name, brand=normalized_brand)
+    discount_percent = extract_discount_sort_value(final_discount)
 
     product = {
         "asin": asin,
         "name": name,
+        "brand": normalized_brand,
+        "variation": variation,
+        "category": category,
         "image": image,
         "url": url,
         "unit_price": unit_price,
@@ -619,13 +754,22 @@ def standardize_product_record(
         "basis_price": display_regular_price,
         "prime_price": display_prime_price,
         "discount": final_discount,
+        "discount_percent": discount_percent if discount_percent >= 0 else 0,
         "emoji": emoji or emoji_for_product(name),
+        "available_store_ids": list(DEFAULT_STORE_IDS),
     }
 
     if asins:
         product["asins"] = asins
         if not product.get("asin"):
             product["asin"] = str(asins[0]).strip()
+
+    product["tags"] = derive_tags(
+        name=name,
+        brand=normalized_brand,
+        category=category,
+        prime_price=display_prime_price,
+    )
 
     if extra_fields:
         product.update(extra_fields)
@@ -652,6 +796,8 @@ def load_all_deals():
             standardize_product_record(
                 asin=p.get("asin"),
                 name=p.get("name"),
+                brand=p.get("brand"),
+                variation=p.get("variation"),
                 image=p.get("image"),
                 url=p.get("url"),
                 unit_price=p.get("unit_price"),
@@ -685,6 +831,8 @@ def load_search_deals():
             standardize_product_record(
                 asin=p.get("asin"),
                 name=p.get("name"),
+                brand=p.get("brand"),
+                variation=p.get("variation"),
                 image=p.get("image"),
                 url=p.get("url"),
                 unit_price=p.get("unit_price"),
@@ -718,6 +866,8 @@ def load_saved_flyer_products():
                 asin=p.get("asin"),
                 asins=p.get("asins"),
                 name=p.get("name"),
+                brand=p.get("brand"),
+                variation=p.get("variation"),
                 image=p.get("image"),
                 url=p.get("url"),
                 unit_price=p.get("unit_price"),
@@ -739,12 +889,20 @@ def merge_combined_product(existing, incoming):
         merged = dict(incoming)
         merged["sources"] = list(incoming.get("sources", []))
         merged["source_count"] = len(merged["sources"])
+        merged["tags"] = derive_tags(
+            name=merged.get("name"),
+            brand=merged.get("brand"),
+            category=merged.get("category"),
+            sources=merged.get("sources"),
+            source_count=merged.get("source_count", 0),
+            prime_price=merged.get("prime_price"),
+        )
         return merged
 
     merged = dict(existing)
 
     for key, value in incoming.items():
-        if key == "sources":
+        if key in {"sources", "tags", "available_store_ids"}:
             continue
         if value in (None, "", []):
             continue
@@ -758,6 +916,19 @@ def merge_combined_product(existing, incoming):
 
     merged["sources"] = merged_sources
     merged["source_count"] = len(merged_sources)
+    merged_store_ids = []
+    for store_id in existing.get("available_store_ids", []) + incoming.get("available_store_ids", []):
+        if store_id not in merged_store_ids:
+            merged_store_ids.append(store_id)
+    merged["available_store_ids"] = merged_store_ids or list(DEFAULT_STORE_IDS)
+    merged["tags"] = derive_tags(
+        name=merged.get("name"),
+        brand=merged.get("brand"),
+        category=merged.get("category"),
+        sources=merged_sources,
+        source_count=len(merged_sources),
+        prime_price=merged.get("prime_price"),
+    )
     return merged
 
 
@@ -782,6 +953,8 @@ def normalized_product_for_source(product, source_name):
         asin=product.get("asin"),
         asins=product.get("asins"),
         name=product.get("name"),
+        brand=product.get("brand"),
+        variation=product.get("variation"),
         image=product.get("image"),
         url=product.get("url"),
         unit_price=product.get("unit_price"),
@@ -792,6 +965,14 @@ def normalized_product_for_source(product, source_name):
         emoji=product.get("emoji"),
     )
     normalized["sources"] = [source_name]
+    normalized["tags"] = derive_tags(
+        name=normalized.get("name"),
+        brand=normalized.get("brand"),
+        category=normalized.get("category"),
+        sources=normalized.get("sources"),
+        source_count=1,
+        prime_price=normalized.get("prime_price"),
+    )
     return normalized
 
 
@@ -840,6 +1021,8 @@ def load_combined_products():
             asin=p.get("asin"),
             asins=p.get("asins"),
             name=p.get("name"),
+            brand=p.get("brand"),
+            variation=p.get("variation"),
             image=p.get("image"),
             url=p.get("url"),
             unit_price=p.get("unit_price"),
@@ -852,6 +1035,14 @@ def load_combined_products():
         sources = list(p.get("sources") or [])
         normalized["sources"] = sources
         normalized["source_count"] = len(sources)
+        normalized["tags"] = derive_tags(
+            name=normalized.get("name"),
+            brand=normalized.get("brand"),
+            category=normalized.get("category"),
+            sources=sources,
+            source_count=len(sources),
+            prime_price=normalized.get("prime_price"),
+        )
         normalized_products.append(normalized)
 
     return normalized_products
@@ -875,6 +1066,7 @@ def fetch_products():
         products.append(
             standardize_product_record(
                 name=p.get("productName", "Unknown Product"),
+                brand=p.get("brandName"),
                 image=p.get("productImage"),
                 regular_price=p.get("regularPrice"),
                 current_price=p.get("salePrice"),
@@ -919,6 +1111,114 @@ def validate_product_fields(products, label="products"):
     return problems
 
 
+def parse_csv_arg(name):
+    raw_value = request.args.get(name, "")
+    values = [value.strip() for value in raw_value.split(",") if value.strip()]
+    return values
+
+
+def filter_products_for_api(products):
+    query = normalize_text_key(request.args.get("q", ""))
+    categories = {value.lower() for value in parse_csv_arg("category")}
+    tags = {value.lower() for value in parse_csv_arg("tag")}
+    brands = {value.lower() for value in parse_csv_arg("brand")}
+    store_ids = set(parse_csv_arg("store_id"))
+
+    filtered = []
+    for product in products:
+        haystack = normalize_text_key(
+            " ".join(
+                filter(
+                    None,
+                    [
+                        product.get("name"),
+                        product.get("brand"),
+                        product.get("category"),
+                        product.get("asin"),
+                        " ".join(product.get("tags") or []),
+                    ],
+                )
+            )
+        )
+
+        if query and query not in haystack:
+            continue
+        if categories and (product.get("category") or "").lower() not in categories:
+            continue
+        if tags and not tags.intersection({tag.lower() for tag in product.get("tags") or []}):
+            continue
+        if brands and (product.get("brand") or "").lower() not in brands:
+            continue
+        if store_ids:
+            available_store_ids = set(product.get("available_store_ids") or [])
+            if available_store_ids and not store_ids.intersection(available_store_ids):
+                continue
+
+        filtered.append(product)
+
+    return filtered
+
+
+def api_limit(default=60, maximum=200):
+    try:
+        value = int(request.args.get("limit", default))
+    except (TypeError, ValueError):
+        value = default
+    return max(1, min(value, maximum))
+
+
+@app.route("/service-worker.js")
+def service_worker():
+    return send_from_directory(os.path.join(BASE_DIR, "static"), "service-worker.js", mimetype="application/javascript")
+
+
+@app.route("/manifest.webmanifest")
+def manifest():
+    return send_from_directory(os.path.join(BASE_DIR, "static"), "manifest.webmanifest", mimetype="application/manifest+json")
+
+
+@app.route("/api/stores")
+def api_stores():
+    return jsonify({"stores": SUPPORTED_STORES})
+
+
+@app.route("/api/categories")
+def api_categories():
+    products = load_combined_products()
+    counts = {}
+    for product in products:
+        category = product.get("category") or "Pantry"
+        counts[category] = counts.get(category, 0) + 1
+
+    categories = [
+        {"name": category, "count": count}
+        for category, count in sorted(counts.items(), key=lambda item: (-item[1], item[0]))
+    ]
+    return jsonify({"categories": categories})
+
+
+@app.route("/api/search")
+def api_search():
+    products = sort_products_for_display(filter_products_for_api(load_combined_products()))
+    return jsonify({"products": products[:api_limit()], "count": len(products)})
+
+
+@app.route("/api/feed")
+def api_feed():
+    products = sort_products_for_display(filter_products_for_api(load_combined_products()))
+    return jsonify({"products": products[:api_limit()], "count": len(products)})
+
+
+@app.route("/api/product/<asin>")
+def api_product(asin):
+    asin = asin.strip()
+    for product in load_combined_products():
+        asins = set(product.get("asins") or [])
+        if product.get("asin") == asin or asin in asins:
+            return jsonify(product)
+    return jsonify({"error": "Product not found"}), 404
+
+
 @app.route("/")
 def combined_products_home():
     products = sort_products_for_display(load_combined_products())
@@ -927,6 +1227,7 @@ def combined_products_home():
         "combined_products.html",
         products=products,
         deal_count=deal_count,
+        available_stores=SUPPORTED_STORES,
         page_subtitle="Search combined products across flyer, all deals, and search deals",
     )
 
