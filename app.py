@@ -63,7 +63,7 @@ CATEGORY_PROFILES = {
         ],
         "medium": ["dairy", "creamer"],
         "weak": [],
-        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter", "chocolate egg", "chocolate eggs"],
+        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter", "chocolate egg", "chocolate eggs", "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar"],
     },
     "Bakery": {
         "strong": [
@@ -110,6 +110,7 @@ CATEGORY_PROFILES = {
             "granola", "peanut butter", "jam", "honey", "mustard", "ketchup", "marinade",
             "dressing", "salsa", "fruit spread", "spread", "preserves", "seed butter",
             "sunflower butter", "almond butter", "cashew butter", "nut butter", "hommus",
+            "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar",
         ],
         "medium": ["pantry", "mix", "canned", "jarred"],
         "weak": [],
@@ -240,6 +241,11 @@ SUBCATEGORY_PROFILES = {
 }
 
 DIRECT_CATEGORY_HINTS = [
+    {
+        "category": "Pantry",
+        "include": ["macaroni and cheese", "mac and cheese", "mac cheese", "shells and cheddar"],
+        "exclude": ["frozen", "pizza"],
+    },
     {
         "category": "Prepared Foods",
         "include": ["kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish", "dumpling", "mandu", "tteokbokki"],
@@ -494,7 +500,7 @@ def sort_products_for_display(products):
 
 def derive_brand(name, explicit_brand=None):
     if explicit_brand:
-        cleaned_explicit_brand = clean_brand_display(explicit_brand.strip())
+        cleaned_explicit_brand = trim_brand_candidate(explicit_brand.strip())
         normalized_explicit_brand = normalize_text_key(cleaned_explicit_brand)
         if "suppliers may vary" in normalized_explicit_brand:
             return None
@@ -505,40 +511,13 @@ def derive_brand(name, explicit_brand=None):
     if not name:
         return None
 
-    lowered = name.lower()
-    known_prefixes = [
-        "365 by whole foods market",
-        "whole foods market",
-        "mrs. meyer's",
-        "simply organic",
-        "fresh produce",
-        "brooklyn brewery",
-        "wellshire farms",
-        "yumearth",
-        "maryruth's",
-        "health ade",
-        "bobo's",
-        "siete",
-        "new chapter",
-        "amylu",
-        "amylu foods",
-        "om mushroom superfood",
-        "cedars mediterranean food",
-        "cedar's",
-        "cedars",
-        "aidells",
-        "athletic brewing company",
-        "athletic brewing",
-        "belgioioso",
-        "better buzz coffee",
-    ]
-    for prefix in known_prefixes:
-        if lowered.startswith(prefix):
-            return clean_brand_display(name[: len(prefix)].strip(" ,"))
+    canonical = canonical_brand_for_alias(name)
+    if canonical:
+        return canonical
 
     brand_candidate = extract_brand_candidate(name)
     if brand_candidate:
-        return clean_brand_display(brand_candidate)
+        return trim_brand_candidate(brand_candidate)
 
     return None
 
@@ -572,6 +551,33 @@ GENERIC_BRAND_WORDS = {
     "small", "snacks", "soap", "source", "spread", "stress", "supplement", "supplements", "superfood", "tablets", "tea",
     "tonic", "turkey", "vanilla", "variety", "vitamin", "vitamins", "wellness", "white", "womens", "yogurt",
 }
+BRAND_FAMILY_ALIASES = {
+    "Annie's": ["annie's homegrown", "annies homegrown", "annie's", "annies"],
+    "Amylu": ["amylu foods", "amylu"],
+    "Athletic Brewing": ["athletic brewing company", "athletic brewing"],
+    "BelGioioso": ["belgioioso"],
+    "Better Buzz Coffee": ["better buzz coffee"],
+    "Brooklyn Brewery": ["brooklyn brewery"],
+    "CREDO FOODS": ["credo foods", "credo"],
+    "Garden of Life": ["garden of life"],
+    "Health-Ade": ["health ade", "health-ade"],
+    "MaryRuth's": ["maryruth's", "maryruths", "maryruth"],
+    "Mrs. Meyer's": ["mrs. meyer's", "mrs meyers", "mrs. meyers"],
+    "New Chapter": ["new chapter"],
+    "OM Mushroom Superfood": ["om mushroom superfood"],
+    "Siete": ["siete"],
+    "Simply Organic": ["simply organic"],
+    "Wellshire Farms": ["wellshire farms"],
+    "Whole Foods Market": ["365 by whole foods market", "whole foods market"],
+    "YumEarth": ["yumearth"],
+}
+BRAND_DESCRIPTOR_STARTERS = {
+    "alfredo", "aged", "and", "bar", "bars", "bernie", "blanco", "bowl", "cheddar", "cheese", "chicken",
+    "classic", "coffee", "cookies", "crackers", "deluxe", "frozen", "garlic", "growth", "homegrown", "item",
+    "items", "liquid", "mac", "macaroni", "medium", "mineral", "mix", "multivitamin", "oatmilk", "organic",
+    "pasta", "pepper", "pizza", "plant", "poppers", "powder", "pretzels", "protein", "queso", "real", "roasted",
+    "sauce", "shells", "snack", "soup", "super", "supplement", "tomato", "uncured", "vitamin", "with",
+}
 
 
 def candidate_is_generic_brand(candidate):
@@ -595,6 +601,47 @@ def candidate_is_generic_brand(candidate):
     if len(cleaned_tokens) >= 3 and generic_hits >= len(cleaned_tokens) - 1:
         return True
     return False
+
+
+def canonical_brand_for_alias(candidate):
+    normalized = normalize_text_key(candidate)
+    if not normalized:
+        return None
+
+    for canonical, aliases in BRAND_FAMILY_ALIASES.items():
+        for alias in aliases:
+            alias_key = normalize_text_key(alias)
+            if normalized == alias_key or normalized.startswith(alias_key + " "):
+                return canonical
+    return None
+
+
+def trim_brand_candidate(candidate):
+    if not candidate:
+        return None
+
+    canonical = canonical_brand_for_alias(candidate)
+    if canonical:
+        return canonical
+
+    candidate = re.sub(r"^[®™©\s]+", "", candidate).strip(" ,:-")
+    tokens = re.split(r"\s+", candidate)
+    kept = []
+
+    for index, token in enumerate(tokens):
+        clean = token.strip(" ,.:;()[]{}")
+        clean_key = normalize_text_key(clean)
+        if not clean_key:
+            continue
+        if index > 0 and (clean_key in BRAND_DESCRIPTOR_STARTERS or any(ch.isdigit() for ch in clean_key)):
+            break
+        kept.append(clean)
+
+    trimmed = " ".join(kept).strip(" ,:-") or candidate
+    canonical = canonical_brand_for_alias(trimmed)
+    if canonical:
+        return canonical
+    return clean_brand_display(trimmed)
 
 
 def extract_brand_candidate(name):
@@ -640,7 +687,7 @@ def extract_brand_candidate(name):
     if not brand_tokens:
         return None
 
-    candidate = " ".join(brand_tokens).strip()
+    candidate = trim_brand_candidate(" ".join(brand_tokens).strip())
     if normalize_text_key(candidate) in BRAND_STOP_WORDS:
         return None
     if candidate_is_generic_brand(candidate):
@@ -744,8 +791,13 @@ def clean_display_name(name, brand=None):
         return name
 
     cleaned = re.sub(r"\s+", " ", str(name)).strip(" ,")
+    cleaned = re.sub(r"(?<=\w)\+(?=\w)", " + ", cleaned)
     cleaned = strip_brand_from_name(cleaned, brand)
     cleaned = re.sub(r"^[®™©\s]+", "", cleaned)
+    cleaned = re.sub(r"^homegrown[\s,:-]+", "", cleaned, flags=re.IGNORECASE)
+
+    if "|" in cleaned:
+        cleaned = cleaned.split("|", 1)[0].strip(" ,")
 
     if " – " in cleaned and (len(cleaned) > 55 or any(marker in cleaned.lower() for marker in DISPLAY_NAME_CLAIM_MARKERS)):
         cleaned = cleaned.split(" – ", 1)[0].strip(" ,")
@@ -761,6 +813,27 @@ def clean_display_name(name, brand=None):
     cleaned = re.sub(r"\s*\((?:\d+\s*servings?|pack of \d+|[0-9.]+\s*(?:oz|fl oz|lb|g|kg).*)\)\s*$", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned).strip(" ,;-–—")
     return smart_title_case(cleaned)
+
+
+def normalize_brands_across_products(products):
+    for product in products:
+        canonical_brand = trim_brand_candidate(product.get("brand")) if product.get("brand") else None
+        if canonical_brand and candidate_is_generic_brand(canonical_brand):
+            canonical_brand = None
+
+        product["brand"] = canonical_brand
+        source_name = product.get("raw_name") or product.get("name")
+        if source_name:
+            product["name"] = clean_display_name(source_name, canonical_brand)
+        product["tags"] = derive_tags(
+            name=product.get("name"),
+            brand=product.get("brand"),
+            category=product.get("category"),
+            sources=product.get("sources"),
+            source_count=product.get("source_count", 0),
+            prime_price=product.get("prime_price"),
+        )
+    return products
 
 
 def build_classification_haystack(name=None, brand=None, variation=None, url=None):
@@ -1699,6 +1772,7 @@ def build_combined_products(
             combined[key] = merge_combined_product(combined.get(key), normalized)
 
     ordered = list(combined.values())
+    ordered = normalize_brands_across_products(ordered)
     ordered.sort(
         key=lambda product: (
             -product.get("source_count", 0),

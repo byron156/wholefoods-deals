@@ -4,7 +4,7 @@
     return;
   }
 
-  const STORAGE_KEY = "wholefoods-deals-profile-v4";
+  const STORAGE_KEY = "wholefoods-deals-profile-v5";
   const rawData = JSON.parse(appDataNode.textContent || "{}");
   const products = (rawData.products || []).map((product, index) => ({
     ...product,
@@ -29,7 +29,6 @@
     searchInput: document.getElementById("global-search"),
     searchMeta: document.getElementById("search-meta"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
-    categoryChipRow: document.getElementById("category-chip-row"),
     feedGrid: document.getElementById("feed-grid"),
     feedCount: document.getElementById("feed-count"),
     feedTitle: document.getElementById("feed-title"),
@@ -56,7 +55,6 @@
     profile: loadProfile(),
     query: "",
     activeRetailer: retailerList[0] || "Whole Foods",
-    activeCategory: "",
   };
 
   function saveProfile() {
@@ -189,7 +187,7 @@
       score -= 90;
     }
 
-    score += (liked.categories[product.category] || 0) * 14;
+    score += (liked.categories[product.category] || 0) * 16;
     score -= (disliked.categories[product.category] || 0) * 20;
 
     if (product.brand) {
@@ -209,15 +207,6 @@
     return baseDealScore(product) + queryScore(product) + preferenceScore(product, liked, disliked);
   }
 
-  function visibleProducts() {
-    return products.filter((product) =>
-      product.retailer === state.activeRetailer &&
-      (!state.activeCategory || product.category === state.activeCategory) &&
-      productVisibleForStores(product) &&
-      textContainsQuery(product, state.query)
-    );
-  }
-
   function retailerProducts() {
     return products.filter((product) =>
       product.retailer === state.activeRetailer &&
@@ -225,11 +214,15 @@
     );
   }
 
-  function rankedProducts() {
+  function visibleProducts() {
+    return retailerProducts().filter((product) => textContainsQuery(product, state.query));
+  }
+
+  function rankProductList(list) {
     const liked = buildAffinityCounts(state.profile.likedKeys);
     const disliked = buildAffinityCounts(state.profile.dislikedKeys);
 
-    return visibleProducts()
+    return list
       .map((product) => ({
         ...product,
         _score: scoreProduct(product, liked, disliked),
@@ -245,6 +238,37 @@
       });
   }
 
+  function buildCategoryShelves() {
+    const liked = buildAffinityCounts(state.profile.likedKeys);
+    const disliked = buildAffinityCounts(state.profile.dislikedKeys);
+    const grouped = new Map();
+
+    retailerProducts().forEach((product) => {
+      const category = product.category || "Pantry";
+      if (!grouped.has(category)) {
+        grouped.set(category, []);
+      }
+      grouped.get(category).push(product);
+    });
+
+    return Array.from(grouped.entries())
+      .map(([category, items]) => ({
+        category,
+        total: items.length,
+        preferenceWeight: (liked.categories[category] || 0) - (disliked.categories[category] || 0),
+        items: rankProductList(items).slice(0, 18),
+      }))
+      .sort((left, right) => {
+        if (right.preferenceWeight !== left.preferenceWeight) {
+          return right.preferenceWeight - left.preferenceWeight;
+        }
+        if (right.total !== left.total) {
+          return right.total - left.total;
+        }
+        return left.category.localeCompare(right.category);
+      });
+  }
+
   function renderRetailerChips() {
     nodes.retailerChipRow.innerHTML = retailerList
       .map((retailer) => {
@@ -254,39 +278,8 @@
       .join("");
   }
 
-  function renderCategoryChips() {
-    const counts = new Map();
-    retailerProducts().forEach((product) => {
-      const category = product.category || "Pantry";
-      counts.set(category, (counts.get(category) || 0) + 1);
-    });
-
-    if (!counts.size) {
-      nodes.categoryChipRow.innerHTML = "";
-      return;
-    }
-
-    const ordered = Array.from(counts.entries()).sort((left, right) => {
-      if (right[1] !== left[1]) {
-        return right[1] - left[1];
-      }
-      return left[0].localeCompare(right[0]);
-    });
-
-    if (state.activeCategory && !counts.has(state.activeCategory)) {
-      state.activeCategory = "";
-    }
-
-    nodes.categoryChipRow.innerHTML = [
-      `<button class="chip ${!state.activeCategory ? "is-selected" : ""}" data-category="" type="button">All</button>`,
-      ...ordered.map(([category, count]) => {
-        const selected = state.activeCategory === category;
-        return `<button class="chip ${selected ? "is-selected" : ""}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(category)} (${count})</button>`;
-      }),
-    ].join("");
-  }
-
   function renderEmpty(message) {
+    nodes.feedGrid.className = "";
     nodes.feedGrid.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
   }
 
@@ -351,10 +344,6 @@
     return `
       <article class="deal-card" data-key="${escapeHtml(product.key)}">
         ${imageMarkup}
-        <div class="deal-topline">
-          <span class="retailer-badge">${escapeHtml(product.retailer)}</span>
-          <span class="category-pill">${escapeHtml(product.category)}</span>
-        </div>
         ${metaLine(product)}
         ${titleMarkup}
         <div class="deal-price-row">
@@ -363,11 +352,53 @@
         </div>
         ${regularLabel(product)}
         <div class="deal-actions">
-          <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">${liked ? "More" : "More"}</button>
-          <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">${disliked ? "Less" : "Less"}</button>
+          <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">More</button>
+          <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">Less</button>
         </div>
       </article>
     `;
+  }
+
+  function renderSearchResults() {
+    const ranked = rankProductList(visibleProducts()).slice(0, 120);
+    if (!ranked.length) {
+      renderEmpty("No deals match that search yet.");
+      return;
+    }
+
+    nodes.feedGrid.className = "product-grid is-search-results";
+    nodes.feedGrid.innerHTML = ranked.map(renderProductCard).join("");
+    nodes.searchMeta.textContent = `${visibleProducts().length.toLocaleString()} results`;
+    nodes.feedTitle.textContent = `Search in ${state.activeRetailer}`;
+    nodes.feedCount.textContent = `${ranked.length.toLocaleString()} shown`;
+  }
+
+  function renderShelves() {
+    const shelves = buildCategoryShelves();
+    if (!shelves.length) {
+      renderEmpty("No deals are available right now.");
+      return;
+    }
+
+    nodes.feedGrid.className = "category-sections";
+    nodes.feedGrid.innerHTML = shelves
+      .map((shelf) => `
+        <section class="category-section">
+          <div class="category-section-head">
+            <h3>${escapeHtml(shelf.category)}</h3>
+            <span class="mini-pill">${shelf.total.toLocaleString()}</span>
+          </div>
+          <div class="category-track">
+            ${shelf.items.map(renderProductCard).join("")}
+          </div>
+        </section>
+      `)
+      .join("");
+
+    const liveCount = retailerProducts().length;
+    nodes.searchMeta.textContent = `${liveCount.toLocaleString()} live deals`;
+    nodes.feedTitle.textContent = `Top deals in ${state.activeRetailer}`;
+    nodes.feedCount.textContent = `${shelves.length.toLocaleString()} categories`;
   }
 
   function applyPreferenceSignals(product, direction) {
@@ -380,28 +411,14 @@
   }
 
   function renderFeed() {
-    const ranked = rankedProducts().slice(0, 120);
-    if (!ranked.length) {
-      renderEmpty(state.query ? "No deals match that search yet." : "No deals are available right now.");
-    } else {
-      nodes.feedGrid.innerHTML = ranked.map(renderProductCard).join("");
-    }
-
-    const visibleCount = visibleProducts().length;
-    nodes.searchMeta.textContent = state.query
-      ? `${visibleCount.toLocaleString()} results`
-      : `${visibleCount.toLocaleString()} live deals`;
-
-    if (state.activeCategory) {
-      nodes.feedTitle.textContent = state.query
-        ? `${state.activeCategory} in ${state.activeRetailer}`
-        : `${state.activeCategory} Deals`;
-    } else {
-      nodes.feedTitle.textContent = state.query ? `Results in ${state.activeRetailer}` : `Best in ${state.activeRetailer}`;
-    }
-    nodes.feedCount.textContent = `${ranked.length.toLocaleString()} shown`;
     renderRetailerChips();
-    renderCategoryChips();
+
+    if (state.query) {
+      renderSearchResults();
+      return;
+    }
+
+    renderShelves();
   }
 
   function handleAction(action, key) {
@@ -432,14 +449,6 @@
     const retailerButton = event.target.closest("[data-retailer]");
     if (retailerButton) {
       state.activeRetailer = retailerButton.dataset.retailer;
-      state.activeCategory = "";
-      renderFeed();
-      return;
-    }
-
-    const categoryButton = event.target.closest("[data-category]");
-    if (categoryButton) {
-      state.activeCategory = categoryButton.dataset.category || "";
       renderFeed();
     }
   });
