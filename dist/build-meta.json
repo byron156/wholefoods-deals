@@ -15,6 +15,10 @@
     "captured_batches.json",
     "search_deals_products.json",
     "search_deals_report.json",
+    "target_deals_products.json",
+    "target_deals_report.json",
+    "hmart_deals_products.json",
+    "hmart_deals_report.json",
     "combined_products.json",
     "combined_report.json",
     "flyer_vs_all_deals_report.json"

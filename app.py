@@ -10,6 +10,8 @@ DISCOVERED_DEALS_FILE = os.path.join(BASE_DIR, "discovered_products.json")
 SEARCH_DEALS_FILE = os.path.join(BASE_DIR, "search_deals_products.json")
 FLYER_PRODUCTS_FILE = os.path.join(BASE_DIR, "flyer_products.json")
 COMBINED_PRODUCTS_FILE = os.path.join(BASE_DIR, "combined_products.json")
+TARGET_DEALS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
+HMART_DEALS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
 
 app = Flask(__name__)
 
@@ -60,7 +62,7 @@ CATEGORY_PROFILES = {
         ],
         "medium": ["dairy", "creamer"],
         "weak": [],
-        "exclude": ["ice cream", "frozen dessert"],
+        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter"],
     },
     "Bakery": {
         "strong": [
@@ -95,7 +97,8 @@ CATEGORY_PROFILES = {
             "pasta", "rice", "sauce", "vinegar", "oil", "flour", "spice", "seasoning",
             "broth", "beans", "soup", "hummus", "bruschetta", "oatmeal", "cereal",
             "granola", "peanut butter", "jam", "honey", "mustard", "ketchup", "marinade",
-            "dressing", "salsa", "fruit spread", "spread", "preserves",
+            "dressing", "salsa", "fruit spread", "spread", "preserves", "seed butter",
+            "sunflower butter", "almond butter", "cashew butter", "nut butter",
         ],
         "medium": ["pantry", "mix", "canned", "jarred"],
         "weak": [],
@@ -115,9 +118,9 @@ CATEGORY_PROFILES = {
         "strong": [
             "vitamin", "supplement", "enzyme", "probiotic", "collagen", "magnesium",
             "omega", "capsule", "wellness", "multivitamin", "shots", "shot", "peptides",
-            "digestive", "powder", "electrolyte",
+            "digestive", "powder", "electrolyte", "turmeric", "elixir", "calcium",
         ],
-        "medium": ["protein", "greens powder", "wellness"],
+        "medium": ["protein", "greens powder", "wellness", "tonic", "adaptogen"],
         "weak": [],
         "exclude": ["protein bar", "shot glass"],
     },
@@ -141,6 +144,75 @@ CATEGORY_PROFILES = {
         "exclude": ["dish soap", "laundry soap"],
     },
 }
+SUBCATEGORY_PROFILES = {
+    "Produce": {
+        "Fruit": ["apple", "banana", "berries", "berry", "grapes", "grape", "cherries", "cherry", "citrus", "orange", "lemon", "lime", "kiwi", "mango", "pear", "peach", "plum", "melon", "pineapple", "strawberries", "blueberries", "raspberries", "blackberries"],
+        "Vegetables": ["broccoli", "cauliflower", "lettuce", "tomato", "onion", "carrot", "pepper", "cucumber", "avocado", "potato", "sweet potato", "kale", "spinach"],
+        "Salads & Greens": ["salad", "greens", "romaine", "baby spinach", "spring mix", "salad kit", "salad mix"],
+        "Herbs": ["herb", "cilantro", "parsley", "basil", "mint"],
+    },
+    "Meat & Seafood": {
+        "Chicken & Turkey": ["chicken", "turkey", "cutlet", "breast", "thigh", "drumstick"],
+        "Beef, Pork & Lamb": ["beef", "pork", "lamb", "ham", "steak", "sausage", "bacon", "ground beef"],
+        "Seafood": ["salmon", "tuna", "shrimp", "fish", "seafood", "crab", "lobster", "scallop"],
+        "Deli & Prepared Meat": ["meatballs", "deli", "prosciutto", "pepperoni"],
+    },
+    "Dairy & Eggs": {
+        "Milk & Creamers": ["milk", "creamer", "half and half", "kefir"],
+        "Cheese": ["cheese", "mozzarella", "cheddar", "feta", "parmesan", "cream cheese", "cottage cheese"],
+        "Yogurt & Cultured Dairy": ["yogurt", "kefir", "cultured"],
+        "Eggs & Butter": ["egg", "butter", "sour cream"],
+    },
+    "Bakery": {
+        "Bread & Bagels": ["bread", "bagel", "bun", "roll", "tortilla", "wrap"],
+        "Pastries & Desserts": ["croissant", "cake", "muffin", "pie", "pastry", "brownie", "donut", "scone"],
+        "Cookies & Biscuits": ["cookie", "biscuit", "cracker biscuit"],
+    },
+    "Frozen": {
+        "Ice Cream & Desserts": ["ice cream", "gelato", "sorbet", "frozen dessert", "ice pop", "popsicle"],
+        "Frozen Meals & Pizza": ["pizza", "frozen meal", "dumpling", "entree"],
+        "Frozen Produce": ["frozen fruit", "frozen vegetable"],
+        "Frozen Breakfast": ["frozen waffle", "waffle", "frozen pancake"],
+    },
+    "Snacks": {
+        "Candy & Gummies": ["candy", "gummy", "fruit snacks", "chews", "chocolate"],
+        "Chips & Crackers": ["chips", "cracker", "pretzel", "popcorn", "crisps"],
+        "Cookies & Sweet Snacks": ["cookies", "cookie", "bites"],
+        "Bars": ["granola bar", "protein bar", "snack bar", "bar"],
+        "Nuts & Trail Mix": ["nuts", "trail mix", "almonds", "cashews", "pistachio"],
+    },
+    "Pantry": {
+        "Pasta, Rice & Grains": ["pasta", "rice", "oatmeal", "cereal", "granola", "flour"],
+        "Sauces, Broth & Soup": ["sauce", "broth", "soup", "marinade", "dressing", "salsa"],
+        "Condiments & Spreads": ["peanut butter", "jam", "fruit spread", "spread", "preserves", "honey", "mustard", "ketchup", "vinegar", "oil"],
+        "Canned & Jarred Goods": ["beans", "jarred", "canned", "bruschetta", "hummus"],
+        "Baking & Seasonings": ["spice", "seasoning", "mix"],
+    },
+    "Beverages": {
+        "Water & Seltzer": ["water", "seltzer", "sparkling water", "coconut water"],
+        "Coffee & Tea": ["coffee", "tea", "latte", "cold brew"],
+        "Juice & Smoothies": ["juice", "smoothie", "kombucha"],
+        "Beer, Wine & Spirits": ["ipa", "beer", "wine", "hard seltzer", "lager"],
+        "Energy & Sports Drinks": ["energy drink", "electrolyte", "sports drink"],
+    },
+    "Supplements & Wellness": {
+        "Vitamins & Minerals": ["vitamin", "magnesium", "omega", "multivitamin"],
+        "Digestive & Probiotics": ["enzyme", "digestive", "probiotic"],
+        "Protein & Collagen": ["collagen", "protein powder", "peptides", "greens powder"],
+        "Wellness Shots & Tonics": ["wellness shot", "wellness shots", "shot", "tonic", "electrolyte"],
+    },
+    "Household": {
+        "Cleaning": ["cleaner", "disinfect", "sponge"],
+        "Dish & Laundry": ["dish", "laundry", "detergent", "dish soap"],
+        "Paper & Trash": ["paper towel", "toilet paper", "trash bag"],
+    },
+    "Beauty & Personal Care": {
+        "Hair Care": ["shampoo", "conditioner"],
+        "Skin & Body Care": ["lotion", "serum", "body wash", "moisturizer", "cleanser", "sunscreen", "lip balm"],
+        "Oral Care": ["toothpaste", "mouthwash"],
+        "Soap & Deodorant": ["hand soap", "soap bar", "deodorant"],
+    },
+}
 TAG_KEYWORDS = {
     "organic": ["organic"],
     "vegan": ["vegan"],
@@ -152,6 +224,13 @@ TAG_KEYWORDS = {
     "dairy-free": ["dairy free", "dairy-free"],
     "high-protein": ["protein"],
 }
+
+
+def text_contains_phrase(haystack, phrase):
+    phrase_key = normalize_text_key(phrase)
+    if not phrase_key:
+        return False
+    return phrase_key in haystack
 
 
 def emoji_for_product(name):
@@ -379,37 +458,103 @@ def derive_brand(name, explicit_brand=None):
     return None
 
 
-def derive_category(name, brand=None):
-    haystack = normalize_text_key(" ".join(filter(None, [name, brand])))
+def build_classification_haystack(name=None, brand=None, variation=None, url=None):
+    haystack = normalize_text_key(" ".join(filter(None, [name, brand, variation, url])))
     if not haystack:
-        return "Pantry"
+        return ""
+
+    haystack = haystack.replace("fl oz", " fluid ounce")
+    haystack = haystack.replace("oz cans", " cans")
+    haystack = haystack.replace("sparkling water beverage", "sparkling water")
+    haystack = haystack.replace("fruit spread preserves", "fruit spread")
+    return haystack
+
+
+def score_category_profile(haystack, profile):
+    score = 0
+    reasons = []
+
+    for phrase in profile.get("strong", []):
+        if text_contains_phrase(haystack, phrase):
+            score += 12
+            reasons.append(phrase)
+    for phrase in profile.get("medium", []):
+        if text_contains_phrase(haystack, phrase):
+            score += 6
+            reasons.append(phrase)
+    for phrase in profile.get("weak", []):
+        if text_contains_phrase(haystack, phrase):
+            score += 2
+            reasons.append(phrase)
+    for phrase in profile.get("exclude", []):
+        if text_contains_phrase(haystack, phrase):
+            score -= 10
+
+    return score, reasons
+
+
+def derive_subcategory(category, haystack):
+    subcategories = SUBCATEGORY_PROFILES.get(category, {})
+    best_subcategory = None
+    best_score = 0
+
+    for subcategory, phrases in subcategories.items():
+        score = 0
+        for phrase in phrases:
+            if text_contains_phrase(haystack, phrase):
+                score += 4 if " " in normalize_text_key(phrase) else 2
+        if score > best_score:
+            best_score = score
+            best_subcategory = subcategory
+
+    return best_subcategory
+
+
+def derive_category_details(name, brand=None, variation=None, url=None):
+    haystack = build_classification_haystack(name=name, brand=brand, variation=variation, url=url)
+    if not haystack:
+        return {
+            "category": "Pantry",
+            "subcategory": None,
+            "confidence": 0.2,
+            "signals": [],
+        }
 
     best_category = "Pantry"
     best_score = -999
+    second_best_score = -999
+    best_reasons = []
 
     for category, profile in CATEGORY_PROFILES.items():
-        score = 0
-        for phrase in profile.get("strong", []):
-            if normalize_text_key(phrase) in haystack:
-                score += 12
-        for phrase in profile.get("medium", []):
-            if normalize_text_key(phrase) in haystack:
-                score += 6
-        for phrase in profile.get("weak", []):
-            if normalize_text_key(phrase) in haystack:
-                score += 2
-        for phrase in profile.get("exclude", []):
-            if normalize_text_key(phrase) in haystack:
-                score -= 10
-
+        score, reasons = score_category_profile(haystack, profile)
         if score > best_score:
+            second_best_score = best_score
             best_score = score
             best_category = category
+            best_reasons = reasons
+        elif score > second_best_score:
+            second_best_score = score
 
     if best_score <= 0:
-        return "Pantry"
+        return {
+            "category": "Pantry",
+            "subcategory": derive_subcategory("Pantry", haystack),
+            "confidence": 0.25,
+            "signals": [],
+        }
 
-    return best_category
+    margin = max(0, best_score - second_best_score)
+    confidence = min(0.99, max(0.3, 0.35 + (best_score / 40.0) + (margin / 30.0)))
+    return {
+        "category": best_category,
+        "subcategory": derive_subcategory(best_category, haystack),
+        "confidence": round(confidence, 2),
+        "signals": best_reasons[:6],
+    }
+
+
+def derive_category(name, brand=None, variation=None, url=None):
+    return derive_category_details(name, brand=brand, variation=variation, url=url)["category"]
 
 
 def derive_tags(name, brand=None, category=None, sources=None, source_count=0, prime_price=None):
@@ -822,6 +967,7 @@ def standardize_product_record(
     discount_text=None,
     unit_price=None,
     emoji=None,
+    classification_context=None,
     extra_fields=None,
 ):
     display_regular_price, display_prime_price, final_discount = resolve_display_pricing(
@@ -831,7 +977,21 @@ def standardize_product_record(
         discount_text=discount_text,
     )
     normalized_brand = derive_brand(name, explicit_brand=brand)
-    category = derive_category(name, brand=normalized_brand)
+    classification_text = " ".join(
+        part
+        for part in [
+            variation,
+            " ".join(classification_context or []),
+        ]
+        if part
+    )
+    category_details = derive_category_details(
+        name,
+        brand=normalized_brand,
+        variation=classification_text or variation,
+        url=url,
+    )
+    category = category_details["category"]
     discount_percent = extract_discount_sort_value(final_discount)
 
     product = {
@@ -840,6 +1000,9 @@ def standardize_product_record(
         "brand": normalized_brand,
         "variation": variation,
         "category": category,
+        "subcategory": category_details.get("subcategory"),
+        "category_confidence": category_details.get("confidence"),
+        "category_signals": category_details.get("signals", []),
         "image": image,
         "url": url,
         "unit_price": unit_price,
@@ -934,6 +1097,7 @@ def load_search_deals():
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
+                extra_fields={"retailer": p.get("retailer") or "Whole Foods"},
             )
         )
 
@@ -974,6 +1138,82 @@ def load_saved_flyer_products():
         )
 
     products.sort(key=lambda x: x["rank"] if x.get("rank") is not None else 9999)
+    return products
+
+
+def load_target_deals():
+    print("Looking for target deals file at:", TARGET_DEALS_FILE)
+
+    try:
+        with open(TARGET_DEALS_FILE, "r", encoding="utf-8") as f:
+            raw_products = json.load(f)
+    except FileNotFoundError:
+        print("Target deals file not found.")
+        return []
+
+    print("Loaded", len(raw_products), "target deals")
+
+    products = []
+    for p in raw_products:
+        products.append(
+            standardize_product_record(
+                asin=p.get("asin"),
+                name=p.get("name"),
+                brand=p.get("brand"),
+                variation=p.get("variation"),
+                image=p.get("image"),
+                url=p.get("url"),
+                unit_price=p.get("unit_price"),
+                current_price=p.get("current_price"),
+                regular_price=p.get("basis_price"),
+                prime_price=p.get("prime_price"),
+                discount_text=p.get("discount"),
+                extra_fields={
+                    "retailer": "Target",
+                    "expires": p.get("expires"),
+                },
+            )
+        )
+
+    return products
+
+
+def load_hmart_deals():
+    print("Looking for H Mart deals file at:", HMART_DEALS_FILE)
+
+    try:
+        with open(HMART_DEALS_FILE, "r", encoding="utf-8") as f:
+            raw_products = json.load(f)
+    except FileNotFoundError:
+        print("H Mart deals file not found.")
+        return []
+
+    print("Loaded", len(raw_products), "H Mart deals")
+
+    products = []
+    for p in raw_products:
+        products.append(
+            standardize_product_record(
+                asin=p.get("asin"),
+                name=p.get("name"),
+                brand=p.get("brand"),
+                variation=p.get("variation"),
+                image=p.get("image"),
+                url=p.get("url"),
+                unit_price=p.get("unit_price"),
+                current_price=p.get("current_price"),
+                regular_price=p.get("basis_price"),
+                prime_price=p.get("prime_price"),
+                discount_text=p.get("discount"),
+                extra_fields={
+                    "retailer": "H Mart",
+                    "retail_source_url": p.get("retail_source_url"),
+                    "source_categories": p.get("categories") or [],
+                },
+                classification_context=p.get("categories") or [],
+            )
+        )
+
     return products
 
 
@@ -1056,6 +1296,13 @@ def normalized_product_for_source(product, source_name):
         prime_price=product.get("prime_price"),
         discount_text=product.get("discount"),
         emoji=product.get("emoji"),
+        classification_context=product.get("source_categories") or [],
+        extra_fields={
+            "retailer": product.get("retailer"),
+            "expires": product.get("expires"),
+            "retail_source_url": product.get("retail_source_url"),
+            "source_categories": product.get("source_categories") or [],
+        },
     )
     normalized["sources"] = [source_name]
     normalized["tags"] = derive_tags(
@@ -1069,13 +1316,23 @@ def normalized_product_for_source(product, source_name):
     return normalized
 
 
-def build_combined_products(flyer_products, all_deals_products, search_deals_products):
+def build_combined_products(
+    flyer_products,
+    all_deals_products,
+    search_deals_products,
+    target_deals_products=None,
+    hmart_deals_products=None,
+):
     combined = {}
+    target_deals_products = target_deals_products or []
+    hmart_deals_products = hmart_deals_products or []
 
     datasets = [
         ("Flyer", flyer_products),
         ("All Deals", all_deals_products),
         ("Search Deals", search_deals_products),
+        ("Target Deals", target_deals_products),
+        ("H Mart Deals", hmart_deals_products),
     ]
 
     for source_name, products in datasets:
@@ -1105,7 +1362,15 @@ def load_combined_products():
         flyer_products = load_saved_flyer_products()
         all_deals_products = load_all_deals()
         search_deals_products = load_search_deals()
-        return build_combined_products(flyer_products, all_deals_products, search_deals_products)
+        target_deals_products = load_target_deals()
+        hmart_deals_products = load_hmart_deals()
+        return build_combined_products(
+            flyer_products,
+            all_deals_products,
+            search_deals_products,
+            target_deals_products,
+            hmart_deals_products,
+        )
 
     print("Loaded", len(products), "combined products")
     normalized_products = []
@@ -1124,6 +1389,13 @@ def load_combined_products():
             prime_price=p.get("prime_price"),
             discount_text=p.get("discount"),
             emoji=p.get("emoji"),
+            classification_context=p.get("source_categories") or [],
+            extra_fields={
+                "retailer": p.get("retailer"),
+                "expires": p.get("expires"),
+                "retail_source_url": p.get("retail_source_url"),
+                "source_categories": p.get("source_categories") or [],
+            },
         )
         sources = list(p.get("sources") or [])
         normalized["sources"] = sources

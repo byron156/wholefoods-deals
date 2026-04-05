@@ -6,11 +6,15 @@ from app import (
     build_combined_products,
     fetch_products,
     load_all_deals,
+    load_hmart_deals,
     load_saved_flyer_products,
     load_search_deals,
+    load_target_deals,
 )
 from discover_all_deals import discover_all_deals
+from discover_hmart_deals import discover_hmart_deals
 from discover_search_deals import discover_search_deals
+from discover_target_deals import discover_target_deals
 
 
 DISCOVERED_RECOMMENDATIONS_FILE = os.path.join(BASE_DIR, "discovered_recommendations.json")
@@ -22,6 +26,10 @@ FLYER_PRODUCTS_FILE = os.path.join(BASE_DIR, "flyer_products.json")
 FLYER_REPORT_FILE = os.path.join(BASE_DIR, "flyer_report.json")
 COMBINED_PRODUCTS_FILE = os.path.join(BASE_DIR, "combined_products.json")
 COMBINED_REPORT_FILE = os.path.join(BASE_DIR, "combined_report.json")
+TARGET_DEALS_PRODUCTS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
+TARGET_DEALS_REPORT_FILE = os.path.join(BASE_DIR, "target_deals_report.json")
+HMART_DEALS_PRODUCTS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
+HMART_DEALS_REPORT_FILE = os.path.join(BASE_DIR, "hmart_deals_report.json")
 
 
 def write_json(path, payload):
@@ -59,15 +67,44 @@ def main():
         },
     )
 
+    print("Refreshing Target deals...")
+    target_result = discover_target_deals()
+    write_json(TARGET_DEALS_PRODUCTS_FILE, target_result["products"])
+    write_json(
+        TARGET_DEALS_REPORT_FILE,
+        {
+            "source_url": target_result["source_url"],
+            "result_count_text": target_result["result_count_text"],
+            "product_count": target_result["product_count"],
+            "load_more_clicks": target_result["load_more_clicks"],
+        },
+    )
+
+    print("Refreshing H Mart deals...")
+    hmart_result = discover_hmart_deals()
+    write_json(HMART_DEALS_PRODUCTS_FILE, hmart_result["products"])
+    write_json(
+        HMART_DEALS_REPORT_FILE,
+        {
+            "source_urls": hmart_result["source_urls"],
+            "product_count": hmart_result["product_count"],
+            "runs": hmart_result["runs"],
+        },
+    )
+
     print("Building combined products...")
     normalized_flyer_products = load_saved_flyer_products()
     normalized_all_deals_products = load_all_deals()
     normalized_search_deals_products = load_search_deals()
+    normalized_target_deals_products = load_target_deals()
+    normalized_hmart_deals_products = load_hmart_deals()
 
     combined_products = build_combined_products(
         normalized_flyer_products,
         normalized_all_deals_products,
         normalized_search_deals_products,
+        normalized_target_deals_products,
+        normalized_hmart_deals_products,
     )
     write_json(COMBINED_PRODUCTS_FILE, combined_products)
     write_json(
@@ -76,6 +113,8 @@ def main():
             "flyer_count": len(normalized_flyer_products),
             "all_deals_count": len(normalized_all_deals_products),
             "search_deals_count": len(normalized_search_deals_products),
+            "target_deals_count": len(normalized_target_deals_products),
+            "hmart_deals_count": len(normalized_hmart_deals_products),
             "combined_unique_count": len(combined_products),
         },
     )
@@ -84,6 +123,8 @@ def main():
     print(f"Flyer products: {len(normalized_flyer_products)}")
     print(f"All deals products: {len(normalized_all_deals_products)}")
     print(f"Search deals products: {len(normalized_search_deals_products)}")
+    print(f"Target deals products: {len(normalized_target_deals_products)}")
+    print(f"H Mart deals products: {len(normalized_hmart_deals_products)}")
     print(f"Combined unique products: {len(combined_products)}")
     print("\nPages:")
     print("  /")
