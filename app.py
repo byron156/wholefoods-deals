@@ -35,13 +35,14 @@ CATEGORY_PROFILES = {
             "romaine", "broccoli florets", "cauliflower florets", "avocado", "apple",
             "banana", "grapes", "berries", "blueberries", "strawberries", "raspberries",
             "blackberries", "cherries", "fresh cherries", "citrus", "lettuce", "tomato", "onion", "carrot", "mango",
-            "kiwi", "pear", "peach", "plum", "melon", "pineapple",
+            "kiwi", "pear", "peach", "plum", "melon", "pineapple", "fresh mushroom", "mushroom", "mushrooms",
         ],
         "medium": ["produce", "fruit", "vegetable", "salad", "greens", "herbs"],
         "weak": ["cherry", "lemon", "orange", "lime"],
         "exclude": [
             "cherry cola", "cherry gummies", "gummy", "candy", "chocolate", "cookie",
             "granola bar", "protein bar", "sparkling", "seltzer", "juice box",
+            "mushroom coffee", "mushroom powder", "mushroom supplement",
         ],
     },
     "Meat & Seafood": {
@@ -62,7 +63,7 @@ CATEGORY_PROFILES = {
         ],
         "medium": ["dairy", "creamer"],
         "weak": [],
-        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter"],
+        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter", "chocolate egg", "chocolate eggs"],
     },
     "Bakery": {
         "strong": [
@@ -72,6 +73,16 @@ CATEGORY_PROFILES = {
         "medium": ["bakery", "baked"],
         "weak": [],
         "exclude": ["ice cream cake", "pancake mix", "waffle mix"],
+    },
+    "Prepared Foods": {
+        "strong": [
+            "kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish", "deli",
+            "dumpling", "mandu", "tteokbokki", "katsu", "ready meal", "prepared meal",
+            "instant food", "rice bowl", "fried rice", "sushi", "meal kit",
+        ],
+        "medium": ["prepared", "quick food", "heat and eat", "ready to eat"],
+        "weak": [],
+        "exclude": ["dish soap", "laundry", "pet food"],
     },
     "Frozen": {
         "strong": [
@@ -86,7 +97,7 @@ CATEGORY_PROFILES = {
         "strong": [
             "chips", "cracker", "pretzel", "popcorn", "snack", "granola bar", "candy",
             "chocolate", "bites", "crisps", "gummy", "trail mix", "snack bar",
-            "protein bar", "fruit snacks", "cookies", "coconut chips",
+            "protein bar", "fruit snacks", "cookies", "coconut chips", "chocolate egg", "chocolate eggs",
         ],
         "medium": ["bar", "jerky", "nuts", "chews"],
         "weak": ["cherry", "berry"],
@@ -98,7 +109,7 @@ CATEGORY_PROFILES = {
             "broth", "beans", "soup", "hummus", "bruschetta", "oatmeal", "cereal",
             "granola", "peanut butter", "jam", "honey", "mustard", "ketchup", "marinade",
             "dressing", "salsa", "fruit spread", "spread", "preserves", "seed butter",
-            "sunflower butter", "almond butter", "cashew butter", "nut butter",
+            "sunflower butter", "almond butter", "cashew butter", "nut butter", "hommus",
         ],
         "medium": ["pantry", "mix", "canned", "jarred"],
         "weak": [],
@@ -108,7 +119,11 @@ CATEGORY_PROFILES = {
         "strong": [
             "coffee", "tea", "juice", "water", "seltzer", "soda", "kombucha", "smoothie",
             "ipa", "beer", "wine", "latte", "drink", "cold brew", "sparkling water",
-            "energy drink", "coconut water",
+            "energy drink", "coconut water", "hard seltzer", "budweiser", "bud light",
+            "bota box", "cabernet", "merlot", "chardonnay", "riesling", "pinot",
+            "sauvignon", "prosecco", "stella", "modelo", "corona", "heineken",
+            "coors", "michelob", "black stallion", "pale ale", "ale", "spritz",
+            "spiked", "zero proof", "non alcoholic", "non-alcoholic",
         ],
         "medium": ["beverage"],
         "weak": [],
@@ -126,12 +141,12 @@ CATEGORY_PROFILES = {
     },
     "Household": {
         "strong": [
-            "detergent", "cleaner", "soap refill", "paper towel", "trash bag", "dish",
+            "detergent", "cleaner", "soap refill", "paper towel", "trash bag",
             "laundry", "toilet paper", "clean day", "disinfect", "sponge",
         ],
         "medium": ["household", "cleaning"],
         "weak": [],
-        "exclude": ["dish pizza", "soap bar"],
+        "exclude": ["dish pizza", "soap bar", "side dish", "sidedish", "kimchi", "deli", "dumpling"],
     },
     "Beauty & Personal Care": {
         "strong": [
@@ -168,6 +183,11 @@ SUBCATEGORY_PROFILES = {
         "Pastries & Desserts": ["croissant", "cake", "muffin", "pie", "pastry", "brownie", "donut", "scone"],
         "Cookies & Biscuits": ["cookie", "biscuit", "cracker biscuit"],
     },
+    "Prepared Foods": {
+        "Kimchi & Sides": ["kimchi", "banchan", "side dish", "sidedish", "deli"],
+        "Rice Meals & Kimbap": ["kimbap", "gimbap", "rice bowl", "fried rice", "sushi"],
+        "Dumplings & Quick Meals": ["dumpling", "mandu", "tteokbokki", "katsu", "instant food", "ready meal"],
+    },
     "Frozen": {
         "Ice Cream & Desserts": ["ice cream", "gelato", "sorbet", "frozen dessert", "ice pop", "popsicle"],
         "Frozen Meals & Pizza": ["pizza", "frozen meal", "dumpling", "entree"],
@@ -203,7 +223,7 @@ SUBCATEGORY_PROFILES = {
     },
     "Household": {
         "Cleaning": ["cleaner", "disinfect", "sponge"],
-        "Dish & Laundry": ["dish", "laundry", "detergent", "dish soap"],
+        "Dish & Laundry": ["laundry", "detergent", "dish soap"],
         "Paper & Trash": ["paper towel", "toilet paper", "trash bag"],
     },
     "Beauty & Personal Care": {
@@ -213,6 +233,24 @@ SUBCATEGORY_PROFILES = {
         "Soap & Deodorant": ["hand soap", "soap bar", "deodorant"],
     },
 }
+
+DIRECT_CATEGORY_HINTS = [
+    {
+        "category": "Prepared Foods",
+        "include": ["kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish", "dumpling", "mandu", "tteokbokki"],
+        "exclude": ["dish soap", "laundry"],
+    },
+    {
+        "category": "Beverages",
+        "include": [
+            "budweiser", "bud light", "bota box", "black stallion", "hard seltzer", "beer",
+            "wine", "lager", "ipa", "stout", "pilsner", "cabernet", "merlot", "chardonnay",
+            "riesling", "pinot", "sauvignon", "prosecco", "rose", "rosé", "ale", "spritz",
+            "spiked", "non alcoholic", "non-alcoholic", "zero proof",
+        ],
+        "exclude": ["drink mix", "wine vinegar"],
+    },
+]
 TAG_KEYWORDS = {
     "organic": ["organic"],
     "vegan": ["vegan"],
@@ -422,7 +460,10 @@ def sort_products_for_display(products):
     ordered.sort(
         key=lambda product: (
             -(product.get("discount_percent") or extract_discount_sort_value(product.get("discount"))),
+            -(1 if product.get("prime_price") else 0),
+            -(1 if product.get("basis_price") else 0),
             -product.get("source_count", 0),
+            -(product.get("category_confidence") or 0),
             normalize_text_key(product.get("name")),
         )
     )
@@ -519,6 +560,18 @@ def derive_category_details(name, brand=None, variation=None, url=None):
             "confidence": 0.2,
             "signals": [],
         }
+
+    for hint in DIRECT_CATEGORY_HINTS:
+        if any(text_contains_phrase(haystack, phrase) for phrase in hint["include"]) and not any(
+            text_contains_phrase(haystack, phrase) for phrase in hint.get("exclude", [])
+        ):
+            category = hint["category"]
+            return {
+                "category": category,
+                "subcategory": derive_subcategory(category, haystack),
+                "confidence": 0.93,
+                "signals": [f"direct match: {hint['include'][0]}"],
+            }
 
     best_category = "Pantry"
     best_score = -999

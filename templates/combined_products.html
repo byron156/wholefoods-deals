@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
-<title>Whole Foods Deals</title>
+<title>Grocery Deals</title>
 <link rel="stylesheet" href="/static/styles.css">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
@@ -15,32 +15,25 @@
 <body class="app-body">
 <div class="app-shell">
     <header class="app-header">
-        <div>
-            <h1>Deals</h1>
-            <p class="app-summary-line" id="summary-line">One feed. Three stores.</p>
-        </div>
+        <h1>Grocery Deals</h1>
     </header>
 
     <section class="search-panel">
         <label class="sr-only" for="global-search">Search deals</label>
-        <input id="global-search" class="search-input app-search" type="search" placeholder="Search products, brands or categories...">
+        <input id="global-search" class="search-input app-search" type="search" placeholder="Search items or brands">
         <div class="chip-row" id="retailer-chip-row"></div>
         <div class="status-row">
-            <div class="search-meta" id="search-meta">Showing {{ deal_count }} products</div>
-            <div class="mini-pill" id="store-summary">Store: Columbus Circle</div>
+            <div class="search-meta" id="search-meta">{{ deal_count }} live deals</div>
+            <div class="mini-pill" id="context-pill">Columbus Circle</div>
         </div>
     </section>
 
     <section class="panel is-active single-feed-panel">
         <div class="section-head">
-            <div>
-                <h2 id="feed-title">Top Deals</h2>
-                <p id="for-you-copy">The best matches for what you've been upvoting.</p>
-            </div>
-            <div class="mini-pill" id="for-you-count">0 deals</div>
+            <h2 id="feed-title">Top Deals</h2>
+            <div class="mini-pill" id="feed-count">0 deals</div>
         </div>
-        <div class="chip-row" id="for-you-highlights"></div>
-        <div class="product-grid" id="for-you-grid"></div>
+        <div class="product-grid" id="feed-grid"></div>
     </section>
 </div>
 

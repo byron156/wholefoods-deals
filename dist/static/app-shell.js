@@ -4,33 +4,34 @@
     return;
   }
 
-  const STORAGE_KEY = "wholefoods-deals-profile-v2";
+  const STORAGE_KEY = "wholefoods-deals-profile-v4";
   const rawData = JSON.parse(appDataNode.textContent || "{}");
   const products = (rawData.products || []).map((product, index) => ({
     ...product,
     key: product.asin || (product.asins && product.asins[0]) || `product-${index}`,
     brand: product.brand || "",
     category: product.category || "Pantry",
+    retailer: product.retailer || "Whole Foods",
     tags: Array.isArray(product.tags) ? product.tags : [],
     sources: Array.isArray(product.sources) ? product.sources : [],
     available_store_ids: Array.isArray(product.available_store_ids) ? product.available_store_ids : [],
     discount_percent: Number(product.discount_percent || 0),
+    source_count: Number(product.source_count || (Array.isArray(product.sources) ? product.sources.length : 0)),
+    category_confidence: Number(product.category_confidence || 0),
   }));
   const stores = rawData.stores || [];
   const retailerOrder = ["Whole Foods", "Target", "H Mart"];
-  const retailerSet = new Set(products.map((product) => product.retailer || "Whole Foods").filter(Boolean));
+  const productByKey = new Map(products.map((product) => [product.key, product]));
+  const retailerSet = new Set(products.map((product) => product.retailer).filter(Boolean));
   const retailerList = retailerOrder.filter((retailer) => retailerSet.has(retailer));
 
   const nodes = {
     searchInput: document.getElementById("global-search"),
-    summaryLine: document.getElementById("summary-line"),
     searchMeta: document.getElementById("search-meta"),
-    storeSummary: document.getElementById("store-summary"),
+    contextPill: document.getElementById("context-pill"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
-    forYouGrid: document.getElementById("for-you-grid"),
-    forYouHighlights: document.getElementById("for-you-highlights"),
-    forYouCount: document.getElementById("for-you-count"),
-    forYouCopy: document.getElementById("for-you-copy"),
+    feedGrid: document.getElementById("feed-grid"),
+    feedCount: document.getElementById("feed-count"),
     feedTitle: document.getElementById("feed-title"),
   };
 
@@ -39,12 +40,6 @@
       selectedStoreIds: stores.filter((store) => store.is_active).map((store) => store.id),
       likedKeys: [],
       dislikedKeys: [],
-      favoriteCategories: [],
-      dislikedCategories: [],
-      favoriteBrands: [],
-      dislikedBrands: [],
-      favoriteTags: [],
-      dislikedTags: [],
     };
   }
 
@@ -72,7 +67,7 @@
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
-      .replace(/\"/g, "&quot;")
+      .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
   }
 
@@ -90,18 +85,19 @@
     if (!query) {
       return true;
     }
+
     const haystack = [
       product.name,
       product.brand,
       product.category,
+      product.subcategory,
       product.asin,
-      (product.asins || []).join(" "),
       (product.tags || []).join(" "),
-      (product.sources || []).join(" "),
-      product.retailer || "",
+      product.retailer,
     ]
       .join(" ")
       .toLowerCase();
+
     return haystack.includes(query);
   }
 
@@ -117,17 +113,10 @@
     return selected.some((storeId) => available.includes(storeId));
   }
 
-  function productVisibleForRetailer(product) {
-    if (!state.activeRetailer) {
-      return true;
-    }
-    return (product.retailer || "Whole Foods") === state.activeRetailer;
-  }
-
-  function positiveAffinityCounts() {
+  function buildAffinityCounts(keys) {
     const counts = { categories: {}, brands: {}, tags: {} };
-    (state.profile.likedKeys || []).forEach((key) => {
-      const product = products.find((item) => item.key === key);
+    (keys || []).forEach((key) => {
+      const product = productByKey.get(key);
       if (!product) {
         return;
       }
@@ -144,283 +133,256 @@
     return counts;
   }
 
-  function scoreProduct(product) {
-    const reasons = [];
-    let score = product.discount_percent || 0;
-    const positive = positiveAffinityCounts();
-
-    if ((product.sources || []).length > 1) {
-      score += 12;
-      reasons.push("Seen in multiple deal feeds");
+  function queryScore(product) {
+    if (!state.query) {
+      return 0;
     }
 
-    if (state.profile.favoriteCategories.includes(product.category)) {
-      score += 36;
-      reasons.push(`More ${product.category} like you asked for`);
+    const query = state.query;
+    const name = (product.name || "").toLowerCase();
+    const brand = (product.brand || "").toLowerCase();
+    const category = (product.category || "").toLowerCase();
+
+    if (name.startsWith(query)) {
+      return 140;
     }
-    if (state.profile.dislikedCategories.includes(product.category)) {
-      score -= 60;
-      reasons.push(`Less ${product.category} because of your downvotes`);
+    if (name.includes(query)) {
+      return 100;
+    }
+    if (brand.startsWith(query)) {
+      return 75;
+    }
+    if (brand.includes(query)) {
+      return 55;
+    }
+    if (category.includes(query)) {
+      return 35;
+    }
+    return 10;
+  }
+
+  function baseDealScore(product) {
+    let score = (product.discount_percent || 0) * 4;
+
+    if (product.prime_price) {
+      score += 18;
+    }
+    if (product.basis_price) {
+      score += 10;
+    }
+    if (!product.discount_percent && !product.basis_price) {
+      score -= 18;
+    }
+    score += Math.max(0, (product.source_count || 0) - 1) * 8;
+    score += Math.round((product.category_confidence || 0) * 12);
+    return score;
+  }
+
+  function preferenceScore(product, liked, disliked) {
+    let score = 0;
+
+    if ((state.profile.likedKeys || []).includes(product.key)) {
+      score += 24;
+    }
+    if ((state.profile.dislikedKeys || []).includes(product.key)) {
+      score -= 90;
     }
 
-    if (product.brand && state.profile.favoriteBrands.includes(product.brand)) {
-      score += 30;
-      reasons.push(`More from ${product.brand}`);
-    }
-    if (product.brand && state.profile.dislikedBrands.includes(product.brand)) {
-      score -= 44;
-      reasons.push(`Less from ${product.brand}`);
+    score += (liked.categories[product.category] || 0) * 14;
+    score -= (disliked.categories[product.category] || 0) * 20;
+
+    if (product.brand) {
+      score += (liked.brands[product.brand] || 0) * 16;
+      score -= (disliked.brands[product.brand] || 0) * 22;
     }
 
-    const positiveTagMatches = (product.tags || []).filter((tag) => state.profile.favoriteTags.includes(tag));
-    const negativeTagMatches = (product.tags || []).filter((tag) => state.profile.dislikedTags.includes(tag));
-    if (positiveTagMatches.length) {
-      score += 16 * positiveTagMatches.length;
-      reasons.push(`Matches your ${positiveTagMatches[0]} preferences`);
-    }
-    if (negativeTagMatches.length) {
-      score -= 18 * negativeTagMatches.length;
-      reasons.push(`Showing less ${negativeTagMatches[0]} items`);
-    }
+    (product.tags || []).forEach((tag) => {
+      score += (liked.tags[tag] || 0) * 8;
+      score -= (disliked.tags[tag] || 0) * 10;
+    });
 
-    if (positive.categories[product.category]) {
-      score += positive.categories[product.category] * 8;
-      reasons.push(`Close to items you've upvoted before`);
-    }
-    if (product.brand && positive.brands[product.brand]) {
-      score += positive.brands[product.brand] * 10;
-      reasons.push(`Brand you've upvoted before`);
-    }
+    return score;
+  }
 
-    return { score, explanation: reasons[0] || "Strong overall deal value" };
+  function scoreProduct(product, liked, disliked) {
+    return baseDealScore(product) + queryScore(product) + preferenceScore(product, liked, disliked);
   }
 
   function visibleProducts() {
     return products.filter((product) =>
+      product.retailer === state.activeRetailer &&
       productVisibleForStores(product) &&
-      productVisibleForRetailer(product) &&
       textContainsQuery(product, state.query)
     );
   }
 
-  function recommendedProducts() {
+  function rankedProducts() {
+    const liked = buildAffinityCounts(state.profile.likedKeys);
+    const disliked = buildAffinityCounts(state.profile.dislikedKeys);
+
     return visibleProducts()
-      .map((product) => ({ ...product, _score: scoreProduct(product) }))
+      .map((product) => ({
+        ...product,
+        _score: scoreProduct(product, liked, disliked),
+      }))
       .sort((left, right) => {
-        if (right._score.score !== left._score.score) {
-          return right._score.score - left._score.score;
+        if (right._score !== left._score) {
+          return right._score - left._score;
         }
-        return (right.discount_percent || 0) - (left.discount_percent || 0);
+        if ((right.discount_percent || 0) !== (left.discount_percent || 0)) {
+          return (right.discount_percent || 0) - (left.discount_percent || 0);
+        }
+        return (left.name || "").localeCompare(right.name || "");
       });
   }
 
-  function formatSources(product) {
-    return (product.sources || [])
-      .slice(0, 3)
-      .map((source) => `<span class="source-pill">${source}</span>`)
-      .join("");
-  }
-
   function renderRetailerChips() {
-    const counts = {};
-    products.forEach((product) => {
-      const retailer = product.retailer || "Whole Foods";
-      counts[retailer] = (counts[retailer] || 0) + 1;
-    });
-    const chips = retailerList;
-    nodes.retailerChipRow.innerHTML = chips
+    nodes.retailerChipRow.innerHTML = retailerList
       .map((retailer) => {
         const selected = state.activeRetailer === retailer;
-        const label = `${retailer} (${counts[retailer] || 0})`;
-        return `<button class="chip ${selected ? "is-selected" : ""}" data-retailer="${escapeHtml(retailer)}" type="button">${escapeHtml(label)}</button>`;
+        return `<button class="chip ${selected ? "is-selected" : ""}" data-retailer="${escapeHtml(retailer)}" type="button">${escapeHtml(retailer)}</button>`;
       })
       .join("");
   }
 
-  function formatTags(product) {
-    return (product.tags || [])
-      .slice(0, 3)
-      .map((tag) => `<span class="chip is-muted">${tag}</span>`)
-      .join("");
+  function renderEmpty(message) {
+    nodes.feedGrid.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
   }
 
-  function renderEmpty(target, message) {
-    target.innerHTML = `<div class="empty-state">${message}</div>`;
+  function priceLabel(product) {
+    if (!product.prime_price) {
+      return "";
+    }
+    return `<p class="prime">${escapeHtml(product.prime_price)}</p>`;
   }
 
-  function renderProductCard(product, explanation) {
+  function regularLabel(product) {
+    if (!product.basis_price) {
+      return "";
+    }
+    const regularText = String(product.basis_price);
+    const normalized = regularText.toLowerCase();
+    if (normalized.includes("vary")) {
+      return `<p class="deal-regular">${escapeHtml(regularText)}</p>`;
+    }
+    if (normalized.startsWith("regular")) {
+      return `<p class="deal-regular">${escapeHtml(regularText)}</p>`;
+    }
+    return `<p class="deal-regular">Was ${escapeHtml(regularText)}</p>`;
+  }
+
+  function discountLabel(product) {
+    if (!product.discount) {
+      return "";
+    }
+    return `<span class="deal-discount">${escapeHtml(product.discount)}</span>`;
+  }
+
+  function metaLine(product) {
+    const pieces = [];
+    if (product.brand) {
+      pieces.push(product.brand);
+    }
+    if (product.subcategory && product.subcategory !== product.category) {
+      pieces.push(product.subcategory);
+    }
+    if (!pieces.length) {
+      return "";
+    }
+    return `<p class="deal-meta-line">${escapeHtml(pieces.join(" · "))}</p>`;
+  }
+
+  function renderProductCard(product) {
     const liked = (state.profile.likedKeys || []).includes(product.key);
     const disliked = (state.profile.dislikedKeys || []).includes(product.key);
+    const imageMarkup = product.image
+      ? `
+          <div class="deal-image">
+            ${
+              product.url
+                ? `<a href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}"></a>`
+                : `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}">`
+            }
+          </div>
+        `
+      : "";
+
+    const titleMarkup = product.url
+      ? `<h3 class="deal-title"><a href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a></h3>`
+      : `<h3 class="deal-title">${escapeHtml(product.name)}</h3>`;
 
     return `
-      <article class="deal-card" data-key="${product.key}">
-        ${
-          product.image
-            ? `<div class="deal-image"><img src="${product.image}" alt="${escapeHtml(product.name)}"></div>`
-            : ""
-        }
-        <div class="deal-heading-row">
-          <div class="deal-brand">${escapeHtml(product.brand || (product.retailer || "Deal"))}</div>
-          <span class="category-pill">${escapeHtml(product.category || "Pantry")}</span>
+      <article class="deal-card" data-key="${escapeHtml(product.key)}">
+        ${imageMarkup}
+        <div class="deal-topline">
+          <span class="retailer-badge">${escapeHtml(product.retailer)}</span>
+          <span class="category-pill">${escapeHtml(product.category)}</span>
         </div>
-        <h3 class="deal-title"><a href="${product.url || "#"}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a></h3>
-        <div class="retailer-row">
-          <span class="retailer-badge">${escapeHtml(product.retailer || "Whole Foods")}</span>
-          ${product.subcategory ? `<span class="retailer-category">${escapeHtml(product.subcategory)}</span>` : ""}
+        ${metaLine(product)}
+        ${titleMarkup}
+        <div class="deal-price-row">
+          ${priceLabel(product)}
+          ${discountLabel(product)}
         </div>
-        ${product.prime_price ? `<p class="prime">${escapeHtml(product.prime_price)}</p>` : ""}
-        ${product.basis_price ? `<p class="deal-regular">Regular ${escapeHtml(product.basis_price)}</p>` : ""}
-        ${product.discount ? `<p class="deal-discount">${escapeHtml(product.discount)}</p>` : ""}
-        ${explanation ? `<div class="deal-explanation">${escapeHtml(explanation)}</div>` : ""}
-        <div class="deal-pill-row">${formatSources(product)}${formatTags(product)}</div>
+        ${regularLabel(product)}
         <div class="deal-actions">
-          <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${product.key}" type="button">${liked ? "More like this ✓" : "More like this"}</button>
-          <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${product.key}" type="button">${disliked ? "Less like this ✓" : "Less like this"}</button>
-          <button class="deal-action" data-action="open" data-key="${product.key}" type="button">View</button>
+          <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">${liked ? "More" : "More"}</button>
+          <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">${disliked ? "Less" : "Less"}</button>
         </div>
       </article>
     `;
   }
 
-  function renderGrid(target, items, emptyMessage, explanationFn) {
-    if (!items.length) {
-      renderEmpty(target, emptyMessage);
-      return;
-    }
-    target.innerHTML = items.map((item) => renderProductCard(item, explanationFn ? explanationFn(item) : "")).join("");
-  }
-
-  function renderHighlights(recommended) {
-    const highlights = [];
-    if (state.profile.favoriteCategories.length) {
-      highlights.push(`More ${state.profile.favoriteCategories.slice(0, 2).join(", ")}`);
-    }
-    if (state.profile.dislikedCategories.length) {
-      highlights.push(`Less ${state.profile.dislikedCategories.slice(0, 2).join(", ")}`);
-    }
-    if (!highlights.length) {
-      highlights.push("Use More like this and Less like this to shape the feed.");
-    }
-    nodes.forYouHighlights.innerHTML = highlights
-      .map((text) => `<span class="chip is-selected">${escapeHtml(text)}</span>`)
-      .join("");
-    nodes.forYouCopy.textContent = recommended.length
-      ? "Your feed is ranked by discounts and what you've upvoted."
-      : "Start upvoting a few items to personalize the feed.";
-  }
-
   function applyPreferenceSignals(product, direction) {
-    const isPositive = direction === "up";
-    const currentKey = isPositive ? "likedKeys" : "dislikedKeys";
-    const oppositeKey = isPositive ? "dislikedKeys" : "likedKeys";
-    const alreadySelected = (state.profile[currentKey] || []).includes(product.key);
+    const currentKey = direction === "up" ? "likedKeys" : "dislikedKeys";
+    const oppositeKey = direction === "up" ? "dislikedKeys" : "likedKeys";
 
-    state.profile[currentKey] = (state.profile[currentKey] || []).filter((key) => key !== product.key);
     state.profile[oppositeKey] = (state.profile[oppositeKey] || []).filter((key) => key !== product.key);
-    if (!alreadySelected) {
-      state.profile[currentKey] = [...state.profile[currentKey], product.key];
-    }
-
-    const mapping = isPositive
-      ? [
-          ["favoriteCategories", product.category],
-          ["favoriteBrands", product.brand],
-        ]
-      : [
-          ["dislikedCategories", product.category],
-          ["dislikedBrands", product.brand],
-        ];
-
-    const oppositeMapping = isPositive
-      ? [
-          ["dislikedCategories", product.category],
-          ["dislikedBrands", product.brand],
-        ]
-      : [
-          ["favoriteCategories", product.category],
-          ["favoriteBrands", product.brand],
-        ];
-
-    oppositeMapping.forEach(([key, value]) => {
-      state.profile[key] = (state.profile[key] || []).filter((entry) => entry !== value);
-    });
-
-    if (!alreadySelected) {
-      mapping.forEach(([key, value]) => {
-        if (value) {
-          state.profile[key] = toggleValue(state.profile[key], value);
-        }
-      });
-
-      (product.tags || []).slice(0, 3).forEach((tag) => {
-        const preferredKey = isPositive ? "favoriteTags" : "dislikedTags";
-        const oppositePreferredKey = isPositive ? "dislikedTags" : "favoriteTags";
-        state.profile[oppositePreferredKey] = (state.profile[oppositePreferredKey] || []).filter((entry) => entry !== tag);
-        state.profile[preferredKey] = toggleValue(state.profile[preferredKey], tag);
-      });
-    }
+    state.profile[currentKey] = toggleValue(state.profile[currentKey], product.key);
+    saveProfile();
   }
 
-  function renderPanels() {
-    const visible = visibleProducts();
-    const recommended = recommendedProducts().slice(0, 120);
-
-    renderHighlights(recommended);
-    renderGrid(
-      nodes.forYouGrid,
-      recommended,
-      "No personalized matches yet. Upvote a few items to start shaping the feed.",
-      (item) => item._score.explanation
-    );
-
-    const selectedStores = stores.filter((store) => state.profile.selectedStoreIds.includes(store.id));
-    if (state.activeRetailer === "Whole Foods") {
-      nodes.storeSummary.textContent = selectedStores.length
-        ? `Store: ${selectedStores.map((store) => store.name).join(", ")}`
-        : "Store: All";
+  function renderFeed() {
+    const ranked = rankedProducts().slice(0, 120);
+    if (!ranked.length) {
+      renderEmpty(state.query ? "No deals match that search yet." : "No deals are available right now.");
     } else {
-      nodes.storeSummary.textContent = `Retailer: ${state.activeRetailer}`;
+      nodes.feedGrid.innerHTML = ranked.map(renderProductCard).join("");
     }
-    nodes.searchMeta.textContent = state.query
-      ? `Showing ${visible.length} matching products`
-      : `Showing ${visible.length} products`;
-    if (state.activeRetailer) {
-      nodes.searchMeta.textContent += ` in ${state.activeRetailer}`;
-    }
-    nodes.summaryLine.textContent = "One feed. Three stores.";
-    nodes.forYouCount.textContent = `${recommended.length} deals`;
-    if (nodes.feedTitle) {
-      nodes.feedTitle.textContent = state.query ? `${state.activeRetailer} Results` : `${state.activeRetailer} Deals`;
-    }
-    nodes.forYouCopy.textContent = state.query
-      ? `Results for "${state.query}" in ${state.activeRetailer}.`
-      : `Best deals in ${state.activeRetailer}, ranked for value and what you've upvoted.`;
 
+    const visibleCount = visibleProducts().length;
+    nodes.searchMeta.textContent = state.query
+      ? `${visibleCount.toLocaleString()} results`
+      : `${visibleCount.toLocaleString()} live deals`;
+
+    if (state.activeRetailer === "Whole Foods") {
+      nodes.contextPill.textContent = "Columbus Circle";
+    } else if (state.activeRetailer === "Target") {
+      nodes.contextPill.textContent = "Target Grocery";
+    } else {
+      nodes.contextPill.textContent = "H Mart Sale";
+    }
+
+    nodes.feedTitle.textContent = state.query ? `Results in ${state.activeRetailer}` : `Best in ${state.activeRetailer}`;
+    nodes.feedCount.textContent = `${ranked.length.toLocaleString()} shown`;
     renderRetailerChips();
   }
 
   function handleAction(action, key) {
-    const product = products.find((item) => item.key === key);
+    const product = productByKey.get(key);
     if (!product) {
       return;
     }
 
     if (action === "more-like-this") {
       applyPreferenceSignals(product, "up");
-      saveProfile();
-      renderPanels();
+      renderFeed();
       return;
     }
 
     if (action === "less-like-this") {
       applyPreferenceSignals(product, "down");
-      saveProfile();
-      renderPanels();
-      return;
-    }
-
-    if (action === "open" && product.url) {
-      window.open(product.url, "_blank", "noopener,noreferrer");
+      renderFeed();
     }
   }
 
@@ -434,14 +396,14 @@
     const retailerButton = event.target.closest("[data-retailer]");
     if (retailerButton) {
       state.activeRetailer = retailerButton.dataset.retailer;
-      renderPanels();
+      renderFeed();
     }
   });
 
   nodes.searchInput.addEventListener("input", () => {
     state.query = (nodes.searchInput.value || "").trim().toLowerCase();
-    renderPanels();
+    renderFeed();
   });
 
-  renderPanels();
+  renderFeed();
 })();
