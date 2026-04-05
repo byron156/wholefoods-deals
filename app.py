@@ -4,6 +4,13 @@ import requests
 import os
 import math
 from flask import Flask, jsonify, render_template, request, send_from_directory
+from supabase_state import (
+    load_device_profile_from_supabase,
+    load_fixes_from_supabase,
+    save_device_profile_to_supabase,
+    save_fix_to_supabase,
+    supabase_enabled,
+)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DISCOVERED_DEALS_FILE = os.path.join(BASE_DIR, "discovered_products.json")
@@ -13,8 +20,19 @@ COMBINED_PRODUCTS_FILE = os.path.join(BASE_DIR, "combined_products.json")
 TARGET_DEALS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
 HMART_DEALS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
 FIXES_TO_DEPLOY_FILE = os.path.join(BASE_DIR, "fixes_to_deploy.json")
+DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
 
 app = Flask(__name__)
+PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")
+CORS_ALLOW_ORIGIN = os.getenv("CORS_ALLOW_ORIGIN", "*")
+
+
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = CORS_ALLOW_ORIGIN
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Allow-Methods"] = "GET,POST,OPTIONS"
+    return response
 
 SALES_FLYER_URL = "https://www.wholefoodsmarket.com/sales-flyer?store-id=10160"
 SUPPORTED_STORES = [
@@ -1933,6 +1951,12 @@ def combined_key_for_product(product):
     return "name:" + normalize_text_key(product.get("name"))
 
 
+def api_url(path):
+    if PUBLIC_API_BASE_URL:
+        return f"{PUBLIC_API_BASE_URL}{path}"
+    return path
+
+
 def subcategory_signature(product):
     retailer = normalize_text_key(product.get("retailer") or "Whole Foods")
     brand = normalize_text_key(product.get("brand"))
@@ -1961,6 +1985,10 @@ def default_fixes_to_deploy():
 
 
 def load_fixes_to_deploy():
+    remote_fixes = load_fixes_from_supabase()
+    if remote_fixes:
+        return remote_fixes
+
     try:
         with open(FIXES_TO_DEPLOY_FILE, "r", encoding="utf-8") as fixes_file:
             data = json.load(fixes_file)
@@ -1980,6 +2008,61 @@ def load_fixes_to_deploy():
 def save_fixes_to_deploy(fixes):
     with open(FIXES_TO_DEPLOY_FILE, "w", encoding="utf-8") as fixes_file:
         json.dump(fixes, fixes_file, indent=2, ensure_ascii=False)
+
+
+def default_device_profiles():
+    return {}
+
+
+def load_device_profiles_local():
+    try:
+        with open(DEVICE_PROFILES_FILE, "r", encoding="utf-8") as profiles_file:
+            data = json.load(profiles_file)
+    except FileNotFoundError:
+        return default_device_profiles()
+    except json.JSONDecodeError:
+        return default_device_profiles()
+
+    if not isinstance(data, dict):
+        return default_device_profiles()
+    return data
+
+
+def save_device_profiles_local(profiles):
+    with open(DEVICE_PROFILES_FILE, "w", encoding="utf-8") as profiles_file:
+        json.dump(profiles, profiles_file, indent=2, ensure_ascii=False)
+
+
+def load_device_profile(device_id):
+    remote_profile = load_device_profile_from_supabase(device_id)
+    if remote_profile:
+        return remote_profile
+
+    profiles = load_device_profiles_local()
+    profile = profiles.get(device_id)
+    if not isinstance(profile, dict):
+        return None
+    return {
+        "selectedStoreIds": profile.get("selectedStoreIds") or [],
+        "likedKeys": profile.get("likedKeys") or [],
+        "dislikedKeys": profile.get("dislikedKeys") or [],
+    }
+
+
+def save_device_profile(device_id, profile):
+    normalized = {
+        "selectedStoreIds": profile.get("selectedStoreIds") or [],
+        "likedKeys": profile.get("likedKeys") or [],
+        "dislikedKeys": profile.get("dislikedKeys") or [],
+    }
+
+    if save_device_profile_to_supabase(device_id, normalized):
+        return normalized
+
+    profiles = load_device_profiles_local()
+    profiles[device_id] = normalized
+    save_device_profiles_local(profiles)
+    return normalized
 
 
 def apply_fixes_to_products(products):
@@ -2292,6 +2375,16 @@ def manifest():
     return send_from_directory(os.path.join(BASE_DIR, "static"), "manifest.webmanifest", mimetype="application/manifest+json")
 
 
+@app.route("/health")
+def health():
+    return jsonify(
+        {
+            "ok": True,
+            "storage": "supabase" if supabase_enabled() else "local",
+        }
+    )
+
+
 @app.route("/api/stores")
 def api_stores():
     return jsonify({"stores": SUPPORTED_STORES})
@@ -2315,13 +2408,13 @@ def api_categories():
 @app.route("/api/search")
 def api_search():
     products = sort_products_for_display(filter_products_for_api(load_combined_products()))
-    return jsonify({"products": products[:api_limit()], "count": len(products)})
+    return jsonify({"products": products[:api_limit(default=120, maximum=1000)], "count": len(products)})
 
 
 @app.route("/api/feed")
 def api_feed():
     products = sort_products_for_display(filter_products_for_api(load_combined_products()))
-    return jsonify({"products": products[:api_limit()], "count": len(products)})
+    return jsonify({"products": products[:api_limit(default=5000, maximum=10000)], "count": len(products)})
 
 
 @app.route("/api/product/<asin>")
@@ -2334,9 +2427,45 @@ def api_product(asin):
     return jsonify({"error": "Product not found"}), 404
 
 
-@app.route("/fixes-to-deploy", methods=["POST"])
-@app.route("/api/category-feedback", methods=["POST"])
+@app.route("/api/profile", methods=["GET", "POST", "OPTIONS"])
+def api_profile():
+    if request.method == "OPTIONS":
+        return ("", 204)
+
+    if request.method == "GET":
+        device_id = (request.args.get("device_id") or "").strip()
+        if not device_id:
+            return jsonify({"error": "Missing device_id"}), 400
+        return jsonify(
+            {
+                "profile": load_device_profile(device_id),
+                "storage": "supabase" if supabase_enabled() else "local",
+            }
+        )
+
+    payload = request.get_json(silent=True) or {}
+    device_id = (payload.get("device_id") or "").strip()
+    if not device_id:
+        return jsonify({"error": "Missing device_id"}), 400
+
+    profile = payload.get("profile") or {}
+    saved_profile = save_device_profile(device_id, profile)
+    return jsonify(
+        {
+            "ok": True,
+            "profile": saved_profile,
+            "storage": "supabase" if supabase_enabled() else "local",
+        }
+    )
+
+
+@app.route("/api/fixes", methods=["POST", "OPTIONS"])
+@app.route("/fixes-to-deploy", methods=["POST", "OPTIONS"])
+@app.route("/api/category-feedback", methods=["POST", "OPTIONS"])
 def api_fixes_to_deploy():
+    if request.method == "OPTIONS":
+        return ("", 204)
+
     payload = request.get_json(silent=True) or {}
     kind = (payload.get("kind") or "").strip().lower()
     scope = (payload.get("scope") or "similar").strip().lower()
@@ -2361,6 +2490,15 @@ def api_fixes_to_deploy():
             fixes["subcategory_overrides_by_signature"][signature] = subcategory
 
         save_fixes_to_deploy(fixes)
+        fix_id = f"subcategory:{scope}:{product_key or signature}"
+        save_fix_to_supabase(
+            fix_id=fix_id,
+            fix_type="subcategory",
+            scope=scope,
+            product_key=product_key or None,
+            signature=signature or None,
+            value=subcategory,
+        )
         return jsonify({"ok": True, "kind": kind, "scope": scope, "subcategory": subcategory})
 
     if kind == "brand":
@@ -2380,6 +2518,15 @@ def api_fixes_to_deploy():
             fixes["brand_overrides_by_signature"][signature] = brand
 
         save_fixes_to_deploy(fixes)
+        fix_id = f"brand:{scope}:{product_key or signature}"
+        save_fix_to_supabase(
+            fix_id=fix_id,
+            fix_type="brand",
+            scope=scope,
+            product_key=product_key or None,
+            signature=signature or None,
+            value=brand,
+        )
         return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand})
 
     if kind == "category_order":
@@ -2391,6 +2538,12 @@ def api_fixes_to_deploy():
             return jsonify({"error": "Invalid order"}), 400
         fixes["category_order"][retailer] = order
         save_fixes_to_deploy(fixes)
+        save_fix_to_supabase(
+            fix_id=f"category_order:{retailer}",
+            fix_type="category_order",
+            retailer=retailer,
+            value=order,
+        )
         return jsonify({"ok": True, "kind": kind, "retailer": retailer, "order": order})
 
     return jsonify({"error": "Invalid fix kind"}), 400
@@ -2409,7 +2562,9 @@ def combined_products_home():
         category_names=sorted(CATEGORY_PROFILES.keys()),
         subcategory_options=SUBCATEGORY_PROFILES,
         category_order=fixes.get("category_order", {}),
-        feedback_endpoint="/fixes-to-deploy",
+        feedback_endpoint=api_url("/api/fixes"),
+        profile_endpoint=api_url("/api/profile"),
+        feed_endpoint=api_url("/api/feed"),
         page_subtitle="Browse Whole Foods, Target, and H Mart deals in one place.",
     )
 

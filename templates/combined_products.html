@@ -37,7 +37,7 @@
     <div class="sheet-header">
         <div>
             <h3 id="category-sheet-title">Improve this item</h3>
-            <p id="category-sheet-copy">Queue a shelf or brand fix to review and deploy later.</p>
+            <p id="category-sheet-copy">Fix the shelf or brand for this item so the app gets smarter.</p>
         </div>
         <button class="ghost-button" type="button" id="category-sheet-close">Close</button>
     </div>
@@ -45,17 +45,17 @@
     <div class="sheet-field">
         <label for="subcategory-select">Move to subcategory</label>
         <select id="subcategory-select" class="sheet-select"></select>
-        <button class="primary-button" type="button" id="queue-subcategory-fix">Queue shelf fix</button>
+        <button class="primary-button" type="button" id="queue-subcategory-fix">Apply shelf fix</button>
     </div>
     <div class="sheet-field">
         <label for="brand-fix-input">Fix brand name</label>
         <input id="brand-fix-input" class="search-input" type="text" placeholder="Brand name">
-        <button class="ghost-button" type="button" id="queue-brand-fix">Queue brand fix</button>
+        <button class="ghost-button" type="button" id="queue-brand-fix">Apply brand fix</button>
     </div>
 </section>
 
 <script id="app-data" type="application/json">
-{{ {"products": products, "stores": available_stores, "categories": category_names, "subcategory_options": subcategory_options, "category_order": category_order, "feedback_endpoint": feedback_endpoint}|tojson }}
+{{ {"products": products, "stores": available_stores, "categories": category_names, "subcategory_options": subcategory_options, "category_order": category_order, "feedback_endpoint": feedback_endpoint, "profile_endpoint": profile_endpoint, "feed_endpoint": feed_endpoint}|tojson }}
 </script>
 <script>
 if ("serviceWorker" in navigator) {

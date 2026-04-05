@@ -5,28 +5,82 @@
   }
 
   const STORAGE_KEY = "wholefoods-deals-profile-v6";
+  const DEVICE_ID_KEY = "wholefoods-deals-device-id-v1";
   const rawData = JSON.parse(appDataNode.textContent || "{}");
-  const feedbackEndpoint = rawData.feedback_endpoint || "/fixes-to-deploy";
+  const feedbackEndpoint = rawData.feedback_endpoint || "/api/fixes";
+  const profileEndpoint = rawData.profile_endpoint || "/api/profile";
+  const feedEndpoint = rawData.feed_endpoint || "/api/feed";
   const subcategoryOptions = rawData.subcategory_options || {};
   const initialCategoryOrder = rawData.category_order || {};
-  const products = (rawData.products || []).map((product, index) => ({
-    ...product,
-    key: product.asin || (product.asins && product.asins[0]) || `product-${index}`,
-    brand: product.brand || "",
-    category: product.category || "Pantry",
-    retailer: product.retailer || "Whole Foods",
-    tags: Array.isArray(product.tags) ? product.tags : [],
-    sources: Array.isArray(product.sources) ? product.sources : [],
-    available_store_ids: Array.isArray(product.available_store_ids) ? product.available_store_ids : [],
-    discount_percent: Number(product.discount_percent || 0),
-    source_count: Number(product.source_count || (Array.isArray(product.sources) ? product.sources.length : 0)),
-    category_confidence: Number(product.category_confidence || 0),
-  }));
   const stores = rawData.stores || [];
   const retailerOrder = ["Whole Foods", "Target", "H Mart"];
-  const productByKey = new Map(products.map((product) => [product.key, product]));
-  const retailerSet = new Set(products.map((product) => product.retailer).filter(Boolean));
-  const retailerList = retailerOrder.filter((retailer) => retailerSet.has(retailer));
+
+  function normalizeProduct(product, index) {
+    return {
+      ...product,
+      key: product.asin || (product.asins && product.asins[0]) || `product-${index}`,
+      brand: product.brand || "",
+      category: product.category || "Pantry",
+      retailer: product.retailer || "Whole Foods",
+      tags: Array.isArray(product.tags) ? product.tags : [],
+      sources: Array.isArray(product.sources) ? product.sources : [],
+      available_store_ids: Array.isArray(product.available_store_ids) ? product.available_store_ids : [],
+      discount_percent: Number(product.discount_percent || 0),
+      source_count: Number(product.source_count || (Array.isArray(product.sources) ? product.sources.length : 0)),
+      category_confidence: Number(product.category_confidence || 0),
+    };
+  }
+
+  function hydrateProducts(list) {
+    return (list || []).map(normalizeProduct);
+  }
+
+  function deriveRetailerList(list) {
+    const retailerSet = new Set((list || []).map((product) => product.retailer).filter(Boolean));
+    return retailerOrder.filter((retailer) => retailerSet.has(retailer));
+  }
+
+  let products = hydrateProducts(rawData.products || []);
+  let productByKey = new Map();
+  let retailerList = [];
+
+  function rebuildDerivedCollections() {
+    productByKey = new Map(products.map((product) => [product.key, product]));
+    retailerList = deriveRetailerList(products);
+  }
+
+  function reconcileProducts(nextProducts) {
+    products = hydrateProducts(nextProducts || []);
+    rebuildDerivedCollections();
+    if (!retailerList.includes(state.activeRetailer)) {
+      state.activeRetailer = retailerList[0] || "Whole Foods";
+    }
+  }
+
+  rebuildDerivedCollections();
+
+  function createDeviceId() {
+    if (window.crypto && typeof window.crypto.randomUUID === "function") {
+      return window.crypto.randomUUID();
+    }
+    return `device-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+
+  function getOrCreateDeviceId() {
+    try {
+      const existing = localStorage.getItem(DEVICE_ID_KEY);
+      if (existing) {
+        return existing;
+      }
+      const next = createDeviceId();
+      localStorage.setItem(DEVICE_ID_KEY, next);
+      return next;
+    } catch (error) {
+      return createDeviceId();
+    }
+  }
+
+  const deviceId = getOrCreateDeviceId();
 
   const nodes = {
     searchInput: document.getElementById("global-search"),
@@ -80,7 +134,24 @@
   };
 
   function saveProfile() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state.profile));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.profile));
+    } catch (error) {
+      console.warn("Could not save profile locally:", error);
+    }
+
+    fetch(profileEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        device_id: deviceId,
+        profile: state.profile,
+      }),
+    }).catch((error) => {
+      console.warn("Could not save profile remotely:", error);
+    });
   }
 
   function escapeHtml(value) {
@@ -162,7 +233,7 @@
     const query = state.query;
     const name = (product.name || "").toLowerCase();
     const brand = (product.brand || "").toLowerCase();
-    const category = (product.category || "").toLowerCase();
+    const category = (effectiveCategory(product) || "").toLowerCase();
 
     if (name.startsWith(query)) {
       return 140;
@@ -348,6 +419,10 @@
   }
 
   function renderRetailerChips() {
+    if (!retailerList.length) {
+      nodes.retailerChipRow.innerHTML = "";
+      return;
+    }
     nodes.retailerChipRow.innerHTML = retailerList
       .map((retailer) => {
         const selected = state.activeRetailer === retailer;
@@ -484,7 +559,7 @@
     state.categoryTargetKey = product.key;
     state.categoryScope = subcategorySignature(product) ? "similar" : "item";
     nodes.categorySheetTitle.textContent = "Improve this item";
-    nodes.categorySheetCopy.textContent = "Queue a shelf or brand fix to review and deploy later.";
+    nodes.categorySheetCopy.textContent = "Fix the shelf or brand for this item so the app gets smarter.";
     renderCategorySheet(product);
     nodes.categorySheetBackdrop.classList.remove("hidden");
     nodes.categorySheet.classList.remove("hidden");
@@ -550,8 +625,8 @@
       product_key: product.key,
       signature: subcategorySignature(product),
       subcategory,
-    }).catch((error) => {
-      console.warn("Could not queue subcategory fix:", error);
+    }).then(() => refreshProductsFromFeed()).catch((error) => {
+      console.warn("Could not apply subcategory fix:", error);
     });
   }
 
@@ -580,8 +655,8 @@
       product_key: product.key,
       signature: brandSignature(product),
       brand: cleanedBrand,
-    }).catch((error) => {
-      console.warn("Could not queue brand fix:", error);
+    }).then(() => refreshProductsFromFeed()).catch((error) => {
+      console.warn("Could not apply brand fix:", error);
     });
   }
 
@@ -612,7 +687,7 @@
       retailer: state.activeRetailer,
       order: nextOrder,
     }).catch((error) => {
-      console.warn("Could not queue category order fix:", error);
+      console.warn("Could not apply category order fix:", error);
     });
   }
 
@@ -634,6 +709,50 @@
     }
 
     renderShelves();
+  }
+
+  async function loadRemoteProfile() {
+    try {
+      const response = await fetch(`${profileEndpoint}?device_id=${encodeURIComponent(deviceId)}`);
+      if (!response.ok) {
+        return;
+      }
+      const payload = await response.json();
+      if (payload && payload.profile) {
+        state.profile = {
+          ...getDefaultProfile(),
+          ...payload.profile,
+        };
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(state.profile));
+        } catch (error) {
+          console.warn("Could not refresh local profile cache:", error);
+        }
+        renderFeed();
+        return;
+      }
+
+      saveProfile();
+    } catch (error) {
+      console.warn("Could not load profile remotely:", error);
+    }
+  }
+
+  async function refreshProductsFromFeed() {
+    try {
+      const response = await fetch(`${feedEndpoint}?limit=5000`);
+      if (!response.ok) {
+        throw new Error(`Feed request failed with status ${response.status}`);
+      }
+      const payload = await response.json();
+      if (!payload || !Array.isArray(payload.products)) {
+        return;
+      }
+      reconcileProducts(payload.products);
+      renderFeed();
+    } catch (error) {
+      console.warn("Could not refresh feed from backend:", error);
+    }
   }
 
   function handleAction(action, key) {
@@ -716,4 +835,6 @@
   });
 
   renderFeed();
+  loadRemoteProfile();
+  refreshProductsFromFeed();
 })();

@@ -35,7 +35,7 @@ create table if not exists public.product_offers (
     id uuid primary key default gen_random_uuid(),
     product_id uuid not null references public.products(id) on delete cascade,
     store_id text references public.stores(id) on delete set null,
-    source_type text not null check (source_type in ('flyer', 'all_deals', 'search_deals')),
+    source_type text not null check (source_type in ('flyer', 'all_deals', 'search_deals', 'target_deals', 'hmart_deals')),
     regular_price text,
     sale_price text,
     prime_price text,
@@ -145,4 +145,28 @@ create table if not exists public.recommendation_snapshots (
     constraint recommendation_snapshots_owner_check check (
         user_profile_id is not null or device_profile_id is not null
     )
+);
+
+create table if not exists public.taxonomy_fixes (
+    id text primary key,
+    fix_type text not null check (fix_type in ('subcategory', 'brand')),
+    scope text not null check (scope in ('item', 'similar')),
+    product_key text,
+    signature text,
+    retailer text,
+    value text not null,
+    status text not null default 'active',
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
+);
+
+create index if not exists taxonomy_fixes_fix_type_idx on public.taxonomy_fixes(fix_type);
+create index if not exists taxonomy_fixes_signature_idx on public.taxonomy_fixes(signature);
+create index if not exists taxonomy_fixes_product_key_idx on public.taxonomy_fixes(product_key);
+
+create table if not exists public.retailer_category_orders (
+    retailer text primary key,
+    ordered_categories jsonb not null default '[]'::jsonb,
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
 );
