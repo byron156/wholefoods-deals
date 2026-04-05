@@ -351,19 +351,6 @@
     "unit_price": null
   },
   {
-    "asin": "B000A0IKZ2",
-    "name": "MRS. MEYER'S CLEAN DAY Hand Soap, Lemon Verbena Scent, 16 Fl Oz Bottle",
-    "brand": "Mrs. MEYER'S",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/61E1bzMLt7L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/mrs-meyer-s-mrs-meyer-s-clean-day-hand-soap-lemon-verbena-scent-16-fl-oz-bottle-b000a0ikz2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$4.47",
-    "basis_price": "$5.59",
-    "prime_price": "$4.02",
-    "discount": "20% off",
-    "unit_price": null
-  },
-  {
     "asin": "B000AKQ7ZC",
     "name": "HERB Pharm Cat`s Claw Extract, 1 FZ",
     "brand": "Herb Pharm",
@@ -1950,17 +1937,17 @@
     "unit_price": null
   },
   {
-    "asin": "B002QY5PB2",
-    "name": "Organic Green Asparagus",
-    "brand": "Fresh Produce",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71B9p9DbUwL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-organic-green-asparagus-b002qy5pb2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$5.54/lb",
-    "basis_price": "$5.99/lb",
-    "prime_price": "$4.99",
-    "discount": "8% off",
-    "unit_price": "$5.54/lb"
+    "asin": "B002LU39RI",
+    "name": "Nature's Path Organic Frosted Wildberry Açai Toaster Pastries, 11 oz (Pack of 1), Non-GMO, Fair Trade",
+    "brand": "Nature's Path",
+    "variation": "2 Flavors, 1 Sizes",
+    "image": "https://m.media-amazon.com/images/I/81wcStXF9tL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/nature-s-path-nature-s-path-organic-frosted-wildberry-a-ai-toaster-pastries-11-oz-pack-of-1-non-gmo-fair-trade-b002lu39ri?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$3.75",
+    "basis_price": "$4.69",
+    "prime_price": "$3.38",
+    "discount": "20% off",
+    "unit_price": null
   },
   {
     "asin": "B002VLZ81M",
@@ -3367,6 +3354,19 @@
     "unit_price": null
   },
   {
+    "asin": "B00B03UTMU",
+    "name": "Gefen Honey Bear, 100% Pure Clover Honey, 12 oz",
+    "brand": "Gefen",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/714grbp334L._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/gefen-gefen-honey-bear-100-pure-clover-honey-12-oz-b00b03utmu?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$4.49",
+    "basis_price": "$5.29",
+    "prime_price": "$4.04",
+    "discount": "15% off",
+    "unit_price": null
+  },
+  {
     "asin": "B00B03XPTO",
     "name": "Mamma Chia Organic Raspberry Passion Vitality Beverage",
     "brand": "Mamma Chia",
@@ -4004,19 +4004,6 @@
     "unit_price": null
   },
   {
-    "asin": "B00HHKTU3O",
-    "name": "Twinings Tea From Grosvenor, Tea Lemon Ginger, 20 Count",
-    "brand": "Twinings",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/81CZyR6PlZL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/twinings-twinings-tea-from-grosvenor-tea-lemon-ginger-20-count-b00hhktu3o?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$3.88",
-    "basis_price": "$5.49",
-    "prime_price": "$3.49",
-    "discount": "29% off",
-    "unit_price": null
-  },
-  {
     "asin": "B00HSXT8EQ",
     "name": "Annie's Gluten Free Chewy Granola Bars, Double Chocolate Chip, 5 Bars, 4.9 oz",
     "brand": "Annie's Homegrown",
@@ -4270,19 +4257,6 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/81VUqV6LZ+L._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/gotham-greens-gotham-greens-gourmet-medley-lettuce-4-5-ounce-b00kar6b3i?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$3.32",
-    "basis_price": "$3.99",
-    "prime_price": "$2.99",
-    "discount": "17% off",
-    "unit_price": null
-  },
-  {
-    "asin": "B00KAR6ERQ",
-    "name": "Gotham Greens Butterhead Lettuce, 4.5 oz",
-    "brand": "Gotham Greens",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71SBowJK0eL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/gotham-greens-gotham-greens-butterhead-lettuce-4-5-oz-b00kar6erq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
     "current_price": "$3.32",
     "basis_price": "$3.99",
     "prime_price": "$2.99",
@@ -5746,19 +5720,6 @@
     "unit_price": null
   },
   {
-    "asin": "B01D213Y6U",
-    "name": "Primal Kitchen Avocado Oil, Whole30 Approved, Certified Paleo, and Keto Certified, 16.9 Fluid Ounces",
-    "brand": "Primal Kitchen",
-    "variation": "1 Flavors, 1 Sizes",
-    "image": "https://m.media-amazon.com/images/I/61rVFPSyXnL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/primal-kitchen-primal-kitchen-avocado-oil-whole30-approved-certified-paleo-and-keto-certified-16-9-fluid-ounces-b01d213y6u?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$14.77",
-    "basis_price": "$18.99",
-    "prime_price": "$13.29",
-    "discount": "22% off",
-    "unit_price": null
-  },
-  {
     "asin": "B01DIZT0KO",
     "name": "Chips Potato Avocado Oil Sea, 5.25 Ounce",
     "brand": "Boulder Canyon",
@@ -6461,19 +6422,6 @@
     "unit_price": null
   },
   {
-    "asin": "B06XD4NC2Y",
-    "name": "6 pk, 12 oz Bottles, 4.6% ABV",
-    "brand": "Corona Extra",
-    "variation": "1 Flavors, 1 Sizes",
-    "image": "https://m.media-amazon.com/images/I/81tWHfa3Z3L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/corona-extra-6-pk-12-oz-bottles-4-6-abv-b06xd4nc2y?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$10.79",
-    "basis_price": "$11.99",
-    "prime_price": null,
-    "discount": "10% off",
-    "unit_price": null
-  },
-  {
     "asin": "B06XD9KFVG",
     "name": "Annie's Organic White Cheddar Squares Baked Snack Crackers, Made with Real Cheese, 7.5 oz",
     "brand": "Annie's Homegrown",
@@ -7111,19 +7059,6 @@
     "unit_price": null
   },
   {
-    "asin": "B075MGKLC8",
-    "name": "Cauli Rice - Fullgreen - Low Carb Riced Cauliflower (Cauliflower, 1 Count)",
-    "brand": "Fullgreen",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/81FZNM-+3zL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fullgreen-cauli-rice-fullgreen-low-carb-riced-cauliflower-cauliflower-1-count-b075mgklc8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$2.78",
-    "basis_price": "$5.29",
-    "prime_price": "$2.50",
-    "discount": "47% off",
-    "unit_price": null
-  },
-  {
     "asin": "B075QJ8M1K",
     "name": "Oatly Original Oat Milk, 64 oz",
     "brand": "Oatly",
@@ -7449,6 +7384,19 @@
     "unit_price": null
   },
   {
+    "asin": "B07811ZCGD",
+    "name": "Dark Chocolate Mini Grahams, 11.5 Ounce",
+    "brand": "Nassau Candy",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/81McNawRSfL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/nassau-candy-dark-chocolate-mini-grahams-11-5-ounce-b07811zcgd?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$11.79",
+    "basis_price": "$12.79",
+    "prime_price": "$10.61",
+    "discount": "8% off",
+    "unit_price": null
+  },
+  {
     "asin": "B07812PCCF",
     "name": "Changing Seas Cold Smoked Salmon 8 oz, 8 OZ",
     "brand": "Changing Seas",
@@ -7754,11 +7702,11 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/71+M5Vr6xsL._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-red-plum-b0787w8x4t?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$3.88/lb",
+    "current_price": "",
     "basis_price": null,
-    "prime_price": "$3.49",
+    "prime_price": null,
     "discount": null,
-    "unit_price": "$3.88/lb"
+    "unit_price": null
   },
   {
     "asin": "B0787XQ15C",
@@ -9009,19 +8957,6 @@
     "unit_price": null
   },
   {
-    "asin": "B07FX3G92F",
-    "name": "Bob's Red Mill Gluten Free Old Fashioned Rolled Oats, 52oz (Pack of 1) - Non GMO, Whole Grain, Vegan, Kosher",
-    "brand": "Bob's Red Mill",
-    "variation": "1 Flavors, 2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/815YykGovSL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/bob-s-red-mill-bob-s-red-mill-gluten-free-old-fashioned-rolled-oats-52oz-pack-of-1-non-gmo-whole-grain-vegan-kosher-b07fx3g92f?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$12.04",
-    "basis_price": "$15.49",
-    "prime_price": "$10.84",
-    "discount": "22% off",
-    "unit_price": null
-  },
-  {
     "asin": "B07FXSZQXP",
     "name": "Lumen, 4pk, 16 Fl Oz Cans",
     "brand": "Grimms Ale",
@@ -9171,11 +9106,11 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/714xlOo5jOL._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-produce-tree-ripe-plum-b07fzg7qp9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$3.88/lb",
+    "current_price": "",
     "basis_price": null,
-    "prime_price": "$3.49",
+    "prime_price": null,
     "discount": null,
-    "unit_price": "$3.88/lb"
+    "unit_price": null
   },
   {
     "asin": "B07FZKXQT2",
@@ -9392,11 +9327,11 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/415toDVUbAL._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-pineapple-chunks-medium-b07hmbsdqx?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$5.15/lb",
-    "basis_price": "$5.79/lb",
-    "prime_price": "$4.64",
-    "discount": "11% off",
-    "unit_price": "$5.15/lb"
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null
   },
   {
     "asin": "B07JCGQVZ9",
@@ -10634,19 +10569,6 @@
     "unit_price": null
   },
   {
-    "asin": "B07YGLNQN5",
-    "name": "Bob's Red Mill Organic Medium Grind Cornmeal, 24oz (Pack of 1) - Non GMO, Whole Grain, Vegan, Kosher",
-    "brand": "Bob's Red Mill",
-    "variation": "2 Sizes, 1 Style",
-    "image": "https://m.media-amazon.com/images/I/81gFt9nNkYL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/bob-s-red-mill-bob-s-red-mill-organic-medium-grind-cornmeal-24oz-pack-of-1-non-gmo-whole-grain-vegan-kosher-b07yglnqn5?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null
-  },
-  {
     "asin": "B07YHCPNM5",
     "name": "Buttermilk Pancakes, 16.5 Ounce",
     "brand": "365 by Whole Foods Market",
@@ -10774,19 +10696,6 @@
     "basis_price": "$19.99",
     "prime_price": "$14.39",
     "discount": "illy Coffee K Cup, Pods for Keurig Machines, Classico Medium Roast, 100% Arabica, Premium Italian Coffee, 20 Count, 1 Pack",
-    "unit_price": null
-  },
-  {
-    "asin": "B081DKV9CB",
-    "name": "Yogurt Krimi Low Fat Cold Brew Coffee, 4.4 Ounce",
-    "brand": "Icelandic Provisions",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71nSYu5M70L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/icelandic-provisions-yogurt-krimi-low-fat-cold-brew-coffee-4-4-ounce-b081dkv9cb?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
-    "basis_price": null,
-    "prime_price": null,
-    "discount": "Yogurt Krimi Low Fat Cold Brew Coffee, 4.4 Ounce",
     "unit_price": null
   },
   {
@@ -11089,19 +10998,6 @@
     "unit_price": null
   },
   {
-    "asin": "B084TM51XP",
-    "name": "Frieda's, Lemon Seedless, 16 Ounce Bag",
-    "brand": "Fresh Produce",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/511Oozo1oxL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-frieda-s-lemon-seedless-16-ounce-bag-b084tm51xp?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$2.77",
-    "basis_price": "$2.99",
-    "prime_price": "$2.49",
-    "discount": "7% off",
-    "unit_price": null
-  },
-  {
     "asin": "B084WHFPPV",
     "name": "Bronx Brewery World Gone Hazy IPA 4pk Cans, 16 FZ",
     "brand": "Bronx Brewery",
@@ -11112,19 +11008,6 @@
     "basis_price": "$14.99",
     "prime_price": null,
     "discount": "13% off",
-    "unit_price": null
-  },
-  {
-    "asin": "B084Z48BCF",
-    "name": "DERMA-E Thickening Shampoo for Thinning Hair – Natural Hair Growth Shampoo – Sulfate Free Therapeutic Mint and Herbal Volumizing, 10 oz",
-    "brand": "Derma E",
-    "variation": "2 Style",
-    "image": "https://m.media-amazon.com/images/I/51LvkicUWtL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/derma-e-derma-e-thickening-shampoo-for-thinning-hair-natural-hair-growth-shampoo-sulfate-free-therapeutic-mint-and-herbal-volumizing-10-oz-b084z48bcf?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$10.79",
-    "basis_price": "$13.49",
-    "prime_price": "$9.71",
-    "discount": "20% off",
     "unit_price": null
   },
   {
@@ -12623,19 +12506,6 @@
     "unit_price": null
   },
   {
-    "asin": "B08XPNCGHS",
-    "name": "Chomps Beef Stick Jalapeno 1.15 OZ",
-    "brand": "Chomps",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/61YPTvDtYwL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/chomps-chomps-beef-stick-jalapeno-1-15-oz-b08xpncghs?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$2.59",
-    "basis_price": "$2.79",
-    "prime_price": "$2.33",
-    "discount": "7% off",
-    "unit_price": null
-  },
-  {
     "asin": "B08XRJX5KN",
     "name": "Bonafide Provisions No Salt Added Organic Chicken Broth, Shelf Stable 32 fl oz",
     "brand": "Bonafide Provisions",
@@ -12646,6 +12516,19 @@
     "basis_price": "$5.59",
     "prime_price": "$3.91",
     "discount": "22% off",
+    "unit_price": null
+  },
+  {
+    "asin": "B08Y6S4LC8",
+    "name": "Siete Family Foods Fuego Potato Chips, 5.5 oz Bag",
+    "brand": "Siete",
+    "variation": "6 Flavors, 1 Sizes",
+    "image": "https://m.media-amazon.com/images/I/81K9ajcMrxL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/siete-siete-family-foods-fuego-potato-chips-5-5-oz-bag-b08y6s4lc8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$1.01",
+    "basis_price": "$4.19",
+    "prime_price": "$0.91",
+    "discount": "76% off",
     "unit_price": null
   },
   {
@@ -13403,6 +13286,19 @@
     "unit_price": null
   },
   {
+    "asin": "B09KVXGV8L",
+    "name": "Green Valley Lactose Free Butter, two 4 Ounce sticks",
+    "brand": "Green Valley Creamery",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/61fEFhOv2cL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/green-valley-creamery-green-valley-lactose-free-butter-two-4-ounce-sticks-b09kvxgv8l?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$5.09",
+    "basis_price": "$5.99",
+    "prime_price": "$4.58",
+    "discount": "15% off",
+    "unit_price": null
+  },
+  {
     "asin": "B09L63136S",
     "name": "KINDERS Organic Hickory Brown Sugar BBQ Sauce, 16 OZ",
     "brand": "KINDER'S",
@@ -13682,24 +13578,11 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/51VAILOm12L._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-organic-pineapple-chunks-small-b09v3drhyy?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$6.04/lb",
-    "basis_price": "$6.79/lb",
-    "prime_price": "$5.44",
-    "discount": "11% off",
-    "unit_price": "$6.04/lb"
-  },
-  {
-    "asin": "B09V3F2JRS",
-    "name": "Grapes Small",
-    "brand": "Fresh Produce",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/41xygBhbuQL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-grapes-small-b09v3f2jrs?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$6.49/lb",
-    "basis_price": "$7.29/lb",
-    "prime_price": "$5.84",
-    "discount": "11% off",
-    "unit_price": "$6.49/lb"
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null
   },
   {
     "asin": "B09V3L5ZYM",
@@ -13721,11 +13604,11 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/41Io350f0+L._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-pineapple-chunks-value-pack-b09v3lwgwx?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$4.17/lb",
-    "basis_price": "$4.69/lb",
-    "prime_price": "$3.75",
-    "discount": "11% off",
-    "unit_price": "$4.17/lb"
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null
   },
   {
     "asin": "B09VLTK4TG",
@@ -13752,32 +13635,6 @@
     "prime_price": null,
     "discount": "10% off",
     "unit_price": null
-  },
-  {
-    "asin": "B09WZ6D6MM",
-    "name": "Mild Guacamole Dip Small",
-    "brand": "Fresh Produce",
-    "variation": "2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/51u4zlK3mAL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-mild-guacamole-dip-small-b09wz6d6mm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$12.49/lb",
-    "basis_price": null,
-    "prime_price": "$11.24",
-    "discount": null,
-    "unit_price": "$12.49/lb"
-  },
-  {
-    "asin": "B09WZ97NPK",
-    "name": "Mild Guacamole Dip Extra Small",
-    "brand": "Fresh Produce",
-    "variation": "2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/51TP-e99sML._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-mild-guacamole-dip-extra-small-b09wz97npk?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$12.49/lb",
-    "basis_price": null,
-    "prime_price": "$11.24",
-    "discount": null,
-    "unit_price": "$12.49/lb"
   },
   {
     "asin": "B09XGB3GGB",
@@ -13822,7 +13679,7 @@
     "asin": "B09XJSKMK8",
     "name": "SIETE FAMILY FOODS Queso Potato Chips, 5.5 OZ",
     "brand": "Siete",
-    "variation": "5 Flavors, 1 Sizes",
+    "variation": "6 Flavors, 1 Sizes",
     "image": "https://m.media-amazon.com/images/I/81RkGgZ0x-L._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/siete-siete-family-foods-queso-potato-chips-5-5-oz-b09xjskmk8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
     "current_price": "$1.01",
@@ -14404,6 +14261,19 @@
     "unit_price": null
   },
   {
+    "asin": "B0BG6SPKZQ",
+    "name": "Alba Botanica Sheer Mineral Sunscreen Spray, SPF 50, Fragrance-Free Broad Spectrum, Water Resistant and Biodegradable, 5 fl. Oz. Bottle",
+    "brand": "Alba Botanica",
+    "variation": "1 Sizes, 2 Style",
+    "image": "https://m.media-amazon.com/images/I/7183+apW9VL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/alba-botanica-alba-botanica-sheer-mineral-sunscreen-spray-spf-50-fragrance-free-broad-spectrum-water-resistant-and-biodegradable-5-fl-oz-bottle-b0bg6spkzq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$11.99",
+    "basis_price": "$14.99",
+    "prime_price": "$10.79",
+    "discount": "20% off",
+    "unit_price": null
+  },
+  {
     "asin": "B0BG75SP1X",
     "name": "Spindrift Sparkling Seltzer Water, Blood Orange Tangerine Flavored, Made with Real Squeezed Fruit, 12 Fluid Ounce Cans, Pack of 8 Cans",
     "brand": "Spindrift",
@@ -14943,19 +14813,6 @@
     "variation": null,
     "image": "https://m.media-amazon.com/images/I/712fiFGuzmL._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/the-ryl-co-the-ryl-co-tea-black-raspberry-16-fl-oz-b0br6fkvvx?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$2.43",
-    "basis_price": "$2.69",
-    "prime_price": "$2.19",
-    "discount": "10% off",
-    "unit_price": null
-  },
-  {
-    "asin": "B0BR6H268T",
-    "name": "The Ryl Co., Tea Green Original, 16 Fl Oz",
-    "brand": "The Ryl Co",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71WgparVh+L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/the-ryl-co-the-ryl-co-tea-green-original-16-fl-oz-b0br6h268t?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
     "current_price": "$2.43",
     "basis_price": "$2.69",
     "prime_price": "$2.19",
@@ -16391,6 +16248,19 @@
     "prime_price": "$14.99",
     "discount": "Chamberlain Coffee",
     "unit_price": null
+  },
+  {
+    "asin": "B0CGVVJJ54",
+    "name": "Salmon Atlantic Fillet Garlic And Herb",
+    "brand": "Seafood (Suppliers May Vary)",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/51q0Mt61UmL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/seafood-suppliers-may-vary-salmon-atlantic-fillet-garlic-and-herb-b0cgvvjj54?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$16.99/lb",
+    "basis_price": "$17.99/lb",
+    "prime_price": "$15.29",
+    "discount": "6% off",
+    "unit_price": "$16.99/lb"
   },
   {
     "asin": "B0CGW26RSK",
@@ -18681,6 +18551,19 @@
     "unit_price": null
   },
   {
+    "asin": "B0D92JCY9N",
+    "name": "Rao's Homemade Lemon Marinara Sauce, 24 oz, Tomato Sauce, All Purpose, Keto Friendly, Premium Quality, Tomatoes from Italy and Olive Oil",
+    "brand": "Rao's Homemade",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71WWSTG--GL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/rao-s-homemade-rao-s-homemade-lemon-marinara-sauce-24-oz-tomato-sauce-all-purpose-keto-friendly-premium-quality-tomatoes-from-italy-and-olive-oil-b0d92jcy9n?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "$7.77",
+    "basis_price": "$8.49",
+    "prime_price": "$6.99",
+    "discount": "8% off",
+    "unit_price": null
+  },
+  {
     "asin": "B0D94NGKJL",
     "name": "Patagonia Provisions Organic Multiseed Crackers – 3g Plant Protein Per Serving – Made with Wheat Flour & Sea Salt – Non-GMO, No Added Sugar - Crispy & Crunchy",
     "brand": "Patagonia Provisions",
@@ -19536,19 +19419,6 @@
     "basis_price": "$14.49",
     "prime_price": "$10.43",
     "discount": "20% off",
-    "unit_price": null
-  },
-  {
-    "asin": "B0DKQS8ZV8",
-    "name": "SPINDRIFT Island Punch Sparkling Water 8pk, 12 FZ",
-    "brand": "Spindrift",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71CX1x+k9dL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/spindrift-spindrift-island-punch-sparkling-water-8pk-12-fz-b0dkqs8zv8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$6.10",
-    "basis_price": "$7.69",
-    "prime_price": "$5.49",
-    "discount": "21% off",
     "unit_price": null
   },
   {
@@ -21372,19 +21242,6 @@
     "unit_price": null
   },
   {
-    "asin": "B0FHJMHGMF",
-    "name": "Whole Foods Market Kitchens Chicken and Broccoli Lasagna, 34 OZ",
-    "brand": "WHOLE FOODS MARKET KITCHENS",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/612DTXQ+UiL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/whole-foods-market-kitchens-whole-foods-market-kitchens-chicken-and-broccoli-lasagna-34-oz-b0fhjmhgmf?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$15.57",
-    "basis_price": "$16.49",
-    "prime_price": "$14.01",
-    "discount": "6% off",
-    "unit_price": null
-  },
-  {
     "asin": "B0FHKRG4BF",
     "name": "Whole Foods Market Kitchens Four Cheese Lasagna, 34 OZ",
     "brand": "WHOLE FOODS MARKET KITCHENS",
@@ -21408,19 +21265,6 @@
     "basis_price": "$10.99",
     "prime_price": "$7.70",
     "discount": "22% off",
-    "unit_price": null
-  },
-  {
-    "asin": "B0FHKSQY7M",
-    "name": "Whole Foods Market Kitchens Vegetable Medley Lasagna, 34 OZ",
-    "brand": "WHOLE FOODS MARKET KITCHENS",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/61lNKoLFGAL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/whole-foods-market-kitchens-whole-foods-market-kitchens-vegetable-medley-lasagna-34-oz-b0fhksqy7m?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "$15.57",
-    "basis_price": "$16.49",
-    "prime_price": "$14.01",
-    "discount": "6% off",
     "unit_price": null
   },
   {

@@ -7,7 +7,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$7.99 to $12.79/lb",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🥩",
     "asins": [
@@ -45,7 +45,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$22.99 ea",
-    "prime_price": "$17.24 ea",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🥧",
     "asins": [
@@ -63,7 +63,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$22.99/lb",
-    "prime_price": "$18.39/lb",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🍤",
     "asins": [
@@ -97,7 +97,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$11.99/lb",
-    "prime_price": "$9.59/lb",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🥩",
     "asins": [
@@ -148,7 +148,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$12.99 ea",
-    "prime_price": "$10.39 ea",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🐟",
     "asins": [
@@ -167,7 +167,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$16.99/lb",
-    "prime_price": "$13.59/lb",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🐟",
     "asins": [
@@ -184,7 +184,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$3.49 to $4.99/lb",
-    "prime_price": "20% off",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🍗",
     "asins": [
@@ -206,7 +206,7 @@
     "unit_price": null,
     "current_price": "5% off",
     "basis_price": "$17.99/lb",
-    "prime_price": "$15.29/lb",
+    "prime_price": null,
     "discount": "15% off",
     "emoji": "🐟",
     "asins": [
@@ -223,7 +223,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$6.49 to $7.49 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🍗",
     "asins": [
@@ -249,7 +249,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$9.99 to $12.99 ea",
-    "prime_price": "25% off",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🍗",
     "asins": [
@@ -269,7 +269,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$14.99/lb",
-    "prime_price": "$11.99/lb",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🍤",
     "asins": [
@@ -396,7 +396,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$10.49/lb",
-    "prime_price": "$8.39/lb",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🛒",
     "asins": [
@@ -498,7 +498,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$6.49 to $6.99 ea",
-    "prime_price": "25% off",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🥛",
     "asins": [
@@ -523,9 +523,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "20% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "28% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "28% off",
     "emoji": "🛒",
     "rank": 29,
     "sale_price": "20% off"
@@ -538,7 +538,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$2.59 to $19.29 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🥞",
     "asins": [
@@ -566,7 +566,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$2.99 to $31.49 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🛒",
     "asins": [
@@ -622,7 +622,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$5.49 to $6.99 ea",
-    "prime_price": "25% off",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🥛",
     "asins": [
@@ -643,7 +643,7 @@
     "unit_price": null,
     "current_price": "15% off",
     "basis_price": "$4.69 to $6.39 ea",
-    "prime_price": "23% off",
+    "prime_price": null,
     "discount": "23% off",
     "emoji": "🛒",
     "asins": [
@@ -662,7 +662,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$2.99 to $5.79 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🐟",
     "asins": [
@@ -690,7 +690,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$8.99 to $11.49 ea",
-    "prime_price": "20% off",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🥚",
     "asins": [
@@ -708,7 +708,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$7.49 ea",
-    "prime_price": "$5.24 ea",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🍫",
     "asins": [
@@ -728,9 +728,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "22% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "30% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "30% off",
     "emoji": "🛒",
     "asins": [
       "B000WS3APW",
@@ -757,7 +757,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$5.29 to $10.49 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🛒",
     "asins": [
@@ -805,7 +805,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$6.49 to $20.99 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🥑",
     "asins": [
@@ -833,7 +833,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$4.29 to $14.29 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🍚",
     "asins": [
@@ -861,7 +861,7 @@
     "unit_price": null,
     "current_price": "22% off",
     "basis_price": "$2.89 to $13.99 ea",
-    "prime_price": "30% off",
+    "prime_price": null,
     "discount": "30% off",
     "emoji": "🧀",
     "asins": [
@@ -908,7 +908,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$3.99 to $9.49 ea",
-    "prime_price": "25% off",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🍿",
     "asins": [
@@ -934,7 +934,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$8.99 ea",
-    "prime_price": "$7.19 ea",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🍗",
     "asins": [
@@ -951,7 +951,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$17.99/lb",
-    "prime_price": "$14.39/lb",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🥩",
     "asins": [
@@ -967,9 +967,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "11% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "20% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "20% off",
     "emoji": "🥛",
     "rank": 48,
     "sale_price": "11% off"
@@ -982,7 +982,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$6.79 to $8.99 ea",
-    "prime_price": "20% off",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🥐",
     "asins": [
@@ -1004,7 +1004,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$13.99/lb",
-    "prime_price": "$10.49/lb",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🛒",
     "asins": [
@@ -1022,7 +1022,7 @@
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$8.99 ea",
-    "prime_price": "$7.19 ea",
+    "prime_price": null,
     "discount": "20% off",
     "emoji": "🍰",
     "asins": [
@@ -1039,7 +1039,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$8.99 ea",
-    "prime_price": "$6.74 ea",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🍫",
     "asins": [
@@ -1062,7 +1062,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$36.99/lb",
-    "prime_price": "$27.74/lb",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🛒",
     "asins": [
@@ -1079,7 +1079,7 @@
     "unit_price": null,
     "current_price": "16% off",
     "basis_price": "$8.79 ea",
-    "prime_price": "$6.59 ea",
+    "prime_price": null,
     "discount": "25% off",
     "emoji": "🛒",
     "asins": [
@@ -1097,9 +1097,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "20% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "28% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "28% off",
     "emoji": "🛒",
     "asins": [
       "B0B3Q1HNQ5",
@@ -1123,9 +1123,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "20% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "28% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "28% off",
     "emoji": "🛒",
     "asins": [
       "B08CBX21C5",
@@ -1151,9 +1151,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "20% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "28% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "28% off",
     "emoji": "🛒",
     "asins": [
       "B006P8NAHQ",
@@ -1179,9 +1179,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "20% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "28% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "28% off",
     "emoji": "🛒",
     "asins": [
       "B002NRB7SM",
@@ -1203,7 +1203,7 @@
     "unit_price": null,
     "current_price": "20% off",
     "basis_price": "$23.99 to $31.99 ea",
-    "prime_price": "28% off",
+    "prime_price": null,
     "discount": "28% off",
     "emoji": "🛒",
     "asins": [
@@ -1228,7 +1228,7 @@
     "unit_price": null,
     "current_price": "25% off",
     "basis_price": "$27.49 to $41.49 ea",
-    "prime_price": "32% off",
+    "prime_price": null,
     "discount": "32% off",
     "emoji": "🛒",
     "asins": [
@@ -1253,7 +1253,7 @@
     "unit_price": null,
     "current_price": "20% off",
     "basis_price": "$19.99 to $39.49 ea",
-    "prime_price": "28% off",
+    "prime_price": null,
     "discount": "28% off",
     "emoji": "🛒",
     "asins": [
@@ -1275,9 +1275,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "20% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "28% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "28% off",
     "emoji": "🛒",
     "rank": 62,
     "sale_price": "20% off"
@@ -1289,9 +1289,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "15% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "23% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "23% off",
     "emoji": "🛒",
     "asins": [
       "B08QFQQ1MF",
@@ -1317,9 +1317,9 @@
     "url": null,
     "unit_price": null,
     "current_price": "15% off",
-    "basis_price": "Regular prices vary ea",
-    "prime_price": "23% off",
-    "discount": "0% off",
+    "basis_price": "prices vary",
+    "prime_price": null,
+    "discount": "23% off",
     "emoji": "🛒",
     "rank": 64,
     "sale_price": "15% off"
