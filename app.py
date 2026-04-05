@@ -1596,82 +1596,8 @@ def combined_products_home():
         products=products,
         deal_count=deal_count,
         available_stores=SUPPORTED_STORES,
-        page_subtitle="Search combined products across flyer, all deals, and search deals",
+        page_subtitle="Browse Whole Foods, Target, and H Mart deals in one place.",
     )
-
-
-@app.route("/flyer")
-def deals():
-    products = sort_products_for_display(load_saved_flyer_products())
-    deal_count = len(products)
-    return render_template(
-        "deals.html",
-        products=products,
-        deal_count=deal_count,
-        page_subtitle="Search products across flyer",
-    )
-
-
-@app.route("/newsletter")
-def newsletter():
-    products = load_saved_flyer_products()
-    deal_count = len(products)
-    return render_template("newsletter.html", products=products, deal_count=deal_count)
-
-
-@app.route("/all-deals")
-def all_deals():
-    products = sort_products_for_display(load_all_deals())
-    deal_count = len(products)
-    return render_template(
-        "all_deals.html",
-        products=products,
-        deal_count=deal_count,
-        page_subtitle="Search products across all deals",
-    )
-
-
-@app.route("/search-deals")
-def search_deals():
-    products = sort_products_for_display(load_search_deals())
-    deal_count = len(products)
-    return render_template(
-        "search_deals.html",
-        products=products,
-        deal_count=deal_count,
-        page_subtitle="Search products across search deals",
-    )
-
-
-@app.route("/target-deals")
-def target_deals():
-    products = sort_products_for_display(load_target_deals())
-    deal_count = len(products)
-    return render_template(
-        "target_deals.html",
-        products=products,
-        deal_count=deal_count,
-        page_subtitle="Search Target grocery deals",
-    )
-
-
-@app.route("/hmart-deals")
-def hmart_deals():
-    products = sort_products_for_display(load_hmart_deals())
-    deal_count = len(products)
-    return render_template(
-        "hmart_deals.html",
-        products=products,
-        deal_count=deal_count,
-        page_subtitle="Search H Mart weekly sale products",
-    )
-
-
-@app.route("/all-deals-newsletter")
-def all_deals_newsletter():
-    products = load_all_deals()
-    deal_count = len(products)
-    return render_template("all_deals_newsletter.html", products=products, deal_count=deal_count)
 
 
 if __name__ == "__main__":

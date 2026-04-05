@@ -30,13 +30,6 @@ DATA_FILES = [
 ]
 ROUTES = {
     "/": DIST_DIR / "index.html",
-    "/flyer": DIST_DIR / "flyer" / "index.html",
-    "/all-deals": DIST_DIR / "all-deals" / "index.html",
-    "/search-deals": DIST_DIR / "search-deals" / "index.html",
-    "/target-deals": DIST_DIR / "target-deals" / "index.html",
-    "/hmart-deals": DIST_DIR / "hmart-deals" / "index.html",
-    "/newsletter": DIST_DIR / "newsletter" / "index.html",
-    "/all-deals-newsletter": DIST_DIR / "all-deals-newsletter" / "index.html",
 }
 
 

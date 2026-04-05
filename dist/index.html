@@ -16,15 +16,14 @@
 <div class="app-shell">
     <header class="app-header">
         <div>
-            <h1>Whole Foods Deals</h1>
-            <p class="app-summary-line" id="summary-line">Tap More like this or Less like this to tune your feed.</p>
+            <h1>Deals</h1>
+            <p class="app-summary-line" id="summary-line">One feed. Three stores.</p>
         </div>
     </header>
 
     <section class="search-panel">
         <label class="sr-only" for="global-search">Search deals</label>
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search products, brands or categories...">
-        <p class="retailer-intro">Browse everything in one place by switching between Whole Foods, Target, and H Mart.</p>
         <div class="chip-row" id="retailer-chip-row"></div>
         <div class="status-row">
             <div class="search-meta" id="search-meta">Showing 2648 products</div>
@@ -32,45 +31,16 @@
         </div>
     </section>
 
-    <nav class="tab-strip" aria-label="App sections">
-        <button class="tab-button is-active" data-tab="for-you" type="button">For You</button>
-        <button class="tab-button" data-tab="categories" type="button">Categories</button>
-        <button class="tab-button" data-tab="search" type="button">Search</button>
-    </nav>
-
-    <section class="panel is-active" data-panel="for-you">
+    <section class="panel is-active single-feed-panel">
         <div class="section-head">
             <div>
-                <h2>For You</h2>
+                <h2 id="feed-title">Top Deals</h2>
                 <p id="for-you-copy">The best matches for what you've been upvoting.</p>
             </div>
-            <div class="mini-pill" id="for-you-count">0 picks</div>
+            <div class="mini-pill" id="for-you-count">0 deals</div>
         </div>
         <div class="chip-row" id="for-you-highlights"></div>
         <div class="product-grid" id="for-you-grid"></div>
-    </section>
-
-    <section class="panel" data-panel="categories">
-        <div class="section-head">
-            <div>
-                <h2>Categories</h2>
-                <p>Browse by aisle and quickly tune what appears in your feed.</p>
-            </div>
-            <div class="mini-pill" id="category-summary">All categories</div>
-        </div>
-        <div class="chip-row" id="category-chip-row"></div>
-        <div class="product-grid" id="category-grid"></div>
-    </section>
-
-    <section class="panel" data-panel="search">
-        <div class="section-head">
-            <div>
-                <h2>Search Results</h2>
-                <p id="search-copy">Search across the combined catalog of flyer, all deals and search deals.</p>
-            </div>
-            <div class="mini-pill" id="search-count">0 results</div>
-        </div>
-        <div class="product-grid" id="search-grid"></div>
     </section>
 </div>
 

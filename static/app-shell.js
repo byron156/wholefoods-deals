@@ -17,7 +17,6 @@
     discount_percent: Number(product.discount_percent || 0),
   }));
   const stores = rawData.stores || [];
-  const categoryList = Array.from(new Set(products.map((product) => product.category).filter(Boolean))).sort();
   const retailerOrder = ["Whole Foods", "Target", "H Mart"];
   const retailerSet = new Set(products.map((product) => product.retailer || "Whole Foods").filter(Boolean));
   const retailerList = retailerOrder.filter((retailer) => retailerSet.has(retailer));
@@ -32,14 +31,7 @@
     forYouHighlights: document.getElementById("for-you-highlights"),
     forYouCount: document.getElementById("for-you-count"),
     forYouCopy: document.getElementById("for-you-copy"),
-    categoryChipRow: document.getElementById("category-chip-row"),
-    categoryGrid: document.getElementById("category-grid"),
-    categorySummary: document.getElementById("category-summary"),
-    searchGrid: document.getElementById("search-grid"),
-    searchCount: document.getElementById("search-count"),
-    searchCopy: document.getElementById("search-copy"),
-    tabButtons: Array.from(document.querySelectorAll(".tab-button")),
-    panels: Array.from(document.querySelectorAll(".panel")),
+    feedTitle: document.getElementById("feed-title"),
   };
 
   function getDefaultProfile() {
@@ -67,9 +59,7 @@
 
   const state = {
     profile: loadProfile(),
-    activeTab: "for-you",
     query: "",
-    activeCategory: "All",
     activeRetailer: retailerList[0] || "Whole Foods",
   };
 
@@ -224,14 +214,6 @@
       });
   }
 
-  function categoryCounts() {
-    const counts = {};
-    visibleProducts().forEach((product) => {
-      counts[product.category] = (counts[product.category] || 0) + 1;
-    });
-    return counts;
-  }
-
   function formatSources(product) {
     return (product.sources || [])
       .slice(0, 3)
@@ -327,18 +309,6 @@
       : "Start upvoting a few items to personalize the feed.";
   }
 
-  function renderCategoryChips() {
-    const counts = categoryCounts();
-    const chips = ["All", ...categoryList];
-    nodes.categoryChipRow.innerHTML = chips
-      .map((category) => {
-        const selected = state.activeCategory === category;
-        const label = category === "All" ? "All" : `${category} (${counts[category] || 0})`;
-        return `<button class="chip ${selected ? "is-selected" : ""}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(label)}</button>`;
-      })
-      .join("");
-  }
-
   function applyPreferenceSignals(product, direction) {
     const isPositive = direction === "up";
     const currentKey = isPositive ? "likedKeys" : "dislikedKeys";
@@ -391,27 +361,9 @@
     }
   }
 
-  function setActiveTab(tab) {
-    state.activeTab = tab;
-    nodes.tabButtons.forEach((button) => {
-      button.classList.toggle("is-active", button.dataset.tab === tab);
-    });
-    nodes.panels.forEach((panel) => {
-      panel.classList.toggle("is-active", panel.dataset.panel === tab);
-    });
-  }
-
   function renderPanels() {
     const visible = visibleProducts();
-    const recommended = recommendedProducts().slice(0, 80);
-    const categoryProducts = visible
-      .filter((product) => state.activeCategory === "All" || product.category === state.activeCategory)
-      .sort((left, right) => (right.discount_percent || 0) - (left.discount_percent || 0))
-      .slice(0, 80);
-    const searched = visible
-      .slice()
-      .sort((left, right) => (right.discount_percent || 0) - (left.discount_percent || 0))
-      .slice(0, 120);
+    const recommended = recommendedProducts().slice(0, 120);
 
     renderHighlights(recommended);
     renderGrid(
@@ -419,18 +371,6 @@
       recommended,
       "No personalized matches yet. Upvote a few items to start shaping the feed.",
       (item) => item._score.explanation
-    );
-    renderGrid(
-      nodes.categoryGrid,
-      categoryProducts,
-      "No products match this category right now.",
-      (item) => `Top ${item.category} deal right now`
-    );
-    renderGrid(
-      nodes.searchGrid,
-      searched,
-      state.query ? "No search matches. Try another term." : "Search to explore the full catalog.",
-      (item) => `Found in ${item.sources.join(", ")}`
     );
 
     const selectedStores = stores.filter((store) => state.profile.selectedStoreIds.includes(store.id));
@@ -447,18 +387,16 @@
     if (state.activeRetailer) {
       nodes.searchMeta.textContent += ` in ${state.activeRetailer}`;
     }
-    nodes.summaryLine.textContent = "Switch between Whole Foods, Target, and H Mart, then tap More like this or Less like this to tune the feed.";
-    nodes.forYouCount.textContent = `${recommended.length} picks`;
-    nodes.categorySummary.textContent = state.activeCategory === "All"
-      ? `${state.activeRetailer} categories`
-      : state.activeCategory;
-    nodes.searchCount.textContent = `${searched.length} results`;
-    nodes.searchCopy.textContent = state.query
+    nodes.summaryLine.textContent = "One feed. Three stores.";
+    nodes.forYouCount.textContent = `${recommended.length} deals`;
+    if (nodes.feedTitle) {
+      nodes.feedTitle.textContent = state.query ? `${state.activeRetailer} Results` : `${state.activeRetailer} Deals`;
+    }
+    nodes.forYouCopy.textContent = state.query
       ? `Results for "${state.query}" in ${state.activeRetailer}.`
-      : `Search ${state.activeRetailer} deals.`;
+      : `Best deals in ${state.activeRetailer}, ranked for value and what you've upvoted.`;
 
     renderRetailerChips();
-    renderCategoryChips();
   }
 
   function handleAction(action, key) {
@@ -487,41 +425,23 @@
   }
 
   document.body.addEventListener("click", (event) => {
-    const tabButton = event.target.closest("[data-tab]");
-    if (tabButton) {
-      setActiveTab(tabButton.dataset.tab);
-      return;
-    }
-
     const actionButton = event.target.closest("[data-action]");
     if (actionButton) {
       handleAction(actionButton.dataset.action, actionButton.dataset.key);
       return;
     }
 
-    const categoryButton = event.target.closest("[data-category]");
-    if (categoryButton) {
-      state.activeCategory = categoryButton.dataset.category;
-      renderPanels();
-      return;
-    }
-
     const retailerButton = event.target.closest("[data-retailer]");
     if (retailerButton) {
       state.activeRetailer = retailerButton.dataset.retailer;
-      state.activeCategory = "All";
       renderPanels();
     }
   });
 
   nodes.searchInput.addEventListener("input", () => {
     state.query = (nodes.searchInput.value || "").trim().toLowerCase();
-    if (state.query && state.activeTab !== "search") {
-      setActiveTab("search");
-    }
     renderPanels();
   });
 
-  setActiveTab("for-you");
   renderPanels();
 })();
