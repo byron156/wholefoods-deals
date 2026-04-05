@@ -29,6 +29,7 @@
     searchInput: document.getElementById("global-search"),
     searchMeta: document.getElementById("search-meta"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
+    categoryChipRow: document.getElementById("category-chip-row"),
     feedGrid: document.getElementById("feed-grid"),
     feedCount: document.getElementById("feed-count"),
     feedTitle: document.getElementById("feed-title"),
@@ -55,6 +56,7 @@
     profile: loadProfile(),
     query: "",
     activeRetailer: retailerList[0] || "Whole Foods",
+    activeCategory: "",
   };
 
   function saveProfile() {
@@ -210,8 +212,16 @@
   function visibleProducts() {
     return products.filter((product) =>
       product.retailer === state.activeRetailer &&
+      (!state.activeCategory || product.category === state.activeCategory) &&
       productVisibleForStores(product) &&
       textContainsQuery(product, state.query)
+    );
+  }
+
+  function retailerProducts() {
+    return products.filter((product) =>
+      product.retailer === state.activeRetailer &&
+      productVisibleForStores(product)
     );
   }
 
@@ -242,6 +252,38 @@
         return `<button class="chip ${selected ? "is-selected" : ""}" data-retailer="${escapeHtml(retailer)}" type="button">${escapeHtml(retailer)}</button>`;
       })
       .join("");
+  }
+
+  function renderCategoryChips() {
+    const counts = new Map();
+    retailerProducts().forEach((product) => {
+      const category = product.category || "Pantry";
+      counts.set(category, (counts.get(category) || 0) + 1);
+    });
+
+    if (!counts.size) {
+      nodes.categoryChipRow.innerHTML = "";
+      return;
+    }
+
+    const ordered = Array.from(counts.entries()).sort((left, right) => {
+      if (right[1] !== left[1]) {
+        return right[1] - left[1];
+      }
+      return left[0].localeCompare(right[0]);
+    });
+
+    if (state.activeCategory && !counts.has(state.activeCategory)) {
+      state.activeCategory = "";
+    }
+
+    nodes.categoryChipRow.innerHTML = [
+      `<button class="chip ${!state.activeCategory ? "is-selected" : ""}" data-category="" type="button">All</button>`,
+      ...ordered.map(([category, count]) => {
+        const selected = state.activeCategory === category;
+        return `<button class="chip ${selected ? "is-selected" : ""}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(category)} (${count})</button>`;
+      }),
+    ].join("");
   }
 
   function renderEmpty(message) {
@@ -297,11 +339,7 @@
     const imageMarkup = product.image
       ? `
           <div class="deal-image">
-            ${
-              product.url
-                ? `<a href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}"></a>`
-                : `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}">`
-            }
+            <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}">
           </div>
         `
       : "";
@@ -354,9 +392,16 @@
       ? `${visibleCount.toLocaleString()} results`
       : `${visibleCount.toLocaleString()} live deals`;
 
-    nodes.feedTitle.textContent = state.query ? `Results in ${state.activeRetailer}` : `Best in ${state.activeRetailer}`;
+    if (state.activeCategory) {
+      nodes.feedTitle.textContent = state.query
+        ? `${state.activeCategory} in ${state.activeRetailer}`
+        : `${state.activeCategory} Deals`;
+    } else {
+      nodes.feedTitle.textContent = state.query ? `Results in ${state.activeRetailer}` : `Best in ${state.activeRetailer}`;
+    }
     nodes.feedCount.textContent = `${ranked.length.toLocaleString()} shown`;
     renderRetailerChips();
+    renderCategoryChips();
   }
 
   function handleAction(action, key) {
@@ -387,6 +432,14 @@
     const retailerButton = event.target.closest("[data-retailer]");
     if (retailerButton) {
       state.activeRetailer = retailerButton.dataset.retailer;
+      state.activeCategory = "";
+      renderFeed();
+      return;
+    }
+
+    const categoryButton = event.target.closest("[data-category]");
+    if (categoryButton) {
+      state.activeCategory = categoryButton.dataset.category || "";
       renderFeed();
     }
   });

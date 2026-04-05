@@ -2,6 +2,7 @@ import hashlib
 import json
 import re
 from typing import Any, Optional, Tuple
+from urllib.parse import quote_plus
 
 from playwright.sync_api import sync_playwright
 
@@ -9,6 +10,8 @@ from playwright.sync_api import sync_playwright
 TARGET_GROCERY_DEALS_URL = "https://www.target.com/c/grocery-deals/-/N-k4uyq"
 LOAD_WAIT_MS = 1800
 MAX_LOAD_MORE_CLICKS = 30
+DETAIL_WAIT_MS = 400
+DETAIL_DIALOG_TIMEOUT_MS = 2500
 
 
 def normalize_text_key(text: Optional[str]) -> str:
@@ -40,7 +43,70 @@ def parse_offer_value(value_text: Optional[str]) -> Tuple[Optional[str], Optiona
     return current_price, discount
 
 
-def parse_offer_card(card) -> Optional[dict[str, Any]]:
+def normalize_target_url(href: Optional[str]) -> Optional[str]:
+    if not href:
+        return None
+    href = href.strip()
+    if href.startswith("http://") or href.startswith("https://"):
+        return href.replace("http://", "https://", 1)
+    if href.startswith("/"):
+        return "https://www.target.com" + href
+    return None
+
+
+def build_target_search_url(name: Optional[str]) -> Optional[str]:
+    if not name:
+        return None
+    return f"https://www.target.com/s?searchTerm={quote_plus(name)}"
+
+
+def extract_offer_url(page, card) -> Optional[str]:
+    direct_link = card.locator('a[href*="/p/"], a[href*="/pl/"]').first
+    if direct_link.count():
+        href = direct_link.get_attribute("href")
+        normalized = normalize_target_url(href)
+        if normalized:
+            return normalized
+
+    show_items = card.locator('button[aria-label^="Show items for "]')
+    if not show_items.count():
+        return None
+
+    try:
+        show_items.first.click(force=True, timeout=2000)
+        page.wait_for_timeout(DETAIL_WAIT_MS)
+        dialog = page.locator('[role="dialog"]').last
+        dialog.wait_for(timeout=DETAIL_DIALOG_TIMEOUT_MS)
+
+        href = None
+        show_all = dialog.locator('[data-test="eligible-items-carousel-show-all-link"]').first
+        if show_all.count():
+            href = show_all.get_attribute("href")
+
+        if not href:
+            product_link = dialog.locator('a[data-test="@web/OfferDetails/EligibleItemsCard/Link"]').first
+            if product_link.count():
+                href = product_link.get_attribute("href")
+
+        close_button = dialog.locator('button[aria-label="close"]').first
+        if close_button.count():
+            close_button.click(timeout=1000)
+            page.wait_for_timeout(150)
+
+        return normalize_target_url(href)
+    except Exception:
+        try:
+            dialog = page.locator('[role="dialog"]').last
+            close_button = dialog.locator('button[aria-label="close"]').first
+            if close_button.count():
+                close_button.click(timeout=1000)
+                page.wait_for_timeout(150)
+        except Exception:
+            pass
+        return None
+
+
+def parse_offer_card(card, page) -> Optional[dict[str, Any]]:
     name = None
     value_text = None
     expires = None
@@ -75,13 +141,15 @@ def parse_offer_card(card) -> Optional[dict[str, Any]]:
     if not current_price and not discount:
         return None
 
+    url = extract_offer_url(page, card) or build_target_search_url(name)
+
     return {
         "asin": build_offer_id(name, value_text, expires),
         "name": name,
         "brand": None,
         "variation": None,
         "image": image,
-        "url": None,
+        "url": url,
         "current_price": current_price,
         "basis_price": None,
         "prime_price": None,
@@ -139,7 +207,9 @@ def discover_target_deals() -> dict[str, Any]:
         cards = page.locator('[data-test="offer-card"]')
         parsed: dict[str, dict[str, Any]] = {}
         for index in range(cards.count()):
-            product = parse_offer_card(cards.nth(index))
+            if index and index % 25 == 0:
+                print(f"Target parse: processed {index}/{cards.count()} offers")
+            product = parse_offer_card(cards.nth(index), page)
             if not product:
                 continue
             parsed.setdefault(product["asin"], product)

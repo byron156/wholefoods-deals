@@ -259,14 +259,16 @@ p {
   gap: 8px;
 }
 
-#retailer-chip-row {
+#retailer-chip-row,
+#category-chip-row {
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 2px;
   scrollbar-width: none;
 }
 
-#retailer-chip-row::-webkit-scrollbar {
+#retailer-chip-row::-webkit-scrollbar,
+#category-chip-row::-webkit-scrollbar {
   display: none;
 }
 
@@ -452,6 +454,17 @@ p {
 
 .app-search {
   font-size: 16px;
+}
+
+#category-chip-row .chip {
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--muted);
+}
+
+#category-chip-row .chip.is-selected {
+  background: rgba(11, 107, 69, 0.12);
+  color: var(--brand);
+  border-color: rgba(11, 107, 69, 0.18);
 }
 
 .status-row {

@@ -165,12 +165,14 @@ SUBCATEGORY_PROFILES = {
         "Vegetables": ["broccoli", "cauliflower", "lettuce", "tomato", "onion", "carrot", "pepper", "cucumber", "avocado", "potato", "sweet potato", "kale", "spinach"],
         "Salads & Greens": ["salad", "greens", "romaine", "baby spinach", "spring mix", "salad kit", "salad mix"],
         "Herbs": ["herb", "cilantro", "parsley", "basil", "mint"],
+        "Mushrooms": ["mushroom", "mushrooms", "shiitake", "lion's mane", "lions mane", "oyster mushroom"],
     },
     "Meat & Seafood": {
         "Chicken & Turkey": ["chicken", "turkey", "cutlet", "breast", "thigh", "drumstick"],
         "Beef, Pork & Lamb": ["beef", "pork", "lamb", "ham", "steak", "sausage", "bacon", "ground beef"],
         "Seafood": ["salmon", "tuna", "shrimp", "fish", "seafood", "crab", "lobster", "scallop"],
         "Deli & Prepared Meat": ["meatballs", "deli", "prosciutto", "pepperoni"],
+        "Sausages & Meatballs": ["sausage", "sausages", "meatballs", "meatball"],
     },
     "Dairy & Eggs": {
         "Milk & Creamers": ["milk", "creamer", "half and half", "kefir"],
@@ -207,6 +209,7 @@ SUBCATEGORY_PROFILES = {
         "Condiments & Spreads": ["peanut butter", "jam", "fruit spread", "spread", "preserves", "honey", "mustard", "ketchup", "vinegar", "oil"],
         "Canned & Jarred Goods": ["beans", "jarred", "canned", "bruschetta", "hummus"],
         "Baking & Seasonings": ["spice", "seasoning", "mix"],
+        "Dips & Spreads": ["hummus", "hommus", "dip", "dips", "guacamole", "queso"],
     },
     "Beverages": {
         "Water & Seltzer": ["water", "seltzer", "sparkling water", "coconut water"],
@@ -214,12 +217,14 @@ SUBCATEGORY_PROFILES = {
         "Juice & Smoothies": ["juice", "smoothie", "kombucha"],
         "Beer, Wine & Spirits": ["ipa", "beer", "wine", "hard seltzer", "lager"],
         "Energy & Sports Drinks": ["energy drink", "electrolyte", "sports drink"],
+        "Mocktails & Zero Proof": ["zero proof", "non-alcoholic", "non alcoholic", "mocktail", "ritual"],
     },
     "Supplements & Wellness": {
         "Vitamins & Minerals": ["vitamin", "magnesium", "omega", "multivitamin"],
         "Digestive & Probiotics": ["enzyme", "digestive", "probiotic"],
         "Protein & Collagen": ["collagen", "protein powder", "peptides", "greens powder"],
         "Wellness Shots & Tonics": ["wellness shot", "wellness shots", "shot", "tonic", "electrolyte"],
+        "Mushroom Blends": ["functional mushroom", "lion's mane", "cordyceps", "reishi", "chaga", "mushroom powder"],
     },
     "Household": {
         "Cleaning": ["cleaner", "disinfect", "sponge"],
@@ -268,7 +273,24 @@ def text_contains_phrase(haystack, phrase):
     phrase_key = normalize_text_key(phrase)
     if not phrase_key:
         return False
-    return phrase_key in haystack
+
+    variants = {phrase_key}
+    tokens = phrase_key.split()
+    if tokens:
+        last = tokens[-1]
+        plural_variants = set()
+        if last.endswith("y") and len(last) > 1:
+            plural_variants.add(last[:-1] + "ies")
+        if last.endswith(("s", "x", "z", "ch", "sh")):
+            plural_variants.add(last + "es")
+        else:
+            plural_variants.add(last + "s")
+
+        for variant_last in plural_variants:
+            variants.add(" ".join(tokens[:-1] + [variant_last]).strip())
+
+    haystack_padded = f" {haystack} "
+    return any(f" {variant} " in haystack_padded for variant in variants if variant)
 
 
 def emoji_for_product(name):
@@ -472,7 +494,13 @@ def sort_products_for_display(products):
 
 def derive_brand(name, explicit_brand=None):
     if explicit_brand:
-        return explicit_brand.strip()
+        cleaned_explicit_brand = clean_brand_display(explicit_brand.strip())
+        normalized_explicit_brand = normalize_text_key(cleaned_explicit_brand)
+        if "suppliers may vary" in normalized_explicit_brand:
+            return None
+        if candidate_is_generic_brand(cleaned_explicit_brand):
+            return None
+        return cleaned_explicit_brand
 
     if not name:
         return None
@@ -491,12 +519,248 @@ def derive_brand(name, explicit_brand=None):
         "health ade",
         "bobo's",
         "siete",
+        "new chapter",
+        "amylu",
+        "amylu foods",
+        "om mushroom superfood",
+        "cedars mediterranean food",
+        "cedar's",
+        "cedars",
+        "aidells",
+        "athletic brewing company",
+        "athletic brewing",
+        "belgioioso",
+        "better buzz coffee",
     ]
     for prefix in known_prefixes:
         if lowered.startswith(prefix):
-            return name[: len(prefix)].strip(" ,")
+            return clean_brand_display(name[: len(prefix)].strip(" ,"))
+
+    brand_candidate = extract_brand_candidate(name)
+    if brand_candidate:
+        return clean_brand_display(brand_candidate)
 
     return None
+
+
+SMALL_TITLE_WORDS = {
+    "a", "an", "and", "as", "at", "by", "for", "from", "in", "of", "on", "or", "the", "to", "with",
+}
+DISPLAY_NAME_CLAIM_MARKERS = [
+    "non-gmo", "gluten-free", "gluten free", "dairy-free", "pork-free", "no nitrates", "no antibiotics",
+    "fully cooked", "natural ingredients", "for immune", "for stress", "gentle on", "energy", "focus",
+    "mental clarity", "support", "clinically tested", "servings", "tablets", "capsules", "raised with",
+]
+GENERIC_REMAINDER_NAMES = {
+    "beer", "wine", "coffee", "items", "item", "products", "product", "brands", "brand", "snacks",
+}
+BRAND_CONNECTORS = {"&", "and", "of", "by", "the", "foods", "food", "company", "co", "superfood"}
+BRAND_STOP_WORDS = {
+    "select", "fresh", "organic", "sale", "buy", "chicken", "pork", "beef", "turkey", "coffee", "tea",
+    "water", "juice", "milk", "cheese", "yogurt", "bread", "chips", "snacks", "meatballs", "sausages",
+    "burrata", "mascarpone", "multivitamin", "vitamin", "supplement", "cucumbers", "oranges", "potatoes",
+}
+GENERIC_BRAND_WORDS = {
+    "ancient", "baby", "bacon", "bar", "basil", "berry", "biscuits", "black", "blend", "block", "broth",
+    "buttermilk", "candy", "capsules", "care", "cheese", "chicken", "chips", "coffee", "collagen", "cookies",
+    "cracker", "cracked", "cream", "daily", "deodorant", "dessert", "digestive", "dip", "dressings", "drink",
+    "electrolyte", "elixir", "enzyme", "enzymes", "extract", "farm", "feta", "flour", "foods", "fresh", "fruit",
+    "gels", "granola", "greens", "hair", "herbal", "hummus", "immune", "items", "jerky", "juice", "jumbo", "latte",
+    "large", "loaf", "lotion", "mane", "mango", "meatballs", "melon", "mental", "milk", "mix", "moss", "muffins", "mushroom",
+    "oatmeal", "on", "organic", "pasta", "peptides", "pepper", "pork", "potato", "powder", "probiotic", "probiotics",
+    "produce", "protein", "queso", "recovery", "rice", "salmon", "salt", "seasoning", "serum", "shell", "shots", "shrimp", "single",
+    "small", "snacks", "soap", "source", "spread", "stress", "supplement", "supplements", "superfood", "tablets", "tea",
+    "tonic", "turkey", "vanilla", "variety", "vitamin", "vitamins", "wellness", "white", "womens", "yogurt",
+}
+
+
+def candidate_is_generic_brand(candidate):
+    if not candidate:
+        return True
+
+    cleaned_tokens = [
+        normalize_text_key(token)
+        for token in re.split(r"\s+", candidate)
+    ]
+    cleaned_tokens = [
+        token for token in cleaned_tokens
+        if token and token not in BRAND_CONNECTORS
+    ]
+    if not cleaned_tokens:
+        return True
+
+    generic_hits = sum(1 for token in cleaned_tokens if token in GENERIC_BRAND_WORDS)
+    if generic_hits == len(cleaned_tokens):
+        return True
+    if len(cleaned_tokens) >= 3 and generic_hits >= len(cleaned_tokens) - 1:
+        return True
+    return False
+
+
+def extract_brand_candidate(name):
+    if not name:
+        return None
+
+    tokens = re.split(r"\s+", name.strip())
+    brand_tokens = []
+
+    def clean_token(token):
+        return token.strip(" ,.:;()[]{}")
+
+    def looks_brandish(token):
+        cleaned = clean_token(token)
+        if not cleaned:
+            return False
+        if cleaned.lower() in BRAND_STOP_WORDS:
+            return False
+        if any(ch.isdigit() for ch in cleaned):
+            return False
+        if cleaned.lower() in BRAND_CONNECTORS:
+            return True
+        return cleaned[0].isupper() or cleaned.isupper() or any(ch.isupper() for ch in cleaned[1:])
+
+    for token in tokens[:5]:
+        cleaned = clean_token(token)
+        if not cleaned:
+            continue
+        lowered = cleaned.lower()
+
+        if not brand_tokens:
+            if looks_brandish(cleaned):
+                brand_tokens.append(cleaned)
+            else:
+                break
+            continue
+
+        if lowered in BRAND_CONNECTORS or looks_brandish(cleaned):
+            brand_tokens.append(cleaned)
+            continue
+        break
+
+    if not brand_tokens:
+        return None
+
+    candidate = " ".join(brand_tokens).strip()
+    if normalize_text_key(candidate) in BRAND_STOP_WORDS:
+        return None
+    if candidate_is_generic_brand(candidate):
+        return None
+    return candidate if len(candidate) >= 3 else None
+
+
+def title_case_token(token, is_first=False):
+    match = re.match(r"^([^A-Za-z0-9]*)([A-Za-z0-9’'&+/-]+)([^A-Za-z0-9]*)$", token)
+    if not match:
+        return token
+
+    prefix, core, suffix = match.groups()
+    lower_core = core.lower()
+
+    if any(ch.isdigit() for ch in core):
+        formatted = core.upper()
+    elif core.isupper() and len(core) <= 4:
+        formatted = core
+    elif lower_core in SMALL_TITLE_WORDS and not is_first:
+        formatted = lower_core
+    else:
+        pieces = re.split(r"([’'/-])", lower_core)
+        rebuilt = []
+        previous_separator = None
+        for piece in pieces:
+            if piece in {"’", "'", "/", "-"}:
+                rebuilt.append(piece)
+                previous_separator = piece
+                continue
+            if not piece:
+                continue
+            if previous_separator in {"’", "'"} and len(piece) == 1:
+                rebuilt.append(piece.lower())
+            else:
+                rebuilt.append(piece.capitalize())
+            previous_separator = None
+        formatted = "".join(rebuilt)
+
+    return f"{prefix}{formatted}{suffix}"
+
+
+def smart_title_case(text):
+    if not text:
+        return text
+
+    tokens = re.split(r"(\s+)", text.strip())
+    output = []
+    seen_word = False
+    for token in tokens:
+        if not token or token.isspace():
+            output.append(token)
+            continue
+        output.append(title_case_token(token, is_first=not seen_word))
+        seen_word = True
+    return "".join(output)
+
+
+def clean_brand_display(brand):
+    if not brand:
+        return brand
+    brand = re.sub(r"\s+", " ", brand).strip(" ,")
+    if brand.upper() == brand and len(brand.split()) >= 2:
+        return smart_title_case(brand)
+    return brand
+
+
+def strip_brand_from_name(name, brand):
+    if not name or not brand:
+        return name
+
+    if not name.lower().startswith(brand.lower()):
+        return name
+
+    remainder = name[len(brand):].lstrip(" ,:-–—")
+    if not remainder:
+        return name
+
+    connector_pattern = r"^(?:" + "|".join(re.escape(word) for word in sorted(BRAND_CONNECTORS, key=len, reverse=True)) + r")\b[\s,:-]*"
+    while True:
+        updated = re.sub(connector_pattern, "", remainder, flags=re.IGNORECASE)
+        if updated == remainder:
+            break
+        remainder = updated.lstrip(" ,:-–—")
+        if not remainder:
+            return name
+
+    normalized_remainder = normalize_text_key(remainder)
+    if normalized_remainder in GENERIC_REMAINDER_NAMES:
+        return name
+
+    remainder_word_count = len(normalized_remainder.split())
+    if remainder_word_count < 2 and len(remainder) < 14:
+        return name
+
+    return remainder
+
+
+def clean_display_name(name, brand=None):
+    if not name:
+        return name
+
+    cleaned = re.sub(r"\s+", " ", str(name)).strip(" ,")
+    cleaned = strip_brand_from_name(cleaned, brand)
+    cleaned = re.sub(r"^[®™©\s]+", "", cleaned)
+
+    if " – " in cleaned and (len(cleaned) > 55 or any(marker in cleaned.lower() for marker in DISPLAY_NAME_CLAIM_MARKERS)):
+        cleaned = cleaned.split(" – ", 1)[0].strip(" ,")
+    elif " - " in cleaned and (len(cleaned) > 55 or any(marker in cleaned.lower() for marker in DISPLAY_NAME_CLAIM_MARKERS)):
+        cleaned = cleaned.split(" - ", 1)[0].strip(" ,")
+
+    comma_parts = [part.strip() for part in cleaned.split(",") if part.strip()]
+    if len(comma_parts) > 1:
+        trailing = ", ".join(comma_parts[1:]).lower()
+        if len(cleaned) > 60 or any(marker in trailing for marker in DISPLAY_NAME_CLAIM_MARKERS):
+            cleaned = comma_parts[0]
+
+    cleaned = re.sub(r"\s*\((?:\d+\s*servings?|pack of \d+|[0-9.]+\s*(?:oz|fl oz|lb|g|kg).*)\)\s*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" ,;-–—")
+    return smart_title_case(cleaned)
 
 
 def build_classification_haystack(name=None, brand=None, variation=None, url=None):
@@ -784,6 +1048,32 @@ def ensure_price_has_suffix(price_str, regular_price=None):
     return s + infer_suffix_from_regular_price(regular_price)
 
 
+def replace_price_suffix(price_str, suffix):
+    if not price_str:
+        return price_str
+
+    s = price_str.strip()
+    if is_non_price_promo_text(s):
+        return clean_percent_text(s) if is_percent_off_text(s) else s
+    if "prices vary" in s.lower():
+        return clean_regular_price_text(s)
+
+    match = re.match(r'^(\$\d+(?:\.\d{1,2})?(?:\s+to\s+\$\d+(?:\.\d{1,2})?)?)(.*)$', s)
+    if not match:
+        return s
+
+    return match.group(1) + suffix
+
+
+def harmonize_prime_suffix(display_regular_price, display_prime_price):
+    if not display_regular_price or not display_prime_price:
+        return display_prime_price
+    return replace_price_suffix(
+        ensure_price_has_suffix(display_prime_price, display_regular_price),
+        infer_suffix_from_regular_price(display_regular_price),
+    )
+
+
 def compute_discount_and_prime(regular_price, prime_price):
     display_prime_price = ensure_price_has_suffix(prime_price, regular_price)
     discount_text = None
@@ -970,6 +1260,7 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
             computed_discount = None
 
         if display_regular_price and display_prime_price:
+            display_prime_price = harmonize_prime_suffix(display_regular_price, display_prime_price)
             if normalize_text_key(display_regular_price) == normalize_text_key(display_prime_price):
                 display_regular_price = None
 
@@ -989,6 +1280,7 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
             final_discount = None
 
         if display_regular_price and display_prime_price:
+            display_prime_price = harmonize_prime_suffix(display_regular_price, display_prime_price)
             if normalize_text_key(display_regular_price) == normalize_text_key(display_prime_price):
                 display_regular_price = None
 
@@ -1000,7 +1292,7 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
     if candidate_prime:
         if is_percent_off_text(candidate_prime):
             return None, None, strongest_promo or clean_percent_text(candidate_prime)
-        return None, ensure_price_has_suffix(candidate_prime, regular_price), strongest_promo or candidate_discount
+        return None, ensure_price_has_suffix(candidate_prime, regular_price or current_price), strongest_promo or candidate_discount
 
     return None, None, strongest_promo or candidate_discount
 
@@ -1008,6 +1300,7 @@ def resolve_display_pricing(regular_price=None, prime_price=None, current_price=
 def standardize_product_record(
     *,
     name,
+    raw_name=None,
     image=None,
     url=None,
     asin=None,
@@ -1023,13 +1316,14 @@ def standardize_product_record(
     classification_context=None,
     extra_fields=None,
 ):
+    source_name = raw_name or name
     display_regular_price, display_prime_price, final_discount = resolve_display_pricing(
         regular_price=regular_price,
         prime_price=prime_price,
         current_price=current_price,
         discount_text=discount_text,
     )
-    normalized_brand = derive_brand(name, explicit_brand=brand)
+    normalized_brand = derive_brand(source_name, explicit_brand=brand)
     classification_text = " ".join(
         part
         for part in [
@@ -1039,17 +1333,19 @@ def standardize_product_record(
         if part
     )
     category_details = derive_category_details(
-        name,
+        source_name,
         brand=normalized_brand,
         variation=classification_text or variation,
         url=url,
     )
     category = category_details["category"]
     discount_percent = extract_discount_sort_value(final_discount)
+    display_name = clean_display_name(source_name, normalized_brand)
 
     product = {
         "asin": asin,
-        "name": name,
+        "name": display_name,
+        "raw_name": source_name,
         "brand": normalized_brand,
         "variation": variation,
         "category": category,
@@ -1074,7 +1370,7 @@ def standardize_product_record(
             product["asin"] = str(asins[0]).strip()
 
     product["tags"] = derive_tags(
-        name=name,
+        name=source_name,
         brand=normalized_brand,
         category=category,
         prime_price=display_prime_price,
@@ -1105,6 +1401,7 @@ def load_all_deals():
             standardize_product_record(
                 asin=p.get("asin"),
                 name=p.get("name"),
+                raw_name=p.get("raw_name"),
                 brand=p.get("brand"),
                 variation=p.get("variation"),
                 image=p.get("image"),
@@ -1140,6 +1437,7 @@ def load_search_deals():
             standardize_product_record(
                 asin=p.get("asin"),
                 name=p.get("name"),
+                raw_name=p.get("raw_name"),
                 brand=p.get("brand"),
                 variation=p.get("variation"),
                 image=p.get("image"),
@@ -1176,6 +1474,7 @@ def load_saved_flyer_products():
                 asin=p.get("asin"),
                 asins=p.get("asins"),
                 name=p.get("name"),
+                raw_name=p.get("raw_name"),
                 brand=p.get("brand"),
                 variation=p.get("variation"),
                 image=p.get("image"),
@@ -1212,6 +1511,7 @@ def load_target_deals():
             standardize_product_record(
                 asin=p.get("asin"),
                 name=p.get("name"),
+                raw_name=p.get("raw_name"),
                 brand=p.get("brand"),
                 variation=p.get("variation"),
                 image=p.get("image"),
@@ -1249,6 +1549,7 @@ def load_hmart_deals():
             standardize_product_record(
                 asin=p.get("asin"),
                 name=p.get("name"),
+                raw_name=p.get("raw_name"),
                 brand=p.get("brand"),
                 variation=p.get("variation"),
                 image=p.get("image"),
@@ -1307,6 +1608,8 @@ def merge_combined_product(existing, incoming):
         if store_id not in merged_store_ids:
             merged_store_ids.append(store_id)
     merged["available_store_ids"] = merged_store_ids or list(DEFAULT_STORE_IDS)
+    if merged.get("basis_price") and merged.get("prime_price"):
+        merged["prime_price"] = harmonize_prime_suffix(merged.get("basis_price"), merged.get("prime_price"))
     merged["tags"] = derive_tags(
         name=merged.get("name"),
         brand=merged.get("brand"),
@@ -1339,6 +1642,7 @@ def normalized_product_for_source(product, source_name):
         asin=product.get("asin"),
         asins=product.get("asins"),
         name=product.get("name"),
+        raw_name=product.get("raw_name"),
         brand=product.get("brand"),
         variation=product.get("variation"),
         image=product.get("image"),
@@ -1432,6 +1736,7 @@ def load_combined_products():
             asin=p.get("asin"),
             asins=p.get("asins"),
             name=p.get("name"),
+            raw_name=p.get("raw_name"),
             brand=p.get("brand"),
             variation=p.get("variation"),
             image=p.get("image"),

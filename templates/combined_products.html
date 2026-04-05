@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260405c">
+<link rel="stylesheet" href="/static/styles.css?v=20260405d">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260405c">
+<link rel="manifest" href="/manifest.webmanifest?v=20260405d">
 </head>
 
 <body class="app-body">
@@ -22,6 +22,7 @@
         <label class="sr-only" for="global-search">Search deals</label>
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search items or brands">
         <div class="chip-row" id="retailer-chip-row"></div>
+        <div class="chip-row" id="category-chip-row"></div>
         <div class="status-row">
             <div class="search-meta" id="search-meta">{{ deal_count }} live deals</div>
         </div>
@@ -55,7 +56,7 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/app-shell.js?v=20260405c"></script>
+<script src="/static/app-shell.js?v=20260405d"></script>
 
 <noscript>
     <section class="noscript-fallback">
