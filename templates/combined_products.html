@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/styles.css?v=20260405b">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest?v=20260405b">
 </head>
 
 <body class="app-body">
@@ -40,7 +40,23 @@
 <script id="app-data" type="application/json">
 {{ {"products": products, "stores": available_stores}|tojson }}
 </script>
-<script src="/static/app-shell.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    registrations.forEach((registration) => registration.unregister());
+  }).catch(() => {});
+}
+if ("caches" in window) {
+  caches.keys().then((keys) => {
+    keys.forEach((key) => {
+      if (key.indexOf("wholefoods-deals") !== -1) {
+        caches.delete(key);
+      }
+    });
+  }).catch(() => {});
+}
+</script>
+<script src="/static/app-shell.js?v=20260405b"></script>
 
 <noscript>
     <section class="noscript-fallback">
