@@ -207,6 +207,43 @@ p {
   line-height: 1.5;
 }
 
+.retailer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 4px;
+}
+
+.deal-card .retailer-row {
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.retailer-badge,
+.retailer-category {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.retailer-badge {
+  background: rgba(11, 107, 69, 0.12);
+  color: var(--brand);
+}
+
+.retailer-category {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--muted);
+}
+
 .deal-pill-row,
 .source-list,
 .chip-row {

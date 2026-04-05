@@ -4,8 +4,10 @@
     "/all-deals",
     "/all-deals-newsletter",
     "/flyer",
+    "/hmart-deals",
     "/newsletter",
-    "/search-deals"
+    "/search-deals",
+    "/target-deals"
   ],
   "copied_data_files": [
     "flyer_products.json",

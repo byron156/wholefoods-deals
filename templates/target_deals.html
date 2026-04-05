@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Whole Foods Deals</title>
+<title>Target Deals</title>
 <link rel="stylesheet" href="/static/styles.css">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
@@ -11,60 +11,43 @@
 
 <body>
 
-<h1>Whole Foods Deals</h1>
+<h1>Target Deals</h1>
 
 <div class="toolbar">
     <input
         id="product-search"
         class="search-input"
         type="search"
-        placeholder="Search all deals products..."
-        aria-label="Search all deals products"
+        placeholder="Search Target grocery deals..."
+        aria-label="Search Target grocery deals"
     >
     <div id="search-meta" class="search-meta">Showing {{ deal_count }} products</div>
 </div>
 
 <div class="grid" id="product-grid">
-
 {% for p in products %}
-
-<div class="card searchable-card" data-name="{{ (p.name or '')|lower }}" data-asin="{{ (p.asin or '')|lower }}" data-brand="{{ (p.brand or '')|lower }}" data-category="{{ (p.category or '')|lower }}" data-retailer="{{ (p.retailer or 'Whole Foods')|lower }}">
-
+<div class="card searchable-card" data-name="{{ (p.name or '')|lower }}" data-asin="{{ (p.asin or '')|lower }}" data-brand="{{ (p.brand or '')|lower }}" data-category="{{ (p.category or '')|lower }}" data-retailer="{{ (p.retailer or 'Target')|lower }}">
 {% if p.image %}
 <div class="product-image">
     <img src="{{ p.image }}">
 </div>
 {% endif %}
-
 <h2>{{p.name}}</h2>
-
 <p class="retailer-row">
-    <span class="retailer-badge">{{ p.retailer or "Whole Foods" }}</span>
+    <span class="retailer-badge">{{ p.retailer or "Target" }}</span>
     {% if p.category %}<span class="retailer-category">{{ p.category }}</span>{% endif %}
 </p>
-
 {% if p.prime_price %}
-<p class="prime">
-    {{ p.prime_price }}
-</p>
+<p class="prime">{{ p.prime_price }}</p>
 {% endif %}
-
 {% if p.basis_price %}
-<p class="regular regular-prominent">
-    Regular {{ p.basis_price }}
-</p>
+<p class="regular regular-prominent">Regular {{ p.basis_price }}</p>
 {% endif %}
-
 {% if p.discount %}
-<p class="discount">
-    {{ p.discount }}
-</p>
+<p class="discount">{{ p.discount }}</p>
 {% endif %}
-
 </div>
-
 {% endfor %}
-
 </div>
 
 <script>
@@ -75,7 +58,6 @@ const cards = Array.from(document.querySelectorAll(".searchable-card"));
 function applySearch() {
     const query = (input.value || "").trim().toLowerCase();
     let visible = 0;
-
     for (const card of cards) {
         const haystack = [
             card.dataset.name || "",
@@ -84,15 +66,11 @@ function applySearch() {
             card.dataset.category || "",
             card.dataset.retailer || "",
         ].join(" ");
-
         const match = !query || haystack.includes(query);
         card.style.display = match ? "" : "none";
         if (match) visible += 1;
     }
-
-    meta.textContent = query
-        ? `Showing ${visible} matching products`
-        : `Showing ${visible} products`;
+    meta.textContent = query ? `Showing ${visible} matching products` : `Showing ${visible} products`;
 }
 
 input.addEventListener("input", applySearch);

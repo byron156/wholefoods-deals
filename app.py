@@ -1487,6 +1487,7 @@ def filter_products_for_api(products):
     categories = {value.lower() for value in parse_csv_arg("category")}
     tags = {value.lower() for value in parse_csv_arg("tag")}
     brands = {value.lower() for value in parse_csv_arg("brand")}
+    retailers = {value.lower() for value in parse_csv_arg("retailer")}
     store_ids = set(parse_csv_arg("store_id"))
 
     filtered = []
@@ -1513,6 +1514,8 @@ def filter_products_for_api(products):
         if tags and not tags.intersection({tag.lower() for tag in product.get("tags") or []}):
             continue
         if brands and (product.get("brand") or "").lower() not in brands:
+            continue
+        if retailers and (product.get("retailer") or "").lower() not in retailers:
             continue
         if store_ids:
             available_store_ids = set(product.get("available_store_ids") or [])
@@ -1637,6 +1640,30 @@ def search_deals():
         products=products,
         deal_count=deal_count,
         page_subtitle="Search products across search deals",
+    )
+
+
+@app.route("/target-deals")
+def target_deals():
+    products = sort_products_for_display(load_target_deals())
+    deal_count = len(products)
+    return render_template(
+        "target_deals.html",
+        products=products,
+        deal_count=deal_count,
+        page_subtitle="Search Target grocery deals",
+    )
+
+
+@app.route("/hmart-deals")
+def hmart_deals():
+    products = sort_products_for_display(load_hmart_deals())
+    deal_count = len(products)
+    return render_template(
+        "hmart_deals.html",
+        products=products,
+        deal_count=deal_count,
+        page_subtitle="Search H Mart weekly sale products",
     )
 
 

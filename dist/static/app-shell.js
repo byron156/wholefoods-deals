@@ -18,12 +18,14 @@
   }));
   const stores = rawData.stores || [];
   const categoryList = Array.from(new Set(products.map((product) => product.category).filter(Boolean))).sort();
+  const retailerList = Array.from(new Set(products.map((product) => product.retailer || "Whole Foods").filter(Boolean))).sort();
 
   const nodes = {
     searchInput: document.getElementById("global-search"),
     summaryLine: document.getElementById("summary-line"),
     searchMeta: document.getElementById("search-meta"),
     storeSummary: document.getElementById("store-summary"),
+    retailerChipRow: document.getElementById("retailer-chip-row"),
     forYouGrid: document.getElementById("for-you-grid"),
     forYouHighlights: document.getElementById("for-you-highlights"),
     forYouCount: document.getElementById("for-you-count"),
@@ -66,6 +68,7 @@
     activeTab: "for-you",
     query: "",
     activeCategory: "All",
+    activeRetailer: "All",
   };
 
   function saveProfile() {
@@ -103,6 +106,7 @@
       (product.asins || []).join(" "),
       (product.tags || []).join(" "),
       (product.sources || []).join(" "),
+      product.retailer || "",
     ]
       .join(" ")
       .toLowerCase();
@@ -119,6 +123,13 @@
       return true;
     }
     return selected.some((storeId) => available.includes(storeId));
+  }
+
+  function productVisibleForRetailer(product) {
+    if (state.activeRetailer === "All") {
+      return true;
+    }
+    return (product.retailer || "Whole Foods") === state.activeRetailer;
   }
 
   function positiveAffinityCounts() {
@@ -193,7 +204,11 @@
   }
 
   function visibleProducts() {
-    return products.filter((product) => productVisibleForStores(product) && textContainsQuery(product, state.query));
+    return products.filter((product) =>
+      productVisibleForStores(product) &&
+      productVisibleForRetailer(product) &&
+      textContainsQuery(product, state.query)
+    );
   }
 
   function recommendedProducts() {
@@ -222,6 +237,16 @@
       .join("");
   }
 
+  function renderRetailerChips() {
+    const chips = ["All", ...retailerList];
+    nodes.retailerChipRow.innerHTML = chips
+      .map((retailer) => {
+        const selected = state.activeRetailer === retailer;
+        return `<button class="chip ${selected ? "is-selected" : ""}" data-retailer="${escapeHtml(retailer)}" type="button">${escapeHtml(retailer)}</button>`;
+      })
+      .join("");
+  }
+
   function formatTags(product) {
     return (product.tags || [])
       .slice(0, 3)
@@ -245,10 +270,14 @@
             : ""
         }
         <div class="deal-heading-row">
-          <div class="deal-brand">${escapeHtml(product.brand || "Whole Foods Deal")}</div>
+          <div class="deal-brand">${escapeHtml(product.brand || (product.retailer || "Deal"))}</div>
           <span class="category-pill">${escapeHtml(product.category || "Pantry")}</span>
         </div>
         <h3 class="deal-title"><a href="${product.url || "#"}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a></h3>
+        <div class="retailer-row">
+          <span class="retailer-badge">${escapeHtml(product.retailer || "Whole Foods")}</span>
+          ${product.subcategory ? `<span class="retailer-category">${escapeHtml(product.subcategory)}</span>` : ""}
+        </div>
         ${product.prime_price ? `<p class="prime">${escapeHtml(product.prime_price)}</p>` : ""}
         ${product.basis_price ? `<p class="deal-regular">Regular ${escapeHtml(product.basis_price)}</p>` : ""}
         ${product.discount ? `<p class="deal-discount">${escapeHtml(product.discount)}</p>` : ""}
@@ -403,6 +432,9 @@
     nodes.searchMeta.textContent = state.query
       ? `Showing ${visible.length} matching products`
       : `Showing ${visible.length} products`;
+    if (state.activeRetailer !== "All") {
+      nodes.searchMeta.textContent += ` in ${state.activeRetailer}`;
+    }
     nodes.summaryLine.textContent = "Tap More like this or Less like this to tune your feed.";
     nodes.forYouCount.textContent = `${recommended.length} picks`;
     nodes.categorySummary.textContent = state.activeCategory === "All" ? "All categories" : state.activeCategory;
@@ -411,6 +443,7 @@
       ? `Results for "${state.query}" across all deal sources.`
       : "Search across the combined catalog of flyer, all deals and search deals.";
 
+    renderRetailerChips();
     renderCategoryChips();
   }
 
@@ -455,6 +488,13 @@
     const categoryButton = event.target.closest("[data-category]");
     if (categoryButton) {
       state.activeCategory = categoryButton.dataset.category;
+      renderPanels();
+      return;
+    }
+
+    const retailerButton = event.target.closest("[data-retailer]");
+    if (retailerButton) {
+      state.activeRetailer = retailerButton.dataset.retailer;
       renderPanels();
     }
   });

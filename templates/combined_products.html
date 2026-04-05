@@ -24,6 +24,7 @@
     <section class="search-panel">
         <label class="sr-only" for="global-search">Search deals</label>
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search products, brands or categories...">
+        <div class="chip-row" id="retailer-chip-row"></div>
         <div class="status-row">
             <div class="search-meta" id="search-meta">Showing {{ deal_count }} products</div>
             <div class="mini-pill" id="store-summary">Store: Columbus Circle</div>
@@ -89,10 +90,13 @@
                 </div>
                 {% endif %}
                 <h2>{{ p.name }}</h2>
+                <p class="retailer-row">
+                    <span class="retailer-badge">{{ p.retailer or "Whole Foods" }}</span>
+                    {% if p.category %}<span class="retailer-category">{{ p.category }}</span>{% endif %}
+                </p>
                 {% if p.prime_price %}<p class="prime">{{ p.prime_price }}</p>{% endif %}
                 {% if p.basis_price %}<p class="regular regular-prominent">Regular {{ p.basis_price }}</p>{% endif %}
                 {% if p.discount %}<p class="discount">{{ p.discount }}</p>{% endif %}
-                <p class="card-meta">Category: {{ p.category or "Pantry" }}</p>
             </div>
         {% endfor %}
         </div>
