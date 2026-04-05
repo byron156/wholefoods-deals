@@ -17,3 +17,5 @@ services:
         sync: false
       - key: CORS_ALLOW_ORIGIN
         sync: false
+      - key: API_ONLY_MODE
+        value: "true"

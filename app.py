@@ -25,6 +25,7 @@ DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
 app = Flask(__name__)
 PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")
 CORS_ALLOW_ORIGIN = os.getenv("CORS_ALLOW_ORIGIN", "*")
+API_ONLY_MODE = os.getenv("API_ONLY_MODE", "").strip().lower() in {"1", "true", "yes"}
 
 
 @app.after_request
@@ -2549,8 +2550,21 @@ def api_fixes_to_deploy():
     return jsonify({"error": "Invalid fix kind"}), 400
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "HEAD"])
 def combined_products_home():
+    if request.method == "HEAD":
+        return ("", 204)
+
+    if API_ONLY_MODE:
+        return jsonify(
+            {
+                "ok": True,
+                "service": "grocery-deals-api",
+                "health": api_url("/health"),
+                "feed": api_url("/api/feed"),
+            }
+        )
+
     products = sort_products_for_display(load_combined_products())
     deal_count = len(products)
     fixes = load_fixes_to_deploy()
