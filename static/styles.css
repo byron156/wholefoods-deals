@@ -454,6 +454,28 @@ p {
   text-transform: uppercase;
 }
 
+.deal-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(239, 95, 69, 0.12);
+  color: #a6402c;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .deal-explanation {
   padding: 10px 12px;
   border-radius: 14px;

@@ -70,9 +70,14 @@
       favoriteCategories: [],
       favoriteTags: [],
       favoriteBrands: [],
+      dislikedCategories: [],
+      dislikedTags: [],
+      dislikedBrands: [],
       savedKeys: [],
       hiddenKeys: [],
       openedKeys: [],
+      likedKeys: [],
+      dislikedKeys: [],
       onboardingCompleted: false,
     };
   }
@@ -176,10 +181,26 @@
       reasons.push(`From a brand you like: ${product.brand}`);
     }
 
+    if (state.profile.dislikedCategories.includes(product.category)) {
+      score -= 55;
+      reasons.push(`Downranked because you've asked for less ${product.category}`);
+    }
+
+    if (product.brand && state.profile.dislikedBrands.includes(product.brand)) {
+      score -= 44;
+      reasons.push(`Downranked because you asked for less from ${product.brand}`);
+    }
+
     const matchingTags = (product.tags || []).filter((tag) => state.profile.favoriteTags.includes(tag));
     if (matchingTags.length) {
       score += 18 * matchingTags.length;
       reasons.push(`Fits your ${matchingTags.join(", ")} preferences`);
+    }
+
+    const dislikedTagMatches = (product.tags || []).filter((tag) => state.profile.dislikedTags.includes(tag));
+    if (dislikedTagMatches.length) {
+      score -= 22 * dislikedTagMatches.length;
+      reasons.push(`Showing less of your downvoted ${dislikedTagMatches.join(", ")} tags`);
     }
 
     const affinities = getAffinityCounts([
@@ -250,9 +271,61 @@
       .join("");
   }
 
+  function categoryCountsForVisibleProducts() {
+    const counts = {};
+    getVisibleProducts().forEach((product) => {
+      const category = product.category || "Pantry";
+      counts[category] = (counts[category] || 0) + 1;
+    });
+    return counts;
+  }
+
+  function applyPreferenceSignals(product, direction) {
+    const isPositive = direction === "up";
+    const category = product.category;
+    const brand = product.brand;
+    const tags = (product.tags || []).slice(0, 3);
+    const currentListKey = isPositive ? "likedKeys" : "dislikedKeys";
+    const oppositeListKey = isPositive ? "dislikedKeys" : "likedKeys";
+    const alreadySelected = (state.profile[currentListKey] || []).includes(product.key);
+
+    state.profile[currentListKey] = (state.profile[currentListKey] || []).filter((key) => key !== product.key);
+    state.profile[oppositeListKey] = (state.profile[oppositeListKey] || []).filter((key) => key !== product.key);
+
+    if (!alreadySelected) {
+      state.profile[currentListKey] = [...state.profile[currentListKey], product.key];
+    }
+
+    const positiveCategoryKey = "favoriteCategories";
+    const negativeCategoryKey = "dislikedCategories";
+    const positiveBrandKey = "favoriteBrands";
+    const negativeBrandKey = "dislikedBrands";
+    const positiveTagKey = "favoriteTags";
+    const negativeTagKey = "dislikedTags";
+
+    function syncSignal(value, positiveKey, negativeKey) {
+      if (!value) {
+        return;
+      }
+      state.profile[positiveKey] = (state.profile[positiveKey] || []).filter((entry) => entry !== value);
+      state.profile[negativeKey] = (state.profile[negativeKey] || []).filter((entry) => entry !== value);
+      if (!alreadySelected && isPositive) {
+        state.profile[positiveKey] = toggleValue(state.profile[positiveKey], value);
+      } else if (!alreadySelected) {
+        state.profile[negativeKey] = toggleValue(state.profile[negativeKey], value);
+      }
+    }
+
+    syncSignal(category, positiveCategoryKey, negativeCategoryKey);
+    syncSignal(brand, positiveBrandKey, negativeBrandKey);
+    tags.forEach((tag) => syncSignal(tag, positiveTagKey, negativeTagKey));
+  }
+
   function renderProductCard(product, explanation) {
     const saved = (state.profile.savedKeys || []).includes(product.key);
     const hidden = (state.profile.hiddenKeys || []).includes(product.key);
+    const liked = (state.profile.likedKeys || []).includes(product.key);
+    const disliked = (state.profile.dislikedKeys || []).includes(product.key);
     const imageMarkup = product.image
       ? `<div class="deal-image"><img src="${product.image}" alt="${escapeHtml(product.name)}"></div>`
       : `<div class="deal-image"><div class="empty-state">No image</div></div>`;
@@ -260,7 +333,10 @@
     return `
       <article class="deal-card ${hidden ? "is-hidden-card" : ""}" data-key="${product.key}">
         ${imageMarkup}
-        <div class="deal-brand">${escapeHtml(product.brand || product.category || "Deal")}</div>
+        <div class="deal-heading-row">
+          <div class="deal-brand">${escapeHtml(product.brand || product.category || "Deal")}</div>
+          <span class="category-pill">${escapeHtml(product.category || "Pantry")}</span>
+        </div>
         <h3 class="deal-title"><a href="${url}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.emoji || "🛒")} ${escapeHtml(product.name)}</a></h3>
         ${product.prime_price ? `<p class="prime">🔥 ${escapeHtml(product.prime_price)}</p>` : ""}
         ${product.basis_price ? `<p class="deal-regular">Regular ${escapeHtml(product.basis_price)}</p>` : ""}
@@ -268,6 +344,10 @@
         <div class="deal-meta">Category: ${escapeHtml(product.category || "Pantry")}${product.unit_price ? ` · Unit: ${escapeHtml(product.unit_price)}` : ""}</div>
         ${explanation ? `<div class="deal-explanation">${escapeHtml(explanation)}</div>` : ""}
         <div class="deal-pill-row">${formatSources(product)}${formatTags(product)}</div>
+        <div class="deal-actions">
+          <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${product.key}" type="button">${liked ? "More like this ✓" : "More like this"}</button>
+          <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${product.key}" type="button">${disliked ? "Less like this ✓" : "Less like this"}</button>
+        </div>
         <div class="deal-actions">
           <button class="deal-action ${saved ? "is-active" : ""}" data-action="save" data-key="${product.key}" type="button">${saved ? "Saved" : "Save"}</button>
           <button class="deal-action is-subtle ${hidden ? "is-active" : ""}" data-action="hide" data-key="${product.key}" type="button">${hidden ? "Hidden" : "Hide"}</button>
@@ -305,8 +385,11 @@
     if (state.profile.favoriteTags.length) {
       highlights.push(`Priority tags: ${state.profile.favoriteTags.slice(0, 3).join(", ")}`);
     }
+    if (state.profile.dislikedCategories.length) {
+      highlights.push(`Less of: ${state.profile.dislikedCategories.slice(0, 2).join(", ")}`);
+    }
     if (!highlights.length) {
-      highlights.push("Save or hide deals to train the feed.");
+      highlights.push("Use More like this or Less like this to train the feed.");
     }
     nodes.forYouHighlights.innerHTML = highlights
       .map((text) => `<span class="chip is-selected">${escapeHtml(text)}</span>`)
@@ -317,11 +400,13 @@
   }
 
   function renderCategoryChips() {
+    const counts = categoryCountsForVisibleProducts();
     const chips = ["All", ...categoryList];
     nodes.categoryChipRow.innerHTML = chips
       .map((category) => {
         const selected = state.activeCategory === category;
-        return `<button class="chip ${selected ? "is-selected" : ""}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(category)}</button>`;
+        const label = category === "All" ? "All" : `${category} (${counts[category] || 0})`;
+        return `<button class="chip ${selected ? "is-selected" : ""}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(label)}</button>`;
       })
       .join("");
   }
@@ -344,7 +429,7 @@
       ? `Showing ${visibleCount} matching products`
       : `Showing ${visibleCount} products`;
     nodes.summaryLine.textContent = state.profile.onboardingCompleted
-      ? "Curated deals that learn from what you save, hide and search."
+      ? "Curated deals that learn from what you save, hide, upvote and downvote."
       : "Choose categories, tags and brands to build a custom grocery feed.";
   }
 
@@ -366,7 +451,7 @@
     renderGrid(
       nodes.forYouGrid,
       recommended,
-      "No personalized matches yet. Try choosing a category or searching for a favorite item.",
+      "No personalized matches yet. Try choosing a category or tapping More like this on a few products.",
       (item) => item._score.explanation
     );
     renderGrid(
@@ -434,6 +519,8 @@
   }
 
   function handleAction(action, key) {
+    const product = products.find((item) => item.key === key);
+
     if (action === "save") {
       state.profile.savedKeys = toggleValue(state.profile.savedKeys, key);
       saveProfile();
@@ -452,10 +539,27 @@
     if (action === "open") {
       state.profile.openedKeys = toggleValue(state.profile.openedKeys, key);
       saveProfile();
-      const product = products.find((item) => item.key === key);
       if (product && product.url) {
         window.open(product.url, "_blank", "noopener,noreferrer");
       }
+      renderPanels();
+      return;
+    }
+
+    if (action === "more-like-this" && product) {
+      applyPreferenceSignals(product, "up");
+      state.profile.onboardingCompleted = true;
+      saveProfile();
+      renderPreferenceRows();
+      renderPanels();
+      return;
+    }
+
+    if (action === "less-like-this" && product) {
+      applyPreferenceSignals(product, "down");
+      state.profile.onboardingCompleted = true;
+      saveProfile();
+      renderPreferenceRows();
       renderPanels();
     }
   }
