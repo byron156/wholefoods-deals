@@ -28,7 +28,6 @@
   const nodes = {
     searchInput: document.getElementById("global-search"),
     searchMeta: document.getElementById("search-meta"),
-    contextPill: document.getElementById("context-pill"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
     feedGrid: document.getElementById("feed-grid"),
     feedCount: document.getElementById("feed-count"),
@@ -354,14 +353,6 @@
     nodes.searchMeta.textContent = state.query
       ? `${visibleCount.toLocaleString()} results`
       : `${visibleCount.toLocaleString()} live deals`;
-
-    if (state.activeRetailer === "Whole Foods") {
-      nodes.contextPill.textContent = "Columbus Circle";
-    } else if (state.activeRetailer === "Target") {
-      nodes.contextPill.textContent = "Target Grocery";
-    } else {
-      nodes.contextPill.textContent = "H Mart Sale";
-    }
 
     nodes.feedTitle.textContent = state.query ? `Results in ${state.activeRetailer}` : `Best in ${state.activeRetailer}`;
     nodes.feedCount.textContent = `${ranked.length.toLocaleString()} shown`;
