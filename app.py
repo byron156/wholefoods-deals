@@ -3,6 +3,7 @@ import re
 import requests
 import os
 import math
+from functools import lru_cache
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from supabase_state import (
     load_device_profile_from_supabase,
@@ -2180,7 +2181,46 @@ def build_combined_products(
     return ordered
 
 
-def load_combined_products():
+def hydrate_combined_product_record(product, index=0):
+    hydrated = dict(product)
+    hydrated["asin"] = hydrated.get("asin")
+    hydrated["asins"] = list(hydrated.get("asins") or ([hydrated["asin"]] if hydrated.get("asin") else []))
+    hydrated["name"] = hydrated.get("name") or hydrated.get("raw_name") or f"Product {index + 1}"
+    hydrated["raw_name"] = hydrated.get("raw_name") or hydrated["name"]
+    hydrated["brand"] = hydrated.get("brand") or None
+    hydrated["variation"] = hydrated.get("variation") or None
+    hydrated["image"] = hydrated.get("image")
+    hydrated["url"] = hydrated.get("url")
+    hydrated["unit_price"] = hydrated.get("unit_price")
+    hydrated["current_price"] = hydrated.get("current_price") or hydrated.get("sale_price")
+    hydrated["basis_price"] = hydrated.get("basis_price")
+    hydrated["prime_price"] = hydrated.get("prime_price")
+    hydrated["discount"] = hydrated.get("discount")
+    hydrated["retailer"] = hydrated.get("retailer") or "Whole Foods"
+    hydrated["category"] = hydrated.get("category") or "Pantry"
+    hydrated["subcategory"] = hydrated.get("subcategory")
+    hydrated["category_confidence"] = float(hydrated.get("category_confidence") or 0)
+    hydrated["category_signals"] = list(hydrated.get("category_signals") or [])
+    hydrated["sources"] = list(hydrated.get("sources") or [])
+    hydrated["source_count"] = int(hydrated.get("source_count") or len(hydrated["sources"]))
+    hydrated["tags"] = list(hydrated.get("tags") or [])
+    hydrated["available_store_ids"] = list(hydrated.get("available_store_ids") or DEFAULT_STORE_IDS)
+    if hydrated.get("basis_price") and hydrated.get("prime_price"):
+        hydrated["prime_price"] = harmonize_prime_suffix(hydrated.get("basis_price"), hydrated.get("prime_price"))
+    if not hydrated["tags"]:
+        hydrated["tags"] = derive_tags(
+            name=hydrated.get("name"),
+            brand=hydrated.get("brand"),
+            category=hydrated.get("category"),
+            sources=hydrated.get("sources"),
+            source_count=hydrated.get("source_count", 0),
+            prime_price=hydrated.get("prime_price"),
+        )
+    return hydrated
+
+
+@lru_cache(maxsize=1)
+def load_base_combined_products():
     print("Looking for combined products file at:", COMBINED_PRODUCTS_FILE)
 
     try:
@@ -2202,46 +2242,12 @@ def load_combined_products():
         )
 
     print("Loaded", len(products), "combined products")
-    normalized_products = []
-    for p in products:
-        normalized = standardize_product_record(
-            asin=p.get("asin"),
-            asins=p.get("asins"),
-            name=p.get("name"),
-            raw_name=p.get("raw_name"),
-            brand=p.get("brand"),
-            variation=p.get("variation"),
-            image=p.get("image"),
-            url=p.get("url"),
-            unit_price=p.get("unit_price"),
-            current_price=p.get("current_price") or p.get("sale_price"),
-            regular_price=p.get("basis_price"),
-            prime_price=p.get("prime_price"),
-            discount_text=p.get("discount"),
-            emoji=p.get("emoji"),
-            classification_context=p.get("source_categories") or [],
-            extra_fields={
-                "retailer": p.get("retailer"),
-                "expires": p.get("expires"),
-                "retail_source_url": p.get("retail_source_url"),
-                "source_categories": p.get("source_categories") or [],
-            },
-        )
-        sources = list(p.get("sources") or [])
-        normalized["sources"] = sources
-        normalized["source_count"] = len(sources)
-        normalized["tags"] = derive_tags(
-            name=normalized.get("name"),
-            brand=normalized.get("brand"),
-            category=normalized.get("category"),
-            sources=sources,
-            source_count=len(sources),
-            prime_price=normalized.get("prime_price"),
-        )
-        normalized_products.append(normalized)
+    return [hydrate_combined_product_record(product, index) for index, product in enumerate(products)]
 
-    normalized_products = apply_fixes_to_products(normalized_products)
-    return normalized_products
+
+def load_combined_products():
+    products = [dict(product) for product in load_base_combined_products()]
+    return apply_fixes_to_products(products)
 
 
 def fetch_products():
