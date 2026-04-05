@@ -2,6 +2,15 @@
   {
     "asin": "B0821KDLT8",
     "name": "Bone-In Spiral-Cut & Select Boneless Pork Hams",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "ham",
+      "pork"
+    ],
     "image": "https://m.media-amazon.com/images/I/A1OXj4jNvPL.jpg",
     "url": null,
     "unit_price": null,
@@ -9,7 +18,11 @@
     "basis_price": "$7.99 to $12.79/lb",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🥩",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0821KDLT8",
       "B0CQTNQS5Z",
@@ -17,12 +30,19 @@
       "B078TGWYD1",
       "B07NS3KTZL"
     ],
+    "tags": [],
     "rank": 1,
     "sale_price": "22% off"
   },
   {
     "asin": "B002QY5PB2",
     "name": "Asparagus",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/71BNbWlKX7L.jpg",
     "url": null,
     "unit_price": null,
@@ -30,9 +50,16 @@
     "basis_price": "$5.99/lb",
     "prime_price": "$4.99/lb",
     "discount": "17% off",
+    "discount_percent": 17,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B002QY5PB2"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 2,
     "sale_price": "$5.54/lb"
@@ -40,6 +67,12 @@
   {
     "asin": "B09SC3TTFN",
     "name": "Large Quiches",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/71X6RAzZjaL.jpg",
     "url": null,
     "unit_price": null,
@@ -47,17 +80,30 @@
     "basis_price": "$22.99 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🥧",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B09SC3TTFN",
       "B09SC3TTFM"
     ],
+    "tags": [],
     "rank": 3,
     "sale_price": "16% off"
   },
   {
     "asin": "B07R7CVMM4",
     "name": "Jumbo Cooked White Shrimp, 13/15 ct",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Seafood",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "shrimp"
+    ],
     "image": "https://m.media-amazon.com/images/I/81c3IDGTBGL.jpg",
     "url": null,
     "unit_price": null,
@@ -65,16 +111,29 @@
     "basis_price": "$22.99/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍤",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07R7CVMM4"
     ],
+    "tags": [],
     "rank": 4,
     "sale_price": "11% off"
   },
   {
     "asin": "B000RGZMTQ",
     "name": "Honeycrisp Apples",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.65,
+    "category_signals": [
+      "apple"
+    ],
     "image": "https://m.media-amazon.com/images/I/71ONuZtiFDL.jpg",
     "url": null,
     "unit_price": null,
@@ -82,9 +141,16 @@
     "basis_price": "$3.29/lb",
     "prime_price": "$2.79/lb",
     "discount": "15% off",
+    "discount_percent": 15,
     "emoji": "🍎",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000RGZMTQ"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 5,
     "sale_price": "$3.10/lb"
@@ -92,6 +158,14 @@
   {
     "asin": "B08BSJSDWW",
     "name": "Bone-In Leg of Lamb",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "lamb"
+    ],
     "image": "https://m.media-amazon.com/images/I/81YJKSviSSL.jpg",
     "url": null,
     "unit_price": null,
@@ -99,16 +173,30 @@
     "basis_price": "$11.99/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🥩",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B08BSJSDWW"
     ],
+    "tags": [],
     "rank": 6,
     "sale_price": "11% off"
   },
   {
     "asin": "B002B8Z98W",
     "name": "Strawberries, 16 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "berries",
+      "strawberries"
+    ],
     "image": "https://m.media-amazon.com/images/I/81RVKiOYKBL.jpg",
     "url": null,
     "unit_price": null,
@@ -116,9 +204,16 @@
     "basis_price": "$5.99 ea",
     "prime_price": "$4.79 ea",
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍓",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B002B8Z98W"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 7,
     "sale_price": "$5.32 ea"
@@ -126,6 +221,14 @@
   {
     "asin": "B0B2W8HBZ8",
     "name": "Large Hass Avocados",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Vegetables",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "avocado"
+    ],
     "image": "https://m.media-amazon.com/images/I/812Fmdhb2pL.jpg",
     "url": null,
     "unit_price": null,
@@ -133,9 +236,16 @@
     "basis_price": "$1.89 ea",
     "prime_price": "$1.50 ea",
     "discount": "21% off",
+    "discount_percent": 21,
     "emoji": "🥑",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0B2W8HBZ8"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 8,
     "sale_price": "2 for $3.34"
@@ -143,6 +253,14 @@
   {
     "asin": "B078144V7V",
     "name": "Nova, Traditional and Double Smoked Atlantic Salmon, 4 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Seafood",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "salmon"
+    ],
     "image": "https://m.media-amazon.com/images/I/8106VcVbueL.jpg",
     "url": null,
     "unit_price": null,
@@ -150,18 +268,31 @@
     "basis_price": "$12.99 ea",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🐟",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B078144V7V",
       "B010OUFRI0",
       "B0B94XWB9S"
     ],
+    "tags": [],
     "rank": 9,
     "sale_price": "11% off"
   },
   {
     "asin": "B079W28NJW",
     "name": "Fresh Atlantic Salmon Fillets",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Seafood",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "salmon"
+    ],
     "image": "https://m.media-amazon.com/images/I/81k4s1Fd8xL.jpg",
     "url": null,
     "unit_price": null,
@@ -169,16 +300,29 @@
     "basis_price": "$16.99/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🐟",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B079W28NJW"
     ],
+    "tags": [],
     "rank": 10,
     "sale_price": "11% off"
   },
   {
     "asin": "B078F6N7J6",
     "name": "Air-Chilled Bone-In Chicken Drumsticks, Thighs and Whole Legs",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Chicken & Turkey",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "chicken"
+    ],
     "image": "https://m.media-amazon.com/images/I/81MGhgcUjBL.jpg",
     "url": null,
     "unit_price": null,
@@ -186,7 +330,11 @@
     "basis_price": "$3.49 to $4.99/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍗",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B078F6N7J6",
       "B07D7WR46D",
@@ -195,12 +343,21 @@
       "B0787XQ15C",
       "B07D9PNR2J"
     ],
+    "tags": [],
     "rank": 11,
     "sale_price": "11% off"
   },
   {
     "asin": "B07813QGBX",
     "name": "Fresh Alaska Sockeye Salmon Fillets",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Seafood",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "salmon"
+    ],
     "image": "https://m.media-amazon.com/images/I/91fVBni-MZL.png",
     "url": null,
     "unit_price": null,
@@ -208,16 +365,32 @@
     "basis_price": "$17.99/lb",
     "prime_price": null,
     "discount": "15% off",
+    "discount_percent": 15,
     "emoji": "🐟",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07813QGBX"
     ],
+    "tags": [],
     "rank": 12,
     "sale_price": "5% off"
   },
   {
     "asin": "B0FHBN7KLF",
     "name": "Chicken Sausage, Meatballs or Burgers",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Chicken & Turkey",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "chicken",
+      "sausage",
+      "meatballs",
+      "meat"
+    ],
     "image": "https://m.media-amazon.com/images/I/81yi7PsSBKL.jpg",
     "url": null,
     "unit_price": null,
@@ -225,7 +398,11 @@
     "basis_price": "$6.49 to $7.49 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🍗",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0FHBN7KLF",
       "B0FHBM3QM9",
@@ -238,12 +415,22 @@
       "B0DB2LQC48",
       "B0DB2M3YG8"
     ],
+    "tags": [],
     "rank": 13,
     "sale_price": "22% off"
   },
   {
     "asin": "B07NTBDRV5",
     "name": "Organic Chicken Nuggets, Tenders or Turkey Burgers",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Chicken & Turkey",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "chicken",
+      "turkey"
+    ],
     "image": "https://m.media-amazon.com/images/I/81nwjwM8CfL.jpg",
     "url": null,
     "unit_price": null,
@@ -251,12 +438,19 @@
     "basis_price": "$9.99 to $12.99 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🍗",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07NTBDRV5",
       "B00B04DKPW",
       "B078TLX4PW",
       "B01CECIPWQ"
+    ],
+    "tags": [
+      "organic"
     ],
     "rank": 14,
     "sale_price": "16% off"
@@ -264,6 +458,14 @@
   {
     "asin": "B0787Z9XDN",
     "name": "Jumbo White Shrimp, 16/20 ct",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Seafood",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "shrimp"
+    ],
     "image": "https://m.media-amazon.com/images/I/71EdwQNReDL.jpg",
     "url": null,
     "unit_price": null,
@@ -271,16 +473,27 @@
     "basis_price": "$14.99/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍤",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0787Z9XDN"
     ],
+    "tags": [],
     "rank": 15,
     "sale_price": "11% off"
   },
   {
     "asin": "B000P6H2MI",
     "name": "Select Sweet Potatoes",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/81uezsqOobL.jpg",
     "url": null,
     "unit_price": null,
@@ -288,7 +501,11 @@
     "basis_price": "$2.69 to $2.99/lb",
     "prime_price": "$2.29/lb",
     "discount": "15% to 23% off",
+    "discount_percent": 23,
     "emoji": "🍠",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000P6H2MI",
       "B00QT73U14",
@@ -296,12 +513,25 @@
       "B07FZKXQT2",
       "B000P6L4B8"
     ],
+    "tags": [
+      "prime deal"
+    ],
     "rank": 16,
     "sale_price": "$2.54/lb"
   },
   {
     "asin": "B0DCP6F4QB",
     "name": "Select Pork or Turkey Bacon",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "bacon",
+      "turkey",
+      "pork"
+    ],
     "image": "https://m.media-amazon.com/images/I/818JSKiYoRL.jpg",
     "url": null,
     "unit_price": null,
@@ -309,7 +539,11 @@
     "basis_price": "$7.99 to $8.99 ea",
     "prime_price": "$4.00 to $4.50 ea",
     "discount": "50% off",
+    "discount_percent": 50,
     "emoji": "🥓",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0DCP6F4QB",
       "B074VBLKL9",
@@ -317,12 +551,21 @@
       "B082VVXHV6",
       "B074VDW74R"
     ],
+    "tags": [
+      "prime deal"
+    ],
     "rank": 17,
     "sale_price": ""
   },
   {
     "asin": "B003TQ4MXS",
     "name": "Baby Broccoli",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/815hUESD+sL.jpg",
     "url": null,
     "unit_price": null,
@@ -330,9 +573,16 @@
     "basis_price": "$3.99 ea",
     "prime_price": "$3.00 ea",
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🥦",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B003TQ4MXS"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 18,
     "sale_price": "2 for $6.67"
@@ -340,6 +590,12 @@
   {
     "asin": "B07HK9L726",
     "name": "Brussels Sprouts, 16 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/81ZlbeVuQHL.jpg",
     "url": null,
     "unit_price": null,
@@ -347,9 +603,16 @@
     "basis_price": "$4.99 ea",
     "prime_price": "$3.99 ea",
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07HK9L726"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 19,
     "sale_price": "$4.43 ea"
@@ -357,6 +620,14 @@
   {
     "asin": "B0792P6WBP",
     "name": "Bagged Lemons, 32 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.47,
+    "category_signals": [
+      "lemon"
+    ],
     "image": "https://m.media-amazon.com/images/I/81iTyOO+lWL.jpg",
     "url": null,
     "unit_price": null,
@@ -364,9 +635,16 @@
     "basis_price": "$5.99 ea",
     "prime_price": "$4.79 ea",
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍋",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0792P6WBP"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 20,
     "sale_price": "$5.32 ea"
@@ -374,6 +652,14 @@
   {
     "asin": "B000P6L3ZU",
     "name": "Navel Oranges",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.47,
+    "category_signals": [
+      "orange"
+    ],
     "image": "https://m.media-amazon.com/images/I/81s2unIt40L.jpg",
     "url": null,
     "unit_price": null,
@@ -381,9 +667,16 @@
     "basis_price": "$2.49/lb",
     "prime_price": "$1.99/lb",
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍊",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000P6L3ZU"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 21,
     "sale_price": "$2.21/lb"
@@ -391,6 +684,14 @@
   {
     "asin": "B09WNGD4BN",
     "name": "Fruit Mix Value Pack",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": null,
+    "category_confidence": 0.5,
+    "category_signals": [
+      "fruit"
+    ],
     "image": "https://m.media-amazon.com/images/I/81vKQvKbWvL.jpg",
     "url": null,
     "unit_price": null,
@@ -398,16 +699,29 @@
     "basis_price": "$10.49/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B09WNGD4BN"
     ],
+    "tags": [],
     "rank": 22,
     "sale_price": "11% off"
   },
   {
     "asin": "B07FYCB4WX",
     "name": "Bagged Hass Avocados, 4 ct",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Vegetables",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "avocado"
+    ],
     "image": "https://m.media-amazon.com/images/I/91z+Bp5IwAL.jpg",
     "url": null,
     "unit_price": null,
@@ -415,9 +729,16 @@
     "basis_price": "$6.49 ea",
     "prime_price": "$4.99 ea",
     "discount": "23% off",
+    "discount_percent": 23,
     "emoji": "🥑",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07FYCB4WX"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 23,
     "sale_price": "$5.54 ea"
@@ -425,6 +746,14 @@
   {
     "asin": "B000P6G198",
     "name": "Yellow Mangoes",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "mango"
+    ],
     "image": "https://m.media-amazon.com/images/I/81tRHvWD3UL.jpg",
     "url": null,
     "unit_price": null,
@@ -432,9 +761,16 @@
     "basis_price": "$1.69 ea",
     "prime_price": "$1.25 ea",
     "discount": "26% off",
+    "discount_percent": 26,
     "emoji": "🥭",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000P6G198"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 24,
     "sale_price": "4 for $5.56"
@@ -442,6 +778,14 @@
   {
     "asin": "B07LFT2C9H",
     "name": "Green Kiwis, 16 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "kiwi"
+    ],
     "image": "https://m.media-amazon.com/images/I/71HIDBC0c2L.jpg",
     "url": null,
     "unit_price": null,
@@ -449,9 +793,16 @@
     "basis_price": "$5.99 ea",
     "prime_price": "$4.99 ea",
     "discount": "17% off",
+    "discount_percent": 17,
     "emoji": "🥝",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07LFT2C9H"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 25,
     "sale_price": "$5.99 ea"
@@ -459,6 +810,12 @@
   {
     "asin": "B00C0TILQY",
     "name": "Medjool Dates, 16 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/71VfVC3s7iL.jpg",
     "url": null,
     "unit_price": null,
@@ -466,9 +823,16 @@
     "basis_price": "$8.99 ea",
     "prime_price": "$6.99 ea",
     "discount": "22% off",
+    "discount_percent": 22,
     "emoji": "🌴",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B00C0TILQY"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 26,
     "sale_price": "$7.77 ea"
@@ -476,6 +840,14 @@
   {
     "asin": "B0829RV69F",
     "name": "Cosmic Crisp Apples",
+    "brand": null,
+    "variation": null,
+    "category": "Produce",
+    "subcategory": "Fruit",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "apple"
+    ],
     "image": "https://m.media-amazon.com/images/I/81laCknZhpL.jpg",
     "url": null,
     "unit_price": null,
@@ -483,9 +855,16 @@
     "basis_price": "$3.49/lb",
     "prime_price": "$2.79/lb",
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍎",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0829RV69F"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 27,
     "sale_price": "$3.10/lb"
@@ -493,6 +872,16 @@
   {
     "asin": "B0FM4DF7JQ",
     "name": "Milks and Creamers",
+    "brand": null,
+    "variation": null,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Creamers",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "milk",
+      "cream",
+      "creamer"
+    ],
     "image": "https://m.media-amazon.com/images/I/81is9g4xFCL.jpg",
     "url": null,
     "unit_price": null,
@@ -500,7 +889,11 @@
     "basis_price": "$6.49 to $6.99 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🥛",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0FM4DF7JQ",
       "B0FM4HDWKH",
@@ -513,12 +906,22 @@
       "B0BL5WD3GX",
       "B0DC15G9MH"
     ],
+    "tags": [],
     "rank": 28,
     "sale_price": "16% off"
   },
   {
     "asin": null,
     "name": "Granola and Oatmeal, 8-11 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Pasta, Rice & Grains",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "oatmeal",
+      "granola"
+    ],
     "image": "https://m.media-amazon.com/images/I/D13kFFyY7CL.png",
     "url": null,
     "unit_price": null,
@@ -526,13 +929,26 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [],
     "rank": 29,
     "sale_price": "20% off"
   },
   {
     "asin": "B0713QJ9G7",
     "name": "Pancake Mixes and Oats",
+    "brand": null,
+    "variation": null,
+    "category": "Bakery",
+    "subcategory": "Pastries & Desserts",
+    "category_confidence": 0.47,
+    "category_signals": [
+      "cake"
+    ],
     "image": "https://m.media-amazon.com/images/I/81s5Ttc7vjL.jpg",
     "url": null,
     "unit_price": null,
@@ -540,7 +956,11 @@
     "basis_price": "$2.59 to $19.29 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🥞",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0713QJ9G7",
       "B07Q8NPNL6",
@@ -555,12 +975,21 @@
       "B07C9KS8PJ",
       "B0C3JRH8XN"
     ],
+    "tags": [],
     "rank": 30,
     "sale_price": "22% off"
   },
   {
     "asin": "B0791RY5SP",
     "name": "MacroBars and Kids MacroBars",
+    "brand": null,
+    "variation": null,
+    "category": "Snacks",
+    "subcategory": "Bars",
+    "category_confidence": 0.7,
+    "category_signals": [
+      "bar"
+    ],
     "image": "https://m.media-amazon.com/images/I/81soOQtinFL.jpg",
     "url": null,
     "unit_price": null,
@@ -568,7 +997,11 @@
     "basis_price": "$2.99 to $31.49 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0791RY5SP",
       "B01KPLDOQU",
@@ -583,12 +1016,21 @@
       "B09P9GPRS1",
       "B00NFNT29Y"
     ],
+    "tags": [],
     "rank": 31,
     "sale_price": "22% off"
   },
   {
     "asin": "B07X4GF4ZN",
     "name": "Single-Serve Skyr Yogurts, 4–5 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Dairy & Eggs",
+    "subcategory": "Yogurt & Cultured Dairy",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "yogurt"
+    ],
     "image": "https://m.media-amazon.com/images/I/71Ebf8sG+fL.jpg",
     "url": null,
     "unit_price": null,
@@ -596,7 +1038,11 @@
     "basis_price": "$2.19 to $2.39 ea",
     "prime_price": "$1.67 ea",
     "discount": "24% to 30% off",
+    "discount_percent": 30,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07X4GF4ZN",
       "B0CC43K5YZ",
@@ -611,12 +1057,25 @@
       "B0CB1QVH49",
       "B01GV64RA0"
     ],
+    "tags": [
+      "prime deal"
+    ],
     "rank": 32,
     "sale_price": "3 for $5.57"
   },
   {
     "asin": "B000O6K8TI",
     "name": "Milks and Creamers",
+    "brand": null,
+    "variation": null,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Creamers",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "milk",
+      "cream",
+      "creamer"
+    ],
     "image": "https://m.media-amazon.com/images/I/81MIXjrUMeL.jpg",
     "url": null,
     "unit_price": null,
@@ -624,7 +1083,11 @@
     "basis_price": "$5.49 to $6.99 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🥛",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000O6K8TI",
       "B0FMKK73QS",
@@ -632,12 +1095,19 @@
       "B000O6EG5K",
       "B0DJHHJ1WK"
     ],
+    "tags": [],
     "rank": 33,
     "sale_price": "16% off"
   },
   {
     "asin": "B000YN1JY4",
     "name": "Tempeh 6-8 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/814xEn4iGfL.jpg",
     "url": null,
     "unit_price": null,
@@ -645,18 +1115,31 @@
     "basis_price": "$4.69 to $6.39 ea",
     "prime_price": null,
     "discount": "23% off",
+    "discount_percent": 23,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000YN1JY4",
       "B071Y4ML3H",
       "B0F24X2BWF"
     ],
+    "tags": [],
     "rank": 34,
     "sale_price": "15% off"
   },
   {
     "asin": "B00MFNCW7E",
     "name": "Select Tinned Fish, 2.8–5.6 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Meat & Seafood",
+    "subcategory": "Seafood",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "fish"
+    ],
     "image": "https://m.media-amazon.com/images/I/81JqLDAoVcL.jpg",
     "url": null,
     "unit_price": null,
@@ -664,7 +1147,11 @@
     "basis_price": "$2.99 to $5.79 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🐟",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B00MFNCW7E",
       "B0FTJV9QJ3",
@@ -679,12 +1166,21 @@
       "B08X3TQJCP",
       "B0C8PK9HS5"
     ],
+    "tags": [],
     "rank": 35,
     "sale_price": "22% off"
   },
   {
     "asin": "B0849MZ45Y",
     "name": "Dozen Large and True Blue Eggs",
+    "brand": null,
+    "variation": null,
+    "category": "Dairy & Eggs",
+    "subcategory": "Eggs & Butter",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "egg"
+    ],
     "image": "https://m.media-amazon.com/images/I/81c79Qk4CjL.jpg",
     "url": null,
     "unit_price": null,
@@ -692,17 +1188,31 @@
     "basis_price": "$8.99 to $11.49 ea",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🥚",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0849MZ45Y",
       "B0C4C4MDZG"
     ],
+    "tags": [],
     "rank": 36,
     "sale_price": "11% off"
   },
   {
     "asin": "B01N8V14PM",
     "name": "Chocolate Chips",
+    "brand": null,
+    "variation": null,
+    "category": "Snacks",
+    "subcategory": "Candy & Gummies",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "chips",
+      "chocolate"
+    ],
     "image": "https://m.media-amazon.com/images/I/81Df3grp7xL.jpg",
     "url": null,
     "unit_price": null,
@@ -710,7 +1220,11 @@
     "basis_price": "$7.49 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🍫",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B01N8V14PM",
       "B09BJYR2K4",
@@ -718,12 +1232,21 @@
       "B09BK1N5LW",
       "B00FE5GFM8"
     ],
+    "tags": [],
     "rank": 37,
     "sale_price": "22% off"
   },
   {
     "asin": "B000WS3APW",
     "name": "Vanilla Extract and Seasonings",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Baking & Seasonings",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "seasoning"
+    ],
     "image": "https://m.media-amazon.com/images/I/81UGU61pGCL.jpg",
     "url": null,
     "unit_price": null,
@@ -731,7 +1254,11 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000WS3APW",
       "B000WS3AJ8",
@@ -746,12 +1273,22 @@
       "B06X9TWZHM",
       "B00269XE0Q"
     ],
+    "tags": [],
     "rank": 38,
     "sale_price": "22% off"
   },
   {
     "asin": "B00MN2VQ9M",
     "name": "Fruit Spreads ",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Condiments & Spreads",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "fruit spread",
+      "spread"
+    ],
     "image": "https://m.media-amazon.com/images/I/814HtXXc4tL.jpg",
     "url": null,
     "unit_price": null,
@@ -759,7 +1296,11 @@
     "basis_price": "$5.29 to $10.49 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B00MN2VQ9M",
       "B0CPFX3BLY",
@@ -774,12 +1315,21 @@
       "B005SH5FJG",
       "B0005ZX5F2"
     ],
+    "tags": [],
     "rank": 39,
     "sale_price": "22% off"
   },
   {
     "asin": "B0DX7GY6ZC",
     "name": "Juices, 46–52 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Beverages",
+    "subcategory": "Juice & Smoothies",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "juice"
+    ],
     "image": "https://m.media-amazon.com/images/I/81I-A2Tl5QL.jpg",
     "url": null,
     "unit_price": null,
@@ -787,12 +1337,19 @@
     "basis_price": "$4.99 to $5.59 ea",
     "prime_price": "$3.60 ea",
     "discount": "28% to 36% off",
+    "discount_percent": 36,
     "emoji": "🧃",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0DX7GY6ZC",
       "B0DSWS8GLQ",
       "B0DSWT3XBN",
       "B078TN1KZ1"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 40,
     "sale_price": "2 for $8"
@@ -800,6 +1357,15 @@
   {
     "asin": "B0C3SSLXN5",
     "name": "Condiments, Dressings and Avocado Oils, 4–16 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Sauces, Broth & Soup",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "oil",
+      "dressing"
+    ],
     "image": "https://m.media-amazon.com/images/I/81bk69u2ryL.jpg",
     "url": null,
     "unit_price": null,
@@ -807,7 +1373,11 @@
     "basis_price": "$6.49 to $20.99 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🥑",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0C3SSLXN5",
       "B089DP97MW",
@@ -822,12 +1392,21 @@
       "B01D22E1UM",
       "B08HZB2HM7"
     ],
+    "tags": [],
     "rank": 41,
     "sale_price": "22% off"
   },
   {
     "asin": "B000QV32DA",
     "name": "Packaged Rice and Quick Cook Rice, 5–32 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Pasta, Rice & Grains",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "rice"
+    ],
     "image": "https://m.media-amazon.com/images/I/81oDfYN+EQL.jpg",
     "url": null,
     "unit_price": null,
@@ -835,7 +1414,11 @@
     "basis_price": "$4.29 to $14.29 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🍚",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B000QV32DA",
       "B0789FRTN4",
@@ -850,12 +1433,24 @@
       "B01N0NQAEA",
       "B000VHJG3E"
     ],
+    "tags": [],
     "rank": 42,
     "sale_price": "22% off"
   },
   {
     "asin": "B00IAE8LOU",
     "name": "Mac & Cheese, Cookies, Granola Bars, Puffs, Crackers and Gummies",
+    "brand": null,
+    "variation": null,
+    "category": "Snacks",
+    "subcategory": "Bars",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "cracker",
+      "granola bar",
+      "cookies",
+      "bar"
+    ],
     "image": "https://m.media-amazon.com/images/I/91D2lcsiByL.jpg",
     "url": null,
     "unit_price": null,
@@ -863,7 +1458,11 @@
     "basis_price": "$2.89 to $13.99 ea",
     "prime_price": null,
     "discount": "30% off",
+    "discount_percent": 30,
     "emoji": "🧀",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B00IAE8LOU",
       "B000VK43BG",
@@ -878,12 +1477,21 @@
       "B072C33BW2",
       "B078MBTFLH"
     ],
+    "tags": [],
     "rank": 43,
     "sale_price": "22% off"
   },
   {
     "asin": "B076CQWW3R",
     "name": "Rice Cakes, 4 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Bakery",
+    "subcategory": "Pastries & Desserts",
+    "category_confidence": 0.98,
+    "category_signals": [
+      "cake"
+    ],
     "image": "https://m.media-amazon.com/images/I/81GXSGHkOTL.jpg",
     "url": null,
     "unit_price": null,
@@ -891,11 +1499,18 @@
     "basis_price": "$4.69 ea",
     "prime_price": "$3.50 ea",
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🍚",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B076CQWW3R",
       "B09XY769PX",
       "B07HCMR4TL"
+    ],
+    "tags": [
+      "prime deal"
     ],
     "rank": 44,
     "sale_price": "2 for $7.78"
@@ -903,6 +1518,14 @@
   {
     "asin": "B0D2JJ4R24",
     "name": "Popcorn and Puffs, 4–8 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Snacks",
+    "subcategory": "Chips & Crackers",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "popcorn"
+    ],
     "image": "https://m.media-amazon.com/images/I/812lNWT6CeL.jpg",
     "url": null,
     "unit_price": null,
@@ -910,7 +1533,11 @@
     "basis_price": "$3.99 to $9.49 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🍿",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0D2JJ4R24",
       "B0C386ZLB2",
@@ -923,12 +1550,22 @@
       "B0FRSYTMZ5",
       "B0788BVGX3"
     ],
+    "tags": [],
     "rank": 45,
     "sale_price": "16% off"
   },
   {
     "asin": "B0884W21C1",
     "name": "Chicken and Rice Soup, 24 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Pasta, Rice & Grains",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "rice",
+      "soup"
+    ],
     "image": "https://m.media-amazon.com/images/I/81Wlx4vXDLL.jpg",
     "url": null,
     "unit_price": null,
@@ -936,16 +1573,29 @@
     "basis_price": "$8.99 ea",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍗",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0884W21C1"
     ],
+    "tags": [],
     "rank": 46,
     "sale_price": "11% off"
   },
   {
     "asin": "B07FZ74S2B",
     "name": "Sliced-in-House Rosemary Ham",
+    "brand": null,
+    "variation": null,
+    "category": "Beverages",
+    "subcategory": null,
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: budweiser"
+    ],
     "image": "https://m.media-amazon.com/images/I/71KdW-Koa7L.jpg",
     "url": null,
     "unit_price": null,
@@ -953,16 +1603,30 @@
     "basis_price": "$17.99/lb",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🥩",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07FZ74S2B"
     ],
+    "tags": [],
     "rank": 47,
     "sale_price": "11% off"
   },
   {
     "asin": null,
     "name": "Buttermilk Biscuits, 4 pk",
+    "brand": null,
+    "variation": null,
+    "category": "Dairy & Eggs",
+    "subcategory": "Milk & Creamers",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "milk",
+      "butter"
+    ],
     "image": "https://m.media-amazon.com/images/I/81XbsQw1uoL.jpg",
     "url": null,
     "unit_price": null,
@@ -970,13 +1634,26 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🥛",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [],
     "rank": 48,
     "sale_price": "11% off"
   },
   {
     "asin": "B0CZXMSFZN",
     "name": "Croissants, 4 pk",
+    "brand": null,
+    "variation": null,
+    "category": "Bakery",
+    "subcategory": "Pastries & Desserts",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "croissant"
+    ],
     "image": "https://m.media-amazon.com/images/I/81Vhjx72RDL.jpg",
     "url": null,
     "unit_price": null,
@@ -984,7 +1661,11 @@
     "basis_price": "$6.79 to $8.99 ea",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🥐",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0CZXMSFZN",
       "B07QH9R3DQ",
@@ -993,12 +1674,21 @@
       "B07GC1GTVY",
       "B0DJPQ5T1X"
     ],
+    "tags": [],
     "rank": 49,
     "sale_price": "11% off"
   },
   {
     "asin": "B07FZ1BT2N",
     "name": "Mix and Match Cookies",
+    "brand": null,
+    "variation": null,
+    "category": "Bakery",
+    "subcategory": "Cookies & Biscuits",
+    "category_confidence": 0.65,
+    "category_signals": [
+      "cookie"
+    ],
     "image": "https://m.media-amazon.com/images/I/71hU+WisEAL.jpg",
     "url": null,
     "unit_price": null,
@@ -1006,17 +1696,30 @@
     "basis_price": "$13.99/lb",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B07FZ1BT2N",
       "B07GBHBRSB"
     ],
+    "tags": [],
     "rank": 50,
     "sale_price": "16% off"
   },
   {
     "asin": "B0DVZHCXZ3",
     "name": "Angel Food Cake, 9 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Bakery",
+    "subcategory": "Pastries & Desserts",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "cake"
+    ],
     "image": "https://m.media-amazon.com/images/I/812P-SmxtWL.jpg",
     "url": null,
     "unit_price": null,
@@ -1024,16 +1727,30 @@
     "basis_price": "$8.99 ea",
     "prime_price": null,
     "discount": "20% off",
+    "discount_percent": 20,
     "emoji": "🍰",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0DVZHCXZ3"
     ],
+    "tags": [],
     "rank": 51,
     "sale_price": "11% off"
   },
   {
     "asin": "B003YLW81Q",
     "name": "Chocolate Bars, 3 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Snacks",
+    "subcategory": "Candy & Gummies",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "chocolate",
+      "bar"
+    ],
     "image": "https://m.media-amazon.com/images/I/816C0ZDlarL.jpg",
     "url": null,
     "unit_price": null,
@@ -1041,7 +1758,11 @@
     "basis_price": "$8.99 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🍫",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B003YLW81Q",
       "B00GJXF1BU",
@@ -1051,12 +1772,19 @@
       "B01N8W9UNA",
       "B07T6NS2M4"
     ],
+    "tags": [],
     "rank": 52,
     "sale_price": "16% off"
   },
   {
     "asin": "B086V2MPLK",
     "name": "Humboldt Fog ",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/81FAiV2Af1L.jpg",
     "url": null,
     "unit_price": null,
@@ -1064,16 +1792,27 @@
     "basis_price": "$36.99/lb",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B086V2MPLK"
     ],
+    "tags": [],
     "rank": 53,
     "sale_price": "16% off"
   },
   {
     "asin": "B0793KHKZT",
     "name": "Pestos, 6.5 oz",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/71c912wkHQL.jpg",
     "url": null,
     "unit_price": null,
@@ -1081,18 +1820,32 @@
     "basis_price": "$8.79 ea",
     "prime_price": null,
     "discount": "25% off",
+    "discount_percent": 25,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0793KHKZT",
       "B0793K9ZWS",
       "B07DRJ6YJX"
     ],
+    "tags": [],
     "rank": 54,
     "sale_price": "16% off"
   },
   {
     "asin": "B0B3Q1HNQ5",
     "name": "Select Collagen Peptides",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": "Protein & Collagen",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "collagen",
+      "peptides"
+    ],
     "image": "https://m.media-amazon.com/images/I/81tMb2vvTlL.jpg",
     "url": null,
     "unit_price": null,
@@ -1100,7 +1853,11 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B0B3Q1HNQ5",
       "B07PRSRNFV",
@@ -1113,12 +1870,21 @@
       "B06XRC3B6M",
       "B096YQGYFP"
     ],
+    "tags": [],
     "rank": 55,
     "sale_price": "20% off"
   },
   {
     "asin": "B08CBX21C5",
     "name": "Probiotics",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": "Digestive & Probiotics",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "probiotic"
+    ],
     "image": "https://m.media-amazon.com/images/I/81Hj6xuhmvL.jpg",
     "url": null,
     "unit_price": null,
@@ -1126,7 +1892,11 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B08CBX21C5",
       "B0DWFNY5MC",
@@ -1141,12 +1911,21 @@
       "B01N5JA1RN",
       "B08CBY2FC5"
     ],
+    "tags": [],
     "rank": 56,
     "sale_price": "20% off"
   },
   {
     "asin": "B006P8NAHQ",
     "name": "Herbal Supplements",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": null,
+    "category_confidence": 0.99,
+    "category_signals": [
+      "supplement"
+    ],
     "image": "https://m.media-amazon.com/images/I/81ngpy0FbRL.jpg",
     "url": null,
     "unit_price": null,
@@ -1154,7 +1933,11 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B006P8NAHQ",
       "B003HDK0VG",
@@ -1169,12 +1952,22 @@
       "B0036THMWG",
       "B08Z9NHD2L"
     ],
+    "tags": [],
     "rank": 57,
     "sale_price": "20% off"
   },
   {
     "asin": "B002NRB7SM",
     "name": "Digestive Enzymes",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": "Digestive & Probiotics",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "enzyme",
+      "digestive"
+    ],
     "image": "https://m.media-amazon.com/images/I/81b7lGq8ejL.jpg",
     "url": null,
     "unit_price": null,
@@ -1182,7 +1975,11 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B002NRB7SM",
       "B01LX5NFD7",
@@ -1192,12 +1989,21 @@
       "B001W44AV8",
       "B00EZMI5WY"
     ],
+    "tags": [],
     "rank": 58,
     "sale_price": "20% off"
   },
   {
     "asin": "B01K4JBOUQ",
     "name": "Regenerative Organic Certified Mushroom Powders",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": null,
+    "category_confidence": 0.98,
+    "category_signals": [
+      "powder"
+    ],
     "image": "https://m.media-amazon.com/images/I/81JzhKpM2-L.jpg",
     "url": null,
     "unit_price": null,
@@ -1205,7 +2011,11 @@
     "basis_price": "$23.99 to $31.99 ea",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B01K4JBOUQ",
       "B00MY4OSGC",
@@ -1217,12 +2027,23 @@
       "B00OBRMFBU",
       "B0BTHZXNTD"
     ],
+    "tags": [
+      "organic"
+    ],
     "rank": 59,
     "sale_price": "20% off"
   },
   {
     "asin": "B099GWVQK2",
     "name": "Magnesium Drink Mixes",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": "Vitamins & Minerals",
+    "category_confidence": 0.85,
+    "category_signals": [
+      "magnesium"
+    ],
     "image": "https://m.media-amazon.com/images/I/81nI+PM7mVL.jpg",
     "url": null,
     "unit_price": null,
@@ -1230,7 +2051,11 @@
     "basis_price": "$27.49 to $41.49 ea",
     "prime_price": null,
     "discount": "32% off",
+    "discount_percent": 32,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B099GWVQK2",
       "B076414SYD",
@@ -1242,12 +2067,21 @@
       "B00BPUY3W0",
       "B0BP4TQFC1"
     ],
+    "tags": [],
     "rank": 60,
     "sale_price": "25% off"
   },
   {
     "asin": "B09FYPGN8C",
     "name": "Beauty Supplements",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": null,
+    "category_confidence": 0.85,
+    "category_signals": [
+      "supplement"
+    ],
     "image": "https://m.media-amazon.com/images/I/81ORNq9XmCL.jpg",
     "url": null,
     "unit_price": null,
@@ -1255,7 +2089,11 @@
     "basis_price": "$19.99 to $39.49 ea",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B09FYPGN8C",
       "B09HR9QW3H",
@@ -1265,12 +2103,19 @@
       "B0CMYFFH8K",
       "B00KT6MMR4"
     ],
+    "tags": [],
     "rank": 61,
     "sale_price": "20% off"
   },
   {
     "asin": null,
     "name": "Sea Moss Multiserve Gels",
+    "brand": null,
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/81+cMKZR8vL.jpg",
     "url": null,
     "unit_price": null,
@@ -1278,13 +2123,29 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "28% off",
+    "discount_percent": 28,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [],
     "rank": 62,
     "sale_price": "20% off"
   },
   {
     "asin": "B08QFQQ1MF",
     "name": "Wellness Shots",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": "Wellness Shots & Tonics",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "wellness",
+      "shots",
+      "shot",
+      "wellness"
+    ],
     "image": "https://m.media-amazon.com/images/I/81aqF0T-4-L.jpg",
     "url": null,
     "unit_price": null,
@@ -1292,7 +2153,11 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "23% off",
+    "discount_percent": 23,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
     "asins": [
       "B08QFQQ1MF",
       "B08QFTBMHJ",
@@ -1307,12 +2172,24 @@
       "B07NQ8SQ2G",
       "B0C7X44CB3"
     ],
+    "tags": [],
     "rank": 63,
     "sale_price": "15% off"
   },
   {
     "asin": null,
     "name": "Mental Wellness Shots",
+    "brand": null,
+    "variation": null,
+    "category": "Supplements & Wellness",
+    "subcategory": "Wellness Shots & Tonics",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "wellness",
+      "shots",
+      "shot",
+      "wellness"
+    ],
     "image": "https://m.media-amazon.com/images/I/81vplj78GPL.jpg",
     "url": null,
     "unit_price": null,
@@ -1320,7 +2197,12 @@
     "basis_price": "prices vary",
     "prime_price": null,
     "discount": "23% off",
+    "discount_percent": 23,
     "emoji": "🛒",
+    "available_store_ids": [
+      "10160"
+    ],
+    "tags": [],
     "rank": 64,
     "sale_price": "15% off"
   }
