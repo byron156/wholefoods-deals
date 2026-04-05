@@ -18,7 +18,9 @@
   }));
   const stores = rawData.stores || [];
   const categoryList = Array.from(new Set(products.map((product) => product.category).filter(Boolean))).sort();
-  const retailerList = Array.from(new Set(products.map((product) => product.retailer || "Whole Foods").filter(Boolean))).sort();
+  const retailerOrder = ["Whole Foods", "Target", "H Mart"];
+  const retailerSet = new Set(products.map((product) => product.retailer || "Whole Foods").filter(Boolean));
+  const retailerList = retailerOrder.filter((retailer) => retailerSet.has(retailer));
 
   const nodes = {
     searchInput: document.getElementById("global-search"),
@@ -68,7 +70,7 @@
     activeTab: "for-you",
     query: "",
     activeCategory: "All",
-    activeRetailer: "All",
+    activeRetailer: retailerList[0] || "Whole Foods",
   };
 
   function saveProfile() {
@@ -126,7 +128,7 @@
   }
 
   function productVisibleForRetailer(product) {
-    if (state.activeRetailer === "All") {
+    if (!state.activeRetailer) {
       return true;
     }
     return (product.retailer || "Whole Foods") === state.activeRetailer;
@@ -238,11 +240,17 @@
   }
 
   function renderRetailerChips() {
-    const chips = ["All", ...retailerList];
+    const counts = {};
+    products.forEach((product) => {
+      const retailer = product.retailer || "Whole Foods";
+      counts[retailer] = (counts[retailer] || 0) + 1;
+    });
+    const chips = retailerList;
     nodes.retailerChipRow.innerHTML = chips
       .map((retailer) => {
         const selected = state.activeRetailer === retailer;
-        return `<button class="chip ${selected ? "is-selected" : ""}" data-retailer="${escapeHtml(retailer)}" type="button">${escapeHtml(retailer)}</button>`;
+        const label = `${retailer} (${counts[retailer] || 0})`;
+        return `<button class="chip ${selected ? "is-selected" : ""}" data-retailer="${escapeHtml(retailer)}" type="button">${escapeHtml(label)}</button>`;
       })
       .join("");
   }
@@ -426,22 +434,28 @@
     );
 
     const selectedStores = stores.filter((store) => state.profile.selectedStoreIds.includes(store.id));
-    nodes.storeSummary.textContent = selectedStores.length
-      ? `Store: ${selectedStores.map((store) => store.name).join(", ")}`
-      : "Store: All";
+    if (state.activeRetailer === "Whole Foods") {
+      nodes.storeSummary.textContent = selectedStores.length
+        ? `Store: ${selectedStores.map((store) => store.name).join(", ")}`
+        : "Store: All";
+    } else {
+      nodes.storeSummary.textContent = `Retailer: ${state.activeRetailer}`;
+    }
     nodes.searchMeta.textContent = state.query
       ? `Showing ${visible.length} matching products`
       : `Showing ${visible.length} products`;
-    if (state.activeRetailer !== "All") {
+    if (state.activeRetailer) {
       nodes.searchMeta.textContent += ` in ${state.activeRetailer}`;
     }
-    nodes.summaryLine.textContent = "Tap More like this or Less like this to tune your feed.";
+    nodes.summaryLine.textContent = "Switch between Whole Foods, Target, and H Mart, then tap More like this or Less like this to tune the feed.";
     nodes.forYouCount.textContent = `${recommended.length} picks`;
-    nodes.categorySummary.textContent = state.activeCategory === "All" ? "All categories" : state.activeCategory;
+    nodes.categorySummary.textContent = state.activeCategory === "All"
+      ? `${state.activeRetailer} categories`
+      : state.activeCategory;
     nodes.searchCount.textContent = `${searched.length} results`;
     nodes.searchCopy.textContent = state.query
-      ? `Results for "${state.query}" across all deal sources.`
-      : "Search across the combined catalog of flyer, all deals and search deals.";
+      ? `Results for "${state.query}" in ${state.activeRetailer}.`
+      : `Search ${state.activeRetailer} deals.`;
 
     renderRetailerChips();
     renderCategoryChips();
@@ -495,6 +509,7 @@
     const retailerButton = event.target.closest("[data-retailer]");
     if (retailerButton) {
       state.activeRetailer = retailerButton.dataset.retailer;
+      state.activeCategory = "All";
       renderPanels();
     }
   });

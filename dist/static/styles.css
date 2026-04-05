@@ -369,6 +369,13 @@ p {
   max-width: 560px;
 }
 
+.retailer-intro {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .header-actions,
 .sheet-actions,
 .deal-actions,
