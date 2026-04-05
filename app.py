@@ -26,48 +26,120 @@ SUPPORTED_STORES = [
     }
 ]
 DEFAULT_STORE_IDS = [SUPPORTED_STORES[0]["id"]]
-CATEGORY_RULES = {
-    "Produce": [
-        "apple", "banana", "berries", "berry", "melon", "grape", "avocado", "lettuce",
-        "salad", "spinach", "broccoli", "cauliflower", "pepper", "tomato", "onion",
-        "carrot", "mango", "kiwi", "lemon", "orange", "fruit", "vegetable",
-    ],
-    "Meat & Seafood": [
-        "chicken", "beef", "steak", "salmon", "tuna", "fish", "shrimp", "bacon",
-        "turkey", "ham", "lamb", "sausage", "pork", "scallop", "seafood",
-    ],
-    "Dairy & Eggs": [
-        "milk", "cheese", "butter", "yogurt", "egg", "cream", "creamer", "kefir",
-    ],
-    "Bakery": [
-        "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie", "pie", "pastry",
-    ],
-    "Frozen": [
-        "frozen", "ice cream", "gelato", "pizza", "waffle", "popsicle",
-    ],
-    "Snacks": [
-        "chips", "cracker", "pretzel", "popcorn", "snack", "granola bar", "candy",
-        "chocolate", "jerky", "bites", "crisps",
-    ],
-    "Pantry": [
-        "pasta", "rice", "sauce", "vinegar", "oil", "flour", "spice", "seasoning",
-        "broth", "beans", "soup", "hummus", "bruschetta", "oatmeal", "cereal",
-    ],
-    "Beverages": [
-        "coffee", "tea", "juice", "water", "seltzer", "soda", "kombucha", "drink",
-        "smoothie", "ipa", "beer", "wine", "latte",
-    ],
-    "Supplements & Wellness": [
-        "vitamin", "supplement", "enzyme", "probiotic", "collagen", "magnesium",
-        "omega", "capsule", "wellness", "multivitamin", "shots", "shot",
-    ],
-    "Household": [
-        "detergent", "cleaner", "soap refill", "paper towel", "trash bag", "dish", "laundry",
-    ],
-    "Beauty & Personal Care": [
-        "soap", "shampoo", "conditioner", "deodorant", "lotion", "serum", "clean day",
-        "hand soap", "multiservice gels",
-    ],
+CATEGORY_PROFILES = {
+    "Produce": {
+        "strong": [
+            "fresh fruit", "fresh vegetable", "salad kit", "salad mix", "baby spinach",
+            "romaine", "broccoli florets", "cauliflower florets", "avocado", "apple",
+            "banana", "grapes", "berries", "blueberries", "strawberries", "raspberries",
+            "blackberries", "cherries", "fresh cherries", "citrus", "lettuce", "tomato", "onion", "carrot", "mango",
+            "kiwi", "pear", "peach", "plum", "melon", "pineapple",
+        ],
+        "medium": ["produce", "fruit", "vegetable", "salad", "greens", "herbs"],
+        "weak": ["cherry", "lemon", "orange", "lime"],
+        "exclude": [
+            "cherry cola", "cherry gummies", "gummy", "candy", "chocolate", "cookie",
+            "granola bar", "protein bar", "sparkling", "seltzer", "juice box",
+        ],
+    },
+    "Meat & Seafood": {
+        "strong": [
+            "chicken", "beef", "steak", "ground beef", "salmon", "tuna", "fish", "shrimp",
+            "bacon", "turkey", "ham", "lamb", "sausage", "pork", "scallop", "seafood",
+            "crab", "lobster", "meatballs", "cutlet",
+        ],
+        "medium": ["meat", "seafood", "poultry", "jerky"],
+        "weak": [],
+        "exclude": ["dog food"],
+    },
+    "Dairy & Eggs": {
+        "strong": [
+            "milk", "cheese", "butter", "yogurt", "egg", "cream cheese", "kefir",
+            "cottage cheese", "sour cream", "half and half", "cream", "mozzarella",
+            "cheddar", "feta", "parmesan",
+        ],
+        "medium": ["dairy", "creamer"],
+        "weak": [],
+        "exclude": ["ice cream", "frozen dessert"],
+    },
+    "Bakery": {
+        "strong": [
+            "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie", "pie",
+            "pastry", "brownie", "donut", "tortilla", "bun", "roll", "scone",
+        ],
+        "medium": ["bakery", "baked"],
+        "weak": [],
+        "exclude": ["ice cream cake", "pancake mix", "waffle mix"],
+    },
+    "Frozen": {
+        "strong": [
+            "frozen", "ice cream", "gelato", "pizza", "waffle", "popsicle", "sorbet",
+            "frozen dessert", "ice pop", "frozen fruit", "frozen vegetable",
+        ],
+        "medium": ["freezer"],
+        "weak": [],
+        "exclude": [],
+    },
+    "Snacks": {
+        "strong": [
+            "chips", "cracker", "pretzel", "popcorn", "snack", "granola bar", "candy",
+            "chocolate", "bites", "crisps", "gummy", "trail mix", "snack bar",
+            "protein bar", "fruit snacks", "cookies", "coconut chips",
+        ],
+        "medium": ["bar", "jerky", "nuts", "chews"],
+        "weak": ["cherry", "berry"],
+        "exclude": ["broth", "protein powder", "dish soap"],
+    },
+    "Pantry": {
+        "strong": [
+            "pasta", "rice", "sauce", "vinegar", "oil", "flour", "spice", "seasoning",
+            "broth", "beans", "soup", "hummus", "bruschetta", "oatmeal", "cereal",
+            "granola", "peanut butter", "jam", "honey", "mustard", "ketchup", "marinade",
+            "dressing", "salsa", "fruit spread", "spread", "preserves",
+        ],
+        "medium": ["pantry", "mix", "canned", "jarred"],
+        "weak": [],
+        "exclude": ["cake", "cookie", "chips", "sparkling water"],
+    },
+    "Beverages": {
+        "strong": [
+            "coffee", "tea", "juice", "water", "seltzer", "soda", "kombucha", "smoothie",
+            "ipa", "beer", "wine", "latte", "drink", "cold brew", "sparkling water",
+            "energy drink", "coconut water",
+        ],
+        "medium": ["beverage"],
+        "weak": [],
+        "exclude": ["drink mix", "drinkware"],
+    },
+    "Supplements & Wellness": {
+        "strong": [
+            "vitamin", "supplement", "enzyme", "probiotic", "collagen", "magnesium",
+            "omega", "capsule", "wellness", "multivitamin", "shots", "shot", "peptides",
+            "digestive", "powder", "electrolyte",
+        ],
+        "medium": ["protein", "greens powder", "wellness"],
+        "weak": [],
+        "exclude": ["protein bar", "shot glass"],
+    },
+    "Household": {
+        "strong": [
+            "detergent", "cleaner", "soap refill", "paper towel", "trash bag", "dish",
+            "laundry", "toilet paper", "clean day", "disinfect", "sponge",
+        ],
+        "medium": ["household", "cleaning"],
+        "weak": [],
+        "exclude": ["dish pizza", "soap bar"],
+    },
+    "Beauty & Personal Care": {
+        "strong": [
+            "shampoo", "conditioner", "deodorant", "lotion", "serum", "hand soap",
+            "body wash", "toothpaste", "mouthwash", "cleanser", "moisturizer",
+            "lip balm", "sunscreen",
+        ],
+        "medium": ["beauty", "personal care", "soap"],
+        "weak": [],
+        "exclude": ["dish soap", "laundry soap"],
+    },
 }
 TAG_KEYWORDS = {
     "organic": ["organic"],
@@ -308,15 +380,36 @@ def derive_brand(name, explicit_brand=None):
 
 
 def derive_category(name, brand=None):
-    haystack = " ".join(filter(None, [name, brand])).lower()
+    haystack = normalize_text_key(" ".join(filter(None, [name, brand])))
     if not haystack:
         return "Pantry"
 
-    for category, keywords in CATEGORY_RULES.items():
-        if any(keyword in haystack for keyword in keywords):
-            return category
+    best_category = "Pantry"
+    best_score = -999
 
-    return "Pantry"
+    for category, profile in CATEGORY_PROFILES.items():
+        score = 0
+        for phrase in profile.get("strong", []):
+            if normalize_text_key(phrase) in haystack:
+                score += 12
+        for phrase in profile.get("medium", []):
+            if normalize_text_key(phrase) in haystack:
+                score += 6
+        for phrase in profile.get("weak", []):
+            if normalize_text_key(phrase) in haystack:
+                score += 2
+        for phrase in profile.get("exclude", []):
+            if normalize_text_key(phrase) in haystack:
+                score -= 10
+
+        if score > best_score:
+            best_score = score
+            best_category = category
+
+    if best_score <= 0:
+        return "Pantry"
+
+    return best_category
 
 
 def derive_tags(name, brand=None, category=None, sources=None, source_count=0, prime_price=None):
