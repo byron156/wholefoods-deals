@@ -204,7 +204,12 @@ p {
   border-radius: 999px;
   background: var(--accent-soft);
   color: #a6402c;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+  text-align: center;
+  line-height: 1.15;
+  flex: 0 1 auto;
 }
 
 .deal-meta,
@@ -736,6 +741,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .noscript-fallback {

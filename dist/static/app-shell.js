@@ -110,6 +110,7 @@
       selectedStoreIds: stores.filter((store) => store.is_active).map((store) => store.id),
       likedKeys: [],
       dislikedKeys: [],
+      categoryOrderByRetailer: { ...initialCategoryOrder },
     };
   }
 
@@ -130,7 +131,6 @@
     categoryScope: "similar",
     categoryOverridesByKey: {},
     categoryOverridesBySignature: {},
-    categoryOrderByRetailer: { ...initialCategoryOrder },
   };
 
   function saveProfile() {
@@ -389,7 +389,7 @@
       grouped.get(category).push(product);
     });
 
-    const orderedCategories = state.categoryOrderByRetailer[state.activeRetailer] || [];
+    const orderedCategories = (state.profile.categoryOrderByRetailer || {})[state.activeRetailer] || [];
 
     return Array.from(grouped.entries())
       .map(([category, items]) => ({
@@ -662,8 +662,8 @@
 
   function moveCategory(category, direction) {
     const shelves = buildCategoryShelves().map((shelf) => shelf.category);
-    const currentOrder = state.categoryOrderByRetailer[state.activeRetailer]
-      ? state.categoryOrderByRetailer[state.activeRetailer].filter((item) => shelves.includes(item))
+    const currentOrder = (state.profile.categoryOrderByRetailer || {})[state.activeRetailer]
+      ? state.profile.categoryOrderByRetailer[state.activeRetailer].filter((item) => shelves.includes(item))
       : [];
     const workingOrder = currentOrder.concat(shelves.filter((item) => !currentOrder.includes(item)));
     const index = workingOrder.indexOf(category);
@@ -677,18 +677,12 @@
 
     const nextOrder = workingOrder.slice();
     [nextOrder[index], nextOrder[swapIndex]] = [nextOrder[swapIndex], nextOrder[index]];
-    state.categoryOrderByRetailer = {
-      ...state.categoryOrderByRetailer,
+    state.profile.categoryOrderByRetailer = {
+      ...(state.profile.categoryOrderByRetailer || {}),
       [state.activeRetailer]: nextOrder,
     };
+    saveProfile();
     renderFeed();
-    submitFix({
-      kind: "category_order",
-      retailer: state.activeRetailer,
-      order: nextOrder,
-    }).catch((error) => {
-      console.warn("Could not apply category order fix:", error);
-    });
   }
 
   function applyPreferenceSignals(product, direction) {
