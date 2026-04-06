@@ -2467,12 +2467,20 @@ def api_profile():
     )
 
 
-@app.route("/api/fixes", methods=["POST", "OPTIONS"])
-@app.route("/fixes-to-deploy", methods=["POST", "OPTIONS"])
-@app.route("/api/category-feedback", methods=["POST", "OPTIONS"])
+@app.route("/api/fixes", methods=["GET", "POST", "OPTIONS"])
+@app.route("/fixes-to-deploy", methods=["GET", "POST", "OPTIONS"])
+@app.route("/api/category-feedback", methods=["GET", "POST", "OPTIONS"])
 def api_fixes_to_deploy():
     if request.method == "OPTIONS":
         return ("", 204)
+
+    if request.method == "GET":
+        return jsonify(
+            {
+                "fixes": load_fixes_to_deploy(),
+                "storage": "supabase" if supabase_enabled() else "local",
+            }
+        )
 
     payload = request.get_json(silent=True) or {}
     kind = (payload.get("kind") or "").strip().lower()

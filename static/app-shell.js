@@ -133,6 +133,25 @@
     categoryOverridesBySignature: {},
   };
 
+  function stripBrandPrefixFromName(name, oldBrand, nextBrand) {
+    const currentName = String(name || "");
+    const originalBrand = String(oldBrand || "").trim();
+    const updatedBrand = String(nextBrand || "").trim();
+    if (!currentName || !originalBrand || !updatedBrand) {
+      return currentName;
+    }
+
+    const lowerName = currentName.toLowerCase();
+    const lowerOldBrand = originalBrand.toLowerCase();
+    if (lowerName.startsWith(lowerOldBrand)) {
+      const trimmed = currentName.slice(originalBrand.length).replace(/^[\s,:|\-]+/, "");
+      if (trimmed) {
+        return trimmed;
+      }
+    }
+    return currentName;
+  }
+
   function saveProfile() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state.profile));
@@ -705,6 +724,29 @@
     renderShelves();
   }
 
+  function applySharedFixes(fixes) {
+    if (!fixes || typeof fixes !== "object") {
+      return;
+    }
+
+    state.categoryOverridesByKey = { ...(fixes.subcategory_overrides_by_key || {}) };
+    state.categoryOverridesBySignature = { ...(fixes.subcategory_overrides_by_signature || {}) };
+
+    const brandByKey = fixes.brand_overrides_by_key || {};
+    const brandBySignature = fixes.brand_overrides_by_signature || {};
+
+    products.forEach((product) => {
+      const nextBrand = brandByKey[product.key] || brandBySignature[brandSignature(product)];
+      if (nextBrand) {
+        const previousBrand = product.brand;
+        product.brand = nextBrand;
+        product.name = stripBrandPrefixFromName(product.name, previousBrand, nextBrand);
+      }
+    });
+
+    rebuildDerivedCollections();
+  }
+
   async function loadRemoteProfile() {
     try {
       const response = await fetch(`${profileEndpoint}?device_id=${encodeURIComponent(deviceId)}`);
@@ -732,20 +774,20 @@
     }
   }
 
-  async function refreshProductsFromFeed() {
+  async function loadRemoteFixes() {
     try {
-      const response = await fetch(`${feedEndpoint}?limit=5000`);
+      const response = await fetch(feedbackEndpoint);
       if (!response.ok) {
-        throw new Error(`Feed request failed with status ${response.status}`);
+        throw new Error(`Fixes request failed with status ${response.status}`);
       }
       const payload = await response.json();
-      if (!payload || !Array.isArray(payload.products)) {
+      if (!payload || !payload.fixes) {
         return;
       }
-      reconcileProducts(payload.products);
+      applySharedFixes(payload.fixes);
       renderFeed();
     } catch (error) {
-      console.warn("Could not refresh feed from backend:", error);
+      console.warn("Could not load shared fixes:", error);
     }
   }
 
@@ -830,5 +872,5 @@
 
   renderFeed();
   loadRemoteProfile();
-  refreshProductsFromFeed();
+  loadRemoteFixes();
 })();
