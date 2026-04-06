@@ -2537,6 +2537,31 @@ def api_fixes_to_deploy():
         )
         return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand})
 
+    if kind == "category_order":
+        retailer = (payload.get("retailer") or "").strip()
+        order = payload.get("order")
+        device_id = (payload.get("device_id") or "").strip()
+        if not retailer:
+            return jsonify({"error": "Missing retailer"}), 400
+        if not isinstance(order, list) or not all(isinstance(item, str) for item in order):
+            return jsonify({"error": "Invalid order"}), 400
+
+        if device_id:
+            profile = load_device_profile(device_id) or {
+                "selectedStoreIds": [],
+                "likedKeys": [],
+                "dislikedKeys": [],
+                "categoryOrderByRetailer": {},
+            }
+            profile["categoryOrderByRetailer"] = dict(profile.get("categoryOrderByRetailer") or {})
+            profile["categoryOrderByRetailer"][retailer] = order
+            save_device_profile(device_id, profile)
+            return jsonify({"ok": True, "kind": kind, "retailer": retailer, "order": order, "storage": "profile"})
+
+        # Compatibility for older frontend builds that still post shelf order fixes
+        # through /api/fixes before the profile-based path is deployed everywhere.
+        return jsonify({"ok": True, "kind": kind, "retailer": retailer, "order": order, "storage": "legacy-noop"})
+
     return jsonify({"error": "Invalid fix kind"}), 400
 
 
