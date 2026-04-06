@@ -625,7 +625,7 @@
       product_key: product.key,
       signature: subcategorySignature(product),
       subcategory,
-    }).then(() => refreshProductsFromFeed()).catch((error) => {
+    }).catch((error) => {
       console.warn("Could not apply subcategory fix:", error);
     });
   }
@@ -655,7 +655,7 @@
       product_key: product.key,
       signature: brandSignature(product),
       brand: cleanedBrand,
-    }).then(() => refreshProductsFromFeed()).catch((error) => {
+    }).catch((error) => {
       console.warn("Could not apply brand fix:", error);
     });
   }
