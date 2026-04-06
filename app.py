@@ -1982,7 +1982,6 @@ def default_fixes_to_deploy():
         "subcategory_overrides_by_signature": {},
         "brand_overrides_by_key": {},
         "brand_overrides_by_signature": {},
-        "category_order": {},
     }
 
 
@@ -2048,6 +2047,7 @@ def load_device_profile(device_id):
         "selectedStoreIds": profile.get("selectedStoreIds") or [],
         "likedKeys": profile.get("likedKeys") or [],
         "dislikedKeys": profile.get("dislikedKeys") or [],
+        "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
     }
 
 
@@ -2056,6 +2056,7 @@ def save_device_profile(device_id, profile):
         "selectedStoreIds": profile.get("selectedStoreIds") or [],
         "likedKeys": profile.get("likedKeys") or [],
         "dislikedKeys": profile.get("dislikedKeys") or [],
+        "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
     }
 
     if save_device_profile_to_supabase(device_id, normalized):
@@ -2536,23 +2537,6 @@ def api_fixes_to_deploy():
         )
         return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand})
 
-    if kind == "category_order":
-        retailer = (payload.get("retailer") or "").strip()
-        order = payload.get("order")
-        if not retailer:
-            return jsonify({"error": "Missing retailer"}), 400
-        if not isinstance(order, list) or not all(isinstance(item, str) for item in order):
-            return jsonify({"error": "Invalid order"}), 400
-        fixes["category_order"][retailer] = order
-        save_fixes_to_deploy(fixes)
-        save_fix_to_supabase(
-            fix_id=f"category_order:{retailer}",
-            fix_type="category_order",
-            retailer=retailer,
-            value=order,
-        )
-        return jsonify({"ok": True, "kind": kind, "retailer": retailer, "order": order})
-
     return jsonify({"error": "Invalid fix kind"}), 400
 
 
@@ -2573,7 +2557,6 @@ def combined_products_home():
 
     products = sort_products_for_display(load_combined_products())
     deal_count = len(products)
-    fixes = load_fixes_to_deploy()
     return render_template(
         "combined_products.html",
         products=products,
@@ -2581,7 +2564,7 @@ def combined_products_home():
         available_stores=SUPPORTED_STORES,
         category_names=sorted(CATEGORY_PROFILES.keys()),
         subcategory_options=SUBCATEGORY_PROFILES,
-        category_order=fixes.get("category_order", {}),
+        category_order={},
         feedback_endpoint=api_url("/api/fixes"),
         profile_endpoint=api_url("/api/profile"),
         feed_endpoint=api_url("/api/feed"),

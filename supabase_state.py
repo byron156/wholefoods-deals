@@ -39,7 +39,6 @@ def load_fixes_from_supabase():
         "subcategory_overrides_by_signature": {},
         "brand_overrides_by_key": {},
         "brand_overrides_by_signature": {},
-        "category_order": {},
     }
 
     try:
@@ -67,13 +66,6 @@ def load_fixes_from_supabase():
                     fixes["brand_overrides_by_key"][product_key] = value
                 elif scope == "similar" and signature and value:
                     fixes["brand_overrides_by_signature"][signature] = value
-
-        order_rows = client.table("retailer_category_orders").select("*").execute().data or []
-        for row in order_rows:
-            retailer = row.get("retailer")
-            ordered_categories = row.get("ordered_categories")
-            if retailer and isinstance(ordered_categories, list):
-                fixes["category_order"][retailer] = ordered_categories
     except Exception as error:
         print(f"Supabase load_fixes_from_supabase failed: {error}")
         return None
@@ -87,16 +79,6 @@ def save_fix_to_supabase(*, fix_id, fix_type, scope=None, product_key=None, sign
         return False
 
     try:
-        if fix_type == "category_order":
-            client.table("retailer_category_orders").upsert(
-                {
-                    "retailer": retailer,
-                    "ordered_categories": value or [],
-                },
-                on_conflict="retailer",
-            ).execute()
-            return True
-
         client.table("taxonomy_fixes").upsert(
             {
                 "id": fix_id,
@@ -144,6 +126,7 @@ def load_device_profile_from_supabase(device_id):
         "selectedStoreIds": settings.get("selectedStoreIds") or row.get("comparison_store_ids") or [],
         "likedKeys": settings.get("likedKeys") or [],
         "dislikedKeys": settings.get("dislikedKeys") or [],
+        "categoryOrderByRetailer": settings.get("categoryOrderByRetailer") or {},
     }
 
 
@@ -161,6 +144,7 @@ def save_device_profile_to_supabase(device_id, profile):
                     "selectedStoreIds": profile.get("selectedStoreIds") or [],
                     "likedKeys": profile.get("likedKeys") or [],
                     "dislikedKeys": profile.get("dislikedKeys") or [],
+                    "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
                 },
             },
             on_conflict="device_id",
