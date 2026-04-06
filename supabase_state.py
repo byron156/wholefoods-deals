@@ -74,7 +74,8 @@ def load_fixes_from_supabase():
             ordered_categories = row.get("ordered_categories")
             if retailer and isinstance(ordered_categories, list):
                 fixes["category_order"][retailer] = ordered_categories
-    except Exception:
+    except Exception as error:
+        print(f"Supabase load_fixes_from_supabase failed: {error}")
         return None
 
     return fixes
@@ -91,7 +92,8 @@ def save_fix_to_supabase(*, fix_id, fix_type, scope=None, product_key=None, sign
                 {
                     "retailer": retailer,
                     "ordered_categories": value or [],
-                }
+                },
+                on_conflict="retailer",
             ).execute()
             return True
 
@@ -105,10 +107,12 @@ def save_fix_to_supabase(*, fix_id, fix_type, scope=None, product_key=None, sign
                 "retailer": retailer,
                 "value": value,
                 "status": "active",
-            }
+            },
+            on_conflict="id",
         ).execute()
         return True
-    except Exception:
+    except Exception as error:
+        print(f"Supabase save_fix_to_supabase failed: {error}")
         return False
 
 
@@ -127,7 +131,8 @@ def load_device_profile_from_supabase(device_id):
             .data
             or []
         )
-    except Exception:
+    except Exception as error:
+        print(f"Supabase load_device_profile_from_supabase failed: {error}")
         return None
 
     if not rows:
@@ -157,8 +162,10 @@ def save_device_profile_to_supabase(device_id, profile):
                     "likedKeys": profile.get("likedKeys") or [],
                     "dislikedKeys": profile.get("dislikedKeys") or [],
                 },
-            }
+            },
+            on_conflict="device_id",
         ).execute()
         return True
-    except Exception:
+    except Exception as error:
+        print(f"Supabase save_device_profile_to_supabase failed: {error}")
         return False
