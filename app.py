@@ -3,9 +3,18 @@ import re
 import requests
 import os
 import math
+from collections import Counter
 from functools import lru_cache
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from brand_ai import build_brand_family_map
+from subcategory_ai import (
+    MODEL_VERSION as SUBCATEGORY_AI_MODEL_VERSION,
+    build_change_report as build_subcategory_ai_change_report,
+    load_model_artifacts as load_subcategory_ai_artifacts,
+    predict_subcategories,
+    save_model_artifacts as save_subcategory_ai_artifacts,
+    train_subcategory_model,
+)
 from supabase_state import (
     load_device_profile_from_supabase,
     load_fixes_from_supabase,
@@ -23,6 +32,10 @@ TARGET_DEALS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
 HMART_DEALS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
 FIXES_TO_DEPLOY_FILE = os.path.join(BASE_DIR, "fixes_to_deploy.json")
 DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
+SUBCATEGORY_AI_MODEL_FILE = os.path.join(BASE_DIR, "subcategory_ai_model.pkl")
+SUBCATEGORY_AI_METADATA_FILE = os.path.join(BASE_DIR, "subcategory_ai_metadata.json")
+SUBCATEGORY_AI_REPORT_FILE = os.path.join(BASE_DIR, "subcategory_ai_report.json")
+SUBCATEGORY_AI_MIN_CONFIDENCE = 0.18
 
 app = Flask(__name__)
 PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")
@@ -56,48 +69,61 @@ CATEGORY_PROFILES = {
             "fresh fruit", "fresh vegetable", "salad kit", "salad mix", "baby spinach",
             "romaine", "broccoli florets", "cauliflower florets", "avocado", "apple",
             "banana", "grapes", "berries", "blueberries", "strawberries", "raspberries",
-            "blackberries", "cherries", "fresh cherries", "citrus", "lettuce", "tomato", "onion", "carrot", "mango",
-            "kiwi", "pear", "peach", "plum", "melon", "pineapple", "fresh mushroom", "mushroom", "mushrooms", "asparagus",
+            "blackberries", "cherries", "fresh cherries", "citrus", "lettuce", "tomato",
+            "onion", "carrot", "mango", "kiwi", "pear", "peach", "plum", "melon",
+            "pineapple", "fresh mushroom", "mushroom", "mushrooms", "asparagus",
+            "herbs", "cilantro", "parsley", "basil", "spring mix", "greens",
         ],
-        "medium": ["produce", "fruit", "vegetable", "salad", "greens", "herbs"],
+        "medium": ["produce", "fruit", "vegetable", "salad", "greens", "herbs", "fresh cut"],
         "weak": ["cherry", "lemon", "orange", "lime"],
         "exclude": [
             "cherry cola", "cherry gummies", "gummy", "candy", "chocolate", "cookie",
             "granola bar", "protein bar", "sparkling", "seltzer", "juice box",
             "mushroom coffee", "mushroom powder", "mushroom supplement", "broth",
-            "pasta", "sauce", "soup", "canned", "meal", "cheese",
+            "pasta", "sauce", "soup", "canned", "meal", "cheese", "wine", "beer",
+            "hard seltzer",
         ],
     },
     "Meat & Seafood": {
         "strong": [
-            "chicken", "beef", "steak", "ground beef", "salmon", "tuna", "fish", "shrimp",
-            "bacon", "turkey", "ham", "lamb", "sausage", "pork", "scallop", "seafood",
-            "crab", "lobster", "meatballs", "cutlet",
+            "chicken", "beef", "steak", "ground beef", "salmon", "tuna", "fish",
+            "shrimp", "bacon", "turkey", "ham", "lamb", "sausage", "pork",
+            "scallop", "seafood", "crab", "lobster", "meatballs", "cutlet",
+            "charcuterie", "prosciutto", "deli meat",
         ],
-        "medium": ["meat", "seafood", "poultry", "jerky"],
+        "medium": ["meat", "seafood", "poultry", "jerky", "charcuterie"],
         "weak": [],
         "exclude": [
             "dog food", "chips", "chip", "cracker", "crackers", "pretzel", "pretzels",
             "popcorn", "crisps", "dip", "dipping sauce", "pasta sauce", "bolognese sauce",
             "queso", "dressing", "marinade", "alfredo", "sauce dip", "protein chips",
+            "broth", "soup", "kimchi", "tea", "wine",
         ],
     },
     "Dairy & Eggs": {
         "strong": [
             "milk", "cheese", "butter", "yogurt", "egg", "cream cheese", "kefir",
             "cottage cheese", "sour cream", "half and half", "cream", "mozzarella",
-            "cheddar", "feta", "parmesan",
+            "cheddar", "feta", "parmesan", "cultured dairy", "dairy spread",
         ],
-        "medium": ["dairy", "creamer"],
+        "medium": ["dairy", "creamer", "buttermilk"],
         "weak": [],
-        "exclude": ["ice cream", "frozen dessert", "seed butter", "sunflower butter", "almond butter", "cashew butter", "nut butter", "peanut butter", "chocolate egg", "chocolate eggs", "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar", "tea", "herbal tea", "milk thistle", "soup", "broth", "liquid extract", "herbal supplement", "liver support"],
+        "exclude": [
+            "ice cream", "frozen dessert", "seed butter", "sunflower butter",
+            "almond butter", "cashew butter", "nut butter", "peanut butter",
+            "chocolate egg", "chocolate eggs", "queso", "alfredo", "macaroni",
+            "macaroni and cheese", "mac cheese", "shells and cheddar", "tea",
+            "herbal tea", "milk thistle", "soup", "broth", "liquid extract",
+            "herbal supplement", "liver support", "protein shake", "oatmilk",
+        ],
     },
     "Bakery": {
         "strong": [
-            "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie", "pie",
-            "pastry", "brownie", "donut", "tortilla", "bun", "roll", "scone",
+            "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie",
+            "pie", "pastry", "brownie", "donut", "tortilla", "bun", "roll",
+            "scone", "danish",
         ],
-        "medium": ["bakery", "baked"],
+        "medium": ["bakery", "baked", "pastry"],
         "weak": [],
         "exclude": [
             "ice cream cake", "pancake mix", "waffle mix", "chips", "chip", "tortilla chips",
@@ -110,17 +136,19 @@ CATEGORY_PROFILES = {
             "kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish", "deli",
             "dumpling", "mandu", "tteokbokki", "katsu", "ready meal", "prepared meal",
             "instant food", "rice bowl", "fried rice", "sushi", "meal kit",
+            "prepared protein", "deli salad", "quick meal", "soup dumpling",
         ],
-        "medium": ["prepared", "quick food", "heat and eat", "ready to eat"],
+        "medium": ["prepared", "quick food", "heat and eat", "ready to eat", "deli"],
         "weak": [],
-        "exclude": ["dish soap", "laundry", "pet food"],
+        "exclude": ["dish soap", "laundry", "pet food", "broth concentrate"],
     },
     "Frozen": {
         "strong": [
             "frozen", "ice cream", "gelato", "pizza", "waffle", "popsicle", "sorbet",
             "frozen dessert", "ice pop", "frozen fruit", "frozen vegetable",
+            "ice cream sandwich", "breakfast burrito",
         ],
-        "medium": ["freezer"],
+        "medium": ["freezer", "frozen"],
         "weak": [],
         "exclude": [],
     },
@@ -128,11 +156,12 @@ CATEGORY_PROFILES = {
         "strong": [
             "chips", "cracker", "pretzel", "popcorn", "snack", "granola bar", "candy",
             "chocolate", "bites", "crisps", "gummy", "trail mix", "snack bar",
-            "protein bar", "fruit snacks", "cookies", "coconut chips", "chocolate egg", "chocolate eggs",
+            "protein bar", "fruit snacks", "cookies", "coconut chips",
+            "chocolate egg", "chocolate eggs", "puffs", "jerky", "bars",
         ],
-        "medium": ["bar", "jerky", "nuts", "chews"],
+        "medium": ["bar", "jerky", "nuts", "chews", "trail mix", "popcorn"],
         "weak": ["cherry", "berry"],
-        "exclude": ["broth", "protein powder", "dish soap"],
+        "exclude": ["broth", "protein powder", "dish soap", "bread", "bagel", "wine"],
     },
     "Pantry": {
         "strong": [
@@ -141,37 +170,53 @@ CATEGORY_PROFILES = {
             "granola", "peanut butter", "jam", "honey", "mustard", "ketchup", "marinade",
             "dressing", "salsa", "fruit spread", "spread", "preserves", "seed butter",
             "sunflower butter", "almond butter", "cashew butter", "nut butter", "hommus",
-            "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese", "shells and cheddar",
-            "dip", "dipping sauce", "pasta sauce", "bolognese", "bolognese sauce", "avocado oil",
-            "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "oats", "overnight oats",
+            "queso", "alfredo", "macaroni", "macaroni and cheese", "mac cheese",
+            "shells and cheddar", "dip", "dipping sauce", "pasta sauce", "bolognese",
+            "bolognese sauce", "avocado oil", "olive oil", "mayo", "mayonnaise",
+            "vinaigrette", "aioli", "oats", "overnight oats", "lentils", "legumes",
+            "baking mix", "meal kit", "stock", "condiment", "chili crisp",
         ],
-        "medium": ["pantry", "mix", "canned", "jarred"],
+        "medium": ["pantry", "mix", "canned", "jarred", "breakfast pantry"],
         "weak": [],
-        "exclude": ["cake", "cookie", "chips", "sparkling water"],
+        "exclude": ["cake", "cookie", "chips", "sparkling water", "beer", "wine"],
     },
     "Beverages": {
         "strong": [
             "coffee", "tea", "juice", "water", "seltzer", "soda", "kombucha", "smoothie",
-            "ipa", "beer", "wine", "latte", "drink", "cold brew", "sparkling water",
-            "energy drink", "coconut water", "hard seltzer", "budweiser", "bud light",
-            "bota box", "cabernet", "merlot", "chardonnay", "riesling", "pinot",
-            "sauvignon", "prosecco", "stella", "modelo", "corona", "heineken",
-            "coors", "michelob", "black stallion", "pale ale", "ale", "spritz",
-            "spiked", "zero proof", "non alcoholic", "non-alcoholic",
+            "latte", "drink", "cold brew", "sparkling water", "energy drink",
+            "coconut water", "zero proof", "non alcoholic", "non-alcoholic",
+            "cream soda", "electrolyte drink", "drink mix", "hydration",
         ],
-        "medium": ["beverage"],
+        "medium": ["beverage", "mocktail", "sports drink"],
         "weak": [],
-        "exclude": ["drink mix", "drinkware"],
+        "exclude": [
+            "drinkware", "beer", "wine", "hard seltzer", "cider", "spirits",
+            "vodka", "whiskey", "whisky", "tequila", "rum", "gin", "bourbon",
+        ],
+    },
+    "Alcohol": {
+        "strong": [
+            "beer", "wine", "hard seltzer", "cider", "vodka", "whiskey", "whisky",
+            "tequila", "rum", "gin", "bourbon", "cabernet", "merlot", "chardonnay",
+            "riesling", "pinot", "sauvignon", "prosecco", "rose", "rosé", "lager",
+            "ipa", "stout", "pilsner", "ale", "spritz", "spiked", "cocktail",
+            "martini", "mezcal", "sake", "soju",
+        ],
+        "medium": ["alcohol", "spirits", "canned cocktail", "beer", "wine"],
+        "weak": [],
+        "exclude": ["wine vinegar", "mocktail", "zero proof", "non alcoholic", "non-alcoholic"],
     },
     "Supplements & Wellness": {
         "strong": [
             "vitamin", "supplement", "enzyme", "probiotic", "collagen", "magnesium",
             "omega", "capsule", "wellness", "multivitamin", "shots", "shot", "peptides",
             "digestive", "powder", "electrolyte", "turmeric", "elixir", "calcium",
+            "sleep support", "stress support", "hair growth", "herbal remedy",
+            "functional mushroom",
         ],
-        "medium": ["protein", "greens powder", "wellness", "tonic", "adaptogen"],
+        "medium": ["protein", "greens powder", "wellness", "tonic", "adaptogen", "mushroom blend"],
         "weak": [],
-        "exclude": ["protein bar", "shot glass"],
+        "exclude": ["protein bar", "shot glass", "energy drink", "coffee creamer"],
     },
     "Household": {
         "strong": [
@@ -186,7 +231,8 @@ CATEGORY_PROFILES = {
         "strong": [
             "shampoo", "conditioner", "deodorant", "lotion", "serum", "hand soap",
             "body wash", "toothpaste", "mouthwash", "cleanser", "moisturizer",
-            "lip balm", "sunscreen", "for face", "for body", "face and body", "skin care",
+            "lip balm", "sunscreen", "for face", "for body", "face and body",
+            "skin care", "oral care", "baby lotion", "baby wash",
         ],
         "medium": ["beauty", "personal care", "soap"],
         "weak": [],
@@ -196,39 +242,49 @@ CATEGORY_PROFILES = {
 SUBCATEGORY_PROFILES = {
     "Produce": {
         "Fruit": ["apple", "banana", "berries", "berry", "grapes", "grape", "cherries", "cherry", "citrus", "orange", "lemon", "lime", "kiwi", "mango", "pear", "peach", "plum", "melon", "pineapple", "strawberries", "blueberries", "raspberries", "blackberries"],
-        "Vegetables": ["broccoli", "cauliflower", "lettuce", "tomato", "onion", "carrot", "pepper", "cucumber", "avocado", "potato", "sweet potato", "kale", "spinach"],
-        "Salads & Greens": ["salad", "greens", "romaine", "baby spinach", "spring mix", "salad kit", "salad mix"],
+        "Vegetables": ["broccoli", "cauliflower", "lettuce", "tomato", "onion", "carrot", "pepper", "cucumber", "avocado", "potato", "sweet potato", "kale", "spinach", "asparagus"],
+        "Salads & Greens": ["salad", "greens", "romaine", "baby spinach", "spring mix", "salad kit", "salad mix", "arugula"],
         "Herbs": ["herb", "cilantro", "parsley", "basil", "mint"],
         "Mushrooms": ["mushroom", "mushrooms", "shiitake", "lion's mane", "lions mane", "oyster mushroom"],
+        "Fresh Cut & Prepared Produce": ["fresh cut", "cut fruit", "fruit cup", "prepared produce"],
     },
     "Meat & Seafood": {
         "Chicken & Turkey": ["chicken", "turkey", "cutlet", "breast", "thigh", "drumstick"],
-        "Beef, Pork & Lamb": ["beef", "pork", "lamb", "ham", "steak", "sausage", "bacon", "ground beef"],
+        "Beef, Pork & Lamb": ["beef", "pork", "lamb", "ham", "steak", "ground beef"],
         "Seafood": ["salmon", "tuna", "shrimp", "fish", "seafood", "crab", "lobster", "scallop"],
-        "Deli & Prepared Meat": ["meatballs", "deli", "prosciutto", "pepperoni"],
         "Sausages & Meatballs": ["sausage", "sausages", "meatballs", "meatball"],
+        "Deli Meat & Charcuterie": ["deli meat", "prosciutto", "charcuterie", "pepperoni", "salami"],
     },
     "Dairy & Eggs": {
         "Milk & Creamers": ["milk", "creamer", "half and half", "kefir"],
         "Cheese": ["cheese", "mozzarella", "cheddar", "feta", "parmesan", "cream cheese", "cottage cheese"],
         "Yogurt & Cultured Dairy": ["yogurt", "kefir", "cultured"],
         "Eggs & Butter": ["egg", "butter", "sour cream"],
+        "Dips & Dairy Spreads": ["pimento cheese", "labneh", "dairy spread", "cheese dip"],
     },
     "Bakery": {
-        "Bread & Bagels": ["bread", "bagel", "bun", "roll", "tortilla", "wrap"],
+        "Bread & Bagels": ["bread", "bagel", "bun", "roll"],
         "Pastries & Desserts": ["croissant", "cake", "muffin", "pie", "pastry", "brownie", "donut", "scone"],
-        "Cookies & Biscuits": ["cookie", "biscuit", "cracker biscuit"],
+        "Cookies & Biscuits": ["cookie", "biscuit", "shortbread"],
+        "Tortillas & Wraps": ["tortilla", "wrap", "flatbread", "naan"],
+        "Breakfast Bakery": ["english muffin", "breakfast pastry", "coffee cake"],
     },
     "Prepared Foods": {
-        "Kimchi & Sides": ["kimchi", "banchan", "side dish", "sidedish", "deli"],
+        "Kimchi & Banchan": ["kimchi", "banchan"],
+        "Deli Sides & Salads": ["side dish", "sidedish", "deli", "deli salad"],
         "Rice Meals & Kimbap": ["kimbap", "gimbap", "rice bowl", "fried rice", "sushi"],
         "Dumplings & Quick Meals": ["dumpling", "mandu", "tteokbokki", "katsu", "instant food", "ready meal"],
+        "Soups & Stews": ["stew", "prepared soup", "ready soup"],
+        "Prepared Proteins": ["prepared chicken", "prepared salmon", "prepared protein"],
+        "Meal Kits": ["meal kit"],
     },
     "Frozen": {
-        "Ice Cream & Desserts": ["ice cream", "gelato", "sorbet", "frozen dessert", "ice pop", "popsicle"],
-        "Frozen Meals & Pizza": ["pizza", "frozen meal", "dumpling", "entree"],
+        "Frozen Meals": ["frozen meal", "entree", "frozen entree"],
+        "Frozen Breakfast": ["frozen waffle", "waffle", "frozen pancake", "breakfast burrito", "breakfast sandwich"],
+        "Frozen Pizza": ["pizza", "flatbread pizza"],
+        "Frozen Desserts": ["gelato", "sorbet", "frozen dessert", "ice pop", "popsicle"],
         "Frozen Produce": ["frozen fruit", "frozen vegetable"],
-        "Frozen Breakfast": ["frozen waffle", "waffle", "frozen pancake"],
+        "Ice Cream & Novelties": ["ice cream", "ice cream sandwich", "novelty"],
     },
     "Snacks": {
         "Candy & Gummies": ["candy", "gummy", "fruit snacks", "chews", "chocolate"],
@@ -236,40 +292,71 @@ SUBCATEGORY_PROFILES = {
         "Cookies & Sweet Snacks": ["cookies", "cookie", "bites"],
         "Bars": ["granola bar", "protein bar", "snack bar", "bar"],
         "Nuts & Trail Mix": ["nuts", "trail mix", "almonds", "cashews", "pistachio"],
+        "Jerky & Savory Protein Snacks": ["jerky", "meat stick", "protein crisps"],
+        "Popcorn & Puffs": ["popcorn", "puffs", "cheese puffs"],
     },
     "Pantry": {
-        "Pasta, Rice & Grains": ["pasta", "rice", "oatmeal", "cereal", "granola", "flour"],
-        "Sauces, Broth & Soup": ["sauce", "broth", "soup", "marinade", "dressing", "salsa"],
-        "Condiments & Spreads": ["peanut butter", "jam", "fruit spread", "spread", "preserves", "honey", "mustard", "ketchup", "vinegar", "oil"],
-        "Canned & Jarred Goods": ["beans", "jarred", "canned", "bruschetta", "hummus"],
-        "Baking & Seasonings": ["spice", "seasoning", "mix"],
+        "Pasta, Rice & Grains": ["pasta", "rice", "grain", "quinoa", "couscous", "farro"],
+        "Sauces & Marinades": ["sauce", "marinade", "pasta sauce", "alfredo", "bolognese"],
+        "Broth, Soup & Stock": ["broth", "soup", "stock"],
+        "Dressings & Mayo": ["dressing", "mayo", "mayonnaise", "vinaigrette", "aioli"],
         "Dips & Spreads": ["hummus", "hommus", "dip", "dips", "guacamole", "queso"],
+        "Nut Butters & Sweet Spreads": ["peanut butter", "almond butter", "cashew butter", "seed butter", "sunflower butter", "jam", "fruit spread", "preserves", "honey"],
+        "Condiments": ["mustard", "ketchup", "hot sauce", "soy sauce", "condiment", "salsa"],
+        "Oils & Vinegars": ["vinegar", "oil", "olive oil", "avocado oil"],
+        "Baking Ingredients": ["flour", "baking soda", "baking powder", "cocoa powder", "vanilla extract"],
+        "Spices & Seasonings": ["spice", "seasoning", "rub"],
+        "Canned & Jarred Goods": ["jarred", "canned", "bruschetta", "canned tomato"],
+        "Beans, Lentils & Legumes": ["beans", "lentils", "legumes", "chickpeas"],
+        "International Staples": ["miso", "gochujang", "rice paper", "curry paste", "noodle"],
+        "Breakfast Pantry": ["oatmeal", "cereal", "granola", "overnight oats", "oats"],
+        "Baking Mixes & Meal Kits": ["mix", "baking mix", "meal kit"],
     },
     "Beverages": {
-        "Water & Seltzer": ["water", "seltzer", "sparkling water", "coconut water"],
-        "Coffee & Tea": ["coffee", "tea", "latte", "cold brew"],
-        "Juice & Smoothies": ["juice", "smoothie", "kombucha"],
-        "Beer, Wine & Spirits": ["ipa", "beer", "wine", "hard seltzer", "lager"],
-        "Energy & Sports Drinks": ["energy drink", "electrolyte", "sports drink"],
-        "Mocktails & Zero Proof": ["zero proof", "non-alcoholic", "non alcoholic", "mocktail", "ritual"],
+        "Coffee": ["coffee", "cold brew", "espresso"],
+        "Tea": ["tea", "matcha", "chai"],
+        "Sparkling Water & Seltzer": ["seltzer", "sparkling water", "sparkling beverage"],
+        "Still Water & Hydration": ["water", "hydration", "coconut water", "alkaline water"],
+        "Juice & Smoothies": ["juice", "smoothie", "smoothies"],
+        "Energy & Sports Drinks": ["energy drink", "sports drink", "electrolyte drink", "hydration mix"],
+        "Soda & Soft Drinks": ["soda", "cola", "soft drink", "ginger ale", "root beer"],
+        "Functional Beverages": ["kombucha", "functional beverage", "mushroom coffee", "adaptogen drink", "elixir"],
+        "Creamers": ["creamer", "coffee creamer"],
+        "Drink Mixes": ["drink mix", "powder drink", "mix packet"],
+        "Mocktails & Zero Proof": ["zero proof", "non-alcoholic", "non alcoholic", "mocktail"],
+    },
+    "Alcohol": {
+        "Beer": ["beer", "lager", "ipa", "stout", "pilsner", "ale"],
+        "Wine": ["wine", "cabernet", "merlot", "chardonnay", "riesling", "pinot", "sauvignon", "prosecco", "rose", "rosé"],
+        "Hard Seltzer": ["hard seltzer"],
+        "Cider": ["cider"],
+        "Spirits": ["vodka", "whiskey", "whisky", "tequila", "rum", "gin", "bourbon", "mezcal", "soju", "sake"],
+        "Cocktails & Mixers": ["cocktail", "spritz", "spiked", "martini", "canned cocktail"],
+        "Non-Alcoholic Beer & Wine": ["non-alcoholic beer", "non alcoholic beer", "non-alcoholic wine", "non alcoholic wine"],
     },
     "Supplements & Wellness": {
-        "Vitamins & Minerals": ["vitamin", "magnesium", "omega", "multivitamin"],
-        "Digestive & Probiotics": ["enzyme", "digestive", "probiotic"],
-        "Protein & Collagen": ["collagen", "protein powder", "peptides", "greens powder"],
-        "Wellness Shots & Tonics": ["wellness shot", "wellness shots", "shot", "tonic", "electrolyte"],
-        "Mushroom Blends": ["functional mushroom", "lion's mane", "cordyceps", "reishi", "chaga", "mushroom powder"],
+        "Vitamins & Minerals": ["vitamin", "magnesium", "omega", "multivitamin", "calcium", "zinc"],
+        "Digestive & Probiotics": ["enzyme", "digestive", "probiotic", "gut health"],
+        "Protein & Collagen": ["collagen", "protein powder", "peptides"],
+        "Sleep & Stress": ["sleep support", "stress support", "calm", "relaxation"],
+        "Beauty From Within": ["hair growth", "skin support", "beauty from within", "biotin"],
+        "Electrolytes & Hydration": ["electrolyte", "hydration", "rehydration"],
+        "Functional Mushrooms": ["functional mushroom", "lion's mane", "cordyceps", "reishi", "chaga", "mushroom powder"],
+        "Herbal Remedies": ["turmeric", "elderberry", "herbal remedy", "tincture", "extract"],
     },
     "Household": {
-        "Cleaning": ["cleaner", "disinfect", "sponge"],
+        "Cleaning": ["cleaner", "disinfect", "sponge", "surface cleaner"],
         "Dish & Laundry": ["laundry", "detergent", "dish soap"],
         "Paper & Trash": ["paper towel", "toilet paper", "trash bag"],
     },
     "Beauty & Personal Care": {
-        "Hair Care": ["shampoo", "conditioner"],
-        "Skin & Body Care": ["lotion", "serum", "body wash", "moisturizer", "cleanser", "sunscreen", "lip balm"],
-        "Oral Care": ["toothpaste", "mouthwash"],
+        "Sun Care": ["sunscreen", "sun care", "spf"],
+        "Skin Care": ["serum", "cleanser", "moisturizer", "skin care", "face lotion"],
+        "Body Care": ["body wash", "body lotion", "for body", "face and body"],
+        "Hair Care": ["shampoo", "conditioner", "detangler", "hair styling"],
+        "Oral Care": ["toothpaste", "mouthwash", "oral care"],
         "Soap & Deodorant": ["hand soap", "soap bar", "deodorant"],
+        "Baby Care": ["baby lotion", "baby wash", "baby care"],
     },
 }
 SUBCATEGORY_TO_CATEGORY = {
@@ -280,15 +367,31 @@ SUBCATEGORY_TO_CATEGORY = {
 
 DIRECT_CATEGORY_HINTS = [
     {
+        "category": "Alcohol",
+        "include": [
+            "hard seltzer", "beer", "wine", "cider", "vodka", "whiskey", "whisky",
+            "tequila", "rum", "gin", "bourbon", "cabernet", "merlot", "chardonnay",
+            "riesling", "pinot", "sauvignon", "prosecco", "rose", "rosé", "lager",
+            "ipa", "stout", "pilsner", "ale", "spritz", "spiked", "cocktail",
+            "canned cocktail", "mezcal", "sake", "soju",
+        ],
+        "exclude": ["wine vinegar", "mocktail", "zero proof", "non alcoholic", "non-alcoholic"],
+    },
+    {
         "category": "Supplements & Wellness",
-        "include": ["multivitamin", "vitamin", "multimineral", "supplement", "enzyme", "probiotic", "collagen", "electrolyte", "protein powder"],
-        "exclude": ["protein bar", "snack bar"],
+        "include": [
+            "multivitamin", "vitamin", "multimineral", "supplement", "enzyme",
+            "probiotic", "collagen", "protein powder", "electrolyte", "hair growth",
+            "sleep support", "stress support", "digestive support", "functional mushroom",
+        ],
+        "exclude": ["protein bar", "snack bar", "energy drink"],
     },
     {
         "category": "Beauty & Personal Care",
         "include": [
-            "sunscreen", "body lotion", "face lotion", "for face", "for body", "face and body", "skin care",
-            "hair", "scalp", "conditioner", "detangler", "curl", "hair styling", "cleanser", "water spray",
+            "sunscreen", "body lotion", "face lotion", "for face", "for body",
+            "face and body", "skin care", "hair care", "oral care", "baby care",
+            "conditioner", "detangler", "curl", "hair styling", "cleanser", "water spray",
         ],
         "exclude": ["dish soap", "laundry"],
     },
@@ -297,12 +400,18 @@ DIRECT_CATEGORY_HINTS = [
         "include": [
             "tortilla chips", "rolled tortilla chips", "potato chips", "corn chips",
             "pretzels", "popcorn", "crisps", "crackers", "chickpea puffs", "puffs",
+            "jerky", "granola bar", "protein bar",
         ],
         "exclude": ["chocolate chips", "baking chips"],
     },
     {
         "category": "Pantry",
-        "include": ["dipping sauce", "dip", "sauce dip", "queso", "pasta sauce", "bolognese sauce", "alfredo", "dressing", "marinade", "avocado oil", "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "overnight oats", "oats"],
+        "include": [
+            "dipping sauce", "dip", "sauce dip", "queso", "pasta sauce",
+            "bolognese sauce", "alfredo", "dressing", "marinade", "avocado oil",
+            "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "overnight oats",
+            "oats", "broth", "stock", "lentils", "meal kit",
+        ],
         "exclude": ["chip dipper", "frozen meal"],
     },
     {
@@ -312,18 +421,25 @@ DIRECT_CATEGORY_HINTS = [
     },
     {
         "category": "Prepared Foods",
-        "include": ["kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish", "dumpling", "mandu", "tteokbokki"],
+        "include": [
+            "kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish",
+            "dumpling", "mandu", "tteokbokki", "deli salad", "ready meal",
+        ],
         "exclude": ["dish soap", "laundry"],
+    },
+    {
+        "category": "Frozen",
+        "include": ["frozen meal", "frozen pizza", "ice cream", "gelato", "sorbet"],
+        "exclude": [],
     },
     {
         "category": "Beverages",
         "include": [
-            "budweiser", "bud light", "bota box", "black stallion", "hard seltzer", "beer",
-            "wine", "lager", "ipa", "stout", "pilsner", "cabernet", "merlot", "chardonnay",
-            "riesling", "pinot", "sauvignon", "prosecco", "rose", "rosé", "ale", "spritz",
-            "spiked", "non alcoholic", "non-alcoholic", "zero proof",
+            "coffee", "tea", "juice", "sparkling water", "seltzer", "water",
+            "smoothie", "kombucha", "drink mix", "mocktail", "zero proof",
+            "non alcoholic", "non-alcoholic", "sports drink", "energy drink",
         ],
-        "exclude": ["drink mix", "wine vinegar"],
+        "exclude": ["wine vinegar", "beer", "hard seltzer"],
     },
 ]
 TAG_KEYWORDS = {
@@ -347,6 +463,8 @@ def text_contains_phrase(haystack, phrase):
     variants = {phrase_key}
     tokens = phrase_key.split()
     if tokens:
+        if len(tokens) == 2:
+            variants.add(" ".join(reversed(tokens)))
         last = tokens[-1]
         plural_variants = set()
         if last.endswith("y") and len(last) > 1:
@@ -2092,6 +2210,150 @@ def save_device_profile(device_id, profile):
     return normalized
 
 
+def sorted_count_map(values):
+    counter = Counter(value for value in values if value)
+    return dict(sorted(counter.items(), key=lambda item: (-item[1], item[0])))
+
+
+def apply_subcategory_ai(products):
+    if not products:
+        return products
+
+    valid_subcategories = set(SUBCATEGORY_TO_CATEGORY.keys())
+    training_products = [
+        product for product in products
+        if product.get("subcategory") in valid_subcategories
+    ]
+
+    model, metadata = train_subcategory_model(training_products, valid_subcategories)
+    metadata = dict(metadata or {})
+    metadata["model_version"] = SUBCATEGORY_AI_MODEL_VERSION
+    metadata["valid_subcategory_count"] = len(valid_subcategories)
+    metadata["minimum_confidence_for_override"] = SUBCATEGORY_AI_MIN_CONFIDENCE
+    metadata["training_retailer_counts"] = sorted_count_map(
+        product.get("retailer") for product in training_products
+    )
+    metadata["training_category_counts"] = sorted_count_map(
+        product.get("category") for product in training_products
+    )
+
+    if model is not None:
+        save_subcategory_ai_artifacts(
+            model,
+            metadata,
+            SUBCATEGORY_AI_MODEL_FILE,
+            SUBCATEGORY_AI_METADATA_FILE,
+        )
+    else:
+        cached_model, cached_metadata = load_subcategory_ai_artifacts(
+            SUBCATEGORY_AI_MODEL_FILE,
+            SUBCATEGORY_AI_METADATA_FILE,
+        )
+        if cached_model is not None:
+            model = cached_model
+            metadata = dict(cached_metadata or {})
+            metadata["loaded_from_disk"] = True
+        else:
+            save_subcategory_ai_artifacts(
+                None,
+                metadata,
+                SUBCATEGORY_AI_MODEL_FILE,
+                SUBCATEGORY_AI_METADATA_FILE,
+            )
+
+    predictions = predict_subcategories(model, products) if model is not None else []
+
+    for index, product in enumerate(products):
+        product["previous_category"] = product.get("category")
+        product["previous_subcategory"] = product.get("subcategory")
+
+        existing_subcategory = product.get("subcategory")
+        fixed_subcategory = (
+            existing_subcategory in valid_subcategories
+            and "queued fix" in (product.get("category_signals") or [])
+        )
+        prediction = predictions[index] if index < len(predictions) else None
+
+        final_subcategory = existing_subcategory if existing_subcategory in valid_subcategories else None
+        final_confidence = float(product.get("category_confidence") or 0)
+        label_source = "heuristic-fallback"
+
+        if fixed_subcategory:
+            label_source = "fix"
+            final_confidence = 1.0
+        elif (
+            prediction
+            and prediction.get("subcategory") in valid_subcategories
+            and (
+                final_subcategory is None
+                or (prediction.get("confidence") or 0) >= SUBCATEGORY_AI_MIN_CONFIDENCE
+            )
+        ):
+            final_subcategory = prediction["subcategory"]
+            final_confidence = prediction.get("confidence") or 0
+            label_source = "model"
+
+        if not final_subcategory:
+            fallback_haystack = build_classification_haystack(
+                name=product.get("raw_name") or product.get("name"),
+                brand=product.get("brand"),
+                variation=" ".join(
+                    part for part in [
+                        product.get("variation"),
+                        " ".join(product.get("source_categories") or []),
+                    ]
+                    if part
+                ),
+                url=product.get("url"),
+            )
+            fallback_category = product.get("category") or "Pantry"
+            final_subcategory = derive_subcategory(fallback_category, fallback_haystack)
+            label_source = "heuristic-fallback"
+
+        if final_subcategory in valid_subcategories:
+            final_category = SUBCATEGORY_TO_CATEGORY[final_subcategory]
+            product["category"] = final_category
+            product["subcategory"] = final_subcategory
+
+        if label_source == "model":
+            signals = list(product.get("category_signals") or [])
+            if "subcategory ai" not in signals:
+                signals.insert(0, "subcategory ai")
+            product["category_signals"] = signals[:6]
+
+        product["category_confidence"] = round(float(final_confidence or 0), 4)
+        product["ai_subcategory"] = product.get("subcategory")
+        product["ai_category"] = product.get("category")
+        product["ai_confidence"] = round(float(final_confidence or 0), 4)
+        product["ai_label_source"] = label_source
+        product["ai_model_version"] = metadata.get("model_version") or SUBCATEGORY_AI_MODEL_VERSION
+        product["tags"] = derive_tags(
+            name=product.get("name"),
+            brand=product.get("brand"),
+            category=product.get("category"),
+            sources=product.get("sources"),
+            source_count=product.get("source_count", 0),
+            prime_price=product.get("prime_price"),
+        )
+
+    report = build_subcategory_ai_change_report(products)
+    report["training"] = metadata
+    report["final_category_counts"] = sorted_count_map(
+        product.get("category") for product in products
+    )
+    report["final_subcategory_counts"] = sorted_count_map(
+        product.get("subcategory") for product in products
+    )
+    with open(SUBCATEGORY_AI_REPORT_FILE, "w", encoding="utf-8") as report_file:
+        json.dump(report, report_file, indent=2, ensure_ascii=False)
+
+    for product in products:
+        product.pop("previous_category", None)
+        product.pop("previous_subcategory", None)
+
+    return products
+
+
 def apply_fixes_to_products(products):
     fixes = load_fixes_to_deploy()
     subcategory_by_key = fixes.get("subcategory_overrides_by_key", {})
@@ -2120,6 +2382,11 @@ def apply_fixes_to_products(products):
             signals = list(product.get("category_signals") or [])
             signals.insert(0, "queued fix")
             product["category_signals"] = signals[:6]
+            product["ai_subcategory"] = subcategory_override
+            product["ai_category"] = category
+            product["ai_confidence"] = 1.0
+            product["ai_label_source"] = "fix"
+            product["ai_model_version"] = SUBCATEGORY_AI_MODEL_VERSION
 
         product["tags"] = derive_tags(
             name=product.get("name"),
@@ -2129,6 +2396,13 @@ def apply_fixes_to_products(products):
             source_count=product.get("source_count", 0),
             prime_price=product.get("prime_price"),
         )
+        product["ai_subcategory"] = product.get("ai_subcategory") or product.get("subcategory")
+        product["ai_category"] = product.get("ai_category") or product.get("category")
+        product["ai_confidence"] = float(
+            product.get("ai_confidence") or product.get("category_confidence") or 0
+        )
+        product["ai_label_source"] = product.get("ai_label_source") or "heuristic-fallback"
+        product["ai_model_version"] = product.get("ai_model_version") or SUBCATEGORY_AI_MODEL_VERSION
 
     return products
 
@@ -2203,6 +2477,7 @@ def build_combined_products(
         if brand_signature == previous_brand_signature:
             break
         previous_brand_signature = brand_signature
+    ordered = apply_subcategory_ai(ordered)
     ordered.sort(
         key=lambda product: (
             -product.get("source_count", 0),
@@ -2232,6 +2507,11 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["subcategory"] = hydrated.get("subcategory")
     hydrated["category_confidence"] = float(hydrated.get("category_confidence") or 0)
     hydrated["category_signals"] = list(hydrated.get("category_signals") or [])
+    hydrated["ai_subcategory"] = hydrated.get("ai_subcategory") or hydrated.get("subcategory")
+    hydrated["ai_category"] = hydrated.get("ai_category") or hydrated.get("category")
+    hydrated["ai_confidence"] = float(hydrated.get("ai_confidence") or hydrated.get("category_confidence") or 0)
+    hydrated["ai_label_source"] = hydrated.get("ai_label_source") or "heuristic-fallback"
+    hydrated["ai_model_version"] = hydrated.get("ai_model_version") or SUBCATEGORY_AI_MODEL_VERSION
     hydrated["sources"] = list(hydrated.get("sources") or [])
     hydrated["source_count"] = int(hydrated.get("source_count") or len(hydrated["sources"]))
     hydrated["tags"] = list(hydrated.get("tags") or [])
