@@ -2,6 +2,7 @@
   {
     "asin": "B0821KDLT8",
     "name": "Bone-In Spiral-Cut & Select Boneless Pork Hams",
+    "raw_name": "Bone-In Spiral-Cut & Select Boneless Pork Hams",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -37,12 +38,15 @@
   {
     "asin": "B002QY5PB2",
     "name": "Asparagus",
+    "raw_name": "Asparagus",
     "brand": null,
     "variation": null,
-    "category": "Pantry",
-    "subcategory": null,
-    "category_confidence": 0.25,
-    "category_signals": [],
+    "category": "Produce",
+    "subcategory": "Vegetables",
+    "category_confidence": 0.99,
+    "category_signals": [
+      "asparagus"
+    ],
     "image": "https://m.media-amazon.com/images/I/71BNbWlKX7L.jpg",
     "url": null,
     "unit_price": null,
@@ -67,6 +71,7 @@
   {
     "asin": "B09SC3TTFN",
     "name": "Large Quiches",
+    "raw_name": "Large Quiches",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -95,7 +100,8 @@
   },
   {
     "asin": "B07R7CVMM4",
-    "name": "Jumbo Cooked White Shrimp, 13/15 ct",
+    "name": "Jumbo Cooked White Shrimp, 13/15 Ct",
+    "raw_name": "Jumbo Cooked White Shrimp, 13/15 ct",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -126,11 +132,12 @@
   {
     "asin": "B000RGZMTQ",
     "name": "Honeycrisp Apples",
+    "raw_name": "Honeycrisp Apples",
     "brand": null,
     "variation": null,
     "category": "Produce",
     "subcategory": "Fruit",
-    "category_confidence": 0.65,
+    "category_confidence": 0.99,
     "category_signals": [
       "apple"
     ],
@@ -158,6 +165,7 @@
   {
     "asin": "B08BSJSDWW",
     "name": "Bone-In Leg of Lamb",
+    "raw_name": "Bone-In Leg of Lamb",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -187,14 +195,14 @@
   },
   {
     "asin": "B002B8Z98W",
-    "name": "Strawberries, 16 oz",
+    "name": "Strawberries, 16 Oz",
+    "raw_name": "Strawberries, 16 oz",
     "brand": null,
     "variation": null,
     "category": "Produce",
     "subcategory": "Fruit",
     "category_confidence": 0.99,
     "category_signals": [
-      "berries",
       "strawberries"
     ],
     "image": "https://m.media-amazon.com/images/I/81RVKiOYKBL.jpg",
@@ -221,6 +229,7 @@
   {
     "asin": "B0B2W8HBZ8",
     "name": "Large Hass Avocados",
+    "raw_name": "Large Hass Avocados",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -252,7 +261,8 @@
   },
   {
     "asin": "B078144V7V",
-    "name": "Nova, Traditional and Double Smoked Atlantic Salmon, 4 oz",
+    "name": "Nova, Traditional and Double Smoked Atlantic Salmon, 4 Oz",
+    "raw_name": "Nova, Traditional and Double Smoked Atlantic Salmon, 4 oz",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -285,6 +295,7 @@
   {
     "asin": "B079W28NJW",
     "name": "Fresh Atlantic Salmon Fillets",
+    "raw_name": "Fresh Atlantic Salmon Fillets",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -314,8 +325,9 @@
   },
   {
     "asin": "B078F6N7J6",
-    "name": "Air-Chilled Bone-In Chicken Drumsticks, Thighs and Whole Legs",
-    "brand": null,
+    "name": "Bone-In Chicken Drumsticks, Thighs and Whole Legs",
+    "raw_name": "Air-Chilled Bone-In Chicken Drumsticks, Thighs and Whole Legs",
+    "brand": "Air-Chilled",
     "variation": null,
     "category": "Meat & Seafood",
     "subcategory": "Chicken & Turkey",
@@ -350,6 +362,7 @@
   {
     "asin": "B07813QGBX",
     "name": "Fresh Alaska Sockeye Salmon Fillets",
+    "raw_name": "Fresh Alaska Sockeye Salmon Fillets",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -380,16 +393,16 @@
   {
     "asin": "B0FHBN7KLF",
     "name": "Chicken Sausage, Meatballs or Burgers",
+    "raw_name": "Chicken Sausage, Meatballs or Burgers",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
-    "subcategory": "Chicken & Turkey",
+    "subcategory": "Sausages & Meatballs",
     "category_confidence": 0.99,
     "category_signals": [
       "chicken",
       "sausage",
-      "meatballs",
-      "meat"
+      "meatballs"
     ],
     "image": "https://m.media-amazon.com/images/I/81yi7PsSBKL.jpg",
     "url": null,
@@ -422,6 +435,7 @@
   {
     "asin": "B07NTBDRV5",
     "name": "Organic Chicken Nuggets, Tenders or Turkey Burgers",
+    "raw_name": "Organic Chicken Nuggets, Tenders or Turkey Burgers",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -457,7 +471,8 @@
   },
   {
     "asin": "B0787Z9XDN",
-    "name": "Jumbo White Shrimp, 16/20 ct",
+    "name": "Jumbo White Shrimp, 16/20 Ct",
+    "raw_name": "Jumbo White Shrimp, 16/20 ct",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -488,6 +503,7 @@
   {
     "asin": "B000P6H2MI",
     "name": "Select Sweet Potatoes",
+    "raw_name": "Select Sweet Potatoes",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -522,10 +538,11 @@
   {
     "asin": "B0DCP6F4QB",
     "name": "Select Pork or Turkey Bacon",
+    "raw_name": "Select Pork or Turkey Bacon",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
-    "subcategory": "Beef, Pork & Lamb",
+    "subcategory": "Chicken & Turkey",
     "category_confidence": 0.99,
     "category_signals": [
       "bacon",
@@ -560,6 +577,7 @@
   {
     "asin": "B003TQ4MXS",
     "name": "Baby Broccoli",
+    "raw_name": "Baby Broccoli",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -589,7 +607,8 @@
   },
   {
     "asin": "B07HK9L726",
-    "name": "Brussels Sprouts, 16 oz",
+    "name": "Brussels Sprouts, 16 Oz",
+    "raw_name": "Brussels Sprouts, 16 oz",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -619,7 +638,8 @@
   },
   {
     "asin": "B0792P6WBP",
-    "name": "Bagged Lemons, 32 oz",
+    "name": "Bagged Lemons, 32 Oz",
+    "raw_name": "Bagged Lemons, 32 oz",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -652,6 +672,7 @@
   {
     "asin": "B000P6L3ZU",
     "name": "Navel Oranges",
+    "raw_name": "Navel Oranges",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -684,6 +705,7 @@
   {
     "asin": "B09WNGD4BN",
     "name": "Fruit Mix Value Pack",
+    "raw_name": "Fruit Mix Value Pack",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -713,7 +735,8 @@
   },
   {
     "asin": "B07FYCB4WX",
-    "name": "Bagged Hass Avocados, 4 ct",
+    "name": "Bagged Hass Avocados, 4 Ct",
+    "raw_name": "Bagged Hass Avocados, 4 ct",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -746,6 +769,7 @@
   {
     "asin": "B000P6G198",
     "name": "Yellow Mangoes",
+    "raw_name": "Yellow Mangoes",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -777,7 +801,8 @@
   },
   {
     "asin": "B07LFT2C9H",
-    "name": "Green Kiwis, 16 oz",
+    "name": "Green Kiwis, 16 Oz",
+    "raw_name": "Green Kiwis, 16 oz",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -809,7 +834,8 @@
   },
   {
     "asin": "B00C0TILQY",
-    "name": "Medjool Dates, 16 oz",
+    "name": "Medjool Dates, 16 Oz",
+    "raw_name": "Medjool Dates, 16 oz",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -840,6 +866,7 @@
   {
     "asin": "B0829RV69F",
     "name": "Cosmic Crisp Apples",
+    "raw_name": "Cosmic Crisp Apples",
     "brand": null,
     "variation": null,
     "category": "Produce",
@@ -872,6 +899,7 @@
   {
     "asin": "B0FM4DF7JQ",
     "name": "Milks and Creamers",
+    "raw_name": "Milks and Creamers",
     "brand": null,
     "variation": null,
     "category": "Dairy & Eggs",
@@ -879,7 +907,6 @@
     "category_confidence": 0.99,
     "category_signals": [
       "milk",
-      "cream",
       "creamer"
     ],
     "image": "https://m.media-amazon.com/images/I/81is9g4xFCL.jpg",
@@ -912,11 +939,12 @@
   },
   {
     "asin": null,
-    "name": "Granola and Oatmeal, 8-11 oz",
+    "name": "Granola and Oatmeal, 8-11 Oz",
+    "raw_name": "Granola and Oatmeal, 8-11 oz",
     "brand": null,
     "variation": null,
     "category": "Pantry",
-    "subcategory": "Pasta, Rice & Grains",
+    "subcategory": "Breakfast Pantry",
     "category_confidence": 0.99,
     "category_signals": [
       "oatmeal",
@@ -941,13 +969,14 @@
   {
     "asin": "B0713QJ9G7",
     "name": "Pancake Mixes and Oats",
+    "raw_name": "Pancake Mixes and Oats",
     "brand": null,
     "variation": null,
-    "category": "Bakery",
-    "subcategory": "Pastries & Desserts",
-    "category_confidence": 0.47,
+    "category": "Pantry",
+    "subcategory": "Breakfast Pantry",
+    "category_confidence": 0.93,
     "category_signals": [
-      "cake"
+      "direct match: dipping sauce"
     ],
     "image": "https://m.media-amazon.com/images/I/81s5Ttc7vjL.jpg",
     "url": null,
@@ -981,15 +1010,14 @@
   },
   {
     "asin": "B0791RY5SP",
-    "name": "MacroBars and Kids MacroBars",
-    "brand": null,
+    "name": "Kids Macrobars",
+    "raw_name": "MacroBars and Kids MacroBars",
+    "brand": "MacroBars",
     "variation": null,
-    "category": "Snacks",
-    "subcategory": "Bars",
-    "category_confidence": 0.7,
-    "category_signals": [
-      "bar"
-    ],
+    "category": "Pantry",
+    "subcategory": null,
+    "category_confidence": 0.25,
+    "category_signals": [],
     "image": "https://m.media-amazon.com/images/I/81soOQtinFL.jpg",
     "url": null,
     "unit_price": null,
@@ -1022,8 +1050,9 @@
   },
   {
     "asin": "B07X4GF4ZN",
-    "name": "Single-Serve Skyr Yogurts, 4–5 oz",
-    "brand": null,
+    "name": "4–5 Oz",
+    "raw_name": "Single-Serve Skyr Yogurts, 4–5 oz",
+    "brand": "Single-Serve Skyr Yogurts",
     "variation": null,
     "category": "Dairy & Eggs",
     "subcategory": "Yogurt & Cultured Dairy",
@@ -1066,6 +1095,7 @@
   {
     "asin": "B000O6K8TI",
     "name": "Milks and Creamers",
+    "raw_name": "Milks and Creamers",
     "brand": null,
     "variation": null,
     "category": "Dairy & Eggs",
@@ -1073,7 +1103,6 @@
     "category_confidence": 0.99,
     "category_signals": [
       "milk",
-      "cream",
       "creamer"
     ],
     "image": "https://m.media-amazon.com/images/I/81MIXjrUMeL.jpg",
@@ -1101,8 +1130,9 @@
   },
   {
     "asin": "B000YN1JY4",
-    "name": "Tempeh 6-8 oz",
-    "brand": null,
+    "name": "6-8 Oz",
+    "raw_name": "Tempeh 6-8 oz",
+    "brand": "Tempeh",
     "variation": null,
     "category": "Pantry",
     "subcategory": null,
@@ -1131,7 +1161,8 @@
   },
   {
     "asin": "B00MFNCW7E",
-    "name": "Select Tinned Fish, 2.8–5.6 oz",
+    "name": "Select Tinned Fish, 2.8–5.6 Oz",
+    "raw_name": "Select Tinned Fish, 2.8–5.6 oz",
     "brand": null,
     "variation": null,
     "category": "Meat & Seafood",
@@ -1172,8 +1203,9 @@
   },
   {
     "asin": "B0849MZ45Y",
-    "name": "Dozen Large and True Blue Eggs",
-    "brand": null,
+    "name": "True Blue Eggs",
+    "raw_name": "Dozen Large and True Blue Eggs",
+    "brand": "Dozen Large",
     "variation": null,
     "category": "Dairy & Eggs",
     "subcategory": "Eggs & Butter",
@@ -1204,6 +1236,7 @@
   {
     "asin": "B01N8V14PM",
     "name": "Chocolate Chips",
+    "raw_name": "Chocolate Chips",
     "brand": null,
     "variation": null,
     "category": "Snacks",
@@ -1239,10 +1272,11 @@
   {
     "asin": "B000WS3APW",
     "name": "Vanilla Extract and Seasonings",
+    "raw_name": "Vanilla Extract and Seasonings",
     "brand": null,
     "variation": null,
     "category": "Pantry",
-    "subcategory": "Baking & Seasonings",
+    "subcategory": "Baking Ingredients",
     "category_confidence": 0.99,
     "category_signals": [
       "seasoning"
@@ -1279,11 +1313,12 @@
   },
   {
     "asin": "B00MN2VQ9M",
-    "name": "Fruit Spreads ",
+    "name": "Fruit Spreads",
+    "raw_name": "Fruit Spreads ",
     "brand": null,
     "variation": null,
     "category": "Pantry",
-    "subcategory": "Condiments & Spreads",
+    "subcategory": "Nut Butters & Sweet Spreads",
     "category_confidence": 0.99,
     "category_signals": [
       "fruit spread",
@@ -1321,14 +1356,15 @@
   },
   {
     "asin": "B0DX7GY6ZC",
-    "name": "Juices, 46–52 oz",
-    "brand": null,
+    "name": "46–52 Oz",
+    "raw_name": "Juices, 46–52 oz",
+    "brand": "Juices",
     "variation": null,
     "category": "Beverages",
     "subcategory": "Juice & Smoothies",
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "juice"
+      "direct match: coffee"
     ],
     "image": "https://m.media-amazon.com/images/I/81I-A2Tl5QL.jpg",
     "url": null,
@@ -1356,15 +1392,15 @@
   },
   {
     "asin": "B0C3SSLXN5",
-    "name": "Condiments, Dressings and Avocado Oils, 4–16 oz",
+    "name": "Condiments, Dressings and Avocado Oils, 4–16 Oz",
+    "raw_name": "Condiments, Dressings and Avocado Oils, 4–16 oz",
     "brand": null,
     "variation": null,
     "category": "Pantry",
-    "subcategory": "Sauces, Broth & Soup",
-    "category_confidence": 0.99,
+    "subcategory": "Oils & Vinegars",
+    "category_confidence": 0.93,
     "category_signals": [
-      "oil",
-      "dressing"
+      "direct match: dipping sauce"
     ],
     "image": "https://m.media-amazon.com/images/I/81bk69u2ryL.jpg",
     "url": null,
@@ -1398,8 +1434,9 @@
   },
   {
     "asin": "B000QV32DA",
-    "name": "Packaged Rice and Quick Cook Rice, 5–32 oz",
-    "brand": null,
+    "name": "Quick Cook Rice, 5–32 Oz",
+    "raw_name": "Packaged Rice and Quick Cook Rice, 5–32 oz",
+    "brand": "Packaged Rice",
     "variation": null,
     "category": "Pantry",
     "subcategory": "Pasta, Rice & Grains",
@@ -1439,17 +1476,15 @@
   },
   {
     "asin": "B00IAE8LOU",
-    "name": "Mac & Cheese, Cookies, Granola Bars, Puffs, Crackers and Gummies",
-    "brand": null,
+    "name": "& Cheese, Cookies, Granola Bars, Puffs, Crackers and Gummies",
+    "raw_name": "Mac & Cheese, Cookies, Granola Bars, Puffs, Crackers and Gummies",
+    "brand": "Mac",
     "variation": null,
     "category": "Snacks",
     "subcategory": "Bars",
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "cracker",
-      "granola bar",
-      "cookies",
-      "bar"
+      "direct match: tortilla chips"
     ],
     "image": "https://m.media-amazon.com/images/I/91D2lcsiByL.jpg",
     "url": null,
@@ -1483,7 +1518,8 @@
   },
   {
     "asin": "B076CQWW3R",
-    "name": "Rice Cakes, 4 oz",
+    "name": "Rice Cakes, 4 Oz",
+    "raw_name": "Rice Cakes, 4 oz",
     "brand": null,
     "variation": null,
     "category": "Bakery",
@@ -1517,14 +1553,15 @@
   },
   {
     "asin": "B0D2JJ4R24",
-    "name": "Popcorn and Puffs, 4–8 oz",
-    "brand": null,
+    "name": "Puffs, 4–8 Oz",
+    "raw_name": "Popcorn and Puffs, 4–8 oz",
+    "brand": "Popcorn",
     "variation": null,
     "category": "Snacks",
     "subcategory": "Chips & Crackers",
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "popcorn"
+      "direct match: tortilla chips"
     ],
     "image": "https://m.media-amazon.com/images/I/812lNWT6CeL.jpg",
     "url": null,
@@ -1556,7 +1593,8 @@
   },
   {
     "asin": "B0884W21C1",
-    "name": "Chicken and Rice Soup, 24 oz",
+    "name": "Chicken and Rice Soup, 24 Oz",
+    "raw_name": "Chicken and Rice Soup, 24 oz",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -1587,14 +1625,15 @@
   },
   {
     "asin": "B07FZ74S2B",
-    "name": "Sliced-in-House Rosemary Ham",
-    "brand": null,
+    "name": "Rosemary Ham",
+    "raw_name": "Sliced-in-House Rosemary Ham",
+    "brand": "Sliced-in-House",
     "variation": null,
-    "category": "Beverages",
-    "subcategory": null,
-    "category_confidence": 0.93,
+    "category": "Meat & Seafood",
+    "subcategory": "Beef, Pork & Lamb",
+    "category_confidence": 0.99,
     "category_signals": [
-      "direct match: budweiser"
+      "ham"
     ],
     "image": "https://m.media-amazon.com/images/I/71KdW-Koa7L.jpg",
     "url": null,
@@ -1617,15 +1656,15 @@
   },
   {
     "asin": null,
-    "name": "Buttermilk Biscuits, 4 pk",
+    "name": "Buttermilk Biscuits, 4 Pk",
+    "raw_name": "Buttermilk Biscuits, 4 pk",
     "brand": null,
     "variation": null,
-    "category": "Dairy & Eggs",
-    "subcategory": "Milk & Creamers",
-    "category_confidence": 0.99,
+    "category": "Bakery",
+    "subcategory": "Cookies & Biscuits",
+    "category_confidence": 0.85,
     "category_signals": [
-      "milk",
-      "butter"
+      "biscuit"
     ],
     "image": "https://m.media-amazon.com/images/I/81XbsQw1uoL.jpg",
     "url": null,
@@ -1645,8 +1684,9 @@
   },
   {
     "asin": "B0CZXMSFZN",
-    "name": "Croissants, 4 pk",
-    "brand": null,
+    "name": "4 Pk",
+    "raw_name": "Croissants, 4 pk",
+    "brand": "Croissants",
     "variation": null,
     "category": "Bakery",
     "subcategory": "Pastries & Desserts",
@@ -1679,39 +1719,9 @@
     "sale_price": "11% off"
   },
   {
-    "asin": "B07FZ1BT2N",
-    "name": "Mix and Match Cookies",
-    "brand": null,
-    "variation": null,
-    "category": "Bakery",
-    "subcategory": "Cookies & Biscuits",
-    "category_confidence": 0.65,
-    "category_signals": [
-      "cookie"
-    ],
-    "image": "https://m.media-amazon.com/images/I/71hU+WisEAL.jpg",
-    "url": null,
-    "unit_price": null,
-    "current_price": "16% off",
-    "basis_price": "$13.99/lb",
-    "prime_price": null,
-    "discount": "25% off",
-    "discount_percent": 25,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10160"
-    ],
-    "asins": [
-      "B07FZ1BT2N",
-      "B07GBHBRSB"
-    ],
-    "tags": [],
-    "rank": 50,
-    "sale_price": "16% off"
-  },
-  {
     "asin": "B0DVZHCXZ3",
-    "name": "Angel Food Cake, 9 oz",
+    "name": "Angel Food Cake, 9 Oz",
+    "raw_name": "Angel Food Cake, 9 oz",
     "brand": null,
     "variation": null,
     "category": "Bakery",
@@ -1741,14 +1751,16 @@
   },
   {
     "asin": "B003YLW81Q",
-    "name": "Chocolate Bars, 3 oz",
-    "brand": null,
+    "name": "Bars, 3 Oz",
+    "raw_name": "Chocolate Bars, 3 oz",
+    "brand": "Chocolate",
     "variation": null,
     "category": "Snacks",
     "subcategory": "Candy & Gummies",
     "category_confidence": 0.99,
     "category_signals": [
       "chocolate",
+      "bars",
       "bar"
     ],
     "image": "https://m.media-amazon.com/images/I/816C0ZDlarL.jpg",
@@ -1778,7 +1790,8 @@
   },
   {
     "asin": "B086V2MPLK",
-    "name": "Humboldt Fog ",
+    "name": "Humboldt Fog",
+    "raw_name": "Humboldt Fog ",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -1806,8 +1819,9 @@
   },
   {
     "asin": "B0793KHKZT",
-    "name": "Pestos, 6.5 oz",
-    "brand": null,
+    "name": "6.5 Oz",
+    "raw_name": "Pestos, 6.5 oz",
+    "brand": "Pestos",
     "variation": null,
     "category": "Pantry",
     "subcategory": null,
@@ -1837,14 +1851,14 @@
   {
     "asin": "B0B3Q1HNQ5",
     "name": "Select Collagen Peptides",
+    "raw_name": "Select Collagen Peptides",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
     "subcategory": "Protein & Collagen",
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "collagen",
-      "peptides"
+      "direct match: multivitamin"
     ],
     "image": "https://m.media-amazon.com/images/I/81tMb2vvTlL.jpg",
     "url": null,
@@ -1877,13 +1891,14 @@
   {
     "asin": "B08CBX21C5",
     "name": "Probiotics",
+    "raw_name": "Probiotics",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
     "subcategory": "Digestive & Probiotics",
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "probiotic"
+      "direct match: multivitamin"
     ],
     "image": "https://m.media-amazon.com/images/I/81Hj6xuhmvL.jpg",
     "url": null,
@@ -1918,13 +1933,14 @@
   {
     "asin": "B006P8NAHQ",
     "name": "Herbal Supplements",
+    "raw_name": "Herbal Supplements",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
     "subcategory": null,
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "supplement"
+      "direct match: multivitamin"
     ],
     "image": "https://m.media-amazon.com/images/I/81ngpy0FbRL.jpg",
     "url": null,
@@ -1959,14 +1975,14 @@
   {
     "asin": "B002NRB7SM",
     "name": "Digestive Enzymes",
+    "raw_name": "Digestive Enzymes",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
     "subcategory": "Digestive & Probiotics",
-    "category_confidence": 0.99,
+    "category_confidence": 0.93,
     "category_signals": [
-      "enzyme",
-      "digestive"
+      "direct match: multivitamin"
     ],
     "image": "https://m.media-amazon.com/images/I/81b7lGq8ejL.jpg",
     "url": null,
@@ -1995,11 +2011,12 @@
   },
   {
     "asin": "B01K4JBOUQ",
-    "name": "Regenerative Organic Certified Mushroom Powders",
-    "brand": null,
+    "name": "Organic Certified Mushroom Powders",
+    "raw_name": "Regenerative Organic Certified Mushroom Powders",
+    "brand": "Regenerative",
     "variation": null,
     "category": "Supplements & Wellness",
-    "subcategory": null,
+    "subcategory": "Functional Mushrooms",
     "category_confidence": 0.98,
     "category_signals": [
       "powder"
@@ -2035,14 +2052,15 @@
   },
   {
     "asin": "B099GWVQK2",
-    "name": "Magnesium Drink Mixes",
-    "brand": null,
+    "name": "Drink Mixes",
+    "raw_name": "Magnesium Drink Mixes",
+    "brand": "Magnesium",
     "variation": null,
-    "category": "Supplements & Wellness",
-    "subcategory": "Vitamins & Minerals",
-    "category_confidence": 0.85,
+    "category": "Beverages",
+    "subcategory": "Drink Mixes",
+    "category_confidence": 0.93,
     "category_signals": [
-      "magnesium"
+      "direct match: coffee"
     ],
     "image": "https://m.media-amazon.com/images/I/81nI+PM7mVL.jpg",
     "url": null,
@@ -2074,13 +2092,14 @@
   {
     "asin": "B09FYPGN8C",
     "name": "Beauty Supplements",
+    "raw_name": "Beauty Supplements",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
     "subcategory": null,
-    "category_confidence": 0.85,
+    "category_confidence": 0.93,
     "category_signals": [
-      "supplement"
+      "direct match: multivitamin"
     ],
     "image": "https://m.media-amazon.com/images/I/81ORNq9XmCL.jpg",
     "url": null,
@@ -2110,6 +2129,7 @@
   {
     "asin": null,
     "name": "Sea Moss Multiserve Gels",
+    "raw_name": "Sea Moss Multiserve Gels",
     "brand": null,
     "variation": null,
     "category": "Pantry",
@@ -2135,10 +2155,11 @@
   {
     "asin": "B08QFQQ1MF",
     "name": "Wellness Shots",
+    "raw_name": "Wellness Shots",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
-    "subcategory": "Wellness Shots & Tonics",
+    "subcategory": null,
     "category_confidence": 0.99,
     "category_signals": [
       "wellness",
@@ -2179,10 +2200,11 @@
   {
     "asin": null,
     "name": "Mental Wellness Shots",
+    "raw_name": "Mental Wellness Shots",
     "brand": null,
     "variation": null,
     "category": "Supplements & Wellness",
-    "subcategory": "Wellness Shots & Tonics",
+    "subcategory": null,
     "category_confidence": 0.99,
     "category_signals": [
       "wellness",
