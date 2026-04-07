@@ -5,6 +5,7 @@ import os
 import math
 from functools import lru_cache
 from flask import Flask, jsonify, render_template, request, send_from_directory
+from brand_ai import build_brand_family_map
 from supabase_state import (
     load_device_profile_from_supabase,
     load_fixes_from_supabase,
@@ -936,6 +937,11 @@ def extend_incomplete_brand_with_name(brand, source_name):
     first_key = normalize_text_key(first_token)
     if not first_key or any(ch.isdigit() for ch in first_token):
         return brand
+    last_key = normalize_text_key(brand_tokens[-1])
+    if last_key in {"co", "company", "food", "foods"} and (
+        first_key in BRAND_DESCRIPTOR_STARTERS or first_key in GENERIC_BRAND_WORDS
+    ):
+        return brand
 
     extended = trim_brand_candidate(f"{brand} {first_token}")
     if not extended or candidate_is_generic_brand(extended):
@@ -964,10 +970,18 @@ def strip_brand_from_name(name, brand):
     remainder = name
     stripped_any = False
 
+    def starts_with_brand_variant(text, variant):
+        if not text.lower().startswith(variant.lower()):
+            return False
+        if len(text) == len(variant):
+            return True
+        next_character = text[len(variant)]
+        return not next_character.isalnum()
+
     while True:
         matched_variant = None
         for variant in brand_variants(brand):
-            if remainder.lower().startswith(variant.lower()):
+            if starts_with_brand_variant(remainder, variant):
                 matched_variant = variant
                 break
         if not matched_variant:
@@ -1055,14 +1069,24 @@ def normalize_brands_across_products(products):
             if remainder_first in BRAND_DESCRIPTOR_STARTERS or remainder_first in GENERIC_BRAND_WORDS:
                 family_map[candidate] = brand
 
+    ai_family_map, _ = build_brand_family_map(
+        products,
+        alias_map=BRAND_FAMILY_ALIASES,
+        connectors=BRAND_CONNECTORS,
+        generic_words=GENERIC_BRAND_WORDS,
+        descriptor_starters=BRAND_DESCRIPTOR_STARTERS,
+    )
+    family_map.update(ai_family_map)
+
     for product in products:
-        canonical_brand = trim_brand_candidate(product.get("brand")) if product.get("brand") else None
-        canonical_brand = family_map.get(canonical_brand, canonical_brand)
+        original_brand = trim_brand_candidate(product.get("brand")) if product.get("brand") else None
+        canonical_brand = family_map.get(original_brand, original_brand)
+        brand_was_canonicalized = canonical_brand != original_brand
         if canonical_brand and candidate_is_generic_brand(canonical_brand):
             canonical_brand = None
 
         source_name = product.get("raw_name") or product.get("name")
-        if canonical_brand and source_name:
+        if canonical_brand and source_name and not brand_was_canonicalized:
             canonical_brand = extend_incomplete_brand_with_name(canonical_brand, source_name)
 
         product["brand"] = clean_brand_display(canonical_brand) if canonical_brand else None
@@ -2171,8 +2195,14 @@ def build_combined_products(
             combined[key] = merge_combined_product(combined.get(key), normalized)
 
     ordered = list(combined.values())
-    ordered = normalize_brands_across_products(ordered)
-    ordered = apply_fixes_to_products(ordered)
+    previous_brand_signature = None
+    for _ in range(4):
+        ordered = normalize_brands_across_products(ordered)
+        ordered = apply_fixes_to_products(ordered)
+        brand_signature = tuple(sorted({product.get("brand") or "" for product in ordered}))
+        if brand_signature == previous_brand_signature:
+            break
+        previous_brand_signature = brand_signature
     ordered.sort(
         key=lambda product: (
             -product.get("source_count", 0),
