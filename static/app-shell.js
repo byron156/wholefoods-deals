@@ -491,17 +491,22 @@
 
   function metaLine(product) {
     const pieces = [];
+    if (product.ai_label_source && product.ai_label_source !== "model") {
+      pieces.push(
+        '<span class="classification-dot" title="Shelf placement came from fallback rules, not the AI classifier." aria-label="Fallback categorization"></span>'
+      );
+    }
     if (product.brand) {
-      pieces.push(product.brand);
+      pieces.push(escapeHtml(product.brand));
     }
     const subcategory = effectiveSubcategory(product);
     if (subcategory && subcategoryToCategory[subcategory] && subcategory !== effectiveCategory(product)) {
-      pieces.push(subcategory);
+      pieces.push(escapeHtml(subcategory));
     }
     if (!pieces.length) {
       return "";
     }
-    return `<p class="deal-meta-line">${escapeHtml(pieces.join(" · "))}</p>`;
+    return `<p class="deal-meta-line">${pieces.join(' <span class="meta-separator">·</span> ')}</p>`;
   }
 
   function renderProductCard(product) {

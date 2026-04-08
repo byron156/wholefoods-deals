@@ -734,6 +734,23 @@ p {
   font-size: 12px;
   line-height: 1.35;
   margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.meta-separator {
+  color: rgba(93, 107, 98, 0.75);
+}
+
+.classification-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #4d80ff;
+  box-shadow: 0 0 0 2px rgba(77, 128, 255, 0.14);
+  flex: 0 0 auto;
 }
 
 .deal-price-row {
