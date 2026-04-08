@@ -45,7 +45,7 @@ def build_feature_text(product):
         f"brand {normalize_text(product.get('brand'))}",
         f"name {normalize_text(product.get('name'))}",
         f"raw {normalize_text(product.get('raw_name'))}",
-        f"heuristic_category {normalize_text(product.get('category'))}",
+        f"parent_category {normalize_text(product.get('category'))}",
         f"heuristic_subcategory {normalize_text(product.get('subcategory'))}",
         f"variation {normalize_text(product.get('variation'))}",
         f"sources {normalize_text(flatten_text_list(product.get('sources')))}",
@@ -140,20 +140,36 @@ def load_model_artifacts(model_path, metadata_path):
     return model, metadata
 
 
-def predict_subcategories(model, products):
+def predict_subcategories(model, products, allowed_subcategories=None):
     if model is None:
         return []
 
     features = [build_feature_text(product) for product in products]
-    predicted_labels = model.predict(features)
     probabilities = model.predict_proba(features)
+    classes = list(getattr(model, "classes_", []))
     predictions = []
-    for label, probability_row in zip(predicted_labels, probabilities):
-        confidence = float(max(probability_row)) if len(probability_row) else 0.0
+    for index, probability_row in enumerate(probabilities):
+        allowed = set(allowed_subcategories[index] or []) if allowed_subcategories and index < len(allowed_subcategories) else None
+        ranked = sorted(
+            zip(classes, probability_row),
+            key=lambda item: item[1],
+            reverse=True,
+        )
+        chosen_label = None
+        chosen_confidence = 0.0
+        if allowed:
+            for label, probability in ranked:
+                if label in allowed:
+                    chosen_label = label
+                    chosen_confidence = float(probability)
+                    break
+        if chosen_label is None and ranked:
+            chosen_label = ranked[0][0]
+            chosen_confidence = float(ranked[0][1])
         predictions.append(
             {
-                "subcategory": label,
-                "confidence": round(confidence, 4),
+                "subcategory": chosen_label,
+                "confidence": round(chosen_confidence, 4),
             }
         )
     return predictions

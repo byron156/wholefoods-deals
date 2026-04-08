@@ -121,16 +121,17 @@ CATEGORY_PROFILES = {
     },
     "Bakery": {
         "strong": [
-            "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie",
-            "pie", "pastry", "brownie", "donut", "tortilla", "bun", "roll",
-            "scone", "danish", "quiche",
+            "bread", "croissant", "cake", "muffin", "bagel", "pastry", "brownie",
+            "donut", "tortilla", "bun", "roll", "scone", "danish", "quiche",
+            "fresh baked", "bakery",
         ],
         "medium": ["bakery", "baked", "pastry"],
         "weak": [],
         "exclude": [
             "ice cream cake", "pancake mix", "waffle mix", "chips", "chip", "tortilla chips",
             "rolled tortilla chips", "pretzel", "pretzels", "popcorn", "crisps", "puffs",
-            "chickpea puffs", "cracker", "crackers",
+            "chickpea puffs", "cracker", "crackers", "wafel", "wafels", "wafer", "wafers",
+            "stroopwafel", "pie filling",
         ],
     },
     "Prepared Foods": {
@@ -158,7 +159,8 @@ CATEGORY_PROFILES = {
         "strong": [
             "chips", "cracker", "pretzel", "popcorn", "snack", "granola bar", "candy",
             "chocolate", "bites", "crisps", "gummy", "trail mix", "snack bar",
-            "protein bar", "fruit snacks", "cookies", "coconut chips",
+            "protein bar", "fruit snacks", "cookies", "cookie", "biscuit", "biscuits",
+            "wafel", "wafels", "wafer", "wafers", "stroopwafel", "coconut chips",
             "chocolate egg", "chocolate eggs", "puffs", "jerky", "bars",
         ],
         "medium": ["bar", "jerky", "nuts", "chews", "trail mix", "popcorn"],
@@ -177,6 +179,7 @@ CATEGORY_PROFILES = {
             "bolognese sauce", "avocado oil", "olive oil", "mayo", "mayonnaise",
             "vinaigrette", "aioli", "oats", "overnight oats", "lentils", "legumes",
             "baking mix", "meal kit", "stock", "condiment", "chili crisp",
+            "pie filling", "tomato paste",
         ],
         "medium": ["pantry", "mix", "canned", "jarred", "breakfast pantry"],
         "weak": [],
@@ -270,7 +273,7 @@ SUBCATEGORY_PROFILES = {
     "Bakery": {
         "Bread & Bagels": ["bread", "bagel", "bun", "roll"],
         "Pastries & Desserts": ["croissant", "cake", "muffin", "pie", "pastry", "brownie", "donut", "scone"],
-        "Cookies & Biscuits": ["cookie", "biscuit", "shortbread"],
+        "Cookies & Biscuits": ["bakery cookie", "fresh baked cookie", "butter cookie tin", "biscotti", "shortbread tin"],
         "Tortillas & Wraps": ["tortilla", "wrap", "flatbread", "naan"],
         "Breakfast Bakery": ["english muffin", "breakfast pastry", "coffee cake", "quiche"],
     },
@@ -294,7 +297,7 @@ SUBCATEGORY_PROFILES = {
     "Snacks": {
         "Candy & Gummies": ["candy", "gummy", "fruit snacks", "chews", "chocolate"],
         "Chips & Crackers": ["chips", "cracker", "pretzel", "popcorn", "crisps", "tortilla chips", "puffs", "rolled tortilla chips", "matzo", "matzo-style"],
-        "Cookies & Sweet Snacks": ["cookies", "cookie", "bites"],
+        "Cookies & Sweet Snacks": ["cookies", "cookie", "bites", "wafel", "wafels", "wafer", "wafers", "stroopwafel", "biscuit", "biscuits"],
         "Bars": ["granola bar", "protein bar", "snack bar", "bar"],
         "Nuts & Trail Mix": ["nuts", "trail mix", "almonds", "cashews", "pistachio"],
         "Jerky & Savory Protein Snacks": ["jerky", "meat stick", "protein crisps"],
@@ -311,7 +314,7 @@ SUBCATEGORY_PROFILES = {
         "Oils & Vinegars": ["vinegar", "oil", "olive oil", "avocado oil"],
         "Baking Ingredients": ["flour", "baking soda", "baking powder", "cocoa powder", "vanilla extract"],
         "Spices & Seasonings": ["spice", "seasoning", "rub"],
-        "Canned & Jarred Goods": ["jarred", "canned", "bruschetta", "canned tomato", "tomato paste", "paste tomato"],
+        "Canned & Jarred Goods": ["jarred", "canned", "bruschetta", "canned tomato", "tomato paste", "paste tomato", "pie filling"],
         "Beans, Lentils & Legumes": ["beans", "lentils", "legumes", "chickpeas"],
         "International Staples": ["miso", "gochujang", "rice paper", "curry paste", "noodle"],
         "Breakfast Pantry": ["oatmeal", "cereal", "granola", "overnight oats", "oats"],
@@ -407,7 +410,8 @@ DIRECT_CATEGORY_HINTS = [
         "include": [
             "tortilla chips", "rolled tortilla chips", "potato chips", "corn chips",
             "pretzels", "popcorn", "crisps", "crackers", "chickpea puffs", "puffs",
-            "jerky", "granola bar", "protein bar", "matzo", "matzo-style",
+            "jerky", "granola bar", "protein bar", "matzo", "matzo-style", "wafel",
+            "wafels", "wafer", "wafers", "stroopwafel", "cookies", "cookie", "biscuit",
         ],
         "exclude": ["chocolate chips", "baking chips"],
     },
@@ -418,7 +422,7 @@ DIRECT_CATEGORY_HINTS = [
             "bolognese sauce", "alfredo", "dressing", "marinade", "avocado oil",
             "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "overnight oats",
             "oats", "broth", "stock", "lentils", "meal kit", "tomato paste",
-            "paste tomato", "matzo ball",
+            "paste tomato", "matzo ball", "pie filling",
         ],
         "exclude": ["chip dipper", "frozen meal"],
     },
@@ -1282,6 +1286,59 @@ def derive_subcategory(category, haystack):
     return best_subcategory
 
 
+def score_all_categories(haystack):
+    scored = []
+    for category, profile in CATEGORY_PROFILES.items():
+        score, reasons = score_category_profile(haystack, profile)
+        scored.append(
+            {
+                "category": category,
+                "score": score,
+                "reasons": reasons,
+            }
+        )
+    scored.sort(key=lambda item: (-item["score"], item["category"]))
+    return scored
+
+
+def derive_category_candidates(name, brand=None, variation=None, url=None, preferred_category=None):
+    haystack = build_classification_haystack(name=name, brand=brand, variation=variation, url=url)
+    if not haystack:
+        return [preferred_category] if preferred_category else ["Pantry"]
+
+    hinted_categories = []
+    for hint in DIRECT_CATEGORY_HINTS:
+        if any(text_contains_phrase(haystack, phrase) for phrase in hint["include"]) and not any(
+            text_contains_phrase(haystack, phrase) for phrase in hint.get("exclude", [])
+        ):
+            hinted_categories.append(hint["category"])
+
+    scored_categories = score_all_categories(haystack)
+    top_score = scored_categories[0]["score"] if scored_categories else 0
+
+    candidates = []
+    if preferred_category:
+        candidates.append(preferred_category)
+    candidates.extend(hinted_categories)
+
+    if top_score > 0:
+        for item in scored_categories:
+            if item["score"] <= 0:
+                continue
+            if item["score"] >= max(2, top_score - 4):
+                candidates.append(item["category"])
+
+    if not candidates:
+        candidates.append(preferred_category or "Pantry")
+
+    ordered_candidates = []
+    for category in candidates:
+        if category and category not in ordered_candidates:
+            ordered_candidates.append(category)
+
+    return ordered_candidates[:3]
+
+
 def derive_category_details(name, brand=None, variation=None, url=None):
     haystack = build_classification_haystack(name=name, brand=brand, variation=variation, url=url)
     if not haystack:
@@ -1304,20 +1361,11 @@ def derive_category_details(name, brand=None, variation=None, url=None):
                 "signals": [f"direct match: {hint['include'][0]}"],
             }
 
-    best_category = "Pantry"
-    best_score = -999
-    second_best_score = -999
-    best_reasons = []
-
-    for category, profile in CATEGORY_PROFILES.items():
-        score, reasons = score_category_profile(haystack, profile)
-        if score > best_score:
-            second_best_score = best_score
-            best_score = score
-            best_category = category
-            best_reasons = reasons
-        elif score > second_best_score:
-            second_best_score = score
+    scored_categories = score_all_categories(haystack)
+    best_category = scored_categories[0]["category"] if scored_categories else "Pantry"
+    best_score = scored_categories[0]["score"] if scored_categories else -999
+    second_best_score = scored_categories[1]["score"] if len(scored_categories) > 1 else -999
+    best_reasons = scored_categories[0]["reasons"] if scored_categories else []
 
     if best_score <= 0:
         return {
@@ -2276,7 +2324,27 @@ def apply_subcategory_ai(products):
                 SUBCATEGORY_AI_METADATA_FILE,
             )
 
-    predictions = predict_subcategories(model, products) if model is not None else []
+    allowed_subcategories = []
+    for product in products:
+        candidate_categories = derive_category_candidates(
+            name=product.get("raw_name") or product.get("name"),
+            brand=product.get("brand"),
+            variation=" ".join(
+                part for part in [
+                    product.get("variation"),
+                    " ".join(product.get("source_categories") or []),
+                ]
+                if part
+            ),
+            url=product.get("url"),
+            preferred_category=product.get("category"),
+        )
+        allowed = []
+        for category in candidate_categories:
+            allowed.extend(SUBCATEGORY_PROFILES.get(category, {}).keys())
+        allowed_subcategories.append(sorted(dict.fromkeys(allowed)))
+
+    predictions = predict_subcategories(model, products, allowed_subcategories=allowed_subcategories) if model is not None else []
 
     for index, product in enumerate(products):
         product["previous_category"] = product.get("category")
