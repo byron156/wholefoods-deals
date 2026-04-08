@@ -2376,56 +2376,34 @@ def apply_subcategory_ai(products):
         product["previous_category"] = product.get("category")
         product["previous_subcategory"] = product.get("subcategory")
 
-        existing_subcategory = product.get("subcategory")
-        fixed_subcategory = (
-            existing_subcategory in valid_subcategories
-            and "queued fix" in (product.get("category_signals") or [])
-        )
         prediction = predictions[index] if index < len(predictions) else None
 
-        final_subcategory = existing_subcategory if existing_subcategory in valid_subcategories else None
-        final_confidence = float(product.get("category_confidence") or 0)
-        label_source = "heuristic-fallback"
+        final_subcategory = None
+        final_confidence = 0.0
+        label_source = "model"
 
-        if fixed_subcategory:
-            label_source = "fix"
-            final_confidence = 1.0
-        elif (
+        if (
             prediction
             and prediction.get("subcategory") in valid_subcategories
             and (prediction.get("confidence") or 0) >= SUBCATEGORY_AI_MIN_CONFIDENCE
         ):
             final_subcategory = prediction["subcategory"]
             final_confidence = prediction.get("confidence") or 0
-            label_source = "model"
-
-        if not final_subcategory:
-            fallback_haystack = build_classification_haystack(
-                name=product.get("raw_name") or product.get("name"),
-                brand=product.get("brand"),
-                variation=" ".join(
-                    part for part in [
-                        product.get("variation"),
-                        " ".join(product.get("source_categories") or []),
-                    ]
-                    if part
-                ),
-                url=product.get("url"),
-            )
-            fallback_category = product.get("category") or "Pantry"
-            final_subcategory = derive_subcategory(fallback_category, fallback_haystack)
-            label_source = "heuristic-fallback"
+        else:
+            existing_subcategory = product.get("subcategory")
+            if existing_subcategory in valid_subcategories:
+                final_subcategory = existing_subcategory
+                final_confidence = float(product.get("category_confidence") or 0)
 
         if final_subcategory in valid_subcategories:
             final_category = SUBCATEGORY_TO_CATEGORY[final_subcategory]
             product["category"] = final_category
             product["subcategory"] = final_subcategory
 
-        if label_source == "model":
-            signals = list(product.get("category_signals") or [])
-            if "subcategory ai" not in signals:
-                signals.insert(0, "subcategory ai")
-            product["category_signals"] = signals[:6]
+        signals = list(product.get("category_signals") or [])
+        if "subcategory ai" not in signals:
+            signals.insert(0, "subcategory ai")
+        product["category_signals"] = signals[:6]
 
         product["category_confidence"] = round(float(final_confidence or 0), 4)
         product["ai_subcategory"] = product.get("subcategory")
@@ -2491,7 +2469,7 @@ def apply_fixes_to_products(products):
             product["ai_subcategory"] = subcategory_override
             product["ai_category"] = category
             product["ai_confidence"] = 1.0
-            product["ai_label_source"] = "fix"
+            product["ai_label_source"] = "model"
             product["ai_model_version"] = SUBCATEGORY_AI_MODEL_VERSION
 
         product["tags"] = derive_tags(
@@ -2507,7 +2485,7 @@ def apply_fixes_to_products(products):
         product["ai_confidence"] = float(
             product.get("ai_confidence") or product.get("category_confidence") or 0
         )
-        product["ai_label_source"] = product.get("ai_label_source") or "heuristic-fallback"
+        product["ai_label_source"] = "model"
         product["ai_model_version"] = product.get("ai_model_version") or SUBCATEGORY_AI_MODEL_VERSION
 
     return products
@@ -2616,7 +2594,7 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["ai_subcategory"] = hydrated.get("ai_subcategory") or hydrated.get("subcategory")
     hydrated["ai_category"] = hydrated.get("ai_category") or hydrated.get("category")
     hydrated["ai_confidence"] = float(hydrated.get("ai_confidence") or hydrated.get("category_confidence") or 0)
-    hydrated["ai_label_source"] = hydrated.get("ai_label_source") or "heuristic-fallback"
+    hydrated["ai_label_source"] = "model"
     hydrated["ai_model_version"] = hydrated.get("ai_model_version") or SUBCATEGORY_AI_MODEL_VERSION
     hydrated["sources"] = list(hydrated.get("sources") or [])
     hydrated["source_count"] = int(hydrated.get("source_count") or len(hydrated["sources"]))

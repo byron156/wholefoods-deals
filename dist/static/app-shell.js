@@ -491,18 +491,16 @@
 
   function metaLine(product) {
     const pieces = [];
-    const shouldShowFallbackDot = product.ai_label_source && product.ai_label_source !== "model";
-    if (shouldShowFallbackDot) {
-      pieces.push(
-        `<button class="classification-dot" data-action="show-classification-info" data-key="${escapeHtml(product.key)}" type="button" title="Why this categorization?" aria-label="Why this categorization?"></button>`
-      );
-    }
     if (product.brand) {
       pieces.push(escapeHtml(product.brand));
     }
     const subcategory = effectiveSubcategory(product);
     if (subcategory && subcategoryToCategory[subcategory] && subcategory !== effectiveCategory(product)) {
       pieces.push(escapeHtml(subcategory));
+    }
+    const confidence = Number(product.ai_confidence || product.category_confidence || 0);
+    if (confidence > 0) {
+      pieces.push(`AI ${Math.round(confidence * 100)}%`);
     }
     if (!pieces.length) {
       return "";
@@ -730,11 +728,10 @@
     }
     const category = effectiveCategory(product) || "Uncategorized";
     const subcategory = effectiveSubcategory(product) || "No subcategory yet";
-    const source = product.ai_label_source === "model" ? "AI model" : "fallback rules";
     const confidence = Number(product.ai_confidence || product.category_confidence || 0);
     const confidenceText = confidence ? `Confidence: ${Math.round(confidence * 100)}%.` : "";
     window.alert(
-      `${source} placed this item in ${category} -> ${subcategory}.\n\n${confidenceText} Use "This doesn't belong here" if you want to correct it.`
+      `AI placed this item in ${category} -> ${subcategory}.\n\n${confidenceText} Use "This doesn't belong here" if you want to correct it.`
     );
   }
 
