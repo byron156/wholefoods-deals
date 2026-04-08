@@ -328,7 +328,7 @@ SUBCATEGORY_PROFILES = {
         "Juice & Smoothies": ["juice", "smoothie", "smoothies"],
         "Energy & Sports Drinks": ["energy drink", "sports drink", "electrolyte drink", "hydration mix"],
         "Soda & Soft Drinks": ["soda", "cola", "soft drink", "ginger ale", "root beer"],
-        "Functional Beverages": ["kombucha", "functional beverage", "mushroom coffee", "adaptogen drink", "elixir"],
+        "Functional Beverages": ["kombucha", "functional beverage", "mushroom coffee", "adaptogen drink", "sparkling adaptogen", "ashwagandha", "elixir"],
         "Creamers": ["creamer", "coffee creamer"],
         "Drink Mixes": ["drink mix", "powder drink", "mix packet"],
         "Mocktails & Zero Proof": ["zero proof", "non-alcoholic", "non alcoholic", "mocktail"],
@@ -1270,20 +1270,23 @@ def score_category_profile(haystack, profile):
 
 
 def derive_subcategory(category, haystack):
+    scored_subcategories = score_subcategories(category, haystack)
+    return scored_subcategories[0][0] if scored_subcategories and scored_subcategories[0][1] > 0 else None
+
+
+def score_subcategories(category, haystack):
     subcategories = SUBCATEGORY_PROFILES.get(category, {})
-    best_subcategory = None
-    best_score = 0
+    scores = []
 
     for subcategory, phrases in subcategories.items():
         score = 0
         for phrase in phrases:
             if text_contains_phrase(haystack, phrase):
                 score += 4 if " " in normalize_text_key(phrase) else 2
-        if score > best_score:
-            best_score = score
-            best_subcategory = subcategory
+        scores.append((subcategory, score))
 
-    return best_subcategory
+    scores.sort(key=lambda item: (-item[1], item[0]))
+    return scores
 
 
 def score_all_categories(haystack):
@@ -2325,7 +2328,20 @@ def apply_subcategory_ai(products):
             )
 
     allowed_subcategories = []
+    subcategory_priors = []
     for product in products:
+        haystack = build_classification_haystack(
+            name=product.get("raw_name") or product.get("name"),
+            brand=product.get("brand"),
+            variation=" ".join(
+                part for part in [
+                    product.get("variation"),
+                    " ".join(product.get("source_categories") or []),
+                ]
+                if part
+            ),
+            url=product.get("url"),
+        )
         candidate_categories = derive_category_candidates(
             name=product.get("raw_name") or product.get("name"),
             brand=product.get("brand"),
@@ -2340,11 +2356,21 @@ def apply_subcategory_ai(products):
             preferred_category=product.get("category"),
         )
         allowed = []
+        prior_scores = {}
         for category in candidate_categories:
             allowed.extend(SUBCATEGORY_PROFILES.get(category, {}).keys())
+            for subcategory, score in score_subcategories(category, haystack):
+                if score > 0:
+                    prior_scores[subcategory] = max(prior_scores.get(subcategory, 0), score)
         allowed_subcategories.append(sorted(dict.fromkeys(allowed)))
+        subcategory_priors.append(prior_scores)
 
-    predictions = predict_subcategories(model, products, allowed_subcategories=allowed_subcategories) if model is not None else []
+    predictions = predict_subcategories(
+        model,
+        products,
+        allowed_subcategories=allowed_subcategories,
+        subcategory_priors=subcategory_priors,
+    ) if model is not None else []
 
     for index, product in enumerate(products):
         product["previous_category"] = product.get("category")

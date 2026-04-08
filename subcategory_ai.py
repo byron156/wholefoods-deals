@@ -1,4 +1,5 @@
 import json
+import math
 import os
 import pickle
 import re
@@ -57,6 +58,96 @@ def build_feature_text(product):
     return " ".join(part for part in parts if part.strip())
 
 
+def tokenize_feature_text(text):
+    normalized = normalize_text(text)
+    if not normalized:
+        return []
+    return [token for token in normalized.split(" ") if token]
+
+
+def train_token_vote_model(labels, features):
+    label_doc_counts = Counter(labels)
+    label_token_counts = {}
+    label_total_tokens = {}
+    vocabulary = set()
+
+    for label, feature_text in zip(labels, features):
+        tokens = tokenize_feature_text(feature_text)
+        counter = label_token_counts.setdefault(label, Counter())
+        counter.update(tokens)
+        label_total_tokens[label] = label_total_tokens.get(label, 0) + len(tokens)
+        vocabulary.update(tokens)
+
+    return {
+        "model_type": "token_vote",
+        "labels": sorted(label_doc_counts.keys()),
+        "label_doc_counts": dict(label_doc_counts),
+        "label_total_tokens": dict(label_total_tokens),
+        "label_token_counts": {label: dict(counter) for label, counter in label_token_counts.items()},
+        "vocab_size": len(vocabulary),
+        "total_docs": sum(label_doc_counts.values()),
+    }
+
+
+def predict_token_vote_model(model, products, allowed_subcategories=None, subcategory_priors=None):
+    labels = list(model.get("labels") or [])
+    label_doc_counts = model.get("label_doc_counts") or {}
+    label_total_tokens = model.get("label_total_tokens") or {}
+    raw_label_token_counts = model.get("label_token_counts") or {}
+    label_token_counts = {
+        label: Counter(raw_label_token_counts.get(label) or {})
+        for label in labels
+    }
+    vocab_size = max(1, int(model.get("vocab_size") or 1))
+    total_docs = max(1, int(model.get("total_docs") or 1))
+
+    predictions = []
+    for index, product in enumerate(products):
+        tokens = tokenize_feature_text(build_feature_text(product))
+        allowed = set(allowed_subcategories[index] or []) if allowed_subcategories and index < len(allowed_subcategories) else None
+        priors = subcategory_priors[index] if subcategory_priors and index < len(subcategory_priors) else {}
+        candidate_labels = [label for label in labels if not allowed or label in allowed]
+        positive_prior_labels = [
+            label for label in candidate_labels
+            if float(priors.get(label, 0)) > 0
+        ]
+        if positive_prior_labels:
+            candidate_labels = positive_prior_labels
+        if not candidate_labels:
+            candidate_labels = labels[:]
+
+        if not candidate_labels:
+            predictions.append({"subcategory": None, "confidence": 0.0})
+            continue
+
+        scores = {}
+        for label in candidate_labels:
+            doc_count = max(1, int(label_doc_counts.get(label) or 1))
+            total_tokens = int(label_total_tokens.get(label) or 0)
+            token_counts = label_token_counts.get(label) or Counter()
+            score = math.log(doc_count / total_docs)
+            denominator = total_tokens + vocab_size
+            for token in tokens:
+                score += math.log((token_counts.get(token, 0) + 1) / denominator)
+            if priors and label in priors:
+                score += float(priors[label]) * 1.2
+            scores[label] = score
+
+        best_label = max(scores, key=scores.get)
+        max_score = max(scores.values())
+        exp_scores = {label: math.exp(score - max_score) for label, score in scores.items()}
+        total_score = sum(exp_scores.values()) or 1.0
+        confidence = exp_scores[best_label] / total_score
+        predictions.append(
+            {
+                "subcategory": best_label,
+                "confidence": round(float(confidence), 4),
+            }
+        )
+
+    return predictions
+
+
 def train_subcategory_model(products, valid_subcategories):
     labels = []
     features = []
@@ -78,8 +169,12 @@ def train_subcategory_model(products, valid_subcategories):
         "label_counts": dict(sorted(label_counts.items())),
     }
 
-    if not sklearn_available() or len(label_counts) < 2:
+    if len(label_counts) < 2:
         return None, metadata
+
+    if not sklearn_available():
+        metadata["model_type"] = "token_vote"
+        return train_token_vote_model(labels, features), metadata
 
     pipeline = Pipeline(
         [
@@ -102,6 +197,7 @@ def train_subcategory_model(products, valid_subcategories):
         ]
     )
     pipeline.fit(features, labels)
+    metadata["model_type"] = "sklearn_logreg"
     return pipeline, metadata
 
 
@@ -140,9 +236,17 @@ def load_model_artifacts(model_path, metadata_path):
     return model, metadata
 
 
-def predict_subcategories(model, products, allowed_subcategories=None):
+def predict_subcategories(model, products, allowed_subcategories=None, subcategory_priors=None):
     if model is None:
         return []
+
+    if isinstance(model, dict) and model.get("model_type") == "token_vote":
+        return predict_token_vote_model(
+            model,
+            products,
+            allowed_subcategories=allowed_subcategories,
+            subcategory_priors=subcategory_priors,
+        )
 
     features = [build_feature_text(product) for product in products]
     probabilities = model.predict_proba(features)

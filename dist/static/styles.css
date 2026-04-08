@@ -751,6 +751,10 @@ p {
   background: #4d80ff;
   box-shadow: 0 0 0 2px rgba(77, 128, 255, 0.14);
   flex: 0 0 auto;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  appearance: none;
 }
 
 .deal-price-row {
