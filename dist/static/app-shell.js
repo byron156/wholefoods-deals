@@ -491,9 +491,10 @@
 
   function metaLine(product) {
     const pieces = [];
-    if (product.ai_label_source && product.ai_label_source !== "model") {
+    const shouldShowFallbackDot = product.ai_label_source && product.ai_label_source !== "model";
+    if (shouldShowFallbackDot) {
       pieces.push(
-        '<span class="classification-dot" title="Shelf placement came from fallback rules, not the AI classifier." aria-label="Fallback categorization"></span>'
+        `<button class="classification-dot" data-action="show-classification-info" data-key="${escapeHtml(product.key)}" type="button" title="Why this categorization?" aria-label="Why this categorization?"></button>`
       );
     }
     if (product.brand) {
@@ -723,6 +724,20 @@
     saveProfile();
   }
 
+  function showClassificationInfo(product) {
+    if (!product) {
+      return;
+    }
+    const category = effectiveCategory(product) || "Uncategorized";
+    const subcategory = effectiveSubcategory(product) || "No subcategory yet";
+    const source = product.ai_label_source === "model" ? "AI model" : "fallback rules";
+    const confidence = Number(product.ai_confidence || product.category_confidence || 0);
+    const confidenceText = confidence ? `Confidence: ${Math.round(confidence * 100)}%.` : "";
+    window.alert(
+      `${source} placed this item in ${category} -> ${subcategory}.\n\n${confidenceText} Use "This doesn't belong here" if you want to correct it.`
+    );
+  }
+
   function renderFeed() {
     renderRetailerChips();
 
@@ -831,6 +846,11 @@
 
     if (action === "change-category") {
       openCategorySheet(product);
+      return;
+    }
+
+    if (action === "show-classification-info") {
+      showClassificationInfo(product);
       return;
     }
   }

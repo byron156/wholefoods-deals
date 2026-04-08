@@ -35,7 +35,7 @@ DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
 SUBCATEGORY_AI_MODEL_FILE = os.path.join(BASE_DIR, "subcategory_ai_model.pkl")
 SUBCATEGORY_AI_METADATA_FILE = os.path.join(BASE_DIR, "subcategory_ai_metadata.json")
 SUBCATEGORY_AI_REPORT_FILE = os.path.join(BASE_DIR, "subcategory_ai_report.json")
-SUBCATEGORY_AI_MIN_CONFIDENCE = 0.3
+SUBCATEGORY_AI_MIN_CONFIDENCE = 0.0
 
 app = Flask(__name__)
 PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")

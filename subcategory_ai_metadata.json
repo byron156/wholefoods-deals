@@ -85,7 +85,7 @@
     "Yogurt & Cultured Dairy": 19
   },
   "valid_subcategory_count": 92,
-  "minimum_confidence_for_override": 0.3,
+  "minimum_confidence_for_override": 0.0,
   "training_retailer_counts": {
     "Whole Foods": 1239,
     "H Mart": 254,
