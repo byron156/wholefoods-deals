@@ -16,11 +16,16 @@
   const retailerOrder = ["Whole Foods", "Target", "H Mart"];
 
   function normalizeProduct(product, index) {
+    const normalizedSubcategory = product.ai_subcategory || product.subcategory || "";
+    const normalizedCategory = product.ai_category || product.category || "Pantry";
     return {
       ...product,
       key: product.asin || (product.asins && product.asins[0]) || `product-${index}`,
       brand: product.brand || "",
-      category: product.category || "Pantry",
+      category: normalizedCategory,
+      subcategory: normalizedSubcategory,
+      ai_category: product.ai_category || normalizedCategory,
+      ai_subcategory: product.ai_subcategory || normalizedSubcategory,
       retailer: product.retailer || "Whole Foods",
       tags: Array.isArray(product.tags) ? product.tags : [],
       sources: Array.isArray(product.sources) ? product.sources : [],
@@ -103,6 +108,9 @@
     : Array.from(new Set(products.map((product) => product.category || "Pantry"))).sort((left, right) => left.localeCompare(right));
   const subcategoryEntries = Object.entries(subcategoryOptions).flatMap(([category, subcategories]) =>
     Object.keys(subcategories || {}).map((subcategory) => ({ category, subcategory }))
+  );
+  const subcategoryToCategory = Object.fromEntries(
+    subcategoryEntries.map((entry) => [entry.subcategory, entry.category])
   );
 
   function getDefaultProfile() {
@@ -368,11 +376,8 @@
 
   function effectiveCategory(product) {
     const subcategory = effectiveSubcategory(product);
-    if (subcategory) {
-      const entry = subcategoryEntries.find((item) => item.subcategory === subcategory);
-      if (entry) {
-        return entry.category;
-      }
+    if (subcategory && subcategoryToCategory[subcategory]) {
+      return subcategoryToCategory[subcategory];
     }
     return product.category || "Pantry";
   }
@@ -490,7 +495,7 @@
       pieces.push(product.brand);
     }
     const subcategory = effectiveSubcategory(product);
-    if (subcategory && subcategory !== effectiveCategory(product)) {
+    if (subcategory && subcategoryToCategory[subcategory] && subcategory !== effectiveCategory(product)) {
       pieces.push(subcategory);
     }
     if (!pieces.length) {

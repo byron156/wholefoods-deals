@@ -35,7 +35,7 @@ DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
 SUBCATEGORY_AI_MODEL_FILE = os.path.join(BASE_DIR, "subcategory_ai_model.pkl")
 SUBCATEGORY_AI_METADATA_FILE = os.path.join(BASE_DIR, "subcategory_ai_metadata.json")
 SUBCATEGORY_AI_REPORT_FILE = os.path.join(BASE_DIR, "subcategory_ai_report.json")
-SUBCATEGORY_AI_MIN_CONFIDENCE = 0.18
+SUBCATEGORY_AI_MIN_CONFIDENCE = 0.3
 
 app = Flask(__name__)
 PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")
@@ -72,16 +72,18 @@ CATEGORY_PROFILES = {
             "blackberries", "cherries", "fresh cherries", "citrus", "lettuce", "tomato",
             "onion", "carrot", "mango", "kiwi", "pear", "peach", "plum", "melon",
             "pineapple", "fresh mushroom", "mushroom", "mushrooms", "asparagus",
-            "herbs", "cilantro", "parsley", "basil", "spring mix", "greens",
+            "cilantro", "parsley", "basil", "spring mix", "greens",
         ],
-        "medium": ["produce", "fruit", "vegetable", "salad", "greens", "herbs", "fresh cut"],
+        "medium": ["produce", "fruit", "vegetable", "salad", "greens", "fresh cut"],
         "weak": ["cherry", "lemon", "orange", "lime"],
         "exclude": [
             "cherry cola", "cherry gummies", "gummy", "candy", "chocolate", "cookie",
             "granola bar", "protein bar", "sparkling", "seltzer", "juice box",
             "mushroom coffee", "mushroom powder", "mushroom supplement", "broth",
             "pasta", "sauce", "soup", "canned", "meal", "cheese", "wine", "beer",
-            "hard seltzer",
+            "hard seltzer", "adaptogen", "reishi", "cordyceps", "propolis",
+            "throat spray", "syrup", "elderberry", "goldenseal", "echinacea",
+            "immune support", "throat health", "sparkling adaptogen", "drink",
         ],
     },
     "Meat & Seafood": {
@@ -121,7 +123,7 @@ CATEGORY_PROFILES = {
         "strong": [
             "bread", "biscuit", "croissant", "cake", "muffin", "bagel", "cookie",
             "pie", "pastry", "brownie", "donut", "tortilla", "bun", "roll",
-            "scone", "danish",
+            "scone", "danish", "quiche",
         ],
         "medium": ["bakery", "baked", "pastry"],
         "weak": [],
@@ -186,6 +188,7 @@ CATEGORY_PROFILES = {
             "latte", "drink", "cold brew", "sparkling water", "energy drink",
             "coconut water", "zero proof", "non alcoholic", "non-alcoholic",
             "cream soda", "electrolyte drink", "drink mix", "hydration",
+            "sparkling adaptogen", "adaptogen drink", "fluid ounce bottle",
         ],
         "medium": ["beverage", "mocktail", "sports drink"],
         "weak": [],
@@ -212,7 +215,9 @@ CATEGORY_PROFILES = {
             "omega", "capsule", "wellness", "multivitamin", "shots", "shot", "peptides",
             "digestive", "powder", "electrolyte", "turmeric", "elixir", "calcium",
             "sleep support", "stress support", "hair growth", "herbal remedy",
-            "functional mushroom",
+            "functional mushroom", "propolis", "throat spray", "echinacea",
+            "goldenseal", "elderberry syrup", "licorice", "immune support",
+            "throat health", "sambucus",
         ],
         "medium": ["protein", "greens powder", "wellness", "tonic", "adaptogen", "mushroom blend"],
         "weak": [],
@@ -244,8 +249,8 @@ SUBCATEGORY_PROFILES = {
         "Fruit": ["apple", "banana", "berries", "berry", "grapes", "grape", "cherries", "cherry", "citrus", "orange", "lemon", "lime", "kiwi", "mango", "pear", "peach", "plum", "melon", "pineapple", "strawberries", "blueberries", "raspberries", "blackberries"],
         "Vegetables": ["broccoli", "cauliflower", "lettuce", "tomato", "onion", "carrot", "pepper", "cucumber", "avocado", "potato", "sweet potato", "kale", "spinach", "asparagus"],
         "Salads & Greens": ["salad", "greens", "romaine", "baby spinach", "spring mix", "salad kit", "salad mix", "arugula"],
-        "Herbs": ["herb", "cilantro", "parsley", "basil", "mint"],
-        "Mushrooms": ["mushroom", "mushrooms", "shiitake", "lion's mane", "lions mane", "oyster mushroom"],
+        "Herbs": ["cilantro", "parsley", "basil", "mint", "fresh herbs"],
+        "Mushrooms": ["mushroom", "mushrooms", "shiitake", "oyster mushroom", "portobello", "cremini"],
         "Fresh Cut & Prepared Produce": ["fresh cut", "cut fruit", "fruit cup", "prepared produce"],
     },
     "Meat & Seafood": {
@@ -267,7 +272,7 @@ SUBCATEGORY_PROFILES = {
         "Pastries & Desserts": ["croissant", "cake", "muffin", "pie", "pastry", "brownie", "donut", "scone"],
         "Cookies & Biscuits": ["cookie", "biscuit", "shortbread"],
         "Tortillas & Wraps": ["tortilla", "wrap", "flatbread", "naan"],
-        "Breakfast Bakery": ["english muffin", "breakfast pastry", "coffee cake"],
+        "Breakfast Bakery": ["english muffin", "breakfast pastry", "coffee cake", "quiche"],
     },
     "Prepared Foods": {
         "Kimchi & Banchan": ["kimchi", "banchan"],
@@ -288,7 +293,7 @@ SUBCATEGORY_PROFILES = {
     },
     "Snacks": {
         "Candy & Gummies": ["candy", "gummy", "fruit snacks", "chews", "chocolate"],
-        "Chips & Crackers": ["chips", "cracker", "pretzel", "popcorn", "crisps", "tortilla chips", "puffs", "rolled tortilla chips"],
+        "Chips & Crackers": ["chips", "cracker", "pretzel", "popcorn", "crisps", "tortilla chips", "puffs", "rolled tortilla chips", "matzo", "matzo-style"],
         "Cookies & Sweet Snacks": ["cookies", "cookie", "bites"],
         "Bars": ["granola bar", "protein bar", "snack bar", "bar"],
         "Nuts & Trail Mix": ["nuts", "trail mix", "almonds", "cashews", "pistachio"],
@@ -306,7 +311,7 @@ SUBCATEGORY_PROFILES = {
         "Oils & Vinegars": ["vinegar", "oil", "olive oil", "avocado oil"],
         "Baking Ingredients": ["flour", "baking soda", "baking powder", "cocoa powder", "vanilla extract"],
         "Spices & Seasonings": ["spice", "seasoning", "rub"],
-        "Canned & Jarred Goods": ["jarred", "canned", "bruschetta", "canned tomato"],
+        "Canned & Jarred Goods": ["jarred", "canned", "bruschetta", "canned tomato", "tomato paste", "paste tomato"],
         "Beans, Lentils & Legumes": ["beans", "lentils", "legumes", "chickpeas"],
         "International Staples": ["miso", "gochujang", "rice paper", "curry paste", "noodle"],
         "Breakfast Pantry": ["oatmeal", "cereal", "granola", "overnight oats", "oats"],
@@ -383,6 +388,8 @@ DIRECT_CATEGORY_HINTS = [
             "multivitamin", "vitamin", "multimineral", "supplement", "enzyme",
             "probiotic", "collagen", "protein powder", "electrolyte", "hair growth",
             "sleep support", "stress support", "digestive support", "functional mushroom",
+            "propolis", "throat spray", "echinacea", "goldenseal", "elderberry",
+            "immune support", "throat health", "sambucus", "licorice",
         ],
         "exclude": ["protein bar", "snack bar", "energy drink"],
     },
@@ -400,7 +407,7 @@ DIRECT_CATEGORY_HINTS = [
         "include": [
             "tortilla chips", "rolled tortilla chips", "potato chips", "corn chips",
             "pretzels", "popcorn", "crisps", "crackers", "chickpea puffs", "puffs",
-            "jerky", "granola bar", "protein bar",
+            "jerky", "granola bar", "protein bar", "matzo", "matzo-style",
         ],
         "exclude": ["chocolate chips", "baking chips"],
     },
@@ -410,7 +417,8 @@ DIRECT_CATEGORY_HINTS = [
             "dipping sauce", "dip", "sauce dip", "queso", "pasta sauce",
             "bolognese sauce", "alfredo", "dressing", "marinade", "avocado oil",
             "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "overnight oats",
-            "oats", "broth", "stock", "lentils", "meal kit",
+            "oats", "broth", "stock", "lentils", "meal kit", "tomato paste",
+            "paste tomato", "matzo ball",
         ],
         "exclude": ["chip dipper", "frozen meal"],
     },
@@ -423,7 +431,7 @@ DIRECT_CATEGORY_HINTS = [
         "category": "Prepared Foods",
         "include": [
             "kimchi", "kimbap", "gimbap", "banchan", "side dish", "sidedish",
-            "dumpling", "mandu", "tteokbokki", "deli salad", "ready meal",
+            "dumpling", "mandu", "tteokbokki", "deli salad", "ready meal", "quiche",
         ],
         "exclude": ["dish soap", "laundry"],
     },
@@ -438,8 +446,9 @@ DIRECT_CATEGORY_HINTS = [
             "coffee", "tea", "juice", "sparkling water", "seltzer", "water",
             "smoothie", "kombucha", "drink mix", "mocktail", "zero proof",
             "non alcoholic", "non-alcoholic", "sports drink", "energy drink",
+            "sparkling adaptogen", "adaptogen drink", "fluid ounce bottle",
         ],
-        "exclude": ["wine vinegar", "beer", "hard seltzer"],
+        "exclude": ["wine vinegar", "beer", "hard seltzer", "throat spray", "elderberry syrup"],
     },
 ]
 TAG_KEYWORDS = {
@@ -2222,7 +2231,13 @@ def apply_subcategory_ai(products):
     valid_subcategories = set(SUBCATEGORY_TO_CATEGORY.keys())
     training_products = [
         product for product in products
-        if product.get("subcategory") in valid_subcategories
+        if (
+            product.get("subcategory") in valid_subcategories
+            and (
+                "queued fix" in (product.get("category_signals") or [])
+                or float(product.get("category_confidence") or 0) >= 0.85
+            )
+        )
     ]
 
     model, metadata = train_subcategory_model(training_products, valid_subcategories)
@@ -2284,10 +2299,7 @@ def apply_subcategory_ai(products):
         elif (
             prediction
             and prediction.get("subcategory") in valid_subcategories
-            and (
-                final_subcategory is None
-                or (prediction.get("confidence") or 0) >= SUBCATEGORY_AI_MIN_CONFIDENCE
-            )
+            and (prediction.get("confidence") or 0) >= SUBCATEGORY_AI_MIN_CONFIDENCE
         ):
             final_subcategory = prediction["subcategory"]
             final_confidence = prediction.get("confidence") or 0
