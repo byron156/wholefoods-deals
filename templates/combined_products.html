@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260405e">
+<link rel="stylesheet" href="/static/styles.css?v=20260409a">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260405e">
+<link rel="manifest" href="/manifest.webmanifest?v=20260409a">
 </head>
 
 <body class="app-body">
@@ -43,14 +43,18 @@
     </div>
     <div class="chip-row" id="category-scope-row"></div>
     <div class="sheet-field">
+        <label for="category-select">Suggested category</label>
+        <select id="category-select" class="sheet-select"></select>
+    </div>
+    <div class="sheet-field">
         <label for="subcategory-select">Move to subcategory</label>
         <select id="subcategory-select" class="sheet-select"></select>
-        <button class="primary-button" type="button" id="queue-subcategory-fix">Apply shelf fix</button>
+        <button class="primary-button" type="button" id="queue-subcategory-fix">Send shelf feedback</button>
     </div>
     <div class="sheet-field">
         <label for="brand-fix-input">Fix brand name</label>
         <input id="brand-fix-input" class="search-input" type="text" placeholder="Brand name">
-        <button class="ghost-button" type="button" id="queue-brand-fix">Apply brand fix</button>
+        <button class="ghost-button" type="button" id="queue-brand-fix">Send brand feedback</button>
     </div>
 </section>
 
@@ -73,7 +77,7 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/app-shell.js?v=20260405e"></script>
+<script src="/static/app-shell.js?v=20260409a"></script>
 
 <noscript>
     <section class="noscript-fallback">

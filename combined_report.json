@@ -1,10 +1,8 @@
 {
-  "flyer_count": 63,
+  "flyer_count": 46,
   "all_deals_count": 500,
-  "search_deals_count": 1633,
-  "target_deals_count": 189,
-  "hmart_deals_count": 288,
-  "combined_unique_count": 2392,
-  "taxonomy_version": "bootstrap-1775699998",
-  "model_version": "taxonomy-ai-v1"
+  "search_deals_count": 1408,
+  "target_deals_count": 219,
+  "hmart_deals_count": 276,
+  "combined_unique_count": 2159
 }

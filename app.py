@@ -7,6 +7,19 @@ from collections import Counter
 from functools import lru_cache
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from brand_ai import build_brand_family_map
+from taxonomy_ai import (
+    CLASSIFICATION_CACHE_FILE as TAXONOMY_CLASSIFICATION_CACHE_FILENAME,
+    DISCOVERED_TAXONOMY_FILE as DISCOVERED_TAXONOMY_FILENAME,
+    MODEL_VERSION as TAXONOMY_AI_MODEL_VERSION,
+    OLLAMA_MODEL as TAXONOMY_AI_MODEL_NAME,
+    PROMPT_VERSION as TAXONOMY_AI_PROMPT_VERSION,
+    build_cache_artifact,
+    build_report_artifact,
+    build_taxonomy_artifact,
+    classify_products as classify_products_with_taxonomy_ai,
+    ensure_taxonomy,
+    taxonomy_to_options,
+)
 from subcategory_ai import (
     MODEL_VERSION as SUBCATEGORY_AI_MODEL_VERSION,
     build_change_report as build_subcategory_ai_change_report,
@@ -35,6 +48,9 @@ DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
 SUBCATEGORY_AI_MODEL_FILE = os.path.join(BASE_DIR, "subcategory_ai_model.pkl")
 SUBCATEGORY_AI_METADATA_FILE = os.path.join(BASE_DIR, "subcategory_ai_metadata.json")
 SUBCATEGORY_AI_REPORT_FILE = os.path.join(BASE_DIR, "subcategory_ai_report.json")
+DISCOVERED_TAXONOMY_FILE = build_taxonomy_artifact(BASE_DIR)
+TAXONOMY_CLASSIFICATION_CACHE_FILE = build_cache_artifact(BASE_DIR)
+TAXONOMY_AI_REPORT_FILE = build_report_artifact(BASE_DIR)
 SUBCATEGORY_AI_MIN_CONFIDENCE = 0.0
 
 app = Flask(__name__)
@@ -2540,6 +2556,7 @@ def build_combined_products(
     search_deals_products,
     target_deals_products=None,
     hmart_deals_products=None,
+    force_taxonomy_rediscovery=False,
 ):
     combined = {}
     target_deals_products = target_deals_products or []
@@ -2563,12 +2580,19 @@ def build_combined_products(
     previous_brand_signature = None
     for _ in range(4):
         ordered = normalize_brands_across_products(ordered)
-        ordered = apply_fixes_to_products(ordered)
         brand_signature = tuple(sorted({product.get("brand") or "" for product in ordered}))
         if brand_signature == previous_brand_signature:
             break
         previous_brand_signature = brand_signature
-    ordered = apply_subcategory_ai(ordered)
+    ordered, taxonomy = classify_products_with_taxonomy_ai(
+        BASE_DIR,
+        ordered,
+        force_rediscover=force_taxonomy_rediscovery,
+    )
+    taxonomy_categories = [category.get("name") for category in taxonomy.get("categories") or []]
+    for product in ordered:
+        if product.get("category") not in taxonomy_categories and taxonomy_categories:
+            product["category"] = product.get("ai_category") or product.get("category") or taxonomy_categories[0]
     ordered.sort(
         key=lambda product: (
             -product.get("source_count", 0),
@@ -2601,8 +2625,12 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["ai_subcategory"] = hydrated.get("ai_subcategory") or hydrated.get("subcategory")
     hydrated["ai_category"] = hydrated.get("ai_category") or hydrated.get("category")
     hydrated["ai_confidence"] = float(hydrated.get("ai_confidence") or hydrated.get("category_confidence") or 0)
+    hydrated["ai_reasoning"] = hydrated.get("ai_reasoning") or ""
+    hydrated["ai_model_name"] = hydrated.get("ai_model_name") or TAXONOMY_AI_MODEL_NAME
+    hydrated["ai_taxonomy_version"] = hydrated.get("ai_taxonomy_version")
+    hydrated["ai_fingerprint"] = hydrated.get("ai_fingerprint")
     hydrated["ai_label_source"] = "model"
-    hydrated["ai_model_version"] = hydrated.get("ai_model_version") or SUBCATEGORY_AI_MODEL_VERSION
+    hydrated["ai_model_version"] = hydrated.get("ai_model_version") or TAXONOMY_AI_MODEL_VERSION
     hydrated["sources"] = list(hydrated.get("sources") or [])
     hydrated["source_count"] = int(hydrated.get("source_count") or len(hydrated["sources"]))
     hydrated["tags"] = list(hydrated.get("tags") or [])
@@ -2648,8 +2676,22 @@ def load_base_combined_products():
 
 
 def load_combined_products():
-    products = [dict(product) for product in load_base_combined_products()]
-    return apply_fixes_to_products(products)
+    return [dict(product) for product in load_base_combined_products()]
+
+
+def load_active_taxonomy():
+    products = load_combined_products()
+    return ensure_taxonomy(BASE_DIR, products, force_rediscover=False)
+
+
+def active_taxonomy_category_names():
+    taxonomy = load_active_taxonomy()
+    return [category.get("name") for category in taxonomy.get("categories") or []]
+
+
+def active_taxonomy_subcategory_options():
+    taxonomy = load_active_taxonomy()
+    return taxonomy_to_options(taxonomy)
 
 
 def fetch_products():
@@ -2880,6 +2922,7 @@ def api_fixes_to_deploy():
             {
                 "fixes": load_fixes_to_deploy(),
                 "storage": "supabase" if supabase_enabled() else "local",
+                "mode": "feedback-only",
             }
         )
 
@@ -2892,7 +2935,14 @@ def api_fixes_to_deploy():
 
     if kind == "subcategory":
         subcategory = (payload.get("subcategory") or "").strip()
-        if subcategory not in SUBCATEGORY_TO_CATEGORY:
+        category = (payload.get("category") or "").strip()
+        active_options = active_taxonomy_subcategory_options()
+        valid_pairs = {
+            (current_category, current_subcategory)
+            for current_category, subcategories in active_options.items()
+            for current_subcategory in (subcategories or {}).keys()
+        }
+        if (category, subcategory) not in valid_pairs:
             return jsonify({"error": "Invalid subcategory"}), 400
         if scope not in {"item", "similar"}:
             return jsonify({"error": "Invalid scope"}), 400
@@ -2901,10 +2951,11 @@ def api_fixes_to_deploy():
         if scope == "similar" and not signature:
             return jsonify({"error": "Missing signature"}), 400
 
+        feedback_value = json.dumps({"category": category, "subcategory": subcategory}, ensure_ascii=False)
         if scope == "item":
-            fixes["subcategory_overrides_by_key"][product_key] = subcategory
+            fixes["subcategory_overrides_by_key"][product_key] = feedback_value
         else:
-            fixes["subcategory_overrides_by_signature"][signature] = subcategory
+            fixes["subcategory_overrides_by_signature"][signature] = feedback_value
 
         save_fixes_to_deploy(fixes)
         fix_id = f"subcategory:{scope}:{product_key or signature}"
@@ -2914,9 +2965,21 @@ def api_fixes_to_deploy():
             scope=scope,
             product_key=product_key or None,
             signature=signature or None,
-            value=subcategory,
+            retailer=(payload.get("retailer") or "").strip() or None,
+            value=feedback_value,
+            status="pending_feedback",
         )
-        return jsonify({"ok": True, "kind": kind, "scope": scope, "subcategory": subcategory})
+        return jsonify(
+            {
+                "ok": True,
+                "kind": kind,
+                "scope": scope,
+                "queued": True,
+                "mode": "feedback-only",
+                "category": category,
+                "subcategory": subcategory,
+            }
+        )
 
     if kind == "brand":
         brand = clean_brand_display((payload.get("brand") or "").strip())
@@ -2943,8 +3006,10 @@ def api_fixes_to_deploy():
             product_key=product_key or None,
             signature=signature or None,
             value=brand,
+            retailer=(payload.get("retailer") or "").strip() or None,
+            status="pending_feedback",
         )
-        return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand})
+        return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand, "queued": True, "mode": "feedback-only"})
 
     if kind == "category_order":
         retailer = (payload.get("retailer") or "").strip()
@@ -2990,14 +3055,15 @@ def combined_products_home():
         )
 
     products = sort_products_for_display(load_combined_products())
+    taxonomy = load_active_taxonomy()
     deal_count = len(products)
     return render_template(
         "combined_products.html",
         products=products,
         deal_count=deal_count,
         available_stores=SUPPORTED_STORES,
-        category_names=sorted(CATEGORY_PROFILES.keys()),
-        subcategory_options=SUBCATEGORY_PROFILES,
+        category_names=[category.get("name") for category in taxonomy.get("categories") or []],
+        subcategory_options=taxonomy_to_options(taxonomy),
         category_order={},
         feedback_endpoint=api_url("/api/fixes"),
         profile_endpoint=api_url("/api/profile"),

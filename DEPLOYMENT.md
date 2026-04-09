@@ -47,6 +47,29 @@ That generates:
 - `dist/static/*`
 - `dist/data/*`
 
+## Local AI Taxonomy Runtime
+
+The taxonomy/classification pipeline is now designed to use a local Ollama model during refresh time, not during website requests.
+
+Recommended setup:
+
+```bash
+brew install ollama
+ollama serve
+ollama pull gemma3:4b
+```
+
+Notes:
+
+- Daily refreshes classify only new/changed products against the active cached taxonomy.
+- A full taxonomy rediscovery is manual:
+
+```bash
+python3 refresh_and_post_results.py --rediscover-taxonomy
+```
+
+- Ollama must be running for the first taxonomy discovery and for any uncached product classification. The pipeline no longer bootstraps from old catalog labels.
+
 ## Cloudflare Pages
 
 Recommended Pages setup:

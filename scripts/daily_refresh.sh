@@ -47,8 +47,15 @@ git add \
   captured_batches.json \
   search_deals_products.json \
   search_deals_report.json \
+  target_deals_products.json \
+  target_deals_report.json \
+  hmart_deals_products.json \
+  hmart_deals_report.json \
   combined_products.json \
   combined_report.json \
+  discovered_taxonomy.json \
+  taxonomy_classification_cache.json \
+  taxonomy_ai_report.json \
   dist
 
 if git diff --cached --quiet; then

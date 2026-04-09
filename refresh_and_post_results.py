@@ -1,5 +1,6 @@
 import json
 import os
+import argparse
 
 from app import (
     BASE_DIR,
@@ -38,6 +39,14 @@ def write_json(path, payload):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--rediscover-taxonomy",
+        action="store_true",
+        help="Run a full taxonomy re-discovery before classification.",
+    )
+    args = parser.parse_args()
+
     print("Refreshing search deals...")
     search_result = discover_search_deals()
     write_json(SEARCH_DEALS_PRODUCTS_FILE, search_result["products"])
@@ -105,6 +114,7 @@ def main():
         normalized_search_deals_products,
         normalized_target_deals_products,
         normalized_hmart_deals_products,
+        force_taxonomy_rediscovery=args.rediscover_taxonomy,
     )
     write_json(COMBINED_PRODUCTS_FILE, combined_products)
     write_json(

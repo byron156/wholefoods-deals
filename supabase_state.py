@@ -73,7 +73,7 @@ def load_fixes_from_supabase():
     return fixes
 
 
-def save_fix_to_supabase(*, fix_id, fix_type, scope=None, product_key=None, signature=None, retailer=None, value=None):
+def save_fix_to_supabase(*, fix_id, fix_type, scope=None, product_key=None, signature=None, retailer=None, value=None, status="active"):
     client = get_supabase_client()
     if client is None:
         return False
@@ -88,7 +88,7 @@ def save_fix_to_supabase(*, fix_id, fix_type, scope=None, product_key=None, sign
                 "signature": signature,
                 "retailer": retailer,
                 "value": value,
-                "status": "active",
+                "status": status,
             },
             on_conflict="id",
         ).execute()
