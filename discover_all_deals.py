@@ -295,6 +295,46 @@ def click_first(locators, timeout=2500) -> bool:
     return False
 
 
+def click_first_no_wait(locators, timeout=2500) -> bool:
+    for locator in locators:
+        try:
+            count = locator.count()
+            for i in range(min(count, 12)):
+                candidate = locator.nth(i)
+                try:
+                    candidate.scroll_into_view_if_needed(timeout=800)
+                except Exception:
+                    pass
+
+                try:
+                    candidate.click(timeout=timeout, no_wait_after=True)
+                    return True
+                except Exception:
+                    try:
+                        candidate.click(timeout=timeout, force=True, no_wait_after=True)
+                        return True
+                    except Exception:
+                        try:
+                            candidate.evaluate(
+                                """
+                                (el) => {
+                                    el.scrollIntoView({ block: "center", inline: "center" });
+                                    ["mousedown", "mouseup", "click"].forEach((type) => {
+                                        el.dispatchEvent(new MouseEvent(type, { bubbles: true, cancelable: true, view: window }));
+                                    });
+                                    if (typeof el.click === "function") el.click();
+                                    return true;
+                                }
+                                """
+                            )
+                            return True
+                        except Exception:
+                            continue
+        except Exception:
+            continue
+    return False
+
+
 def debug_body(page) -> None:
     try:
         body = page.locator("body").inner_text(timeout=4000)
@@ -442,6 +482,39 @@ def fill_store_search_input(scope, page, value: str) -> bool:
     return False
 
 
+def click_columbus_store_result(scope) -> bool:
+    result_patterns = [
+        re.compile(r"columbus circle", re.I),
+        re.compile(r"10 columbus circle", re.I),
+    ]
+
+    for pattern in result_patterns:
+        try:
+            card = scope.locator("li, article, [data-testid], [class*='store']").filter(has_text=pattern).first
+            targeted = [
+                card.locator(".w-store-finder-store-selector"),
+                card.get_by_text(re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+                card.get_by_role("button", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+                card.get_by_role("link", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+                card.locator('button'),
+                card.locator('a'),
+            ]
+            if click_first_no_wait(targeted, timeout=2400):
+                return True
+            if click_first_no_wait([card], timeout=2200):
+                return True
+        except Exception:
+            continue
+
+    generic = [
+        scope.get_by_role("button", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+        scope.get_by_role("link", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+        scope.get_by_text(re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+        scope.locator('button:has-text("Make this my store"), button:has-text("Select store"), button:has-text("Choose store")'),
+    ]
+    return click_first_no_wait(generic, timeout=2200)
+
+
 def set_store_via_store_modal_url(page, progress: ProgressBar, start_progress: float = 0.01, end_progress: float = SET_STORE_PROGRESS) -> None:
     total_steps = [
         ("goto", 2500),
@@ -472,12 +545,13 @@ def set_store_via_store_modal_url(page, progress: ProgressBar, start_progress: f
     modal = get_store_modal(page)
     scope = modal or page
 
-    made_store = click_first([
-        scope.get_by_role("button", name=re.compile(r"make this my store", re.I)),
-        scope.get_by_role("link", name=re.compile(r"make this my store", re.I)),
-        scope.get_by_text(re.compile(r"make this my store", re.I)),
-        scope.locator("text=Make this my store"),
-    ])
+    made_store = click_columbus_store_result(scope)
+    if not made_store:
+        dismiss_popups(page)
+        page.wait_for_timeout(600)
+        modal = get_store_modal(page)
+        scope = modal or page
+        made_store = click_columbus_store_result(scope)
     if not made_store:
         debug_body(page)
         raise RuntimeError('Could not click the first "Make this my store".')

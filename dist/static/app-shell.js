@@ -97,6 +97,7 @@
     categorySheetTitle: document.getElementById("category-sheet-title"),
     categorySheetCopy: document.getElementById("category-sheet-copy"),
     categoryScopeRow: document.getElementById("category-scope-row"),
+    categorySelect: document.getElementById("category-select"),
     subcategorySelect: document.getElementById("subcategory-select"),
     brandFixInput: document.getElementById("brand-fix-input"),
     queueSubcategoryFix: document.getElementById("queue-subcategory-fix"),
@@ -137,8 +138,6 @@
     activeRetailer: retailerList[0] || "Whole Foods",
     categoryTargetKey: null,
     categoryScope: "similar",
-    categoryOverridesByKey: {},
-    categoryOverridesBySignature: {},
   };
 
   function stripBrandPrefixFromName(name, oldBrand, nextBrand) {
@@ -360,26 +359,11 @@
   }
 
   function effectiveSubcategory(product) {
-    const itemOverride = (state.categoryOverridesByKey || {})[product.key];
-    if (itemOverride) {
-      return itemOverride;
-    }
-    const signature = subcategorySignature(product);
-    if (signature) {
-      const similarOverride = (state.categoryOverridesBySignature || {})[signature];
-      if (similarOverride) {
-        return similarOverride;
-      }
-    }
     return product.subcategory || "";
   }
 
   function effectiveCategory(product) {
-    const subcategory = effectiveSubcategory(product);
-    if (subcategory && subcategoryToCategory[subcategory]) {
-      return subcategoryToCategory[subcategory];
-    }
-    return product.category || "Pantry";
+    return product.category || subcategoryToCategory[effectiveSubcategory(product)] || "Pantry";
   }
 
   function rankProductList(list) {
@@ -587,7 +571,7 @@
     state.categoryTargetKey = product.key;
     state.categoryScope = subcategorySignature(product) ? "similar" : "item";
     nodes.categorySheetTitle.textContent = "Improve this item";
-    nodes.categorySheetCopy.textContent = "Fix the shelf or brand for this item so the app gets smarter.";
+    nodes.categorySheetCopy.textContent = "Send feedback for the next AI refresh. This will not change the live label immediately.";
     renderCategorySheet(product);
     nodes.categorySheetBackdrop.classList.remove("hidden");
     nodes.categorySheet.classList.remove("hidden");
@@ -609,10 +593,19 @@
         ? `<button class="chip ${state.categoryScope === "similar" ? "is-selected" : ""}" data-category-scope="similar" type="button">Similar items too</button>`
         : "",
     ].join("");
-    nodes.subcategorySelect.innerHTML = subcategoryEntries
-      .map((entry) => `<option value="${escapeHtml(entry.subcategory)}"${effectiveSubcategory(product) === entry.subcategory ? " selected" : ""}>${escapeHtml(entry.category)} - ${escapeHtml(entry.subcategory)}</option>`)
+    const currentCategory = effectiveCategory(product);
+    nodes.categorySelect.innerHTML = categoryList
+      .map((category) => `<option value="${escapeHtml(category)}"${currentCategory === category ? " selected" : ""}>${escapeHtml(category)}</option>`)
       .join("");
+    renderSubcategorySelect(nodes.categorySelect.value, effectiveSubcategory(product));
     nodes.brandFixInput.value = product.brand || "";
+  }
+
+  function renderSubcategorySelect(category, selectedSubcategory) {
+    const currentOptions = Object.keys(subcategoryOptions[category] || {});
+    nodes.subcategorySelect.innerHTML = currentOptions
+      .map((subcategory) => `<option value="${escapeHtml(subcategory)}"${selectedSubcategory === subcategory ? " selected" : ""}>${escapeHtml(subcategory)}</option>`)
+      .join("");
   }
 
   async function submitFix(payload) {
@@ -627,32 +620,21 @@
     if (!response.ok) {
       throw new Error(`Fix request failed with status ${response.status}`);
     }
+    return response.json();
   }
 
-  function applySubcategoryOverride(product, subcategory) {
-    if (state.categoryScope === "similar") {
-      const signature = subcategorySignature(product);
-      if (signature) {
-        state.categoryOverridesBySignature = {
-          ...(state.categoryOverridesBySignature || {}),
-          [signature]: subcategory,
-        };
-      }
-    } else {
-      state.categoryOverridesByKey = {
-        ...(state.categoryOverridesByKey || {}),
-        [product.key]: subcategory,
-      };
-    }
-
+  function applySubcategoryOverride(product, category, subcategory) {
     closeCategorySheet();
-    renderFeed();
     submitFix({
       kind: "subcategory",
       scope: state.categoryScope,
       product_key: product.key,
       signature: subcategorySignature(product),
+      retailer: product.retailer,
+      category,
       subcategory,
+    }).then(() => {
+      window.alert("Feedback saved for the next AI refresh.");
     }).catch((error) => {
       console.warn("Could not apply subcategory fix:", error);
     });
@@ -664,25 +646,16 @@
       return;
     }
 
-    if (state.categoryScope === "similar") {
-      const signature = brandSignature(product);
-      products.forEach((candidate) => {
-        if (brandSignature(candidate) === signature) {
-          candidate.brand = cleanedBrand;
-        }
-      });
-    } else {
-      product.brand = cleanedBrand;
-    }
-
     closeCategorySheet();
-    renderFeed();
     submitFix({
       kind: "brand",
       scope: state.categoryScope,
       product_key: product.key,
       signature: brandSignature(product),
+      retailer: product.retailer,
       brand: cleanedBrand,
+    }).then(() => {
+      window.alert("Brand feedback saved for the next AI refresh.");
     }).catch((error) => {
       console.warn("Could not apply brand fix:", error);
     });
@@ -730,8 +703,9 @@
     const subcategory = effectiveSubcategory(product) || "No subcategory yet";
     const confidence = Number(product.ai_confidence || product.category_confidence || 0);
     const confidenceText = confidence ? `Confidence: ${Math.round(confidence * 100)}%.` : "";
+    const reasoning = product.ai_reasoning ? `\n\nWhy: ${product.ai_reasoning}` : "";
     window.alert(
-      `AI placed this item in ${category} -> ${subcategory}.\n\n${confidenceText} Use "This doesn't belong here" if you want to correct it.`
+      `AI placed this item in ${category} -> ${subcategory}.\n\n${confidenceText}${reasoning}\n\nUse "This doesn't belong here" to send feedback for the next refresh.`
     );
   }
 
@@ -744,29 +718,6 @@
     }
 
     renderShelves();
-  }
-
-  function applySharedFixes(fixes) {
-    if (!fixes || typeof fixes !== "object") {
-      return;
-    }
-
-    state.categoryOverridesByKey = { ...(fixes.subcategory_overrides_by_key || {}) };
-    state.categoryOverridesBySignature = { ...(fixes.subcategory_overrides_by_signature || {}) };
-
-    const brandByKey = fixes.brand_overrides_by_key || {};
-    const brandBySignature = fixes.brand_overrides_by_signature || {};
-
-    products.forEach((product) => {
-      const nextBrand = brandByKey[product.key] || brandBySignature[brandSignature(product)];
-      if (nextBrand) {
-        const previousBrand = product.brand;
-        product.brand = nextBrand;
-        product.name = stripBrandPrefixFromName(product.name, previousBrand, nextBrand);
-      }
-    });
-
-    rebuildDerivedCollections();
   }
 
   async function loadRemoteProfile() {
@@ -793,23 +744,6 @@
       saveProfile();
     } catch (error) {
       console.warn("Could not load profile remotely:", error);
-    }
-  }
-
-  async function loadRemoteFixes() {
-    try {
-      const response = await fetch(feedbackEndpoint);
-      if (!response.ok) {
-        throw new Error(`Fixes request failed with status ${response.status}`);
-      }
-      const payload = await response.json();
-      if (!payload || !payload.fixes) {
-        return;
-      }
-      applySharedFixes(payload.fixes);
-      renderFeed();
-    } catch (error) {
-      console.warn("Could not load shared fixes:", error);
     }
   }
 
@@ -882,7 +816,7 @@
     if (!product) {
       return;
     }
-    applySubcategoryOverride(product, nodes.subcategorySelect.value);
+    applySubcategoryOverride(product, nodes.categorySelect.value, nodes.subcategorySelect.value);
   });
   nodes.queueBrandFix.addEventListener("click", () => {
     const product = productByKey.get(state.categoryTargetKey);
@@ -897,7 +831,10 @@
     renderFeed();
   });
 
+  nodes.categorySelect.addEventListener("change", () => {
+    renderSubcategorySelect(nodes.categorySelect.value, "");
+  });
+
   renderFeed();
   loadRemoteProfile();
-  loadRemoteFixes();
 })();

@@ -4,5 +4,7 @@
   "search_deals_count": 1633,
   "target_deals_count": 189,
   "hmart_deals_count": 288,
-  "combined_unique_count": 2392
+  "combined_unique_count": 2392,
+  "taxonomy_version": "bootstrap-1775699998",
+  "model_version": "taxonomy-ai-v1"
 }
