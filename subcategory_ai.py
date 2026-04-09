@@ -15,7 +15,7 @@ except ImportError:  # pragma: no cover
     Pipeline = None
 
 
-MODEL_VERSION = "subcategory-ai-v1"
+MODEL_VERSION = "subcategory-ai-v2"
 
 
 def sklearn_available():
@@ -46,8 +46,6 @@ def build_feature_text(product):
         f"brand {normalize_text(product.get('brand'))}",
         f"name {normalize_text(product.get('name'))}",
         f"raw {normalize_text(product.get('raw_name'))}",
-        f"parent_category {normalize_text(product.get('category'))}",
-        f"heuristic_subcategory {normalize_text(product.get('subcategory'))}",
         f"variation {normalize_text(product.get('variation'))}",
         f"sources {normalize_text(flatten_text_list(product.get('sources')))}",
         f"source_categories {normalize_text(flatten_text_list(product.get('source_categories')))}",
@@ -107,21 +105,12 @@ def predict_token_vote_model(model, products, allowed_subcategories=None, subcat
         allowed = set(allowed_subcategories[index] or []) if allowed_subcategories and index < len(allowed_subcategories) else None
         priors = subcategory_priors[index] if subcategory_priors and index < len(subcategory_priors) else {}
         candidate_labels = [label for label in labels if not allowed or label in allowed]
-        positive_prior_labels = [
-            label for label in candidate_labels
-            if float(priors.get(label, 0)) > 0
-        ]
-        if positive_prior_labels:
-            candidate_labels = positive_prior_labels
-        if not candidate_labels:
-            candidate_labels = labels[:]
-
-        if not candidate_labels:
+        if not labels:
             predictions.append({"subcategory": None, "confidence": 0.0})
             continue
 
         scores = {}
-        for label in candidate_labels:
+        for label in labels:
             doc_count = max(1, int(label_doc_counts.get(label) or 1))
             total_tokens = int(label_total_tokens.get(label) or 0)
             token_counts = label_token_counts.get(label) or Counter()
@@ -130,10 +119,13 @@ def predict_token_vote_model(model, products, allowed_subcategories=None, subcat
             for token in tokens:
                 score += math.log((token_counts.get(token, 0) + 1) / denominator)
             if priors and label in priors:
-                score += float(priors[label]) * 1.2
+                score += float(priors[label]) * 2.5
             scores[label] = score
 
-        best_label = max(scores, key=scores.get)
+        if candidate_labels:
+            best_label = max(candidate_labels, key=lambda label: scores[label])
+        else:
+            best_label = max(scores, key=scores.get)
         max_score = max(scores.values())
         exp_scores = {label: math.exp(score - max_score) for label, score in scores.items()}
         total_score = sum(exp_scores.values()) or 1.0

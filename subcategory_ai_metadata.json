@@ -1,6 +1,6 @@
 {
-  "model_version": "subcategory-ai-v1",
-  "training_examples": 1829,
+  "model_version": "subcategory-ai-v2",
+  "training_examples": 1828,
   "label_counts": {
     "Baking Ingredients": 21,
     "Baking Mixes & Meal Kits": 10,
@@ -10,7 +10,7 @@
     "Beef, Pork & Lamb": 32,
     "Beer": 18,
     "Body Care": 8,
-    "Bread & Bagels": 18,
+    "Bread & Bagels": 17,
     "Breakfast Bakery": 2,
     "Breakfast Pantry": 51,
     "Broth, Soup & Stock": 50,
@@ -47,7 +47,7 @@
     "Hair Care": 23,
     "Hard Seltzer": 2,
     "Herbal Remedies": 31,
-    "Herbs": 4,
+    "Herbs": 3,
     "Ice Cream & Novelties": 17,
     "International Staples": 9,
     "Jerky & Savory Protein Snacks": 5,
@@ -61,11 +61,11 @@
     "Oils & Vinegars": 65,
     "Paper & Trash": 1,
     "Pasta, Rice & Grains": 56,
-    "Pastries & Desserts": 17,
+    "Pastries & Desserts": 16,
     "Protein & Collagen": 23,
     "Rice Meals & Kimbap": 1,
-    "Salads & Greens": 3,
-    "Sauces & Marinades": 59,
+    "Salads & Greens": 1,
+    "Sauces & Marinades": 63,
     "Sausages & Meatballs": 5,
     "Seafood": 33,
     "Skin Care": 9,
@@ -88,12 +88,12 @@
   "valid_subcategory_count": 92,
   "minimum_confidence_for_override": 0.0,
   "training_retailer_counts": {
-    "Whole Foods": 1239,
-    "H Mart": 254,
+    "Whole Foods": 1238,
+    "H Mart": 253,
     "Target": 122
   },
   "training_category_counts": {
-    "Pantry": 435,
+    "Pantry": 439,
     "Snacks": 317,
     "Beverages": 277,
     "Supplements & Wellness": 221,
@@ -101,10 +101,10 @@
     "Meat & Seafood": 97,
     "Prepared Foods": 81,
     "Beauty & Personal Care": 61,
-    "Produce": 56,
+    "Produce": 53,
     "Alcohol": 51,
     "Frozen": 46,
-    "Bakery": 41,
+    "Bakery": 39,
     "Household": 2
   }
 }

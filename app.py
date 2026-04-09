@@ -179,7 +179,7 @@ CATEGORY_PROFILES = {
             "bolognese sauce", "avocado oil", "olive oil", "mayo", "mayonnaise",
             "vinaigrette", "aioli", "oats", "overnight oats", "lentils", "legumes",
             "baking mix", "meal kit", "stock", "condiment", "chili crisp",
-            "pie filling", "tomato paste",
+            "pie filling", "tomato paste", "pesto",
         ],
         "medium": ["pantry", "mix", "canned", "jarred", "breakfast pantry"],
         "weak": [],
@@ -305,7 +305,7 @@ SUBCATEGORY_PROFILES = {
     },
     "Pantry": {
         "Pasta, Rice & Grains": ["pasta", "rice", "grain", "quinoa", "couscous", "farro"],
-        "Sauces & Marinades": ["sauce", "marinade", "pasta sauce", "alfredo", "bolognese"],
+        "Sauces & Marinades": ["sauce", "marinade", "pasta sauce", "alfredo", "bolognese", "pesto"],
         "Broth, Soup & Stock": ["broth", "soup", "stock"],
         "Dressings & Mayo": ["dressing", "mayo", "mayonnaise", "vinaigrette", "aioli"],
         "Dips & Spreads": ["hummus", "hommus", "dip", "dips", "guacamole", "queso"],
@@ -422,6 +422,7 @@ DIRECT_CATEGORY_HINTS = [
             "bolognese sauce", "alfredo", "dressing", "marinade", "avocado oil",
             "olive oil", "mayo", "mayonnaise", "vinaigrette", "aioli", "overnight oats",
             "oats", "broth", "stock", "lentils", "meal kit", "tomato paste",
+            "pesto",
             "paste tomato", "matzo ball", "pie filling",
         ],
         "exclude": ["chip dipper", "frozen meal"],
@@ -1283,6 +1284,13 @@ def score_subcategories(category, haystack):
         for phrase in phrases:
             if text_contains_phrase(haystack, phrase):
                 score += 4 if " " in normalize_text_key(phrase) else 2
+        if category == "Produce":
+            if any(text_contains_phrase(haystack, phrase) for phrase in ["fluid ounce", "bottle", "can", "drink", "juice", "seltzer", "water"]):
+                score -= 6
+        elif category == "Bakery":
+            if any(text_contains_phrase(haystack, phrase) for phrase in ["cookie", "cookies", "cracker", "crackers", "wafel", "wafels", "wafer", "snack"]):
+                if subcategory in {"Bread & Bagels", "Pastries & Desserts", "Breakfast Bakery"}:
+                    score -= 4
         scores.append((subcategory, score))
 
     scores.sort(key=lambda item: (-item[1], item[0]))
@@ -2353,7 +2361,6 @@ def apply_subcategory_ai(products):
                 if part
             ),
             url=product.get("url"),
-            preferred_category=product.get("category"),
         )
         allowed = []
         prior_scores = {}
