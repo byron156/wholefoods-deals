@@ -111,10 +111,10 @@
     "url": null,
     "unit_price": null,
     "current_price": "$5.32 ea",
-    "basis_price": "$5.99 ea",
+    "basis_price": "$6.99 ea",
     "prime_price": "$4.79 ea",
-    "discount": "20% off",
-    "discount_percent": 20,
+    "discount": "31% off",
+    "discount_percent": 31,
     "emoji": "🍓",
     "available_store_ids": [
       "10160"
@@ -193,7 +193,7 @@
     "sale_price": "$3.88/lb"
   },
   {
-    "asin": "B07HMC7VGJ",
+    "asin": "B07DDN5H9M",
     "name": "Sablefish Fillets",
     "raw_name": "Sablefish Fillets",
     "brand": null,
@@ -206,7 +206,7 @@
     "url": null,
     "unit_price": null,
     "current_price": "11% off",
-    "basis_price": "$36.99/lb",
+    "basis_price": "$15.99/lb",
     "prime_price": null,
     "discount": "20% off",
     "discount_percent": 20,
@@ -215,7 +215,7 @@
       "10160"
     ],
     "asins": [
-      "B07HMC7VGJ"
+      "B07DDN5H9M"
     ],
     "tags": [],
     "rank": 7,
@@ -335,10 +335,10 @@
     "url": null,
     "unit_price": null,
     "current_price": "2 for $3.34",
-    "basis_price": "$2.69 ea",
+    "basis_price": "$2.49 ea",
     "prime_price": "$1.50 ea",
-    "discount": "44% off",
-    "discount_percent": 44,
+    "discount": "40% off",
+    "discount_percent": 40,
     "emoji": "🥑",
     "available_store_ids": [
       "10160"
@@ -368,7 +368,7 @@
     "url": null,
     "unit_price": null,
     "current_price": "11% off",
-    "basis_price": "$4.69 to $5.79/lb",
+    "basis_price": "$4.69 to $6.79/lb",
     "prime_price": null,
     "discount": "20% off",
     "discount_percent": 20,
@@ -379,14 +379,16 @@
     "asins": [
       "B09V3L5ZYM",
       "B07HMBSDQX",
-      "B09V3LWGWX"
+      "B09V3LWGWX",
+      "B09V3DRHYY",
+      "B09V3PTTJ1"
     ],
     "tags": [],
     "rank": 12,
     "sale_price": "11% off"
   },
   {
-    "asin": "B0FSSDHXMV",
+    "asin": "B08D9HLBXH",
     "name": "St. Louis–Style Pork Spareribs",
     "raw_name": "St. Louis–Style Pork Spareribs",
     "brand": null,
@@ -410,7 +412,9 @@
       "10160"
     ],
     "asins": [
-      "B0FSSDHXMV"
+      "B08D9HLBXH",
+      "B0FSSDHXMV",
+      "B0787ZJNBB"
     ],
     "tags": [],
     "rank": 13,
@@ -445,9 +449,12 @@
     "asins": [
       "B07FZGK294",
       "B07FZJXGGK",
+      "B0DBHYDMP7",
       "B07FZ1K4TJ",
+      "B0787Z4BLG",
       "B07G591MZY",
-      "B07NS2CT14"
+      "B07NS2CT14",
+      "B07R7P7BQQ"
     ],
     "tags": [],
     "rank": 14,
@@ -938,7 +945,7 @@
     "url": null,
     "unit_price": null,
     "current_price": "16% off",
-    "basis_price": "$1.79 to $25.49 ea",
+    "basis_price": "$1.05 to $25.49 ea",
     "prime_price": null,
     "discount": "25% off",
     "discount_percent": 25,
@@ -949,8 +956,15 @@
     "asins": [
       "B008NUSN6C",
       "B08MRVPKW8",
+      "B07B9YHZ31",
       "B08MRXFP6C",
+      "B00CBDEMF8",
+      "B08TPXKJXW",
+      "B01K8T2CCG",
+      "B000ENYWSE",
+      "B07FTSJDK9",
       "B086G94P8F",
+      "B004X2M5GS",
       "B004GW6O9E"
     ],
     "tags": [],
@@ -958,7 +972,7 @@
     "sale_price": "16% off"
   },
   {
-    "asin": "B01H8VZV66",
+    "asin": "B092RZMY4Z",
     "name": "Nutrition Bars",
     "raw_name": "Nutrition Bars",
     "brand": null,
@@ -974,7 +988,7 @@
     "url": null,
     "unit_price": null,
     "current_price": "16% off",
-    "basis_price": "$1.95 ea",
+    "basis_price": "$1.95 to $10.79 ea",
     "prime_price": null,
     "discount": "25% off",
     "discount_percent": 25,
@@ -983,7 +997,13 @@
       "10160"
     ],
     "asins": [
-      "B01H8VZV66"
+      "B092RZMY4Z",
+      "B014RRJZPW",
+      "B08X6N59VN",
+      "B089RCGL42",
+      "B08X6VVKG7",
+      "B01H8VZV66",
+      "B092RXDZDH"
     ],
     "tags": [],
     "rank": 29,
@@ -1414,7 +1434,7 @@
     "url": null,
     "unit_price": null,
     "current_price": "22% off",
-    "basis_price": "$4.69 to $17.49 ea",
+    "basis_price": "$4.69 to $19.99 ea",
     "prime_price": null,
     "discount": "30% off",
     "discount_percent": 30,
@@ -1434,7 +1454,7 @@
       "B0BB3DRL8F",
       "B0BB3FVZ7K",
       "B0C7HNJQJM",
-      "B0CCK8F4QC"
+      "B0CCK6GS26"
     ],
     "tags": [],
     "rank": 42,
@@ -1592,15 +1612,15 @@
       "B0031JK96C",
       "B007SYT7LO",
       "B007SYSQ7K",
+      "B007S6Y74O",
       "B00CLD728C",
+      "B01N7DTD98",
       "B01N6CFWLM",
       "B07QLVLTM1",
+      "B01N5AZ70H",
       "B0DG42757C",
       "B0DG43523K",
-      "B010M8ZBTY",
-      "B010MAD4ZK",
-      "B010M9I9L0",
-      "B01LQELSN6"
+      "B010M8ZBTY"
     ],
     "tags": [
       "high-protein",
