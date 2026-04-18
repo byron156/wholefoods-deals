@@ -18,8 +18,8 @@ from fixed_taxonomy import FIXED_TAXONOMY_VERSION, build_fixed_taxonomy
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
-MODEL_VERSION = "taxonomy-local-ml-v5"
-PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v5"
+MODEL_VERSION = "taxonomy-local-ml-v6"
+PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v6"
 OLLAMA_CHAT_TIMEOUT = int(os.getenv("OLLAMA_CHAT_TIMEOUT", "420"))
 CLASSIFICATION_BATCH_SIZE = int(os.getenv("TAXONOMY_CLASSIFICATION_BATCH_SIZE", "20"))
 DISCOVERED_TAXONOMY_FILE = "discovered_taxonomy.json"
@@ -486,6 +486,8 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "capsules",
     "cereal",
     "chips",
+    "coffee",
+    "coffee blend",
     "crisps",
     "crispy",
     "drink",
@@ -494,6 +496,8 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "juice",
     "k-cup",
     "latte",
+    "lotion",
+    "medium roast",
     "pasta sauce",
     "pouch",
     "powder",
@@ -502,6 +506,7 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "sausage",
     "smoothie",
     "snack",
+    "skin care",
     "superfood",
     "supplement",
     "tablet",
@@ -617,6 +622,10 @@ def packaged_form_classification(product, taxonomy):
         return local_result(taxonomy, "Baby", "Baby Food", reason="Baby or pouch food wording matched.")
     if text_has_any(text, ["mushroom supplement", "turkey tail", "lion's mane", "reishi", "chaga", "om mushroom", "mushroom superfood"]):
         return local_result(taxonomy, "Supplements & Wellness", "Mushroom Supplements", reason="Mushroom supplement wording matched.")
+    if "coffee" in text and text_has_any(text, ["coffee blend", "ground", "grounds", "roast", "whole bean", "mushroom coffee"]):
+        return local_result(taxonomy, "Beverages", "Coffee Beans & Grounds", reason="Coffee bean or ground coffee wording matched.")
+    if text_has_any(text, ["body lotion", "daily lotion", "hand lotion", "lotion", "body cream"]):
+        return local_result(taxonomy, "Beauty & Personal Care", "Body Care", reason="Body-care lotion wording matched.")
     if text_has_any(text, ["crispy air bites", "air bites"]) or ("strong roots" in text and "bites" in text):
         return local_result(taxonomy, "Frozen", "Frozen Appetizers", reason="Frozen crispy bite wording matched.")
     if text_has_any(text, ["chips", "crisps", "cracker", "crackers", "pretzel", "popcorn"]):
@@ -670,6 +679,8 @@ def deterministic_classification(product, taxonomy):
         return result("Beauty & Personal Care", "Soap & Hand Wash", reason="Soap or wash wording matched.")
     if text_has_any(text, ["serum", "moisturizer", "face cream", "skin cream", "ai cream", "physiogel", "facial", "skin care", "acne"]):
         return result("Beauty & Personal Care", "Skin Care", reason="Skin-care wording matched.")
+    if text_has_any(text, ["body lotion", "daily lotion", "hand lotion", "lotion", "body cream"]):
+        return result("Beauty & Personal Care", "Body Care", reason="Body-care lotion wording matched.")
     if text_has_any(text, ["toothpaste", "mouthwash", "oral care", "toothbrush"]):
         return result("Beauty & Personal Care", "Oral Care", reason="Oral-care wording matched.")
     if text_has_any(text, ["deodorant"]):
@@ -732,7 +743,9 @@ def deterministic_classification(product, taxonomy):
         return result("Beverages", "Coffee Concentrates", reason="Coffee concentrate wording matched.")
     if text_has_any(text, ["k-cup", "k cup", "coffee pod", "nespresso", "single serve coffee"]):
         return result("Beverages", "Coffee Pods & K-Cups", reason="Coffee pod wording matched.")
-    if text_has_any(text, ["whole bean coffee", "ground coffee", "coffee grounds"]):
+    if text_has_any(text, ["whole bean coffee", "ground coffee", "coffee grounds"]) or (
+        "coffee" in text and text_has_any(text, ["coffee blend", "ground", "grounds", "roast", "whole bean", "mushroom coffee"])
+    ):
         return result("Beverages", "Coffee Beans & Grounds", reason="Coffee bean or ground coffee wording matched.")
     if text_has_any(text, ["iced coffee", "cold brew coffee", "latte", "black coffee can", "ready to drink coffee"]):
         return result("Beverages", "Ready-to-Drink Coffee", reason="Ready-to-drink coffee wording matched.")

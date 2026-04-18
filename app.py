@@ -714,13 +714,7 @@ def sort_products_for_display(products):
 
 def derive_brand(name, explicit_brand=None):
     if explicit_brand:
-        cleaned_explicit_brand = trim_brand_candidate(explicit_brand.strip())
-        normalized_explicit_brand = normalize_text_key(cleaned_explicit_brand)
-        if "suppliers may vary" in normalized_explicit_brand:
-            return None
-        if candidate_is_generic_brand(cleaned_explicit_brand):
-            return None
-        return clean_brand_display(cleaned_explicit_brand)
+        return clean_source_brand_display(explicit_brand)
 
     if not name:
         return None
@@ -1029,17 +1023,18 @@ def smart_title_case(text):
     return "".join(output)
 
 
-def clean_brand_display(brand):
+def clean_brand_display(brand, canonicalize=True):
     if not brand:
         return brand
 
     brand = re.sub(r"\s+", " ", brand).strip(" ,")
-    canonical = canonical_brand_for_alias(brand)
+    canonical = canonical_brand_for_alias(brand) if canonicalize else None
     if canonical:
         brand = canonical
 
     tokens = re.split(r"(\s+)", brand)
     formatted = []
+    seen_word = False
     for token in tokens:
         if not token or token.isspace():
             formatted.append(token)
@@ -1052,19 +1047,37 @@ def clean_brand_display(brand):
 
         prefix, core, suffix = match.groups()
         if core.isupper():
-            if any(ch.isdigit() for ch in core) or "&" in core:
+            letters = re.sub(r"[^A-Z]", "", core)
+            if any(ch.isdigit() for ch in core) or "&" in core or 1 < len(letters) <= 3:
                 formatted_core = core
             else:
-                formatted_core = title_case_token(core.lower(), is_first=True)
+                formatted_core = title_case_token(core.lower(), is_first=not seen_word)
         elif core.islower():
-            formatted_core = title_case_token(core, is_first=True)
+            formatted_core = title_case_token(core, is_first=not seen_word)
         elif any(ch.isupper() for ch in core[1:]) and any(ch.islower() for ch in core):
             formatted_core = core[0].upper() + core[1:]
         else:
-            formatted_core = title_case_token(core, is_first=True)
+            formatted_core = title_case_token(core, is_first=not seen_word)
         formatted.append(f"{prefix}{formatted_core}{suffix}")
+        seen_word = True
 
     return "".join(formatted).strip()
+
+
+def clean_source_brand_display(brand):
+    if not brand:
+        return None
+
+    cleaned_brand = re.sub(r"\s+", " ", str(brand)).strip(" ,")
+    cleaned_brand = re.sub(r"^[®™©\s]+", "", cleaned_brand).strip(" ,")
+    normalized_brand = normalize_text_key(cleaned_brand)
+    if not normalized_brand:
+        return None
+    if "suppliers may vary" in normalized_brand:
+        return None
+    if candidate_is_generic_brand(cleaned_brand):
+        return None
+    return clean_brand_display(cleaned_brand, canonicalize=False)
 
 
 def extend_incomplete_brand_with_name(brand, source_name):
@@ -1169,7 +1182,6 @@ def clean_display_name(name, brand=None):
 
     cleaned = re.sub(r"\s+", " ", str(name)).strip(" ,")
     cleaned = re.sub(r"(?<=\w)\+(?=\w)", " + ", cleaned)
-    cleaned = strip_brand_from_name(cleaned, brand)
     cleaned = re.sub(r"^[®™©\s]+", "", cleaned)
     cleaned = re.sub(r"^homegrown[\s,:-]+", "", cleaned, flags=re.IGNORECASE)
 
@@ -1199,7 +1211,11 @@ def clean_display_name(name, brand=None):
 def normalize_brands_across_products(products):
     family_map = {}
     unique_brands = sorted(
-        {product.get("brand") for product in products if product.get("brand")},
+        {
+            product.get("brand")
+            for product in products
+            if product.get("brand") and product.get("brand_source") != "source"
+        },
         key=lambda brand: (len(normalize_text_key(brand).split()), len(normalize_text_key(brand))),
     )
 
@@ -1217,16 +1233,33 @@ def normalize_brands_across_products(products):
             if remainder_first in BRAND_DESCRIPTOR_STARTERS or remainder_first in GENERIC_BRAND_WORDS:
                 family_map[candidate] = brand
 
+    derived_brand_products = [product for product in products if product.get("brand_source") != "source"]
     ai_family_map, _ = build_brand_family_map(
-        products,
+        derived_brand_products,
         alias_map=BRAND_FAMILY_ALIASES,
         connectors=BRAND_CONNECTORS,
         generic_words=GENERIC_BRAND_WORDS,
         descriptor_starters=BRAND_DESCRIPTOR_STARTERS,
-    )
+    ) if derived_brand_products else ({}, None)
     family_map.update(ai_family_map)
 
     for product in products:
+        if product.get("brand_source") == "source":
+            source_brand = clean_source_brand_display(product.get("source_brand") or product.get("brand"))
+            product["brand"] = source_brand
+            source_name = product.get("raw_name") or product.get("name")
+            if source_name:
+                product["name"] = clean_display_name(source_name, product["brand"])
+            product["tags"] = derive_tags(
+                name=product.get("name"),
+                brand=product.get("brand"),
+                category=product.get("category"),
+                sources=product.get("sources"),
+                source_count=product.get("source_count", 0),
+                prime_price=product.get("prime_price"),
+            )
+            continue
+
         original_brand = trim_brand_candidate(product.get("brand")) if product.get("brand") else None
         canonical_brand = family_map.get(original_brand, original_brand)
         brand_was_canonicalized = canonical_brand != original_brand
@@ -1848,6 +1881,8 @@ def standardize_product_record(
     asin=None,
     asins=None,
     brand=None,
+    source_brand=None,
+    brand_source=None,
     variation=None,
     regular_price=None,
     prime_price=None,
@@ -1865,7 +1900,22 @@ def standardize_product_record(
         current_price=current_price,
         discount_text=discount_text,
     )
-    normalized_brand = derive_brand(source_name, explicit_brand=brand)
+    if brand_source == "source":
+        normalized_source_brand = clean_source_brand_display(source_brand or brand)
+        normalized_brand = normalized_source_brand
+        normalized_brand_source = "source" if normalized_source_brand else None
+    elif brand_source == "derived":
+        normalized_source_brand = None
+        normalized_brand = derive_brand(source_name)
+        normalized_brand_source = "derived" if normalized_brand else None
+    else:
+        normalized_source_brand = clean_source_brand_display(brand)
+        if normalized_source_brand:
+            normalized_brand = normalized_source_brand
+            normalized_brand_source = "source"
+        else:
+            normalized_brand = derive_brand(source_name)
+            normalized_brand_source = "derived" if normalized_brand else None
     classification_text = " ".join(
         part
         for part in [
@@ -1889,6 +1939,8 @@ def standardize_product_record(
         "name": display_name,
         "raw_name": source_name,
         "brand": normalized_brand,
+        "source_brand": normalized_source_brand,
+        "brand_source": normalized_brand_source,
         "variation": variation,
         "category": category,
         "subcategory": category_details.get("subcategory"),
@@ -2137,6 +2189,23 @@ def merge_combined_product(existing, incoming):
             continue
         if merged.get(key) in (None, "", []):
             merged[key] = value
+
+    incoming_has_source_brand = incoming.get("brand") and incoming.get("brand_source") == "source"
+    existing_has_source_brand = merged.get("brand") and merged.get("brand_source") == "source"
+    incoming_brand_key = normalize_text_key(incoming.get("source_brand") or incoming.get("brand"))
+    existing_brand_key = normalize_text_key(merged.get("source_brand") or merged.get("brand"))
+    incoming_source_brand_is_better = (
+        incoming_has_source_brand
+        and existing_has_source_brand
+        and incoming_brand_key.startswith(existing_brand_key + " ")
+    )
+    if incoming_has_source_brand and (not existing_has_source_brand or incoming_source_brand_is_better):
+        merged["brand"] = incoming.get("brand")
+        merged["source_brand"] = incoming.get("source_brand") or incoming.get("brand")
+        merged["brand_source"] = "source"
+        source_name = merged.get("raw_name") or incoming.get("raw_name") or incoming.get("name")
+        if source_name:
+            merged["name"] = clean_display_name(source_name, merged["brand"])
 
     merged_sources = []
     for source in existing.get("sources", []) + incoming.get("sources", []):
@@ -2521,6 +2590,8 @@ def normalized_product_for_source(product, source_name):
         name=product.get("name"),
         raw_name=product.get("raw_name"),
         brand=product.get("brand"),
+        source_brand=product.get("source_brand"),
+        brand_source=product.get("brand_source"),
         variation=product.get("variation"),
         image=product.get("image"),
         url=product.get("url"),
@@ -2649,6 +2720,8 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["name"] = hydrated.get("name") or hydrated.get("raw_name") or f"Product {index + 1}"
     hydrated["raw_name"] = hydrated.get("raw_name") or hydrated["name"]
     hydrated["brand"] = hydrated.get("brand") or None
+    hydrated["source_brand"] = hydrated.get("source_brand") or None
+    hydrated["brand_source"] = hydrated.get("brand_source") or ("source" if hydrated.get("source_brand") else None)
     hydrated["variation"] = hydrated.get("variation") or None
     hydrated["image"] = hydrated.get("image")
     hydrated["url"] = hydrated.get("url")

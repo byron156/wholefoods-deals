@@ -482,10 +482,6 @@
     if (subcategory && subcategoryToCategory[subcategory] && subcategory !== effectiveCategory(product)) {
       pieces.push(escapeHtml(subcategory));
     }
-    const confidence = Number(product.ai_confidence || product.category_confidence || 0);
-    if (confidence > 0) {
-      pieces.push(`AI ${Math.round(confidence * 100)}%`);
-    }
     if (!pieces.length) {
       return "";
     }
@@ -701,11 +697,9 @@
     }
     const category = effectiveCategory(product) || "Uncategorized";
     const subcategory = effectiveSubcategory(product) || "No subcategory yet";
-    const confidence = Number(product.ai_confidence || product.category_confidence || 0);
-    const confidenceText = confidence ? `Confidence: ${Math.round(confidence * 100)}%.` : "";
     const reasoning = product.ai_reasoning ? `\n\nWhy: ${product.ai_reasoning}` : "";
     window.alert(
-      `AI placed this item in ${category} -> ${subcategory}.\n\n${confidenceText}${reasoning}\n\nUse "This doesn't belong here" to send feedback for the next refresh.`
+      `This item is currently in ${category} -> ${subcategory}.${reasoning}\n\nUse "This doesn't belong here" to send feedback for the next refresh.`
     );
   }
 
