@@ -5,6 +5,7 @@ set -euo pipefail
 PROJECT_DIR="/Users/jonathancampbell/Code/wholefoods_deals"
 PYTHON_BIN="$PROJECT_DIR/.venv/bin/python3"
 LOG_DIR="$PROJECT_DIR/logs"
+LOCK_DIR="$PROJECT_DIR/.daily_refresh.lock"
 
 mkdir -p "$LOG_DIR"
 
@@ -26,6 +27,12 @@ fi
 
 cd "$PROJECT_DIR"
 
+if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+  echo "[$(timestamp)] Another refresh appears to be running; exiting without starting a second one."
+  exit 0
+fi
+trap 'rmdir "$LOCK_DIR" 2>/dev/null || true' EXIT
+
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "[$(timestamp)] $PROJECT_DIR is not a git repository. Initialize or clone the repo before enabling the launchd job." >&2
   exit 1
@@ -35,6 +42,9 @@ if ! git remote get-url origin >/dev/null 2>&1; then
   echo "[$(timestamp)] Git remote 'origin' is not configured." >&2
   exit 1
 fi
+
+export WHOLEFOODS_SEARCH_MODE="${WHOLEFOODS_SEARCH_MODE:-full}"
+echo "[$(timestamp)] Whole Foods search mode: $WHOLEFOODS_SEARCH_MODE"
 
 "$PYTHON_BIN" -u refresh_and_post_results.py
 "$PYTHON_BIN" -u build_static_site.py

@@ -1,6 +1,7 @@
 import json
 import os
 import argparse
+import traceback
 
 from app import (
     BASE_DIR,
@@ -38,6 +39,13 @@ def write_json(path, payload):
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
 
+def load_json(path, default):
+    if not os.path.exists(path):
+        return default
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -45,61 +53,92 @@ def main():
         action="store_true",
         help="Run a full taxonomy re-discovery before classification.",
     )
+    parser.add_argument(
+        "--sample-size",
+        type=int,
+        default=0,
+        help="Only classify a stable sample of merged products for faster testing.",
+    )
+    parser.add_argument(
+        "--skip-refresh",
+        action="store_true",
+        help="Reuse existing scraped JSON files instead of scraping again.",
+    )
     args = parser.parse_args()
 
-    print("Refreshing search deals...")
-    search_result = discover_search_deals()
-    write_json(SEARCH_DEALS_PRODUCTS_FILE, search_result["products"])
-    write_json(
-        SEARCH_DEALS_REPORT_FILE,
-        {
-            "search_url": search_result["search_url"],
-            "product_count": search_result["product_count"],
-            "network_batch_count": search_result["network_batch_count"],
-            "sort_runs": search_result.get("sort_runs", []),
-        },
-    )
+    if args.skip_refresh:
+        print("Skipping scrape refresh and reusing existing JSON files...")
+    else:
+        print("Refreshing search deals...")
+        search_result = discover_search_deals()
+        write_json(SEARCH_DEALS_PRODUCTS_FILE, search_result["products"])
+        write_json(
+            SEARCH_DEALS_REPORT_FILE,
+            {
+                "search_url": search_result["search_url"],
+                "product_count": search_result["product_count"],
+                "network_batch_count": search_result["network_batch_count"],
+                "sort_runs": search_result.get("sort_runs", []),
+            },
+        )
 
-    print("Refreshing all deals...")
-    all_deals_result = discover_all_deals()
-    write_json(DISCOVERED_RECOMMENDATIONS_FILE, all_deals_result["recommendations"])
-    write_json(DISCOVERED_PRODUCTS_FILE, all_deals_result["products"])
-    write_json(CAPTURED_BATCHES_FILE, all_deals_result["captured_batches"])
+        print("Refreshing all deals...")
+        all_deals_result = discover_all_deals()
+        write_json(DISCOVERED_RECOMMENDATIONS_FILE, all_deals_result["recommendations"])
+        write_json(DISCOVERED_PRODUCTS_FILE, all_deals_result["products"])
+        write_json(CAPTURED_BATCHES_FILE, all_deals_result["captured_batches"])
 
-    print("Refreshing flyer deals...")
-    flyer_products = fetch_products()
-    write_json(FLYER_PRODUCTS_FILE, flyer_products)
-    write_json(
-        FLYER_REPORT_FILE,
-        {
-            "product_count": len(flyer_products),
-        },
-    )
+        print("Refreshing flyer deals...")
+        flyer_products = fetch_products()
+        write_json(FLYER_PRODUCTS_FILE, flyer_products)
+        write_json(
+            FLYER_REPORT_FILE,
+            {
+                "product_count": len(flyer_products),
+            },
+        )
 
-    print("Refreshing Target deals...")
-    target_result = discover_target_deals()
-    write_json(TARGET_DEALS_PRODUCTS_FILE, target_result["products"])
-    write_json(
-        TARGET_DEALS_REPORT_FILE,
-        {
-            "source_url": target_result["source_url"],
-            "result_count_text": target_result["result_count_text"],
-            "product_count": target_result["product_count"],
-            "load_more_clicks": target_result["load_more_clicks"],
-        },
-    )
+        print("Refreshing Target deals...")
+        try:
+            target_result = discover_target_deals()
+        except Exception as exc:
+            print(f"Target refresh failed; reusing previous Target deals so the full refresh can continue: {exc}")
+            traceback.print_exc()
+            previous_products = load_json(TARGET_DEALS_PRODUCTS_FILE, [])
+            previous_report = load_json(TARGET_DEALS_REPORT_FILE, {})
+            target_result = {
+                "source_url": previous_report.get("source_url", "https://www.target.com/c/grocery-deals/-/N-k4uyq"),
+                "result_count_text": previous_report.get("result_count_text", "previous Target scrape reused"),
+                "product_count": len(previous_products),
+                "load_more_clicks": previous_report.get("load_more_clicks", 0),
+                "products": previous_products,
+                "reused_previous": True,
+                "error": str(exc),
+            }
+        write_json(TARGET_DEALS_PRODUCTS_FILE, target_result["products"])
+        write_json(
+            TARGET_DEALS_REPORT_FILE,
+            {
+                "source_url": target_result["source_url"],
+                "result_count_text": target_result["result_count_text"],
+                "product_count": target_result["product_count"],
+                "load_more_clicks": target_result["load_more_clicks"],
+                "reused_previous": target_result.get("reused_previous", False),
+                "error": target_result.get("error"),
+            },
+        )
 
-    print("Refreshing H Mart deals...")
-    hmart_result = discover_hmart_deals()
-    write_json(HMART_DEALS_PRODUCTS_FILE, hmart_result["products"])
-    write_json(
-        HMART_DEALS_REPORT_FILE,
-        {
-            "source_urls": hmart_result["source_urls"],
-            "product_count": hmart_result["product_count"],
-            "runs": hmart_result["runs"],
-        },
-    )
+        print("Refreshing H Mart deals...")
+        hmart_result = discover_hmart_deals()
+        write_json(HMART_DEALS_PRODUCTS_FILE, hmart_result["products"])
+        write_json(
+            HMART_DEALS_REPORT_FILE,
+            {
+                "source_urls": hmart_result["source_urls"],
+                "product_count": hmart_result["product_count"],
+                "runs": hmart_result["runs"],
+            },
+        )
 
     print("Building combined products...")
     normalized_flyer_products = load_saved_flyer_products()
@@ -115,6 +154,7 @@ def main():
         normalized_target_deals_products,
         normalized_hmart_deals_products,
         force_taxonomy_rediscovery=args.rediscover_taxonomy,
+        taxonomy_sample_size=args.sample_size,
     )
     write_json(COMBINED_PRODUCTS_FILE, combined_products)
     write_json(
@@ -136,6 +176,8 @@ def main():
     print(f"Target deals products: {len(normalized_target_deals_products)}")
     print(f"H Mart deals products: {len(normalized_hmart_deals_products)}")
     print(f"Combined unique products: {len(combined_products)}")
+    if args.sample_size:
+        print(f"Sample size used for taxonomy/classification: {args.sample_size}")
     print("\nPages:")
     print("  /")
     print("  /flyer")

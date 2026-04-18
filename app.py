@@ -3,7 +3,7 @@ import re
 import requests
 import os
 import math
-from collections import Counter
+from collections import Counter, defaultdict
 from functools import lru_cache
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from brand_ai import build_brand_family_map
@@ -2557,6 +2557,7 @@ def build_combined_products(
     target_deals_products=None,
     hmart_deals_products=None,
     force_taxonomy_rediscovery=False,
+    taxonomy_sample_size=None,
 ):
     combined = {}
     target_deals_products = target_deals_products or []
@@ -2584,6 +2585,8 @@ def build_combined_products(
         if brand_signature == previous_brand_signature:
             break
         previous_brand_signature = brand_signature
+    if taxonomy_sample_size:
+        ordered = sample_products_for_taxonomy_testing(ordered, taxonomy_sample_size)
     ordered, taxonomy = classify_products_with_taxonomy_ai(
         BASE_DIR,
         ordered,
@@ -2600,6 +2603,43 @@ def build_combined_products(
         )
     )
     return ordered
+
+
+def sample_products_for_taxonomy_testing(products, sample_size):
+    try:
+        sample_size = int(sample_size)
+    except (TypeError, ValueError):
+        return products
+    if sample_size <= 0 or len(products) <= sample_size:
+        return products
+
+    by_retailer = defaultdict(list)
+    for product in products:
+        retailer = product.get("retailer") or "Unknown"
+        by_retailer[retailer].append(product)
+
+    for retailer_products in by_retailer.values():
+        retailer_products.sort(
+            key=lambda product: (
+                normalize_text_key(product.get("name")),
+                normalize_text_key(product.get("brand")),
+                normalize_text_key(product.get("url")),
+            )
+        )
+
+    sampled = []
+    retailer_names = sorted(by_retailer)
+    while len(sampled) < sample_size and retailer_names:
+        next_round = []
+        for retailer in retailer_names:
+            bucket = by_retailer[retailer]
+            if bucket and len(sampled) < sample_size:
+                sampled.append(bucket.pop(0))
+            if bucket:
+                next_round.append(retailer)
+        retailer_names = next_round
+
+    return sampled
 
 
 def hydrate_combined_product_record(product, index=0):

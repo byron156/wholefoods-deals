@@ -12,6 +12,7 @@ LOAD_WAIT_MS = 1800
 MAX_LOAD_MORE_CLICKS = 30
 DETAIL_WAIT_MS = 400
 DETAIL_DIALOG_TIMEOUT_MS = 2500
+MULTISTORY_LINK_SELECTOR = '[data-test="@web/slingshot-components/MultiStory/Link"]'
 
 
 def normalize_text_key(text: Optional[str]) -> str:
@@ -58,6 +59,20 @@ def build_target_search_url(name: Optional[str]) -> Optional[str]:
     if not name:
         return None
     return f"https://www.target.com/s?searchTerm={quote_plus(name)}"
+
+
+def dismiss_target_popups(page) -> None:
+    for locator in [
+        page.locator('button[aria-label="close"]').first,
+        page.locator('button[aria-label="Close"]').first,
+        page.locator("button", has_text=re.compile(r"not now|maybe later|close", re.I)).first,
+    ]:
+        try:
+            if locator.count():
+                locator.click(timeout=1000, force=True)
+                page.wait_for_timeout(250)
+        except Exception:
+            pass
 
 
 def extract_offer_url(page, card) -> Optional[str]:
@@ -161,6 +176,50 @@ def parse_offer_card(card, page) -> Optional[dict[str, Any]]:
     }
 
 
+def parse_multistory_deal_link(link) -> Optional[dict[str, Any]]:
+    text = re.sub(r"\s+", " ", link.inner_text().replace("", " ")).strip()
+    if not text:
+        return None
+
+    href = normalize_target_url(link.get_attribute("href"))
+    parts = [part.strip(" *") for part in re.split(r"\s{2,}|\s+\|\s+", text) if part.strip(" *")]
+    if not parts:
+        parts = [text]
+
+    value_text = None
+    name = None
+    for part in parts:
+        lowered = part.lower()
+        if re.search(r"\d+\s*%|bogo|\$\d+|\d+/\$\d+|save when|buy \d+", lowered):
+            value_text = value_text or part
+        elif part:
+            name = part
+
+    name = name or parts[-1]
+    if not name:
+        return None
+
+    current_price, discount = parse_offer_value(value_text or text)
+    discount = discount or value_text or text
+
+    return {
+        "asin": build_offer_id(name, value_text or text, None),
+        "name": name,
+        "brand": None,
+        "variation": None,
+        "image": None,
+        "url": href or build_target_search_url(name),
+        "current_price": current_price,
+        "basis_price": None,
+        "prime_price": None,
+        "discount": discount,
+        "unit_price": None,
+        "retailer": "Target",
+        "expires": None,
+        "target_value_text": value_text or text,
+    }
+
+
 def discover_target_deals() -> dict[str, Any]:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -168,16 +227,28 @@ def discover_target_deals() -> dict[str, Any]:
         print(f"Opening Target grocery deals page: {TARGET_GROCERY_DEALS_URL}")
         page.goto(TARGET_GROCERY_DEALS_URL, wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(5000)
+        dismiss_target_popups(page)
         page.locator("text=/\\d+ results/i").first.wait_for(timeout=30000)
-        page.locator('[data-test="offer-card"]').first.wait_for(timeout=30000)
+
+        offer_cards = page.locator('[data-test="offer-card"]')
+        multistory_links = page.locator(MULTISTORY_LINK_SELECTOR)
+        try:
+            offer_cards.first.wait_for(timeout=12000)
+        except Exception:
+            dismiss_target_popups(page)
+            if not multistory_links.count():
+                page.screenshot(path="logs/target_deals_no_offers.png", full_page=True)
+                raise RuntimeError("Target did not render old offer cards or new grocery promo links.")
+            print(
+                "Target old offer-card layout did not render; parsing visible grocery promo links instead."
+            )
 
         load_more_clicks = 0
         stale_rounds = 0
         previous_count = 0
 
-        while load_more_clicks < MAX_LOAD_MORE_CLICKS:
-            cards = page.locator('[data-test="offer-card"]')
-            current_count = cards.count()
+        while offer_cards.count() and load_more_clicks < MAX_LOAD_MORE_CLICKS:
+            current_count = offer_cards.count()
             load_more = page.locator("button", has_text="Load more")
             print(
                 f"Target round {load_more_clicks + 1}: visible offer cards {current_count}, "
@@ -190,9 +261,10 @@ def discover_target_deals() -> dict[str, Any]:
             load_more.first.scroll_into_view_if_needed()
             load_more.first.click()
             page.wait_for_timeout(LOAD_WAIT_MS)
+            dismiss_target_popups(page)
             load_more_clicks += 1
 
-            new_count = cards.count()
+            new_count = offer_cards.count()
             if new_count <= current_count and new_count <= previous_count:
                 stale_rounds += 1
             else:
@@ -204,15 +276,21 @@ def discover_target_deals() -> dict[str, Any]:
                 break
 
         result_count_text = page.locator("text=/\\d+ results/i").first.inner_text().strip()
-        cards = page.locator('[data-test="offer-card"]')
         parsed: dict[str, dict[str, Any]] = {}
-        for index in range(cards.count()):
-            if index and index % 25 == 0:
-                print(f"Target parse: processed {index}/{cards.count()} offers")
-            product = parse_offer_card(cards.nth(index), page)
-            if not product:
-                continue
-            parsed.setdefault(product["asin"], product)
+        if offer_cards.count():
+            for index in range(offer_cards.count()):
+                if index and index % 25 == 0:
+                    print(f"Target parse: processed {index}/{offer_cards.count()} offers")
+                product = parse_offer_card(offer_cards.nth(index), page)
+                if not product:
+                    continue
+                parsed.setdefault(product["asin"], product)
+        else:
+            for index in range(multistory_links.count()):
+                product = parse_multistory_deal_link(multistory_links.nth(index))
+                if not product:
+                    continue
+                parsed.setdefault(product["asin"], product)
 
         browser.close()
 

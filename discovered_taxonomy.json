@@ -1,10 +1,10 @@
 {
-  "taxonomy_version": "fixed-taxonomy-v1",
+  "taxonomy_version": "fixed-taxonomy-v3",
   "model_name": "fixed-taxonomy",
-  "model_version": "taxonomy-ai-v1",
-  "prompt_version": "taxonomy-prompt-fixed-taxonomy-v1",
+  "model_version": "taxonomy-local-ml-v1",
+  "prompt_version": "taxonomy-prompt-fixed-taxonomy-v3-local-ml-v1",
   "discovery_mode": "fixed",
-  "generated_at": "2026-04-10T01:35:55.518906+00:00",
+  "generated_at": "2026-04-18T04:05:30.467745+00:00",
   "categories": [
     {
       "name": "Produce",
@@ -395,6 +395,18 @@
           "slug": "coffee"
         },
         {
+          "name": "Coffee Beans & Grounds",
+          "slug": "coffee-beans-grounds"
+        },
+        {
+          "name": "Coffee Pods & K-Cups",
+          "slug": "coffee-pods-k-cups"
+        },
+        {
+          "name": "Coffee Concentrates",
+          "slug": "coffee-concentrates"
+        },
+        {
           "name": "Tea",
           "slug": "tea"
         },
@@ -557,6 +569,10 @@
           "slug": "ready-to-eat-protein"
         },
         {
+          "name": "Tofu & Plant-Based Proteins",
+          "slug": "tofu-plant-based-proteins"
+        },
+        {
           "name": "Refrigerated Pasta & Noodles",
           "slug": "refrigerated-pasta-noodles"
         },
@@ -639,6 +655,10 @@
         {
           "name": "Protein & Collagen",
           "slug": "protein-collagen"
+        },
+        {
+          "name": "Omega & Fish Oil",
+          "slug": "omega-fish-oil"
         },
         {
           "name": "Herbal Supplements",
@@ -767,6 +787,10 @@
         {
           "name": "Kitchen Supplies",
           "slug": "kitchen-supplies"
+        },
+        {
+          "name": "Insect Repellent",
+          "slug": "insect-repellent"
         },
         {
           "name": "Air Fresheners",

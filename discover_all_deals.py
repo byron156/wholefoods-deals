@@ -13,6 +13,10 @@ STORE_MODAL_URL = "https://www.wholefoodsmarket.com/stores?modalView=true"
 ALL_DEALS_URL = "https://www.wholefoodsmarket.com/fmc/alldeals/?_encoding=UTF8&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=US_TRF_ALL_UFG_WFM_REFER_0428801"
 
 STORE_SEARCH_TEXT = "Columbus Circle"
+STORE_SELECT_CTA_PATTERN = re.compile(
+    r"make this my store|shop store|select store|choose store|set as my store",
+    re.I,
+)
 
 MAX_SCROLL_ROUNDS = 140
 SCROLL_PAUSE_MS = 350
@@ -493,9 +497,11 @@ def click_columbus_store_result(scope) -> bool:
             card = scope.locator("li, article, [data-testid], [class*='store']").filter(has_text=pattern).first
             targeted = [
                 card.locator(".w-store-finder-store-selector"),
-                card.get_by_text(re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
-                card.get_by_role("button", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
-                card.get_by_role("link", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
+                card.get_by_text(STORE_SELECT_CTA_PATTERN),
+                card.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
+                card.get_by_role("link", name=STORE_SELECT_CTA_PATTERN),
+                card.locator('button:has-text("Shop Store")'),
+                card.locator('a:has-text("Shop Store")'),
                 card.locator('button'),
                 card.locator('a'),
             ]
@@ -507,10 +513,10 @@ def click_columbus_store_result(scope) -> bool:
             continue
 
     generic = [
-        scope.get_by_role("button", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
-        scope.get_by_role("link", name=re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
-        scope.get_by_text(re.compile(r"make this my store|select store|choose store|set as my store", re.I)),
-        scope.locator('button:has-text("Make this my store"), button:has-text("Select store"), button:has-text("Choose store")'),
+        scope.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
+        scope.get_by_role("link", name=STORE_SELECT_CTA_PATTERN),
+        scope.get_by_text(STORE_SELECT_CTA_PATTERN),
+        scope.locator('button:has-text("Shop Store"), button:has-text("Make this my store"), button:has-text("Select store"), button:has-text("Choose store")'),
     ]
     return click_first_no_wait(generic, timeout=2200)
 
@@ -554,7 +560,7 @@ def set_store_via_store_modal_url(page, progress: ProgressBar, start_progress: f
         made_store = click_columbus_store_result(scope)
     if not made_store:
         debug_body(page)
-        raise RuntimeError('Could not click the first "Make this my store".')
+        raise RuntimeError("Could not click the Columbus Circle store CTA.")
 
     page.wait_for_timeout(1800)
     progressed_ms += 1800

@@ -1,9 +1,12 @@
 import json
+import os
 import re
+import time
 from pathlib import Path
 from typing import Optional
 from urllib.parse import urlencode, urljoin
 
+from playwright.sync_api import Error as PlaywrightError
 from playwright.sync_api import sync_playwright
 
 from category_shop import (
@@ -18,8 +21,15 @@ from category_shop import (
 
 BASE_DEALS_RH = "p_n_deal_type:23566065011"
 SEARCH_DEALS_BASE_URL = "https://www.wholefoodsmarket.com/grocery/search"
+STORE_MODAL_URL = "https://www.wholefoodsmarket.com/stores?modalView=true"
 SEARCH_DEALS_URL = (
     f"{SEARCH_DEALS_BASE_URL}?{urlencode({'k': '', 'rh': BASE_DEALS_RH, 's': 'relevanceblender'})}"
+)
+SEARCH_DEALS_PARTIAL_PRODUCTS_FILE = Path(__file__).with_name("search_deals_products.partial.json")
+SEARCH_DEALS_PARTIAL_REPORT_FILE = Path(__file__).with_name("search_deals_report.partial.json")
+STORE_SELECT_CTA_PATTERN = re.compile(
+    r"make this my store|shop store|select store|choose store|set as my store",
+    re.I,
 )
 GOOGLE_CHROME_EXECUTABLE = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 HEADLESS_CHROME_USER_AGENT = (
@@ -49,6 +59,12 @@ BASE_SORT_RUNS = [
     ("Low prices", "low-prices-rank"),
     ("Best Sellers", "exact-aware-popularity-rank"),
 ]
+FAST_BASE_SORT_RUNS = [
+    ("Relevance", "relevanceblender"),
+    ("Price: Low to High", "price-asc-rank"),
+    ("Price: High to Low", "price-desc-rank"),
+    ("Newest Arrivals", "date-desc-rank"),
+]
 FILTER_RUNS = [
     {
         "filter_label": "Amazon Brands",
@@ -67,11 +83,6 @@ FILTER_RUNS = [
             ("Price: Low to High", "price-asc-rank"),
             ("Price: High to Low", "price-desc-rank"),
         ],
-    },
-    {
-        "filter_label": "Animal Welfare",
-        "rh_values": ["p_n_cpf_labels:116845695011"],
-        "sorts": [("Relevance", "relevanceblender")],
     },
     {
         "filter_label": "Biodiversity",
@@ -124,6 +135,37 @@ FILTER_RUNS = [
 ]
 
 
+def format_duration(seconds: float) -> str:
+    seconds = max(0, int(seconds))
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+
+    if hours:
+        return f"{hours}h {minutes:02d}m"
+    if minutes:
+        return f"{minutes}m {seconds:02d}s"
+    return f"{seconds}s"
+
+
+def print_search_progress(completed: int, total: int, started_at: float, products_count: int, status: str) -> None:
+    width = 24
+    ratio = completed / total if total else 1
+    filled = min(width, max(0, round(width * ratio)))
+    bar = "#" * filled + "-" * (width - filled)
+    elapsed = time.monotonic() - started_at
+    eta = "--"
+
+    if completed > 0 and completed < total:
+        eta = format_duration((elapsed / completed) * (total - completed))
+    elif completed >= total:
+        eta = "0s"
+
+    print(
+        f"[search] [{bar}] {completed}/{total} "
+        f"elapsed={format_duration(elapsed)} eta={eta} products={products_count} | {status}"
+    )
+
+
 def wait_for_store_iframe(page, timeout_ms: int = 10000):
     remaining = timeout_ms
 
@@ -155,15 +197,14 @@ def wait_for_store_modal_to_disappear(page, timeout_ms: int = 10000) -> bool:
 
 def wait_for_store_iframe_text(page, pattern: str, timeout_ms: int = 12000) -> bool:
     iframe = wait_for_store_iframe(page, timeout_ms=timeout_ms)
-    if iframe is None:
-        return False
+    scope = iframe or page
 
     remaining = timeout_ms
     matcher = re.compile(pattern, re.I)
 
     while remaining > 0:
         try:
-            body = iframe.locator("body")
+            body = scope.locator("body")
             text = body.inner_text(timeout=1200)
             if matcher.search(text):
                 return True
@@ -179,7 +220,7 @@ def wait_for_store_iframe_text(page, pattern: str, timeout_ms: int = 12000) -> b
 def fill_store_search_input_in_iframe(page, value: str) -> bool:
     iframe = wait_for_store_iframe(page, timeout_ms=10000)
     if iframe is None:
-        return False
+        return fill_store_search_input(page, page, value)
 
     input_box = iframe.locator("#store-finder-search-bar")
 
@@ -318,28 +359,68 @@ def click_first_no_wait(locators, timeout=2500) -> bool:
 
 def click_make_this_my_store_for_columbus(page) -> bool:
     iframe = wait_for_store_iframe(page, timeout_ms=5000)
-    if iframe is None:
-        return False
+    scope = iframe or page
 
-    columbus_card = iframe.locator("li").filter(has_text=re.compile(r"columbus circle", re.I)).first
+    try:
+        clicked = bool(
+            scope.locator("body").evaluate(
+                """
+                (body) => {
+                    const controls = Array.from(body.querySelectorAll('a, button, input, [role="button"]'));
+                    const phoneIndex = controls.findIndex((el) => {
+                        const href = el.getAttribute('href') || '';
+                        const text = el.innerText || el.textContent || '';
+                        return href.includes('823-9600') || text.includes('823-9600');
+                    });
+                    if (phoneIndex < 0) return false;
+
+                    for (let index = phoneIndex + 1; index < Math.min(controls.length, phoneIndex + 4); index += 1) {
+                        const candidate = controls[index];
+                        const labelId = candidate.getAttribute('aria-labelledby');
+                        const label = labelId ? body.querySelector(`#${CSS.escape(labelId)}`) : null;
+                        const text = `${candidate.innerText || ''} ${candidate.textContent || ''} ${candidate.value || ''} ${label ? (label.innerText || label.textContent || '') : ''}`.toLowerCase();
+                        if (!/(shop store|make this my store|select store|choose store)/i.test(text)) continue;
+
+                        candidate.scrollIntoView({ block: "center", inline: "center" });
+                        ["mousedown", "mouseup", "click"].forEach((type) => {
+                            candidate.dispatchEvent(new MouseEvent(type, { bubbles: true, cancelable: true, view: window }));
+                        });
+                        if (typeof candidate.click === "function") candidate.click();
+                        return true;
+                    }
+                    return false;
+                }
+                """
+            )
+        )
+        if clicked:
+            return True
+    except Exception:
+        pass
+
+    columbus_card = scope.locator("li, article, [data-testid], [class*='store']").filter(
+        has_text=re.compile(r"columbus circle", re.I)
+    ).first
 
     targeted_locators = [
         columbus_card.locator(".w-store-finder-store-selector"),
-        columbus_card.get_by_text(re.compile(r"make this my store", re.I)),
-        columbus_card.locator("text=Make this my store"),
-        columbus_card.get_by_role("button", name=re.compile(r"make this my store", re.I)),
-        columbus_card.get_by_role("link", name=re.compile(r"make this my store", re.I)),
+        columbus_card.get_by_text(STORE_SELECT_CTA_PATTERN),
+        columbus_card.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
+        columbus_card.get_by_role("link", name=STORE_SELECT_CTA_PATTERN),
+        columbus_card.locator('button:has-text("Shop Store")'),
+        columbus_card.locator('a:has-text("Shop Store")'),
+        columbus_card.locator('button'),
+        columbus_card.locator('a'),
     ]
 
     if click_first_no_wait(targeted_locators, timeout=2400):
         return True
 
     generic_locators = [
-        iframe.get_by_role("button", name=re.compile(r"make this my store", re.I)),
-        iframe.get_by_role("link", name=re.compile(r"make this my store", re.I)),
-        iframe.get_by_text(re.compile(r"make this my store", re.I)),
-        iframe.locator("text=Make this my store"),
-        iframe.locator('button:has-text("Make this my store")'),
+        scope.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
+        scope.get_by_role("link", name=STORE_SELECT_CTA_PATTERN),
+        scope.get_by_text(STORE_SELECT_CTA_PATTERN),
+        scope.locator('button:has-text("Shop Store"), button:has-text("Make this my store"), button:has-text("Select store"), button:has-text("Choose store")'),
     ]
     return click_first_no_wait(generic_locators, timeout=2200)
 
@@ -607,19 +688,58 @@ def build_search_url(sort_rank: str, extra_rh_values: Optional[list[str]] = None
     return f"{SEARCH_DEALS_BASE_URL}?{urlencode({'k': '', 'rh': ','.join(rh_values), 's': sort_rank})}"
 
 
+def goto_search_url(page, target_url: str, run_label: str, attempts: int = 2) -> None:
+    last_error = None
+
+    for attempt in range(1, attempts + 1):
+        try:
+            page.goto(target_url, wait_until="domcontentloaded", timeout=60000)
+            return
+        except PlaywrightError as exc:
+            last_error = exc
+            if attempt >= attempts:
+                break
+
+            print(f"{run_label}: navigation timed out/failed on attempt {attempt}; retrying.")
+            page.wait_for_timeout(3000)
+
+    raise RuntimeError(f'Could not open products for the run "{run_label}": {last_error}')
+
+
+def write_search_partial_checkpoint(products_by_asin: dict, captured_batch_urls: list, sort_runs_summary: list) -> None:
+    ordered_products = [products_by_asin[k] for k in sorted(products_by_asin)]
+
+    with open(SEARCH_DEALS_PARTIAL_PRODUCTS_FILE, "w", encoding="utf-8") as f:
+        json.dump(ordered_products, f, indent=2, ensure_ascii=False)
+
+    with open(SEARCH_DEALS_PARTIAL_REPORT_FILE, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "search_url": SEARCH_DEALS_URL,
+                "product_count": len(ordered_products),
+                "network_batch_count": len(captured_batch_urls),
+                "sort_runs": sort_runs_summary,
+                "partial": True,
+            },
+            f,
+            indent=2,
+            ensure_ascii=False,
+        )
+
+
 def open_search_run(page, run_label: str, sort_label: str, sort_rank: str, extra_rh_values: Optional[list[str]] = None) -> None:
     target_url = build_search_url(sort_rank, extra_rh_values=extra_rh_values)
     print(f"Opening run: {run_label} ({sort_label})")
     print(f"Run URL: {target_url}")
 
-    page.goto(target_url, wait_until="domcontentloaded")
+    goto_search_url(page, target_url, run_label)
     page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
     dismiss_popups(page)
 
     if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=5000):
         print(f"{run_label}: store check failed after navigation; retrying the store modal flow.")
         set_store_from_search_page(page)
-        page.goto(target_url, wait_until="domcontentloaded")
+        goto_search_url(page, target_url, run_label)
         page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
         dismiss_popups(page)
 
@@ -1227,7 +1347,10 @@ def open_update_location_modal(page) -> None:
             opened = False
 
     if not opened:
-        raise RuntimeError('Could not open the "Find a store" or "Update location" modal from the deals page.')
+        print("Could not open the store modal from the deals page; opening the direct store modal URL.")
+        page.goto(STORE_MODAL_URL, wait_until="domcontentloaded")
+        page.wait_for_timeout(1800)
+        dismiss_popups(page)
 
 
 def run_store_selection_cycle(page, cycle_number: int, close_after_selection: bool = False) -> None:
@@ -1239,31 +1362,32 @@ def run_store_selection_cycle(page, cycle_number: int, close_after_selection: bo
         open_update_location_modal(page)
         page.wait_for_timeout(600)
         modal = wait_for_store_modal(page, timeout_ms=8000)
-    if modal is None:
+    selector_available = wait_for_store_iframe_text(
+        page,
+        r"Find a Whole Foods Market|Find a store near you|Locate a store|Columbus Circle",
+        timeout_ms=1500,
+    ) if modal is None else True
+    if modal is None and not selector_available:
         raise RuntimeError(
             "Location modal did not appear, so the scraper refused to use the page-level search box."
         )
 
-    iframe = wait_for_store_iframe(page, timeout_ms=10000)
-    if iframe is None:
-        raise RuntimeError("The store selector iframe did not appear inside the location modal.")
+    columbus_visible = wait_for_store_iframe_text(page, r"Columbus Circle", timeout_ms=2500)
+    if columbus_visible:
+        print("Columbus Circle is already visible in the store selector; skipping store search input.")
+    else:
+        search_ok = fill_store_search_input_in_iframe(page, STORE_SEARCH_TEXT)
+        if not search_ok:
+            raise RuntimeError("Could not search for Columbus Circle inside the location modal.")
 
-    search_ok = fill_store_search_input_in_iframe(page, STORE_SEARCH_TEXT)
-    if not search_ok:
-        raise RuntimeError("Could not search for Columbus Circle inside the location modal.")
-
-    if not wait_for_store_iframe_text(page, r"Make this my store|Columbus Circle", timeout_ms=12000):
-        raise RuntimeError('The store search completed, but the Columbus Circle result did not appear in the store iframe.')
-
-    iframe = wait_for_store_iframe(page, timeout_ms=5000)
-    if iframe is None:
-        raise RuntimeError('The store iframe disappeared before "Make this my store" could be clicked.')
+        if not wait_for_store_iframe_text(page, r"Shop Store|Make this my store|Columbus Circle", timeout_ms=12000):
+            raise RuntimeError('The store search completed, but the Columbus Circle result did not appear in the store iframe.')
 
     made_store = click_make_this_my_store_for_columbus(page)
     if not made_store:
-        raise RuntimeError('Could not click "Make this my store" for Columbus Circle.')
+        raise RuntimeError('Could not click the Columbus Circle store CTA.')
 
-    print(f'Clicked "Make this my store" on pass {cycle_number}; waiting for the modal to auto-close.')
+    print(f"Clicked the Columbus Circle store CTA on pass {cycle_number}; waiting for the modal to auto-close.")
     page.wait_for_timeout(POST_STORE_SET_WAIT_MS)
     dismiss_popups(page)
 
@@ -1285,11 +1409,11 @@ def run_store_selection_cycle(page, cycle_number: int, close_after_selection: bo
         if not wait_for_store_modal_to_disappear(page, timeout_ms=9000):
             print(f'Pass {cycle_number} did not auto-close; clicking the center of the screen as a fallback.')
             if not click_center_of_viewport(page):
-                raise RuntimeError('Clicked "Make this my store", but the location modal never auto-closed.')
+                raise RuntimeError("Clicked the Columbus Circle store CTA, but the location modal never auto-closed.")
             page.wait_for_timeout(3000)
             dismiss_popups(page)
             if not wait_for_store_modal_to_disappear(page, timeout_ms=6000):
-                raise RuntimeError('Clicked "Make this my store", but the location modal never auto-closed.')
+                raise RuntimeError("Clicked the Columbus Circle store CTA, but the location modal never auto-closed.")
 
         page.wait_for_timeout(1200)
         dismiss_popups(page)
@@ -1315,6 +1439,9 @@ def set_store_from_search_page(page) -> None:
 
         try:
             run_store_selection_cycle(page, cycle_number=1)
+            used_direct_store_locator = "/stores" in page.url
+            if used_direct_store_locator:
+                page.goto(SEARCH_DEALS_URL, wait_until="domcontentloaded")
             page.wait_for_timeout(2500)
             dismiss_popups(page)
 
@@ -1327,6 +1454,9 @@ def set_store_from_search_page(page) -> None:
 
             print("First store-selection pass did not set Columbus Circle; opening the location modal again for store selection pass 2.")
             run_store_selection_cycle(page, cycle_number=2, close_after_selection=True)
+            used_direct_store_locator = "/stores" in page.url
+            if used_direct_store_locator:
+                page.goto(SEARCH_DEALS_URL, wait_until="domcontentloaded")
         except Exception as exc:
             last_error = exc
             continue
@@ -1441,14 +1571,26 @@ def discover_search_deals() -> dict:
     products_by_asin = {}
     captured_batch_urls = []
     sort_runs_summary = []
+    search_mode = os.environ.get("WHOLEFOODS_SEARCH_MODE", "full").strip().lower()
+    if search_mode not in {"fast", "full"}:
+        print(f'Unknown WHOLEFOODS_SEARCH_MODE="{search_mode}"; falling back to full.')
+        search_mode = "full"
+
     run_plans = [
         {
             "filter_label": None,
             "rh_values": [],
-            "sorts": BASE_SORT_RUNS,
+            "sorts": FAST_BASE_SORT_RUNS if search_mode == "fast" else BASE_SORT_RUNS,
         },
-        *FILTER_RUNS,
     ]
+    if search_mode == "full":
+        run_plans.extend(FILTER_RUNS)
+    else:
+        print("Running Whole Foods search in fast mode: base high-yield sorts only, optional filters skipped.")
+
+    total_runs = sum(len(plan["sorts"]) for plan in run_plans)
+    completed_runs = 0
+    started_at = time.monotonic()
 
     with sync_playwright() as p:
         browser = launch_browser(p)
@@ -1492,10 +1634,49 @@ def discover_search_deals() -> dict:
 
             for sort_label, sort_rank in sorts:
                 run_label = sort_label if not filter_label else f"{filter_label} / {sort_label}"
-                open_search_run(page, run_label, sort_label, sort_rank, extra_rh_values=rh_values)
+                print_search_progress(
+                    completed_runs,
+                    total_runs,
+                    started_at,
+                    len(products_by_asin),
+                    f"starting {run_label}",
+                )
+
+                try:
+                    open_search_run(page, run_label, sort_label, sort_rank, extra_rh_values=rh_values)
+                except (RuntimeError, PlaywrightError) as exc:
+                    if not filter_label:
+                        raise
+
+                    print(f"{run_label}: skipping optional filtered run after page/render failure: {exc}")
+                    sort_runs_summary.append(
+                        {
+                            "filter_label": filter_label,
+                            "rh_values": rh_values,
+                            "sort_label": sort_label,
+                            "sort_rank": sort_rank,
+                            "run_label": run_label,
+                            "new_products_found": 0,
+                            "captured_events": 0,
+                            "total_products_after_sort": len(products_by_asin),
+                            "skipped": True,
+                            "error": str(exc),
+                        }
+                    )
+                    write_search_partial_checkpoint(products_by_asin, captured_batch_urls, sort_runs_summary)
+                    completed_runs += 1
+                    print_search_progress(
+                        completed_runs,
+                        total_runs,
+                        started_at,
+                        len(products_by_asin),
+                        f"skipped {run_label}",
+                    )
+                    continue
 
                 before_sort_count = len(products_by_asin)
                 added_for_sort = crawl_current_sort(page, products_by_asin, run_label)
+                new_products_found = len(products_by_asin) - before_sort_count
                 sort_runs_summary.append(
                     {
                         "filter_label": filter_label,
@@ -1503,10 +1684,20 @@ def discover_search_deals() -> dict:
                         "sort_label": sort_label,
                         "sort_rank": sort_rank,
                         "run_label": run_label,
-                        "new_products_found": len(products_by_asin) - before_sort_count,
+                        "new_products_found": new_products_found,
                         "captured_events": added_for_sort,
                         "total_products_after_sort": len(products_by_asin),
+                        "skipped": False,
                     }
+                )
+                write_search_partial_checkpoint(products_by_asin, captured_batch_urls, sort_runs_summary)
+                completed_runs += 1
+                print_search_progress(
+                    completed_runs,
+                    total_runs,
+                    started_at,
+                    len(products_by_asin),
+                    f"finished {run_label}; +{new_products_found} new",
                 )
 
         browser.close()
