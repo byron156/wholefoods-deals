@@ -2,6 +2,7 @@ import base64
 import hashlib
 import json
 import os
+import re
 import time
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -17,8 +18,8 @@ from fixed_taxonomy import FIXED_TAXONOMY_VERSION, build_fixed_taxonomy
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
-MODEL_VERSION = "taxonomy-local-ml-v3"
-PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v3"
+MODEL_VERSION = "taxonomy-local-ml-v5"
+PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v5"
 OLLAMA_CHAT_TIMEOUT = int(os.getenv("OLLAMA_CHAT_TIMEOUT", "420"))
 CLASSIFICATION_BATCH_SIZE = int(os.getenv("TAXONOMY_CLASSIFICATION_BATCH_SIZE", "20"))
 DISCOVERED_TAXONOMY_FILE = "discovered_taxonomy.json"
@@ -50,6 +51,7 @@ CATEGORY_GUIDANCE = {
 GLOBAL_CLASSIFICATION_RULES = [
     "Classify what the product is, not what an ingredient resembles.",
     "If the display name is generic, short, or size-only, rely on authoritative_name, brand, breadcrumbs, URL, and image.",
+    "Fresh Produce is only for whole or minimally prepared fresh produce; packaged cereal, snacks, pouches, powders, sauces, and supplements should never become Produce because of flavor or ingredient words.",
     "Alcoholic beer, wine, spirits, hard seltzer, cider, and canned cocktails belong in Alcohol, not Beverages.",
     "Non-food household and personal-care products should not be forced into food categories.",
     "Essential oils and aromatherapy oils usually belong in Supplements & Wellness > Essential Oils unless the product is clearly a skin, hair, body, or cosmetic treatment.",
@@ -65,6 +67,7 @@ SUBCATEGORY_GUIDANCE = {
     ("Beverages", "Coffee Concentrates"): "cold brew concentrate and coffee concentrate that must be diluted or mixed",
     ("Beverages", "Ready-to-Drink Coffee"): "bottled, canned, or carton coffee drinks that are ready to drink as sold",
     ("Beverages", "Drink Mixes"): "powders, tablets, sticks, or drops used to make non-alcoholic drinks",
+    ("Pantry", "Cereal & Breakfast"): "boxed or bagged breakfast cereal, granola, oatmeal, toaster pastries, and shelf-stable breakfast foods",
     ("Alcohol", "Beer"): "beer, lager, IPA, ale, stout, porter, and beer multipacks",
     ("Alcohol", "Non-Alcoholic Beer & Wine"): "non-alcoholic beer, hop water, hoppy refresher, and alcohol-free wine",
     ("Prepared Foods", "Tofu & Plant-Based Proteins"): "plain tofu, seasoned tofu, tempeh, seitan, and refrigerated plant-based proteins",
@@ -475,22 +478,186 @@ def text_has_any(text, terms):
     return any(term in text for term in terms)
 
 
+PACKAGED_PRODUCE_BLOCKERS = [
+    "air bite",
+    "bites",
+    "breakfast cereal",
+    "capsule",
+    "capsules",
+    "cereal",
+    "chips",
+    "crisps",
+    "crispy",
+    "drink",
+    "gummies",
+    "immunity blend",
+    "juice",
+    "k-cup",
+    "latte",
+    "pasta sauce",
+    "pouch",
+    "powder",
+    "protein",
+    "sauce",
+    "sausage",
+    "smoothie",
+    "snack",
+    "superfood",
+    "supplement",
+    "tablet",
+    "tea",
+    "turkey tail",
+]
+
+
+FRUIT_TERMS = [
+    "apple",
+    "avocado",
+    "avocados",
+    "banana",
+    "berries",
+    "blackberries",
+    "blueberries",
+    "cantaloupe",
+    "citrus",
+    "dragon fruit",
+    "grape",
+    "grapes",
+    "lemon",
+    "lemons",
+    "lime",
+    "limes",
+    "mango",
+    "melon",
+    "orange",
+    "papaya",
+    "pear",
+    "pineapple",
+    "plum",
+    "strawberries",
+]
+
+
+SALAD_GREEN_TERMS = ["arugula", "lettuce", "salad greens", "spinach"]
+MUSHROOM_TERMS = ["mushroom", "mushrooms"]
+VEGETABLE_TERMS = [
+    "asparagus",
+    "beet",
+    "beets",
+    "broccoli",
+    "brussels sprouts",
+    "cabbage",
+    "carrot",
+    "carrots",
+    "cauliflower",
+    "celery",
+    "corn",
+    "cucumber",
+    "cucumbers",
+    "eggplant",
+    "garlic",
+    "ginger",
+    "green beans",
+    "onion",
+    "onions",
+    "pepper",
+    "peppers",
+    "potato",
+    "potatoes",
+    "radish",
+    "radishes",
+    "squash",
+    "sweet potato",
+    "tomato",
+    "tomatoes",
+    "zucchini",
+]
+HERB_TERMS = ["basil", "cilantro", "dill", "mint", "parsley", "rosemary", "sage", "thyme"]
+
+
+def text_has_word(text, terms):
+    return any(re.search(rf"\b{re.escape(term)}\b", text) for term in terms)
+
+
+def is_packaged_or_processed_for_produce(text):
+    return text_has_any(text, PACKAGED_PRODUCE_BLOCKERS)
+
+
+def is_fresh_produce_text(text):
+    if is_packaged_or_processed_for_produce(text):
+        return False
+    return (
+        text_has_word(text, FRUIT_TERMS)
+        or text_has_word(text, SALAD_GREEN_TERMS)
+        or text_has_word(text, MUSHROOM_TERMS)
+        or text_has_word(text, VEGETABLE_TERMS)
+        or text_has_word(text, HERB_TERMS)
+    )
+
+
+def local_result(taxonomy, category, subcategory, confidence=0.99, reason="High-confidence product text match."):
+    if pair_key(category, subcategory) not in valid_taxonomy_pairs(taxonomy):
+        return None
+    return {
+        "category": category,
+        "subcategory": subcategory,
+        "confidence": confidence,
+        "reasoning": reason,
+        "model_name": "local-taxonomy-classifier",
+        "model_version": MODEL_VERSION,
+    }
+
+
+def packaged_form_classification(product, taxonomy):
+    text = product_text(product)
+
+    if text_has_any(text, ["breakfast cereal", "protein cereal", "catalina crunch", "granola", "oatmeal"]):
+        return local_result(taxonomy, "Pantry", "Cereal & Breakfast", reason="Packaged breakfast cereal wording matched.")
+    if text_has_any(text, ["baby food", "toddler", "kids snack", "smoothie pouch", "pouch"]):
+        return local_result(taxonomy, "Baby", "Baby Food", reason="Baby or pouch food wording matched.")
+    if text_has_any(text, ["mushroom supplement", "turkey tail", "lion's mane", "reishi", "chaga", "om mushroom", "mushroom superfood"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Mushroom Supplements", reason="Mushroom supplement wording matched.")
+    if text_has_any(text, ["crispy air bites", "air bites"]) or ("strong roots" in text and "bites" in text):
+        return local_result(taxonomy, "Frozen", "Frozen Appetizers", reason="Frozen crispy bite wording matched.")
+    if text_has_any(text, ["chips", "crisps", "cracker", "crackers", "pretzel", "popcorn"]):
+        return local_result(taxonomy, "Snacks", "Chips", reason="Packaged snack wording matched.")
+    if text_has_any(text, ["smoothie", "immunity blend", "juice"]):
+        return local_result(taxonomy, "Beverages", "Functional Drinks", reason="Drink or smoothie wording matched.")
+    if text_has_any(text, ["powder", "capsule", "capsules", "tablet", "supplement", "superfood"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Herbal Supplements", confidence=0.95, reason="Supplement form wording matched.")
+    return None
+
+
+def guard_impossible_classification(product, result, taxonomy):
+    if not result:
+        return result
+    if result.get("category") == "Produce" and not is_fresh_produce_text(product_text(product)):
+        replacement = packaged_form_classification(product, taxonomy)
+        if replacement:
+            replacement = dict(replacement)
+            replacement["reasoning"] = (
+                replacement.get("reasoning", "")
+                + " Fresh Produce was blocked because packaged/processed product-form wording was present."
+            ).strip()
+            return replacement
+        return local_result(
+            taxonomy,
+            "Pantry",
+            "Meal Kits & Sides",
+            confidence=0.35,
+            reason="Fresh Produce was blocked because the product text looks packaged or processed.",
+        )
+    return result
+
+
 def deterministic_classification(product, taxonomy):
     text = product_text(product)
     valid_pairs = valid_taxonomy_pairs(taxonomy)
 
     def result(category, subcategory, confidence=0.99, reason="High-confidence product text match."):
-        key = pair_key(category, subcategory)
-        if key not in valid_pairs:
+        if pair_key(category, subcategory) not in valid_pairs:
             return None
-        return {
-            "category": category,
-            "subcategory": subcategory,
-            "confidence": confidence,
-            "reasoning": reason,
-            "model_name": "local-taxonomy-classifier",
-            "model_version": MODEL_VERSION,
-        }
+        return local_result(taxonomy, category, subcategory, confidence=confidence, reason=reason)
 
     # Non-food and wellness first so "gummies", "water", or "oil" do not steal supplements/care items.
     if text_has_any(text, ["shampoo", "conditioner", "hair mask", "scalp", "hair care"]):
@@ -522,6 +689,10 @@ def deterministic_classification(product, taxonomy):
         return result("Household", "Dishwashing", reason="Dishwashing wording matched.")
     if text_has_any(text, ["toilet cleaner", "cleaner refill", "cleaning tablet", "all purpose cleaner", "surface cleaner"]):
         return result("Household", "Cleaning Supplies", reason="Cleaning-supply wording matched.")
+
+    form_result = packaged_form_classification(product, taxonomy)
+    if form_result:
+        return form_result
 
     if text_has_any(text, ["collagen", "protein powder", "protein peptides"]):
         return result("Supplements & Wellness", "Protein & Collagen", reason="Protein or collagen supplement wording matched.")
@@ -642,12 +813,16 @@ def deterministic_classification(product, taxonomy):
     if text_has_any(text, ["popcorn"]):
         return result("Snacks", "Popcorn", reason="Popcorn wording matched.")
 
-    if text_has_any(text, ["dragon fruit", "cantaloupe", "grape", "apple", "banana", "berries", "melon"]):
-        return result("Produce", "Fruits", reason="Fresh fruit wording matched.")
-    if text_has_any(text, ["salad greens", "lettuce", "spinach", "arugula"]):
+    if is_fresh_produce_text(text) and text_has_word(text, HERB_TERMS):
+        return result("Produce", "Fresh Herbs", reason="Fresh herb wording matched.")
+    if is_fresh_produce_text(text) and text_has_word(text, SALAD_GREEN_TERMS):
         return result("Produce", "Salad Greens", reason="Salad green wording matched.")
-    if text_has_any(text, ["mushroom"]):
+    if is_fresh_produce_text(text) and text_has_word(text, MUSHROOM_TERMS):
         return result("Produce", "Mushrooms", reason="Fresh mushroom wording matched.")
+    if is_fresh_produce_text(text) and text_has_word(text, VEGETABLE_TERMS):
+        return result("Produce", "Vegetables", reason="Fresh vegetable wording matched.")
+    if is_fresh_produce_text(text) and text_has_word(text, FRUIT_TERMS):
+        return result("Produce", "Fruits", reason="Fresh fruit wording matched.")
 
     if text_has_any(text, ["milk", "oatmilk", "almond milk", "soy milk"]):
         return result("Dairy & Eggs", "Milk", reason="Milk wording matched.")
@@ -927,8 +1102,6 @@ def build_training_examples(products, taxonomy):
             continue
         label_result = deterministic_classification(product, taxonomy)
         if not label_result:
-            label_result = existing_valid_classification(product, taxonomy)
-        if not label_result:
             continue
         label = pair_key(label_result["category"], label_result["subcategory"])
         key = (text, label)
@@ -1013,13 +1186,12 @@ def ml_classification(product, model, taxonomy):
 
 
 def default_classification(product, taxonomy):
-    existing = existing_valid_classification(product, taxonomy)
-    if existing:
-        existing = dict(existing)
-        existing["confidence"] = min(existing["confidence"], 0.55)
-        existing["reasoning"] = "Local model selected the existing valid taxonomy label with low confidence."
-        existing["model_name"] = "local-taxonomy-classifier"
-        return existing
+    packaged = packaged_form_classification(product, taxonomy)
+    if packaged:
+        packaged = dict(packaged)
+        packaged["confidence"] = min(packaged["confidence"], 0.75)
+        packaged["reasoning"] = "Local fallback selected a product-form taxonomy label."
+        return packaged
     return {
         "category": "Pantry",
         "subcategory": "Meal Kits & Sides",
@@ -1215,6 +1387,7 @@ def classify_products(base_dir, products, force_rediscover=False):
                 else:
                     result = default_classification(product, taxonomy)
                     print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
+            result = guard_impossible_classification(product, result, taxonomy)
             result = dict(result)
             result["taxonomy_version"] = taxonomy.get("taxonomy_version")
             cache.setdefault("items", {})[fingerprint] = result
@@ -1228,6 +1401,7 @@ def classify_products(base_dir, products, force_rediscover=False):
                 completed_count=index,
                 last_product=product_name,
             )
+        result = guard_impossible_classification(product, result, taxonomy)
         updated_products.append(hydrate_product_with_classification(product, result, fingerprint))
 
     save_json_file(cache_path, cache)

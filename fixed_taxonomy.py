@@ -1,7 +1,7 @@
 from copy import deepcopy
 
 
-FIXED_TAXONOMY_VERSION = "fixed-taxonomy-v3"
+FIXED_TAXONOMY_VERSION = "fixed-taxonomy-v5"
 
 
 FIXED_TAXONOMY = {
@@ -85,6 +85,7 @@ FIXED_TAXONOMY = {
             "subcategories": [
                 {"name": "Pasta", "slug": "pasta"},
                 {"name": "Rice & Grains", "slug": "rice-grains"},
+                {"name": "Cereal & Breakfast", "slug": "cereal-breakfast"},
                 {"name": "Beans & Legumes", "slug": "beans-legumes"},
                 {"name": "Soup & Broth", "slug": "soup-broth"},
                 {"name": "Canned Vegetables", "slug": "canned-vegetables"},

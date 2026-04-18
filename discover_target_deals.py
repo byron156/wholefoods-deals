@@ -1,6 +1,7 @@
 import hashlib
 import json
 import re
+import time
 from typing import Any, Optional, Tuple
 from urllib.parse import quote_plus
 
@@ -13,6 +14,11 @@ MAX_LOAD_MORE_CLICKS = 30
 DETAIL_WAIT_MS = 400
 DETAIL_DIALOG_TIMEOUT_MS = 2500
 MULTISTORY_LINK_SELECTOR = '[data-test="@web/slingshot-components/MultiStory/Link"]'
+TARGET_USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/147.0.0.0 Safari/537.36"
+)
 
 
 def normalize_text_key(text: Optional[str]) -> str:
@@ -75,6 +81,25 @@ def dismiss_target_popups(page) -> None:
             pass
 
 
+def wait_for_target_deals_surface(page, timeout_ms: int = 45000) -> None:
+    deadline = time.monotonic() + timeout_ms / 1000
+    while time.monotonic() < deadline:
+        dismiss_target_popups(page)
+        offer_count = page.locator('[data-test="offer-card"]').count()
+        if offer_count:
+            return
+
+        result_texts = [
+            re.sub(r"\s+", " ", locator.inner_text()).strip()
+            for locator in page.locator("text=/\\d+ results/i").all()[:3]
+        ]
+        has_nonzero_results = any(not text.startswith("0 ") for text in result_texts)
+        if has_nonzero_results and not page.locator("text=/Oops\\s*-\\s*our bad!/i").count():
+            return
+
+        page.wait_for_timeout(1000)
+
+
 def extract_offer_url(page, card) -> Optional[str]:
     direct_link = card.locator('a[href*="/p/"], a[href*="/pl/"]').first
     if direct_link.count():
@@ -121,6 +146,13 @@ def extract_offer_url(page, card) -> Optional[str]:
         return None
 
 
+def extract_direct_offer_url(card) -> Optional[str]:
+    direct_link = card.locator('a[href*="/p/"], a[href*="/pl/"]').first
+    if direct_link.count():
+        return normalize_target_url(direct_link.get_attribute("href"))
+    return None
+
+
 def parse_offer_card(card, page) -> Optional[dict[str, Any]]:
     name = None
     value_text = None
@@ -156,7 +188,10 @@ def parse_offer_card(card, page) -> Optional[dict[str, Any]]:
     if not current_price and not discount:
         return None
 
-    url = extract_offer_url(page, card) or build_target_search_url(name)
+    # Do not open every Target offer dialog here; hundreds of dialog opens made
+    # the daily refresh slow and fragile. Search links are good enough fallback
+    # URLs for deal discovery.
+    url = extract_direct_offer_url(card) or build_target_search_url(name)
 
     return {
         "asin": build_offer_id(name, value_text, expires),
@@ -223,10 +258,17 @@ def parse_multistory_deal_link(link) -> Optional[dict[str, Any]]:
 def discover_target_deals() -> dict[str, Any]:
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        page = browser.new_page(viewport={"width": 1280, "height": 1600})
+        context = browser.new_context(
+            viewport={"width": 1440, "height": 1800},
+            user_agent=TARGET_USER_AGENT,
+            locale="en-US",
+            timezone_id="America/New_York",
+        )
+        context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined});")
+        page = context.new_page()
         print(f"Opening Target grocery deals page: {TARGET_GROCERY_DEALS_URL}")
         page.goto(TARGET_GROCERY_DEALS_URL, wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(5000)
+        wait_for_target_deals_surface(page)
         dismiss_target_popups(page)
         page.locator("text=/\\d+ results/i").first.wait_for(timeout=30000)
 
