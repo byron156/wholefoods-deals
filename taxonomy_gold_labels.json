@@ -1,12 +1,72 @@
 {
   "instructions": "Manual taxonomy labels. These override exact products and are weighted into the local sklearn taxonomy classifier during refresh.",
-  "label_count": 309,
+  "label_count": 420,
   "labels": [
+    {
+      "asin": "B07QG5TC9J",
+      "url": "https://www.wholefoodsmarket.com/365-Everyday-Value-Cracker-Parmesan/dp/B07QG5TC9J?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07QG5TC9J&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_376_i",
+      "name": "365 by Whole Foods Market",
+      "raw_name": "365 by Whole Foods Market, Cracker Pita Parmesan & Garlic, 5 Ounce",
+      "brand": "Whole Foods Market",
+      "retailer": null,
+      "category": "Snacks",
+      "subcategory": "Crackers",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
     {
       "asin": "B09R67QCNF",
       "url": "https://www.wholefoodsmarket.com/Aura-Cacia-Ceramic-Diffuser-EA/dp/B09R67QCNF?pd_rd_w=FtXTM&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4FVCW577N8WY2W4RRVJ7&pd_rd_wg=9yYXg&pd_rd_r=f948cd9f-2c1e-49a3-b306-4473cb5756ae&pd_rd_i=B09R67QCNF&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_45_i",
       "name": "AURA Cacia Lunar Diffuser, 1 EA",
       "raw_name": "AURA CACIA Lunar Diffuser, 1 EA",
+      "brand": "Aura Cacia",
+      "retailer": null,
+      "category": "Household",
+      "subcategory": "Air Fresheners",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07D6V7NLV",
+      "url": "https://www.wholefoodsmarket.com/Agour-Ossau-Iraty-4-6-Month/dp/B07D6V7NLV?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07D6V7NLV&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_309_i",
+      "name": "Agour 6 Month Aged Ossau Iraty",
+      "raw_name": "Agour 6 Month Aged Ossau Iraty",
+      "brand": "Agour",
+      "retailer": null,
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0897YHTVP",
+      "url": "https://www.wholefoodsmarket.com/Artikaas-0264356000002-Baby-Swiss/dp/B0897YHTVP?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0897YHTVP&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_30_i",
+      "name": "Artikaas Baby Swiss",
+      "raw_name": "Artikaas Baby Swiss",
+      "brand": "Artikaas",
+      "retailer": null,
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01G561T4I",
+      "url": "https://www.wholefoodsmarket.com/Aura-Cacia-Cedarwood-Essential-Packaging/dp/B01G561T4I?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B01G561T4I&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_418_i",
+      "name": "Aura Cacia Atlas Cedarwood Essential Oil",
+      "raw_name": "Aura Cacia Atlas Cedarwood Essential Oil, 0.5 Fluid Ounce, Packaging May Vary",
+      "brand": "Aura Cacia Atlas Cedarwood Essential",
+      "retailer": null,
+      "category": "Supplements & Wellness",
+      "subcategory": "Essential Oils",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0C59JQJV4",
+      "url": "https://www.wholefoodsmarket.com/AURA-CACIA-Paradise-Room-Spray/dp/B0C59JQJV4?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0C59JQJV4&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_187_i",
+      "name": "Aura Cacia Paradise Room Spray 8 Fl. Oz.",
+      "raw_name": "Aura Cacia Paradise Room Spray 8 Fl. oz. - Light Aroma, No Synthetic Fragrances",
       "brand": "Aura Cacia",
       "retailer": null,
       "category": "Household",
@@ -35,6 +95,18 @@
       "retailer": null,
       "category": "Alcohol",
       "subcategory": "Wine",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09RGKVDSG",
+      "url": "https://www.wholefoodsmarket.com/Blue-Stripes-Hazelnut-Chocolate-Covered/dp/B09RGKVDSG?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B09RGKVDSG&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_374_i",
+      "name": "Blue Stripes - Chocolate Covered Cacao Beans, Hazelnut Butter, 70% Cacao, No Refined Sugar, Gluten Free, Vegan, Healthy Snacks, Non GMO, 5G of Sugar Per Serving, 3.5 OZ",
+      "raw_name": "Blue Stripes - Chocolate Covered Cacao Beans, Hazelnut Butter, 70% Cacao, No Refined Sugar, Gluten Free, Vegan, Healthy Snacks, Non GMO, 5g of Sugar per Serving, 3.5 OZ",
+      "brand": "Blue Stripes",
+      "retailer": null,
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -99,6 +171,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B000GF1E54",
+      "url": "https://www.wholefoodsmarket.com/DERMA-Advanced-Peptides-Collagen-Moisturizer/dp/B000GF1E54?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B000GF1E54&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_206_i",
+      "name": "Derma E Advanced Peptides and Collagen Moisturizer",
+      "raw_name": "Derma E Advanced Peptides and Collagen Moisturizer – Double Action Face Cream with Peptide Complex – Intense Natural Collagen Moisture Day and Night Cream for Women, 2oz",
+      "brand": "Derma-E",
+      "retailer": null,
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B001NMWZZ2",
       "url": "https://www.wholefoodsmarket.com/2011-Elk-Cove-Vineyards-Pinot/dp/B001NMWZZ2?pd_rd_w=FtXTM&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4FVCW577N8WY2W4RRVJ7&pd_rd_wg=9yYXg&pd_rd_r=f948cd9f-2c1e-49a3-b306-4473cb5756ae&pd_rd_i=B001NMWZZ2&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_211_i",
       "name": "Elk Cove, Pinot Gris, 750ML",
@@ -107,6 +191,18 @@
       "retailer": null,
       "category": "Alcohol",
       "subcategory": "Wine",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0BTK3ND6H",
+      "url": "https://www.wholefoodsmarket.com/ELLENOS-Pink-Guava-Yogurt-5-3/dp/B0BTK3ND6H?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0BTK3ND6H&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_23_i",
+      "name": "Ellenos Yogurt, Pink Guava, 5.3 Oz",
+      "raw_name": "Ellenos Yogurt, Pink Guava, 5.3 Oz",
+      "brand": "Ellenos",
+      "retailer": null,
+      "category": "Dairy & Eggs",
+      "subcategory": "Yogurt",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -155,6 +251,18 @@
       "retailer": null,
       "category": "Alcohol",
       "subcategory": "Wine",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B079VV4JWX",
+      "url": "https://www.wholefoodsmarket.com/HU-Organic-Chocolate-Vanilla-Quinoa/dp/B079VV4JWX?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B079VV4JWX&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_43_i",
+      "name": "Hu Vanilla Crunch Dark Chocolate Bar, 2.1 Ounce Bar, 1 Count",
+      "raw_name": "Hu Vanilla Crunch Dark Chocolate Bar, 2.1 Ounce Bar, 1 Count",
+      "brand": "Hu Vanilla Crunch",
+      "retailer": null,
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -215,6 +323,18 @@
       "retailer": null,
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DYDTS92P",
+      "url": "https://www.wholefoodsmarket.com/Lovebird-Organic-Grain-Free-Cocoa-Cereal/dp/B0DYDTS92P?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DYDTS92P&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_27_i",
+      "name": "Lovebird, Organic Grain-Free Cocoa Cereal, 7 Ounce",
+      "raw_name": "Lovebird, Organic Grain-Free Cocoa Cereal, 7 Ounce",
+      "brand": "Lovebird",
+      "retailer": null,
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -327,6 +447,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07PY962WW",
+      "url": "https://www.wholefoodsmarket.com/Purezero-Shampoo-Moroccan-Argan-Oil/dp/B07PY962WW?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07PY962WW&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_192_i",
+      "name": "Purezero Moroccan Argan Oil Shampoo - 12 Fl Ounces - Repair Damaged Hair - Restore Strength, Shine & Softness - Zero Sulfates, Parabens, Dyes, Gluten - 100% Vegan & Cruelty Free",
+      "raw_name": "Purezero Moroccan Argan Oil Shampoo - 12 Fl Ounces - Repair Damaged Hair - Restore Strength, Shine & Softness - Zero Sulfates, Parabens, Dyes, Gluten - 100% Vegan & Cruelty Free",
+      "brand": "Purezero Moroccan Argan Oil Shampoo",
+      "retailer": null,
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B087DKMYT7",
       "url": "https://www.wholefoodsmarket.com/Sach-Paneer-Original-Organic-Ounce/dp/B087DKMYT7?pd_rd_w=FtXTM&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4FVCW577N8WY2W4RRVJ7&pd_rd_wg=9yYXg&pd_rd_r=f948cd9f-2c1e-49a3-b306-4473cb5756ae&pd_rd_i=B087DKMYT7&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_41_i",
       "name": "Sach Organic Original Paneer, 6 OZ",
@@ -335,6 +467,18 @@
       "retailer": null,
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DR38N2MQ",
+      "url": "https://www.wholefoodsmarket.com/SAFFRON-Chili-Crisp-Noodles-Chicken/dp/B0DR38N2MQ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DR38N2MQ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_26_i",
+      "name": "Saffron ROAD Chili Crisp Noodles with Chicken, 10 OZ",
+      "raw_name": "SAFFRON ROAD Chili Crisp Noodles with Chicken, 10 OZ",
+      "brand": "Saffron Road",
+      "retailer": null,
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -459,6 +603,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "hmart:3066",
+      "url": "https://www.hmart.com/cookie-cream-shake-160ml-5-packs-1/p",
+      "name": "Cookie&cream Shake 160ML 5 Packs",
+      "raw_name": "Cookie&Cream Shake 160ml 5 Packs",
+      "brand": "Lotte",
+      "retailer": "H Mart",
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "hmart:1011",
       "url": "https://www.hmart.com/crispy-roasted-sea-salt-seaweed-12pk-2-16oz--61g--1/p",
       "name": "Crispy Roasted Sea Salt Seaweed 12PK 2.16oz",
@@ -495,6 +651,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "hmart:3655",
+      "url": "https://www.hmart.com/frozen-persimmon-8-56oz-282g--1/p",
+      "name": "Frozen Persimmon 8.56oz",
+      "raw_name": "Frozen Persimmon 8.56oz(282g)",
+      "brand": "Pulmuone",
+      "retailer": "H Mart",
+      "category": "Frozen",
+      "subcategory": "Frozen Fruit",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:5579",
+      "url": "https://www.hmart.com/gochujang-hot-pepper-paste-mild-1-1lb-500g--1/p",
+      "name": "Gochujang Hot Pepper Paste Mild 1.1lb",
+      "raw_name": "Gochujang Hot Pepper Paste Mild 1.1lb(500g)",
+      "brand": "Haechandle",
+      "retailer": "H Mart",
+      "category": "Pantry",
+      "subcategory": "Condiments",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "hmart:980",
       "url": "https://www.hmart.com/green-tea-laver-gim--2-26oz-64g--16-packs-1/p",
       "name": "Green Tea Laver(GIM) 2.26oz(64g) 16 Packs",
@@ -503,6 +683,18 @@
       "retailer": "H Mart",
       "category": "Snacks",
       "subcategory": "Seaweed Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:4141",
+      "url": "https://www.hmart.com/hana-katsuo-udon-36-6oz-1039g--1/p",
+      "name": "Hana Katsuo Udon 36.6oz",
+      "raw_name": "Hana Katsuo Udon 36.6oz(1039g)",
+      "brand": "Pulmuone",
+      "retailer": "H Mart",
+      "category": "International",
+      "subcategory": "Asian Noodles & Dumplings",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -539,6 +731,18 @@
       "retailer": "H Mart",
       "category": "Snacks",
       "subcategory": "Seaweed Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:9299",
+      "url": "https://www.hmart.com/kanto-cooking-soup-base-3-88-oz--110g--1/p",
+      "name": "Kanto Cooking Soup Base 3.88 Oz",
+      "raw_name": "Kanto Cooking Soup Base 3.88 Oz (110g)",
+      "brand": "Haidilao",
+      "retailer": "H Mart",
+      "category": "Pantry",
+      "subcategory": "Marinades & Cooking Sauces",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -627,6 +831,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "hmart:4179",
+      "url": "https://www.hmart.com/organic-half---half-32-fl-oz--950-ml--1/p",
+      "name": "Organic Half & Half 32 Fl Oz (950 Ml)",
+      "raw_name": "Organic Half & Half 32 Fl Oz (950 Ml)",
+      "brand": "Organic Valley",
+      "retailer": "H Mart",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:1597",
+      "url": "https://www.hmart.com/ppushu-ppushu-bulgogi-flavor-3-17oz-90g--1/p",
+      "name": "Ppushu Ppushu Bulgogi Flavor 3.17oz",
+      "raw_name": "Ppushu Ppushu Bulgogi Flavor 3.17oz(90g)",
+      "brand": "Otoki",
+      "retailer": "H Mart",
+      "category": "International",
+      "subcategory": "Asian Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "hmart:4302",
       "url": "https://www.hmart.com/premium-bean-sprouts-12oz-340g--1/p",
       "name": "Premium Bean Sprouts 12OZ",
@@ -635,6 +863,42 @@
       "retailer": "H Mart",
       "category": "Produce",
       "subcategory": "Vegetables",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:1191",
+      "url": "https://www.hmart.com/ricecake-with-cheese-flavored-sauce-12-7oz-360g--1/p",
+      "name": "Ricecake with Cheese Flavored Sauce 12.7oz",
+      "raw_name": "Ricecake with Cheese Flavored Sauce 12.7oz(360g)",
+      "brand": "Bibigo",
+      "retailer": "H Mart",
+      "category": "International",
+      "subcategory": "Korean Foods",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:2536",
+      "url": "https://www.hmart.com/soon-tofu-stew-kit--medium-hot--21-1oz-599g--1/p",
+      "name": "Soon Tofu Stew Kit (Medium Hot) 21.1oz",
+      "raw_name": "Soon Tofu Stew Kit (Medium Hot) 21.1oz(599g)",
+      "brand": "Pulmuone",
+      "retailer": "H Mart",
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:2764",
+      "url": "https://www.hmart.com/soybean-paste-stew-with-pork-1-1lb-500g--1/p",
+      "name": "Soybean Paste Stew with Pork 1.1lb",
+      "raw_name": "Soybean Paste Stew with Pork 1.1lb(500g)",
+      "brand": "Hansang",
+      "retailer": "H Mart",
+      "category": "Prepared Foods",
+      "subcategory": "Soups & Stews",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -656,6 +920,18 @@
       "name": "Spicy Flavor Green Chili Hot Pot Seasoning 7.1oz",
       "raw_name": "Spicy Flavor Green Chili Hot Pot Seasoning 7.1oz(200g)",
       "brand": "Haidilao",
+      "retailer": "H Mart",
+      "category": "Pantry",
+      "subcategory": "Condiments",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "hmart:479",
+      "url": "https://www.hmart.com/vinegar-added-hot-pepper-paste-6oz-170g--1/p",
+      "name": "Vinegar Added Hot Pepper Paste 6OZ",
+      "raw_name": "Vinegar Added Hot Pepper Paste 6oz(170g)",
+      "brand": "Chung Jung One",
       "retailer": "H Mart",
       "category": "Pantry",
       "subcategory": "Condiments",
@@ -795,6 +1071,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "target:4cbfd0199c72d7ba",
+      "url": "https://www.target.com/s?searchTerm=Farmer+Focus+organic+chicken",
+      "name": "Farmer Focus Organic Chicken",
+      "raw_name": "Farmer Focus organic chicken",
+      "brand": "Farmer Focus",
+      "retailer": "Target",
+      "category": "Meat & Seafood",
+      "subcategory": "Chicken",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:5fbfbd9a24b5355a",
+      "url": "https://www.target.com/s?searchTerm=Farmer+John+sliced+ham",
+      "name": "Farmer John Sliced Ham",
+      "raw_name": "Farmer John sliced ham",
+      "brand": "Farmer John",
+      "retailer": "Target",
+      "category": "Meat & Seafood",
+      "subcategory": "Deli Meats",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "target:1a867d1868f95cc4",
       "url": "https://www.target.com/s?searchTerm=Fat+Tire",
       "name": "Fat Tire",
@@ -803,6 +1103,18 @@
       "retailer": "Target",
       "category": "Alcohol",
       "subcategory": "Beer",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:213f8619eb4399e2",
+      "url": "https://www.target.com/s?searchTerm=Frick%27s+Quality+Meats+Ham",
+      "name": "Frick's Quality Meats Ham",
+      "raw_name": "Frick's Quality Meats Ham",
+      "brand": null,
+      "retailer": "Target",
+      "category": "Meat & Seafood",
+      "subcategory": "Deli Meats",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -867,6 +1179,54 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "target:0e6cbeba37186ef5",
+      "url": "https://www.target.com/s?searchTerm=InnovAsian+frozen+chicken+-+36oz",
+      "name": "Innovasian Frozen Chicken - 36OZ",
+      "raw_name": "InnovAsian frozen chicken - 36oz",
+      "brand": "InnovAsian",
+      "retailer": "Target",
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:76338e5338beb8de",
+      "url": "https://www.target.com/s?searchTerm=Jelly+Belly+Signature+candy",
+      "name": "Jelly Belly Signature Candy",
+      "raw_name": "Jelly Belly Signature candy",
+      "brand": null,
+      "retailer": "Target",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:a23f2b614d49bf2f",
+      "url": "https://www.target.com/s?searchTerm=Jelly+Belly+Sours+candy+-+8oz",
+      "name": "Jelly Belly Sours Candy - 8OZ",
+      "raw_name": "Jelly Belly Sours candy - 8oz",
+      "brand": "Jelly Belly Sours",
+      "retailer": "Target",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:2e3e383ab127f290",
+      "url": "https://www.target.com/s?searchTerm=Juicy+Lucy+angus+beef+patties",
+      "name": "Juicy Lucy Angus Beef Patties",
+      "raw_name": "Juicy Lucy angus beef patties",
+      "brand": "Juicy Lucy",
+      "retailer": "Target",
+      "category": "Frozen",
+      "subcategory": "Frozen Meat & Seafood",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "target:2a82133fa3b6e266",
       "url": "https://www.target.com/s?searchTerm=Kona+and+King%27s+Hawaiian",
       "name": "Kona and King's Hawaiian",
@@ -887,6 +1247,18 @@
       "retailer": "Target",
       "category": "Alcohol",
       "subcategory": "Wine",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:eada4ebfcc974acf",
+      "url": "https://www.target.com/s?searchTerm=Marie+Callender%27s+frozen+pies",
+      "name": "Marie Callender's Frozen Pies",
+      "raw_name": "Marie Callender's frozen pies",
+      "brand": "Marie Callender's",
+      "retailer": "Target",
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -947,6 +1319,18 @@
       "retailer": "Target",
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:82c282c87300b7c8",
+      "url": "https://www.target.com/s?searchTerm=Ritual+Zero+Proof+Non-Alcoholic",
+      "name": "Ritual Zero Proof Non-Alcoholic",
+      "raw_name": "Ritual Zero Proof Non-Alcoholic",
+      "brand": null,
+      "retailer": "Target",
+      "category": "Alcohol",
+      "subcategory": "Spirits",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1227,6 +1611,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "target:536bd7722df93038",
+      "url": "https://www.target.com/s?searchTerm=select+Liquid+Death+tea+cans",
+      "name": "Select Liquid Death Tea Cans",
+      "raw_name": "select Liquid Death tea cans",
+      "brand": null,
+      "retailer": "Target",
+      "category": "Beverages",
+      "subcategory": "Sparkling Water",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "target:21fa811d935b5141",
       "url": "https://www.target.com/s?searchTerm=Select+Mott%27s+%26+Fruit+Gushers+snacks",
       "name": "Select Mott's & Fruit Gushers Snacks",
@@ -1235,6 +1631,18 @@
       "retailer": "Target",
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "target:d0dd4499c0522232",
+      "url": "https://www.target.com/s?searchTerm=select+nutpods+creamers",
+      "name": "Select Nutpods Creamers",
+      "raw_name": "select nutpods creamers",
+      "brand": null,
+      "retailer": "Target",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1467,6 +1875,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "target:439c70e305ce8c41",
+      "url": "https://www.target.com/s?searchTerm=Ultima+Replenisher+drink+mixes",
+      "name": "Ultima Replenisher Drink Mixes",
+      "raw_name": "Ultima Replenisher drink mixes",
+      "brand": "Ultima Replenisher",
+      "retailer": "Target",
+      "category": "Beverages",
+      "subcategory": "Drink Mixes",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0DK5WD5CT",
       "url": "https://www.wholefoodsmarket.com/grocery/product/365-by-whole-foods-market-365-by-whole-foods-market-plain-turkey-burgers-10-67-oz-b0dk5wd5ct?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "365 by Whole Foods Market Plain Turkey Burgers, 10.67 OZ",
@@ -1515,6 +1935,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0BG6SPKZQ",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/alba-botanica-alba-botanica-sheer-mineral-sunscreen-spray-spf-50-fragrance-free-broad-spectrum-water-resistant-and-biodegradable-5-fl-oz-bottle-b0bg6spkzq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Alba Botanica Sheer Mineral Sunscreen Spray",
+      "raw_name": "Alba Botanica Sheer Mineral Sunscreen Spray, SPF 50, Fragrance-Free Broad Spectrum, Water Resistant and Biodegradable, 5 fl. Oz. Bottle",
+      "brand": "Alba Botanica",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Sun Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0CLVS8S3Y",
       "url": "https://www.wholefoodsmarket.com/grocery/product/alexandre-alexandre-family-farms-organic-a2-a2-100-grass-fed-sour-cream-8-oz-b0clvs8s3y?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Alexandre Family Farms Organic A2/A2 100% Grass Fed Sour Cream",
@@ -1523,6 +1955,18 @@
       "retailer": "Whole Foods",
       "category": "Dairy & Eggs",
       "subcategory": "Sour Cream & Cottage Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DG3XRH9J",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/alexandre-alexandre-family-farms-organic-a2a2-chocolate-whole-milk-25-3-fz-b0dg3xrh9j?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Alexandre Family Farms Organic A2A2 Chocolate Whole Milk",
+      "raw_name": "ALEXANDRE FAMILY FARMS Organic A2A2 Chocolate Whole Milk, 25.3 FZ",
+      "brand": "Alexandre",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Milk",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1547,6 +1991,18 @@
       "retailer": "Whole Foods",
       "category": "Frozen",
       "subcategory": "Frozen Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DNTZ5BXS",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-almond-butter-protein-bar-sgl-1-98-oz-b0dntz5bxs?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Aloha Organic Almond Butter Protein Bar Sgl, 1.98 OZ",
+      "raw_name": "Aloha Organic Almond Butter Protein Bar Sgl, 1.98 OZ",
+      "brand": "Aloha",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Protein Bars",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1611,6 +2067,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B078G9BKHQ",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/artisola-artisola-organic-spinach-cheese-ravioli-8-oz-b078g9bkhq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Artisola Organic Spinach & Cheese Ravioli, 8 OZ",
+      "raw_name": "Artisola Organic Spinach & Cheese Ravioli, 8 OZ",
+      "brand": "Artisola",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01FROFV5W",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/aura-cacia-aura-cacia-fresh-ginger-essential-oil-gc-ms-tested-for-purity-15ml-0-5-fl-oz-b01frofv5w?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Aura Cacia Fresh Ginger Essential Oil",
+      "raw_name": "Aura Cacia Fresh Ginger Essential Oil, GC/MS Tested for Purity, 15ml (0.5 fl. oz.)",
+      "brand": "Aura Cacia",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Essential Oils",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B00020HNRQ",
       "url": "https://www.wholefoodsmarket.com/Aura-Cacia-Essential-Patchouli-Fluid/dp/B00020HNRQ?pd_rd_w=FtXTM&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4FVCW577N8WY2W4RRVJ7&pd_rd_wg=9yYXg&pd_rd_r=f948cd9f-2c1e-49a3-b306-4473cb5756ae&pd_rd_i=B00020HNRQ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_72_i",
       "name": "Aura Cacia Patchouli, Dark, 0.5 Ounce",
@@ -1635,6 +2115,66 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0007ACTFW",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/avalon-organics-avalon-organics-all-natural-biotin-b-complex-therapy-shampoo-11-fl-oz-b0007actfw?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Avalon Organics All Natural Biotin B-Complex Therapy Shampoo",
+      "raw_name": "Avalon Organics All Natural Biotin B-Complex Therapy Shampoo, 11 Fl Oz",
+      "brand": "Avalon Organics",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0FMT9CWR6",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/avalon-organics-avalon-organics-all-natural-coconut-pear-shampoo-32-fl-oz-b0fmt9cwr6?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Avalon Organics All Natural Coconut Pear Shampoo, 32 Fl Oz",
+      "raw_name": "Avalon Organics All Natural Coconut Pear Shampoo, 32 Fl Oz",
+      "brand": "Avalon Organics",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B005P0KBBS",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/avalon-organics-avalon-organics-scalp-treatment-tea-tree-conditioner-encourages-scalp-well-being-and-leaves-hair-soft-11-fluid-ounces-b005p0kbbs?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Avalon Organics Scalp Treatment Tea Tree Conditioner",
+      "raw_name": "Avalon Organics Scalp Treatment Tea Tree Conditioner, Encourages Scalp Well-Being and Leaves Hair Soft, 11 Fluid Ounces",
+      "brand": "Avalon Organics",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0095D2Q32",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/avalon-organics-avalon-organics-scalp-treatment-tea-tree-shampoo-encourages-scalp-well-being-and-leaves-hair-soft-11-fluid-ounces-b0095d2q32?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Avalon Organics Scalp Treatment Tea Tree Shampoo",
+      "raw_name": "Avalon Organics Scalp Treatment Tea Tree Shampoo, Encourages Scalp Well-Being and Leaves Hair Soft, 11 Fluid Ounces",
+      "brand": "Avalon Organics",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B008OL3WZC",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/avalon-organics-avalon-organics-scalp-treatment-tea-tree-shampoo-encourages-scalp-well-being-and-leaves-hair-soft-32-fluid-ounces-b008ol3wzc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Avalon Organics Scalp Treatment Tea Tree Shampoo",
+      "raw_name": "Avalon Organics Scalp Treatment Tea Tree Shampoo, Encourages Scalp Well-Being and Leaves Hair Soft, 32 Fluid Ounces",
+      "brand": "Avalon Organics",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07FYCB4WX",
       "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYCB4WX",
       "name": "Avocado Hass Organic, 4 Count",
@@ -1643,6 +2183,18 @@
       "retailer": "Whole Foods",
       "category": "Produce",
       "subcategory": "Fruits",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CHN98M7M",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/badger-badger-mineral-daily-sunscreen-with-zinc-oxide-spf-30-lightweight-easy-to-apply-w-no-white-cast-moisturizing-organic-sunscreen-reef-safe-vegan-unscented-4-fl-oz-b0chn98m7m?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Badger Mineral Daily Sunscreen with Zinc Oxide",
+      "raw_name": "Badger Mineral Daily Sunscreen with Zinc Oxide, SPF 30, Lightweight & Easy to Apply w/No White Cast, Moisturizing Organic Sunscreen, Reef Safe, Vegan, Unscented, 4 fl oz",
+      "brand": "Badger",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Sun Care",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1667,6 +2219,42 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Kids Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0BJTCW9WQ",
+      "url": "https://www.wholefoodsmarket.com/Beekeepers-Naturals-Propolis-Liposomal-Vitamin/dp/B0BJTCW9WQ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0BJTCW9WQ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_40_i",
+      "name": "Beekeepers Naturals Liposomal Propolis with Vitamin C 12 Count",
+      "raw_name": "Beekeepers Naturals Liposomal Propolis with Vitamin C 12 Count, 0.27 FZ",
+      "brand": "Beekeeper's Naturals",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Immune Support",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09MJVWXGB",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/beekeeper-s-naturals-beekeepers-naturals-propolis-sinus-support-60-ct-b09mjvwxgb?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Beekeepers Naturals Propolis Sinus Support, 60 CT",
+      "raw_name": "Beekeepers Naturals Propolis Sinus Support, 60 CT",
+      "brand": "Beekeeper's Naturals",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Multivitamins",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00IFK6RF4",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/bell-evans-bell-evans-breaded-chicken-breast-tenders-12-oz-b00ifk6rf4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Bell & Evans Breaded Chicken Breast Tenders, 12 OZ",
+      "raw_name": "Bell & Evans Breaded Chicken Breast Tenders, 12 OZ",
+      "brand": "Bell & Evans",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Meat & Seafood",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1703,6 +2291,18 @@
       "retailer": "Whole Foods",
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07FWJBXHJ",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/bilinski-bilinski-country-style-breakfast-chicken-sausage-12-oz-b07fwjbxhj?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Bilinski Country Style Breakfast Chicken Sausage, 12 OZ",
+      "raw_name": "Bilinski Country Style Breakfast Chicken Sausage, 12 OZ",
+      "brand": "Bilinski",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Ready-to-Eat Protein",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1755,6 +2355,42 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B077ZXJ7XR",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/cava-cava-traditional-hummus-8-oz-b077zxj7xr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "CAVA Traditional Hummus, 8 OZ",
+      "raw_name": "CAVA Traditional Hummus, 8 OZ",
+      "brand": "Cava",
+      "retailer": "Whole Foods",
+      "category": "Produce",
+      "subcategory": "Fresh Salsa & Dips",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07812N28D",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/cava-cava-tzatziki-8-oz-b07812n28d?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "CAVA Tzatziki, 8 OZ",
+      "raw_name": "CAVA Tzatziki, 8 OZ",
+      "brand": "Cava",
+      "retailer": "Whole Foods",
+      "category": "Produce",
+      "subcategory": "Fresh Salsa & Dips",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07D7BC44H",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/cava-cava-yogurt-dill-sauce-9-oz-b07d7bc44h?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "CAVA Yogurt Dill Sauce, 9 OZ",
+      "raw_name": "CAVA Yogurt Dill Sauce, 9 OZ",
+      "brand": "Cava",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Salad Dressings",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0D27M1XF1",
       "url": "https://www.wholefoodsmarket.com/grocery/product/cabi-cabi-sweet-yuzu-vinaigrette-5-oz-b0d27m1xf1?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Cabi Sweet Yuzu Vinaigrette, 5 OZ",
@@ -1775,6 +2411,30 @@
       "retailer": "Whole Foods",
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CNS2SB7F",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/califia-farms-califia-farms-organic-brown-sugar-almond-milk-coffee-creamer-25-4-oz-dairy-free-plant-based-vegan-gluten-free-non-gmo-almond-creamer-almond-milk-usda-organic-b0cns2sb7f?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Califia Farms - Organic Brown Sugar Almond Milk Coffee Creamer, 25.4 Oz, Dairy Free, Plant Based, Vegan, Gluten Free, Non GMO, Almond Creamer, Almond Milk, USDA Organic",
+      "raw_name": "Califia Farms - Organic Brown Sugar Almond Milk Coffee Creamer, 25.4 Oz, Dairy Free, Plant Based, Vegan, Gluten Free, Non GMO, Almond Creamer, Almond Milk, USDA Organic",
+      "brand": "Califia Farms",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0BYMP13D8",
+      "url": "https://www.wholefoodsmarket.com/Camille-Rose-Strengthening-Conditioner-Moisturizer/dp/B0BYMP13D8?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0BYMP13D8&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_85_i",
+      "name": "Camille Rose Leave-In Conditioner, Rosemary Oil",
+      "raw_name": "Camille Rose Leave-in Conditioner, Rosemary Oil – Deep Conditioning for Hair Strengthening, Detangling, Dry Scalp Moisturizer, 8 Oz",
+      "brand": "Camille Rose",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1899,6 +2559,42 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B00021KD2C",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/derma-e-derma-e-anti-wrinkle-renewal-skin-cream-vitamin-a-wrinkle-treatment-cream-vegan-anti-aging-moisturizer-to-smooth-renew-aging-skin-4-oz-b00021kd2c?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Derma E Anti-Wrinkle Renewal Skin Cream",
+      "raw_name": "Derma E Anti-Wrinkle Renewal Skin Cream – Vitamin A Wrinkle Treatment Cream – Vegan Anti-Aging Moisturizer to Smooth & Renew Aging Skin, 4 oz",
+      "brand": "Derma E",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0009ET6CA",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/derma-e-derma-e-ultra-hydrating-dewy-skin-serum-moisturizing-facial-treatment-with-anti-aging-squalane-hyaluronic-acid-and-ceramides-to-smooth-and-replenish-2-fl-oz-b0009et6ca?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Derma E Ultra Hydrating Dewy Skin Serum",
+      "raw_name": "DERMA E Ultra Hydrating Dewy Skin Serum – Moisturizing Facial Treatment with Anti-Aging Squalane, Hyaluronic Acid and Ceramides to Smooth and Replenish, 2 FL Oz",
+      "brand": "Derma E",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01MA35EGM",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/derma-e-derma-e-vitamin-c-concentrated-serum-2-oz-with-hyaluronic-acid-vitamin-e-aloe-all-natural-antioxidant-rich-concentrated-formula-hydrating-brightening-vitamin-c-face-serum-b01ma35egm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Derma E Vitamin C Concentrated Serum",
+      "raw_name": "DERMA E Vitamin C Concentrated Serum, 2 Oz, with Hyaluronic Acid, Vitamin E & Aloe, All Natural, Antioxidant-Rich Concentrated Formula, Hydrating & Brightening Vitamin C Face Serum",
+      "brand": "Derma E",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B078HSXL3X",
       "url": "https://www.wholefoodsmarket.com/grocery/product/follow-your-heart-dressing-caesar-vegan-gluten-free-organic-12-fl-oz-b078hsxl3x?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Dressing Caesar Vegan Gluten-Free Organic, 12 Fl Oz",
@@ -1943,6 +2639,18 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Hydration Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07SDKWMZD",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/ellenos-ellenos-yogurt-marionberry-5-3-oz-b07sdkwmzd?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Ellenos Yogurt, Marionberry, 5.3 Oz",
+      "raw_name": "Ellenos Yogurt, Marionberry, 5.3 Oz",
+      "brand": "Ellenos",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Yogurt",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1995,6 +2703,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0F7399T7Q",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/every-man-jack-every-man-jack-coconut-vanilla-body-wash-33-8-fl-oz-b0f7399t7q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Every Man Jack Coconut Vanilla Body Wash, 33.8 Fl Oz",
+      "raw_name": "Every Man Jack Coconut Vanilla Body Wash, 33.8 Fl Oz",
+      "brand": "Every Man Jack",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Body Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DDWGR2QH",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/four-sigmatic-four-sigmatic-organic-focus-half-caf-ground-coffee-10-oz-b0ddwgr2qh?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "FOUR Sigmatic Organic Focus Half Caf Ground Coffee, 10 OZ",
+      "raw_name": "FOUR SIGMATIC Organic Focus Half Caf Ground Coffee, 10 OZ",
+      "brand": "Four Sigmatic",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0010ED368",
       "url": "https://www.wholefoodsmarket.com/Flor-Essence-Detox-Liquid-Tea/dp/B0010ED368?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0010ED368&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_243_i",
       "name": "Flora Health Flor-Essence Liquid Tea Blend",
@@ -2027,6 +2759,18 @@
       "retailer": "Whole Foods",
       "category": "Pantry",
       "subcategory": "Mayo & Mustard",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B085YVM1T2",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/force-of-nature-meats-force-of-nature-meats-ground-venison-14-oz-b085yvm1t2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Force of Nature Meats Ground Venison, 14 OZ",
+      "raw_name": "Force of Nature Meats Ground Venison, 14 OZ",
+      "brand": "Force of Nature Meats",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Meat & Seafood",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2103,6 +2847,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B004GWE0UO",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/gaia-herbs-gaia-herbs-organic-valerian-root-extract-1-fz-b004gwe0uo?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "GAIA Herbs Organic Valerian Root Extract, 1 FZ",
+      "raw_name": "GAIA HERBS Organic Valerian Root Extract, 1 FZ",
+      "brand": "Gaia Herbs",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0DQ2B65T5",
       "url": "https://www.wholefoodsmarket.com/grocery/product/good-good-good-good-special-reserve-apricot-fruit-spread-11-oz-b0dq2b65t5?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "GOOD GOOD Special Reserve Apricot Fruit Spread, 11 OZ",
@@ -2123,6 +2879,30 @@
       "retailer": "Whole Foods",
       "category": "Beverages",
       "subcategory": "Kombucha",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0036THML2",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/gaia-herbs-gaia-herbs-adrenal-health-daily-support-herbal-supplement-with-ashwagandha-holy-basil-schisandra-help-maintain-healthy-energy-stress-levels-120-vegan-liquid-phyto-caps-60-servings-b0036thml2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Gaia Herbs Adrenal Health Daily Support",
+      "raw_name": "Gaia Herbs Adrenal Health Daily Support - Herbal Supplement with Ashwagandha, Holy Basil & Schisandra - Help Maintain Healthy Energy & Stress Levels* - 120 Vegan Liquid Phyto-Caps (60 Servings)",
+      "brand": "Gaia Herbs",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0036THMYE",
+      "url": "https://www.wholefoodsmarket.com/Gaia-Herbs-Oregano-Liquid-Capsules/dp/B0036THMYE?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0036THMYE&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_151_i",
+      "name": "Gaia Herbs Oil of Oregano",
+      "raw_name": "Gaia Herbs Oil of Oregano - Immune & Antioxidant Support Supplement - with Oregano Oil, Carvacrol & Thymol* - 60 Vegan Liquid Phyto-Caps (60 Servings)",
+      "brand": "Gaia Herbs",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2179,6 +2959,30 @@
       "url": "https://www.wholefoodsmarket.com/grocery/product/goodles-goodles-gluten-free-cheddy-mac-1-pack-6oz-13g-protein-4g-fiber-per-serving-b0cp4lmycf?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Goodles Gluten-Free Cheddy Mac 1-PACK, 6OZ",
       "raw_name": "GOODLES Gluten-Free Cheddy Mac 1-Pack, 6oz - 13g Protein & 4g Fiber per serving",
+      "brand": "Goodles",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DB3DF8QM",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/goodles-goodles-lucky-penne-pasta-8-oz-b0db3df8qm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Goodles Lucky Penne Pasta, 8 OZ",
+      "raw_name": "Goodles Lucky Penne Pasta, 8 OZ",
+      "brand": "Goodles",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0F7RRBKN8",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/goodles-goodles-mac-and-cheese-thrilled-cheese-6-ounce-b0f7rrbkn8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Goodles Mac and Cheese Thrilled Cheese, 6 Ounce",
+      "raw_name": "Goodles Mac And Cheese Thrilled Cheese, 6 Ounce",
       "brand": "Goodles",
       "retailer": "Whole Foods",
       "category": "Pantry",
@@ -2271,6 +3075,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B00L9N0AAW",
+      "url": "https://www.wholefoodsmarket.com/Herb-Pharm-Cloves-Organic-Fl/dp/B00L9N0AAW?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B00L9N0AAW&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_63_i",
+      "name": "HERB Pharm Organic Clove Extract, 1 FZ",
+      "raw_name": "HERB PHARM Organic Clove Extract, 1 FZ",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B000F4WJCI",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-organic-echinacea-glycerite-1-fz-b000f4wjci?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "HERB Pharm Organic Echinacea Glycerite, 1 FZ",
+      "raw_name": "HERB Pharm Organic Echinacea Glycerite, 1 FZ",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07NSSWKMY",
       "url": "https://www.wholefoodsmarket.com/KITCHEN-Organic-Orange-Cashew-Chocolate/dp/B07NSSWKMY?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07NSSWKMY&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_105_i",
       "name": "HU Kitchen Organic Orange Cashew Butter Chocolate Bar",
@@ -2279,6 +3107,30 @@
       "retailer": "Whole Foods",
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07FYYNSY1",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/hu-hu-kitchen-organic-simple-dark-chocolate-bar-2-1-oz-b07fyynsy1?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "HU Kitchen Organic Simple Dark Chocolate Bar, 2.1 OZ",
+      "raw_name": "HU KITCHEN Organic Simple Dark Chocolate Bar, 2.1 OZ",
+      "brand": "Hu",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B081DKMZTV",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/harmless-harvest-harmless-harvest-dairy-free-cup-yogurt-vanilla-4oz-b081dkmztv?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Harmless Harvest Dairy-Free Cup Yogurt",
+      "raw_name": "Harmless Harvest Dairy-Free Cup Yogurt - Vanilla, 4oz",
+      "brand": "Harmless Harvest",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Plant-Based Yogurt",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2307,6 +3159,54 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0016A63CC",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-certified-organic-ashwagandha-extract-for-energy-and-vitality-grain-organic-cane-alcohol-1-ounce-b0016a63cc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Herb Pharm Certified Organic Ashwagandha Extract for Energy and Vitality",
+      "raw_name": "Herb Pharm Certified Organic Ashwagandha Extract for Energy and Vitality, Grain, Organic Cane Alcohol, 1 Ounce",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00196T5IC",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-certified-organic-echinacea-root-liquid-extract-for-immune-system-support-organic-cane-alcohol-1-ounce-dech01-b00196t5ic?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Herb Pharm Certified Organic Echinacea Root Liquid Extract for Immune System Support",
+      "raw_name": "Herb Pharm Certified Organic Echinacea Root Liquid Extract for Immune System Support, Organic Cane Alcohol, 1 Ounce (DECH01)",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0006O2KOO",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-certified-organic-passionflower-extract-for-mild-and-occasional-anxiety-1-ounce-b0006o2koo?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Herb Pharm Certified Organic Passionflower Extract for Mild and Occasional Anxiety",
+      "raw_name": "Herb Pharm Certified Organic Passionflower Extract for Mild and Occasional Anxiety - 1 Ounce",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B000S85FYK",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-certified-organic-turmeric-root-extract-for-musculoskeletal-system-support-1-ounce-dturm01-b000s85fyk?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Herb Pharm Certified Organic Turmeric Root Extract for Musculoskeletal System Support",
+      "raw_name": "Herb Pharm Certified Organic Turmeric Root Extract for Musculoskeletal System Support - 1 Ounce (DTURM01)",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0DGW35QYS",
       "url": "https://www.wholefoodsmarket.com/grocery/product/herb-pharm-herb-pharm-organic-everyday-90-count-b0dgw35qys?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Herb Pharm Organic Everyday, 90 Count",
@@ -2315,6 +3215,18 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Mushroom Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0001VK8KU",
+      "url": "https://www.wholefoodsmarket.com/Herb-Pharm-Rhodiola-Extract-Endurance/dp/B0001VK8KU?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0001VK8KU&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_90_i",
+      "name": "Herb Pharm, Rhodiola Extract, 1 Fl Oz",
+      "raw_name": "Herb Pharm, Rhodiola Extract, 1 Fl Oz",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2343,6 +3255,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B078WC2CD4",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/hu-hu-salty-dark-chocolate-bar-2-1-ounce-bar-1-count-b078wc2cd4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Hu Salty Dark Chocolate Bar, 2.1 Ounce Bar, 1 Count",
+      "raw_name": "Hu Salty Dark Chocolate Bar, 2.1 Ounce Bar, 1 Count",
+      "brand": "Hu",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B08TBYT1VH",
       "url": "https://www.wholefoodsmarket.com/grocery/product/floradix-iron-herbs-17-fl-oz-b08tbyt1vh?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Iron Herbs, 17 Fl Oz",
@@ -2351,6 +3275,18 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B000Q43TQ2",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/jason-jason-citrus-energizing-body-wash-for-a-gentle-feeling-clean-30-fluid-ounces-b000q43tq2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Jason Citrus Energizing Body Wash",
+      "raw_name": "JASON Citrus Energizing Body Wash, For a Gentle Feeling Clean, 30 Fluid Ounces",
+      "brand": "Jason",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Body Care",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2435,6 +3371,18 @@
       "retailer": "Whole Foods",
       "category": "Pantry",
       "subcategory": "Beans & Legumes",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B005K0K4H4",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/jovial-jovial-pasta-brwnrce-org-penne-r-12oz-b005k0k4h4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Jovial Pasta Brwnrce ORG Penne R 12OZ",
+      "raw_name": "JOVIAL PASTA BRWNRCE ORG PENNE R 12OZ",
+      "brand": "Jovial",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2547,6 +3495,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0BDGNH9YJ",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/laoban-dumplings-laoban-dumplings-ginger-chicken-frozen-dumplings-free-range-chicken-scallions-ginger-garlic-made-from-scratch-with-best-ingredients-frozen-meals-for-everyday-heats-up-for-dinner-in-minutes-no-artificial-ingredients-or-preservatives-8oz-b0bdgnh9yj?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Laoban Dumplings︱Ginger Chicken Frozen Dumplings︱Free-Range Chicken",
+      "raw_name": "Laoban Dumplings︱Ginger Chicken Frozen Dumplings︱Free-Range Chicken, Scallions, Ginger, Garlic︱Made From Scratch with Best Ingredients︱Frozen Meals for Everyday, Heats Up for Dinner in Minutes | No Artificial Ingredients or Preservatives (8oz)",
+      "brand": "Laoban Dumplings",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07FTSJDK9",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B07FTSJDK9",
+      "name": "Larabar Almond Butter Chocolate Chip Bar, 1.6 OZ",
+      "raw_name": "LARABAR Almond Butter Chocolate Chip Bar, 1.6 OZ",
+      "brand": "LÄRABAR",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B004X2M5GS",
       "url": "https://www.wholefoodsmarket.com/grocery/product/B004X2M5GS",
       "name": "Larabar Blueberry Muffin Fruit and Nut Bars",
@@ -2563,6 +3535,18 @@
       "url": "https://www.wholefoodsmarket.com/grocery/product/B08TPXKJXW",
       "name": "Larabar Blueberry Muffin Fruit and Nut Bars",
       "raw_name": "Larabar Blueberry Muffin Fruit and Nut Bars, Gluten Free and Vegan, 9.6 oz, 6 Ct",
+      "brand": "LÄRABAR",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B003RLNOYS",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/l-rabar-larabar-chocolate-chip-cookie-dough-gluten-free-fruit-nut-bar-16-ct-b003rlnoys?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Larabar Chocolate Chip Cookie Dough",
+      "raw_name": "Larabar Chocolate Chip Cookie Dough, Gluten Free Fruit & Nut Bar, 16 Ct",
       "brand": "LÄRABAR",
       "retailer": "Whole Foods",
       "category": "Snacks",
@@ -2599,6 +3583,18 @@
       "url": "https://www.wholefoodsmarket.com/grocery/product/B00CBDEMF8",
       "name": "Larabar Gluten Free Bar, Blueberry Muffin, 1.6 Oz Bar",
       "raw_name": "Larabar Gluten Free Bar, Blueberry Muffin, 1.6 oz Bar",
+      "brand": "LÄRABAR",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B004GW6O9E",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B004GW6O9E",
+      "name": "Larabar Peanut Butter Cookie",
+      "raw_name": "Larabar Peanut Butter Cookie, Gluten Free Vegan Fruit & Nut Bar, 16 Ct, 27.2 OZ",
       "brand": "LÄRABAR",
       "retailer": "Whole Foods",
       "category": "Snacks",
@@ -2727,6 +3723,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0815MCVX1",
+      "url": "https://www.wholefoodsmarket.com/Little-Secrets-Cookie-Chocolate-Ounce/dp/B0815MCVX1?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0815MCVX1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_410_i",
+      "name": "Little Secrets Milk Chocolate Caramel Cookie Bars",
+      "raw_name": "Little Secrets Milk Chocolate Caramel Cookie Bars | 1 Twin Pack | Made in Europe | Nothing Artificial & No Sugar Alcohols | Sustainable Cocoa | 1.8 Ounce, Pack of 1",
+      "brand": "Little Secrets",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07DQ6NRMR",
       "url": "https://www.wholefoodsmarket.com/Little-Secrets-Guilt-Free-Artificial-Chocolate/dp/B07DQ6NRMR?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07DQ6NRMR&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_417_i",
       "name": "Little Secrets Milk Chocolate Crispy Wafers",
@@ -2747,6 +3755,18 @@
       "retailer": "Whole Foods",
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0BD6N7DGW",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/lovebird-lovebird-organic-grain-free-unsweetened-o-s-cereal-7-ounce-b0bd6n7dgw?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Lovebird Organic Grain Free Unsweetened O's Cereal, 7 Ounce",
+      "raw_name": "Lovebird Organic Grain Free Unsweetened O's Cereal, 7 Ounce",
+      "brand": "Lovebird",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2863,6 +3883,30 @@
       "url": "https://www.wholefoodsmarket.com/MegaFood-Multivitamin-Multivitamins-Methylated-Vitamin/dp/B07FF3WX3X?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07FF3WX3X&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_472_i",
       "name": "Megafood Multivitamin for Men 55+ One Daily Mens Multivitamins",
       "raw_name": "MegaFood Multivitamin for Men 55+ One Daily Mens Multivitamins, Methylated B12, Vitamin D3, C & Zinc - Healthy Aging, Bone & Muscle Health & Immune Support - Vegetarian - 120 Tablets",
+      "brand": "MegaFood",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Multivitamins",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00014G874",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/megafood-megafood-one-daily-mens-multivitamins-multivitamin-for-men-vitamin-c-vitamin-d3-vitamin-b12-muscle-energy-metabolism-immune-support-vegetarian-gluten-free-90-tablets-90-servings-b00014g874?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Megafood One Daily Mens Multivitamins",
+      "raw_name": "MegaFood One Daily Mens Multivitamins - Multivitamin for Men - Vitamin C, Vitamin D3 & Vitamin B12 - Muscle, Energy Metabolism & Immune Support - Vegetarian, Gluten Free - 90 Tablets, 90 Servings",
+      "brand": "MegaFood",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Multivitamins",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CZ7HV7D8",
+      "url": "https://www.wholefoodsmarket.com/MEGAFOOD-Womens-One-Daily-Multivitamin/dp/B0CZ7HV7D8?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0CZ7HV7D8&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_115_i",
+      "name": "Megafood Women's 55+ One Daily Multivitamin, 30 CT",
+      "raw_name": "MEGAFOOD Women's 55+ One Daily Multivitamin, 30 CT",
       "brand": "MegaFood",
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
@@ -2991,6 +4035,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07LFC7Y5G",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/nounos-creamery-nounos-creamery-coconut-mango-greek-yogurt-5-3-oz-b07lfc7y5g?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Nounos Creamery Coconut Mango Greek Yogurt, 5.3 OZ",
+      "raw_name": "NOUNOS CREAMERY Coconut Mango Greek Yogurt, 5.3 OZ",
+      "brand": "Nounos Creamery",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Yogurt",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B08LWXPYCZ",
       "url": "https://www.wholefoodsmarket.com/grocery/product/nutpods-nutpods-unsweetened-original-coffee-creamer-dairy-free-25-4oz-b08lwxpycz?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Nutpods® Unsweetened Original Coffee Creamer",
@@ -3051,6 +4107,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0CJ4389GQ",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/once-upon-a-farm-once-upon-a-farm-organic-baby-fruit-veggie-puffs-mango-coconut-carrot-1-5oz-b0cj4389gq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Once Upon a Farm Organic Baby Fruit & Veggie Puffs",
+      "raw_name": "Once Upon a Farm Organic Baby Fruit & Veggie Puffs, Mango, Coconut & Carrot,1.5oz",
+      "brand": "Once Upon a Farm",
+      "retailer": "Whole Foods",
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0CJ1QMN3W",
       "url": "https://www.wholefoodsmarket.com/grocery/product/once-upon-a-farm-once-upon-a-farm-organic-coconut-melts-mixed-berry-1oz-b0cj1qmn3w?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Once Upon a Farm Organic Coconut Melts, Mixed Berry, 1OZ",
@@ -3059,6 +4127,18 @@
       "retailer": "Whole Foods",
       "category": "Baby",
       "subcategory": "Baby Food",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07QJ32S2B",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/bilinski-organic-apple-chicken-breakfast-sausage-12-ounce-b07qj32s2b?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Organic Apple Chicken Breakfast Sausage, 12 Ounce",
+      "raw_name": "Organic Apple Chicken Breakfast Sausage, 12 Ounce",
+      "brand": "Bilinski",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Ready-to-Eat Protein",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -3111,6 +4191,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B00CIZCLZC",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-valley-grated-organic-parmesan-cheese-b00cizclzc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Organic Valley Grated Organic Parmesan Cheese",
+      "raw_name": "Organic Valley Grated Organic Parmesan Cheese",
+      "brand": "Organic Valley",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CTPML3NM",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-valley-spicy-cheddar-shredded-cheese-flavor-favorites-6-oz-b0ctpml3nm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Organic Valley® Spicy Cheddar Shredded Cheese",
+      "raw_name": "ORGANIC VALLEY® Spicy Cheddar Shredded Cheese, Flavor Favorites, 6 oz",
+      "brand": "Organic Valley",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B074JD6DG6",
       "url": "https://www.wholefoodsmarket.com/grocery/product/365-by-whole-foods-market-organic-whole-wheat-penne-rigate-16-ounce-b074jd6dg6?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Organic Whole Wheat Penne Rigate, 16 Ounce",
@@ -3143,6 +4247,18 @@
       "retailer": "Whole Foods",
       "category": "Pantry",
       "subcategory": "Pickles & Fermented Pantry",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01N3775CW",
+      "url": "https://www.wholefoodsmarket.com/Bottle-Almond-Milk-Vanilla-Bean/dp/B01N3775CW?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B01N3775CW&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_342_i",
+      "name": "Pop and Bottle",
+      "raw_name": "Pop And Bottle, Almond Latte Vanilla Cold Brew Organic, 11 Fl Oz",
+      "brand": "Pop & Bottle",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Ready-to-Drink Coffee",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -3195,6 +4311,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B097B1FZG6",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/so-delicious-so-delicious-peanut-butter-brownie-cashewmilk-frozen-dessert-1-pt-b097b1fzg6?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "SO Delicious Peanut Butter Brownie Cashewmilk Frozen Dessert",
+      "raw_name": "SO DELICIOUS Peanut Butter Brownie Cashewmilk Frozen Dessert, 1 PT",
+      "brand": "SO Delicious",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0787Y2VQ3",
       "url": "https://www.wholefoodsmarket.com/France-Blue-Saint-Agur-0-23-0-5lb/dp/B0787Y2VQ3?pd_rd_w=FtXTM&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4FVCW577N8WY2W4RRVJ7&pd_rd_wg=9yYXg&pd_rd_r=f948cd9f-2c1e-49a3-b306-4473cb5756ae&pd_rd_i=B0787Y2VQ3&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_10_i",
       "name": "Saint Agur, Saint Agur",
@@ -3215,6 +4343,18 @@
       "retailer": "Whole Foods",
       "category": "Frozen",
       "subcategory": "Ice Cream",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00FTCB1MA",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/truroots-santa-cruz-organic-100-pure-lemon-juice-32-fl-oz-pack-of-1-b00ftcb1ma?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Santa Cruz Organic 100% Pure Lemon Juice",
+      "raw_name": "Santa Cruz Organic 100% Pure Lemon Juice, 32 fl oz (Pack of 1)",
+      "brand": "TruRoots",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Juice",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -3243,6 +4383,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0D829S7SR",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B0D829S7SR",
+      "name": "Sauce Pasta Alfredo Roasted Garlic, 15 Ounce",
+      "raw_name": "Sauce Pasta Alfredo Roasted Garlic, 15 Ounce",
+      "brand": "Carbone",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B08MVNVJYW",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B08MVNVJYW",
+      "name": "Seventh Generation Dish Soap Liquid Lavender Flower & Mint Scent Pack of 6 Dishwashing Soap Dish Detergent Liquid Soap 19 Oz",
+      "raw_name": "Seventh Generation Dish Soap Liquid Lavender Flower & Mint Scent Pack of 6 Dishwashing Soap Dish Detergent Liquid Soap 19 oz",
+      "brand": "Seventh Generation",
+      "retailer": "Whole Foods",
+      "category": "Household",
+      "subcategory": "Dishwashing",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07L5WM1C9",
       "url": "https://www.wholefoodsmarket.com/grocery/product/seventh-generation-seventh-generation-glass-cleaner-sparkling-sea-scent-streak-free-shine-23-fl-oz-b07l5wm1c9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Seventh Generation Glass Cleaner",
@@ -3263,6 +4427,30 @@
       "retailer": "Whole Foods",
       "category": "Alcohol",
       "subcategory": "Non-Alcoholic Beer & Wine",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B014BCGFBK",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B014BCGFBK",
+      "name": "Silk Peach Mango Dairy Free",
+      "raw_name": "Silk Peach Mango Dairy Free, Soy Milk Yogurt Alternative, Smooth and Creamy Plant Based Yogurt with 6 Grams of Protein Per Serving, 5.3 OZ Container",
+      "brand": "Silk",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Plant-Based Yogurt",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01B6SFZD6",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B01B6SFZD6",
+      "name": "Silk Shelf-Stable Soy Milk Singles",
+      "raw_name": "Silk Shelf-Stable Soy Milk Singles, Chocolate, Dairy-Free, Vegan, Non-GMO Project Verified, 8 oz., 6 Pack",
+      "brand": "Silk",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Plant-Based Milk",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -3323,6 +4511,30 @@
       "retailer": "Whole Foods",
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01N1T6F3P",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/so-delicious-so-delicious-dairy-free-almond-milk-dipped-frozen-dessert-bar-mocha-almond-fudge-vegan-non-gmo-project-verified-4-count-pack-of-1-b01n1t6f3p?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "So Delicious Dairy Free Almond Milk Dipped Frozen Dessert Bar",
+      "raw_name": "So Delicious Dairy Free Almond Milk Dipped Frozen Dessert Bar, Mocha Almond Fudge, Vegan, Non-GMO Project Verified, 4 Count (Pack of 1)",
+      "brand": "SO Delicious",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01EWRHXMO",
+      "url": "https://www.wholefoodsmarket.com/Delicious-Coconut-Cookie-Frozen-Dessert/dp/B01EWRHXMO?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B01EWRHXMO&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_236_i",
+      "name": "So Delicious Dairy Free Coconutmilk Frozen Dessert",
+      "raw_name": "So Delicious Dairy Free Coconutmilk Frozen Dessert, Cookie Dough, Vegan, Non-GMO Project Verified, 1 Pint",
+      "brand": "SO Delicious",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -3447,6 +4659,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0BN2P3NTX",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/stasher-stasher-2-cup-deep-ocean-bowl-1-ea-b0bn2p3ntx?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Stasher 2 Cup Deep Ocean Bowl, 1 EA",
+      "raw_name": "STASHER 2 Cup Deep Ocean Bowl, 1 EA",
+      "brand": "Stasher",
+      "retailer": "Whole Foods",
+      "category": "Household",
+      "subcategory": "Food Storage",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B089MXV33W",
       "url": "https://www.wholefoodsmarket.com/grocery/product/in-the-raw-stevia-in-the-raw-organic-stevia-sweetener-packets-40-ct-zero-calorie-stevia-sugar-substitute-packets-no-erythritol-or-artificial-flavors-usda-organic-non-gmo-project-verified-vegan-b089mxv33w?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Stevia in the Raw Organic Stevia Sweetener Packets",
@@ -3531,6 +4755,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07883KNDB",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/thats-it-that-s-it-apple-blueberry-fruit-bar-1-2-ounce-b07883kndb?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "That's It, Apple + Blueberry Fruit Bar, 1.2 Ounce",
+      "raw_name": "That's it, Apple + Blueberry Fruit Bar, 1.2 Ounce",
+      "brand": "Thats It\"",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Fruit Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07Q6N82MX",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/that-s-it-that-s-it-apple-blueberry-fruit-bar-1-2-ounce-12-pack-b07q6n82mx?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "That's It, Apple + Blueberry Fruit Bar, 1.2 Ounce, 12 Pack",
+      "raw_name": "That's it, Apple + Blueberry Fruit Bar, 1.2 Ounce, 12 Pack",
+      "brand": "That's It",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Fruit Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0CGP7ZWXR",
       "url": "https://www.wholefoodsmarket.com/grocery/product/trueseamoss-trueseamoss-sea-moss-gel-made-in-usa-wildcrafted-seamoss-fruits-jarred-vegetables-blue-spirulina-pack-of-1-labels-may-vary-b0cgp7zwxr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Trueseamoss Sea Moss Gel",
@@ -3567,6 +4815,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B08KR6F38B",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/truff-truff-black-truffle-marinara-18-oz-b08kr6f38b?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Truff Black Truffle Marinara, 18 OZ",
+      "raw_name": "TRUFF Black Truffle Marinara, 18 OZ",
+      "brand": "Truff",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07GL8FMVH",
       "url": "https://www.wholefoodsmarket.com/grocery/product/B07GL8FMVH",
       "name": "VIVE Organic Organic Elderberry Immunity Boost, 2 FZ",
@@ -3591,6 +4851,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07NQJPQG2",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B07NQJPQG2",
+      "name": "Vive Organic Immune Support Shot",
+      "raw_name": "Vive Organic Immune Support Shot, Cold-Pressed Ginger, Turmeric, & Echinacea, Gluten Free, Vegan, Immunity Boost Original, 2 Fl Oz (Pack of 12)",
+      "brand": "Vive Organic",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Wellness Shots",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B08QFQQ1MF",
       "url": "https://www.wholefoodsmarket.com/grocery/product/B08QFQQ1MF",
       "name": "Vive Organic Pure Boost Turmeric Shot",
@@ -3599,6 +4871,66 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Immune Support",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B08QFQQK96",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B08QFQQK96",
+      "name": "Vive Organic Turmeric Boost Wellness Shot",
+      "raw_name": "Vive Organic Turmeric Boost Wellness Shot, Fresh Pressed Turmeric Shot, 2 fl oz Bottle (Pack of 12)",
+      "brand": "Vive Organic",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Wellness Shots",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CRFCZKB1",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/wedderspoon-wedderspoon-propolis-manuka-honey-throat-spray-original-honey-1-fl-oz-sore-throat-relief-immune-support-natural-soothing-wellness-b0crfczkb1?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Wedderspoon Propolis & Manuka Honey Throat Spray",
+      "raw_name": "Wedderspoon Propolis & Manuka Honey Throat Spray, Original Honey, 1 fl oz | Sore Throat Relief & Immune Support | Natural Soothing Wellness",
+      "brand": "Wedderspoon",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Immune Support",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0821KDLT8",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/wellshire-farms-wellshire-farms-maple-bourbon-ham-b0821kdlt8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Wellshire Farms Maple Bourbon Ham",
+      "raw_name": "Wellshire Farms Maple Bourbon Ham",
+      "brand": "Wellshire Farms",
+      "retailer": "Whole Foods",
+      "category": "Meat & Seafood",
+      "subcategory": "Deli Meats",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B08MDFHY1B",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/whole-foods-market-whole-foods-market-chesapeake-bay-shrimp-salad-b08mdfhy1b?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Whole Foods Market Chesapeake Bay Shrimp Salad",
+      "raw_name": "WHOLE FOODS MARKET Chesapeake Bay Shrimp Salad",
+      "brand": "Whole Foods Market",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Deli Salads",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B08MDCCYZ8",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/whole-foods-market-whole-foods-market-chesapeake-bay-shrimp-salad-b08mdccyz8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Whole Foods Market Chesapeake Bay Shrimp Salad",
+      "raw_name": "WHOLE FOODS MARKET Chesapeake Bay Shrimp Salad",
+      "brand": "Whole Foods Market",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Deli Salads",
       "notes": "",
       "source": "manual-review-cli"
     },
