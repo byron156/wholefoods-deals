@@ -31,6 +31,9 @@ GOLD_LABELS_FILE = "taxonomy_gold_labels.json"
 CLIP_AUDIT_FILE = "vision_category_audit.full.json"
 CLIP_PRIMARY_MIN_SCORE = 0.55
 CLIP_RESCUE_MIN_SCORE = 0.40
+FAILED_CATEGORY = "Other/Failed"
+FAILED_SUBCATEGORY = "Needs Review"
+FAILED_CONFIDENCE_MAX = 0.35
 
 
 CATEGORY_GUIDANCE = {
@@ -1445,7 +1448,49 @@ def hydrate_product_with_classification(product, result, fingerprint):
         updated["ai_clip_source"] = result.get("clip_source")
     if result.get("clip_score") is not None:
         updated["ai_clip_score"] = result.get("clip_score")
+    apply_failed_classification_bucket(updated)
     return updated
+
+
+def is_failed_classification_record(product):
+    category = product.get("category") or product.get("ai_category")
+    subcategory = product.get("subcategory") or product.get("ai_subcategory")
+    confidence = float(
+        product.get("ai_confidence")
+        or product.get("category_confidence")
+        or 0
+    )
+    reasoning = normalize_text(product.get("ai_reasoning") or "").lower()
+    missing_label = not category or not subcategory
+    low_confidence_pantry_fallback = (
+        category == "Pantry"
+        and subcategory == "Meal Kits & Sides"
+        and confidence <= FAILED_CONFIDENCE_MAX
+        and "low-confidence general pantry label" in reasoning
+    )
+    return missing_label or low_confidence_pantry_fallback
+
+
+def apply_failed_classification_bucket(product):
+    if product.get("classification_status") == "failed":
+        return product
+    if not is_failed_classification_record(product):
+        product["classification_status"] = product.get("classification_status") or "classified"
+        return product
+
+    original_category = product.get("category") or product.get("ai_category") or "Uncategorized"
+    original_subcategory = product.get("subcategory") or product.get("ai_subcategory") or "Miscellaneous"
+    product["classification_status"] = "failed"
+    product["failed_from_category"] = original_category
+    product["failed_from_subcategory"] = original_subcategory
+    product["failed_reason"] = product.get("ai_reasoning") or "Missing or low-confidence taxonomy label."
+    product["category"] = FAILED_CATEGORY
+    product["subcategory"] = FAILED_SUBCATEGORY
+    product["ai_category"] = FAILED_CATEGORY
+    product["ai_subcategory"] = FAILED_SUBCATEGORY
+    product["category_confidence"] = round(float(product.get("category_confidence") or 0), 4)
+    product["ai_confidence"] = round(float(product.get("ai_confidence") or product.get("category_confidence") or 0), 4)
+    return product
 
 
 def existing_valid_classification(product, taxonomy):

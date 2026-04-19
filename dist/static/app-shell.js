@@ -14,6 +14,7 @@
   const initialCategoryOrder = rawData.category_order || {};
   const stores = rawData.stores || [];
   const retailerOrder = ["Whole Foods", "Target", "H Mart"];
+  const failedCategory = "Other/Failed";
 
   function normalizeProduct(product, index) {
     const normalizedSubcategory = product.ai_subcategory || product.subcategory || "";
@@ -366,6 +367,10 @@
     return product.category || subcategoryToCategory[effectiveSubcategory(product)] || "Pantry";
   }
 
+  function isFailedProduct(product) {
+    return product.classification_status === "failed" || effectiveCategory(product) === failedCategory;
+  }
+
   function rankProductList(list) {
     const liked = buildAffinityCounts(state.profile.likedKeys);
     const disliked = buildAffinityCounts(state.profile.dislikedKeys);
@@ -406,6 +411,9 @@
         items: rankProductList(items).slice(0, 18),
       }))
       .sort((left, right) => {
+        if (left.category === failedCategory || right.category === failedCategory) {
+          return left.category === failedCategory ? 1 : -1;
+        }
         const leftIndex = orderedCategories.indexOf(left.category);
         const rightIndex = orderedCategories.indexOf(right.category);
         if (leftIndex !== -1 || rightIndex !== -1) {
@@ -478,6 +486,9 @@
     if (product.brand) {
       pieces.push(escapeHtml(product.brand));
     }
+    if (isFailedProduct(product)) {
+      pieces.push("Needs Review");
+    }
     const subcategory = effectiveSubcategory(product);
     if (subcategory && subcategoryToCategory[subcategory] && subcategory !== effectiveCategory(product)) {
       pieces.push(escapeHtml(subcategory));
@@ -502,12 +513,16 @@
     const titleMarkup = product.url
       ? `<h3 class="deal-title"><a href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a></h3>`
       : `<h3 class="deal-title">${escapeHtml(product.name)}</h3>`;
+    const failedMarkup = isFailedProduct(product)
+      ? `<p class="classification-warning">Was ${escapeHtml(product.failed_from_category || "Unknown")} · ${escapeHtml(product.failed_from_subcategory || "Unknown")}</p>`
+      : "";
 
     return `
       <article class="deal-card" data-key="${escapeHtml(product.key)}">
         ${imageMarkup}
         ${metaLine(product)}
         ${titleMarkup}
+        ${failedMarkup}
         <div class="deal-price-row">
           ${priceLabel(product)}
           ${discountLabel(product)}

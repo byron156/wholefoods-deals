@@ -5,3 +5,5 @@ __pycache__/
 logs/
 .env
 device_profiles.json
+.cache/
+vision_category_audit*.json

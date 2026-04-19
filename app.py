@@ -11,9 +11,11 @@ from brand_ai import build_brand_family_map
 from taxonomy_ai import (
     CLASSIFICATION_CACHE_FILE as TAXONOMY_CLASSIFICATION_CACHE_FILENAME,
     DISCOVERED_TAXONOMY_FILE as DISCOVERED_TAXONOMY_FILENAME,
+    FAILED_CATEGORY,
     MODEL_VERSION as TAXONOMY_AI_MODEL_VERSION,
     OLLAMA_MODEL as TAXONOMY_AI_MODEL_NAME,
     PROMPT_VERSION as TAXONOMY_AI_PROMPT_VERSION,
+    apply_failed_classification_bucket,
     build_cache_artifact,
     build_report_artifact,
     build_taxonomy_artifact,
@@ -2668,6 +2670,7 @@ def build_combined_products(
     hmart_deals_products=None,
     force_taxonomy_rediscovery=False,
     taxonomy_sample_size=None,
+    classify=True,
 ):
     combined = {}
     target_deals_products = target_deals_products or []
@@ -2695,6 +2698,14 @@ def build_combined_products(
         if brand_signature == previous_brand_signature:
             break
         previous_brand_signature = brand_signature
+    if not classify:
+        ordered.sort(
+            key=lambda product: (
+                -product.get("source_count", 0),
+                normalize_text_key(product.get("name")),
+            )
+        )
+        return ordered
     if taxonomy_sample_size:
         ordered = sample_products_for_taxonomy_testing(ordered, taxonomy_sample_size)
     ordered, taxonomy = classify_products_with_taxonomy_ai(
@@ -2781,7 +2792,7 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["ai_model_name"] = hydrated.get("ai_model_name") or TAXONOMY_AI_MODEL_NAME
     hydrated["ai_taxonomy_version"] = hydrated.get("ai_taxonomy_version")
     hydrated["ai_fingerprint"] = hydrated.get("ai_fingerprint")
-    hydrated["ai_label_source"] = "model"
+    hydrated["ai_label_source"] = hydrated.get("ai_label_source") or "model"
     hydrated["ai_model_version"] = hydrated.get("ai_model_version") or TAXONOMY_AI_MODEL_VERSION
     hydrated["sources"] = list(hydrated.get("sources") or [])
     hydrated["source_count"] = int(hydrated.get("source_count") or len(hydrated["sources"]))
@@ -2798,6 +2809,7 @@ def hydrate_combined_product_record(product, index=0):
             source_count=hydrated.get("source_count", 0),
             prime_price=hydrated.get("prime_price"),
         )
+    apply_failed_classification_bucket(hydrated)
     return hydrated
 
 
@@ -3452,7 +3464,7 @@ def combined_products_home():
         products=products,
         deal_count=deal_count,
         available_stores=SUPPORTED_STORES,
-        category_names=[category.get("name") for category in taxonomy.get("categories") or []],
+        category_names=[category.get("name") for category in taxonomy.get("categories") or [] if category.get("name") != FAILED_CATEGORY],
         subcategory_options=taxonomy_to_options(taxonomy),
         category_order={},
         feedback_endpoint=api_url("/api/fixes"),

@@ -1,6 +1,8 @@
 import json
 import os
 import argparse
+import subprocess
+import sys
 import traceback
 
 from app import (
@@ -28,6 +30,8 @@ FLYER_PRODUCTS_FILE = os.path.join(BASE_DIR, "flyer_products.json")
 FLYER_REPORT_FILE = os.path.join(BASE_DIR, "flyer_report.json")
 COMBINED_PRODUCTS_FILE = os.path.join(BASE_DIR, "combined_products.json")
 COMBINED_REPORT_FILE = os.path.join(BASE_DIR, "combined_report.json")
+CLIP_AUDIT_CANDIDATES_FILE = os.path.join(BASE_DIR, ".cache", "clip_audit_products.json")
+CLIP_AUDIT_FILE = os.path.join(BASE_DIR, "vision_category_audit.full.json")
 TARGET_DEALS_PRODUCTS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
 TARGET_DEALS_REPORT_FILE = os.path.join(BASE_DIR, "target_deals_report.json")
 HMART_DEALS_PRODUCTS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
@@ -44,6 +48,28 @@ def load_json(path, default):
         return default
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def refresh_missing_clip_audit(products):
+    os.makedirs(os.path.dirname(CLIP_AUDIT_CANDIDATES_FILE), exist_ok=True)
+    write_json(CLIP_AUDIT_CANDIDATES_FILE, products)
+    print("Refreshing missing CLIP audit labels before taxonomy classification...")
+    subprocess.run(
+        [
+            sys.executable,
+            "-u",
+            "vision_category_audit.py",
+            "--products",
+            CLIP_AUDIT_CANDIDATES_FILE,
+            "--output",
+            CLIP_AUDIT_FILE,
+            "--refresh-missing",
+            "--limit",
+            "0",
+        ],
+        cwd=BASE_DIR,
+        check=True,
+    )
 
 
 def main():
@@ -63,6 +89,11 @@ def main():
         "--skip-refresh",
         action="store_true",
         help="Reuse existing scraped JSON files instead of scraping again.",
+    )
+    parser.add_argument(
+        "--skip-clip-audit",
+        action="store_true",
+        help="Do not refresh missing CLIP audit rows before taxonomy classification.",
     )
     args = parser.parse_args()
 
@@ -146,6 +177,24 @@ def main():
     normalized_search_deals_products = load_search_deals()
     normalized_target_deals_products = load_target_deals()
     normalized_hmart_deals_products = load_hmart_deals()
+
+    clip_audit_enabled = (
+        not args.skip_clip_audit
+        and os.getenv("WHOLEFOODS_REFRESH_CLIP_AUDIT", "1").strip().lower()
+        not in {"0", "false", "no"}
+    )
+    if clip_audit_enabled:
+        preclassification_products = build_combined_products(
+            normalized_flyer_products,
+            normalized_all_deals_products,
+            normalized_search_deals_products,
+            normalized_target_deals_products,
+            normalized_hmart_deals_products,
+            classify=False,
+        )
+        refresh_missing_clip_audit(preclassification_products)
+    else:
+        print("Skipping missing CLIP audit refresh before taxonomy classification.")
 
     combined_products = build_combined_products(
         normalized_flyer_products,

@@ -92,6 +92,37 @@ def product_id(product, index):
     )
 
 
+def normalized_identity_values(product):
+    values = []
+    for field in ("asin", "url", "raw_name", "name", "id"):
+        value = product.get(field)
+        if value:
+            values.append(normalize_label(value))
+    return values
+
+
+def product_identity_values(product):
+    return set(normalized_identity_values(product))
+
+
+def audit_row_identity_values(row):
+    return product_identity_values(row.get("product") or {})
+
+
+def existing_audit_index(rows):
+    index = {}
+    for row in rows or []:
+        if not isinstance(row, dict):
+            continue
+        for value in audit_row_identity_values(row):
+            index[value] = row
+    return index
+
+
+def covered_by_existing_audit(product, existing_index):
+    return any(value in existing_index for value in product_identity_values(product))
+
+
 def normalize_label(value):
     return " ".join(str(value or "").lower().split())
 
@@ -216,6 +247,8 @@ def score_labels(image_vector, text_vectors, product_text_vector=None, image_wei
 def compact_product(product, index):
     return {
         "id": product_id(product, index),
+        "asin": product.get("asin"),
+        "url": product.get("url"),
         "name": product.get("name"),
         "raw_name": product.get("raw_name"),
         "brand": product.get("brand"),
@@ -325,11 +358,6 @@ def pick_products(products, limit=None, seed=17, only_categories=None):
 
 
 def run_audit(args):
-    require_vision_dependencies()
-
-    import torch
-    from transformers import CLIPModel, CLIPProcessor
-
     products = load_json(args.products)
     taxonomy = build_fixed_taxonomy()
     categories, pairs = build_labels(taxonomy)
@@ -342,6 +370,68 @@ def run_audit(args):
         seed=args.seed,
         only_categories=args.only_category,
     )
+    original_selected_count = len(selected_products)
+    existing_report = {}
+    existing_results = []
+    existing_failures = []
+    existing_index = {}
+    retained_results = []
+    retained_failures = []
+
+    if args.refresh_missing:
+        existing_report = load_json(args.existing_audit) if Path(args.existing_audit).exists() else {}
+        existing_results = existing_report.get("results") or []
+        existing_failures = existing_report.get("failures") or []
+        existing_index = existing_audit_index(existing_results)
+        current_values = set()
+        for product in selected_products:
+            current_values.update(product_identity_values(product))
+        retained_results = [
+            row for row in existing_results
+            if audit_row_identity_values(row) & current_values
+        ]
+        retained_failures = [
+            row for row in existing_failures
+            if audit_row_identity_values(row) & current_values
+        ]
+        selected_products = [
+            product for product in selected_products
+            if not covered_by_existing_audit(product, existing_index)
+        ]
+        print(
+            "[vision] refresh-missing mode: "
+            f"{len(retained_results)} existing rows retained, "
+            f"{len(selected_products)} missing products to audit"
+        )
+        if not selected_products:
+            report = {
+                "model": existing_report.get("model") or args.model,
+                "device": existing_report.get("device") or "not_loaded",
+                "image_weight": args.image_weight,
+                "products_file": args.products,
+                "audited_count": original_selected_count,
+                "refreshed_count": 0,
+                "retained_count": len(retained_results),
+                "reported_count": len(retained_results),
+                "failure_count": len(retained_failures),
+                "category_disagreement_count": sum(1 for item in retained_results if item["category_disagrees"]),
+                "subcategory_disagreement_count": sum(1 for item in retained_results if item["subcategory_disagrees"]),
+                "results": retained_results,
+                "failures": retained_failures,
+            }
+            save_json(args.output, report)
+            print(
+                f"[vision] wrote {args.output}: "
+                f"{report['reported_count']} reported, "
+                "0 refreshed, "
+                f"{report['failure_count']} image failures"
+            )
+            return
+
+    require_vision_dependencies()
+
+    import torch
+    from transformers import CLIPModel, CLIPProcessor
 
     device = choose_device(torch)
     print(f"[vision] loading {args.model} on {device}")
@@ -439,17 +529,21 @@ def run_audit(args):
             continue
         reviewed.append(record)
 
+    results = retained_results + reviewed
+    failures = retained_failures + failures
     report = {
         "model": args.model,
         "device": device,
         "image_weight": args.image_weight,
         "products_file": args.products,
-        "audited_count": len(selected_products),
-        "reported_count": len(reviewed),
+        "audited_count": original_selected_count,
+        "refreshed_count": len(selected_products),
+        "retained_count": len(retained_results),
+        "reported_count": len(results),
         "failure_count": len(failures),
-        "category_disagreement_count": sum(1 for item in reviewed if item["category_disagrees"]),
-        "subcategory_disagreement_count": sum(1 for item in reviewed if item["subcategory_disagrees"]),
-        "results": reviewed,
+        "category_disagreement_count": sum(1 for item in results if item["category_disagrees"]),
+        "subcategory_disagreement_count": sum(1 for item in results if item["subcategory_disagrees"]),
+        "results": results,
         "failures": failures,
     }
     save_json(args.output, report)
@@ -468,6 +562,16 @@ def parse_args():
     )
     parser.add_argument("--products", default="combined_products.json")
     parser.add_argument("--output", default="vision_category_audit.json")
+    parser.add_argument(
+        "--refresh-missing",
+        action="store_true",
+        help="Merge the existing audit and run CLIP only for current products missing from it.",
+    )
+    parser.add_argument(
+        "--existing-audit",
+        default=None,
+        help="Existing audit file to merge from. Defaults to --output.",
+    )
     parser.add_argument("--image-cache", default=".cache/vision_images")
     parser.add_argument("--model", default="openai/clip-vit-base-patch32")
     parser.add_argument(
@@ -485,6 +589,8 @@ def parse_args():
     if args.limit == 0:
         args.limit = None
     args.image_weight = max(0.0, min(args.image_weight, 1.0))
+    if args.existing_audit is None:
+        args.existing_audit = args.output
     return args
 
 
