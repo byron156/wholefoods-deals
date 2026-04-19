@@ -28,6 +28,7 @@ TAXONOMY_REPORT_FILE = "taxonomy_ai_report.json"
 DISCOVERY_DEBUG_FILE = "taxonomy_discovery_debug.json"
 CLASSIFICATION_DEBUG_FILE = "taxonomy_classification_debug.json"
 GOLD_LABELS_FILE = "taxonomy_gold_labels.json"
+SILVER_LABELS_FILE = "taxonomy_silver_labels.json"
 CLIP_AUDIT_FILE = "vision_category_audit.full.json"
 CLIP_PRIMARY_MIN_SCORE = 0.55
 CLIP_RESCUE_MIN_SCORE = 0.40
@@ -485,6 +486,10 @@ def taxonomy_gold_labels_path(base_dir):
     return os.path.join(base_dir, GOLD_LABELS_FILE)
 
 
+def taxonomy_silver_labels_path(base_dir):
+    return os.path.join(base_dir, SILVER_LABELS_FILE)
+
+
 def taxonomy_clip_audit_path(base_dir):
     return os.path.join(base_dir, CLIP_AUDIT_FILE)
 
@@ -528,6 +533,30 @@ def normalize_gold_label(row, taxonomy):
     return normalized
 
 
+def normalize_silver_label(row, taxonomy):
+    category = row.get("category") or row.get("reviewed_category")
+    subcategory = row.get("subcategory") or row.get("reviewed_subcategory")
+    confidence = float(row.get("confidence") or 0.82)
+    confidence = max(0.55, min(confidence, 0.92))
+    normalized = normalize_model_result(
+        {
+            "category": category,
+            "subcategory": subcategory,
+            "confidence": confidence,
+            "reasoning": row.get("reason") or row.get("notes") or "OpenAI silver taxonomy backfill label.",
+        },
+        taxonomy,
+    )
+    if not normalized:
+        return None
+    normalized["confidence"] = confidence
+    normalized["reasoning"] = normalized.get("reasoning") or "OpenAI silver taxonomy backfill label."
+    normalized["model_name"] = "openai-silver-label"
+    normalized["model_version"] = MODEL_VERSION
+    normalized["label_source"] = "silver"
+    return normalized
+
+
 def load_gold_labels(base_dir, taxonomy):
     path = taxonomy_gold_labels_path(base_dir)
     payload = load_json_file(path, {"labels": []})
@@ -568,9 +597,58 @@ def load_gold_labels(base_dir, taxonomy):
     return by_key, label_counts, digest
 
 
+def load_silver_labels(base_dir, taxonomy):
+    path = taxonomy_silver_labels_path(base_dir)
+    payload = load_json_file(path, {"labels": []})
+    rows = payload.get("labels") if isinstance(payload, dict) else payload
+    rows = rows or []
+
+    by_key = {}
+    normalized_rows = []
+    label_counts = Counter()
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        result = normalize_silver_label(row, taxonomy)
+        if not result:
+            continue
+        indexed = False
+        for key in product_identity_keys(row):
+            by_key[key] = result
+            indexed = True
+        if indexed:
+            normalized_rows.append(row)
+            label_counts[pair_key(result["category"], result["subcategory"])] += 1
+
+    digest_payload = [
+        {
+            "asin": row.get("asin"),
+            "url": row.get("url"),
+            "name": row.get("name"),
+            "raw_name": row.get("raw_name"),
+            "category": row.get("category") or row.get("reviewed_category"),
+            "subcategory": row.get("subcategory") or row.get("reviewed_subcategory"),
+            "confidence": row.get("confidence"),
+        }
+        for row in normalized_rows
+    ]
+    digest = hashlib.sha256(
+        json.dumps(digest_payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    ).hexdigest()[:16]
+    return by_key, label_counts, digest
+
+
 def gold_label_for_product(product, gold_index):
     for key in product_identity_keys(product):
         result = gold_index.get(key)
+        if result:
+            return dict(result)
+    return None
+
+
+def silver_label_for_product(product, silver_index):
+    for key in product_identity_keys(product):
+        result = silver_index.get(key)
         if result:
             return dict(result)
     return None
@@ -1507,7 +1585,7 @@ def existing_valid_classification(product, taxonomy):
     }
 
 
-def build_training_examples(products, taxonomy, gold_index=None, gold_weight=8):
+def build_training_examples(products, taxonomy, gold_index=None, silver_index=None, gold_weight=8, silver_weight=3):
     texts = []
     labels = []
     seen = set()
@@ -1517,12 +1595,18 @@ def build_training_examples(products, taxonomy, gold_index=None, gold_weight=8):
             continue
         label_result = gold_label_for_product(product, gold_index or {})
         weight = gold_weight if label_result else 1
+        label_source = "gold" if label_result else "local"
+        if not label_result:
+            label_result = silver_label_for_product(product, silver_index or {})
+            if label_result:
+                weight = silver_weight
+                label_source = "silver"
         if not label_result:
             label_result = source_backed_classification(product, taxonomy)
         if not label_result:
             continue
         label = pair_key(label_result["category"], label_result["subcategory"])
-        key = (text, label, "gold" if weight > 1 else "local")
+        key = (text, label, label_source)
         if key not in seen:
             seen.add(key)
             for _ in range(weight):
@@ -1531,8 +1615,8 @@ def build_training_examples(products, taxonomy, gold_index=None, gold_weight=8):
     return texts, labels
 
 
-def train_text_classifier(products, taxonomy, gold_index=None):
-    texts, labels = build_training_examples(products, taxonomy, gold_index=gold_index)
+def train_text_classifier(products, taxonomy, gold_index=None, silver_index=None):
+    texts, labels = build_training_examples(products, taxonomy, gold_index=gold_index, silver_index=silver_index)
     if len(set(labels)) < 2 or len(texts) < 8:
         return None, Counter(labels)
     model = Pipeline(
@@ -1825,6 +1909,7 @@ def ensure_taxonomy(base_dir, products, force_rediscover=False):
 def classify_products(base_dir, products, force_rediscover=False):
     taxonomy = ensure_taxonomy(base_dir, products, force_rediscover=force_rediscover)
     gold_index, gold_label_counts, gold_digest = load_gold_labels(base_dir, taxonomy)
+    silver_index, silver_label_counts, silver_digest = load_silver_labels(base_dir, taxonomy)
     clip_index, clip_digest = load_clip_audit_labels(base_dir, taxonomy)
     cache_path = build_cache_artifact(base_dir)
     report_path = build_report_artifact(base_dir)
@@ -1834,6 +1919,7 @@ def classify_products(base_dir, products, force_rediscover=False):
         "model_name": "local-taxonomy-classifier",
         "model_version": MODEL_VERSION,
         "gold_labels_digest": gold_digest,
+        "silver_labels_digest": silver_digest,
         "clip_audit_digest": clip_digest,
         "clip_primary_min_score": CLIP_PRIMARY_MIN_SCORE,
         "clip_rescue_min_score": CLIP_RESCUE_MIN_SCORE,
@@ -1843,9 +1929,10 @@ def classify_products(base_dir, products, force_rediscover=False):
         cache = {**expected_cache_metadata, "items": {}}
 
     print("[taxonomy] training local text classifier")
-    model, label_counts = train_text_classifier(products, taxonomy, gold_index=gold_index)
+    model, label_counts = train_text_classifier(products, taxonomy, gold_index=gold_index, silver_index=silver_index)
     print(f"[taxonomy] local training labels: {sum(label_counts.values())} across {len(label_counts)} taxonomy pairs")
     print(f"[taxonomy] gold labels: {sum(gold_label_counts.values())} across {len(gold_label_counts)} taxonomy pairs")
+    print(f"[taxonomy] silver labels: {sum(silver_label_counts.values())} across {len(silver_label_counts)} taxonomy pairs")
     print(f"[taxonomy] clip audit labels: {len(clip_index)} identity keys")
 
     changed = []
@@ -1872,20 +1959,25 @@ def classify_products(base_dir, products, force_rediscover=False):
                 if result:
                     print(f"[taxonomy] {index}/{total_count} source-backed: {product_name}")
                 else:
-                    result = clip_primary_classification(product, clip_index, taxonomy)
+                    result = silver_label_for_product(product, silver_index)
                     if result:
-                        print(f"[taxonomy] {index}/{total_count} clip primary: {product_name}")
+                        result["label_source"] = "silver"
+                        print(f"[taxonomy] {index}/{total_count} silver label: {product_name}")
                     else:
-                        result = ml_classification(product, model, taxonomy)
+                        result = clip_primary_classification(product, clip_index, taxonomy)
                         if result:
-                            print(f"[taxonomy] {index}/{total_count} local ml: {product_name}")
+                            print(f"[taxonomy] {index}/{total_count} clip primary: {product_name}")
                         else:
-                            result = clip_rescue_classification(product, clip_index, taxonomy)
+                            result = ml_classification(product, model, taxonomy)
                             if result:
-                                print(f"[taxonomy] {index}/{total_count} clip provisional: {product_name}")
+                                print(f"[taxonomy] {index}/{total_count} local ml: {product_name}")
                             else:
-                                result = default_classification(product, taxonomy)
-                                print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
+                                result = clip_rescue_classification(product, clip_index, taxonomy)
+                                if result:
+                                    print(f"[taxonomy] {index}/{total_count} clip provisional: {product_name}")
+                                else:
+                                    result = default_classification(product, taxonomy)
+                                    print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
                 if result.get("label_source") != "gold":
                     result = guard_impossible_classification(product, result, taxonomy)
                 result = dict(result)
