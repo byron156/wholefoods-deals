@@ -1,3 +1,9 @@
 {
-  "product_count": 46
+  "product_count": 295,
+  "source_counts": {
+    "promotion-detail": 292,
+    "display-promotion": 3
+  },
+  "detail_product_count": 292,
+  "display_fallback_count": 3
 }

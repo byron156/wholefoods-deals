@@ -5,6 +5,7 @@ import os
 import math
 from collections import Counter, defaultdict
 from functools import lru_cache
+from urllib.parse import urljoin
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from brand_ai import build_brand_family_map
 from taxonomy_ai import (
@@ -2027,24 +2028,36 @@ def load_search_deals():
     products = []
 
     for p in raw_products:
-        products.append(
-            standardize_product_record(
-                asin=p.get("asin"),
-                name=p.get("name"),
-                raw_name=p.get("raw_name"),
-                brand=p.get("brand"),
-                variation=p.get("variation"),
-                image=p.get("image"),
-                url=p.get("url"),
-                unit_price=p.get("unit_price"),
-                current_price=p.get("current_price"),
-                regular_price=p.get("basis_price"),
-                prime_price=p.get("prime_price"),
-                discount_text=p.get("discount"),
-                emoji=p.get("emoji"),
-                extra_fields={"retailer": p.get("retailer") or "Whole Foods"},
-            )
+        source_categories = []
+        brand = p.get("brand")
+        if normalize_text_key(brand) == "fresh produce":
+            source_categories.append("Fresh Produce")
+            brand = None
+        product = standardize_product_record(
+            asin=p.get("asin"),
+            name=p.get("name"),
+            raw_name=p.get("raw_name"),
+            brand=brand,
+            variation=p.get("variation"),
+            image=p.get("image"),
+            url=p.get("url"),
+            unit_price=p.get("unit_price"),
+            current_price=p.get("current_price"),
+            regular_price=p.get("basis_price"),
+            prime_price=p.get("prime_price"),
+            discount_text=p.get("discount"),
+            emoji=p.get("emoji"),
+            classification_context=source_categories,
+            extra_fields={
+                "retailer": p.get("retailer") or "Whole Foods",
+                "source_categories": source_categories,
+            },
         )
+        if source_categories:
+            product["brand"] = None
+            product["source_brand"] = None
+            product["brand_source"] = None
+        products.append(product)
 
     return products
 
@@ -2063,6 +2076,23 @@ def load_saved_flyer_products():
 
     products = []
     for p in raw_products:
+        extra_fields = {
+            "rank": p.get("rank"),
+            "sale_price": p.get("sale_price"),
+        }
+        for key in [
+            "retailer",
+            "source_categories",
+            "flyer_rank",
+            "flyer_promotion_id",
+            "flyer_promotion_grouping",
+            "flyer_promotion_name",
+            "flyer_detail_count",
+            "flyer_source",
+        ]:
+            if p.get(key) is not None:
+                extra_fields[key] = p.get(key)
+
         products.append(
             standardize_product_record(
                 asin=p.get("asin"),
@@ -2079,7 +2109,8 @@ def load_saved_flyer_products():
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
-                extra_fields={"rank": p.get("rank"), "sale_price": p.get("sale_price")},
+                classification_context=p.get("source_categories"),
+                extra_fields=extra_fields,
             )
         )
 
@@ -2206,6 +2237,14 @@ def merge_combined_product(existing, incoming):
         source_name = merged.get("raw_name") or incoming.get("raw_name") or incoming.get("name")
         if source_name:
             merged["name"] = clean_display_name(source_name, merged["brand"])
+
+    incoming_source_categories = incoming.get("source_categories") or []
+    if any(normalize_text_key(category) == "fresh produce" for category in incoming_source_categories):
+        merged["source_categories"] = sorted(set((merged.get("source_categories") or []) + incoming_source_categories))
+        if merged.get("brand_source") != "source":
+            merged["brand"] = None
+            merged["source_brand"] = None
+            merged["brand_source"] = None
 
     merged_sources = []
     for source in existing.get("sources", []) + incoming.get("sources", []):
@@ -2807,6 +2846,190 @@ def active_taxonomy_subcategory_options():
     return taxonomy_to_options(taxonomy)
 
 
+def build_flyer_display_product(p):
+    return standardize_product_record(
+        name=p.get("productName", "Unknown Product"),
+        brand=p.get("brandName") or p.get("originBrandName"),
+        image=p.get("productImage"),
+        regular_price=p.get("regularPrice"),
+        current_price=p.get("salePrice"),
+        prime_price=p.get("primePrice"),
+        asins=p.get("asinsList", []),
+        emoji=emoji_for_product(p.get("productName", "Unknown Product")),
+        extra_fields={
+            "rank": p.get("rank"),
+            "sale_price": p.get("salePrice"),
+            "flyer_promotion_id": p.get("promotionId"),
+            "flyer_promotion_grouping": p.get("promotionGrouping"),
+            "flyer_source": "display-promotion",
+            "retailer": "Whole Foods",
+        },
+    )
+
+
+def build_flyer_promotion_url(p):
+    promotion_id = p.get("promotionId")
+    if not promotion_id:
+        return None
+    return f"https://www.wholefoodsmarket.com/promotion/{promotion_id}?store-id={DEFAULT_STORE_IDS[0]}"
+
+
+def extract_flyer_asin_from_href(href):
+    if not href:
+        return None
+    match = re.search(r"/grocery/product/([A-Z0-9]{10})", href, re.IGNORECASE)
+    return match.group(1).upper() if match else None
+
+
+def clean_flyer_tile_text(text):
+    if not text:
+        return None
+    cleaned = re.sub(r"\s+", " ", text).strip()
+    cleaned = re.sub(r"\s+\*$", "", cleaned).strip()
+    return cleaned or None
+
+
+def parse_flyer_promotion_detail_products(html):
+    try:
+        from bs4 import BeautifulSoup
+    except Exception:
+        return []
+
+    soup = BeautifulSoup(html, "html.parser")
+    products = []
+    seen_asins = set()
+
+    for link in soup.select('a[data-csa-c-type="productTile"][href*="/grocery/product/"]'):
+        href = link.get("href") or ""
+        asin = extract_flyer_asin_from_href(href)
+        if not asin or asin in seen_asins:
+            continue
+
+        name = clean_flyer_tile_text(link.get("data-csa-c-content-id"))
+        image = None
+        image_el = link.find("img")
+        if image_el:
+            image = image_el.get("src")
+            if not name:
+                name = clean_flyer_tile_text(image_el.get("alt"))
+
+        brand = None
+        for span in link.find_all("span"):
+            classes = " ".join(span.get("class") or [])
+            text = clean_flyer_tile_text(span.get_text(" ", strip=True))
+            if not text:
+                continue
+            if "bds--body-2" not in classes or "text-chia-seed" not in classes:
+                continue
+            if re.search(r"^(valid|exp\.?|sale bug)$", text, re.IGNORECASE):
+                continue
+            brand = text
+            break
+
+        if not name:
+            continue
+
+        products.append({
+            "asin": asin,
+            "asins": [asin],
+            "name": name,
+            "brand": brand,
+            "image": image,
+            "url": urljoin("https://www.wholefoodsmarket.com", href),
+        })
+        seen_asins.add(asin)
+
+    return products
+
+
+def expand_flyer_promotion_detail_page(page, max_clicks=20):
+    product_tiles = page.locator('a[data-csa-c-type="productTile"][href*="/grocery/product/"]')
+    load_more_clicks = 0
+    stale_rounds = 0
+    previous_count = product_tiles.count()
+
+    while load_more_clicks < max_clicks:
+        try:
+            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            page.wait_for_timeout(700)
+        except Exception:
+            pass
+
+        load_more = page.get_by_role("button", name=re.compile(r"load\s+more", re.IGNORECASE))
+        if not load_more.count():
+            load_more = page.locator("button", has_text=re.compile(r"load\s+more", re.IGNORECASE))
+
+        if not load_more.count():
+            break
+
+        try:
+            button = load_more.first
+            if not button.is_enabled():
+                break
+            button.scroll_into_view_if_needed()
+            button.click(timeout=10000)
+            load_more_clicks += 1
+            page.wait_for_timeout(1500)
+        except Exception:
+            break
+
+        current_count = product_tiles.count()
+        if current_count <= previous_count:
+            stale_rounds += 1
+        else:
+            stale_rounds = 0
+        previous_count = current_count
+
+        if stale_rounds >= 2:
+            break
+
+    return load_more_clicks
+
+
+def standardize_flyer_detail_product(p, detail_product, detail_index, detail_count):
+    raw_brand = detail_product.get("brand") or p.get("brandName") or p.get("originBrandName")
+    source_categories = []
+    if normalize_text_key(raw_brand) == "fresh produce":
+        source_categories.append("Fresh Produce")
+
+    brand = None if source_categories else raw_brand
+    rank = p.get("rank")
+    detail_rank = (rank + (detail_index / 1000)) if isinstance(rank, int) else detail_index
+
+    product = standardize_product_record(
+        asin=detail_product.get("asin"),
+        asins=detail_product.get("asins") or ([detail_product["asin"]] if detail_product.get("asin") else []),
+        name=detail_product.get("name") or p.get("productName", "Unknown Product"),
+        brand=brand,
+        image=detail_product.get("image") or p.get("productImage"),
+        url=detail_product.get("url") or build_flyer_promotion_url(p),
+        regular_price=p.get("regularPrice"),
+        current_price=p.get("salePrice"),
+        prime_price=p.get("primePrice"),
+        classification_context=source_categories,
+        emoji=emoji_for_product(detail_product.get("name") or p.get("productName", "Unknown Product")),
+        extra_fields={
+            "rank": detail_rank,
+            "flyer_rank": rank,
+            "sale_price": p.get("salePrice"),
+            "flyer_promotion_id": p.get("promotionId"),
+            "flyer_promotion_grouping": p.get("promotionGrouping"),
+            "flyer_promotion_name": p.get("productName"),
+            "flyer_detail_count": detail_count,
+            "flyer_source": "promotion-detail",
+            "retailer": "Whole Foods",
+        },
+    )
+
+    if source_categories:
+        product["source_categories"] = source_categories
+        product["brand"] = None
+        product["source_brand"] = None
+        product["brand_source"] = None
+
+    return product
+
+
 def fetch_products():
     r = requests.get(SALES_FLYER_URL, timeout=20)
     r.raise_for_status()
@@ -2820,21 +3043,75 @@ def fetch_products():
     )
 
     products = []
+    hydrate_details = os.getenv("WFM_FLYER_HYDRATE_DETAILS", "1").strip().lower() not in {"0", "false", "no"}
+    max_promotions_raw = os.getenv("WFM_FLYER_MAX_PROMOTIONS", "").strip()
+    max_promotions = int(max_promotions_raw) if max_promotions_raw.isdigit() else None
 
-    for p in promotions:
-        products.append(
-            standardize_product_record(
-                name=p.get("productName", "Unknown Product"),
-                brand=p.get("brandName"),
-                image=p.get("productImage"),
-                regular_price=p.get("regularPrice"),
-                current_price=p.get("salePrice"),
-                prime_price=p.get("primePrice"),
-                asins=p.get("asinsList", []),
-                emoji=emoji_for_product(p.get("productName", "Unknown Product")),
-                extra_fields={"rank": p.get("rank"), "sale_price": p.get("salePrice")},
-            )
-        )
+    if not hydrate_details:
+        products = [build_flyer_display_product(p) for p in promotions]
+    else:
+        try:
+            from playwright.sync_api import sync_playwright
+
+            with sync_playwright() as playwright:
+                browser = playwright.chromium.launch(headless=True)
+                page = browser.new_page(
+                    viewport={"width": 1440, "height": 1800},
+                    user_agent=(
+                        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+                    ),
+                    locale="en-US",
+                    timezone_id="America/New_York",
+                )
+
+                selected_promotions = promotions[:max_promotions] if max_promotions else promotions
+                for index, p in enumerate(selected_promotions, start=1):
+                    promotion_url = build_flyer_promotion_url(p)
+                    detail_products = []
+                    if promotion_url:
+                        try:
+                            print(
+                                f"Flyer detail {index}/{len(selected_promotions)}: "
+                                f"{p.get('productName', 'Unknown Product')}"
+                            )
+                            page.goto(promotion_url, wait_until="domcontentloaded", timeout=90000)
+                            try:
+                                page.locator('a[data-csa-c-type="productTile"][href*="/grocery/product/"]').first.wait_for(
+                                    timeout=12000
+                                )
+                            except Exception:
+                                pass
+                            load_more_clicks = expand_flyer_promotion_detail_page(page)
+                            if load_more_clicks:
+                                print(
+                                    f"Flyer detail expanded {p.get('productName', 'Unknown Product')}: "
+                                    f"clicked Load more {load_more_clicks} time(s)"
+                                )
+                            detail_products = parse_flyer_promotion_detail_products(page.content())
+                        except Exception as exc:
+                            print(
+                                "Flyer detail scrape failed; falling back to display promo "
+                                f"for {p.get('productName', 'Unknown Product')}: {exc}"
+                            )
+
+                    if detail_products:
+                        for detail_index, detail_product in enumerate(detail_products, start=1):
+                            products.append(
+                                standardize_flyer_detail_product(
+                                    p,
+                                    detail_product,
+                                    detail_index,
+                                    len(detail_products),
+                                )
+                            )
+                    else:
+                        products.append(build_flyer_display_product(p))
+
+                browser.close()
+        except Exception as exc:
+            print(f"Flyer detail hydration unavailable; using display promotions only: {exc}")
+            products = [build_flyer_display_product(p) for p in promotions]
 
     products.sort(key=lambda x: x["rank"] if x["rank"] is not None else 9999)
     return products

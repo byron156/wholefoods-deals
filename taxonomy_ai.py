@@ -18,8 +18,8 @@ from fixed_taxonomy import FIXED_TAXONOMY_VERSION, build_fixed_taxonomy
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
-MODEL_VERSION = "taxonomy-local-ml-v6"
-PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v6"
+MODEL_VERSION = "taxonomy-local-ml-v13"
+PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v13"
 OLLAMA_CHAT_TIMEOUT = int(os.getenv("OLLAMA_CHAT_TIMEOUT", "420"))
 CLASSIFICATION_BATCH_SIZE = int(os.getenv("TAXONOMY_CLASSIFICATION_BATCH_SIZE", "20"))
 DISCOVERED_TAXONOMY_FILE = "discovered_taxonomy.json"
@@ -27,6 +27,10 @@ CLASSIFICATION_CACHE_FILE = "taxonomy_classification_cache.json"
 TAXONOMY_REPORT_FILE = "taxonomy_ai_report.json"
 DISCOVERY_DEBUG_FILE = "taxonomy_discovery_debug.json"
 CLASSIFICATION_DEBUG_FILE = "taxonomy_classification_debug.json"
+GOLD_LABELS_FILE = "taxonomy_gold_labels.json"
+CLIP_AUDIT_FILE = "vision_category_audit.full.json"
+CLIP_SUBCATEGORY_FIRST_MIN_SCORE = 0.65
+CLIP_ANY_SOURCE_STRONG_MIN_SCORE = 0.80
 
 
 CATEGORY_GUIDANCE = {
@@ -474,6 +478,166 @@ def valid_taxonomy_pairs(taxonomy):
     }
 
 
+def taxonomy_gold_labels_path(base_dir):
+    return os.path.join(base_dir, GOLD_LABELS_FILE)
+
+
+def taxonomy_clip_audit_path(base_dir):
+    return os.path.join(base_dir, CLIP_AUDIT_FILE)
+
+
+def normalized_identity_values(product):
+    values = []
+    for field in ("asin", "url", "raw_name", "name", "id"):
+        value = product.get(field)
+        if value:
+            values.append(normalize_text(str(value)).casefold())
+    return values
+
+
+def product_identity_keys(product):
+    keys = []
+    for field in ("asin", "url", "raw_name", "name"):
+        value = product.get(field)
+        if value:
+            keys.append(f"{field}:{normalize_text(str(value)).casefold()}")
+    return keys
+
+
+def normalize_gold_label(row, taxonomy):
+    category = row.get("category") or row.get("reviewed_category")
+    subcategory = row.get("subcategory") or row.get("reviewed_subcategory")
+    normalized = normalize_model_result(
+        {
+            "category": category,
+            "subcategory": subcategory,
+            "confidence": row.get("confidence") or 1.0,
+            "reasoning": row.get("notes") or row.get("review_notes") or "Manual gold taxonomy label.",
+        },
+        taxonomy,
+    )
+    if not normalized:
+        return None
+    normalized["confidence"] = 1.0
+    normalized["reasoning"] = normalized.get("reasoning") or "Manual gold taxonomy label."
+    normalized["model_name"] = "manual-gold-label"
+    normalized["model_version"] = MODEL_VERSION
+    return normalized
+
+
+def load_gold_labels(base_dir, taxonomy):
+    path = taxonomy_gold_labels_path(base_dir)
+    payload = load_json_file(path, {"labels": []})
+    rows = payload.get("labels") if isinstance(payload, dict) else payload
+    rows = rows or []
+
+    by_key = {}
+    normalized_rows = []
+    label_counts = Counter()
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        result = normalize_gold_label(row, taxonomy)
+        if not result:
+            continue
+        indexed = False
+        for key in product_identity_keys(row):
+            by_key[key] = result
+            indexed = True
+        if indexed:
+            normalized_rows.append(row)
+            label_counts[pair_key(result["category"], result["subcategory"])] += 1
+
+    digest_payload = [
+        {
+            "asin": row.get("asin"),
+            "url": row.get("url"),
+            "name": row.get("name"),
+            "raw_name": row.get("raw_name"),
+            "category": row.get("category") or row.get("reviewed_category"),
+            "subcategory": row.get("subcategory") or row.get("reviewed_subcategory"),
+        }
+        for row in normalized_rows
+    ]
+    digest = hashlib.sha256(
+        json.dumps(digest_payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    ).hexdigest()[:16]
+    return by_key, label_counts, digest
+
+
+def gold_label_for_product(product, gold_index):
+    for key in product_identity_keys(product):
+        result = gold_index.get(key)
+        if result:
+            return dict(result)
+    return None
+
+
+def load_clip_audit_labels(base_dir, taxonomy):
+    path = taxonomy_clip_audit_path(base_dir)
+    payload = load_json_file(path, {"results": []})
+    rows = payload.get("results") if isinstance(payload, dict) else []
+    rows = rows or []
+
+    by_value = {}
+    digest_payload = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        clip = row.get("clip_locked_pair") or {}
+        score = float(clip.get("score") or 0)
+        source = clip.get("source") or "unknown"
+        normalized = normalize_model_result(
+            {
+                "category": clip.get("category"),
+                "subcategory": clip.get("subcategory"),
+                "confidence": score,
+                "reasoning": (
+                    f"Locked CLIP suggestion ({source}, score {score:.4f}); "
+                    "used only as a provisional fallback rescue."
+                ),
+            },
+            taxonomy,
+        )
+        if not normalized:
+            continue
+        normalized["model_name"] = "local-clip-audit"
+        normalized["model_version"] = MODEL_VERSION
+        normalized["clip_source"] = source
+        normalized["clip_score"] = score
+
+        audit_product = row.get("product") or {}
+        indexed = False
+        for value in normalized_identity_values(audit_product):
+            by_value[value] = normalized
+            indexed = True
+        if indexed:
+            digest_payload.append(
+                {
+                    "id": audit_product.get("id"),
+                    "name": audit_product.get("name"),
+                    "raw_name": audit_product.get("raw_name"),
+                    "category": normalized["category"],
+                    "subcategory": normalized["subcategory"],
+                    "source": source,
+                    "score": round(score, 4),
+                }
+            )
+
+    digest = hashlib.sha256(
+        json.dumps(digest_payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    ).hexdigest()[:16]
+    return by_value, digest
+
+
+def clip_audit_label_for_product(product, clip_index):
+    for value in normalized_identity_values(product):
+        result = clip_index.get(value)
+        if result:
+            return dict(result)
+    return None
+
+
 def text_has_any(text, terms):
     return any(term in text for term in terms)
 
@@ -488,24 +652,37 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "chips",
     "coffee",
     "coffee blend",
+    "conditioner",
+    "conditoner",
+    "cocktail",
     "crisps",
     "crispy",
+    "curl",
     "drink",
+    "extract",
+    "fruit jerky",
     "gummies",
     "immunity blend",
+    "immunity shot",
     "juice",
     "k-cup",
     "latte",
+    "leave-in",
     "lotion",
     "medium roast",
+    "mosquito",
     "pasta sauce",
     "pouch",
     "powder",
+    "prebiotic",
+    "probiotic",
     "protein",
+    "repellent",
     "sauce",
     "sausage",
     "smoothie",
     "snack",
+    "soda",
     "skin care",
     "superfood",
     "supplement",
@@ -584,6 +761,10 @@ def text_has_word(text, terms):
     return any(re.search(rf"\b{re.escape(term)}\b", text) for term in terms)
 
 
+def text_has_phrase_or_word(text, phrases=(), words=()):
+    return text_has_any(text, phrases) or text_has_word(text, words)
+
+
 def is_packaged_or_processed_for_produce(text):
     return text_has_any(text, PACKAGED_PRODUCE_BLOCKERS)
 
@@ -597,6 +778,39 @@ def is_fresh_produce_text(text):
         or text_has_word(text, MUSHROOM_TERMS)
         or text_has_word(text, VEGETABLE_TERMS)
         or text_has_word(text, HERB_TERMS)
+    )
+
+
+def source_categories_text(product):
+    return " ".join(str(value) for value in (product.get("source_categories") or []) if value).lower()
+
+
+def has_source_fresh_produce(product):
+    return "fresh produce" in source_categories_text(product)
+
+
+def fresh_produce_source_classification(product, taxonomy):
+    if not has_source_fresh_produce(product):
+        return None
+    text = product_text(product)
+    if text_has_any(text, ["chunk", "chunks", "cut fruit", "cut vegetable", "fruit cup", "value pack"]):
+        return local_result(taxonomy, "Produce", "Cut Fruit & Veg", reason="Whole Foods source labeled this card Fresh Produce.")
+    if text_has_word(text, HERB_TERMS):
+        return local_result(taxonomy, "Produce", "Fresh Herbs", reason="Whole Foods source labeled this card Fresh Produce.")
+    if text_has_word(text, SALAD_GREEN_TERMS):
+        return local_result(taxonomy, "Produce", "Salad Greens", reason="Whole Foods source labeled this card Fresh Produce.")
+    if text_has_word(text, MUSHROOM_TERMS):
+        return local_result(taxonomy, "Produce", "Mushrooms", reason="Whole Foods source labeled this card Fresh Produce.")
+    if text_has_word(text, VEGETABLE_TERMS):
+        return local_result(taxonomy, "Produce", "Vegetables", reason="Whole Foods source labeled this card Fresh Produce.")
+    if text_has_word(text, FRUIT_TERMS):
+        return local_result(taxonomy, "Produce", "Fruits", reason="Whole Foods source labeled this card Fresh Produce.")
+    return local_result(
+        taxonomy,
+        "Produce",
+        "Fruits",
+        confidence=0.9,
+        reason="Whole Foods source labeled this card Fresh Produce; subcategory defaulted to fruit.",
     )
 
 
@@ -616,6 +830,10 @@ def local_result(taxonomy, category, subcategory, confidence=0.99, reason="High-
 def packaged_form_classification(product, taxonomy):
     text = product_text(product)
 
+    if text_has_phrase_or_word(text, phrases=["whole milk kefir", "low fat kefir"], words=["kefir"]):
+        return local_result(taxonomy, "Dairy & Eggs", "Yogurt", reason="Kefir dairy wording matched.")
+    if text_has_any(text, ["frozen pizza"]) or text_has_word(text, ["pizza"]):
+        return local_result(taxonomy, "Frozen", "Frozen Pizza", reason="Pizza product wording matched.")
     if text_has_any(text, ["breakfast cereal", "protein cereal", "catalina crunch", "granola", "oatmeal"]):
         return local_result(taxonomy, "Pantry", "Cereal & Breakfast", reason="Packaged breakfast cereal wording matched.")
     if text_has_any(text, ["baby food", "toddler", "kids snack", "smoothie pouch", "pouch"]):
@@ -626,10 +844,48 @@ def packaged_form_classification(product, taxonomy):
         return local_result(taxonomy, "Beverages", "Coffee Beans & Grounds", reason="Coffee bean or ground coffee wording matched.")
     if text_has_any(text, ["body lotion", "daily lotion", "hand lotion", "lotion", "body cream"]):
         return local_result(taxonomy, "Beauty & Personal Care", "Body Care", reason="Body-care lotion wording matched.")
+    if text_has_any(text, ["curl cream", "curl maker", "defining gel", "detangler", "conditioning spray", "conditoner", "repair hydrate", "leave-in", "co-wash", "deep treatment"]) or (
+        text_has_word(text, ["curl", "curls"]) and text_has_any(text, ["cream", "gel", "spray", "conditioner", "conditoner", "treatment", "hair"])
+    ):
+        return local_result(taxonomy, "Beauty & Personal Care", "Hair Care", reason="Hair curl-care wording matched.")
+    if text_has_any(text, ["mosquito repellent", "tick bug repellent", "bug repellent", "insect repellent"]):
+        return local_result(taxonomy, "Household", "Insect Repellent", reason="Insect-repellent wording matched.")
+    if text_has_any(text, ["food scrap bag", "food scrap bags", "compostable bag", "compostable bags"]):
+        return local_result(taxonomy, "Household", "Trash Bags", reason="Compostable bag wording matched.")
+    if text_has_any(text, ["bath tissue", "toilet paper", "paper towel", "paper towels"]):
+        return local_result(taxonomy, "Household", "Paper Products", reason="Household paper-product wording matched.")
+    if text_has_any(text, ["household gloves", "kitchen gloves", "cleaning gloves"]):
+        return local_result(taxonomy, "Household", "Cleaning Supplies", reason="Household glove wording matched.")
+    if text_has_any(text, ["multi-surface wipes", "cleaning wipes", "surface wipes"]):
+        return local_result(taxonomy, "Household", "Cleaning Supplies", reason="Cleaning-wipe wording matched.")
+    if text_has_any(text, ["dish liquid", "dish soap", "dishwashing soap", "dishwasher detergent", "dishwasher pods", "dishwasher tabs"]):
+        return local_result(taxonomy, "Household", "Dishwashing", reason="Dishwashing wording matched.")
+    if text_has_any(text, ["steamer basket", "zester", "can and bottle opener", "bottle opener"]):
+        return local_result(taxonomy, "Household", "Kitchen Supplies", reason="Kitchen tool wording matched.")
+    if text_has_any(text, ["room spray", "toilet spray", "air freshener"]):
+        return local_result(taxonomy, "Household", "Air Fresheners", reason="Home fragrance spray wording matched.")
+    if text_has_word(text, ["candle", "candles"]):
+        return local_result(taxonomy, "Household", "Home Essentials", reason="Candle home-good wording matched.")
     if text_has_any(text, ["crispy air bites", "air bites"]) or ("strong roots" in text and "bites" in text):
         return local_result(taxonomy, "Frozen", "Frozen Appetizers", reason="Frozen crispy bite wording matched.")
     if text_has_any(text, ["chips", "crisps", "cracker", "crackers", "pretzel", "popcorn"]):
         return local_result(taxonomy, "Snacks", "Chips", reason="Packaged snack wording matched.")
+    if text_has_any(text, ["magnesium glycinate", "night minerals"]) or (
+        text_has_word(text, ["magnesium"]) and text_has_any(text, ["supplement", "drink stick", "nighttime drink", "calming nighttime"])
+    ):
+        return local_result(taxonomy, "Supplements & Wellness", "Minerals", reason="Mineral supplement wording matched.")
+    if text_has_any(text, ["wellness shot", "immunity boost shot", "immunity shot", "gut well shot", "turmeric boost"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Wellness Shots", reason="Wellness-shot wording matched.")
+    if text_has_any(text, ["nasal spray", "propolis nasal", "postbiotic", "probiotic", "sinus support", "immune system support", "immunity support", "black elderberry"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Immune Support", reason="Wellness support wording matched.")
+    if text_has_any(text, ["maca extract", "wormwood extract", "echinacea", "ginkgo", "passionflower extract", "clove extract", "rhodiola extract", "kava extract", "turmeric root extract", "holy basil extract", "lavender extract", "propolis extract", "liquid extract"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Herbal Supplements", reason="Herbal extract wording matched.")
+    if text_has_any(text, ["protein shot", "mental performance shot", "brain food", "koia elite"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Protein & Collagen", reason="Functional protein or performance shot wording matched.")
+    if text_has_any(text, ["plant based patties", "plant-based patties", "impossible plant"]):
+        return local_result(taxonomy, "Meat & Seafood", "Meat Alternatives", reason="Plant-based meat alternative wording matched.")
+    if text_has_any(text, ["supergreens blend", "greens blend"]):
+        return local_result(taxonomy, "Supplements & Wellness", "Herbal Supplements", reason="Greens supplement wording matched.")
     if text_has_any(text, ["smoothie", "immunity blend", "juice"]):
         return local_result(taxonomy, "Beverages", "Functional Drinks", reason="Drink or smoothie wording matched.")
     if text_has_any(text, ["powder", "capsule", "capsules", "tablet", "supplement", "superfood"]):
@@ -640,7 +896,12 @@ def packaged_form_classification(product, taxonomy):
 def guard_impossible_classification(product, result, taxonomy):
     if not result:
         return result
+    fresh_produce = fresh_produce_source_classification(product, taxonomy)
+    if fresh_produce and result.get("category") != "Produce":
+        return fresh_produce
     if result.get("category") == "Produce" and not is_fresh_produce_text(product_text(product)):
+        if fresh_produce:
+            return fresh_produce
         replacement = packaged_form_classification(product, taxonomy)
         if replacement:
             replacement = dict(replacement)
@@ -668,8 +929,14 @@ def deterministic_classification(product, taxonomy):
             return None
         return local_result(taxonomy, category, subcategory, confidence=confidence, reason=reason)
 
+    fresh_produce = fresh_produce_source_classification(product, taxonomy)
+    if fresh_produce:
+        return fresh_produce
+
     # Non-food and wellness first so "gummies", "water", or "oil" do not steal supplements/care items.
-    if text_has_any(text, ["shampoo", "conditioner", "hair mask", "scalp", "hair care"]):
+    if text_has_any(text, ["shampoo", "conditioner", "hair mask", "scalp", "hair care", "curl cream", "curl maker", "detangler", "conditioning spray", "leave-in", "co-wash", "deep treatment"]) or (
+        text_has_word(text, ["curl", "curls"]) and text_has_any(text, ["cream", "gel", "spray", "conditioner", "treatment", "hair"])
+    ):
         return result("Beauty & Personal Care", "Hair Care", reason="Hair-care wording matched.")
     if text_has_any(text, ["lip gloss", "glasting color gloss", "lip balm", "lip care"]):
         return result("Beauty & Personal Care", "Lip Care", reason="Lip-care wording matched.")
@@ -677,7 +944,7 @@ def deterministic_classification(product, taxonomy):
         return result("Beauty & Personal Care", "Sun Care", reason="Sun-care wording matched.")
     if text_has_any(text, ["hand soap", "body wash", "shower gel"]):
         return result("Beauty & Personal Care", "Soap & Hand Wash", reason="Soap or wash wording matched.")
-    if text_has_any(text, ["serum", "moisturizer", "face cream", "skin cream", "ai cream", "physiogel", "facial", "skin care", "acne"]):
+    if text_has_any(text, ["serum", "moisturizer", "face cream", "skin cream", "cica cream", "eye cream", "ai cream", "physiogel", "facial", "skin care", "acne"]):
         return result("Beauty & Personal Care", "Skin Care", reason="Skin-care wording matched.")
     if text_has_any(text, ["body lotion", "daily lotion", "hand lotion", "lotion", "body cream"]):
         return result("Beauty & Personal Care", "Body Care", reason="Body-care lotion wording matched.")
@@ -690,21 +957,39 @@ def deterministic_classification(product, taxonomy):
         return result("Household", "Foil, Wrap & Bags", reason="Food-wrap or bag wording matched.")
     if text_has_any(text, ["coffee filter", "filter basket"]):
         return result("Household", "Kitchen Supplies", reason="Kitchen supply wording matched.")
-    if text_has_any(text, ["bug spray", "mosquito repellent", "insect repellent"]):
+    if text_has_any(text, ["bug spray", "mosquito repellent", "tick bug repellent", "bug repellent", "insect repellent"]):
         return result("Household", "Insect Repellent", reason="Insect-repellent wording matched.")
+    if text_has_any(text, ["household gloves", "kitchen gloves", "cleaning gloves"]):
+        return result("Household", "Cleaning Supplies", reason="Household glove wording matched.")
+    if text_has_any(text, ["steamer basket", "zester", "can and bottle opener", "bottle opener", "chef's knive", "chef's knife", "paring knife", "chopping mats"]):
+        return result("Household", "Kitchen Supplies", reason="Kitchen tool wording matched.")
+    if text_has_any(text, ["room spray", "toilet spray", "air freshener"]):
+        return result("Household", "Air Fresheners", reason="Home fragrance spray wording matched.")
+    if text_has_word(text, ["candle", "candles"]):
+        return result("Household", "Home Essentials", reason="Candle home-good wording matched.")
     if text_has_any(text, ["trash bag", "garbage bag"]):
         return result("Household", "Trash Bags", reason="Trash-bag wording matched.")
+    if text_has_any(text, ["bath tissue", "toilet paper", "paper towel", "paper towels"]):
+        return result("Household", "Paper Products", reason="Household paper-product wording matched.")
     if text_has_any(text, ["laundry detergent", "fabric softener"]):
         return result("Household", "Laundry", reason="Laundry wording matched.")
-    if text_has_any(text, ["dish soap", "dishwasher", "dishwashing"]):
+    if text_has_any(text, ["dish liquid", "dish soap", "dishwasher", "dishwashing"]):
         return result("Household", "Dishwashing", reason="Dishwashing wording matched.")
-    if text_has_any(text, ["toilet cleaner", "cleaner refill", "cleaning tablet", "all purpose cleaner", "surface cleaner"]):
+    if text_has_any(text, ["toilet cleaner", "cleaner refill", "cleaning tablet", "all purpose cleaner", "surface cleaner", "multi-surface wipes", "cleaning wipes", "surface wipes"]):
         return result("Household", "Cleaning Supplies", reason="Cleaning-supply wording matched.")
 
     form_result = packaged_form_classification(product, taxonomy)
     if form_result:
         return form_result
 
+    if text_has_phrase_or_word(text, phrases=["whole milk kefir", "low fat kefir"], words=["kefir"]):
+        return result("Dairy & Eggs", "Yogurt", reason="Kefir dairy wording matched.")
+    if text_has_any(text, ["wellness shot", "immunity boost shot", "immunity shot", "gut well shot", "turmeric boost"]):
+        return result("Supplements & Wellness", "Wellness Shots", reason="Wellness-shot wording matched.")
+    if text_has_any(text, ["postbiotic", "probiotic", "sinus support", "immune system support", "immunity support", "black elderberry"]):
+        return result("Supplements & Wellness", "Immune Support", reason="Wellness support wording matched.")
+    if text_has_any(text, ["maca extract", "wormwood extract", "echinacea", "rhodiola extract", "kava extract", "turmeric root extract", "holy basil extract", "lavender extract", "propolis extract", "cat`s claw extract", "cat's claw extract", "liquid extract"]):
+        return result("Supplements & Wellness", "Herbal Supplements", reason="Herbal extract wording matched.")
     if text_has_any(text, ["collagen", "protein powder", "protein peptides"]):
         return result("Supplements & Wellness", "Protein & Collagen", reason="Protein or collagen supplement wording matched.")
     if text_has_any(text, ["fish oil", "omega 3", "omega-3", " dha", " epa "]):
@@ -725,17 +1010,61 @@ def deterministic_classification(product, taxonomy):
         return result("Supplements & Wellness", "Essential Oils", reason="Essential-oil wording matched.")
     if text_has_any(text, ["capsule", "capsules", "softgel", "softgels", "vegetable capsules", "supplement"]):
         return result("Supplements & Wellness", "Herbal Supplements", confidence=0.95, reason="Supplement capsule wording matched.")
-    if text_has_any(text, ["electrolyte tablet", "hydration tablet", "drink tablet", "sport hydration", "nuun hydration", "nuun sport"]):
+    if text_has_any(text, ["electrolyte tablet", "hydration tablet", "drink tablet", "hydration drink mix", "liquid iv", "sport hydration", "nuun hydration", "nuun sport"]):
         return result("Beverages", "Drink Mixes", reason="Drink-tablet wording matched.")
 
-    if text_has_any(text, ["beer", "lager", "ipa", "ale ", "stout", "porter", "hard seltzer", "hard lemonade", "simply spiked", "wine", "abv", "lagunitas", "kirin", "modelo", "busch light"]):
+    alcohol_phrases = [
+        "hard seltzer",
+        "hard lemonade",
+        "simply spiked",
+        "busch light",
+        "bota box",
+        "pinot grigio",
+        "sauvignon blanc",
+        "red blend",
+        "white wine",
+        "wine bottle",
+        "vodka mule",
+        "mai tai",
+        "cocktail syrup",
+    ]
+    alcohol_words = [
+        "beer",
+        "lager",
+        "ipa",
+        "ale",
+        "stout",
+        "porter",
+        "wine",
+        "abv",
+        "lagunitas",
+        "kirin",
+        "modelo",
+        "sake",
+        "junmai",
+        "vodka",
+        "tequila",
+        "whiskey",
+        "bourbon",
+        "rum",
+        "gin",
+        "brut",
+        "cava",
+        "merlot",
+        "barolo",
+        "moscato",
+        "cocktail",
+        "margarita",
+        "proof",
+    ]
+    if text_has_phrase_or_word(text, phrases=alcohol_phrases, words=alcohol_words):
         if text_has_any(text, ["non-alcoholic", "non alcoholic", "hoppy refresher", "hop water", "athletic brewing"]):
             return result("Alcohol", "Non-Alcoholic Beer & Wine", reason="Non-alcoholic beer or hop beverage wording matched.")
-        if text_has_any(text, ["wine", "bota box"]):
+        if text_has_phrase_or_word(text, phrases=["bota box", "pinot grigio", "sauvignon blanc", "red blend", "white wine", "wine bottle"], words=["wine", "sake", "junmai", "brut", "cava", "merlot", "barolo", "moscato"]):
             return result("Alcohol", "Wine", reason="Wine wording matched.")
         if text_has_any(text, ["hard seltzer"]):
             return result("Alcohol", "Hard Seltzer", reason="Hard-seltzer wording matched.")
-        if text_has_any(text, ["hard lemonade", "simply spiked"]):
+        if text_has_phrase_or_word(text, phrases=["hard lemonade", "simply spiked", "vodka mule", "mai tai"], words=["vodka", "tequila", "whiskey", "bourbon", "rum", "gin", "cocktail", "margarita", "proof"]):
             return result("Alcohol", "Cocktails & Mixers", reason="Canned cocktail wording matched.")
         return result("Alcohol", "Beer", reason="Beer wording matched.")
 
@@ -751,7 +1080,9 @@ def deterministic_classification(product, taxonomy):
         return result("Beverages", "Ready-to-Drink Coffee", reason="Ready-to-drink coffee wording matched.")
     if text_has_any(text, ["sparkling water", "seltzer"]):
         return result("Beverages", "Sparkling Water", reason="Sparkling-water wording matched.")
-    if text_has_any(text, ["coconut water"]):
+    if text_has_any(text, ["prebiotic soda", "soda"]):
+        return result("Beverages", "Soda", reason="Soda wording matched.")
+    if text_has_any(text, ["coconut water", "water coconut"]):
         return result("Beverages", "Coconut Water", reason="Coconut-water wording matched.")
     if text_has_any(text, ["apple juice", "orange juice", "aloe vera juice", "juice drink"]):
         return result("Beverages", "Juice", reason="Juice wording matched.")
@@ -773,7 +1104,7 @@ def deterministic_classification(product, taxonomy):
     if text_has_any(text, ["dumpling", "gyoza", "mandu"]):
         return result("Prepared Foods", "Dumplings & Quick Meals", reason="Dumpling wording matched.")
 
-    if text_has_any(text, ["frozen pizza"]):
+    if text_has_any(text, ["frozen pizza"]) or text_has_word(text, ["pizza"]):
         return result("Frozen", "Frozen Pizza", reason="Frozen pizza wording matched.")
     if text_has_any(text, ["ice cream", "frozen dessert", "frozen novelt"]):
         return result("Frozen", "Ice Cream", reason="Frozen dessert wording matched.")
@@ -790,8 +1121,12 @@ def deterministic_classification(product, taxonomy):
         return result("Pantry", "Tomatoes & Tomato Products", reason="Tomato pantry wording matched.")
     if text_has_any(text, ["sesame oil", "olive oil", "coconut oil", "vinegar"]):
         return result("Pantry", "Oils & Vinegars", reason="Oil or vinegar wording matched.")
+    if text_has_any(text, ["cooking oil spray", "oil spray", "high heat cooking oil"]):
+        return result("Pantry", "Oils & Vinegars", reason="Cooking-oil wording matched.")
     if text_has_any(text, ["oyster sauce", "soy sauce", "fish sauce", "sukiyaki sauce", "marinade"]):
         return result("Pantry", "Marinades & Cooking Sauces", reason="Cooking-sauce wording matched.")
+    if text_has_any(text, ["hummus"]):
+        return result("Prepared Foods", "Salads & Sides", reason="Hummus dip wording matched.")
     if text_has_any(text, ["parmesan sauce", "cracked pepper and parmesan", "sauz |"]):
         return result("Pantry", "Pasta Sauces", reason="Pasta-sauce wording matched.")
     if text_has_any(text, ["curry sauce", "curry hot", "curry mild", "curry mix"]):
@@ -802,8 +1137,14 @@ def deterministic_classification(product, taxonomy):
         return result("Pantry", "Mayo & Mustard", reason="Mayo or mustard wording matched.")
     if text_has_any(text, ["ramen", "udon", "soba", "noodle"]):
         return result("International", "Asian Noodles & Dumplings", reason="Asian noodle wording matched.")
+    if text_has_any(text, ["ravioli", "tortellini"]):
+        return result("Prepared Foods", "Refrigerated Pasta & Noodles", reason="Refrigerated filled-pasta wording matched.")
     if text_has_any(text, ["rice", "grain"]):
         return result("Pantry", "Rice & Grains", reason="Rice or grain wording matched.")
+    if text_has_any(text, ["chickpeas in glass jar", "chickpeas", "black beans"]):
+        return result("Pantry", "Beans & Legumes", reason="Bean or legume wording matched.")
+    if text_has_any(text, ["bamboo shoots"]):
+        return result("Pantry", "Canned Vegetables", reason="Canned vegetable wording matched.")
     if text_has_any(text, ["pasta", "mafald", "caserecce", "spaghetti"]):
         return result("Pantry", "Pasta", reason="Pasta wording matched.")
     if text_has_any(text, ["flour", "baking mix", "pancake mix"]):
@@ -821,7 +1162,7 @@ def deterministic_classification(product, taxonomy):
         return result("Snacks", "Cookies", reason="Cookie or wafer snack wording matched.")
     if text_has_any(text, ["candy", "chocolate", "gummy", "gummies", "jelly"]):
         return result("Snacks", "Candy & Chocolate", reason="Candy wording matched.")
-    if text_has_any(text, ["protein bar", "snack bar"]):
+    if text_has_any(text, ["protein bar", "snack bar"]) or (text_has_word(text, ["bars"]) and text_has_any(text, ["kind healthy snacks", "energy bars", "almond flour bars"])):
         return result("Snacks", "Snack Bars", reason="Snack-bar wording matched.")
     if text_has_any(text, ["popcorn"]):
         return result("Snacks", "Popcorn", reason="Popcorn wording matched.")
@@ -843,7 +1184,7 @@ def deterministic_classification(product, taxonomy):
         return result("Dairy & Eggs", "Cream & Creamers", reason="Creamer wording matched.")
     if text_has_any(text, ["yogurt", "fage", "w/hny total"]):
         return result("Dairy & Eggs", "Yogurt", reason="Yogurt wording matched.")
-    if text_has_any(text, ["cheese", "feta", "burrata", "ossau iraty"]):
+    if text_has_any(text, ["cheese", "feta", "burrata", "ossau iraty", "mozzarella", "cheddar", "brie"]):
         return result("Dairy & Eggs", "Cheese", reason="Cheese wording matched.")
     if text_has_any(text, ["egg", "eggs"]):
         return result("Dairy & Eggs", "Eggs", reason="Egg wording matched.")
@@ -861,15 +1202,19 @@ def deterministic_classification(product, taxonomy):
         return result("Meat & Seafood", "Beef", reason="Beef wording matched.")
     if text_has_any(text, ["chicken"]):
         return result("Meat & Seafood", "Chicken", reason="Chicken wording matched.")
-    if text_has_any(text, ["pork"]):
+    if text_has_any(text, ["pork", "ham"]):
         return result("Meat & Seafood", "Pork", reason="Pork wording matched.")
+    if text_has_any(text, ["lamb"]):
+        return result("Meat & Seafood", "Lamb", reason="Lamb wording matched.")
     if text_has_any(text, ["bacon"]):
         return result("Meat & Seafood", "Bacon", reason="Bacon wording matched.")
-    if text_has_any(text, ["salami", "sliced meat", "charcuterie"]):
+    if text_has_any(text, ["salami", "prosciutto", "pepperoni", "sliced meat", "charcuterie"]):
         return result("Meat & Seafood", "Deli Meats", reason="Deli-meat wording matched.")
+    if text_has_any(text, ["bratwurst", "sausage", "landjaeger", "meat sticks"]):
+        return result("Meat & Seafood", "Sausage", reason="Sausage or meat-stick wording matched.")
     if text_has_any(text, ["shrimp"]):
         return result("Meat & Seafood", "Shrimp", reason="Shrimp wording matched.")
-    if text_has_any(text, ["salmon", "tuna", "seafood", "fish"]):
+    if text_has_any(text, ["scallop", "octopus", "squid", "salmon", "tuna", "seafood", "fish"]):
         return result("Meat & Seafood", "Seafood", reason="Seafood wording matched.")
 
     if text_has_any(text, ["baby food", "toddler", "diaper", "wipes"]):
@@ -1087,7 +1432,11 @@ def hydrate_product_with_classification(product, result, fingerprint):
     updated["ai_model_version"] = result.get("model_version") or MODEL_VERSION
     updated["ai_taxonomy_version"] = result.get("taxonomy_version")
     updated["ai_fingerprint"] = fingerprint
-    updated["ai_label_source"] = "model"
+    updated["ai_label_source"] = result.get("label_source") or "model"
+    if result.get("clip_source"):
+        updated["ai_clip_source"] = result.get("clip_source")
+    if result.get("clip_score") is not None:
+        updated["ai_clip_score"] = result.get("clip_score")
     return updated
 
 
@@ -1105,7 +1454,7 @@ def existing_valid_classification(product, taxonomy):
     }
 
 
-def build_training_examples(products, taxonomy):
+def build_training_examples(products, taxonomy, gold_index=None, gold_weight=8):
     texts = []
     labels = []
     seen = set()
@@ -1113,21 +1462,24 @@ def build_training_examples(products, taxonomy):
         text = product_text(product)
         if not text:
             continue
-        label_result = deterministic_classification(product, taxonomy)
+        label_result = gold_label_for_product(product, gold_index or {})
+        weight = gold_weight if label_result else 1
+        if not label_result:
+            label_result = deterministic_classification(product, taxonomy)
         if not label_result:
             continue
         label = pair_key(label_result["category"], label_result["subcategory"])
-        key = (text, label)
-        if key in seen:
-            continue
-        seen.add(key)
-        texts.append(text)
-        labels.append(label)
+        key = (text, label, "gold" if weight > 1 else "local")
+        if key not in seen:
+            seen.add(key)
+            for _ in range(weight):
+                texts.append(text)
+                labels.append(label)
     return texts, labels
 
 
-def train_text_classifier(products, taxonomy):
-    texts, labels = build_training_examples(products, taxonomy)
+def train_text_classifier(products, taxonomy, gold_index=None):
+    texts, labels = build_training_examples(products, taxonomy, gold_index=gold_index)
     if len(set(labels)) < 2 or len(texts) < 8:
         return None, Counter(labels)
     model = Pipeline(
@@ -1213,6 +1565,41 @@ def default_classification(product, taxonomy):
         "model_name": "local-taxonomy-classifier",
         "model_version": MODEL_VERSION,
     }
+
+
+def clip_rescue_classification(product, clip_index, taxonomy):
+    clip = clip_audit_label_for_product(product, clip_index)
+    if not clip:
+        return None
+
+    score = float(clip.get("clip_score") or clip.get("confidence") or 0)
+    source = clip.get("clip_source") or "unknown"
+    strong_pair = score >= CLIP_ANY_SOURCE_STRONG_MIN_SCORE
+    reliable_category = source == "subcategory-first" and score >= CLIP_SUBCATEGORY_FIRST_MIN_SCORE
+    if not strong_pair and not reliable_category:
+        return None
+
+    normalized = normalize_model_result(
+        {
+            "category": clip.get("category"),
+            "subcategory": clip.get("subcategory"),
+            "confidence": 0.82 if strong_pair else 0.68,
+            "reasoning": (
+                f"Provisional CLIP rescue for an otherwise unresolved fallback item. "
+                f"Locked pair source={source}, score={score:.4f}. "
+                "Gold/manual labels still override this."
+            ),
+        },
+        taxonomy,
+    )
+    if not normalized:
+        return None
+    normalized["model_name"] = "local-clip-audit"
+    normalized["model_version"] = MODEL_VERSION
+    normalized["label_source"] = "clip-provisional"
+    normalized["clip_source"] = source
+    normalized["clip_score"] = round(score, 4)
+    return normalized
 
 
 def choose_taxonomy_index(*, system, prompt, item_count, images=None):
@@ -1362,6 +1749,8 @@ def ensure_taxonomy(base_dir, products, force_rediscover=False):
 
 def classify_products(base_dir, products, force_rediscover=False):
     taxonomy = ensure_taxonomy(base_dir, products, force_rediscover=force_rediscover)
+    gold_index, gold_label_counts, gold_digest = load_gold_labels(base_dir, taxonomy)
+    clip_index, clip_digest = load_clip_audit_labels(base_dir, taxonomy)
     cache_path = build_cache_artifact(base_dir)
     report_path = build_report_artifact(base_dir)
     expected_cache_metadata = {
@@ -1369,14 +1758,20 @@ def classify_products(base_dir, products, force_rediscover=False):
         "prompt_version": PROMPT_VERSION,
         "model_name": "local-taxonomy-classifier",
         "model_version": MODEL_VERSION,
+        "gold_labels_digest": gold_digest,
+        "clip_audit_digest": clip_digest,
+        "clip_subcategory_first_min_score": CLIP_SUBCATEGORY_FIRST_MIN_SCORE,
+        "clip_any_source_strong_min_score": CLIP_ANY_SOURCE_STRONG_MIN_SCORE,
     }
     cache = load_json_file(cache_path, {**expected_cache_metadata, "items": {}})
     if any(cache.get(key) != value for key, value in expected_cache_metadata.items()):
         cache = {**expected_cache_metadata, "items": {}}
 
     print("[taxonomy] training local text classifier")
-    model, label_counts = train_text_classifier(products, taxonomy)
+    model, label_counts = train_text_classifier(products, taxonomy, gold_index=gold_index)
     print(f"[taxonomy] local training labels: {sum(label_counts.values())} across {len(label_counts)} taxonomy pairs")
+    print(f"[taxonomy] gold labels: {sum(gold_label_counts.values())} across {len(gold_label_counts)} taxonomy pairs")
+    print(f"[taxonomy] clip audit labels: {len(clip_index)} identity keys")
 
     changed = []
     updated_products = []
@@ -1384,37 +1779,51 @@ def classify_products(base_dir, products, force_rediscover=False):
     for index, product in enumerate(products, start=1):
         product_name = product.get("name") or product.get("raw_name") or "(unnamed product)"
         fingerprint = product_fingerprint(product, taxonomy.get("taxonomy_version"))
-        cached = (cache.get("items") or {}).get(fingerprint)
-        if cached and not classification_is_bootstrap(cached):
-            result = dict(cached)
-            result["cache_hit"] = True
-            print(f"[taxonomy] {index}/{total_count} cache hit: {product_name}")
-        else:
-            result = deterministic_classification(product, taxonomy)
-            if result:
-                print(f"[taxonomy] {index}/{total_count} local high-confidence: {product_name}")
-            else:
-                result = ml_classification(product, model, taxonomy)
-                if result:
-                    print(f"[taxonomy] {index}/{total_count} local ml: {product_name}")
-                else:
-                    result = default_classification(product, taxonomy)
-                    print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
-            result = guard_impossible_classification(product, result, taxonomy)
-            result = dict(result)
+        gold_result = gold_label_for_product(product, gold_index)
+        if gold_result:
+            result = gold_result
+            result["label_source"] = "gold"
             result["taxonomy_version"] = taxonomy.get("taxonomy_version")
             cache.setdefault("items", {})[fingerprint] = result
-            changed.append(product.get("raw_name") or product.get("name"))
-            save_json_file(cache_path, cache)
-            save_classification_progress(
-                report_path,
-                taxonomy=taxonomy,
-                total_count=total_count,
-                changed=changed,
-                completed_count=index,
-                last_product=product_name,
-            )
-        result = guard_impossible_classification(product, result, taxonomy)
+            print(f"[taxonomy] {index}/{total_count} gold label: {product_name}")
+        else:
+            cached = (cache.get("items") or {}).get(fingerprint)
+            if cached and not classification_is_bootstrap(cached):
+                result = dict(cached)
+                result["cache_hit"] = True
+                print(f"[taxonomy] {index}/{total_count} cache hit: {product_name}")
+            else:
+                result = deterministic_classification(product, taxonomy)
+                if result:
+                    print(f"[taxonomy] {index}/{total_count} local high-confidence: {product_name}")
+                else:
+                    result = ml_classification(product, model, taxonomy)
+                    if result:
+                        print(f"[taxonomy] {index}/{total_count} local ml: {product_name}")
+                    else:
+                        result = clip_rescue_classification(product, clip_index, taxonomy)
+                        if result:
+                            print(f"[taxonomy] {index}/{total_count} clip provisional: {product_name}")
+                        else:
+                            result = default_classification(product, taxonomy)
+                            print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
+                if result.get("label_source") != "gold":
+                    result = guard_impossible_classification(product, result, taxonomy)
+                result = dict(result)
+                result["taxonomy_version"] = taxonomy.get("taxonomy_version")
+                cache.setdefault("items", {})[fingerprint] = result
+                changed.append(product.get("raw_name") or product.get("name"))
+                save_json_file(cache_path, cache)
+                save_classification_progress(
+                    report_path,
+                    taxonomy=taxonomy,
+                    total_count=total_count,
+                    changed=changed,
+                    completed_count=index,
+                    last_product=product_name,
+                )
+        if result.get("label_source") != "gold":
+            result = guard_impossible_classification(product, result, taxonomy)
         updated_products.append(hydrate_product_with_classification(product, result, fingerprint))
 
     save_json_file(cache_path, cache)
