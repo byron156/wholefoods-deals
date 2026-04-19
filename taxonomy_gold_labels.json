@@ -1,6 +1,6 @@
 {
   "instructions": "Manual taxonomy labels. These override exact products and are weighted into the local sklearn taxonomy classifier during refresh.",
-  "label_count": 260,
+  "label_count": 309,
   "labels": [
     {
       "asin": "B09R67QCNF",
@@ -1503,6 +1503,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B00UN2K7JE",
+      "url": "https://www.wholefoodsmarket.com/Alba-Botanica-Tropical-Fruit-Sunscreen/dp/B00UN2K7JE?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B00UN2K7JE&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_99_i",
+      "name": "Alba Botanica Kids Sunscreen Spray for Face and Body",
+      "raw_name": "Alba Botanica Kids Sunscreen Spray for Face and Body, Tropical Fruit, Broad Spectrum SPF 50, Water Resistant, 5 fl. oz. Bottle",
+      "brand": "Alba Botanica",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Sun Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0CLVS8S3Y",
       "url": "https://www.wholefoodsmarket.com/grocery/product/alexandre-alexandre-family-farms-organic-a2-a2-100-grass-fed-sour-cream-8-oz-b0clvs8s3y?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Alexandre Family Farms Organic A2/A2 100% Grass Fed Sour Cream",
@@ -1527,6 +1539,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B003UWNJSA",
+      "url": "https://www.wholefoodsmarket.com/Alexia-Sweet-Potato-Waffle-frozen/dp/B003UWNJSA?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B003UWNJSA&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_412_i",
+      "name": "Alexia Foods Sweet Potato Waffle Fries, 20 OZ",
+      "raw_name": "ALEXIA FOODS Sweet Potato Waffle Fries, 20 OZ",
+      "brand": "Alexia",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09KT313DT",
+      "url": "https://www.wholefoodsmarket.com/ALOHA-Lemon-Cashew-Protein-1-98/dp/B09KT313DT?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B09KT313DT&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_369_i",
+      "name": "Aloha Organic Plant Based Protein Bars",
+      "raw_name": "ALOHA Organic Plant Based Protein Bars - Lemon Cashew - Single Bar - Vegan, Low Sugar, Gluten-Free, Paleo, Low Carb, Non-GMO, No Stevia & No Erythritol",
+      "brand": "Aloha",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Protein Bars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07J1LR67X",
       "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-vanilla-almond-crunch-bar-1-98-oz-b07j1lr67x?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Aloha Organic Vanilla Almond Crunch Bar, 1.98 OZ",
@@ -1535,6 +1571,18 @@
       "retailer": "Whole Foods",
       "category": "Snacks",
       "subcategory": "Protein Bars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DXVZ2DHH",
+      "url": "https://www.wholefoodsmarket.com/Amylu-Breakfast-Ingredients-Antibiotics-Gluten-Free/dp/B0DXVZ2DHH?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DXVZ2DHH&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_288_i",
+      "name": "Amylu Foods Chicken Sausage Breakfast Bites",
+      "raw_name": "Amylu Foods Chicken Sausage Breakfast Bites, Country Style, Natural Ingredients, 14g of Protein, GAP Certifed Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 7 oz",
+      "brand": "Amylu",
+      "retailer": "Whole Foods",
+      "category": "Frozen",
+      "subcategory": "Frozen Meat & Seafood",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1587,6 +1635,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07FYCB4WX",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYCB4WX",
+      "name": "Avocado Hass Organic, 4 Count",
+      "raw_name": "Avocado Hass Organic, 4 Count",
+      "brand": "365 by Whole Foods Market",
+      "retailer": "Whole Foods",
+      "category": "Produce",
+      "subcategory": "Fruits",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09MJTTRFQ",
+      "url": "https://www.wholefoodsmarket.com/Beekeepers-Naturals-Ginger-Lemon-Lozenges/dp/B09MJTTRFQ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B09MJTTRFQ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_222_i",
+      "name": "Beekeepers Naturals Ginger Lemon Lozenges, 14 CT",
+      "raw_name": "Beekeepers Naturals Ginger Lemon Lozenges, 14 CT",
+      "brand": "Beekeeper's Naturals",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Multivitamins",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0DQFG6JR8",
       "url": "https://www.wholefoodsmarket.com/grocery/product/beekeeper-s-naturals-beekeepers-naturals-kids-propolis-vit-c-liposomal-sgl-0-27-fz-b0dqfg6jr8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Beekeepers Naturals Kids Propolis + VIT C Liposomal SGL",
@@ -1595,6 +1667,42 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Kids Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0B5YQPXR4",
+      "url": "https://www.wholefoodsmarket.com/Beyond-Good-Chocolate-Organic-Snacking/dp/B0B5YQPXR4?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0B5YQPXR4&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_24_i",
+      "name": "Beyond Good Chocolate",
+      "raw_name": "Beyond Good Chocolate | 60% Pure Dark Chocolate Melts, 7oz Pack | USDA Organic, Direct Trade, Vegan, Kosher, Non-GMO | Single Origin Uganda Chocolate Perfect for Snacking or Baking",
+      "brand": "Beyond Good",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B076CS8XPQ",
+      "url": "https://www.wholefoodsmarket.com/Beyond-Good-Chocolate-Mdgascr-2-64/dp/B076CS8XPQ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B076CS8XPQ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_163_i",
+      "name": "Beyond Good Organic Madagascar Dark Chocolate Bar 70%",
+      "raw_name": "Beyond Good Organic Madagascar Dark Chocolate Bar 70%, 2.64 OZ",
+      "brand": "Beyond Good",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09RV3G9HP",
+      "url": "https://www.wholefoodsmarket.com/Beyond-Good-Chocolate-Toasted-Hazelnut/dp/B09RV3G9HP?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B09RV3G9HP&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_314_i",
+      "name": "Beyond Good, Dark Chocolate Toasted Hazelnut Bar, 2.64 Ounce",
+      "raw_name": "Beyond Good, Dark Chocolate Toasted Hazelnut Bar, 2.64 Ounce",
+      "brand": "Beyond Good",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1635,6 +1743,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07811ZCGX",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/cava-cava-spicy-hummus-8-oz-b07811zcgx?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "CAVA Spicy Hummus, 8 OZ",
+      "raw_name": "CAVA Spicy Hummus, 8 OZ",
+      "brand": "Cava",
+      "retailer": "Whole Foods",
+      "category": "Produce",
+      "subcategory": "Fresh Salsa & Dips",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0D27M1XF1",
       "url": "https://www.wholefoodsmarket.com/grocery/product/cabi-cabi-sweet-yuzu-vinaigrette-5-oz-b0d27m1xf1?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Cabi Sweet Yuzu Vinaigrette, 5 OZ",
@@ -1659,6 +1779,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0BYCR9GVD",
+      "url": "https://www.wholefoodsmarket.com/Camille-Rose-Peppermint-Essential-Strengthen/dp/B0BYCR9GVD?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0BYCR9GVD&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_331_i",
+      "name": "Camille Rose Rosemary Oil Hair and Scalp Cleanser with Castor",
+      "raw_name": "Camille Rose Rosemary Oil Hair and Scalp Cleanser with Castor, Peppermint & Rosemary Oils to Encourage Hair Growth & Remove Build Up, 8.5 fl oz",
+      "brand": "Camille Rose",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0FVY5FH6S",
       "url": "https://www.wholefoodsmarket.com/grocery/product/carbone-carbone-cacio-e-pepe-alfredo-sauce-15-ounce-b0fvy5fh6s?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Carbone Cacio E Pepe Alfredo Sauce, 15 Ounce",
@@ -1679,6 +1811,18 @@
       "retailer": "Whole Foods",
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09L8YRV7R",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B09L8YRV7R",
+      "name": "Cocoa Cashew Crème Sandwich Cookies",
+      "raw_name": "Cocoa Cashew Crème Sandwich Cookies - Gluten Free, Vegan (Pack of 1)",
+      "brand": "Simple Mills",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Cookies",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1713,8 +1857,8 @@
       "raw_name": "Coyotas Organic Cassava Tortillas - Medium - 8CT",
       "brand": "Coyotas",
       "retailer": "Whole Foods",
-      "category": "Pantry",
-      "subcategory": "International Pantry",
+      "category": "Bakery",
+      "subcategory": "Tortillas & Wraps",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1767,6 +1911,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0781373KC",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B0781373KC",
+      "name": "Dubreton Organic Ground Pork, 16 Oz",
+      "raw_name": "Dubreton Organic Ground Pork, 16 Oz",
+      "brand": "Dubreton",
+      "retailer": "Whole Foods",
+      "category": "Meat & Seafood",
+      "subcategory": "Pork",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B08X6VVKG7",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B08X6VVKG7",
+      "name": "EPIC Chicken Sriracha Bar",
+      "raw_name": "EPIC Chicken Sriracha Bar, Keto and Paleo Friendly, Protein Bars, 4 Ct, 5.2 oz",
+      "brand": "Epic",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Ready-to-Eat Protein",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0DP1BVTBP",
       "url": "https://www.wholefoodsmarket.com/grocery/product/nuun-electrolyte-sport-tabs-variety-pack-box-30-count-b0dp1bvtbp?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Electrolyte Sport Tabs Variety Pack Box, 30 Count",
@@ -1775,6 +1943,18 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Hydration Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B01H8VZV66",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B01H8VZV66",
+      "name": "Epic All Natural Meat Bar, 100% Sugar Free, Bacon, 1.5 Oz.",
+      "raw_name": "Epic All Natural Meat Bar, 100% Sugar Free, Bacon, 1.5 Oz.",
+      "brand": "Epic",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Ready-to-Eat Protein",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1811,6 +1991,18 @@
       "retailer": "Whole Foods",
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0010ED368",
+      "url": "https://www.wholefoodsmarket.com/Flor-Essence-Detox-Liquid-Tea/dp/B0010ED368?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0010ED368&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_243_i",
+      "name": "Flora Health Flor-Essence Liquid Tea Blend",
+      "raw_name": "Flora Health Flor-Essence Liquid Tea Blend - Ancient 8-Herb Formula - Natural Full Body Cleanse & Detox - Organic Ingredients - Pure Vegan Formula - Burdock Root, Sorrel, Slippery Elm, Kelp - 500mL",
+      "brand": "Flora",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1863,6 +2055,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B09XG54ZJX",
+      "url": "https://www.wholefoodsmarket.com/Fremantle-Octopus-Cooked-Tentacles-OZ/dp/B09XG54ZJX?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B09XG54ZJX&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_116_i",
+      "name": "Fremantle Octopus Cooked Octopus Tentacles, 7 Oz",
+      "raw_name": "Fremantle Octopus Cooked Octopus Tentacles, 7 Oz",
+      "brand": "Fremantle Octopus",
+      "retailer": "Whole Foods",
+      "category": "Prepared Foods",
+      "subcategory": "Ready-to-Eat Protein",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": null,
       "url": null,
       "name": "Fresh Fruit Tarts",
@@ -1907,6 +2111,30 @@
       "retailer": "Whole Foods",
       "category": "Pantry",
       "subcategory": "Nut Butters & Spreads",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0147QKGEW",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B0147QKGEW",
+      "name": "GTS Living Foods Trilogy Enlightened Kombucha, 16 FZ",
+      "raw_name": "GTS LIVING FOODS Trilogy Enlightened Kombucha, 16 FZ",
+      "brand": "GT's",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Kombucha",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09J1ZT2BR",
+      "url": "https://www.wholefoodsmarket.com/Gaia-Herbs-Organic-Ashwagandha-Gummies/dp/B09J1ZT2BR?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B09J1ZT2BR&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_201_i",
+      "name": "Gaia Herbs Organic Ashwagandha Gummies",
+      "raw_name": "Gaia Herbs Organic Ashwagandha Gummies - Stress Support* - Made with Cinnamon & Ginger - Gluten Free & Vegan - 45 Count (15 Servings)",
+      "brand": "Gaia Herbs",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -1959,10 +2187,34 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0B1SQ2WSY",
+      "url": "https://www.wholefoodsmarket.com/Goodles-Believin-Cheese-1-Pack-5-25oz/dp/B0B1SQ2WSY?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0B1SQ2WSY&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_452_i",
+      "name": "Goodles Vegan Is Believin’ Mac & Cheese 1-PACK, 5.25oz",
+      "raw_name": "Goodles Vegan Is Believin’ Mac & Cheese 1-Pack, 5.25oz - 12g Protein, 7g Fiber with Prebiotics, 21 Nutrients - Kosher Certified | Clean Label Certified",
+      "brand": "Goodles",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0CL7K1RDL",
       "url": "https://www.wholefoodsmarket.com/grocery/product/goodsam-goodsam-organic-raw-pecan-halves-8-oz-each-gluten-free-sourced-from-mexico-regenerative-farming-ideal-for-vegan-and-keto-diets-direct-trade-b0cl7k1rdl?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Goodsam Organic Raw Pecan Halves 8 Oz Each",
       "raw_name": "GoodSAM Organic Raw Pecan Halves 8 oz Each, Gluten-Free, Sourced from Mexico, Regenerative Farming, Ideal for Vegan and Keto Diets, Direct Trade",
+      "brand": "Goodsam",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Nuts & Trail Mix",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CL7FH892",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/goodsam-goodsam-small-farms-organic-raw-macadamia-nuts-4oz-snack-size-creamy-buttery-one-ingredient-zero-additives-23g-healthy-fats-1g-net-carb-regenerative-family-farms-unsalted-non-gmo-keto-b0cl7fh892?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Goodsam Small Farms Organic Raw Macadamia Nuts 4OZ Snack Size",
+      "raw_name": "GoodSAM Small Farms Organic Raw Macadamia Nuts 4oz Snack Size | Creamy & Buttery | One Ingredient, Zero Additives | 23g Healthy Fats, 1g Net Carb | Regenerative Family Farms | Unsalted, Non-GMO, Keto",
       "brand": "Goodsam",
       "retailer": "Whole Foods",
       "category": "Snacks",
@@ -1979,6 +2231,66 @@
       "retailer": "Whole Foods",
       "category": "Snacks",
       "subcategory": "Nuts & Trail Mix",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DKTW7BQZ",
+      "url": "https://www.wholefoodsmarket.com/Graza-Frizzle-High-Heat-Cooking-Oil-Olive/dp/B0DKTW7BQZ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DKTW7BQZ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_254_i",
+      "name": "Graza Frizzle High Heat Cooking Oil",
+      "raw_name": "Graza Frizzle High Heat Cooking Oil - Cooking Oil with a High Smoke Point & Neutral Flavor in a Squeeze Bottle for Frying, Baking & Grilling - Oil Made from 100% Olives - 25.3 Fl Oz (750ml)",
+      "brand": "Graza",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Oils & Vinegars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DLCSDQXC",
+      "url": "https://www.wholefoodsmarket.com/Graza-Sizzle-Extra-Virgin-Cooking/dp/B0DLCSDQXC?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DLCSDQXC&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_407_i",
+      "name": "Graza Sizzle Extra Virgin Olive Oil Spray, Cooking Oil",
+      "raw_name": "Graza Sizzle Extra Virgin Olive Oil Spray, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Spray Bottle - Single Origin Olive Oils from Spain - 5 Fl Oz",
+      "brand": "Graza",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Oils & Vinegars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B000AKQ7ZC",
+      "url": "https://www.wholefoodsmarket.com/Herb-Pharm-Cat-Claw-30/dp/B000AKQ7ZC?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B000AKQ7ZC&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_415_i",
+      "name": "HERB Pharm Cat`s Claw Extract, 1 FZ",
+      "raw_name": "HERB Pharm Cat`s Claw Extract, 1 FZ",
+      "brand": "Herb Pharm",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07NSSWKMY",
+      "url": "https://www.wholefoodsmarket.com/KITCHEN-Organic-Orange-Cashew-Chocolate/dp/B07NSSWKMY?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07NSSWKMY&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_105_i",
+      "name": "HU Kitchen Organic Orange Cashew Butter Chocolate Bar",
+      "raw_name": "HU KITCHEN Organic Orange Cashew Butter Chocolate Bar, 2.1 OZ",
+      "brand": "Hu",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B081DKWNF7",
+      "url": "https://www.wholefoodsmarket.com/Harmless-Harvest-Yogurt-Coconut-Original/dp/B081DKWNF7?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B081DKWNF7&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_128_i",
+      "name": "Harmless Harvest, Yogurt Alternative Coconut Original Organic, 4.4 Ounce",
+      "raw_name": "Harmless Harvest, Yogurt Alternative Coconut Original Organic, 4.4 Ounce",
+      "brand": "Harmless Harvest",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Plant-Based Yogurt",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2007,6 +2319,30 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0CRGC1Z98",
+      "url": "https://www.wholefoodsmarket.com/Hiyo-Organic-Social-Tonic-Strawberry/dp/B0CRGC1Z98?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0CRGC1Z98&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_157_i",
+      "name": "Hiyo Organic Social Tonic N.A. Functional Seltzer Water 4 Pack",
+      "raw_name": "Hiyo Organic Social Tonic N.A. Functional Seltzer Water 4 Pack - Strawberry Guava Flavored Sparkling Water Crafted with Organic Adaptogens, Nootropics & Botanicals",
+      "brand": "Hiyo",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Sparkling Water",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07811PV63",
+      "url": "https://www.wholefoodsmarket.com/KITCHEN-Hazelnut-Praline-Chocolate-Bar/dp/B07811PV63?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07811PV63&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_466_i",
+      "name": "Hu Kitchen, Bar Chocolate Hazelnut Praline, 2.1 Ounce",
+      "raw_name": "Hu Kitchen, Bar Chocolate Hazelnut Praline, 2.1 Ounce",
+      "brand": "Hu",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B08TBYT1VH",
       "url": "https://www.wholefoodsmarket.com/grocery/product/floradix-iron-herbs-17-fl-oz-b08tbyt1vh?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Iron Herbs, 17 Fl Oz",
@@ -2027,6 +2363,54 @@
       "retailer": "Whole Foods",
       "category": "Household",
       "subcategory": "Kitchen Supplies",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00CQ7T0UG",
+      "url": "https://www.wholefoodsmarket.com/Jovial-Brown-Pasta-Organic-Gluten/dp/B00CQ7T0UG?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B00CQ7T0UG&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_98_i",
+      "name": "Jovial 100% Organic Gluten Free Brown Rice Pasta",
+      "raw_name": "Jovial 100% Organic Gluten Free Brown Rice Pasta, Caserecce, 12 oz.",
+      "brand": "Jovial",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B005K0K45Q",
+      "url": "https://www.wholefoodsmarket.com/Jovial-Pasta-Brown-Organic-Fusilli/dp/B005K0K45Q?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B005K0K45Q&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_346_i",
+      "name": "Jovial Organic Brown Rice Fusilli Pasta, 12 OZ",
+      "raw_name": "JOVIAL Organic Brown Rice Fusilli Pasta, 12 OZ",
+      "brand": "Jovial",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0057RMV76",
+      "url": "https://www.wholefoodsmarket.com/Jovial-Organic-Einkorn-Cookies-Checkerboard/dp/B0057RMV76?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0057RMV76&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_173_i",
+      "name": "Jovial Organic Einkorn Checkerboard Cookies",
+      "raw_name": "Jovial Organic Einkorn Checkerboard Cookies - Organic Cookies, High Protein, Fair Trade Certified, All Natural Ingredients, Low Carb, Low Sugar, Palm Done Right - 8.8 Oz",
+      "brand": "Jovial",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Cookies",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0DT4TK4FN",
+      "url": "https://www.wholefoodsmarket.com/JOVIAL-Organic-Einkorn-Pancake-Waffle/dp/B0DT4TK4FN?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DT4TK4FN&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_5_i",
+      "name": "Jovial Organic Einkorn Pancake & Waffle Mix, 16 OZ",
+      "raw_name": "JOVIAL Organic Einkorn Pancake & Waffle Mix, 16 OZ",
+      "brand": "Jovial",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2135,6 +2519,18 @@
       "retailer": "Whole Foods",
       "category": "International",
       "subcategory": "Asian Snacks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0D1HVZQX2",
+      "url": "https://www.wholefoodsmarket.com/KOIA-Matcha-Latte-Protein-Shake/dp/B0D1HVZQX2?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0D1HVZQX2&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_62_i",
+      "name": "Koia - Matcha Latte - 18G Protein - Ready to Drink Plant Protein Shake - Low Sugar, Dairy Free, Gluten Free, Soy Free, Non GMO, Kosher, Vegan (12 Fl Oz)",
+      "raw_name": "Koia - Matcha Latte - 18g Protein - Ready To Drink Plant Protein Shake - Low Sugar, Dairy Free, Gluten Free, Soy Free, Non GMO, Kosher, Vegan (12 Fl Oz)",
+      "brand": "Koia",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Functional Drinks",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2295,6 +2691,54 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B0DK9QH69Z",
+      "url": "https://www.wholefoodsmarket.com/Liquid-Death-Rootbeer-Wrath-Sparkling/dp/B0DK9QH69Z?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0DK9QH69Z&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_484_i",
+      "name": "Liquid Death Rootbeer Wrath Sparkling Water 6PK, 12 FZ",
+      "raw_name": "Liquid Death Rootbeer Wrath Sparkling Water 6pk, 12 FZ",
+      "brand": "Liquid Death",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Sparkling Water",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07S8671ZQ",
+      "url": "https://www.wholefoodsmarket.com/Liquid-Passion-Fruit-Hydration-Singles/dp/B07S8671ZQ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07S8671ZQ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_181_i",
+      "name": "Liquid IV Passion Fruit Hydration Drink Mix Single, 0.56 OZ",
+      "raw_name": "LIQUID IV Passion Fruit Hydration Drink Mix Single, 0.56 OZ",
+      "brand": "Liquid I.V.",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Drink Mixes",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0CRVV3JBC",
+      "url": "https://www.wholefoodsmarket.com/LIQUID-Tropical-Punch-Hydration-Drink/dp/B0CRVV3JBC?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0CRVV3JBC&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_391_i",
+      "name": "Liquid IV Tropical Punch Hydration Drink Mix, 0.56 OZ",
+      "raw_name": "LIQUID IV Tropical Punch Hydration Drink Mix, 0.56 OZ",
+      "brand": "Liquid I.V.",
+      "retailer": "Whole Foods",
+      "category": "Beverages",
+      "subcategory": "Drink Mixes",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07DQ6NRMR",
+      "url": "https://www.wholefoodsmarket.com/Little-Secrets-Guilt-Free-Artificial-Chocolate/dp/B07DQ6NRMR?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07DQ6NRMR&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_417_i",
+      "name": "Little Secrets Milk Chocolate Crispy Wafers",
+      "raw_name": "Little Secrets Milk Chocolate Crispy Wafers | 1 Twin Pack | Made in Europe | Nothing Artificial & No Sugar Alcohols | Sustainable Cocoa | 1.4oz, Pack of 1",
+      "brand": "Little Secrets",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07D9KNJNN",
       "url": "https://www.wholefoodsmarket.com/grocery/product/mitica-lou-bergier-pichin-b07d9knjnn?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Lou Bergier Pichin",
@@ -2303,6 +2747,30 @@
       "retailer": "Whole Foods",
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B0C4G52QFZ",
+      "url": "https://www.wholefoodsmarket.com/Lovebird-Organic-Grain-Strawberry-Cereal/dp/B0C4G52QFZ?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B0C4G52QFZ&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_88_i",
+      "name": "Lovebird, Cereal Grain Free Strawberry Organic, 7 Ounce",
+      "raw_name": "Lovebird, Cereal Grain Free Strawberry Organic, 7 Ounce",
+      "brand": "Lovebird",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07DF7XJCW",
+      "url": "https://www.wholefoodsmarket.com/MEAT-Boneless-Pork-Shoulder-Roast/dp/B07DF7XJCW?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07DF7XJCW&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_491_i",
+      "name": "MEAT Boneless Pork Shoulder Butt Roast",
+      "raw_name": "MEAT Boneless Pork Shoulder Butt Roast",
+      "brand": "Meat",
+      "retailer": "Whole Foods",
+      "category": "Meat & Seafood",
+      "subcategory": "Pork",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2355,6 +2823,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B000VHJR42",
+      "url": "https://www.wholefoodsmarket.com/Marukan-Organic-Rice-Vinegar-12/dp/B000VHJR42?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B000VHJR42&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_394_i",
+      "name": "Marukan Organic Unseasoned Rice Vinegar",
+      "raw_name": "Marukan Organic Unseasoned Rice Vinegar, 12 Ounce Glass Bottle (Pack of 1)",
+      "brand": "Marukan",
+      "retailer": "Whole Foods",
+      "category": "Pantry",
+      "subcategory": "Oils & Vinegars",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B0F6VJHD5F",
       "url": "https://www.wholefoodsmarket.com/grocery/product/mateina-mateina-organic-peach-passion-yerba-mate-12-fz-b0f6vjhd5f?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Mateina Organic Peach Passion Yerba Mate, 12 FZ",
@@ -2375,6 +2855,18 @@
       "retailer": "Whole Foods",
       "category": "Beverages",
       "subcategory": "Energy Drinks",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07FF3WX3X",
+      "url": "https://www.wholefoodsmarket.com/MegaFood-Multivitamin-Multivitamins-Methylated-Vitamin/dp/B07FF3WX3X?pd_rd_w=wlnZ4&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=4ENC5V0MN24QWT6NQKYA&pd_rd_wg=Zox1x&pd_rd_r=9de4ffc0-29d7-4552-884a-630523214318&pd_rd_i=B07FF3WX3X&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_472_i",
+      "name": "Megafood Multivitamin for Men 55+ One Daily Mens Multivitamins",
+      "raw_name": "MegaFood Multivitamin for Men 55+ One Daily Mens Multivitamins, Methylated B12, Vitamin D3, C & Zinc - Healthy Aging, Bone & Muscle Health & Immune Support - Vegetarian - 120 Tablets",
+      "brand": "MegaFood",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Multivitamins",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -2483,6 +2975,42 @@
       "retailer": "Whole Foods",
       "category": "Beauty & Personal Care",
       "subcategory": "Cosmetics",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B09Z3687KT",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B09Z3687KT",
+      "name": "Neocell Hair Skin and Nails Gummies",
+      "raw_name": "NeoCell Hair Skin and Nails Gummies | 60 Count | Collagen Peptides Plus Biotin | with Vitamins C and E | Advanced Beauty Builder Formula | for Women and Men",
+      "brand": "NeoCell",
+      "retailer": "Whole Foods",
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B08LWXPYCZ",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/nutpods-nutpods-unsweetened-original-coffee-creamer-dairy-free-25-4oz-b08lwxpycz?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Nutpods® Unsweetened Original Coffee Creamer",
+      "raw_name": "nutpods® Unsweetened Original Coffee Creamer, dairy-free, 25.4oz",
+      "brand": "Nutpods",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B071KY7WY8",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/nutpods-nutpods-unsweetened-original-coffee-creamer-dairy-free-11-2oz-b071ky7wy8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Nutpods® Unsweetened Original Coffee Creamer",
+      "raw_name": "nutpods® Unsweetened Original Coffee Creamer, dairy-free, 11.2oz",
+      "brand": "Nutpods",
+      "retailer": "Whole Foods",
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
       "notes": "",
       "source": "manual-review-cli"
     },
@@ -3039,6 +3567,18 @@
       "source": "manual-review-cli"
     },
     {
+      "asin": "B07GL8FMVH",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/B07GL8FMVH",
+      "name": "VIVE Organic Organic Elderberry Immunity Boost, 2 FZ",
+      "raw_name": "VIVE ORGANIC Organic Elderberry Immunity Boost, 2 FZ",
+      "brand": "Vive Organic",
+      "retailer": "Whole Foods",
+      "category": "Supplements & Wellness",
+      "subcategory": "Wellness Shots",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
       "asin": "B07M9W6DQ2",
       "url": "https://www.wholefoodsmarket.com/grocery/product/vita-coco-vita-coco-pressed-coconut-16-9-fl-oz-1-count-b07m9w6dq2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
       "name": "Vita Coco Pressed Coconut 16.9 Fl Oz (1 Count)",
@@ -3119,6 +3659,54 @@
       "retailer": "Whole Foods",
       "category": "Supplements & Wellness",
       "subcategory": "Immune Support",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B07H693QJG",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/wonderful-pistachios-wonderful-pistachios-in-shell-unsalted-nuts-16-ounce-resealable-bag-protein-snacks-gluten-free-healthy-snacks-for-adults-b07h693qjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Wonderful Pistachios In-Shell Unsalted Nuts",
+      "raw_name": "Wonderful Pistachios In-Shell Unsalted Nuts, 16 Ounce Resealable Bag, Protein Snacks, Gluten Free, Healthy Snacks for Adults",
+      "brand": "Wonderful Pistachios",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Nuts & Trail Mix",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B085DGRLYR",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/wonderful-pistachios-wonderful-pistachios-no-shells-chili-roasted-nuts-11-ounce-resealable-bag-protein-snacks-gluten-free-college-snacks-healthy-snacks-for-adults-b085dgrlyr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Wonderful Pistachios No Shells",
+      "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
+      "brand": "Wonderful Pistachios",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Nuts & Trail Mix",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00BIZ2NLU",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/wonderful-pistachios-wonderful-pistachios-no-shells-roasted-salted-nuts-12-ounce-resealable-bag-protein-snacks-gluten-free-healthy-snack-b00biz2nlu?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Wonderful Pistachios No Shells",
+      "raw_name": "Wonderful Pistachios No Shells, Roasted & Salted Nuts, 12 Ounce Resealable Bag, Protein Snacks, Gluten Free, Healthy Snack",
+      "brand": "Wonderful Pistachios",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Nuts & Trail Mix",
+      "notes": "",
+      "source": "manual-review-cli"
+    },
+    {
+      "asin": "B00H4158IM",
+      "url": "https://www.wholefoodsmarket.com/grocery/product/wonderful-pistachios-wonderful-pistachios-in-shell-lightly-salted-nuts-16-ounce-resealable-bag-protein-snacks-gluten-free-healthy-food-office-snacks-b00h4158im?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+      "name": "Wonderful Pistachios in Shell",
+      "raw_name": "Wonderful Pistachios In Shell, Lightly Salted Nuts, 16 Ounce Resealable Bag, Protein Snacks, Gluten Free, Healthy Food, Office Snacks",
+      "brand": "Wonderful Pistachios",
+      "retailer": "Whole Foods",
+      "category": "Snacks",
+      "subcategory": "Nuts & Trail Mix",
       "notes": "",
       "source": "manual-review-cli"
     }

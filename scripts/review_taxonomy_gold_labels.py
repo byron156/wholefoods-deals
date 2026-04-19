@@ -116,6 +116,66 @@ def suggested_pair(item):
     return suggestions
 
 
+def identity_values(product):
+    values = set()
+    for field in ("asin", "url", "raw_name", "name", "id"):
+        value = product.get(field)
+        if value:
+            values.add(normalize_key(value))
+    for value in product.get("asins") or []:
+        if value:
+            values.add(normalize_key(value))
+    return values
+
+
+def build_clip_lookup(path):
+    payload = load_json(path, {"results": []})
+    rows = payload.get("results") if isinstance(payload, dict) else []
+    lookup = {}
+    for row in rows or []:
+        product = row.get("product") or {}
+        clip = row.get("clip_locked_pair") or {}
+        if not clip:
+            continue
+        value = {
+            "category": clip.get("category"),
+            "subcategory": clip.get("subcategory"),
+            "subcategory_category": clip.get("category"),
+            "score": clip.get("score"),
+            "subcategory_score": clip.get("score"),
+            "source": clip.get("source") or "locked",
+        }
+        for key in identity_values(product):
+            lookup[key] = value
+    return lookup
+
+
+def queue_item_from_product(product, clip_lookup):
+    clip = None
+    for key in identity_values(product):
+        if key in clip_lookup:
+            clip = clip_lookup[key]
+            break
+    return {
+        "review_reason": product.get("failed_reason") or product.get("classification_status") or "failed classification",
+        "product": {
+            **product,
+            "current_category": product.get("failed_from_category") or product.get("category"),
+            "current_subcategory": product.get("failed_from_subcategory") or product.get("subcategory"),
+            "confidence": product.get("ai_confidence") or product.get("category_confidence"),
+        },
+        "clip": clip or {},
+    }
+
+
+def queue_items_from_payload(payload, clip_lookup):
+    if isinstance(payload, dict):
+        return list(payload.get("items") or [])
+    if isinstance(payload, list):
+        return [queue_item_from_product(product, clip_lookup) for product in payload if isinstance(product, dict)]
+    return []
+
+
 def print_item(index, total, item, existing_label=None):
     product = item.get("product") or {}
     clip = item.get("clip") or {}
@@ -197,10 +257,15 @@ def update_review_queue(queue_path, item, category, subcategory):
     target_key = product_label_key(item.get("product") or {})
     if not target_key:
         return
-    for row in payload.get("items") or []:
-        if product_label_key(row.get("product") or {}) == target_key:
-            row["reviewed_category"] = category
-            row["reviewed_subcategory"] = subcategory
+    rows = payload.get("items") if isinstance(payload, dict) else payload
+    if not isinstance(rows, list):
+        return
+    for row in rows:
+        row_product = row.get("product") if isinstance(row.get("product"), dict) else row
+        if product_label_key(row_product or {}) == target_key:
+            if isinstance(row, dict):
+                row["reviewed_category"] = category
+                row["reviewed_subcategory"] = subcategory
             break
     save_json(queue_path, payload)
 
@@ -287,7 +352,8 @@ def review_items(args):
     taxonomy = build_fixed_taxonomy()
     category_names, subcategories = taxonomy_maps(taxonomy)
     queue_payload = load_json(args.queue, {"items": []})
-    items = list(queue_payload.get("items") or [])[: args.limit]
+    clip_lookup = build_clip_lookup(args.vision_audit)
+    items = queue_items_from_payload(queue_payload, clip_lookup)[: args.limit]
     gold_payload = load_json(args.gold_labels, {"labels": []})
     labels_by_key = index_existing_labels(gold_payload)
     reviewed = 0
@@ -378,6 +444,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Interactively review taxonomy labels into the gold set.")
     parser.add_argument("--queue", default="taxonomy_review_queue.json")
     parser.add_argument("--gold-labels", default="taxonomy_gold_labels.json")
+    parser.add_argument("--vision-audit", default="vision_category_audit.full.json")
     parser.add_argument("--limit", type=int, default=300)
     parser.add_argument("--only-unlabeled", action="store_true", default=True)
     parser.add_argument("--include-labeled", dest="only_unlabeled", action="store_false")
