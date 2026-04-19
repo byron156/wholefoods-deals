@@ -18,8 +18,8 @@ from fixed_taxonomy import FIXED_TAXONOMY_VERSION, build_fixed_taxonomy
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
-MODEL_VERSION = "taxonomy-local-ml-v13"
-PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v13"
+MODEL_VERSION = "taxonomy-local-ml-v15"
+PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v15"
 OLLAMA_CHAT_TIMEOUT = int(os.getenv("OLLAMA_CHAT_TIMEOUT", "420"))
 CLASSIFICATION_BATCH_SIZE = int(os.getenv("TAXONOMY_CLASSIFICATION_BATCH_SIZE", "20"))
 DISCOVERED_TAXONOMY_FILE = "discovered_taxonomy.json"
@@ -29,8 +29,8 @@ DISCOVERY_DEBUG_FILE = "taxonomy_discovery_debug.json"
 CLASSIFICATION_DEBUG_FILE = "taxonomy_classification_debug.json"
 GOLD_LABELS_FILE = "taxonomy_gold_labels.json"
 CLIP_AUDIT_FILE = "vision_category_audit.full.json"
-CLIP_SUBCATEGORY_FIRST_MIN_SCORE = 0.65
-CLIP_ANY_SOURCE_STRONG_MIN_SCORE = 0.80
+CLIP_PRIMARY_MIN_SCORE = 0.55
+CLIP_RESCUE_MIN_SCORE = 0.40
 
 
 CATEGORY_GUIDANCE = {
@@ -689,6 +689,10 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "tablet",
     "tea",
     "turkey tail",
+    "fl oz",
+    " fz",
+    "yerba",
+    "yerba mate",
 ]
 
 
@@ -812,6 +816,10 @@ def fresh_produce_source_classification(product, taxonomy):
         confidence=0.9,
         reason="Whole Foods source labeled this card Fresh Produce; subcategory defaulted to fruit.",
     )
+
+
+def source_backed_classification(product, taxonomy):
+    return fresh_produce_source_classification(product, taxonomy)
 
 
 def local_result(taxonomy, category, subcategory, confidence=0.99, reason="High-confidence product text match."):
@@ -1465,7 +1473,7 @@ def build_training_examples(products, taxonomy, gold_index=None, gold_weight=8):
         label_result = gold_label_for_product(product, gold_index or {})
         weight = gold_weight if label_result else 1
         if not label_result:
-            label_result = deterministic_classification(product, taxonomy)
+            label_result = source_backed_classification(product, taxonomy)
         if not label_result:
             continue
         label = pair_key(label_result["category"], label_result["subcategory"])
@@ -1567,25 +1575,23 @@ def default_classification(product, taxonomy):
     }
 
 
-def clip_rescue_classification(product, clip_index, taxonomy):
+def clip_classification(product, clip_index, taxonomy, *, min_score, confidence, label_source, reason_prefix):
     clip = clip_audit_label_for_product(product, clip_index)
     if not clip:
         return None
 
     score = float(clip.get("clip_score") or clip.get("confidence") or 0)
     source = clip.get("clip_source") or "unknown"
-    strong_pair = score >= CLIP_ANY_SOURCE_STRONG_MIN_SCORE
-    reliable_category = source == "subcategory-first" and score >= CLIP_SUBCATEGORY_FIRST_MIN_SCORE
-    if not strong_pair and not reliable_category:
+    if score < min_score:
         return None
 
     normalized = normalize_model_result(
         {
             "category": clip.get("category"),
             "subcategory": clip.get("subcategory"),
-            "confidence": 0.82 if strong_pair else 0.68,
+            "confidence": confidence,
             "reasoning": (
-                f"Provisional CLIP rescue for an otherwise unresolved fallback item. "
+                f"{reason_prefix} "
                 f"Locked pair source={source}, score={score:.4f}. "
                 "Gold/manual labels still override this."
             ),
@@ -1596,10 +1602,34 @@ def clip_rescue_classification(product, clip_index, taxonomy):
         return None
     normalized["model_name"] = "local-clip-audit"
     normalized["model_version"] = MODEL_VERSION
-    normalized["label_source"] = "clip-provisional"
+    normalized["label_source"] = label_source
     normalized["clip_source"] = source
     normalized["clip_score"] = round(score, 4)
     return normalized
+
+
+def clip_primary_classification(product, clip_index, taxonomy):
+    return clip_classification(
+        product,
+        clip_index,
+        taxonomy,
+        min_score=CLIP_PRIMARY_MIN_SCORE,
+        confidence=0.78,
+        label_source="clip-primary",
+        reason_prefix="Primary locked CLIP taxonomy label.",
+    )
+
+
+def clip_rescue_classification(product, clip_index, taxonomy):
+    return clip_classification(
+        product,
+        clip_index,
+        taxonomy,
+        min_score=CLIP_RESCUE_MIN_SCORE,
+        confidence=0.62,
+        label_source="clip-provisional",
+        reason_prefix="Provisional CLIP rescue for an otherwise unresolved fallback item.",
+    )
 
 
 def choose_taxonomy_index(*, system, prompt, item_count, images=None):
@@ -1760,8 +1790,8 @@ def classify_products(base_dir, products, force_rediscover=False):
         "model_version": MODEL_VERSION,
         "gold_labels_digest": gold_digest,
         "clip_audit_digest": clip_digest,
-        "clip_subcategory_first_min_score": CLIP_SUBCATEGORY_FIRST_MIN_SCORE,
-        "clip_any_source_strong_min_score": CLIP_ANY_SOURCE_STRONG_MIN_SCORE,
+        "clip_primary_min_score": CLIP_PRIMARY_MIN_SCORE,
+        "clip_rescue_min_score": CLIP_RESCUE_MIN_SCORE,
     }
     cache = load_json_file(cache_path, {**expected_cache_metadata, "items": {}})
     if any(cache.get(key) != value for key, value in expected_cache_metadata.items()):
@@ -1793,20 +1823,24 @@ def classify_products(base_dir, products, force_rediscover=False):
                 result["cache_hit"] = True
                 print(f"[taxonomy] {index}/{total_count} cache hit: {product_name}")
             else:
-                result = deterministic_classification(product, taxonomy)
+                result = source_backed_classification(product, taxonomy)
                 if result:
-                    print(f"[taxonomy] {index}/{total_count} local high-confidence: {product_name}")
+                    print(f"[taxonomy] {index}/{total_count} source-backed: {product_name}")
                 else:
-                    result = ml_classification(product, model, taxonomy)
+                    result = clip_primary_classification(product, clip_index, taxonomy)
                     if result:
-                        print(f"[taxonomy] {index}/{total_count} local ml: {product_name}")
+                        print(f"[taxonomy] {index}/{total_count} clip primary: {product_name}")
                     else:
-                        result = clip_rescue_classification(product, clip_index, taxonomy)
+                        result = ml_classification(product, model, taxonomy)
                         if result:
-                            print(f"[taxonomy] {index}/{total_count} clip provisional: {product_name}")
+                            print(f"[taxonomy] {index}/{total_count} local ml: {product_name}")
                         else:
-                            result = default_classification(product, taxonomy)
-                            print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
+                            result = clip_rescue_classification(product, clip_index, taxonomy)
+                            if result:
+                                print(f"[taxonomy] {index}/{total_count} clip provisional: {product_name}")
+                            else:
+                                result = default_classification(product, taxonomy)
+                                print(f"[taxonomy] {index}/{total_count} local low-confidence: {product_name}")
                 if result.get("label_source") != "gold":
                     result = guard_impossible_classification(product, result, taxonomy)
                 result = dict(result)

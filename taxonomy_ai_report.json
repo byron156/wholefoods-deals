@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-19T05:09:40.729976+00:00",
+  "generated_at": "2026-04-19T05:24:26.413833+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
-  "model_version": "taxonomy-local-ml-v13",
+  "model_version": "taxonomy-local-ml-v15",
   "product_count": 2375,
   "completed_count": 2375,
   "changed_count": 2115,
