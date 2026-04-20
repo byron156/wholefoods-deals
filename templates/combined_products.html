@@ -22,8 +22,72 @@
         <label class="sr-only" for="global-search">Search deals</label>
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search items or brands">
         <div class="chip-row" id="retailer-chip-row"></div>
+        <div class="store-row" id="store-chip-row"></div>
+        <div class="control-row">
+            <button class="ghost-button filter-toggle" type="button" id="filter-toggle">Filters</button>
+            <label class="sr-only" for="sort-select">Sort deals</label>
+            <select id="sort-select" class="compact-select">
+                <option value="for-you">For You</option>
+                <option value="best-deal">Best deal</option>
+                <option value="discount">Biggest discount</option>
+                <option value="price-asc">Price low to high</option>
+                <option value="source-count">Most verified</option>
+                <option value="category">Category default</option>
+            </select>
+        </div>
+        <div class="filter-drawer hidden" id="filter-drawer">
+            <div class="filter-grid">
+                <label>
+                    Category
+                    <select id="filter-category" class="compact-select"></select>
+                </label>
+                <label>
+                    Subcategory
+                    <select id="filter-subcategory" class="compact-select"></select>
+                </label>
+                <label>
+                    Brand
+                    <select id="filter-brand" class="compact-select"></select>
+                </label>
+                <label>
+                    Source
+                    <select id="filter-source" class="compact-select">
+                        <option value="">Any source</option>
+                        <option value="Flyer">Flyer</option>
+                        <option value="Search Deals">Search</option>
+                        <option value="All Deals">All Deals</option>
+                        <option value="Target Deals">Target</option>
+                        <option value="H Mart Deals">H Mart</option>
+                    </select>
+                </label>
+                <label>
+                    Min discount
+                    <select id="filter-discount" class="compact-select">
+                        <option value="0">Any discount</option>
+                        <option value="10">10%+</option>
+                        <option value="20">20%+</option>
+                        <option value="30">30%+</option>
+                        <option value="40">40%+</option>
+                    </select>
+                </label>
+                <label>
+                    Price
+                    <select id="filter-price" class="compact-select">
+                        <option value="">Any price info</option>
+                        <option value="priced">Has price</option>
+                        <option value="prime">Prime price</option>
+                        <option value="multi-source">Seen in multiple sources</option>
+                    </select>
+                </label>
+            </div>
+            <button class="link-action" type="button" id="clear-filters">Clear filters</button>
+        </div>
         <div class="status-row">
             <div class="search-meta" id="search-meta">{{ deal_count }} live deals</div>
+            <div class="freshness-meta">
+                <span id="freshness-meta"></span>
+                <a class="quality-link" href="/reports/catalog_quality_audit.html">Data Quality</a>
+            </div>
         </div>
     </section>
 

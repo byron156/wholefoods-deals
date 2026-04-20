@@ -69,8 +69,11 @@ def add_cors_headers(response):
     response.headers["Access-Control-Allow-Methods"] = "GET,POST,OPTIONS"
     return response
 
-SALES_FLYER_URL = "https://www.wholefoodsmarket.com/sales-flyer?store-id=10160"
-SUPPORTED_STORES = [
+WHOLE_FOODS_RETAILER = "Whole Foods"
+TARGET_RETAILER = "Target"
+HMART_RETAILER = "H Mart"
+
+WHOLE_FOODS_STORE_CONFIG = [
     {
         "id": "10160",
         "slug": "columbus-circle",
@@ -78,10 +81,72 @@ SUPPORTED_STORES = [
         "city": "New York",
         "state": "NY",
         "label": "Columbus Circle, NYC",
+        "address": "10 Columbus Cir Ste SC101, New York, NY 10019",
         "is_active": True,
-    }
+    },
+    {
+        "id": "bryant-park",
+        "slug": "bryant-park",
+        "name": "Bryant Park",
+        "city": "New York",
+        "state": "NY",
+        "label": "Bryant Park, NYC",
+        "address": "1095 6th Ave, New York, NY 10036",
+        "is_active": False,
+        "needs_store_id": True,
+    },
+    {
+        "id": "manhattan-west",
+        "slug": "manhattan-west",
+        "name": "Manhattan West",
+        "city": "New York",
+        "state": "NY",
+        "label": "Manhattan West, NYC",
+        "address": "450 W 33rd St, New York, NY 10001",
+        "is_active": False,
+        "needs_store_id": True,
+    },
+    {
+        "id": "upper-west-side",
+        "slug": "upper-west-side",
+        "name": "Upper West Side",
+        "city": "New York",
+        "state": "NY",
+        "label": "Upper West Side, NYC",
+        "address": "808 Columbus Ave, New York, NY 10025",
+        "is_active": False,
+        "needs_store_id": True,
+    },
+    {
+        "id": "union-square",
+        "slug": "union-square",
+        "name": "Union Square",
+        "city": "New York",
+        "state": "NY",
+        "label": "Union Square, NYC",
+        "address": "4 Union Square S, New York, NY 10003",
+        "is_active": False,
+        "needs_store_id": True,
+    },
 ]
-DEFAULT_STORE_IDS = [SUPPORTED_STORES[0]["id"]]
+
+
+def load_supported_stores():
+    configured = os.getenv("WHOLEFOODS_STORES_JSON", "").strip()
+    if configured:
+        try:
+            stores = json.loads(configured)
+            if isinstance(stores, list) and stores:
+                return stores
+        except json.JSONDecodeError:
+            print("WHOLEFOODS_STORES_JSON was not valid JSON; using built-in store config.")
+    return [dict(store) for store in WHOLE_FOODS_STORE_CONFIG]
+
+
+SUPPORTED_STORES = load_supported_stores()
+ACTIVE_WHOLE_FOODS_STORES = [store for store in SUPPORTED_STORES if store.get("is_active")]
+DEFAULT_STORE_IDS = [ACTIVE_WHOLE_FOODS_STORES[0]["id"] if ACTIVE_WHOLE_FOODS_STORES else SUPPORTED_STORES[0]["id"]]
+SALES_FLYER_URL = f"https://www.wholefoodsmarket.com/sales-flyer?store-id={DEFAULT_STORE_IDS[0]}"
 CATEGORY_PROFILES = {
     "Produce": {
         "strong": [
@@ -700,6 +765,15 @@ def extract_discount_sort_value(text):
     return max(matches)
 
 
+def parse_price_sort_value(text):
+    if not text:
+        return math.inf
+    match = re.search(r"\$([0-9]+(?:\.[0-9]+)?)", str(text))
+    if not match:
+        return math.inf
+    return float(match.group(1))
+
+
 def sort_products_for_display(products):
     ordered = list(products)
     ordered.sort(
@@ -713,6 +787,100 @@ def sort_products_for_display(products):
         )
     )
     return ordered
+
+
+def normalize_retailer(value=None, url=None, sources=None):
+    candidate = str(value or "").strip()
+    if candidate:
+        key = normalize_text_key(candidate)
+        if key in {"whole foods", "whole foods market", "wfm"}:
+            return WHOLE_FOODS_RETAILER
+        if key == "target":
+            return TARGET_RETAILER
+        if key in {"h mart", "hmart"}:
+            return HMART_RETAILER
+        if key != "unknown":
+            return candidate
+
+    url_text = str(url or "").lower()
+    source_text = normalize_text_key(" ".join(sources or []))
+    if "wholefoodsmarket.com" in url_text or any(source in source_text for source in ["flyer", "all deals", "search deals"]):
+        return WHOLE_FOODS_RETAILER
+    if "target.com" in url_text or "target deals" in source_text:
+        return TARGET_RETAILER
+    if "hmart" in url_text or "h mart deals" in source_text:
+        return HMART_RETAILER
+    return WHOLE_FOODS_RETAILER
+
+
+def normalize_source_label(source):
+    label = str(source or "").strip()
+    mapping = {
+        "Flyer": "Flyer",
+        "All Deals": "All Deals",
+        "Search Deals": "Search",
+        "Target Deals": "Target",
+        "H Mart Deals": "H Mart",
+    }
+    return mapping.get(label, label)
+
+
+def build_store_offer(product, store_id=None, source=None):
+    retailer = normalize_retailer(product.get("retailer"), product.get("url"), product.get("sources") or ([source] if source else []))
+    if retailer != WHOLE_FOODS_RETAILER:
+        return None
+
+    offer_store_id = str(store_id or (product.get("available_store_ids") or DEFAULT_STORE_IDS)[0])
+    return {
+        "store_id": offer_store_id,
+        "current_price": product.get("current_price"),
+        "basis_price": product.get("basis_price"),
+        "prime_price": product.get("prime_price"),
+        "discount": product.get("discount"),
+        "discount_percent": product.get("discount_percent") or 0,
+        "unit_price": product.get("unit_price"),
+        "url": product.get("url"),
+        "sources": list(product.get("sources") or ([source] if source else [])),
+    }
+
+
+def merge_store_offers(existing_offers, incoming_offer):
+    offers_by_store = {
+        str(offer.get("store_id")): dict(offer)
+        for offer in (existing_offers or [])
+        if offer and offer.get("store_id")
+    }
+    if incoming_offer and incoming_offer.get("store_id"):
+        store_id = str(incoming_offer["store_id"])
+        current = offers_by_store.get(store_id, {})
+        merged = dict(current)
+        for key, value in incoming_offer.items():
+            if key == "sources":
+                sources = []
+                for source in (current.get("sources") or []) + (value or []):
+                    if source and source not in sources:
+                        sources.append(source)
+                merged["sources"] = sources
+            elif value not in (None, "", []):
+                merged[key] = value
+        offers_by_store[store_id] = merged
+    return list(offers_by_store.values())
+
+
+def apply_primary_store_offer(product):
+    offers = product.get("store_offers") or []
+    if not offers:
+        return product
+    selected = None
+    for store_id in DEFAULT_STORE_IDS:
+        selected = next((offer for offer in offers if str(offer.get("store_id")) == str(store_id)), None)
+        if selected:
+            break
+    selected = selected or offers[0]
+    for key in ["current_price", "basis_price", "prime_price", "discount", "discount_percent", "unit_price", "url"]:
+        if selected.get(key) not in (None, "", []):
+            product[key] = selected[key]
+    return product
 
 
 def derive_brand(name, explicit_brand=None):
@@ -1959,6 +2127,7 @@ def standardize_product_record(
         "discount_percent": discount_percent if discount_percent >= 0 else 0,
         "emoji": emoji or emoji_for_product(name),
         "available_store_ids": list(DEFAULT_STORE_IDS),
+        "store_offers": [],
     }
 
     if asins:
@@ -2009,6 +2178,9 @@ def load_all_deals():
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
+                extra_fields={
+                    "retailer": p.get("retailer") or WHOLE_FOODS_RETAILER,
+                },
             )
         )
 
@@ -2201,8 +2373,18 @@ def load_hmart_deals():
 def merge_combined_product(existing, incoming):
     if not existing:
         merged = dict(incoming)
+        merged["retailer"] = normalize_retailer(merged.get("retailer"), merged.get("url"), merged.get("sources"))
         merged["sources"] = list(incoming.get("sources", []))
+        merged["source_labels"] = [normalize_source_label(source) for source in merged["sources"]]
         merged["source_count"] = len(merged["sources"])
+        merged["store_offers"] = []
+        incoming_offers = list(incoming.get("store_offers") or [])
+        fallback_offer = build_store_offer(merged, source=(merged["sources"][0] if merged["sources"] else None))
+        if fallback_offer and not incoming_offers:
+            incoming_offers = [fallback_offer]
+        for offer in incoming_offers:
+            merged["store_offers"] = merge_store_offers(merged["store_offers"], offer)
+        apply_primary_store_offer(merged)
         merged["tags"] = derive_tags(
             name=merged.get("name"),
             brand=merged.get("brand"),
@@ -2216,7 +2398,7 @@ def merge_combined_product(existing, incoming):
     merged = dict(existing)
 
     for key, value in incoming.items():
-        if key in {"sources", "tags", "available_store_ids"}:
+        if key in {"sources", "source_labels", "tags", "available_store_ids", "store_offers"}:
             continue
         if value in (None, "", []):
             continue
@@ -2254,12 +2436,18 @@ def merge_combined_product(existing, incoming):
             merged_sources.append(source)
 
     merged["sources"] = merged_sources
+    merged["source_labels"] = [normalize_source_label(source) for source in merged_sources]
     merged["source_count"] = len(merged_sources)
     merged_store_ids = []
     for store_id in existing.get("available_store_ids", []) + incoming.get("available_store_ids", []):
         if store_id not in merged_store_ids:
             merged_store_ids.append(store_id)
     merged["available_store_ids"] = merged_store_ids or list(DEFAULT_STORE_IDS)
+    merged["retailer"] = normalize_retailer(merged.get("retailer"), merged.get("url"), merged_sources)
+    merged["store_offers"] = list(existing.get("store_offers") or [])
+    for offer in incoming.get("store_offers") or [build_store_offer(incoming, source=(incoming.get("sources") or [None])[0])]:
+        merged["store_offers"] = merge_store_offers(merged.get("store_offers"), offer)
+    apply_primary_store_offer(merged)
     if merged.get("basis_price") and merged.get("prime_price"):
         merged["prime_price"] = harmonize_prime_suffix(merged.get("basis_price"), merged.get("prime_price"))
     merged["tags"] = derive_tags(
@@ -2625,6 +2813,8 @@ def apply_fixes_to_products(products):
 
 
 def normalized_product_for_source(product, source_name):
+    retailer = normalize_retailer(product.get("retailer"), product.get("url"), [source_name])
+    store_ids = list(product.get("available_store_ids") or DEFAULT_STORE_IDS) if retailer == WHOLE_FOODS_RETAILER else []
     normalized = standardize_product_record(
         asin=product.get("asin"),
         asins=product.get("asins"),
@@ -2644,13 +2834,23 @@ def normalized_product_for_source(product, source_name):
         emoji=product.get("emoji"),
         classification_context=product.get("source_categories") or [],
         extra_fields={
-            "retailer": product.get("retailer"),
+            "retailer": retailer,
             "expires": product.get("expires"),
             "retail_source_url": product.get("retail_source_url"),
             "source_categories": product.get("source_categories") or [],
+            "available_store_ids": store_ids,
         },
     )
     normalized["sources"] = [source_name]
+    normalized["source_labels"] = [normalize_source_label(source_name)]
+    if retailer == WHOLE_FOODS_RETAILER:
+        normalized["store_offers"] = [
+            offer for offer in (
+                build_store_offer(normalized, store_id=store_id, source=source_name)
+                for store_id in store_ids
+            )
+            if offer
+        ]
     normalized["tags"] = derive_tags(
         name=normalized.get("name"),
         brand=normalized.get("brand"),
@@ -2691,6 +2891,12 @@ def build_combined_products(
             combined[key] = merge_combined_product(combined.get(key), normalized)
 
     ordered = list(combined.values())
+    for product in ordered:
+        product["retailer"] = normalize_retailer(product.get("retailer"), product.get("url"), product.get("sources"))
+    unknown_retailers = [product for product in ordered if not product.get("retailer") or normalize_text_key(product.get("retailer")) == "unknown"]
+    if unknown_retailers:
+        examples = ", ".join((product.get("name") or "Unnamed product") for product in unknown_retailers[:5])
+        raise RuntimeError(f"Unknown retailers remain after normalization ({len(unknown_retailers)}): {examples}")
     previous_brand_signature = None
     for _ in range(4):
         ordered = normalize_brands_across_products(ordered)
@@ -2780,7 +2986,7 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["basis_price"] = hydrated.get("basis_price")
     hydrated["prime_price"] = hydrated.get("prime_price")
     hydrated["discount"] = hydrated.get("discount")
-    hydrated["retailer"] = hydrated.get("retailer") or "Whole Foods"
+    hydrated["retailer"] = normalize_retailer(hydrated.get("retailer"), hydrated.get("url"), hydrated.get("sources"))
     hydrated["category"] = hydrated.get("category") or "Pantry"
     hydrated["subcategory"] = hydrated.get("subcategory")
     hydrated["category_confidence"] = float(hydrated.get("category_confidence") or 0)
@@ -2795,9 +3001,18 @@ def hydrate_combined_product_record(product, index=0):
     hydrated["ai_label_source"] = hydrated.get("ai_label_source") or "model"
     hydrated["ai_model_version"] = hydrated.get("ai_model_version") or TAXONOMY_AI_MODEL_VERSION
     hydrated["sources"] = list(hydrated.get("sources") or [])
+    hydrated["source_labels"] = list(hydrated.get("source_labels") or [normalize_source_label(source) for source in hydrated["sources"]])
     hydrated["source_count"] = int(hydrated.get("source_count") or len(hydrated["sources"]))
     hydrated["tags"] = list(hydrated.get("tags") or [])
-    hydrated["available_store_ids"] = list(hydrated.get("available_store_ids") or DEFAULT_STORE_IDS)
+    default_store_ids = DEFAULT_STORE_IDS if hydrated["retailer"] == WHOLE_FOODS_RETAILER else []
+    hydrated["available_store_ids"] = list(hydrated.get("available_store_ids") or default_store_ids)
+    hydrated["store_offers"] = list(hydrated.get("store_offers") or [])
+    if hydrated["retailer"] == WHOLE_FOODS_RETAILER and not hydrated["store_offers"]:
+        for store_id in hydrated["available_store_ids"] or DEFAULT_STORE_IDS:
+            offer = build_store_offer(hydrated, store_id=store_id, source=(hydrated["sources"][0] if hydrated["sources"] else None))
+            if offer:
+                hydrated["store_offers"] = merge_store_offers(hydrated["store_offers"], offer)
+    apply_primary_store_offer(hydrated)
     if hydrated.get("basis_price") and hydrated.get("prime_price"):
         hydrated["prime_price"] = harmonize_prime_suffix(hydrated.get("basis_price"), hydrated.get("prime_price"))
     if not hydrated["tags"]:
@@ -3168,10 +3383,16 @@ def parse_csv_arg(name):
 def filter_products_for_api(products):
     query = normalize_text_key(request.args.get("q", ""))
     categories = {value.lower() for value in parse_csv_arg("category")}
+    subcategories = {value.lower() for value in parse_csv_arg("subcategory")}
     tags = {value.lower() for value in parse_csv_arg("tag")}
     brands = {value.lower() for value in parse_csv_arg("brand")}
     retailers = {value.lower() for value in parse_csv_arg("retailer")}
+    sources = {value.lower() for value in parse_csv_arg("source")}
     store_ids = set(parse_csv_arg("store_id"))
+    try:
+        min_discount = float(request.args.get("min_discount", 0) or 0)
+    except (TypeError, ValueError):
+        min_discount = 0
 
     filtered = []
     for product in products:
@@ -3194,11 +3415,17 @@ def filter_products_for_api(products):
             continue
         if categories and (product.get("category") or "").lower() not in categories:
             continue
+        if subcategories and (product.get("subcategory") or "").lower() not in subcategories:
+            continue
         if tags and not tags.intersection({tag.lower() for tag in product.get("tags") or []}):
             continue
         if brands and (product.get("brand") or "").lower() not in brands:
             continue
         if retailers and (product.get("retailer") or "").lower() not in retailers:
+            continue
+        if sources and not sources.intersection({source.lower() for source in (product.get("sources") or []) + (product.get("source_labels") or [])}):
+            continue
+        if min_discount and (product.get("discount_percent") or 0) < min_discount:
             continue
         if store_ids:
             available_store_ids = set(product.get("available_store_ids") or [])
@@ -3208,6 +3435,21 @@ def filter_products_for_api(products):
         filtered.append(product)
 
     return filtered
+
+
+def sort_products_for_api(products):
+    sort_mode = (request.args.get("sort") or "").strip().lower()
+    ordered = list(products)
+    if sort_mode == "discount":
+        ordered.sort(key=lambda product: (-(product.get("discount_percent") or 0), normalize_text_key(product.get("name"))))
+        return ordered
+    if sort_mode == "price-asc":
+        ordered.sort(key=lambda product: (parse_price_sort_value(product.get("prime_price") or product.get("current_price")), normalize_text_key(product.get("name"))))
+        return ordered
+    if sort_mode == "source-count":
+        ordered.sort(key=lambda product: (-(product.get("source_count") or 0), -(product.get("discount_percent") or 0), normalize_text_key(product.get("name"))))
+        return ordered
+    return sort_products_for_display(ordered)
 
 
 def api_limit(default=60, maximum=200):
@@ -3260,13 +3502,13 @@ def api_categories():
 
 @app.route("/api/search")
 def api_search():
-    products = sort_products_for_display(filter_products_for_api(load_combined_products()))
+    products = sort_products_for_api(filter_products_for_api(load_combined_products()))
     return jsonify({"products": products[:api_limit(default=120, maximum=1000)], "count": len(products)})
 
 
 @app.route("/api/feed")
 def api_feed():
-    products = sort_products_for_display(filter_products_for_api(load_combined_products()))
+    products = sort_products_for_api(filter_products_for_api(load_combined_products()))
     return jsonify({"products": products[:api_limit(default=5000, maximum=10000)], "count": len(products)})
 
 

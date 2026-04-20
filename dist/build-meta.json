@@ -24,6 +24,11 @@
     "fixes_to_deploy.json",
     "flyer_vs_all_deals_report.json"
   ],
+  "copied_report_files": [
+    "catalog_quality_audit.html",
+    "catalog_quality_audit.json",
+    "failed_products_review_queue.json"
+  ],
   "root_static_files": [
     "manifest.webmanifest",
     "service-worker.js"

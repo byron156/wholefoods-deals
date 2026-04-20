@@ -47,6 +47,7 @@ export WHOLEFOODS_SEARCH_MODE="${WHOLEFOODS_SEARCH_MODE:-full}"
 echo "[$(timestamp)] Whole Foods search mode: $WHOLEFOODS_SEARCH_MODE"
 
 "$PYTHON_BIN" -u refresh_and_post_results.py
+"$PYTHON_BIN" -u scripts/catalog_quality_audit.py
 "$PYTHON_BIN" -u build_static_site.py
 
 git add \
@@ -66,6 +67,9 @@ git add \
   discovered_taxonomy.json \
   taxonomy_classification_cache.json \
   taxonomy_ai_report.json \
+  reports/catalog_quality_audit.html \
+  reports/catalog_quality_audit.json \
+  reports/failed_products_review_queue.json \
   dist
 
 if git diff --cached --quiet; then

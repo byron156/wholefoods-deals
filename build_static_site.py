@@ -12,6 +12,11 @@ ROOT_STATIC_FILES = [
     "manifest.webmanifest",
     "service-worker.js",
 ]
+REPORT_FILES = [
+    "catalog_quality_audit.html",
+    "catalog_quality_audit.json",
+    "failed_products_review_queue.json",
+]
 DATA_FILES = [
     "flyer_products.json",
     "flyer_report.json",
@@ -71,10 +76,21 @@ def copy_data_files() -> None:
             shutil.copy2(src, data_dir / filename)
 
 
+def copy_report_files() -> None:
+    reports_dir = DIST_DIR / "reports"
+    reports_dir.mkdir(parents=True, exist_ok=True)
+
+    for filename in REPORT_FILES:
+        src = BASE_DIR / "reports" / filename
+        if src.exists():
+            shutil.copy2(src, reports_dir / filename)
+
+
 def write_metadata() -> None:
     metadata = {
         "routes": sorted(ROUTES.keys()),
         "copied_data_files": [name for name in DATA_FILES if (BASE_DIR / name).exists()],
+        "copied_report_files": [name for name in REPORT_FILES if (BASE_DIR / "reports" / name).exists()],
         "root_static_files": [name for name in ROOT_STATIC_FILES if (STATIC_DIR / name).exists()],
     }
     write_text(DIST_DIR / "build-meta.json", json.dumps(metadata, indent=2))
@@ -94,6 +110,7 @@ def main() -> None:
 
     copy_static_assets()
     copy_data_files()
+    copy_report_files()
     write_metadata()
     print(f"\nStatic site built at {DIST_DIR}")
 
