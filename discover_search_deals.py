@@ -732,24 +732,40 @@ def open_search_run(page, run_label: str, sort_label: str, sort_rank: str, extra
     print(f"Opening run: {run_label} ({sort_label})")
     print(f"Run URL: {target_url}")
 
-    goto_search_url(page, target_url, run_label)
-    page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
-    dismiss_popups(page)
+    last_render_error = None
 
-    if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=5000):
-        print(f"{run_label}: store check failed after navigation; retrying the store modal flow.")
-        set_store_from_search_page(page)
-        goto_search_url(page, target_url, run_label)
+    for render_attempt in range(1, 4):
+        if render_attempt > 1:
+            print(f'{run_label}: products did not render on attempt {render_attempt - 1}; retrying the run URL.')
+            page.wait_for_timeout(3000)
+
+        goto_search_url(page, target_url, run_label, attempts=2)
         page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
         dismiss_popups(page)
 
-        if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=6000):
-            raise RuntimeError(
-                f'The page did not keep "Columbus Circle" selected while opening the run "{run_label}".'
-            )
+        if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=5000):
+            print(f"{run_label}: store check failed after navigation; retrying the store modal flow.")
+            set_store_from_search_page(page)
+            goto_search_url(page, target_url, run_label, attempts=2)
+            page.wait_for_timeout(INITIAL_PAGE_SETTLE_MS)
+            dismiss_popups(page)
 
-    if not wait_for_grid_to_appear(page, timeout_ms=12000):
-        raise RuntimeError(f'Products did not render for the run "{run_label}".')
+            if not wait_for_selected_store_text(page, r"columbus\s+circle", timeout_ms=6000):
+                last_render_error = (
+                    f'The page did not keep "Columbus Circle" selected while opening the run "{run_label}".'
+                )
+                continue
+
+        if wait_for_grid_to_appear(page, timeout_ms=20000):
+            return
+
+        last_render_error = f'Products did not render for the run "{run_label}".'
+        try:
+            debug_body(page)
+        except Exception:
+            pass
+
+    raise RuntimeError(last_render_error or f'Products did not render for the run "{run_label}".')
 
 
 def format_money(value):

@@ -46,7 +46,31 @@ fi
 export WHOLEFOODS_SEARCH_MODE="${WHOLEFOODS_SEARCH_MODE:-full}"
 echo "[$(timestamp)] Whole Foods search mode: $WHOLEFOODS_SEARCH_MODE"
 
-"$PYTHON_BIN" -u refresh_and_post_results.py
+refresh_succeeded=0
+refresh_attempts="${WHOLEFOODS_REFRESH_ATTEMPTS:-2}"
+if ! [[ "$refresh_attempts" =~ '^[0-9]+$' ]] || [[ "$refresh_attempts" -lt 1 ]]; then
+  refresh_attempts=2
+fi
+
+for attempt in $(seq 1 "$refresh_attempts"); do
+  echo "[$(timestamp)] Full refresh attempt $attempt of $refresh_attempts"
+  if "$PYTHON_BIN" -u refresh_and_post_results.py; then
+    refresh_succeeded=1
+    break
+  fi
+
+  echo "[$(timestamp)] Full refresh attempt $attempt failed." >&2
+  if [[ "$attempt" -lt "$refresh_attempts" ]]; then
+    echo "[$(timestamp)] Waiting before retrying full refresh."
+    sleep "${WHOLEFOODS_REFRESH_RETRY_DELAY_SECONDS:-300}"
+  fi
+done
+
+if [[ "$refresh_succeeded" -ne 1 ]]; then
+  echo "[$(timestamp)] Full refresh failed after $refresh_attempts attempts; rebuilding from last successful scrape so launchd does not publish a broken site." >&2
+  "$PYTHON_BIN" -u refresh_and_post_results.py --skip-refresh
+fi
+
 "$PYTHON_BIN" -u scripts/catalog_quality_audit.py
 "$PYTHON_BIN" -u build_static_site.py
 
