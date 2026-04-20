@@ -20,9 +20,7 @@
     searchMeta: document.getElementById("search-meta"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
     storeChipRow: document.getElementById("store-chip-row"),
-    filterToggle: document.getElementById("filter-toggle"),
     filterDrawer: document.getElementById("filter-drawer"),
-    sortSelect: document.getElementById("sort-select"),
     filterCategory: document.getElementById("filter-category"),
     filterSubcategory: document.getElementById("filter-subcategory"),
     filterDiscount: document.getElementById("filter-discount"),
@@ -149,7 +147,6 @@
   function getDefaultProfile() {
     return {
       selectedStoreIds: stores.filter((store) => store.is_active).map((store) => store.id),
-      activeSort: "best-deal",
       filters: defaultFilters(),
       likedKeys: [],
       dislikedKeys: [],
@@ -417,7 +414,6 @@
   function rankProductList(list, mode) {
     const liked = buildAffinityCounts(state.profile.likedKeys);
     const disliked = buildAffinityCounts(state.profile.dislikedKeys);
-    const sortMode = mode || state.profile.activeSort || "best-deal";
     const ranked = list.map((product) => ({
       ...product,
       _score: scoreProduct(product, liked, disliked),
@@ -425,12 +421,6 @@
     }));
 
     ranked.sort((left, right) => {
-      if (sortMode === "discount") {
-        return (right.discount_percent || 0) - (left.discount_percent || 0) || (left.name || "").localeCompare(right.name || "");
-      }
-      if (sortMode === "price-asc") {
-        return parsePrice(left.prime_price || left.current_price) - parsePrice(right.prime_price || right.current_price) || (left.name || "").localeCompare(right.name || "");
-      }
       return right._score - left._score || (right.discount_percent || 0) - (left.discount_percent || 0) || (left.name || "").localeCompare(right.name || "");
     });
     return ranked;
@@ -452,7 +442,7 @@
       .map(([category, items]) => ({
         category,
         total: items.length,
-        items: rankProductList(items).slice(0, 18),
+        items: rankProductList(items),
       }))
       .sort((left, right) => {
         if (left.category === failedCategory || right.category === failedCategory) {
@@ -508,7 +498,6 @@
       .map((subcategory) => `<option value="${escapeHtml(subcategory)}"${filters.subcategory === subcategory ? " selected" : ""}>${escapeHtml(subcategory)}</option>`)
       .join("");
     nodes.filterDiscount.value = filters.minDiscount || "0";
-    nodes.sortSelect.value = state.profile.activeSort || "best-deal";
   }
 
   function renderStatus() {
@@ -874,16 +863,8 @@
     }
   });
 
-  nodes.filterToggle.addEventListener("click", () => {
-    nodes.filterDrawer.classList.toggle("hidden");
-  });
   nodes.clearFilters.addEventListener("click", () => {
     state.profile.filters = defaultFilters();
-    saveProfile();
-    renderFeed();
-  });
-  nodes.sortSelect.addEventListener("change", () => {
-    state.profile.activeSort = nodes.sortSelect.value;
     saveProfile();
     renderFeed();
   });

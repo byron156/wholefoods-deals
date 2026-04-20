@@ -512,20 +512,11 @@ p {
   text-decoration: underline;
 }
 
-.control-row {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.filter-toggle {
-  width: auto;
-}
-
 .compact-select {
-  min-height: 40px;
+  min-height: 38px;
   border: 1px solid rgba(17, 61, 41, 0.14);
-  border-radius: 13px;
-  padding: 9px 12px;
+  border-radius: 12px;
+  padding: 8px 11px;
   background: rgba(255, 255, 255, 0.92);
   color: var(--text);
   font-size: 13px;
@@ -534,18 +525,30 @@ p {
 
 .filter-drawer {
   border: 1px solid rgba(17, 61, 41, 0.09);
-  border-radius: 20px;
-  padding: 12px;
+  border-radius: 18px;
+  padding: 10px;
   background:
-    linear-gradient(135deg, rgba(220, 239, 230, 0.72), rgba(255, 255, 255, 0.8));
+    linear-gradient(135deg, rgba(220, 239, 230, 0.58), rgba(255, 255, 255, 0.76));
   display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 10px;
+  align-items: end;
+}
+
+.filter-heading {
+  align-self: center;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .filter-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 
 .filter-grid label {
@@ -652,8 +655,8 @@ p {
 .link-action {
   border: 0;
   background: transparent;
-  padding: 2px 0 0;
-  margin: -2px 0 0;
+  padding: 7px 2px;
+  margin: 0;
   color: var(--muted);
   font-size: 11px;
   font-weight: 700;
@@ -940,7 +943,7 @@ p {
   }
 
   .filter-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .freshness-meta {
@@ -1091,14 +1094,17 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .control-row {
-    align-items: stretch;
+  .filter-drawer {
+    grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  .control-row .ghost-button,
-  .control-row .compact-select {
-    flex: 1;
+  .filter-heading {
+    align-self: auto;
+  }
+
+  .filter-drawer .link-action {
+    justify-self: start;
   }
 }
 

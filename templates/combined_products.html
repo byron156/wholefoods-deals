@@ -19,16 +19,8 @@
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search grocery deals">
         <div class="chip-row" id="retailer-chip-row"></div>
         <div class="store-row" id="store-chip-row"></div>
-        <div class="control-row">
-            <button class="ghost-button filter-toggle" type="button" id="filter-toggle">Filters</button>
-            <label class="sr-only" for="sort-select">Sort deals</label>
-            <select id="sort-select" class="compact-select">
-                <option value="best-deal">Best deal</option>
-                <option value="discount">Biggest discount</option>
-                <option value="price-asc">Price low to high</option>
-            </select>
-        </div>
-        <div class="filter-drawer hidden" id="filter-drawer">
+        <div class="filter-drawer" id="filter-drawer" aria-label="Filter deals">
+            <div class="filter-heading">Filter by</div>
             <div class="filter-grid">
                 <label>
                     Category
