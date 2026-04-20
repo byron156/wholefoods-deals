@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept: Deal Radar</title>
+  <style>
+    :root { --bg:#102219; --panel:#193327; --card:#f7eedc; --ink:#f8f1df; --dark:#14281f; --muted:#b5c0b8; --green:#72c98e; --red:#ff765f; --gold:#f3c563; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Avenir Next", ui-rounded, sans-serif; background:radial-gradient(circle at 15% 0%,#315c42,transparent 32%),var(--bg); color:var(--ink); }
+    .app { width:min(940px, calc(100vw - 18px)); margin:12px auto 42px; display:grid; gap:14px; }
+    .command { position:sticky; top:8px; z-index:3; display:grid; gap:10px; padding:12px; border-radius:26px; background:rgba(25,51,39,.92); box-shadow:0 20px 60px rgba(0,0,0,.24); border:1px solid rgba(255,255,255,.08); }
+    h1 { margin:0; font-size:clamp(2.2rem, 10vw, 5rem); line-height:.88; letter-spacing:-.08em; }
+    .sub { color:var(--muted); font-weight:800; }
+    input { width:100%; border:0; border-radius:18px; padding:15px; font:inherit; background:#f8efdf; color:var(--dark); }
+    .chips { display:flex; gap:8px; overflow:auto; scrollbar-width:none; }
+    .chips::-webkit-scrollbar { display:none; }
+    button { border:1px solid rgba(255,255,255,.09); border-radius:999px; padding:9px 13px; font-weight:950; color:var(--ink); background:#234936; white-space:nowrap; }
+    button.active { color:#102219; background:var(--gold); border-color:var(--gold); }
+    .radar { display:grid; gap:10px; }
+    .lane { display:grid; gap:8px; }
+    .lane-head { display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:13px; font-weight:950; text-transform:uppercase; letter-spacing:.08em; }
+    .deal { display:grid; grid-template-columns:72px 1fr auto; gap:12px; align-items:center; padding:10px; border-radius:22px; background:var(--card); color:var(--dark); box-shadow:0 16px 44px rgba(0,0,0,.16); }
+    .image { width:72px; height:72px; border-radius:18px; background:white; display:grid; place-items:center; font-size:32px; }
+    .info { min-width:0; }
+    .meta { color:#6d746d; font-size:11px; font-weight:900; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    h2 { margin:3px 0 5px; font-size:15px; line-height:1.16; }
+    .why { color:#1b6b43; font-size:12px; font-weight:950; }
+    .price { text-align:right; }
+    .now { color:var(--red); font-size:22px; font-weight:1000; white-space:nowrap; }
+    .off { color:#8e3e2f; font-weight:950; font-size:12px; }
+    @media (max-width:500px) {
+      .command { position:static; }
+      .deal { grid-template-columns:62px 1fr; }
+      .image { width:62px; height:62px; }
+      .price { grid-column:2; display:flex; gap:8px; align-items:center; text-align:left; }
+      .now { font-size:20px; }
+    }
+  </style>
+</head>
+<body>
+<main class="app">
+  <section class="command">
+    <div><h1>Deal Radar</h1><div class="sub">Personalized grocery savings across stores</div></div>
+    <input type="search" placeholder="Search, then filter only if you need to">
+    <div class="chips"><button class="active">Radar</button><button>Best deal</button><button>Whole Foods</button><button>Target</button><button>H Mart</button><button>Filters</button></div>
+  </section>
+  <section class="radar">
+    <div class="lane">
+      <div class="lane-head"><span>Recommended</span><span>Why it matters</span></div>
+      <article class="deal"><div class="image">N</div><div class="info"><div class="meta">Nuun · Sports Drinks</div><h2>Nuun Strawberry Lemonade Tablets</h2><div class="why">You liked hydration deals</div></div><div class="price"><div class="now">$5.49</div><div class="off">25% off</div></div></article>
+      <article class="deal"><div class="image">S</div><div class="info"><div class="meta">Simple Mills · Cookies</div><h2>Simple Mills Crunchy Cookies</h2><div class="why">Brand you liked, strong snack discount</div></div><div class="price"><div class="now">$3.99</div><div class="off">31% off</div></div></article>
+    </div>
+    <div class="lane">
+      <div class="lane-head"><span>Best produce</span><span>Columbus Circle</span></div>
+      <article class="deal"><div class="image">A</div><div class="info"><div class="meta">Fresh Produce · Search</div><h2>Produce Large Hass Avocados</h2><div class="why">Fresh produce source-backed</div></div><div class="price"><div class="now">$1.50</div><div class="off">40% off</div></div></article>
+    </div>
+  </section>
+</main>
+</body>
+</html>

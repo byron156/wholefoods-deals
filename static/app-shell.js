@@ -183,7 +183,7 @@
   const state = {
     profile: loadProfile(),
     query: "",
-    activeRetailer: retailerList.includes("Whole Foods") ? "Whole Foods" : retailerList[0] || "All",
+    activeRetailer: retailerList.includes("All") ? "All" : retailerList[0] || "All",
     categoryTargetKey: null,
     categoryScope: "similar",
   };
@@ -321,6 +321,19 @@
 
   function scopedProducts() {
     return products.filter(filterProduct);
+  }
+
+  function hasActiveFilters() {
+    const filters = state.profile.filters || defaultFilters();
+    return Boolean(
+      state.query
+      || filters.category
+      || filters.subcategory
+      || filters.brand
+      || filters.source
+      || filters.priceMode
+      || Number(filters.minDiscount || 0)
+    );
   }
 
   function parsePrice(value) {
@@ -463,6 +476,9 @@
   }
 
   function buildForYouShelf() {
+    if (hasActiveFilters()) {
+      return [];
+    }
     const disliked = new Set(state.profile.dislikedKeys || []);
     return rankProductList(scopedProducts().filter((product) => !disliked.has(product.key)), "for-you").slice(0, 18);
   }

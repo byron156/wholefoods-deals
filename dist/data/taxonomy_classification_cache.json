@@ -30545,6 +30545,75 @@
       "clip_source": "category-first",
       "clip_score": 0.9888,
       "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "09045f57a84ceb2222b3de170510ebeb0fe9c142ae7e6e512d3b2fe4542aa289": {
+      "category": "Frozen",
+      "subcategory": "Frozen Snacks",
+      "confidence": 0.2454,
+      "reasoning": "Local text classifier prediction.",
+      "model_name": "local-sklearn",
+      "model_version": "taxonomy-local-ml-v15",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "4ab4ff013e0aa01508e1dd3561e95bea77ec6077ac53d5f01ec6cbee58846996": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "confidence": 0.75,
+      "reasoning": "Local fallback selected a product-form taxonomy label.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v15",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "2bba69877051e8f9e28e5b0c6bf38a98484f5de87bd04c589d613d2b9d4a87bd": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Hydration Supplements",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.6320. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v15",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.632,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "bc5b9c282e7080c3fe5908559f2ab861484f51668b02cefa8e8e1badac7ce4ee": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 1.0,
+      "reasoning": "Manual gold taxonomy label.",
+      "model_name": "manual-gold-label",
+      "model_version": "taxonomy-local-ml-v15",
+      "label_source": "gold",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "2856917cceb841255d7421e097ffedbbc622d55d38f60ed7c2191efc81fa1887": {
+      "category": "Bakery",
+      "subcategory": "Baking Mixes",
+      "confidence": 0.92,
+      "reasoning": "Cookie baking mix",
+      "model_name": "openai-silver-label",
+      "model_version": "taxonomy-local-ml-v15",
+      "label_source": "silver",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "d768ad0e17d2ac78561aeb7a05a381d9b6b367403552fefd9a555525ffa9919a": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "confidence": 0.75,
+      "reasoning": "Local fallback selected a product-form taxonomy label.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v15",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "b2725eebb2be1bceb682de26a4255e682701526e94b3c7f2a71d378e99597bc6": {
+      "category": "Alcohol",
+      "subcategory": "Cocktails & Mixers",
+      "confidence": 0.9,
+      "reasoning": "Hard lemonade alcoholic beverage",
+      "model_name": "openai-silver-label",
+      "model_version": "taxonomy-local-ml-v15",
+      "label_source": "silver",
+      "taxonomy_version": "fixed-taxonomy-v5"
     }
   }
 }

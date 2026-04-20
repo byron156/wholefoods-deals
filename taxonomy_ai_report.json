@@ -1,11 +1,18 @@
 {
-  "generated_at": "2026-04-20T00:34:57.889767+00:00",
+  "generated_at": "2026-04-20T01:20:45.044711+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v15",
   "product_count": 2262,
   "completed_count": 2262,
-  "changed_count": 0,
-  "changed_examples": [],
+  "changed_count": 6,
+  "changed_examples": [
+    "ALEXIA FOODS Sweet Potato With Sea Salt Fries, 15 OZ",
+    "Nuun Sport Hydration Citrus Fruit, 10 Drink Tablets",
+    "Nuun Hydration Strawberry Lemonade, 10 Tablets",
+    "Otto's Naturals Grain-Free Ultimate Cookie Mix, 12.2 Oz., Top 9 Allergen-Free, Organic Cassava Flour, Gluten Free, Non-GMO, Vegan, Plant-Based",
+    "BlueLand Toilet Cleaner Refill Tablets, 8.5 OZ",
+    "Mike’s Hard Lemonade - 12pk"
+  ],
   "last_product": "Zanmang Loopy Jjajang Noodle 3.88 Oz"
 }

@@ -27,7 +27,11 @@
   "copied_report_files": [
     "catalog_quality_audit.html",
     "catalog_quality_audit.json",
-    "failed_products_review_queue.json"
+    "failed_products_review_queue.json",
+    "ui_concepts/deal-radar.html",
+    "ui_concepts/index.html",
+    "ui_concepts/market-tiles.html",
+    "ui_concepts/receipt-list.html"
   ],
   "root_static_files": [
     "manifest.webmanifest",

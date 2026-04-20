@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept: Receipt List</title>
+  <style>
+    :root { --bg:#f6f0e5; --paper:#fffdf8; --ink:#173326; --muted:#67746c; --line:#e5ddcf; --green:#17633f; --red:#c65342; --soft:#e8f1e8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Avenir Next", ui-rounded, sans-serif; background:var(--bg); color:var(--ink); }
+    .app { width:min(720px, calc(100vw - 18px)); margin:12px auto 40px; display:grid; gap:10px; }
+    header { display:flex; justify-content:space-between; align-items:end; gap:12px; padding:8px 2px; }
+    h1 { margin:0; font-size:34px; letter-spacing:-.06em; line-height:.9; }
+    .count { color:var(--muted); font-weight:800; font-size:13px; }
+    .bar { position:sticky; top:8px; z-index:4; display:grid; gap:8px; padding:10px; border-radius:22px; background:rgba(255,253,248,.95); box-shadow:0 16px 40px rgba(23,51,38,.1); }
+    input { width:100%; border:1px solid var(--line); border-radius:16px; padding:14px 15px; font:inherit; background:white; }
+    .chips { display:flex; gap:6px; overflow:auto; scrollbar-width:none; }
+    .chips::-webkit-scrollbar { display:none; }
+    button { border:0; border-radius:999px; padding:9px 12px; font-weight:900; color:var(--ink); background:#f3ede1; white-space:nowrap; }
+    button.active { color:white; background:var(--green); }
+    .tools { display:flex; gap:8px; }
+    .tools button { flex:1; border:1px solid var(--line); background:white; color:var(--green); }
+    .section-title { display:flex; justify-content:space-between; align-items:center; padding:10px 2px 2px; }
+    h2 { margin:0; font-size:18px; letter-spacing:-.03em; }
+    .list { display:grid; gap:8px; }
+    .deal { display:grid; grid-template-columns:72px 1fr auto; gap:10px; padding:10px; border:1px solid rgba(23,51,38,.08); border-radius:18px; background:var(--paper); box-shadow:0 10px 28px rgba(23,51,38,.06); }
+    .image { width:72px; height:72px; border-radius:14px; background:linear-gradient(135deg,#eaf3e6,#fff); display:grid; place-items:center; font-size:34px; }
+    .info { min-width:0; display:grid; gap:4px; align-content:start; }
+    .meta { color:var(--muted); font-size:11px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .name { margin:0; font-size:14px; line-height:1.18; font-weight:950; }
+    .badges { display:flex; gap:5px; flex-wrap:wrap; }
+    .badge { padding:4px 7px; border-radius:999px; background:var(--soft); color:var(--green); font-size:10px; font-weight:950; }
+    .price { text-align:right; display:grid; gap:4px; align-content:start; }
+    .now { color:var(--red); font-size:20px; font-weight:1000; white-space:nowrap; }
+    .off { justify-self:end; padding:4px 7px; border-radius:999px; background:#ffe1d9; color:#9f3a2b; font-size:11px; font-weight:950; }
+    .was { color:var(--muted); font-size:11px; font-weight:800; }
+    @media (max-width:440px) {
+      .app { width:min(100vw - 12px, 720px); }
+      .deal { grid-template-columns:64px 1fr; }
+      .image { width:64px; height:64px; }
+      .price { grid-column:2; grid-template-columns:auto auto auto; text-align:left; align-items:center; }
+      .now { font-size:19px; }
+      header { align-items:start; flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+<main class="app">
+  <header><h1>Grocery Deals</h1><div class="count">1,749 live deals</div></header>
+  <section class="bar">
+    <input type="search" placeholder="Search avocados, coffee, Simple Mills">
+    <div class="chips"><button class="active">All</button><button>Whole Foods</button><button>Target</button><button>H Mart</button><button>Produce</button><button>Snacks</button></div>
+    <div class="tools"><button>Filters</button><button>Best deal</button></div>
+  </section>
+  <div class="section-title"><h2>Best deals right now</h2><span class="count">Columbus Circle</span></div>
+  <section class="list">
+    <article class="deal"><div class="image">A</div><div class="info"><div class="meta">Produce · Whole Foods · Search</div><h3 class="name">Produce Large Hass Avocados</h3><div class="badges"><span class="badge">Prime</span><span class="badge">Fresh produce</span></div></div><div class="price"><div class="now">$1.50 ea</div><div class="off">40% off</div><div class="was">Was $2.49</div></div></article>
+    <article class="deal"><div class="image">R</div><div class="info"><div class="meta">EasyLunch · Fruits · Flyer + Search</div><h3 class="name">Organic Raspberries</h3><div class="badges"><span class="badge">Multi-source</span></div></div><div class="price"><div class="now">$3.99 ea</div><div class="off">33% off</div><div class="was">Was $5.99</div></div></article>
+    <article class="deal"><div class="image">C</div><div class="info"><div class="meta">Cava · Fresh Salsa & Dips</div><h3 class="name">Cava Tzatziki, 8 oz</h3><div class="badges"><span class="badge">All Deals</span></div></div><div class="price"><div class="now">$4.88 ea</div><div class="off">30% off</div><div class="was">Was $6.99</div></div></article>
+    <article class="deal"><div class="image">N</div><div class="info"><div class="meta">Nuun · Sports Drinks</div><h3 class="name">Nuun Strawberry Lemonade Tablets</h3><div class="badges"><span class="badge">You liked hydration</span></div></div><div class="price"><div class="now">$5.49</div><div class="off">25% off</div><div class="was">Was $7.29</div></div></article>
+  </section>
+</main>
+</body>
+</html>

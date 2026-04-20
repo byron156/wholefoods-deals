@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concept: Market Tiles</title>
+  <style>
+    :root { --bg:#f8f2e8; --ink:#183426; --muted:#69756e; --green:#14633d; --red:#c6503e; --card:#fffdf8; --line:#e8dfd0; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Avenir Next", ui-rounded, sans-serif; background:radial-gradient(circle at top right,#dceedd,transparent 32%),var(--bg); color:var(--ink); }
+    .app { width:min(1080px, calc(100vw - 18px)); margin:14px auto 42px; display:grid; gap:14px; }
+    .hero { border-radius:30px; padding:18px; background:rgba(255,253,248,.82); box-shadow:0 20px 60px rgba(24,52,38,.1); display:grid; gap:14px; }
+    h1 { margin:0; font-size:clamp(2.4rem, 11vw, 5.7rem); letter-spacing:-.08em; line-height:.82; max-width:8ch; }
+    .search { display:grid; gap:10px; }
+    input { width:100%; border:1px solid var(--line); border-radius:20px; padding:16px; font:inherit; background:white; }
+    .chips { display:flex; gap:8px; overflow:auto; scrollbar-width:none; }
+    .chips::-webkit-scrollbar { display:none; }
+    button { border:0; border-radius:999px; padding:10px 14px; background:white; color:var(--green); font-weight:950; white-space:nowrap; }
+    button.active { background:var(--green); color:white; }
+    .shelf-head { display:flex; justify-content:space-between; align-items:center; padding:4px 4px 0; }
+    h2 { margin:0; font-size:22px; letter-spacing:-.04em; }
+    .muted { color:var(--muted); font-size:13px; font-weight:800; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:12px; }
+    .tile { display:grid; gap:8px; padding:12px; border-radius:24px; background:var(--card); border:1px solid rgba(24,52,38,.08); box-shadow:0 14px 40px rgba(24,52,38,.07); }
+    .image { height:118px; border-radius:20px; background:linear-gradient(145deg,#ecf4e7,#fff); display:grid; place-items:center; font-size:48px; }
+    .brand { color:var(--muted); font-size:11px; font-weight:850; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .name { margin:0; font-size:14px; line-height:1.18; min-height:50px; }
+    .price-row { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+    .price { color:var(--red); font-size:21px; font-weight:1000; letter-spacing:-.04em; }
+    .off { padding:5px 8px; border-radius:999px; background:#ffe2db; color:#9d3a2c; font-size:11px; font-weight:950; }
+    .source { display:flex; gap:5px; flex-wrap:wrap; }
+    .source span { padding:5px 7px; border-radius:999px; background:#e4f0e6; color:var(--green); font-size:10px; font-weight:950; }
+    @media (max-width:520px) {
+      .hero { padding:12px; border-radius:24px; }
+      h1 { font-size:2.5rem; max-width:none; }
+      .grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
+      .tile { padding:9px; border-radius:18px; }
+      .image { height:86px; border-radius:15px; }
+      .name { font-size:12.5px; min-height:45px; }
+      .price { font-size:18px; }
+    }
+  </style>
+</head>
+<body>
+<main class="app">
+  <section class="hero">
+    <h1>Deals worth grabbing.</h1>
+    <div class="search">
+      <input type="search" placeholder="Search deals">
+      <div class="chips"><button class="active">All</button><button>For You</button><button>Produce</button><button>Snacks</button><button>30%+</button><button>Multi-source</button></div>
+    </div>
+  </section>
+  <div class="shelf-head"><h2>Fresh picks</h2><span class="muted">1,749 deals</span></div>
+  <section class="grid">
+    <article class="tile"><div class="image">A</div><div class="brand">Produce · Whole Foods</div><h3 class="name">Produce Large Hass Avocados</h3><div class="price-row"><div class="price">$1.50</div><div class="off">40%</div></div><div class="source"><span>Search</span></div></article>
+    <article class="tile"><div class="image">R</div><div class="brand">EasyLunch · Fruits</div><h3 class="name">Organic Raspberries</h3><div class="price-row"><div class="price">$3.99</div><div class="off">33%</div></div><div class="source"><span>Flyer</span><span>Search</span></div></article>
+    <article class="tile"><div class="image">P</div><div class="brand">Pear Comice CV · Fruits</div><h3 class="name">Pear Comice CV</h3><div class="price-row"><div class="price">$1.99/lb</div><div class="off">33%</div></div><div class="source"><span>All Deals</span></div></article>
+    <article class="tile"><div class="image">C</div><div class="brand">Cava · Fresh Salsa & Dips</div><h3 class="name">Cava Tzatziki, 8 oz</h3><div class="price-row"><div class="price">$4.88</div><div class="off">30%</div></div><div class="source"><span>All Deals</span></div></article>
+  </section>
+</main>
+</body>
+</html>

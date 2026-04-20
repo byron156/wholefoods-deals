@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T00:35:10.350079+00:00",
+  "generated_at": "2026-04-20T01:20:45.707658+00:00",
   "summary": {
     "total_products": 2262,
     "failed_products": 14,
@@ -8,7 +8,7 @@
     "clip_missing_products": 0,
     "clip_missing_percent": "0.0%",
     "suspicious_category_products": 86,
-    "brand_issue_products": 205,
+    "brand_issue_products": 204,
     "data_issue_products": 244,
     "duplicateish_groups": 12
   },
@@ -28,14 +28,21 @@
     "combined_unique_count": 2262
   },
   "taxonomy_report": {
-    "generated_at": "2026-04-20T00:34:57.889767+00:00",
+    "generated_at": "2026-04-20T01:20:45.044711+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v15",
     "product_count": 2262,
     "completed_count": 2262,
-    "changed_count": 0,
-    "changed_examples": [],
+    "changed_count": 6,
+    "changed_examples": [
+      "ALEXIA FOODS Sweet Potato With Sea Salt Fries, 15 OZ",
+      "Nuun Sport Hydration Citrus Fruit, 10 Drink Tablets",
+      "Nuun Hydration Strawberry Lemonade, 10 Tablets",
+      "Otto's Naturals Grain-Free Ultimate Cookie Mix, 12.2 Oz., Top 9 Allergen-Free, Organic Cassava Flour, Gluten Free, Non-GMO, Vegan, Plant-Based",
+      "BlueLand Toilet Cleaner Refill Tablets, 8.5 OZ",
+      "Mike’s Hard Lemonade - 12pk"
+    ],
     "last_product": "Zanmang Loopy Jjajang Noodle 3.88 Oz"
   },
   "counts": {
@@ -4639,47 +4646,6 @@
         ]
       },
       {
-        "asin": "B07FZGG2L5",
-        "asins": [
-          "B07FZGG2L5"
-        ],
-        "name": "365 by Whole Foods Market Provolone Cheese",
-        "raw_name": "365 by Whole Foods Market Provolone Cheese",
-        "brand": "365 by Whole Foods Market",
-        "source_brand": "365 by Whole Foods Market",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer",
-          "Search Deals"
-        ],
-        "source_count": 2,
-        "category": "Dairy & Eggs",
-        "subcategory": "Cheese",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Cheese",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v15",
-        "ai_clip_score": 0.5511,
-        "ai_clip_source": "category-first",
-        "current_price": "$8.54/lb",
-        "basis_price": "$9.59/lb",
-        "prime_price": "$7.69/lb",
-        "discount": "20% off",
-        "discount_percent": 20,
-        "unit_price": "$8.54/lb",
-        "image": "https://m.media-amazon.com/images/I/71O6c1VD-dL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/365-by-whole-foods-market-365-by-whole-foods-market-provolone-cheese-b07fzgg2l5?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "multi-source deal",
-          "prime deal"
-        ]
-      },
-      {
         "asin": "B0DXQF2QP1",
         "name": "365 by Whole Foods Market Raspberry Filled Dark Chocolate Square 8 Count",
         "raw_name": "365 by Whole Foods Market Raspberry Filled Dark Chocolate Square 8 Count, 0.5 OZ",
@@ -4889,6 +4855,80 @@
         "discount_percent": 33,
         "image": "https://images-na.ssl-images-amazon.com/images/I/61Lwf0YApWL.AC_SL300_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-lemon-cashew-single-bar-vegan-low-sugar-gluten-free-paleo-low-carb-non-gmo-no-stevia-no-erythritol-b09kt313dt?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "multi-source deal",
+          "organic",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B0BXBKCK5X",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Chip Cookie Dough, 1.98-Ounce Bars, (Pack of 5)",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$10.81",
+        "basis_price": "$12.99 ea",
+        "prime_price": "$9.73 ea",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/91mR8dhqHwL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-chip-cookie-dough-1-98-ounce-bars-pack-of-5-b0bxbkck5x?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "multi-source deal",
+          "organic",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B0BXC1Z68L",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Peanut Butter Cup , 1.98-Ounce Bars, (Pack of 5)",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$10.81",
+        "basis_price": "$12.99 ea",
+        "prime_price": "$9.73 ea",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/81mlJjMwJgL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-peanut-butter-cup-1-98-ounce-bars-pack-of-5-b0bxc1z68l?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "high-protein",
           "multi-source deal",
@@ -7228,6 +7268,44 @@
         "image": "https://m.media-amazon.com/images/I/71u7MPmc3-L._FMwebp__SR500,500_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/gt-s-gts-living-foods-trilogy-enlightened-kombucha-16-fz-b0147qkgew?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
+          "multi-source deal",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B081DKVRW7",
+        "name": "Harmless Harvest Dairy-Free Drinkable Yogurt",
+        "raw_name": "Harmless Harvest Dairy-Free Drinkable Yogurt - Unsweetened, 24 Fl Oz, 1.5 pound (pack of 1)",
+        "brand": "Harmless Harvest",
+        "source_brand": "Harmless Harvest",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Dairy & Eggs",
+        "subcategory": "Plant-Based Yogurt",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Dairy & Eggs",
+        "ai_subcategory": "Plant-Based Yogurt",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "ai_clip_score": 0.5529,
+        "ai_clip_source": "category-first",
+        "current_price": "$7.07",
+        "basis_price": "$8.49 ea",
+        "prime_price": "$6.36 ea",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71QZhI057rL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/harmless-harvest-harmless-harvest-dairy-free-drinkable-yogurt-unsweetened-24-fl-oz-1-5-pound-pack-of-1-b081dkvrw7?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "dairy-free",
           "multi-source deal",
           "prime deal"
         ]
@@ -10686,6 +10764,84 @@
         "discount_percent": 28,
         "image": "https://m.media-amazon.com/images/I/81IWcYPKNIL._FMwebp__SR500,500_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-digestive-ultimate-flora-probiotics-65-000-000-000-cfu-delayed-release-vegan-capsules-once-daily-digestive-health-immune-health-dairy-free-30-count-b0dwfny5mc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "multi-source deal",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B08CBWZYR4",
+        "asins": [
+          "B08CBWZYR4"
+        ],
+        "name": "Renew Life Women's Probiotic Capsules",
+        "raw_name": "Renew Life Women's Probiotic Capsules, 50 Billion CFU Guaranteed, Supports pH Balance, Vaginal, Urinary, Digestive and Immune Health(2), L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 30 Count",
+        "brand": "Renew Life",
+        "source_brand": "Renew Life",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.75,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.75,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$38.79",
+        "basis_price": "$48.49 ea",
+        "prime_price": "$34.91 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/81wLAj3cQLL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-50-billion-cfu-guaranteed-supports-ph-balance-vaginal-urinary-digestive-and-immune-health-2-l-rhamnosus-gg-dairy-soy-and-gluten-free-30-count-b08cbwzyr4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "multi-source deal",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B08CBX171Q",
+        "asins": [
+          "B08CBX171Q"
+        ],
+        "name": "Renew Life Women's Probiotic Capsules",
+        "raw_name": "Renew Life Women's Probiotic Capsules, Supports pH Balance for Women, Vaginal, Urinary, Digestive and Immune Health, L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 90 Billion CFU - 60 Ct",
+        "brand": "Renew Life",
+        "source_brand": "Renew Life",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Supplements & Wellness",
+        "subcategory": "Probiotics",
+        "classification_status": "classified",
+        "category_confidence": 0.62,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Probiotics",
+        "ai_confidence": 0.62,
+        "ai_label_source": "clip-provisional",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "ai_clip_score": 0.4179,
+        "ai_clip_source": "category-first",
+        "current_price": "$75.59",
+        "basis_price": "$94.49 ea",
+        "prime_price": "$68.03 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/71wS+N1OWDL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "multi-source deal",
           "prime deal"
@@ -14521,7 +14677,7 @@
         "asin": "B000REL6KW",
         "name": "Alexia Foods Sweet Potato with Sea Salt Fries, 15 OZ",
         "raw_name": "ALEXIA FOODS Sweet Potato With Sea Salt Fries, 15 OZ",
-        "brand": "Alexia Foods Sweet",
+        "brand": "Alexia",
         "brand_source": "derived",
         "retailer": "Whole Foods",
         "sources": [
@@ -14531,10 +14687,10 @@
         "category": "Frozen",
         "subcategory": "Frozen Snacks",
         "classification_status": "classified",
-        "category_confidence": 0.2381,
+        "category_confidence": 0.2454,
         "ai_category": "Frozen",
         "ai_subcategory": "Frozen Snacks",
-        "ai_confidence": 0.2381,
+        "ai_confidence": 0.2454,
         "ai_label_source": "model",
         "ai_model_name": "local-sklearn",
         "ai_model_version": "taxonomy-local-ml-v15",
@@ -14714,6 +14870,111 @@
         "discount_percent": 25,
         "image": "https://m.media-amazon.com/images/I/81AdYZhv7pL._FMwebp_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-coconut-chocolate-almond-protein-bar-5-count-1-98-oz-b0clvsqg9g?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "organic",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B0178ENI4K",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars |Peanut Butter Chocolate Chip | 1.98 Oz (Pack of 12) | Vegan, Low Sugar, Gluten Free, Paleo, Low Carb, Non-GMO, Stevia Free, Soy Free, No Sugar Alcohols",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$26.66",
+        "basis_price": "$29.99 ea",
+        "prime_price": "$23.99 ea",
+        "discount": "20% off",
+        "discount_percent": 20,
+        "image": "https://m.media-amazon.com/images/I/8116ZW91iIL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-peanut-butter-chocolate-chip-1-98-oz-pack-of-12-vegan-low-sugar-gluten-free-paleo-low-carb-non-gmo-stevia-free-soy-free-no-sugar-alcohols-b0178eni4k?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "organic",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B06Y1MMDMC",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Mint, 1.98 Oz (Pack of 12)",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$26.66",
+        "basis_price": "$29.99 ea",
+        "prime_price": "$23.99 ea",
+        "discount": "20% off",
+        "discount_percent": 20,
+        "image": "https://m.media-amazon.com/images/I/7139RLiq91L._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "organic",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B0795D5G91",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Vegan, Low Sugar & Carb, Paleo, Non-GMO, Gluten/Stevia/Soy Free, No Sugar Alcohols, Chocolate Mint, 1.98 Oz",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$2.22",
+        "basis_price": "$2.99 ea",
+        "prime_price": "$2.00 ea",
+        "discount": "33% off",
+        "discount_percent": 33,
+        "image": "https://m.media-amazon.com/images/I/71rn3YdoeWL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "high-protein",
           "organic",
@@ -18262,7 +18523,7 @@
         "asin": "B0D6CHTJS9",
         "name": "Blueland Toilet Cleaner Refill Tablets, 8.5 OZ",
         "raw_name": "BlueLand Toilet Cleaner Refill Tablets, 8.5 OZ",
-        "brand": "BlueLand Toilet Cleaner Refill Tablets",
+        "brand": "BlueLand Toilet Cleaner Refill",
         "brand_source": "derived",
         "retailer": "Whole Foods",
         "sources": [
@@ -19385,6 +19646,42 @@
         "discount_percent": 30,
         "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/catalina-crunch-catalina-crunch-protein-cereal-sugar-free-breakfast-cereal-with-11g-of-protein-gluten-free-dark-chocolate-9-oz-bag-pack-of-1-packaging-may-vary-b07sqb7gf2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B08CJLXVMZ",
+        "name": "Catalina Crunch Protein Cereal",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Honey Graham - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
+        "brand": "Catalina Crunch",
+        "source_brand": "Catalina Crunch",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Cereal & Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Cereal & Breakfast",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "ai_clip_score": 0.7461,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$6.99",
+        "basis_price": "$8.99 ea",
+        "prime_price": "$6.29 ea",
+        "discount": "30% off",
+        "discount_percent": 30,
+        "image": "https://m.media-amazon.com/images/I/71BHX-HqttL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/catalina-crunch-catalina-crunch-protein-cereal-sugar-free-breakfast-cereal-with-11g-of-protein-gluten-free-honey-graham-9-oz-bag-pack-of-1-packaging-may-vary-b08cjlxvmz?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "high-protein",
           "prime deal"
@@ -21690,6 +21987,41 @@
           "/Oil & Seasoning & Canned Food/Dashi & Salt & Sugar/",
           "/Oil & Seasoning & Canned Food/"
         ],
+        "tags": [
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B0B75NZPPG",
+        "name": "Davids Fluoride Free Kids & Adults Toothpaste",
+        "raw_name": "Davids Fluoride Free Kids & Adults Toothpaste, Teeth Whitening, Antiplaque, SLS (Sulfate) Free, Promotes Enamel Health, Mouth & Gum Detox, Natural Strawberry Watermelon, 5.25oz",
+        "brand": "Davids",
+        "source_brand": "Davids",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Oral Care",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Oral Care",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "ai_clip_score": 0.6567,
+        "ai_clip_source": "category-first",
+        "current_price": "$7.99",
+        "basis_price": "$9.99 ea",
+        "prime_price": "$7.19 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/71+8o7pplQL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/davids-davids-fluoride-free-kids-adults-toothpaste-teeth-whitening-antiplaque-sls-sulfate-free-promotes-enamel-health-mouth-gum-detox-natural-strawberry-watermelon-5-25oz-b0b75nzppg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "prime deal"
         ]
@@ -26387,6 +26719,41 @@
         ]
       },
       {
+        "asin": "B07FW66WG8",
+        "name": "Good Day Chocolate Melatonin for Adults [ 80 Count ]",
+        "raw_name": "Good Day Chocolate Melatonin for Adults [ 80 Count ] - Fair Trade Non-GMO Chocolate with Chamomile and Melatonin 1 mg - Adult Melatonin, Adult Natural Sleep Aid Supplement",
+        "brand": "Good Day Chocolate",
+        "source_brand": "Good Day Chocolate",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Sleep Support",
+        "classification_status": "classified",
+        "category_confidence": 0.62,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Sleep Support",
+        "ai_confidence": 0.62,
+        "ai_label_source": "clip-provisional",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "ai_clip_score": 0.411,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$21.19",
+        "basis_price": "$26.49 ea",
+        "prime_price": "$19.07 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/81NaR2YyzTL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/good-day-chocolate-good-day-chocolate-melatonin-for-adults-80-count-fair-trade-non-gmo-chocolate-with-chamomile-and-melatonin-1-mg-adult-melatonin-adult-natural-sleep-aid-supplement-b07fw66wg8?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "prime deal"
+        ]
+      },
+      {
         "asin": "B07FW6CDZQ",
         "name": "Good Day Chocolate Natural Calming Supplement for Adults",
         "raw_name": "Good Day Chocolate Natural Calming Supplement for Adults, Blend of Camomile, Theanine, Magnesium, Fair Trade and Non-GMO Chocolate, 80 Pieces",
@@ -27321,6 +27688,39 @@
         ]
       },
       {
+        "asin": "B0CNB9JLZ5",
+        "name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil",
+        "raw_name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 25.3 Fl Oz (750ml) Refill Can",
+        "brand": "Graza",
+        "source_brand": "Graza",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Oils & Vinegars",
+        "classification_status": "classified",
+        "category_confidence": 0.5109,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Oils & Vinegars",
+        "ai_confidence": 0.5109,
+        "ai_label_source": "model",
+        "ai_model_name": "local-sklearn",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$15.47",
+        "basis_price": "$17.99 ea",
+        "prime_price": "$13.92 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://m.media-amazon.com/images/I/71bDe-jLTKL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/graza-graza-sizzle-extra-virgin-olive-oil-cooking-oil-high-polyphenol-peak-harvest-evoo-cooking-oil-in-a-squeeze-bottle-single-farm-olives-from-spain-25-3-fl-oz-750ml-refill-can-b0cnb9jlz5?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "prime deal"
+        ]
+      },
+      {
         "asin": "hmart:980",
         "name": "Green Tea Laver(GIM) 2.26oz(64g) 16 Packs",
         "raw_name": "Green Tea Laver(GIM) 2.26oz(64g) 16 Packs",
@@ -27808,6 +28208,40 @@
         "discount_percent": 25,
         "image": "https://m.media-amazon.com/images/I/81hEQfQIo8L._FMwebp_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/harmless-harvest-harmless-harvest-dairy-free-cup-yogurt-strawberry-4oz-b081dkrm2j?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "dairy-free",
+          "prime deal"
+        ]
+      },
+      {
+        "asin": "B08KJL5H5C",
+        "name": "Harmless Harvest Dairy-Free Cup Yogurt",
+        "raw_name": "Harmless Harvest Dairy-Free Cup Yogurt - Vanilla 24oz, 24 Oz",
+        "brand": "Harmless Harvest",
+        "source_brand": "Harmless Harvest",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Dairy & Eggs",
+        "subcategory": "Plant-Based Yogurt",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Dairy & Eggs",
+        "ai_subcategory": "Plant-Based Yogurt",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$7.48",
+        "basis_price": "$8.99 ea",
+        "prime_price": "$6.73 ea",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "image": "https://m.media-amazon.com/images/I/91MdZS2LIvL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/harmless-harvest-harmless-harvest-dairy-free-cup-yogurt-vanilla-24oz-24-oz-b08kjl5h5c?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "dairy-free",
           "prime deal"
@@ -29525,7 +29959,7 @@
         "asin": "B079VV4JWX",
         "name": "Hu Vanilla Crunch Dark Chocolate Bar, 2.1 Ounce Bar, 1 Count",
         "raw_name": "Hu Vanilla Crunch Dark Chocolate Bar, 2.1 Ounce Bar, 1 Count",
-        "brand": "Hu Vanilla Crunch",
+        "brand": "Hu",
         "brand_source": "derived",
         "retailer": "Whole Foods",
         "sources": [
@@ -36187,6 +36621,40 @@
         "url": "https://www.target.com/s?searchTerm=Melinda%27s+hot+sauce"
       },
       {
+        "asin": "B09KSRRT9R",
+        "name": "Mezcla Puff Crispy Protein Bars",
+        "raw_name": "Mezcla Puff Crispy Protein Bars, Gluten Free & Vegan Protein Bars, 10g Protein, Alt for Crispy Rice Treat, Granola Bars & Breakfast Bars, Healthy Snacks for Adults, Maple Blueberry, 1 Count",
+        "brand": "Mezcla",
+        "source_brand": "Mezcla",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Cereal & Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.75,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Cereal & Breakfast",
+        "ai_confidence": 0.75,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v15",
+        "current_price": "$2.22",
+        "basis_price": "$3.29 ea",
+        "prime_price": "$2.00 ea",
+        "discount": "39% off",
+        "discount_percent": 39,
+        "image": "https://m.media-amazon.com/images/I/81WsUlPTmZL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/mezcla-mezcla-puff-crispy-protein-bars-gluten-free-vegan-protein-bars-10g-protein-alt-for-crispy-rice-treat-granola-bars-breakfast-bars-healthy-snacks-for-adults-maple-blueberry-1-count-b09ksrrt9r?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "prime deal"
+        ]
+      },
+      {
         "asin": "target:ab904b5010672364",
         "name": "Michelob Ultra®",
         "raw_name": "Michelob Ultra®",
@@ -36248,6 +36716,8 @@
         "asin": "target:3329bb38355f9577",
         "name": "Mike’s Hard Lemonade - 12PK",
         "raw_name": "Mike’s Hard Lemonade - 12pk",
+        "brand": "Mike’s Hard",
+        "brand_source": "derived",
         "retailer": "Target",
         "sources": [
           "Target Deals"
@@ -38515,9 +38985,9 @@
       },
       {
         "asin": "B01BTDN756",
-        "name": "Nuun Sport Hydration Citrus Fruit, 10 Drink Tablets",
+        "name": "Nuun Sport Hydration Citrus Fruit",
         "raw_name": "Nuun Sport Hydration Citrus Fruit, 10 Drink Tablets",
-        "brand": "Nuun Sport Hydration Citrus Fruit",
+        "brand": "Nuun",
         "brand_source": "derived",
         "retailer": "Whole Foods",
         "sources": [
@@ -41276,7 +41746,7 @@
         "asin": "B095XK1V4F",
         "name": "Otto's Naturals Grain-Free Ultimate Cookie Mix",
         "raw_name": "Otto's Naturals Grain-Free Ultimate Cookie Mix, 12.2 Oz., Top 9 Allergen-Free, Organic Cassava Flour, Gluten Free, Non-GMO, Vegan, Plant-Based",
-        "brand": "Otto's Naturals Grain-Free Ultimate Cookie",
+        "brand": "Otto's Naturals",
         "brand_source": "derived",
         "retailer": "Whole Foods",
         "sources": [
@@ -41331,34 +41801,6 @@
         "discount_percent": 24,
         "image": "https://m.media-amazon.com/images/I/6190okUeDKL._FMwebp_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/p-r-i-p-r-i-manuka-honey-mgo-200-monofloral-raw-new-zealand-honey-cool-processed-100-traceable-500g-1-1lb-b002mgyx4e?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "prime deal"
-        ]
-      },
-      {
-        "asin": "target:35e4cfe323e953be",
-        "name": "Pabst Family of Brands",
-        "raw_name": "Pabst Family of Brands",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Alcohol",
-        "subcategory": "Beer",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Alcohol",
-        "ai_subcategory": "Beer",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v15",
-        "current_price": "$3",
-        "prime_price": "$3 ea",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_3d0d797c-9de2-4437-ba67-3e5358bc0c59?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=Pabst+Family+of+Brands",
         "tags": [
           "prime deal"
         ]
@@ -44485,39 +44927,6 @@
         ]
       },
       {
-        "asin": "B0BFKDS23F",
-        "name": "Sanzo Flavored Sparkling Water",
-        "raw_name": "Sanzo Flavored Sparkling Water - Tropical Berry Seltzer (Lychee) - Low Calorie Low Sugar - Craft Asian Drinks - Vegan Gluten Free Carbonated Flavored Water - Fizzy Healthy Drinks - 12oz, 6 Pack",
-        "brand": "Sanzo",
-        "source_brand": "Sanzo",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Sparkling Water",
-        "classification_status": "classified",
-        "category_confidence": 0.92,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Sparkling Water",
-        "ai_confidence": 0.92,
-        "ai_label_source": "silver",
-        "ai_model_name": "openai-silver-label",
-        "ai_model_version": "taxonomy-local-ml-v15",
-        "current_price": "$6.99",
-        "basis_price": "$7.99 ea",
-        "prime_price": "$6.29 ea",
-        "discount": "21% off",
-        "discount_percent": 21,
-        "image": "https://m.media-amazon.com/images/I/71ifrbF0HPL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/sanzo-sanzo-flavored-sparkling-water-tropical-berry-seltzer-lychee-low-calorie-low-sugar-craft-asian-drinks-vegan-gluten-free-carbonated-flavored-water-fizzy-healthy-drinks-12oz-6-pack-b0bfkds23f?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "prime deal"
-        ]
-      },
-      {
         "asin": "B0CK2FQTB3",
         "name": "Sanzo Flavored Sparkling Water",
         "raw_name": "Sanzo Flavored Sparkling Water - Mango Seltzer - Low Calorie Low Sugar - Craft Asian Drinks - Vegan Gluten Free Carbonated Flavored Water - Fizzy Bubbly Healthy Drinks - 12oz, 6 Pack",
@@ -45572,36 +45981,6 @@
         "discount_percent": 20,
         "image": "https://target.scene7.com/is/image/Target/GUEST_258723c3-99da-4dc0-a120-bbbd99e8ce48?wid=324&hei=324&qlt=45&fmt=jpeg",
         "url": "https://www.target.com/s?searchTerm=select+baby+food"
-      },
-      {
-        "asin": "target:d9d7f18893b76435",
-        "name": "Select Beer - 12PK",
-        "raw_name": "select beer - 12pk",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Alcohol",
-        "subcategory": "Beer",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Alcohol",
-        "ai_subcategory": "Beer",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v15",
-        "ai_clip_score": 0.8075,
-        "ai_clip_source": "category-first",
-        "current_price": "$16.99",
-        "prime_price": "$16.99 ea",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_b6d4857f-d1e8-4ccf-9a56-847f8ff99118?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=select+beer+-+12pk",
-        "tags": [
-          "prime deal"
-        ]
       },
       {
         "asin": "target:c24d953029fc2cc1",
@@ -56244,34 +56623,6 @@
         ]
       },
       {
-        "asin": "target:3329bb38355f9577",
-        "name": "Mike’s Hard Lemonade - 12PK",
-        "raw_name": "Mike’s Hard Lemonade - 12pk",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Alcohol",
-        "subcategory": "Cocktails & Mixers",
-        "classification_status": "classified",
-        "category_confidence": 0.9,
-        "ai_category": "Alcohol",
-        "ai_subcategory": "Cocktails & Mixers",
-        "ai_confidence": 0.9,
-        "ai_label_source": "silver",
-        "ai_model_name": "openai-silver-label",
-        "ai_model_version": "taxonomy-local-ml-v15",
-        "current_price": "$16.99",
-        "prime_price": "$16.99 ea",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_ca46f915-ee56-4c76-8c7a-f64344c1b5f5?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=Mike%E2%80%99s+Hard+Lemonade+-+12pk",
-        "tags": [
-          "prime deal"
-        ]
-      },
-      {
         "asin": "B000SE9NUG",
         "name": "Navel Orange",
         "raw_name": "Navel Orange",
@@ -63063,6 +63414,8 @@
         "asin": "target:3329bb38355f9577",
         "name": "Mike’s Hard Lemonade - 12PK",
         "raw_name": "Mike’s Hard Lemonade - 12pk",
+        "brand": "Mike’s Hard",
+        "brand_source": "derived",
         "retailer": "Target",
         "sources": [
           "Target Deals"
@@ -71903,7 +72256,7 @@
           "asin": "B000REL6KW",
           "name": "Alexia Foods Sweet Potato with Sea Salt Fries, 15 OZ",
           "raw_name": "ALEXIA FOODS Sweet Potato With Sea Salt Fries, 15 OZ",
-          "brand": "Alexia Foods Sweet",
+          "brand": "Alexia",
           "brand_source": "derived",
           "retailer": "Whole Foods",
           "sources": [
@@ -71913,10 +72266,10 @@
           "category": "Frozen",
           "subcategory": "Frozen Snacks",
           "classification_status": "classified",
-          "category_confidence": 0.2381,
+          "category_confidence": 0.2454,
           "ai_category": "Frozen",
           "ai_subcategory": "Frozen Snacks",
-          "ai_confidence": 0.2381,
+          "ai_confidence": 0.2454,
           "ai_label_source": "model",
           "ai_model_name": "local-sklearn",
           "ai_model_version": "taxonomy-local-ml-v15",

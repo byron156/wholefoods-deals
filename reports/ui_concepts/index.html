@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grocery Deals UI Concepts</title>
+  <style>
+    :root { color-scheme: light; --ink:#172f25; --muted:#647267; --line:#e6ded0; --paper:#fffdf8; --green:#17633f; --red:#c65342; --cream:#f5efe4; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Avenir Next", ui-rounded, sans-serif; background:linear-gradient(180deg,#fbf7ef,#eee6d8); color:var(--ink); }
+    main { width:min(980px, calc(100vw - 24px)); margin:28px auto 48px; display:grid; gap:18px; }
+    h1 { margin:0; font-size:clamp(2rem, 8vw, 4rem); line-height:.95; letter-spacing:-.06em; }
+    p { margin:0; color:var(--muted); line-height:1.55; }
+    .intro { display:grid; gap:8px; margin-bottom:8px; }
+    .concept-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+    .concept { display:grid; gap:10px; padding:16px; border:1px solid rgba(23,47,37,.1); border-radius:24px; background:rgba(255,255,255,.82); box-shadow:0 18px 50px rgba(23,47,37,.08); text-decoration:none; color:inherit; }
+    .concept:hover { transform:translateY(-1px); }
+    .preview { min-height:260px; border-radius:18px; overflow:hidden; border:1px solid rgba(23,47,37,.08); background:var(--cream); }
+    .mini-top { padding:12px; background:white; display:grid; gap:8px; }
+    .mini-search { height:34px; border-radius:999px; background:#f3f0e9; }
+    .mini-row { display:flex; gap:6px; }
+    .mini-pill { width:52px; height:20px; border-radius:999px; background:#dcebdd; }
+    .mini-pill:nth-child(2) { background:#f1e8dc; }
+    .mini-list { padding:10px; display:grid; gap:8px; }
+    .mini-card { height:70px; border-radius:14px; background:white; display:flex; gap:8px; padding:8px; }
+    .mini-img { width:46px; border-radius:10px; background:#e4eadf; }
+    .mini-lines { flex:1; display:grid; gap:6px; align-content:center; }
+    .mini-line { height:8px; border-radius:999px; background:#d8d2c7; }
+    .mini-price { width:42px; height:16px; border-radius:999px; background:#f1c1b8; }
+    .mock-alt .preview { background:#15271f; }
+    .mock-alt .mini-top { background:#1d352a; }
+    .mock-alt .mini-search { background:#f8efdd; }
+    .mock-alt .mini-card { background:#f8efdd; }
+    .mock-tiles .mini-list { grid-template-columns:1fr 1fr; }
+    .mock-tiles .mini-card { height:118px; flex-direction:column; }
+    .mock-tiles .mini-img { width:100%; height:44px; }
+    h2 { margin:0; font-size:20px; letter-spacing:-.03em; }
+    .tag { color:var(--green); font-size:12px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+  </style>
+</head>
+<body>
+<main>
+  <section class="intro">
+    <p class="tag">Prototype Gallery</p>
+    <h1>Pick the next grocery deals shape.</h1>
+    <p>These are intentionally different static directions. They do not change the production app by themselves; they help us choose what the real refactor should feel like on an iPhone.</p>
+  </section>
+  <section class="concept-grid">
+    <a class="concept" href="receipt-list.html">
+      <div class="preview">
+        <div class="mini-top"><div class="mini-search"></div><div class="mini-row"><div class="mini-pill"></div><div class="mini-pill"></div><div class="mini-pill"></div></div></div>
+        <div class="mini-list">
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div><div class="mini-line"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div><div class="mini-line"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div><div class="mini-line"></div></div></div>
+        </div>
+      </div>
+      <h2>Receipt List</h2>
+      <p>Fastest to skim. Best for phones. Every product is a compact row with price and discount in the same eye path.</p>
+    </a>
+    <a class="concept mock-tiles" href="market-tiles.html">
+      <div class="preview">
+        <div class="mini-top"><div class="mini-search"></div><div class="mini-row"><div class="mini-pill"></div><div class="mini-pill"></div></div></div>
+        <div class="mini-list">
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div></div></div>
+        </div>
+      </div>
+      <h2>Market Tiles</h2>
+      <p>More visual and fun. Better when images are good, but slower to compare prices on small screens.</p>
+    </a>
+    <a class="concept mock-alt" href="deal-radar.html">
+      <div class="preview">
+        <div class="mini-top"><div class="mini-search"></div><div class="mini-row"><div class="mini-pill"></div><div class="mini-pill"></div><div class="mini-pill"></div></div></div>
+        <div class="mini-list">
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div><div class="mini-line"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div><div class="mini-line"></div></div></div>
+          <div class="mini-card"><div class="mini-img"></div><div class="mini-lines"><div class="mini-line"></div><div class="mini-price"></div><div class="mini-line"></div></div></div>
+        </div>
+      </div>
+      <h2>Deal Radar</h2>
+      <p>Bolder, darker, app-like. Great for a personalized deal dashboard, less grocery-list calm.</p>
+    </a>
+  </section>
+</main>
+</body>
+</html>

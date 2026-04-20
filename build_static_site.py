@@ -85,12 +85,24 @@ def copy_report_files() -> None:
         if src.exists():
             shutil.copy2(src, reports_dir / filename)
 
+    concepts_src = BASE_DIR / "reports" / "ui_concepts"
+    if concepts_src.exists():
+        shutil.copytree(concepts_src, reports_dir / "ui_concepts", dirs_exist_ok=True)
+
 
 def write_metadata() -> None:
+    copied_report_files = [name for name in REPORT_FILES if (BASE_DIR / "reports" / name).exists()]
+    concepts_src = BASE_DIR / "reports" / "ui_concepts"
+    if concepts_src.exists():
+        copied_report_files.extend(
+            str(Path("ui_concepts") / path.relative_to(concepts_src))
+            for path in sorted(concepts_src.rglob("*"))
+            if path.is_file()
+        )
     metadata = {
         "routes": sorted(ROUTES.keys()),
         "copied_data_files": [name for name in DATA_FILES if (BASE_DIR / name).exists()],
-        "copied_report_files": [name for name in REPORT_FILES if (BASE_DIR / "reports" / name).exists()],
+        "copied_report_files": copied_report_files,
         "root_static_files": [name for name in ROOT_STATIC_FILES if (STATIC_DIR / name).exists()],
     }
     write_text(DIST_DIR / "build-meta.json", json.dumps(metadata, indent=2))

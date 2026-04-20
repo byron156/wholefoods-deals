@@ -968,6 +968,8 @@ BRAND_DESCRIPTOR_STARTERS = {
     "vinaigrette", "mayo", "mayonnaise", "aioli", "onion", "throat", "caramelized", "salad", "avocado",
     "dipping", "lime", "rosemary", "leave-in", "mask", "defining", "gel", "cleanser", "milk", "ranch",
     "caesar", "greek", "goddess", "creamy",
+    "grain-free", "grain", "ultimate", "hydration", "strawberry", "lemonade", "sport", "citrus", "fruit",
+    "electrolyte", "tabs", "tablets", "mix", "cookie", "cookies",
 }
 
 
@@ -1381,6 +1383,14 @@ def clean_display_name(name, brand=None):
 
 def normalize_brands_across_products(products):
     family_map = {}
+    source_brand_roots = sorted(
+        {
+            clean_source_brand_display(product.get("source_brand") or product.get("brand"))
+            for product in products
+            if product.get("brand_source") == "source" and (product.get("source_brand") or product.get("brand"))
+        },
+        key=lambda brand: (len(normalize_text_key(brand).split()), len(normalize_text_key(brand))),
+    )
     unique_brands = sorted(
         {
             product.get("brand")
@@ -1392,6 +1402,22 @@ def normalize_brands_across_products(products):
 
     for brand in unique_brands:
         brand_key = normalize_text_key(brand)
+        for source_brand in source_brand_roots:
+            source_key = normalize_text_key(source_brand)
+            if not source_key or brand_key == source_key:
+                continue
+            if not brand_key.startswith(source_key + " "):
+                continue
+
+            remainder = brand_key[len(source_key):].strip()
+            remainder_first = remainder.split()[0] if remainder else ""
+            if remainder_first in BRAND_DESCRIPTOR_STARTERS or remainder_first in GENERIC_BRAND_WORDS:
+                family_map[brand] = source_brand
+                break
+
+        if brand in family_map:
+            continue
+
         for candidate in unique_brands:
             if brand == candidate:
                 continue
