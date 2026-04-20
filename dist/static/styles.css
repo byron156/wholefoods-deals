@@ -375,17 +375,16 @@ p {
 
 .app-body {
   min-height: 100vh;
-  padding: 18px 12px 40px;
+  padding: 14px 12px 40px;
 }
 
 .app-shell {
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
-.app-header,
 .search-panel,
 .panel,
 .preferences-sheet,
@@ -394,21 +393,6 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.65);
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
-}
-
-.app-header {
-  padding: 2px 4px 0;
-  border: 0;
-  box-shadow: none;
-  background: transparent;
-  backdrop-filter: none;
-}
-
-.app-header h1 {
-  text-align: left;
-  margin: 0;
-  font-size: clamp(2rem, 6vw, 3.35rem);
-  max-width: 12ch;
 }
 
 .app-kicker {
@@ -485,12 +469,15 @@ p {
 }
 
 .search-panel {
-  border-radius: 26px;
-  padding: 14px;
+  border-radius: 24px;
+  padding: 12px;
   display: grid;
-  gap: 11px;
+  gap: 10px;
   position: static;
   z-index: 15;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .app-search {
@@ -622,6 +609,12 @@ p {
   padding: 2px 2px 0;
 }
 
+.single-feed-panel {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .section-head h2 {
   margin: 0;
   font-size: 18px;
@@ -638,9 +631,9 @@ p {
 .deal-action {
   flex: 1;
   min-width: 0;
-  padding: 9px 10px;
-  border-radius: 10px;
-  background: rgba(11, 107, 69, 0.08);
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(11, 107, 69, 0.07);
   color: var(--brand);
   font-weight: 800;
   font-size: 12px;
@@ -786,12 +779,12 @@ p {
 
 .category-sections {
   display: grid;
-  gap: 18px;
+  gap: 22px;
 }
 
 .category-section {
   display: grid;
-  gap: 10px;
+  gap: 9px;
 }
 
 .for-you-section {
@@ -819,13 +812,14 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  padding: 0 2px;
+  padding: 0 4px;
 }
 
 .category-section-head h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
+  letter-spacing: -0.035em;
 }
 
 .category-head-actions {
@@ -837,10 +831,10 @@ p {
 .category-track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(188px, 188px);
+  grid-auto-columns: minmax(206px, 206px);
   gap: 12px;
   overflow-x: auto;
-  padding: 2px 2px 6px;
+  padding: 2px 4px 8px;
   scrollbar-width: none;
 }
 
@@ -917,7 +911,7 @@ p {
 .deal-price-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 8px;
   flex-wrap: wrap;
 }
@@ -928,7 +922,6 @@ p {
 }
 
 @media (max-width: 860px) {
-  .app-header,
   .section-head,
   .category-section-head,
   .status-row,
@@ -958,14 +951,13 @@ p {
 
 @media (max-width: 640px) {
   .app-body {
-    padding: 12px 8px 34px;
+    padding: 8px 7px 34px;
   }
 
   .app-shell {
     gap: 12px;
   }
 
-  .app-header,
   .search-panel,
   .panel,
   .preferences-sheet,
@@ -973,19 +965,14 @@ p {
     border-radius: 22px;
   }
 
-  .app-header,
   .panel {
     padding: 0;
   }
 
-  .app-header h1 {
-    font-size: 2rem;
-    max-width: none;
-  }
-
   .search-panel {
-    padding: 10px;
-    border-radius: 20px;
+    padding: 9px;
+    border-radius: 18px;
+    gap: 8px;
   }
 
   .app-search {
@@ -1025,28 +1012,28 @@ p {
 
   .card,
   .deal-card {
-    padding: 10px;
-    border-radius: 16px;
+    padding: 9px;
+    border-radius: 17px;
   }
 
   .deal-card {
     display: grid;
-    grid-template-columns: 74px minmax(0, 1fr);
-    column-gap: 10px;
+    grid-template-columns: 92px minmax(0, 1fr);
+    column-gap: 11px;
     row-gap: 5px;
     align-items: start;
   }
 
   .deal-image {
     grid-row: 1 / span 7;
-    width: 74px;
-    height: 74px;
+    width: 92px;
+    height: 92px;
     margin: 0;
   }
 
   .deal-image img {
-    width: 72px;
-    height: 72px;
+    width: 90px;
+    height: 90px;
   }
 
   .deal-badge-row,
@@ -1068,12 +1055,13 @@ p {
   .deal-meta-line {
     font-size: 11px;
     line-height: 1.2;
+    color: #657169;
   }
 
   .deal-title,
   .card h2 {
-    font-size: 13px;
-    line-height: 1.18;
+    font-size: 14px;
+    line-height: 1.16;
   }
 
   .deal-price-row {
@@ -1085,7 +1073,7 @@ p {
   }
 
   .prime {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   .deal-discount {
@@ -1094,8 +1082,9 @@ p {
   }
 
   .category-track {
-    grid-auto-columns: minmax(280px, 86vw);
+    grid-auto-columns: minmax(312px, 92vw);
     gap: 8px;
+    padding-inline: 1px;
   }
 
   .filter-grid {
@@ -1123,6 +1112,6 @@ p {
   }
 
   .category-track {
-    grid-auto-columns: minmax(286px, 88vw);
+    grid-auto-columns: minmax(310px, 94vw);
   }
 }

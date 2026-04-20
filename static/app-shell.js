@@ -4,7 +4,7 @@
     return;
   }
 
-  const STORAGE_KEY = "wholefoods-deals-profile-v7";
+  const STORAGE_KEY = "wholefoods-deals-profile-v8";
   const DEVICE_ID_KEY = "wholefoods-deals-device-id-v1";
   const rawData = JSON.parse(appDataNode.textContent || "{}");
   const feedbackEndpoint = rawData.feedback_endpoint || "/api/fixes";
@@ -18,7 +18,6 @@
   const nodes = {
     searchInput: document.getElementById("global-search"),
     searchMeta: document.getElementById("search-meta"),
-    freshnessMeta: document.getElementById("freshness-meta"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
     storeChipRow: document.getElementById("store-chip-row"),
     filterToggle: document.getElementById("filter-toggle"),
@@ -26,10 +25,7 @@
     sortSelect: document.getElementById("sort-select"),
     filterCategory: document.getElementById("filter-category"),
     filterSubcategory: document.getElementById("filter-subcategory"),
-    filterBrand: document.getElementById("filter-brand"),
-    filterSource: document.getElementById("filter-source"),
     filterDiscount: document.getElementById("filter-discount"),
-    filterPrice: document.getElementById("filter-price"),
     clearFilters: document.getElementById("clear-filters"),
     feedGrid: document.getElementById("feed-grid"),
     categorySheetBackdrop: document.getElementById("category-sheet-backdrop"),
@@ -146,17 +142,14 @@
     return {
       category: "",
       subcategory: "",
-      brand: "",
-      source: "",
       minDiscount: "0",
-      priceMode: "",
     };
   }
 
   function getDefaultProfile() {
     return {
       selectedStoreIds: stores.filter((store) => store.is_active).map((store) => store.id),
-      activeSort: "for-you",
+      activeSort: "best-deal",
       filters: defaultFilters(),
       likedKeys: [],
       dislikedKeys: [],
@@ -273,14 +266,6 @@
     return haystack.includes(query);
   }
 
-  function sourceMatches(product, source) {
-    if (!source) {
-      return true;
-    }
-    const needles = new Set([source.toLowerCase(), sourceLabel(source).toLowerCase()]);
-    return (product.sources || []).concat(product.source_labels || []).some((value) => needles.has(String(value).toLowerCase()));
-  }
-
   function filterProduct(product) {
     const filters = state.profile.filters || defaultFilters();
     if (state.activeRetailer !== "All" && product.retailer !== state.activeRetailer) {
@@ -298,22 +283,7 @@
     if (filters.subcategory && effectiveSubcategory(product) !== filters.subcategory) {
       return false;
     }
-    if (filters.brand && product.brand !== filters.brand) {
-      return false;
-    }
-    if (!sourceMatches(product, filters.source)) {
-      return false;
-    }
     if (Number(filters.minDiscount || 0) && (product.discount_percent || 0) < Number(filters.minDiscount || 0)) {
-      return false;
-    }
-    if (filters.priceMode === "priced" && !(product.prime_price || product.current_price)) {
-      return false;
-    }
-    if (filters.priceMode === "prime" && !product.prime_price) {
-      return false;
-    }
-    if (filters.priceMode === "multi-source" && (product.source_count || 0) < 2) {
       return false;
     }
     return true;
@@ -329,9 +299,6 @@
       state.query
       || filters.category
       || filters.subcategory
-      || filters.brand
-      || filters.source
-      || filters.priceMode
       || Number(filters.minDiscount || 0)
     );
   }
@@ -450,7 +417,7 @@
   function rankProductList(list, mode) {
     const liked = buildAffinityCounts(state.profile.likedKeys);
     const disliked = buildAffinityCounts(state.profile.dislikedKeys);
-    const sortMode = mode || state.profile.activeSort || "for-you";
+    const sortMode = mode || state.profile.activeSort || "best-deal";
     const ranked = list.map((product) => ({
       ...product,
       _score: scoreProduct(product, liked, disliked),
@@ -464,23 +431,9 @@
       if (sortMode === "price-asc") {
         return parsePrice(left.prime_price || left.current_price) - parsePrice(right.prime_price || right.current_price) || (left.name || "").localeCompare(right.name || "");
       }
-      if (sortMode === "source-count") {
-        return (right.source_count || 0) - (left.source_count || 0) || (right.discount_percent || 0) - (left.discount_percent || 0);
-      }
-      if (sortMode === "category") {
-        return effectiveCategory(left).localeCompare(effectiveCategory(right)) || (left.name || "").localeCompare(right.name || "");
-      }
       return right._score - left._score || (right.discount_percent || 0) - (left.discount_percent || 0) || (left.name || "").localeCompare(right.name || "");
     });
     return ranked;
-  }
-
-  function buildForYouShelf() {
-    if (hasActiveFilters()) {
-      return [];
-    }
-    const disliked = new Set(state.profile.dislikedKeys || []);
-    return rankProductList(scopedProducts().filter((product) => !disliked.has(product.key)), "for-you").slice(0, 18);
   }
 
   function buildCategoryShelves() {
@@ -545,8 +498,6 @@
 
   function renderFilterOptions() {
     const filters = state.profile.filters || defaultFilters();
-    const visibleBase = products.filter((product) => state.activeRetailer === "All" || product.retailer === state.activeRetailer);
-    const brands = Array.from(new Set(visibleBase.map((product) => product.brand).filter(Boolean))).sort((a, b) => a.localeCompare(b));
     nodes.filterCategory.innerHTML = `<option value="">Any category</option>` + categoryList
       .map((category) => `<option value="${escapeHtml(category)}"${filters.category === category ? " selected" : ""}>${escapeHtml(category)}</option>`)
       .join("");
@@ -556,43 +507,20 @@
     nodes.filterSubcategory.innerHTML = `<option value="">Any subcategory</option>` + Array.from(new Set(subcategories)).sort((a, b) => a.localeCompare(b))
       .map((subcategory) => `<option value="${escapeHtml(subcategory)}"${filters.subcategory === subcategory ? " selected" : ""}>${escapeHtml(subcategory)}</option>`)
       .join("");
-    nodes.filterBrand.innerHTML = `<option value="">Any brand</option>` + brands
-      .map((brand) => `<option value="${escapeHtml(brand)}"${filters.brand === brand ? " selected" : ""}>${escapeHtml(brand)}</option>`)
-      .join("");
-    nodes.filterSource.value = filters.source || "";
     nodes.filterDiscount.value = filters.minDiscount || "0";
-    nodes.filterPrice.value = filters.priceMode || "";
-    nodes.sortSelect.value = state.profile.activeSort || "for-you";
+    nodes.sortSelect.value = state.profile.activeSort || "best-deal";
   }
 
   function renderStatus() {
     const visible = scopedProducts();
-    const sourceCounts = {};
-    visible.forEach((product) => {
-      (product.source_labels || product.sources || []).forEach((source) => {
-        sourceCounts[source] = (sourceCounts[source] || 0) + 1;
-      });
-    });
-    const sourceText = Object.entries(sourceCounts)
-      .sort((left, right) => right[1] - left[1])
-      .slice(0, 4)
-      .map(([source, count]) => `${source}: ${count}`)
-      .join(" · ");
     nodes.searchMeta.textContent = `${visible.length.toLocaleString()} live deals`;
-    nodes.freshnessMeta.textContent = `${state.activeRetailer} · ${selectedStoreLabel()}${sourceText ? " · " + sourceText : ""}`;
-  }
-
-  function sourceBadges(product) {
-    const labels = Array.from(new Set(product.source_labels || (product.sources || []).map(sourceLabel))).filter(Boolean);
-    if (!labels.length) {
-      return "";
-    }
-    return `<div class="deal-badge-row">${labels.slice(0, 3).map((label) => `<span class="mini-pill">${escapeHtml(label)}</span>`).join("")}</div>`;
   }
 
   function metaLine(product) {
     const pieces = [];
-    if (product.brand) {
+    const retailer = product.retailer || "";
+    const brand = product.brand || "";
+    if (brand && brand.toLowerCase() !== retailer.toLowerCase()) {
       pieces.push(escapeHtml(product.brand));
     }
     if (state.activeRetailer === "All") {
@@ -629,7 +557,6 @@
   }
 
   function renderProductCard(product, options) {
-    const showReason = Boolean(options && options.showReason);
     const liked = (state.profile.likedKeys || []).includes(product.key);
     const disliked = (state.profile.dislikedKeys || []).includes(product.key);
     const imageMarkup = product.image
@@ -641,15 +568,12 @@
     const failedMarkup = isFailedProduct(product)
       ? `<p class="classification-warning">Was ${escapeHtml(product.failed_from_category || "Unknown")} · ${escapeHtml(product.failed_from_subcategory || "Unknown")}</p>`
       : "";
-    const reasonMarkup = showReason && product._why ? `<p class="recommendation-reason">${escapeHtml(product._why)}</p>` : "";
 
     return `
       <article class="deal-card" data-key="${escapeHtml(product.key)}">
         ${imageMarkup}
-        ${sourceBadges(product)}
         ${metaLine(product)}
         ${titleMarkup}
-        ${reasonMarkup}
         ${failedMarkup}
         <div class="deal-price-row">
           ${priceLabel(product)}
@@ -660,7 +584,6 @@
           <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">More</button>
           <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">Less</button>
         </div>
-        <button class="link-action" data-action="change-category" data-key="${escapeHtml(product.key)}" type="button">This doesn't belong here</button>
       </article>
     `;
   }
@@ -670,49 +593,19 @@
     nodes.feedGrid.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
   }
 
-  function renderSearchResults() {
-    const ranked = rankProductList(scopedProducts()).slice(0, 120);
-    if (!ranked.length) {
-      renderEmpty("No deals match those filters yet.");
-      return;
-    }
-    nodes.feedGrid.className = "product-grid is-search-results";
-    nodes.feedGrid.innerHTML = ranked.map((product) => renderProductCard(product)).join("");
-  }
-
   function renderShelves() {
     const shelves = buildCategoryShelves();
-    const forYou = buildForYouShelf();
-    if (!shelves.length && !forYou.length) {
+    if (!shelves.length) {
       renderEmpty("No deals are available for these filters right now.");
       return;
     }
-    const forYouMarkup = forYou.length
-      ? `
-        <section class="category-section for-you-section">
-          <div class="category-section-head">
-            <div>
-              <p class="eyebrow">Personalized</p>
-              <h3>We think you'd like</h3>
-            </div>
-          </div>
-          <div class="category-track">
-            ${forYou.map((product) => renderProductCard(product, { showReason: true })).join("")}
-          </div>
-        </section>
-      `
-      : "";
 
     nodes.feedGrid.className = "category-sections";
-    nodes.feedGrid.innerHTML = forYouMarkup + shelves
+    nodes.feedGrid.innerHTML = shelves
       .map((shelf) => `
         <section class="category-section">
           <div class="category-section-head">
             <h3>${escapeHtml(shelf.category)}</h3>
-            <div class="category-head-actions">
-              <button class="link-action" data-action="move-category-up" data-category="${escapeHtml(shelf.category)}" type="button">Up</button>
-              <button class="link-action" data-action="move-category-down" data-category="${escapeHtml(shelf.category)}" type="button">Down</button>
-            </div>
           </div>
           <div class="category-track">
             ${shelf.items.map((product) => renderProductCard(product)).join("")}
@@ -878,10 +771,6 @@
     renderStoreChips();
     renderFilterOptions();
     renderStatus();
-    if (state.query || (state.profile.activeSort || "for-you") !== "for-you") {
-      renderSearchResults();
-      return;
-    }
     renderShelves();
   }
 
@@ -1000,10 +889,7 @@
   });
   nodes.filterCategory.addEventListener("change", () => updateFilter("category", nodes.filterCategory.value));
   nodes.filterSubcategory.addEventListener("change", () => updateFilter("subcategory", nodes.filterSubcategory.value));
-  nodes.filterBrand.addEventListener("change", () => updateFilter("brand", nodes.filterBrand.value));
-  nodes.filterSource.addEventListener("change", () => updateFilter("source", nodes.filterSource.value));
   nodes.filterDiscount.addEventListener("change", () => updateFilter("minDiscount", nodes.filterDiscount.value));
-  nodes.filterPrice.addEventListener("change", () => updateFilter("priceMode", nodes.filterPrice.value));
   nodes.categorySheetBackdrop.addEventListener("click", closeCategorySheet);
   nodes.categorySheetClose.addEventListener("click", closeCategorySheet);
   nodes.queueSubcategoryFix.addEventListener("click", () => {
