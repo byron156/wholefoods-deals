@@ -11,8 +11,6 @@ from playwright.sync_api import sync_playwright
 
 STORE_MODAL_URL = "https://www.wholefoodsmarket.com/stores?modalView=true"
 ALL_DEALS_URL = "https://www.wholefoodsmarket.com/fmc/alldeals/?_encoding=UTF8&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=US_TRF_ALL_UFG_WFM_REFER_0428801"
-
-STORE_SEARCH_TEXT = "Columbus Circle"
 STORE_SELECT_CTA_PATTERN = re.compile(
     r"make this my store|shop store|select store|choose store|set as my store",
     re.I,
@@ -21,6 +19,8 @@ STORE_SELECT_CTA_PATTERN = re.compile(
 MAX_SCROLL_ROUNDS = 140
 SCROLL_PAUSE_MS = 350
 FINAL_SETTLE_MS = 1200
+NETWORK_IDLE_BREAK_ROUNDS = 8
+NETWORK_ASIN_TARGET = 475
 
 PROGRESS_BAR_WIDTH = 56
 SET_STORE_PROGRESS = 0.14
@@ -30,6 +30,14 @@ SCROLL_PROGRESS_END = 0.95
 FINAL_PARSE_PROGRESS = 0.98
 
 INITIAL_TOTAL_ETA_SECONDS = 55
+
+
+def store_search_text(store: Optional[dict]) -> str:
+    return (store or {}).get("name") or "Columbus Circle"
+
+
+def store_display_name(store: Optional[dict]) -> str:
+    return (store or {}).get("name") or store_search_text(store)
 
 
 def emoji_for_product(name: Optional[str]) -> str:
@@ -486,17 +494,41 @@ def fill_store_search_input(scope, page, value: str) -> bool:
     return False
 
 
-def click_columbus_store_result(scope) -> bool:
-    result_patterns = [
-        re.compile(r"columbus circle", re.I),
-        re.compile(r"10 columbus circle", re.I),
-    ]
+def click_store_result(scope, store: Optional[dict]) -> bool:
+    target_store_id = str((store or {}).get("id") or "").strip()
+    target_name = store_display_name(store)
 
-    for pattern in result_patterns:
+    def click_card_action(card) -> bool:
         try:
-            card = scope.locator("li, article, [data-testid], [class*='store']").filter(has_text=pattern).first
+            return bool(
+                card.evaluate(
+                    """
+                    (root) => {
+                        const controls = Array.from(root.querySelectorAll('a, button, input, [role="button"], span[tabindex]'));
+                        for (const candidate of controls) {
+                            const text = `${candidate.innerText || ''} ${candidate.textContent || ''} ${candidate.value || ''}`.toLowerCase();
+                            if (!/(shop store|make this my store|select store|choose store|set as my store)/i.test(text)) continue;
+                            candidate.scrollIntoView({ block: "center", inline: "center" });
+                            ["mousedown", "mouseup", "click"].forEach((type) => {
+                                candidate.dispatchEvent(new MouseEvent(type, { bubbles: true, cancelable: true, view: window }));
+                            });
+                            if (typeof candidate.click === "function") candidate.click();
+                            return true;
+                        }
+                        return false;
+                    }
+                    """
+                )
+            )
+        except Exception:
+            return False
+
+    if target_store_id:
+        try:
+            card = scope.locator(f'li[data-bu="{target_store_id}"], article[data-bu="{target_store_id}"]').first
+            if click_card_action(card):
+                return True
             targeted = [
-                card.locator(".w-store-finder-store-selector"),
                 card.get_by_text(STORE_SELECT_CTA_PATTERN),
                 card.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
                 card.get_by_role("link", name=STORE_SELECT_CTA_PATTERN),
@@ -510,7 +542,29 @@ def click_columbus_store_result(scope) -> bool:
             if click_first_no_wait([card], timeout=2200):
                 return True
         except Exception:
-            continue
+            pass
+
+    try:
+        card = scope.locator("li, article, [data-testid], [class*='store']").filter(
+            has_text=re.compile(re.escape(target_name), re.I)
+        ).first
+        if click_card_action(card):
+            return True
+        targeted = [
+            card.get_by_text(STORE_SELECT_CTA_PATTERN),
+            card.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
+            card.get_by_role("link", name=STORE_SELECT_CTA_PATTERN),
+            card.locator('button:has-text("Shop Store")'),
+            card.locator('a:has-text("Shop Store")'),
+            card.locator('button'),
+            card.locator('a'),
+        ]
+        if click_first_no_wait(targeted, timeout=2400):
+            return True
+        if click_first_no_wait([card], timeout=2200):
+            return True
+    except Exception:
+        pass
 
     generic = [
         scope.get_by_role("button", name=STORE_SELECT_CTA_PATTERN),
@@ -521,7 +575,7 @@ def click_columbus_store_result(scope) -> bool:
     return click_first_no_wait(generic, timeout=2200)
 
 
-def set_store_via_store_modal_url(page, progress: ProgressBar, start_progress: float = 0.01, end_progress: float = SET_STORE_PROGRESS) -> None:
+def set_store_via_store_modal_url(page, progress: ProgressBar, store: Optional[dict] = None, start_progress: float = 0.01, end_progress: float = SET_STORE_PROGRESS) -> None:
     total_steps = [
         ("goto", 2500),
         ("search", 2200),
@@ -539,7 +593,7 @@ def set_store_via_store_modal_url(page, progress: ProgressBar, start_progress: f
     modal = get_store_modal(page)
     scope = modal or page
 
-    search_ok = fill_store_search_input(scope, page, STORE_SEARCH_TEXT)
+    search_ok = fill_store_search_input(scope, page, store_search_text(store))
     progressed_ms += 2200
     progress.update(start_progress + (end_progress - start_progress) * (progressed_ms / total_ms))
 
@@ -551,16 +605,16 @@ def set_store_via_store_modal_url(page, progress: ProgressBar, start_progress: f
     modal = get_store_modal(page)
     scope = modal or page
 
-    made_store = click_columbus_store_result(scope)
+    made_store = click_store_result(scope, store)
     if not made_store:
         dismiss_popups(page)
         page.wait_for_timeout(600)
         modal = get_store_modal(page)
         scope = modal or page
-        made_store = click_columbus_store_result(scope)
+        made_store = click_store_result(scope, store)
     if not made_store:
         debug_body(page)
-        raise RuntimeError("Could not click the Columbus Circle store CTA.")
+        raise RuntimeError(f"Could not click the {store_display_name(store)} store CTA.")
 
     page.wait_for_timeout(1800)
     progressed_ms += 1800
@@ -590,11 +644,14 @@ def fast_scroll_to_trigger_next_batch(page) -> bool:
     )
 
 
-def discover_all_deals() -> dict:
+def discover_all_deals(store: Optional[dict] = None) -> dict:
     captured_batches = []
+    network_asins = set()
     recs_by_index = {}
     products_by_asin = {}
     progress = ProgressBar(width=PROGRESS_BAR_WIDTH, initial_eta_seconds=INITIAL_TOTAL_ETA_SECONDS)
+    target_store_id = str((store or {}).get("id") or "")
+    target_store_name = store_display_name(store)
 
     progress.update(0.01)
 
@@ -629,17 +686,21 @@ def discover_all_deals() -> dict:
 
             for rec_str in body.get("cardRecommendations", []):
                 rec = parse_card_recommendation(rec_str)
+                if rec["id"]:
+                    network_asins.add(rec["id"])
                 if rec["index"] not in recs_by_index:
                     recs_by_index[rec["index"]] = rec["raw"]
 
         page.on("response", handle_response)
 
-        set_store_via_store_modal_url(page, progress, start_progress=0.07, end_progress=SET_STORE_PROGRESS)
+        set_store_via_store_modal_url(page, progress, store=store, start_progress=0.07, end_progress=SET_STORE_PROGRESS)
 
         page.goto(ALL_DEALS_URL, wait_until="domcontentloaded")
         progress.animate_wait(SET_STORE_PROGRESS, OPEN_DEALS_PROGRESS, 2500, steps=10)
 
         displayed_scroll_progress = SCROLL_PROGRESS_START
+        stagnant_rounds = 0
+        last_network_count = 0
 
         for i in range(MAX_SCROLL_ROUNDS):
             did_scroll = fast_scroll_to_trigger_next_batch(page)
@@ -654,12 +715,29 @@ def discover_all_deals() -> dict:
             progress.animate_wait(displayed_scroll_progress, next_target, SCROLL_PAUSE_MS, steps=4)
             displayed_scroll_progress = min(next_target, SCROLL_PROGRESS_END)
 
+            current_network_count = len(network_asins)
+            if current_network_count > last_network_count:
+                stagnant_rounds = 0
+                last_network_count = current_network_count
+            else:
+                stagnant_rounds += 1
+
+            if current_network_count >= NETWORK_ASIN_TARGET and stagnant_rounds >= NETWORK_IDLE_BREAK_ROUNDS:
+                print(
+                    f"\nNetwork ASIN capture plateaued at {current_network_count} unique ASINs; "
+                    "ending scroll early."
+                )
+                break
+
         progress.animate_wait(displayed_scroll_progress, FINAL_PARSE_PROGRESS, FINAL_SETTLE_MS, steps=6)
 
         final_html = page.content()
         parsed_products = parse_all_deals_html(final_html)
 
         for product in parsed_products:
+            product["available_store_ids"] = [target_store_id] if target_store_id else []
+            product["source_store_id"] = target_store_id or None
+            product["source_store_name"] = target_store_name
             asin = product.get("asin")
             if asin:
                 products_by_asin[asin] = product
@@ -677,6 +755,9 @@ def discover_all_deals() -> dict:
         "recommendations": ordered_recommendations,
         "products": ordered_products,
         "captured_batches": captured_batches,
+        "captured_asins": sorted(network_asins),
+        "store_id": target_store_id,
+        "store_name": target_store_name,
     }
 
 

@@ -147,6 +147,11 @@ ACTIVE_WHOLE_FOODS_STORES = [store for store in SUPPORTED_STORES if store.get("i
 ACTIVE_WHOLE_FOODS_STORE_IDS = [str(store["id"]) for store in ACTIVE_WHOLE_FOODS_STORES if store.get("id")]
 DEFAULT_STORE_IDS = [ACTIVE_WHOLE_FOODS_STORES[0]["id"] if ACTIVE_WHOLE_FOODS_STORES else SUPPORTED_STORES[0]["id"]]
 SALES_FLYER_URL = f"https://www.wholefoodsmarket.com/sales-flyer?store-id={DEFAULT_STORE_IDS[0]}"
+
+
+def build_sales_flyer_url(store_id=None):
+    selected_store_id = str(store_id or DEFAULT_STORE_IDS[0])
+    return f"https://www.wholefoodsmarket.com/sales-flyer?store-id={selected_store_id}"
 CATEGORY_PROFILES = {
     "Produce": {
         "strong": [
@@ -2206,6 +2211,10 @@ def load_all_deals():
                 emoji=p.get("emoji"),
                 extra_fields={
                     "retailer": p.get("retailer") or WHOLE_FOODS_RETAILER,
+                    "available_store_ids": list(p.get("available_store_ids") or []),
+                    "store_offers": list(p.get("store_offers") or []),
+                    "source_store_id": p.get("source_store_id"),
+                    "source_store_name": p.get("source_store_name"),
                 },
             )
         )
@@ -2251,6 +2260,10 @@ def load_search_deals():
             extra_fields={
                 "retailer": p.get("retailer") or "Whole Foods",
                 "source_categories": source_categories,
+                "available_store_ids": list(p.get("available_store_ids") or []),
+                "store_offers": list(p.get("store_offers") or []),
+                "source_store_id": p.get("source_store_id"),
+                "source_store_name": p.get("source_store_name"),
             },
         )
         if source_categories:
@@ -2283,6 +2296,10 @@ def load_saved_flyer_products():
         for key in [
             "retailer",
             "source_categories",
+            "available_store_ids",
+            "store_offers",
+            "source_store_id",
+            "source_store_name",
             "flyer_rank",
             "flyer_promotion_id",
             "flyer_promotion_grouping",
@@ -2842,10 +2859,11 @@ def normalized_product_for_source(product, source_name):
     retailer = normalize_retailer(product.get("retailer"), product.get("url"), [source_name])
     store_ids = []
     if retailer == WHOLE_FOODS_RETAILER:
-        if source_name == "All Deals":
+        store_ids = list(product.get("available_store_ids") or [])
+        if not store_ids and source_name == "All Deals":
             store_ids = list(ACTIVE_WHOLE_FOODS_STORE_IDS or DEFAULT_STORE_IDS)
-        else:
-            store_ids = list(product.get("available_store_ids") or DEFAULT_STORE_IDS)
+        if not store_ids:
+            store_ids = list(DEFAULT_STORE_IDS)
     normalized = standardize_product_record(
         asin=product.get("asin"),
         asins=product.get("asins"),
@@ -3105,6 +3123,8 @@ def active_taxonomy_subcategory_options():
 
 
 def build_flyer_display_product(p):
+    store_id = str(p.get("store_id") or DEFAULT_STORE_IDS[0])
+    store_name = p.get("store_name")
     return standardize_product_record(
         name=p.get("productName", "Unknown Product"),
         brand=p.get("brandName") or p.get("originBrandName"),
@@ -3117,19 +3137,23 @@ def build_flyer_display_product(p):
         extra_fields={
             "rank": p.get("rank"),
             "sale_price": p.get("salePrice"),
+            "available_store_ids": [store_id],
             "flyer_promotion_id": p.get("promotionId"),
             "flyer_promotion_grouping": p.get("promotionGrouping"),
             "flyer_source": "display-promotion",
+            "source_store_id": store_id,
+            "source_store_name": store_name,
             "retailer": "Whole Foods",
         },
     )
 
 
-def build_flyer_promotion_url(p):
+def build_flyer_promotion_url(p, store_id=None):
     promotion_id = p.get("promotionId")
     if not promotion_id:
         return None
-    return f"https://www.wholefoodsmarket.com/promotion/{promotion_id}?store-id={DEFAULT_STORE_IDS[0]}"
+    selected_store_id = str(store_id or p.get("store_id") or DEFAULT_STORE_IDS[0])
+    return f"https://www.wholefoodsmarket.com/promotion/{promotion_id}?store-id={selected_store_id}"
 
 
 def extract_flyer_asin_from_href(href):
@@ -3245,6 +3269,8 @@ def expand_flyer_promotion_detail_page(page, max_clicks=20):
 
 
 def standardize_flyer_detail_product(p, detail_product, detail_index, detail_count):
+    store_id = str(p.get("store_id") or DEFAULT_STORE_IDS[0])
+    store_name = p.get("store_name")
     raw_brand = detail_product.get("brand") or p.get("brandName") or p.get("originBrandName")
     source_categories = []
     if normalize_text_key(raw_brand) == "fresh produce":
@@ -3270,11 +3296,14 @@ def standardize_flyer_detail_product(p, detail_product, detail_index, detail_cou
             "rank": detail_rank,
             "flyer_rank": rank,
             "sale_price": p.get("salePrice"),
+            "available_store_ids": [store_id],
             "flyer_promotion_id": p.get("promotionId"),
             "flyer_promotion_grouping": p.get("promotionGrouping"),
             "flyer_promotion_name": p.get("productName"),
             "flyer_detail_count": detail_count,
             "flyer_source": "promotion-detail",
+            "source_store_id": store_id,
+            "source_store_name": store_name,
             "retailer": "Whole Foods",
         },
     )
@@ -3288,8 +3317,12 @@ def standardize_flyer_detail_product(p, detail_product, detail_index, detail_cou
     return product
 
 
-def fetch_products():
-    r = requests.get(SALES_FLYER_URL, timeout=20)
+def fetch_products(store=None):
+    store_id = str((store or {}).get("id") or DEFAULT_STORE_IDS[0])
+    store_name = (store or {}).get("name")
+    sales_flyer_url = build_sales_flyer_url(store_id)
+
+    r = requests.get(sales_flyer_url, timeout=20)
     r.raise_for_status()
 
     next_data = extract_next_data_from_html(r.text)
@@ -3325,13 +3358,16 @@ def fetch_products():
 
                 selected_promotions = promotions[:max_promotions] if max_promotions else promotions
                 for index, p in enumerate(selected_promotions, start=1):
-                    promotion_url = build_flyer_promotion_url(p)
+                    p = dict(p)
+                    p["store_id"] = store_id
+                    p["store_name"] = store_name
+                    promotion_url = build_flyer_promotion_url(p, store_id=store_id)
                     detail_products = []
                     if promotion_url:
                         try:
                             print(
                                 f"Flyer detail {index}/{len(selected_promotions)}: "
-                                f"{p.get('productName', 'Unknown Product')}"
+                                f"{p.get('productName', 'Unknown Product')} [{store_name or store_id}]"
                             )
                             page.goto(promotion_url, wait_until="domcontentloaded", timeout=90000)
                             try:

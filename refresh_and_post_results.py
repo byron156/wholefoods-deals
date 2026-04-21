@@ -6,6 +6,7 @@ import sys
 import traceback
 
 from app import (
+    ACTIVE_WHOLE_FOODS_STORES,
     BASE_DIR,
     build_combined_products,
     fetch_products,
@@ -38,6 +39,15 @@ HMART_DEALS_PRODUCTS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
 HMART_DEALS_REPORT_FILE = os.path.join(BASE_DIR, "hmart_deals_report.json")
 
 
+def whole_foods_store_targets():
+    preferred_ids = {"10160", "10328"}
+    stores = [
+        store for store in ACTIVE_WHOLE_FOODS_STORES
+        if str(store.get("id") or "") in preferred_ids
+    ]
+    return stores or ACTIVE_WHOLE_FOODS_STORES[:1]
+
+
 def write_json(path, payload):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
@@ -48,6 +58,19 @@ def load_json(path, default):
         return default
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def filter_products_for_store(products, store_id):
+    target_store_id = str(store_id or "")
+    if not target_store_id:
+        return list(products or [])
+    filtered = []
+    for product in products or []:
+        store_ids = [str(value) for value in (product.get("available_store_ids") or []) if value]
+        source_store_id = str(product.get("source_store_id") or "")
+        if target_store_id in store_ids or source_store_id == target_store_id:
+            filtered.append(product)
+    return filtered
 
 
 def refresh_missing_clip_audit(products):
@@ -100,32 +123,105 @@ def main():
     if args.skip_refresh:
         print("Skipping scrape refresh and reusing existing JSON files...")
     else:
+        wf_stores = whole_foods_store_targets()
+
         print("Refreshing search deals...")
-        search_result = discover_search_deals()
-        write_json(SEARCH_DEALS_PRODUCTS_FILE, search_result["products"])
+        all_search_products = []
+        search_store_runs = []
+        previous_search_products = load_json(SEARCH_DEALS_PRODUCTS_FILE, [])
+        for store in wf_stores:
+            print(f"Refreshing search deals for {store.get('name')}...")
+            try:
+                search_result = discover_search_deals(store=store)
+            except Exception as exc:
+                print(
+                    f"Whole Foods search refresh failed for {store.get('name')}; "
+                    "reusing any previous store-specific search rows so the overall refresh can continue: "
+                    f"{exc}"
+                )
+                traceback.print_exc()
+                fallback_products = filter_products_for_store(previous_search_products, store.get("id"))
+                if fallback_products:
+                    all_search_products.extend(fallback_products)
+                search_store_runs.append(
+                    {
+                        "store_id": str(store.get("id") or ""),
+                        "store_name": store.get("name"),
+                        "search_url": None,
+                        "product_count": len(fallback_products),
+                        "network_batch_count": 0,
+                        "sort_runs": [],
+                        "reused_previous": True,
+                        "error": str(exc),
+                    }
+                )
+                continue
+
+            all_search_products.extend(search_result["products"])
+            search_store_runs.append(
+                {
+                    "store_id": search_result.get("store_id"),
+                    "store_name": search_result.get("store_name"),
+                    "search_url": search_result["search_url"],
+                    "product_count": search_result["product_count"],
+                    "network_batch_count": search_result["network_batch_count"],
+                    "sort_runs": search_result.get("sort_runs", []),
+                    "reused_previous": False,
+                    "error": None,
+                }
+            )
+        write_json(SEARCH_DEALS_PRODUCTS_FILE, all_search_products)
         write_json(
             SEARCH_DEALS_REPORT_FILE,
             {
-                "search_url": search_result["search_url"],
-                "product_count": search_result["product_count"],
-                "network_batch_count": search_result["network_batch_count"],
-                "sort_runs": search_result.get("sort_runs", []),
+                "product_count": len(all_search_products),
+                "stores": search_store_runs,
             },
         )
 
         print("Refreshing all deals...")
-        all_deals_result = discover_all_deals()
-        write_json(DISCOVERED_RECOMMENDATIONS_FILE, all_deals_result["recommendations"])
-        write_json(DISCOVERED_PRODUCTS_FILE, all_deals_result["products"])
-        write_json(CAPTURED_BATCHES_FILE, all_deals_result["captured_batches"])
+        all_deals_recommendations = []
+        all_deals_products = []
+        all_deals_batches = []
+        all_deals_store_runs = []
+        for store in wf_stores:
+            print(f"Refreshing all deals for {store.get('name')}...")
+            all_deals_result = discover_all_deals(store=store)
+            all_deals_recommendations.extend(all_deals_result["recommendations"])
+            all_deals_products.extend(all_deals_result["products"])
+            all_deals_batches.extend(all_deals_result["captured_batches"])
+            all_deals_store_runs.append(
+                {
+                    "store_id": all_deals_result.get("store_id"),
+                    "store_name": all_deals_result.get("store_name"),
+                    "product_count": all_deals_result["product_count"],
+                    "recommendation_count": all_deals_result["recommendation_count"],
+                }
+            )
+        write_json(DISCOVERED_RECOMMENDATIONS_FILE, all_deals_recommendations)
+        write_json(DISCOVERED_PRODUCTS_FILE, all_deals_products)
+        write_json(CAPTURED_BATCHES_FILE, all_deals_batches)
 
         print("Refreshing flyer deals...")
-        flyer_products = fetch_products()
+        flyer_products = []
+        flyer_store_runs = []
+        for store in wf_stores:
+            print(f"Refreshing flyer deals for {store.get('name')}...")
+            store_products = fetch_products(store=store)
+            flyer_products.extend(store_products)
+            flyer_store_runs.append(
+                {
+                    "store_id": store.get("id"),
+                    "store_name": store.get("name"),
+                    "product_count": len(store_products),
+                }
+            )
         write_json(FLYER_PRODUCTS_FILE, flyer_products)
         write_json(
             FLYER_REPORT_FILE,
             {
                 "product_count": len(flyer_products),
+                "stores": flyer_store_runs,
             },
         )
 
@@ -168,6 +264,18 @@ def main():
                 "source_urls": hmart_result["source_urls"],
                 "product_count": hmart_result["product_count"],
                 "runs": hmart_result["runs"],
+            },
+        )
+        write_json(
+            COMBINED_REPORT_FILE,
+            {
+                "whole_foods_stores": [
+                    {"store_id": store.get("id"), "store_name": store.get("name")}
+                    for store in wf_stores
+                ],
+                "search_deals_count": len(all_search_products),
+                "all_deals_count": len(all_deals_products),
+                "flyer_count": len(flyer_products),
             },
         )
 
