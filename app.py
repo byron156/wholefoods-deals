@@ -107,15 +107,14 @@ WHOLE_FOODS_STORE_CONFIG = [
         "needs_store_id": True,
     },
     {
-        "id": "upper-west-side",
+        "id": "10328",
         "slug": "upper-west-side",
         "name": "Upper West Side",
         "city": "New York",
         "state": "NY",
         "label": "Upper West Side, NYC",
         "address": "808 Columbus Ave, New York, NY 10025",
-        "is_active": False,
-        "needs_store_id": True,
+        "is_active": True,
     },
     {
         "id": "union-square",
@@ -145,6 +144,7 @@ def load_supported_stores():
 
 SUPPORTED_STORES = load_supported_stores()
 ACTIVE_WHOLE_FOODS_STORES = [store for store in SUPPORTED_STORES if store.get("is_active")]
+ACTIVE_WHOLE_FOODS_STORE_IDS = [str(store["id"]) for store in ACTIVE_WHOLE_FOODS_STORES if store.get("id")]
 DEFAULT_STORE_IDS = [ACTIVE_WHOLE_FOODS_STORES[0]["id"] if ACTIVE_WHOLE_FOODS_STORES else SUPPORTED_STORES[0]["id"]]
 SALES_FLYER_URL = f"https://www.wholefoodsmarket.com/sales-flyer?store-id={DEFAULT_STORE_IDS[0]}"
 CATEGORY_PROFILES = {
@@ -2840,7 +2840,12 @@ def apply_fixes_to_products(products):
 
 def normalized_product_for_source(product, source_name):
     retailer = normalize_retailer(product.get("retailer"), product.get("url"), [source_name])
-    store_ids = list(product.get("available_store_ids") or DEFAULT_STORE_IDS) if retailer == WHOLE_FOODS_RETAILER else []
+    store_ids = []
+    if retailer == WHOLE_FOODS_RETAILER:
+        if source_name == "All Deals":
+            store_ids = list(ACTIVE_WHOLE_FOODS_STORE_IDS or DEFAULT_STORE_IDS)
+        else:
+            store_ids = list(product.get("available_store_ids") or DEFAULT_STORE_IDS)
     normalized = standardize_product_record(
         asin=product.get("asin"),
         asins=product.get("asins"),
