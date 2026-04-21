@@ -80,26 +80,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:2390",
-    "name": "AI Cream 3.38oz (100ml)",
-    "brand": "Physiogel",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/161737/80395430286.png?v=638448909710870000",
-    "url": "https://www.hmart.com/ai-cream-3-38oz--100ml--1/p",
-    "current_price": "$9.99",
-    "basis_price": "$29.99",
-    "prime_price": null,
-    "discount": "67% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
-    "categories": [
-      "/Beauty/Skincare/",
-      "/Beauty/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:139",
     "name": "Air Dried Shin Ramen Light 3.4oz(97g) 4 Packs",
     "brand": "Nongshim",
@@ -146,8 +126,28 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161839/84080901235_1.png?v=638448910114730000",
     "url": "https://www.hmart.com/baby-radish-sprout-kimchi-26oz--737g--1/p",
-    "current_price": "$5.25",
-    "basis_price": "$10.49",
+    "current_price": "$6.49",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "50% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:10103",
+    "name": "Baby Radish Sprout Kimchi 4lbs (1.8kg)",
+    "brand": "Tobagi",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/176543/84080901234.png?v=639008877550400000",
+    "url": "https://www.hmart.com/baby-radish-sprout-kimchi-4lbs--1-8kg--1/p",
+    "current_price": "$9.25",
+    "basis_price": "$18.49",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -232,7 +232,7 @@
     "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
@@ -276,6 +276,26 @@
     "categories": [
       "/Paste & Marinade & Sauce/Marinade/",
       "/Paste & Marinade & Sauce/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12953",
+    "name": "Better Bear Folding Card Congrats",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179678/8800284737621.png?v=639117945049900000",
+    "url": "https://www.hmart.com/better-bear-folding-card-congrats/p",
+    "current_price": "$2.49",
+    "basis_price": "$3.59",
+    "prime_price": null,
+    "discount": "31% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
     ],
     "available_quantity": 10000
   },
@@ -367,12 +387,12 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/168622/2561620250_MR.BROWN_Canned-Iced-Coffee_BLUE-MOUNTAIN-BLEND_8_12_FL_OZ--1-.png?v=638549419525870000",
     "url": "https://www.hmart.com/blue-mountain-8-12oz-1/p",
     "current_price": "$1.39",
-    "basis_price": "$1.49",
+    "basis_price": "$1.99",
     "prime_price": null,
-    "discount": "7% off",
+    "discount": "30% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Coffee/",
       "/Beverage & Coffee & Tea & Honey/"
@@ -500,6 +520,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13102",
+    "name": "Buldak Flavor Japchae 8.11 Oz (230g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179325/880956111228.png?v=639114317665970000",
+    "url": "https://www.hmart.com/buldak-flavor-japchae-8-11-oz--230g-/p",
+    "current_price": "$3.49",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Instant & Quick Food/Instant Food/",
+      "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:2941",
     "name": "Burdock Fried Tofu Vegan Kimbap 7.76oz",
     "brand": "BOKMANSA",
@@ -516,6 +556,46 @@
     "categories": [
       "/Instant & Quick Food/Instant Food/",
       "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12889",
+    "name": "Butter Bear Balloon Square Card Thank You",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179417/8800345473154.png?v=639117852152870000",
+    "url": "https://www.hmart.com/butter-bear-balloon-square-card-thank-you/p",
+    "current_price": "$2.29",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "12% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12929",
+    "name": "Butter Bear Square Cosmetic Pouch",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179579/8809836077390.png?v=639117908788970000",
+    "url": "https://www.hmart.com/butter-bear-square-cosmetic-pouch/p",
+    "current_price": "$7.99",
+    "basis_price": "$9.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -556,6 +636,26 @@
     "categories": [
       "/Paste & Marinade & Sauce/Ketchup & Sriracha & Others/",
       "/Paste & Marinade & Sauce/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12930",
+    "name": "Cereal Milkcat 15 Inch Laptop Sleeve",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179583/8809883012542.png?v=639117910105800000",
+    "url": "https://www.hmart.com/cereal-milkcat-15-inch-laptop-sleeve/p",
+    "current_price": "$1.49",
+    "basis_price": "$1.59",
+    "prime_price": null,
+    "discount": "6% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -716,6 +816,46 @@
     "categories": [
       "/Paste & Marinade & Sauce/Pastes & Soybean & Ssamjang/",
       "/Paste & Marinade & Sauce/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12927",
+    "name": "Cloud Milkcat Pattern 3-folding Umbrella Blue",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179564/8800317177936-2.png?v=639117907790030000",
+    "url": "https://www.hmart.com/cloud-milkcat-pattern-3-folding-umbrella-blue/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12924",
+    "name": "Clover Rainy Pattern 3-folding Umbrella Purple",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179561/8800317177929-2.png?v=639117907548830000",
+    "url": "https://www.hmart.com/clover-rainy-pattern-3-folding-umbrella-purple/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -966,8 +1106,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161838/840809011759_1_1.jpg?v=638448910109100000",
     "url": "https://www.hmart.com/cubed-radish-kimchi-26oz-737g--1/p",
-    "current_price": "$5.49",
-    "basis_price": "$10.99",
+    "current_price": "$4.75",
+    "basis_price": "$9.49",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -1260,6 +1400,226 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13103",
+    "name": "Fishcake Soup 7.76oz(220g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179333/880902543103.png?v=639114318138770000",
+    "url": "https://www.hmart.com/fishcake-soup-7-76oz-220g-/p",
+    "current_price": "$3.99",
+    "basis_price": "$5.99",
+    "prime_price": null,
+    "discount": "33% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
+      "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12933",
+    "name": "Fluffy Applefarm Milkcat Shaped Bath Mat Blue",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179604/8800252111989-1.png?v=639117912221000000",
+    "url": "https://www.hmart.com/fluffy-applefarm-milkcat-shaped-bath-mat-lavender/p",
+    "current_price": "$15.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12945",
+    "name": "Fluffy Butter Bear Slim Photocard Keychain",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179720/8809883027669.png?v=639119438955130000",
+    "url": "https://www.hmart.com/fluffy-butter-bear-slim-photocard-keychain/p",
+    "current_price": "$9.99",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "23% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12934",
+    "name": "Fluffy Buttergom Shaped Bath Mat Ivory",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179607/8800252111996-1.png?v=639117915450730000",
+    "url": "https://www.hmart.com/fluffy-buttergom-shaped-bath-mat-lavender/p",
+    "current_price": "$15.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12932",
+    "name": "Fluffy Gurumi Shaped Bath Mat Brown",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179600/8809963193765.png?v=639117911988770000",
+    "url": "https://www.hmart.com/fluffy-gurumi-shaped-bath-mat-lavender/p",
+    "current_price": "$15.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12943",
+    "name": "Fluffy Milkcat Photocard Keychain",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179642/8809836086194.png?v=639117922486300000",
+    "url": "https://www.hmart.com/fluffy-milkcat-photocard-keychain/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12931",
+    "name": "Fluffy Milkcat Shaped Bath Mat Lavender",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179593/8809963193758.png?v=639117911342800000",
+    "url": "https://www.hmart.com/fluffy-milkcat-shaped-bath-mat-lavender/p",
+    "current_price": "$15.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12944",
+    "name": "Fluffy Mr.Butter Photocard Keychain",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179645/8809836086200.png?v=639117922749800000",
+    "url": "https://www.hmart.com/fluffy-mr-butter-photocard-keychain/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12898",
+    "name": "Fluffy Mungsomi Photocard Book White",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179712/8800252075366.png?v=639119437923470000",
+    "url": "https://www.hmart.com/fluffy-mungsomi-photocard-book-white/p",
+    "current_price": "$12.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "19% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12941",
+    "name": "Fluffy Mungsomi Photocard Keychain",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179716/8800284770659.png?v=639119438668200000",
+    "url": "https://www.hmart.com/fluffy-mungsomi-photocard-keychain/p",
+    "current_price": "$9.99",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "23% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12942",
+    "name": "Fluffy Scrabbit Photocard Keychain",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179639/8809836086187.png?v=639117921451930000",
+    "url": "https://www.hmart.com/fluffy-scrabbit-photocard-keychain/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:2820",
     "name": "Fresh Potato Noodle2.2lb(1kg)",
     "brand": "HAIO",
@@ -1352,7 +1712,7 @@
     "discount": "33% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Produce/Fruit/",
       "/Produce/"
@@ -1436,26 +1796,6 @@
     "categories": [
       "/Rice & Grain/Mixed Grain & Powder/",
       "/Rice & Grain/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:5579",
-    "name": "Gochujang Hot Pepper Paste Mild 1.1lb(500g)",
-    "brand": "Haechandle",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/167549/1306101154--1-.png?v=638481871794370000",
-    "url": "https://www.hmart.com/gochujang-hot-pepper-paste-mild-1-1lb-500g--1/p",
-    "current_price": "$4.99",
-    "basis_price": "$5.99",
-    "prime_price": null,
-    "discount": "17% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Paste & Marinade & Sauce/Gochujang & Red Pepper Paste/",
-      "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000
   },
@@ -1920,6 +2260,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12913",
+    "name": "Ivory Spotted Cat Mat",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179509/8800317154180-1.png?v=639117894373670000",
+    "url": "https://www.hmart.com/ivory-spotted-cat-mat/p",
+    "current_price": "$12.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "19% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:10448",
     "name": "Jamdown Low Calories Blueberry Jam 3.53 Oz (100g)",
     "brand": "Bokumjari",
@@ -1976,26 +2336,6 @@
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Tea/",
       "/Beverage & Coffee & Tea & Honey/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:436",
-    "name": "Java Curry Sauce Mix Med Hot 6.52oz(185g)",
-    "brand": "House Foods",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/161663/77377002166_1.jpg?v=638448909426900000",
-    "url": "https://www.hmart.com/java-curry-sauce-mix-med-hot-6-52oz-185g--1/p",
-    "current_price": "$4.99",
-    "basis_price": "$5.19",
-    "prime_price": null,
-    "discount": "4% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Instant & Quick Food/Curry & Jjajang & Soup/",
-      "/Instant & Quick Food/"
     ],
     "available_quantity": 10000
   },
@@ -2220,6 +2560,86 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12894",
+    "name": "Kitsch Pop Milkcat PVC Photocard Holder Green",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179435/8800252115482.png?v=639117854269100000",
+    "url": "https://www.hmart.com/kitsch-pop-milkcat-pvc-photocard-holder-green/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12896",
+    "name": "Kitsch Pop Mungsomi PVC Photocard Holder Purple",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179707/8800252087642.png?v=639119437614930000",
+    "url": "https://www.hmart.com/kitsch-pop-mungsomi-pvc-photocard-holder-green/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12897",
+    "name": "Kitsch Pop Rainy PVC Photocard Holder Green",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179448/8800252087659.png?v=639117862146870000",
+    "url": "https://www.hmart.com/kitsch-pop-rainy-pvc-photocard-holder-green/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12895",
+    "name": "Kitsch Pop Scrabbit PVC Photocard Holder Pink",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179703/8800252115499.png?v=639119437010630000",
+    "url": "https://www.hmart.com/kitsch-pop-scrabbit-pvc-photocard-holder-green/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:2748",
     "name": "Knife Cut Noodles 35.2 OZ (1000 G)",
     "brand": "Chilkab",
@@ -2340,6 +2760,46 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13107",
+    "name": "Kosodang Rice Butter Salt Bread 7.93 Oz (225g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179337/880999095001.png?v=639114318671430000",
+    "url": "https://www.hmart.com/kosodang-rice-butter-salt-bread-7-93-oz--225g-/p",
+    "current_price": "$6.99",
+    "basis_price": "$9.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Snacks & Candy & Nuts/Bread & Dessert/",
+      "/Snacks & Candy & Nuts/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:13097",
+    "name": "Kosodang Rice Whipped Cream Salt Bread 9.52 Oz (270g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179334/880035520002.png?v=639114318439130000",
+    "url": "https://www.hmart.com/kosodang-rice-whipped-cream-salt-bread-9-52-oz--270g-/p",
+    "current_price": "$6.99",
+    "basis_price": "$9.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Snacks & Candy & Nuts/Bread & Dessert/",
+      "/Snacks & Candy & Nuts/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:9126",
     "name": "La-yu Chili Oil 1.11 Fl Oz (33ml)",
     "brand": "S&B",
@@ -2400,6 +2860,166 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12915",
+    "name": "Lightweight Small Umbrella Blue Pompom",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179518/8800284768427-1.png?v=639117896531100000",
+    "url": "https://www.hmart.com/lightweight-small-umbrella-blue-pompom/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12917",
+    "name": "Lightweight Small Umbrella Clover",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179527/8800284768441-1.png?v=639117901782800000",
+    "url": "https://www.hmart.com/lightweight-small-umbrella-clover/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12916",
+    "name": "Lightweight Small Umbrella Raspberry",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179521/8800284768434-1.png?v=639117901039000000",
+    "url": "https://www.hmart.com/lightweight-small-umbrella-raspberry/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12919",
+    "name": "Lightweight Small Umbrella With Wood Handle Blue Stripe",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179532/8809963172067.png?v=639117902612170000",
+    "url": "https://www.hmart.com/lightweight-small-umbrella-with-wood-handle-blue-stripe/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12899",
+    "name": "Lightweight USB Type Scrabbit Curling Iron Pink",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179456/8800284767475.png?v=639117881900370000",
+    "url": "https://www.hmart.com/lightweight-usb-type-scrabbit-curling-iron-pink/p",
+    "current_price": "$23.99",
+    "basis_price": "$29.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Beauty/Haircare & Bodycare/",
+      "/Beauty/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12918",
+    "name": "Linen Apron Blue Flower",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179530/8809963176119.png?v=639117902201530000",
+    "url": "https://www.hmart.com/linen-apron-blue-flower/p",
+    "current_price": "$17.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12914",
+    "name": "Linen Embroidery Multipurpose Cover",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179515/8800284738789.png?v=639117895121530000",
+    "url": "https://www.hmart.com/linen-embroidery-multipurpose-cover/p",
+    "current_price": "$9.99",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "23% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12922",
+    "name": "Luckydrop Rainy Sun Umbrella Green",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179549/8800317177882-2.png?v=639117905287300000",
+    "url": "https://www.hmart.com/luckydrop-rainy-sun-umbrella-green/p",
+    "current_price": "$23.99",
+    "basis_price": "$29.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:1140",
     "name": "Luncheon Meat 12oz(340g)",
     "brand": "Dongwon",
@@ -2412,10 +3032,30 @@
     "discount": "6% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=9",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12920",
+    "name": "Magical Butter Family Star Transformation Neck Pillow",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179538/8800317179145.png?v=639117904308730000",
+    "url": "https://www.hmart.com/magical-butter-family-star-transformation-neck-pillow/p",
+    "current_price": "$17.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -2440,6 +3080,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13099",
+    "name": "Melon Ade 7.77 Fl Oz (230ml)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179289/880029774052.png?v=639114314647070000",
+    "url": "https://www.hmart.com/melon-ade-7-77-fl-oz--230ml-/p",
+    "current_price": "$0.89",
+    "basis_price": "$1.49",
+    "prime_price": null,
+    "discount": "40% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
+      "/Beverage & Coffee & Tea & Honey/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:2174",
     "name": "Milk Coffee 11.3 FL OZ (335 ML)",
     "brand": "UCC",
@@ -2456,6 +3116,205 @@
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Coffee/",
       "/Beverage & Coffee & Tea & Honey/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12952",
+    "name": "Milkcat Butter Bear Folding Card HBD",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179675/8800284737614.png?v=639117944702770000",
+    "url": "https://www.hmart.com/milkcat-butter-bear-folding-card-hbd/p",
+    "current_price": "$2.49",
+    "basis_price": "$3.59",
+    "prime_price": null,
+    "discount": "31% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12955",
+    "name": "Milkcat Butter Bear Letter Set Veggie",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179684/8800345473185.png?v=639117945839600000",
+    "url": "https://www.hmart.com/milkcat-butter-bear-letter-set-veggie/p",
+    "current_price": "$3.49",
+    "basis_price": "$3.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12906",
+    "name": "Milkcat Cake Square Card Happy Birthday",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179490/8800345473086.png?v=639117887969670000",
+    "url": "https://www.hmart.com/milkcat-cake-square-card-happy-birthday/p",
+    "current_price": "$2.49",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "4% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12921",
+    "name": "Milkcat Memory Foam Neck Pillow Eye Mask Set",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179542/8800252116755.png?v=639117904662730000",
+    "url": "https://www.hmart.com/milkcat-memory-foam-neck-pillow-eye-mask-set/p",
+    "current_price": "$17.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12936",
+    "name": "Milkcat Mini Keyring + Happy Birthday Card Set",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179616/8800284770604.png?v=639117916366300000",
+    "url": "https://www.hmart.com/milkcat-mini-keyring---happy-birthday-card-set/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12908",
+    "name": "Milkcat Mungsomi Happyday Square Card Happy Birthday",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179496/8800345473109.png?v=639117888864070000",
+    "url": "https://www.hmart.com/milkcat-mungsomi-happyday-square-card-happy-birthday/p",
+    "current_price": "$2.49",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "4% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12949",
+    "name": "Milkcat Pet Slipper Toy",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179666/8800317193349.png?v=639117943433100000",
+    "url": "https://www.hmart.com/milkcat-pet-slipper-toy/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Pet Supply & Accessory/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12910",
+    "name": "Milkcat Scrabbit Heart Square Card Congrats",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179501/8800345473123.png?v=639117889616970000",
+    "url": "https://www.hmart.com/milkcat-scrabbit-heart-square-card-congrats/p",
+    "current_price": "$2.49",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "4% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12907",
+    "name": "Milkcat Scrabbit Ribbon Cake Square Card Happy Birthday",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179493/8800345473093.png?v=639117888417030000",
+    "url": "https://www.hmart.com/milkcat-scrabbit-ribbon-cake-square-card-happy-birthday/p",
+    "current_price": "$2.49",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "4% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12928",
+    "name": "Milkcat Square Cosmetic Pouch",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179571/8809836077383.png?v=639117908331200000",
+    "url": "https://www.hmart.com/milkcat-square-cosmetic-pouch/p",
+    "current_price": "$7.99",
+    "basis_price": "$9.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -2900,6 +3759,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12937",
+    "name": "Mr.Butter Mini Keyring + Thank You Card Set",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179620/8800284770611.png?v=639117918500700000",
+    "url": "https://www.hmart.com/mr-butter-mini-keyring---thank-you-card-set/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:336",
     "name": "Mul Naengmyeon (Korean Cold Noodle) 25.40oz(720g)",
     "brand": "Choung Soo",
@@ -2936,6 +3815,85 @@
     "categories": [
       "/Ramen & Noodle/Vermicelli & Rice & Paper/",
       "/Ramen & Noodle/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12890",
+    "name": "Mungsomi Carnation Square Card Thank You",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179420/8800345473161.png?v=639117852480830000",
+    "url": "https://www.hmart.com/mungsomi-carnation-square-card-thank-you/p",
+    "current_price": "$2.29",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "12% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12887",
+    "name": "Mungsomi Flower Square Card Thank You",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179410/8800345473130.png?v=639117850074700000",
+    "url": "https://www.hmart.com/mungsomi-flower-square-card-thank-you/p",
+    "current_price": "$2.29",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "12% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12939",
+    "name": "Mungsomi Mini Keyring Card Set Cheer Up",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179628/8800284770635.png?v=639117919359200000",
+    "url": "https://www.hmart.com/mungsomi-mini-keyring-card-set-cheer-up/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12947",
+    "name": "Mungsomi Pet Slipper Toy",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179659/8800317167630.png?v=639117942665930000",
+    "url": "https://www.hmart.com/mungsomi-pet-slipper-toy/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000
   },
@@ -3260,6 +4218,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13101",
+    "name": "Original Japchae 8.11 Oz (230g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179321/880956111227.png?v=639114317399500000",
+    "url": "https://www.hmart.com/original-japchae-8-11-oz--230g-/p",
+    "current_price": "$3.49",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Instant & Quick Food/Instant Food/",
+      "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:402",
     "name": "Pancake Mix For Cooking 2.2 LB (1000 G)",
     "brand": "CJ",
@@ -3427,9 +4405,9 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160589/0846034020047_2.png?v=638448905309030000",
     "url": "https://www.hmart.com/picked-whole-yellow-radish-17-6-oz--500-g--1/p",
     "current_price": "$2.49",
-    "basis_price": "$3.49",
+    "basis_price": "$3.99",
     "prime_price": null,
-    "discount": "29% off",
+    "discount": "38% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
@@ -3532,7 +4510,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
@@ -3840,6 +4818,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12940",
+    "name": "Rainy Mini Keyring Card Set Celebration",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179632/8800284770642.png?v=639117919737000000",
+    "url": "https://www.hmart.com/rainy-mini-keyring-card-set-celebration/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:8397",
     "name": "Ramune Lychee Flavor 6.76 Fl Oz (200ml)",
     "brand": "Shirakiku",
@@ -3960,6 +4958,46 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12925",
+    "name": "Rustle Milkcat 13 Inch Laptop Sleeve Mint",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179587/8809963194847.png?v=639117910452730000",
+    "url": "https://www.hmart.com/rustle-milkcat-13-inch-laptop-sleeve-mint/p",
+    "current_price": "$23.99",
+    "basis_price": "$29.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12926",
+    "name": "Rustle Mr.butter Cloud 13 Inch Laptop Sleeve Pink",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179590/8809963194854.png?v=639117910933700000",
+    "url": "https://www.hmart.com/rustle-mr-butter-cloud-13-inch-laptop-sleeve-pink/p",
+    "current_price": "$23.99",
+    "basis_price": "$29.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:1899",
     "name": "Sac Sac Grape 12 Cans 96.5 FL OZ (2854 ML)",
     "brand": "Lotte",
@@ -4020,6 +5058,46 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13108",
+    "name": "Sambo Alaska Pollock Milt 1.76 Lb (800g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179348/880951939013.png?v=639114319820430000",
+    "url": "https://www.hmart.com/sambo-alaska-pollock-milt-1-76-lb--800g-/p",
+    "current_price": "$9.99",
+    "basis_price": "$13.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Seafood/Frozen Seafood/",
+      "/Seafood/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:13117",
+    "name": "Sambo Cod Roe 1.54 Lb (700g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179345/880951939015.png?v=639114319603630000",
+    "url": "https://www.hmart.com/sambo-cod-roe-1-54-lb--700g-/p",
+    "current_price": "$10.99",
+    "basis_price": "$16.99",
+    "prime_price": null,
+    "discount": "35% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Seafood/Frozen Seafood/",
+      "/Seafood/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:290",
     "name": "Sanuki Udon Bowl Original 3.7oz(104.8g)",
     "brand": "Shirakiku",
@@ -4036,6 +5114,164 @@
     "categories": [
       "/Ramen & Noodle/Large Cup/",
       "/Ramen & Noodle/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12951",
+    "name": "Scrabbit 3D Pop Up Card",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179672/8809963186248.png?v=639117944213370000",
+    "url": "https://www.hmart.com/scrabbit-3d-pop-up-card/p",
+    "current_price": "$3.49",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12909",
+    "name": "Scrabbit Butter Bear Balloon Square Card Congrats",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179499/8800345473116.png?v=639117889190430000",
+    "url": "https://www.hmart.com/scrabbit-butter-bear-balloon-square-card-congrats/p",
+    "current_price": "$2.49",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "4% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12888",
+    "name": "Scrabbit Flower Square Card Thank You",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179412/8800345473147.png?v=639117851267000000",
+    "url": "https://www.hmart.com/scrabbit-flower-square-card-thank-you/p",
+    "current_price": "$2.29",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "12% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12954",
+    "name": "Scrabbit Milkcat Letter Set House Lucky",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179681/8800345473178.png?v=639117945466570000",
+    "url": "https://www.hmart.com/scrabbit-milkcat-letter-set-house-lucky/p",
+    "current_price": "$3.49",
+    "basis_price": "$3.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12905",
+    "name": "Scrabbit Milkcat Square Card For You",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179486/8800345473079.png?v=639117886316570000",
+    "url": "https://www.hmart.com/scrabbit-milkcat-square-card-for-you/p",
+    "current_price": "$2.49",
+    "basis_price": "$2.59",
+    "prime_price": null,
+    "discount": "4% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12938",
+    "name": "Scrabbit Mini Keyring Card Set Love",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179624/8800284770628.png?v=639117918953330000",
+    "url": "https://www.hmart.com/scrabbit-mini-keyring-card-set-love/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12950",
+    "name": "Scrabbit Pet Slipper Toy",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179669/8800317193356.png?v=639117943835370000",
+    "url": "https://www.hmart.com/scrabbit-pet-slipper-toy/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Pet Supply & Accessory/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12948",
+    "name": "Scrabbit Strawberry Nosework Pet Toy 4p Set",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179662/8800317191581.png?v=639117943087300000",
+    "url": "https://www.hmart.com/scrabbit-strawberry-nosework-pet-toy-4p-set/p",
+    "current_price": "$12.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "19% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000
   },
@@ -4480,6 +5716,66 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13106",
+    "name": "Sinjeon Topokki Extreme Spicy 7.40 Oz (210g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179317/880970583249.png?v=639114317138670000",
+    "url": "https://www.hmart.com/sinjeon-topokki-extreme-spicy-7-40-oz--210g-/p",
+    "current_price": "$3.99",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
+      "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:13105",
+    "name": "Sinjeon Topokki Rose Cream Flavor 7.40 Oz (210g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179302/880970583250.png?v=639114315893130000",
+    "url": "https://www.hmart.com/sinjeon-topokki-rose-cream-flavor-7-40-oz--210g-/p",
+    "current_price": "$3.99",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
+      "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:6859",
+    "name": "Sliced Kimchi 67oz(1.89kg)",
+    "brand": "Bibigo",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/176368/44E5273715CA2FB4.png-c1024x0_q80.jpg?v=639002809123230000",
+    "url": "https://www.hmart.com/sliced-kimchi-67oz-1-89kg--1/p",
+    "current_price": "$16.99",
+    "basis_price": "$24.99",
+    "prime_price": null,
+    "discount": "32% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:10095",
     "name": "Sliced Kimchi 7 Oz (198g)",
     "brand": "Tobagi",
@@ -4500,6 +5796,25 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12946",
+    "name": "Slicker Pet Brush Star Lavender",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179655/8800317162789-1.png?v=639117942296270000",
+    "url": "https://www.hmart.com/slicker-pet-brush-star-lavender/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Pet Supply & Accessory/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:654",
     "name": "Soba Tsuyu 16.7 fl.oz(500ml)",
     "brand": "Danya",
@@ -4516,6 +5831,66 @@
     "categories": [
       "/Paste & Marinade & Sauce/Soy Sauce/",
       "/Paste & Marinade & Sauce/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12893",
+    "name": "Soft Butter Bear Photocard Book Brown",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179432/8809963174979.png?v=639117853889070000",
+    "url": "https://www.hmart.com/soft-butter-bear-photocard-book-brown/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12891",
+    "name": "Soft Milkcat Photocard Book Pink",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179423/8809963174955-1.png?v=639117853141070000",
+    "url": "https://www.hmart.com/soft-milkcat-photocard-book-pink/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12892",
+    "name": "Soft Scrabbit Photocard Book Pink",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179429/8809963174962-1.png?v=639117853577070000",
+    "url": "https://www.hmart.com/soft-scrabbit-photocard-book-pink/p",
+    "current_price": "$13.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Book & Stationery & Hobby/Stationery/",
+      "/Book & Stationery & Hobby/"
     ],
     "available_quantity": 10000
   },
@@ -4712,7 +6087,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
     "categories": [
       "/Ramen & Noodle/Large Cup/",
       "/Ramen & Noodle/"
@@ -4812,10 +6187,30 @@
     "discount": "21% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Ramen & Noodle/Bundle/",
       "/Ramen & Noodle/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:13098",
+    "name": "Strawberry Ade 7.77 Fl Oz (230ml)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179285/880029774028.png?v=639114314342930000",
+    "url": "https://www.hmart.com/strawberry-ade-7-77-fl-oz--230ml-/p",
+    "current_price": "$0.89",
+    "basis_price": "$1.49",
+    "prime_price": null,
+    "discount": "40% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
+      "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000
   },
@@ -4960,6 +6355,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12923",
+    "name": "Sweetdrop Milkcat Sun Umbrella Blue",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179558/8800317177899-2.png?v=639117907172100000",
+    "url": "https://www.hmart.com/sweetdrop-milkcat-sun-umbrella-blue/p",
+    "current_price": "$23.99",
+    "basis_price": "$29.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:1473",
     "name": "Swing Chip Hot Pepper Paste Flavor 4.37oz(124g)",
     "brand": "Orion",
@@ -5080,6 +6495,46 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12902",
+    "name": "Thick 4-ply Dishwash 2pc Strawberry Stripe",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179470/8800317157327-1.png?v=639117884415670000",
+    "url": "https://www.hmart.com/thick-4-ply-dishwash-2pc-strawberry-stripe/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12903",
+    "name": "Thick 4-ply Dishwash 2pc Yellow Flower",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179477/8800317157334-1.png?v=639117884887900000",
+    "url": "https://www.hmart.com/thick-4-ply-dishwash-2pc-yellow-flower/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:2992",
     "name": "Thin Wrap Pork&Vegetable Dumplings 19.08oz(541g)",
     "brand": "Pulmuone",
@@ -5192,7 +6647,7 @@
     "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
@@ -5216,6 +6671,66 @@
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12904",
+    "name": "Tufting Bathmat Blue Flower",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179483/8800317192434-1.png?v=639117885664970000",
+    "url": "https://www.hmart.com/tufting-bathmat-blue-flower/p",
+    "current_price": "$15.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12912",
+    "name": "Tufting Multipurpose Mini Rug Apple",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179506/8800317154135-1.png?v=639117891564000000",
+    "url": "https://www.hmart.com/tufting-multipurpose-mini-rug-apple/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12911",
+    "name": "Tufting Multipurpose Mini Rug Blue Flower",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179503/8800317154104-1.png?v=639117889992770000",
+    "url": "https://www.hmart.com/tufting-multipurpose-mini-rug-blue-flower/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -5252,7 +6767,7 @@
     "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
@@ -5392,10 +6907,30 @@
     "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Soy Milk & Packaged Milk/",
       "/Beverage & Coffee & Tea & Honey/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12935",
+    "name": "Veggie Gang Tomato Milk Cat Shaped Release Mat Blue",
+    "brand": "Butter",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179613/8800317164844.png?v=639117916062470000",
+    "url": "https://www.hmart.com/veggie-gang-tomato-milk-cat-shaped-release-mat-blue/p",
+    "current_price": "$15.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
     ],
     "available_quantity": 10000
   },
@@ -5500,6 +7035,46 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:12900",
+    "name": "Vintage Jacquard Oval Tablemat 12x18 Inch Blue Flower",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179459/8800252079135.png?v=639117883119170000",
+    "url": "https://www.hmart.com/vintage-jacquard-oval-tablemat-12x18-inch-blue-flower/p",
+    "current_price": "$6.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "22% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:12901",
+    "name": "Vintage Jacquard Oval Tablemat 12x18 Inch Green Flower",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179462/8800284748702-1.png?v=639117883639770000",
+    "url": "https://www.hmart.com/vintage-jacquard-oval-tablemat-12x18-inch-green-flower/p",
+    "current_price": "$5.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "25% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:10514",
     "name": "Wafer & Zelda Card 0.45 Oz (12g)",
     "brand": "Bandai",
@@ -5567,9 +7142,9 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161834/840809010943_1_1.jpg?v=638448910093370000",
     "url": "https://www.hmart.com/white-cabbage-kimchi-3lb-1-36kg--1/p",
     "current_price": "$7.49",
-    "basis_price": "$18.99",
+    "basis_price": "$16.99",
     "prime_price": null,
-    "discount": "61% off",
+    "discount": "56% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
@@ -5700,6 +7275,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13096",
+    "name": "Yangbongnh 1st Grade Korean Chestnut Flower Honey 1.1 Lb (500g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179351/880034538032.png?v=639114320035200000",
+    "url": "https://www.hmart.com/yangbongnh-1st-grade-korean-chestnut-flower-honey-1-1-lb--500g-/p",
+    "current_price": "$11.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "33% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Beverage & Coffee & Tea & Honey/Honey/",
+      "/Beverage & Coffee & Tea & Honey/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:867",
     "name": "Yasai fumi Furikake 1.7oz(48g)",
     "brand": "Ajishima",
@@ -5756,6 +7351,26 @@
     "categories": [
       "/Seafood/Frozen Seafood/",
       "/Seafood/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:13100",
+    "name": "Yeongo Farm Real Hovenia Dulcis Extract Concentrate 15.87 Oz (450g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179340/880967558164.png?v=639114318899000000",
+    "url": "https://www.hmart.com/yeongo-farm-real-hovenia-dulcis-extract-concentrate-15-87-oz--450g-/p",
+    "current_price": "$9.99",
+    "basis_price": "$14.99",
+    "prime_price": null,
+    "discount": "33% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Beverage & Coffee & Tea & Honey/Tea/",
+      "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000
   },
