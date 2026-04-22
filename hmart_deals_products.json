@@ -1492,7 +1492,7 @@
     "discount": "22% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Book & Stationery & Hobby/Stationery/",
       "/Book & Stationery & Hobby/"
@@ -2292,7 +2292,7 @@
     "discount": "19% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Household & Home/Houseware & Living/",
       "/Household & Home/"
@@ -3411,7 +3411,7 @@
     "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
       "/Beverage & Coffee & Tea & Honey/"
@@ -3731,7 +3731,7 @@
     "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
@@ -5816,6 +5816,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:13104",
+    "name": "Sinjeon Topokki Original 7.40 Oz (210g)",
+    "brand": "GB",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179299/880970583251.png?v=639114315630200000",
+    "url": "https://www.hmart.com/sinjeon-topokki-original-7-40-oz--210g-/p",
+    "current_price": "$3.99",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=4",
+    "categories": [
+      "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
+      "/Instant & Quick Food/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:13105",
     "name": "Sinjeon Topokki Rose Cream Flavor 7.40 Oz (210g)",
     "brand": "GB",
@@ -6047,7 +6067,7 @@
     "discount": "60% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Paste & Marinade & Sauce/Marinade/",
       "/Paste & Marinade & Sauce/"
@@ -6655,26 +6675,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:8023",
-    "name": "Top Fruit Soft Sweets Pure Juice Candy Mango 11.28 Oz (320g)",
-    "brand": "Coowy",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/171958/489709970069-exp-date.png?v=638839495450330000",
-    "url": "https://www.hmart.com/top-fruit-soft-sweets-pure-juice-candy-mango-11-28-oz--320g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$3.99",
-    "prime_price": null,
-    "discount": "25% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
-    "categories": [
-      "/Snacks & Candy & Nuts/Candy & Chocolate/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:8024",
     "name": "Top Fruit Soft Sweets Pure Juice Candy Mixed 11.28 Oz (320g)",
     "brand": "Coowy",
@@ -7171,26 +7171,6 @@
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Tea/",
       "/Beverage & Coffee & Tea & Honey/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:3233",
-    "name": "Wheat Flour Co-brand 5.5lb(2.5kg)",
-    "brand": "Gompyo",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/162653/880117611136.png?v=638448913396400000",
-    "url": "https://www.hmart.com/wheat-flour-co-brand-5-5lb-2-5kg--1/p",
-    "current_price": "$4.49",
-    "basis_price": "$5.49",
-    "prime_price": null,
-    "discount": "18% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Flour & Baking/Pancake Mix & Tempura Mix/",
-      "/Flour & Baking/"
     ],
     "available_quantity": 10000
   },
