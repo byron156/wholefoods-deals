@@ -44,7 +44,13 @@ if ! git remote get-url origin >/dev/null 2>&1; then
 fi
 
 export WHOLEFOODS_SEARCH_MODE="${WHOLEFOODS_SEARCH_MODE:-full}"
+export WHOLEFOODS_SEARCH_COLLECTION_MODE="${WHOLEFOODS_SEARCH_COLLECTION_MODE:-network}"
+export WHOLEFOODS_SEARCH_BROWSER="${WHOLEFOODS_SEARCH_BROWSER:-chrome}"
+export WHOLEFOODS_SEARCH_RESULT_WINDOW_LIMIT="${WHOLEFOODS_SEARCH_RESULT_WINDOW_LIMIT:-500}"
 echo "[$(timestamp)] Whole Foods search mode: $WHOLEFOODS_SEARCH_MODE"
+echo "[$(timestamp)] Whole Foods search collection mode: $WHOLEFOODS_SEARCH_COLLECTION_MODE"
+echo "[$(timestamp)] Whole Foods search browser: $WHOLEFOODS_SEARCH_BROWSER"
+echo "[$(timestamp)] Whole Foods search result window limit: $WHOLEFOODS_SEARCH_RESULT_WINDOW_LIMIT"
 
 refresh_succeeded=0
 refresh_attempts="${WHOLEFOODS_REFRESH_ATTEMPTS:-2}"

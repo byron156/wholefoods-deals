@@ -59,6 +59,8 @@ IMPORTANT_FIELDS = [
     "retail_source_url",
     "source_categories",
     "tags",
+    "available_store_ids",
+    "store_offers",
 ]
 
 STOPWORDS = {
@@ -340,6 +342,31 @@ def product_card(product, clip=None):
     """
 
 
+def build_store_label_map(combined_report):
+    labels = {}
+    for store in (combined_report or {}).get("whole_foods_stores") or []:
+        store_id = str(store.get("store_id") or "").strip()
+        store_name = store.get("store_name") or store_id
+        if store_id:
+            labels[store_id] = store_name
+    return labels
+
+
+def store_offer_signature(offer):
+    return {
+        "current_price": offer.get("current_price"),
+        "basis_price": offer.get("basis_price"),
+        "prime_price": offer.get("prime_price"),
+        "discount": offer.get("discount"),
+        "discount_percent": offer.get("discount_percent"),
+        "unit_price": offer.get("unit_price"),
+    }
+
+
+def source_summary(values):
+    return " + ".join(sorted(set(values or []))) if values else "Unknown"
+
+
 def product_section(title, products, clip_index, empty="Nothing to show here.", limit=12):
     shown = sample_products(products, limit)
     if not shown:
@@ -422,6 +449,71 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
     ]
     duplicateish.sort(key=len, reverse=True)
 
+    store_labels = build_store_label_map(combined_report)
+    whole_foods_products = [product for product in products if (product.get("retailer") or "") == "Whole Foods"]
+    store_presence_counter = Counter()
+    store_specific_products = []
+    store_price_diff_products = []
+    store_source_diff_products = []
+
+    for product in whole_foods_products:
+        offers = list(product.get("store_offers") or [])
+        available_store_ids = [str(value) for value in (product.get("available_store_ids") or []) if value]
+
+        if offers:
+            offer_ids = [str(offer.get("store_id") or "") for offer in offers if offer.get("store_id")]
+            if offer_ids:
+                store_presence_counter.update(offer_ids)
+
+        store_ids = sorted(set(available_store_ids or [str(offer.get("store_id") or "") for offer in offers if offer.get("store_id")]))
+        if not store_ids:
+            continue
+
+        if len(store_ids) == 1:
+            enriched = dict(product)
+            only_store_id = store_ids[0]
+            enriched["audit_reason"] = f"Only available in {store_labels.get(only_store_id, only_store_id)}."
+            enriched["store_specificity"] = {
+                "type": "single-store",
+                "store_ids": store_ids,
+                "store_sources": {
+                    only_store_id: source_summary((offers[0].get("sources") if offers else product.get("sources")) or [])
+                },
+            }
+            store_specific_products.append(enriched)
+            continue
+
+        signature_map = {}
+        source_map = {}
+        for offer in offers:
+            store_id = str(offer.get("store_id") or "")
+            if not store_id:
+                continue
+            signature_map[store_id] = store_offer_signature(offer)
+            source_map[store_id] = tuple(sorted(set(offer.get("sources") or [])))
+
+        if len({json.dumps(value, sort_keys=True) for value in signature_map.values() if value}) > 1:
+            enriched = dict(product)
+            enriched["audit_reason"] = "Store prices or deal fields differ across Whole Foods stores."
+            enriched["store_specificity"] = {
+                "type": "price-diff",
+                "store_ids": store_ids,
+                "store_signatures": signature_map,
+                "store_sources": {store_id: source_summary(source_map.get(store_id) or []) for store_id in store_ids},
+            }
+            store_price_diff_products.append(enriched)
+
+        if len(set(source_map.values())) > 1:
+            enriched = dict(product)
+            enriched["audit_reason"] = "Store source coverage differs across Whole Foods stores."
+            enriched["store_specificity"] = {
+                "type": "source-diff",
+                "store_ids": store_ids,
+                "store_signatures": signature_map,
+                "store_sources": {store_id: source_summary(source_map.get(store_id) or []) for store_id in store_ids},
+            }
+            store_source_diff_products.append(enriched)
+
     failed_brand_clusters = Counter(product.get("brand") or "Missing brand" for product in failed)
     failed_word_clusters = Counter()
     for product in failed:
@@ -473,6 +565,10 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
             "source_overlaps": dict(by_sources),
             "failed_brand_clusters": dict(failed_brand_clusters),
             "failed_word_clusters": dict(failed_word_clusters),
+            "whole_foods_store_presence": {
+                store_labels.get(store_id, store_id): count
+                for store_id, count in store_presence_counter.items()
+            },
         },
         "findings": {
             "failed_products": [product_summary(product) for product in failed],
@@ -486,6 +582,9 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
                 [product_summary(product) for product in group]
                 for group in duplicateish[:50]
             ],
+            "whole_foods_store_specific_products": [product_summary(product) for product in store_specific_products],
+            "whole_foods_store_price_differences": [product_summary(product) for product in store_price_diff_products],
+            "whole_foods_store_source_differences": [product_summary(product) for product in store_source_diff_products],
             "source_overlap_examples": {
                 " + ".join(sources): [product_summary(product) for product in sample_products(group, 20)]
                 for sources, group in sorted(source_overlap.items(), key=lambda item: len(item[1]), reverse=True)
@@ -502,6 +601,10 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
             "products_missing_clip": products_missing_clip,
             "low_clip": low_clip,
             "duplicateish": duplicateish,
+            "store_specific_products": store_specific_products,
+            "store_price_diff_products": store_price_diff_products,
+            "store_source_diff_products": store_source_diff_products,
+            "store_labels": store_labels,
         },
     }
 
@@ -511,6 +614,7 @@ def render_html(audit, products):
     clip_index = runtime["clip_index"]
     summary = audit["summary"]
     counts = audit["counts"]
+    store_labels = runtime["store_labels"]
     urgent = []
     urgent.extend(runtime["failed"][:4])
     urgent.extend(runtime["suspicious"][:4])
@@ -547,6 +651,25 @@ def render_html(audit, products):
         source_overlap_cards += f"<h3>{esc(source_label)} · {count:,}</h3><div class=\"cards\">"
         source_overlap_cards += "".join(product_card(product, clip_for_product(product, clip_index)) for product in related[:8])
         source_overlap_cards += "</div>"
+
+    store_presence_table = row_table(Counter(counts.get("whole_foods_store_presence") or {}), "Whole Foods store presence", limit=20)
+
+    def store_diff_cards(products_for_section, title_builder):
+        section_html = ""
+        for product in products_for_section[:18]:
+            info = product.get("store_specificity") or {}
+            labels = [store_labels.get(store_id, store_id) for store_id in info.get("store_ids") or []]
+            store_sources = info.get("store_sources") or {}
+            badges = " · ".join(
+                f"{store_labels.get(store_id, store_id)}: {store_sources.get(store_id, 'Unknown')}"
+                for store_id in info.get("store_ids") or []
+            )
+            section_html += (
+                f"<div class=\"store-note\"><strong>{esc(title_builder(product, labels))}</strong>"
+                f"<br><span class=\"muted\">{esc(badges)}</span></div>"
+                + product_card(product, clip_for_product(product, clip_index))
+            )
+        return section_html
 
     return f"""<!doctype html>
 <html lang="en">
@@ -588,6 +711,7 @@ def render_html(audit, products):
     .two-col {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; }}
     .callout {{ background:#173326; color:#fffdf7; border-radius:22px; padding:18px; }}
     .callout li {{ margin:0 0 12px; }}
+    .store-note {{ margin:14px 0 6px; }}
   </style>
 </head>
 <body>
@@ -631,6 +755,25 @@ def render_html(audit, products):
       {row_table(Counter(counts['retailers']), 'Retailer', limit=10)}
     </div>
     {source_overlap_cards}
+  </section>
+
+  <section>
+    <h2>🏪 Whole Foods Store Specificity</h2>
+    <p class="muted">This section shows whether Columbus Circle and Upper West Side actually differ, and if they do, which source created the difference: Flyer, All Deals, or Search Deals.</p>
+    <div class="two-col">
+      {store_presence_table}
+      <table><thead><tr><th>Metric</th><th>Count</th></tr></thead><tbody>
+        <tr><td>Single-store Whole Foods products</td><td>{len(runtime['store_specific_products']):,}</td></tr>
+        <tr><td>Cross-store products with price/deal differences</td><td>{len(runtime['store_price_diff_products']):,}</td></tr>
+        <tr><td>Cross-store products with source differences</td><td>{len(runtime['store_source_diff_products']):,}</td></tr>
+      </tbody></table>
+    </div>
+    <h3>Only in one Whole Foods store</h3>
+    <div class="cards">{store_diff_cards(runtime['store_specific_products'], lambda product, labels: f"{product.get('name') or 'Unknown'} · only in {', '.join(labels)}") or '<p class="muted">No single-store products found.</p>'}</div>
+    <h3>Whole Foods products with different prices across stores</h3>
+    <div class="cards">{store_diff_cards(runtime['store_price_diff_products'], lambda product, labels: f"{product.get('name') or 'Unknown'} · price differs across {', '.join(labels)}") or '<p class="muted">No cross-store price differences found.</p>'}</div>
+    <h3>Whole Foods products with different source coverage across stores</h3>
+    <div class="cards">{store_diff_cards(runtime['store_source_diff_products'], lambda product, labels: f"{product.get('name') or 'Unknown'} · source coverage differs across {', '.join(labels)}") or '<p class="muted">No cross-store source differences found.</p>'}</div>
   </section>
 
   {product_section("👁️ High-confidence CLIP Disagreements", runtime['clip_disagreements'], clip_index, "No high-confidence CLIP disagreements found.", limit=24)}
