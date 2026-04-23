@@ -4,8 +4,8 @@
 
 The daily job is driven by:
 
-- wrapper script: [`scripts/daily_refresh.sh`](/Users/jonathancampbell/Documents/wholefoods_deals/scripts/daily_refresh.sh)
-- launchd plist in repo: [`launchd/com.jonathancampbell.wholefoods-refresh.plist`](/Users/jonathancampbell/Documents/wholefoods_deals/launchd/com.jonathancampbell.wholefoods-refresh.plist)
+- wrapper script: [`scripts/daily_refresh.sh`](/Users/jonathancampbell/Code/wholefoods_deals/scripts/daily_refresh.sh)
+- launchd plist in repo: [`launchd/com.jonathancampbell.wholefoods-refresh.plist`](/Users/jonathancampbell/Code/wholefoods_deals/launchd/com.jonathancampbell.wholefoods-refresh.plist)
 - installed plist: `~/Library/LaunchAgents/com.jonathancampbell.wholefoods-refresh.plist`
 
 The plist is configured for `09:00` local time every day.

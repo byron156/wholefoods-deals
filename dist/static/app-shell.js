@@ -600,7 +600,11 @@
   }
 
   function discountLabel(product) {
-    return product.discount ? `<span class="deal-discount">${escapeHtml(product.discount)}</span>` : "";
+    if (!product.discount) {
+      return "";
+    }
+    const discountText = String(product.discount).replace(/\s+off$/i, "");
+    return `<span class="deal-discount"><span class="deal-discount-kicker">Save</span>${escapeHtml(discountText)}</span>`;
   }
 
   function renderProductCard(product, options) {

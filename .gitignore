@@ -7,3 +7,10 @@ logs/
 device_profiles.json
 .cache/
 vision_category_audit*.json
+
+# Generated scraper/taxonomy working files
+*.partial.json
+taxonomy_classification_debug.json
+taxonomy_*_queue*.json
+silver_manual_prompts/
+silver_manual_prompts_round*/

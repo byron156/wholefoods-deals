@@ -200,17 +200,26 @@ p {
 }
 
 .deal-discount {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
   font-size: 12px;
-  padding: 6px 9px;
+  padding: 6px 10px;
   border-radius: 999px;
-  background: var(--accent-soft);
-  color: #a6402c;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  max-width: 100%;
-  text-align: center;
-  line-height: 1.15;
-  flex: 0 1 auto;
+  background: #0b6b45;
+  color: #fff;
+  white-space: nowrap;
+  line-height: 1;
+  flex: 0 0 auto;
+  box-shadow: 0 8px 18px rgba(11, 107, 69, 0.15);
+}
+
+.deal-discount-kicker {
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.76;
 }
 
 .deal-meta,
@@ -542,19 +551,9 @@ p {
   background:
     linear-gradient(135deg, rgba(220, 239, 230, 0.58), rgba(255, 255, 255, 0.76));
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 10px;
   align-items: end;
-}
-
-.filter-heading {
-  align-self: center;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 950;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .filter-grid {
@@ -1131,6 +1130,9 @@ p {
 
   .deal-price-row {
     justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .deal-regular {
@@ -1142,8 +1144,8 @@ p {
   }
 
   .deal-discount {
-    padding: 5px 7px;
-    font-size: 10px;
+    padding: 5px 8px;
+    font-size: 11px;
   }
 
   .save-toggle {
@@ -1166,10 +1168,6 @@ p {
   .filter-drawer {
     grid-template-columns: 1fr;
     gap: 8px;
-  }
-
-  .filter-heading {
-    align-self: auto;
   }
 
   .filter-drawer .link-action {
