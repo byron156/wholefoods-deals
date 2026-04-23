@@ -14,12 +14,30 @@
   const stores = rawData.stores || [];
   const retailerOrder = ["All", "Whole Foods", "Target", "H Mart"];
   const failedCategory = "Other/Failed";
+  const preferredCategoryOrder = [
+    "Produce",
+    "Meat & Seafood",
+    "Dairy & Eggs",
+    "Pantry",
+    "International",
+    "Bakery",
+    "Frozen",
+    "Snacks",
+    "Prepared Foods",
+    "Household",
+    "Baby",
+    "Beverages",
+    "Beauty & Personal Care",
+    "Supplements & Wellness",
+    "Alcohol",
+  ];
 
   const nodes = {
     searchInput: document.getElementById("global-search"),
     searchMeta: document.getElementById("search-meta"),
     retailerChipRow: document.getElementById("retailer-chip-row"),
     storeChipRow: document.getElementById("store-chip-row"),
+    savedListToggle: document.getElementById("saved-list-toggle"),
     filterDrawer: document.getElementById("filter-drawer"),
     filterCategory: document.getElementById("filter-category"),
     filterSubcategory: document.getElementById("filter-subcategory"),
@@ -33,6 +51,7 @@
     categoryScopeRow: document.getElementById("category-scope-row"),
     categorySelect: document.getElementById("category-select"),
     subcategorySelect: document.getElementById("subcategory-select"),
+    brandFixField: document.getElementById("brand-fix-field"),
     brandFixInput: document.getElementById("brand-fix-input"),
     queueSubcategoryFix: document.getElementById("queue-subcategory-fix"),
     queueBrandFix: document.getElementById("queue-brand-fix"),
@@ -87,13 +106,36 @@
     return (list || []).map(normalizeProduct);
   }
 
+  function sortCategoryNames(list) {
+    const unique = Array.from(new Set((list || []).filter(Boolean)));
+    return unique.sort((left, right) => {
+      if (left === failedCategory || right === failedCategory) {
+        return left === failedCategory ? 1 : -1;
+      }
+      const leftIndex = preferredCategoryOrder.indexOf(left);
+      const rightIndex = preferredCategoryOrder.indexOf(right);
+      if (leftIndex !== -1 || rightIndex !== -1) {
+        if (leftIndex === -1) {
+          return 1;
+        }
+        if (rightIndex === -1) {
+          return -1;
+        }
+        return leftIndex - rightIndex;
+      }
+      return left.localeCompare(right);
+    });
+  }
+
   let products = hydrateProducts(rawData.products || []);
   let productByKey = new Map();
   let retailerList = [];
 
-  const categoryList = Array.isArray(rawData.categories) && rawData.categories.length
-    ? rawData.categories.slice()
-    : Array.from(new Set(products.map((product) => product.category || "Pantry"))).sort((left, right) => left.localeCompare(right));
+  const categoryList = sortCategoryNames(
+    Array.isArray(rawData.categories) && rawData.categories.length
+      ? rawData.categories.concat(products.map((product) => product.category || "Pantry"))
+      : products.map((product) => product.category || "Pantry")
+  );
   const subcategoryEntries = Object.entries(subcategoryOptions).flatMap(([category, subcategories]) =>
     Object.keys(subcategories || {}).map((subcategory) => ({ category, subcategory }))
   );
@@ -144,27 +186,44 @@
     };
   }
 
+  function normalizeSelectedStoreIds(selectedStoreIds) {
+    const selected = Array.isArray(selectedStoreIds)
+      ? selectedStoreIds.map((value) => String(value || "").trim()).filter(Boolean)
+      : [];
+    return selected.length === 1 ? [selected[0]] : [];
+  }
+
+  function normalizeProfile(profile) {
+    const source = profile || {};
+    return {
+      ...getDefaultProfile(),
+      ...source,
+      selectedStoreIds: normalizeSelectedStoreIds(source.selectedStoreIds),
+      likedKeys: Array.isArray(source.likedKeys) ? source.likedKeys : [],
+      dislikedKeys: Array.isArray(source.dislikedKeys) ? source.dislikedKeys : [],
+      savedKeys: Array.isArray(source.savedKeys) ? source.savedKeys : [],
+      categoryOrderByRetailer: source.categoryOrderByRetailer || { ...initialCategoryOrder },
+      filters: {
+        ...defaultFilters(),
+        ...(source.filters || {}),
+      },
+    };
+  }
+
   function getDefaultProfile() {
     return {
-      selectedStoreIds: stores.filter((store) => store.is_active).map((store) => store.id),
+      selectedStoreIds: [],
       filters: defaultFilters(),
       likedKeys: [],
       dislikedKeys: [],
+      savedKeys: [],
       categoryOrderByRetailer: { ...initialCategoryOrder },
     };
   }
 
   function loadProfile() {
     try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-      return {
-        ...getDefaultProfile(),
-        ...(saved || {}),
-        filters: {
-          ...defaultFilters(),
-          ...((saved || {}).filters || {}),
-        },
-      };
+      return normalizeProfile(JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"));
     } catch (error) {
       return getDefaultProfile();
     }
@@ -175,7 +234,9 @@
     query: "",
     activeRetailer: retailerList.includes("All") ? "All" : retailerList[0] || "All",
     categoryTargetKey: null,
+    categorySheetMode: "feedback",
     categoryScope: "similar",
+    viewMode: "all",
   };
 
   function saveProfile() {
@@ -287,7 +348,12 @@
   }
 
   function scopedProducts() {
-    return products.filter(filterProduct);
+    return products.filter((product) => {
+      if (state.viewMode === "saved" && !(state.profile.savedKeys || []).includes(product.key)) {
+        return false;
+      }
+      return filterProduct(product);
+    });
   }
 
   function hasActiveFilters() {
@@ -435,32 +501,14 @@
       }
       grouped.get(category).push(product);
     });
-
-    const orderKey = state.activeRetailer === "All" ? "All" : state.activeRetailer;
-    const orderedCategories = (state.profile.categoryOrderByRetailer || {})[orderKey] || [];
-    return Array.from(grouped.entries())
-      .map(([category, items]) => ({
+    return sortCategoryNames(Array.from(grouped.keys())).map((category) => {
+      const items = grouped.get(category) || [];
+      return {
         category,
         total: items.length,
         items: rankProductList(items),
-      }))
-      .sort((left, right) => {
-        if (left.category === failedCategory || right.category === failedCategory) {
-          return left.category === failedCategory ? 1 : -1;
-        }
-        const leftIndex = orderedCategories.indexOf(left.category);
-        const rightIndex = orderedCategories.indexOf(right.category);
-        if (leftIndex !== -1 || rightIndex !== -1) {
-          if (leftIndex === -1) {
-            return 1;
-          }
-          if (rightIndex === -1) {
-            return -1;
-          }
-          return leftIndex - rightIndex;
-        }
-        return right.total - left.total || left.category.localeCompare(right.category);
-      });
+      };
+    });
   }
 
   function renderRetailerChips() {
@@ -475,15 +523,16 @@
       nodes.storeChipRow.innerHTML = "";
       return;
     }
-    const selected = new Set(state.profile.selectedStoreIds || []);
-    nodes.storeChipRow.innerHTML = stores.map((store) => {
-      const isSelected = selected.has(store.id);
+    const selectedStoreId = (state.profile.selectedStoreIds || [])[0] || "";
+    nodes.storeChipRow.innerHTML = [
+      `<button class="store-chip ${selectedStoreId ? "" : "is-selected"}" data-store-id="" type="button">All stores</button>`,
+    ].concat(stores.map((store) => {
       const hasProducts = products.some((product) => product.retailer === "Whole Foods" && (product.available_store_ids || []).includes(store.id));
       const disabled = store.needs_store_id || (!hasProducts && !store.is_active);
       const label = store.label || store.name || store.id;
       const title = disabled ? "Store metadata is ready, but this store needs a verified Whole Foods store ID before scraping." : label;
-      return `<button class="store-chip ${isSelected ? "is-selected" : ""} ${disabled ? "is-disabled" : ""}" data-store-id="${escapeHtml(store.id)}" type="button" title="${escapeHtml(title)}"${disabled ? " aria-disabled=\"true\"" : ""}>${escapeHtml(label)}</button>`;
-    }).join("");
+      return `<button class="store-chip ${selectedStoreId === store.id ? "is-selected" : ""} ${disabled ? "is-disabled" : ""}" data-store-id="${escapeHtml(store.id)}" type="button" title="${escapeHtml(title)}"${disabled ? " aria-disabled=\"true\"" : ""}>${escapeHtml(label)}</button>`;
+    })).join("");
   }
 
   function renderFilterOptions() {
@@ -502,7 +551,16 @@
 
   function renderStatus() {
     const visible = scopedProducts();
-    nodes.searchMeta.textContent = `${visible.length.toLocaleString()} live deals`;
+    const savedCount = (state.profile.savedKeys || []).length;
+    nodes.searchMeta.textContent = state.viewMode === "saved"
+      ? `${visible.length.toLocaleString()} saved items`
+      : `${visible.length.toLocaleString()} live deals`;
+    if (nodes.savedListToggle) {
+      nodes.savedListToggle.textContent = state.viewMode === "saved"
+        ? "Back to deals"
+        : `Saved list (${savedCount})`;
+      nodes.savedListToggle.classList.toggle("is-selected", state.viewMode === "saved");
+    }
   }
 
   function metaLine(product) {
@@ -548,9 +606,15 @@
   function renderProductCard(product, options) {
     const liked = (state.profile.likedKeys || []).includes(product.key);
     const disliked = (state.profile.dislikedKeys || []).includes(product.key);
-    const imageMarkup = product.image
-      ? `<div class="deal-image"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}"></div>`
-      : "";
+    const saved = (state.profile.savedKeys || []).includes(product.key);
+    const imageMarkup = `
+      <div class="deal-card-top">
+        <div class="deal-image ${product.image ? "" : "is-empty"}">
+          ${product.image ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}">` : `<span class="image-fallback">No image</span>`}
+        </div>
+        <button class="save-toggle ${saved ? "is-saved" : ""}" data-action="toggle-save" data-key="${escapeHtml(product.key)}" type="button">${saved ? "Saved" : "Save"}</button>
+      </div>
+    `;
     const titleMarkup = product.url
       ? `<h3 class="deal-title"><a href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a></h3>`
       : `<h3 class="deal-title">${escapeHtml(product.name)}</h3>`;
@@ -573,6 +637,7 @@
           <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">More</button>
           <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">Less</button>
         </div>
+        <button class="link-action feedback-link" data-action="change-category" data-key="${escapeHtml(product.key)}" type="button">This doesn't belong here</button>
       </article>
     `;
   }
@@ -585,7 +650,7 @@
   function renderShelves() {
     const shelves = buildCategoryShelves();
     if (!shelves.length) {
-      renderEmpty("No deals are available for these filters right now.");
+      renderEmpty(state.viewMode === "saved" ? "No saved items match these filters yet." : "No deals are available for these filters right now.");
       return;
     }
 
@@ -624,11 +689,11 @@
     return null;
   }
 
-  function openCategorySheet(product) {
+  function openCategorySheet(product, options) {
+    const nextOptions = options || {};
     state.categoryTargetKey = product.key;
-    state.categoryScope = subcategorySignature(product) ? "similar" : "item";
-    nodes.categorySheetTitle.textContent = "Improve this item";
-    nodes.categorySheetCopy.textContent = "Send feedback for the next refresh. Brand fixes preview immediately here.";
+    state.categorySheetMode = nextOptions.mode || "feedback";
+    state.categoryScope = nextOptions.scope || (subcategorySignature(product) ? "similar" : "item");
     renderCategorySheet(product);
     nodes.categorySheetBackdrop.classList.remove("hidden");
     nodes.categorySheet.classList.remove("hidden");
@@ -650,11 +715,21 @@
   }
 
   function renderCategorySheet(product) {
+    const isGoldMode = state.categorySheetMode === "gold";
     const hasSimilar = Boolean(subcategorySignature(product));
-    nodes.categoryScopeRow.innerHTML = [
-      `<button class="chip ${state.categoryScope === "item" ? "is-selected" : ""}" data-category-scope="item" type="button">Just this item</button>`,
-      hasSimilar ? `<button class="chip ${state.categoryScope === "similar" ? "is-selected" : ""}" data-category-scope="similar" type="button">Similar items too</button>` : "",
-    ].join("");
+    nodes.categorySheetTitle.textContent = isGoldMode ? "Fix this category" : "Improve this item";
+    nodes.categorySheetCopy.textContent = isGoldMode
+      ? "Save a gold label for this exact product. This only updates category placement for the next refresh."
+      : "Send feedback for the next refresh. Brand fixes preview immediately here.";
+    nodes.queueSubcategoryFix.textContent = isGoldMode ? "Save gold label" : "Send shelf feedback";
+    nodes.brandFixField.classList.toggle("hidden", isGoldMode);
+    nodes.categoryScopeRow.classList.toggle("hidden", isGoldMode);
+    if (!isGoldMode) {
+      nodes.categoryScopeRow.innerHTML = [
+        `<button class="chip ${state.categoryScope === "item" ? "is-selected" : ""}" data-category-scope="item" type="button">Just this item</button>`,
+        hasSimilar ? `<button class="chip ${state.categoryScope === "similar" ? "is-selected" : ""}" data-category-scope="similar" type="button">Similar items too</button>` : "",
+      ].join("");
+    }
     const currentCategory = effectiveCategory(product);
     nodes.categorySelect.innerHTML = categoryList
       .map((category) => `<option value="${escapeHtml(category)}"${currentCategory === category ? " selected" : ""}>${escapeHtml(category)}</option>`)
@@ -689,6 +764,42 @@
       window.alert("Shelf feedback saved for the next refresh.");
     }).catch((error) => {
       console.warn("Could not apply subcategory fix:", error);
+    });
+  }
+
+  function applyGoldCategoryLabel(product, category, subcategory) {
+    products = products.map((candidate) => {
+      if (candidate.key === product.key) {
+        return {
+          ...candidate,
+          category,
+          subcategory,
+          ai_category: category,
+          ai_subcategory: subcategory,
+          classification_status: "gold",
+        };
+      }
+      return candidate;
+    });
+    rebuildDerivedCollections();
+    closeCategorySheet();
+    renderFeed();
+    submitFix({
+      kind: "gold_category",
+      category,
+      subcategory,
+      product: {
+        asin: product.asin,
+        url: product.url,
+        name: product.name,
+        raw_name: product.raw_name,
+        brand: product.brand,
+        retailer: product.retailer,
+      },
+    }).then(() => {
+      window.alert("Gold label saved for the next refresh.");
+    }).catch((error) => {
+      console.warn("Could not save gold label:", error);
     });
   }
 
@@ -771,14 +882,7 @@
       }
       const payload = await response.json();
       if (payload && payload.profile) {
-        state.profile = {
-          ...getDefaultProfile(),
-          ...payload.profile,
-          filters: {
-            ...defaultFilters(),
-            ...((payload.profile || {}).filters || {}),
-          },
-        };
+        state.profile = normalizeProfile(payload.profile);
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify(state.profile));
         } catch (error) {
@@ -816,8 +920,14 @@
       renderFeed();
       return;
     }
+    if (action === "toggle-save") {
+      state.profile.savedKeys = toggleValue(state.profile.savedKeys || [], product.key);
+      saveProfile();
+      renderFeed();
+      return;
+    }
     if (action === "change-category") {
-      openCategorySheet(product);
+      openCategorySheet(product, { mode: "gold", scope: "item" });
     }
   }
 
@@ -850,7 +960,7 @@
 
     const storeButton = event.target.closest("[data-store-id]");
     if (storeButton && !storeButton.classList.contains("is-disabled")) {
-      state.profile.selectedStoreIds = toggleValue(state.profile.selectedStoreIds || [], storeButton.dataset.storeId);
+      state.profile.selectedStoreIds = storeButton.dataset.storeId ? [storeButton.dataset.storeId] : [];
       saveProfile();
       renderFeed();
       return;
@@ -876,7 +986,11 @@
   nodes.queueSubcategoryFix.addEventListener("click", () => {
     const product = productByKey.get(state.categoryTargetKey);
     if (product) {
-      applySubcategoryOverride(product, nodes.categorySelect.value, nodes.subcategorySelect.value);
+      if (state.categorySheetMode === "gold") {
+        applyGoldCategoryLabel(product, nodes.categorySelect.value, nodes.subcategorySelect.value);
+      } else {
+        applySubcategoryOverride(product, nodes.categorySelect.value, nodes.subcategorySelect.value);
+      }
     }
   });
   nodes.queueBrandFix.addEventListener("click", () => {
@@ -889,6 +1003,12 @@
     state.query = (nodes.searchInput.value || "").trim().toLowerCase();
     renderFeed();
   });
+  if (nodes.savedListToggle) {
+    nodes.savedListToggle.addEventListener("click", () => {
+      state.viewMode = state.viewMode === "saved" ? "all" : "saved";
+      renderFeed();
+    });
+  }
   nodes.categorySelect.addEventListener("change", () => {
     renderSubcategorySelect(nodes.categorySelect.value, "");
   });

@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260409a">
+<link rel="stylesheet" href="/static/styles.css?v=20260422a">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260409a">
+<link rel="manifest" href="/manifest.webmanifest?v=20260422a">
 </head>
 
 <body class="app-body">
@@ -46,6 +46,7 @@
         <div class="status-row">
             <div class="search-meta" id="search-meta">{{ deal_count }} live deals</div>
             <div class="freshness-meta">
+                <button class="ghost-button saved-link" type="button" id="saved-list-toggle">Saved list</button>
                 <a class="quality-link" href="/reports/catalog_quality_audit.html">Data Quality</a>
             </div>
         </div>
@@ -75,7 +76,7 @@
         <select id="subcategory-select" class="sheet-select"></select>
         <button class="primary-button" type="button" id="queue-subcategory-fix">Send shelf feedback</button>
     </div>
-    <div class="sheet-field">
+    <div class="sheet-field" id="brand-fix-field">
         <label for="brand-fix-input">Fix brand name</label>
         <input id="brand-fix-input" class="search-input" type="text" placeholder="Brand name">
         <button class="ghost-button" type="button" id="queue-brand-fix">Send brand feedback</button>
@@ -101,7 +102,7 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/app-shell.js?v=20260409a"></script>
+<script src="/static/app-shell.js?v=20260422a"></script>
 
 <noscript>
     <section class="noscript-fallback">

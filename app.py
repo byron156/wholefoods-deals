@@ -48,6 +48,7 @@ TARGET_DEALS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
 HMART_DEALS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
 FIXES_TO_DEPLOY_FILE = os.path.join(BASE_DIR, "fixes_to_deploy.json")
 DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
+TAXONOMY_GOLD_LABELS_FILE = os.path.join(BASE_DIR, "taxonomy_gold_labels.json")
 SUBCATEGORY_AI_MODEL_FILE = os.path.join(BASE_DIR, "subcategory_ai_model.pkl")
 SUBCATEGORY_AI_METADATA_FILE = os.path.join(BASE_DIR, "subcategory_ai_metadata.json")
 SUBCATEGORY_AI_REPORT_FILE = os.path.join(BASE_DIR, "subcategory_ai_report.json")
@@ -2543,6 +2544,62 @@ def brand_signature(product):
     return f"name:{retailer}:{normalize_text_key(product.get('raw_name') or product.get('name'))}"
 
 
+def normalize_review_key(value):
+    return " ".join(str(value or "").lower().split())
+
+
+def gold_label_key(label):
+    for field in ("asin", "url", "raw_name", "name"):
+        value = label.get(field)
+        if value:
+            return f"{field}:{normalize_review_key(value)}"
+    return None
+
+
+def default_gold_labels_payload():
+    return {
+        "instructions": (
+            "Manual taxonomy labels. These override exact products and are weighted into "
+            "the local sklearn taxonomy classifier during refresh."
+        ),
+        "label_count": 0,
+        "labels": [],
+    }
+
+
+def load_gold_labels_payload():
+    try:
+        with open(TAXONOMY_GOLD_LABELS_FILE, "r", encoding="utf-8") as gold_file:
+            payload = json.load(gold_file)
+    except FileNotFoundError:
+        return default_gold_labels_payload()
+    except json.JSONDecodeError:
+        return default_gold_labels_payload()
+
+    if not isinstance(payload, dict):
+        return default_gold_labels_payload()
+    labels = payload.get("labels")
+    if not isinstance(labels, list):
+        payload["labels"] = []
+    payload.setdefault("instructions", default_gold_labels_payload()["instructions"])
+    payload["label_count"] = len(payload.get("labels") or [])
+    return payload
+
+
+def save_gold_labels_payload(payload):
+    normalized = default_gold_labels_payload()
+    labels = payload.get("labels") if isinstance(payload, dict) else []
+    if isinstance(labels, list):
+        normalized["labels"] = labels
+    normalized["label_count"] = len(normalized["labels"])
+    instructions = (payload or {}).get("instructions") if isinstance(payload, dict) else ""
+    if instructions:
+        normalized["instructions"] = instructions
+    with open(TAXONOMY_GOLD_LABELS_FILE, "w", encoding="utf-8") as gold_file:
+        json.dump(normalized, gold_file, indent=2, ensure_ascii=False)
+        gold_file.write("\n")
+
+
 def default_fixes_to_deploy():
     return {
         "subcategory_overrides_by_key": {},
@@ -2614,6 +2671,7 @@ def load_device_profile(device_id):
         "selectedStoreIds": profile.get("selectedStoreIds") or [],
         "likedKeys": profile.get("likedKeys") or [],
         "dislikedKeys": profile.get("dislikedKeys") or [],
+        "savedKeys": profile.get("savedKeys") or [],
         "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
     }
 
@@ -2623,6 +2681,7 @@ def save_device_profile(device_id, profile):
         "selectedStoreIds": profile.get("selectedStoreIds") or [],
         "likedKeys": profile.get("likedKeys") or [],
         "dislikedKeys": profile.get("dislikedKeys") or [],
+        "savedKeys": profile.get("savedKeys") or [],
         "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
     }
 
@@ -3721,6 +3780,58 @@ def api_fixes_to_deploy():
             status="pending_feedback",
         )
         return jsonify({"ok": True, "kind": kind, "scope": scope, "brand": brand, "queued": True, "mode": "feedback-only"})
+
+    if kind == "gold_category":
+        category = (payload.get("category") or "").strip()
+        subcategory = (payload.get("subcategory") or "").strip()
+        product = payload.get("product") if isinstance(payload.get("product"), dict) else {}
+        active_options = active_taxonomy_subcategory_options()
+        valid_pairs = {
+            (current_category, current_subcategory)
+            for current_category, subcategories in active_options.items()
+            for current_subcategory in (subcategories or {}).keys()
+        }
+        if (category, subcategory) not in valid_pairs:
+            return jsonify({"error": "Invalid category/subcategory"}), 400
+
+        label = {
+            "asin": (product.get("asin") or "").strip() or None,
+            "url": (product.get("url") or "").strip() or None,
+            "name": product.get("name"),
+            "raw_name": product.get("raw_name") or product.get("name"),
+            "brand": clean_brand_display((product.get("brand") or "").strip()) if product.get("brand") else "",
+            "retailer": (product.get("retailer") or WHOLE_FOODS_RETAILER).strip(),
+            "category": category,
+            "subcategory": subcategory,
+            "notes": "",
+            "source": "site-category-fix",
+        }
+        label_id = gold_label_key(label)
+        if not label_id:
+            return jsonify({"error": "Missing product identity"}), 400
+
+        gold_payload = load_gold_labels_payload()
+        indexed = {}
+        for existing in gold_payload.get("labels") or []:
+            existing_id = gold_label_key(existing)
+            if existing_id:
+                indexed[existing_id] = existing
+        indexed[label_id] = label
+        gold_payload["labels"] = sorted(
+            indexed.values(),
+            key=lambda row: ((row.get("retailer") or ""), (row.get("name") or "")),
+        )
+        save_gold_labels_payload(gold_payload)
+        return jsonify(
+            {
+                "ok": True,
+                "kind": kind,
+                "category": category,
+                "subcategory": subcategory,
+                "saved": True,
+                "mode": "gold-label",
+            }
+        )
 
     if kind == "category_order":
         retailer = (payload.get("retailer") or "").strip()
