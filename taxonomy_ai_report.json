@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-24T00:03:18.454027+00:00",
+  "generated_at": "2026-04-24T18:22:49.393681+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v16",
-  "product_count": 2812,
-  "completed_count": 2812,
-  "changed_count": 2717,
+  "product_count": 3195,
+  "completed_count": 3195,
+  "changed_count": 3106,
   "changed_examples": [
     "Bell & Evans Boneless Skinless Chicken Breast",
     "Bell & Evans Boneless Skinless Chicken Breast",
@@ -25,13 +25,13 @@
     "CAVIAR RUSSE Cocktail Blinis, 3.5 OZ",
     "Sockeye Salmon Fillet",
     "Yellow Mango",
-    "Honeycrisp Apple",
-    "PRODUCE Large Hass Avocados",
+    "Honeycrisp Apples",
+    "Large Hass Avocados",
     "Large Peeled and Deveined Pink Shrimp, 31/40 ct",
     "Seafood, Shrimp Pink PD 31/40",
     "Ducktrap River Smoked Sockeye Salmon, 8 OZ",
     "Ducktrap River Cold Smoked Pepper Garlic Sockeye Salmon, 4 OZ",
-    "Ducktrap River Smoked Sockeye Salmon, 4 OZ",
+    "Duck Trap River Fish Farm, Wild Sockeye Salmon, 4 Ounce",
     "HORIZON ORGANIC Organic Growing Years 2% Milk, 59 FZ",
     "Horizon Organic DHA Omega-3 Milk, DHA 2 Percent Milk, 64 fl oz Half Gallon Carton",
     "Horizon Organic DHA Omega-3 Milk, DHA Whole Milk, 64 fl oz Half Gallon Carton",
@@ -51,8 +51,8 @@
     "Evolution Fresh , Defense Up Juice, 15.2 oz",
     "Juice Greens Kale Organic, 15.2 Fl Oz",
     "Juice Celery Organic, 15.2 Fl Oz",
-    "Evolution Fresh , Organic Orange Juice, 15.2 oz",
     "Evolution Fresh Watermelon Raspberry Energy Juice, 16 Fl Oz",
+    "Evolution Fresh , Organic Orange Juice, 15.2 oz",
     "Evolution Fresh , Essential Greens With Lime Juice, 15.2 Oz",
     "Juice Watermelon Organic, 32 Ounce",
     "Juice Defense Up, 32 Fl Oz",
@@ -208,5 +208,5 @@
     "Amy's Frozen Black Bean Burrito, Vegan, Made with Organic Beans and Vegetables, 6.0 Ounce",
     "Burrito Bean Rice, 6 Ounce"
   ],
-  "last_product": "Zanmang Loopy Jjajang Noodle 3.88 Oz"
+  "last_product": "Yuzu Ssanghwa 5.07 Fl Oz (150ML) X 10 Ea"
 }
