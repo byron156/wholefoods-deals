@@ -6548,8 +6548,8 @@
     "asin": "B0BFKD24CF",
     "name": "Wilde Snacks Chips Protein Seasalt Vingar 4 OZ",
     "raw_name": "Wilde Snacks Chips Protein Seasalt Vingar 4 OZ",
-    "brand": "Gttyd",
-    "source_brand": "Gttyd",
+    "brand": "Wilde Brands",
+    "source_brand": "Wilde Brands",
     "brand_source": "source",
     "variation": null,
     "category": "Snacks",
@@ -8274,7 +8274,7 @@
     "category_signals": [
       "direct match: frozen meal"
     ],
-    "image": "https://m.media-amazon.com/images/I/81dYV9vDjaS._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/912HgUucghL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B006KZYSWU",
     "unit_price": null,
     "current_price": "16% off",
@@ -10111,7 +10111,7 @@
     "category_signals": [
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71pa45f1CEL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71FWtjbczoL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
     "unit_price": null,
     "current_price": "11% off",
@@ -10285,7 +10285,7 @@
     "category_signals": [
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71Vf4AcsPIL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71KvSLwnUCL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00LMC505K",
     "unit_price": null,
     "current_price": "11% off",
@@ -10359,8 +10359,8 @@
   },
   {
     "asin": "B0DB2G5K65",
-    "name": "Siggi’s Extra Creamy Whole Milk Yogurt",
-    "raw_name": "siggi’s Extra Creamy Whole Milk Yogurt, Lemon, 4.4 oz. Single Serve Cup – Thick, Protein-Rich Yogurt Snack",
+    "name": "Siggi’s Whole Milk Yogurt, Lemon, 4.4 Oz. Single Serve Cup",
+    "raw_name": "siggi’s Whole Milk Yogurt, Lemon, 4.4 oz. Single Serve Cup – Thick, Protein-Rich Yogurt Snack",
     "brand": "Siggi's",
     "source_brand": "Siggi's",
     "brand_source": "source",
@@ -10372,7 +10372,7 @@
       "milk",
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71NJd1db6CL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71df002qexL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0DB2G5K65",
     "unit_price": null,
     "current_price": "11% off",
@@ -10463,7 +10463,7 @@
       "milk",
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71aS0KlJbxL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71cOroAQCsL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B011YJQ4B4",
     "unit_price": null,
     "current_price": "11% off",
@@ -10551,7 +10551,7 @@
     "category_signals": [
       "snack"
     ],
-    "image": "https://m.media-amazon.com/images/I/81RcpiCm4TL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/817fCr83fCL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08NGDKSPW",
     "unit_price": null,
     "current_price": "11% off",
@@ -10598,7 +10598,7 @@
       "milk",
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/715b5cChs8L._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71AKLYlMTEL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B011YJQBRG",
     "unit_price": null,
     "current_price": "11% off",
@@ -10765,7 +10765,7 @@
   {
     "asin": "B0DB2GP18V",
     "name": "Siggi’s Icelandic Skyr Lowfat Yogurt",
-    "raw_name": "siggi’s Icelandic Skyr Lowfat Yogurt, Strawberry Banana, 5.3 oz.",
+    "raw_name": "siggi’s Icelandic Skyr Lowfat Yogurt, Strawberry Banana, 5.3 oz., Single Serve Cup",
     "brand": "Siggi's",
     "source_brand": "Siggi's",
     "brand_source": "source",
@@ -11433,8 +11433,8 @@
   },
   {
     "asin": "B00WW7ZQPS",
-    "name": "Guayaki Organic Yerba Mate, Mint Terere, 16 Oz",
-    "raw_name": "Guayaki Organic Yerba Mate, Mint Terere, 16 oz",
+    "name": "Yerba Madre Organic Mint Yerba Mate, 16 FZ",
+    "raw_name": "Yerba Madre Organic Mint Yerba Mate, 16 FZ",
     "brand": "Guayaki",
     "source_brand": "Guayaki",
     "brand_source": "source",
@@ -11443,7 +11443,7 @@
     "subcategory": null,
     "category_confidence": 0.25,
     "category_signals": [],
-    "image": "https://m.media-amazon.com/images/I/81cYEctjN5L._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71CLRjoqNGL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00WW7ZQPS",
     "unit_price": null,
     "current_price": "2 for $6.12",
@@ -11479,8 +11479,8 @@
     "asin": "B0DPBC6N11",
     "name": "Yerba Madre Organic Strawberry Hibiscus Yerba Mate, 16 FZ",
     "raw_name": "Yerba Madre Organic Strawberry Hibiscus Yerba Mate, 16 FZ",
-    "brand": "Guayaki",
-    "source_brand": "Guayaki",
+    "brand": "Yerba Madre",
+    "source_brand": "Yerba Madre",
     "brand_source": "source",
     "variation": null,
     "category": "Pantry",
@@ -13286,8 +13286,8 @@
   },
   {
     "asin": "B00PEADHDS",
-    "name": "Jarrow Formulas Magmind Mag L-Threonate, 90 CT",
-    "raw_name": "JARROW FORMULAS Magmind Mag L-Threonate, 90 CT",
+    "name": "Jarrow Formulas Magmind Brain Health, 90 CT",
+    "raw_name": "JARROW FORMULAS Magmind Brain Health, 90 CT",
     "brand": "Jarrow Formulas",
     "source_brand": "Jarrow Formulas",
     "brand_source": "source",
@@ -17928,8 +17928,8 @@
   },
   {
     "asin": "B002B8Z98W",
-    "name": "Organic Strawberries, 1 Lb",
-    "raw_name": "Organic Strawberries, 1 Lb",
+    "name": "Strawberries, 16 Oz",
+    "raw_name": "Strawberries, 16 oz",
     "brand": null,
     "source_brand": null,
     "brand_source": null,
@@ -17938,11 +17938,10 @@
     "subcategory": "Fruit",
     "category_confidence": 0.99,
     "category_signals": [
-      "strawberries",
-      "produce"
+      "strawberries"
     ],
-    "image": "https://m.media-amazon.com/images/I/81knc9-4RHL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B002B8Z98W",
+    "image": "https://m.media-amazon.com/images/I/81RVKiOYKBL.jpg",
+    "url": null,
     "unit_price": null,
     "current_price": "$5.32 ea",
     "basis_price": "$5.99 ea",
@@ -17958,23 +17957,16 @@
       "B002B8Z98W"
     ],
     "tags": [
-      "organic",
       "prime deal"
     ],
-    "rank": 2.001,
-    "flyer_rank": 2,
+    "rank": 2,
     "sale_price": "$5.32 ea",
     "flyer_promotion_id": "2b16887d-b741-4802-9563-d06d4ec2d627",
     "flyer_promotion_grouping": "SINGLE",
-    "flyer_promotion_name": "Strawberries, 16 oz",
-    "flyer_detail_count": 1,
-    "flyer_source": "promotion-detail",
+    "flyer_source": "display-promotion",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
-    "retailer": "Whole Foods",
-    "source_categories": [
-      "Fresh Produce"
-    ]
+    "retailer": "Whole Foods"
   },
   {
     "asin": "B07NRD9CZK",
@@ -24398,8 +24390,8 @@
     "asin": "B0BFKD24CF",
     "name": "Wilde Snacks Chips Protein Seasalt Vingar 4 OZ",
     "raw_name": "Wilde Snacks Chips Protein Seasalt Vingar 4 OZ",
-    "brand": "Gttyd",
-    "source_brand": "Gttyd",
+    "brand": "Wilde Brands",
+    "source_brand": "Wilde Brands",
     "brand_source": "source",
     "variation": null,
     "category": "Snacks",
@@ -25364,7 +25356,7 @@
     "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
     "flyer_promotion_grouping": "GROUPED",
     "flyer_promotion_name": "Dressings and Condiments",
-    "flyer_detail_count": 5,
+    "flyer_detail_count": 8,
     "flyer_source": "promotion-detail",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
@@ -25414,7 +25406,7 @@
     "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
     "flyer_promotion_grouping": "GROUPED",
     "flyer_promotion_name": "Dressings and Condiments",
-    "flyer_detail_count": 5,
+    "flyer_detail_count": 8,
     "flyer_source": "promotion-detail",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
@@ -25464,7 +25456,7 @@
     "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
     "flyer_promotion_grouping": "GROUPED",
     "flyer_promotion_name": "Dressings and Condiments",
-    "flyer_detail_count": 5,
+    "flyer_detail_count": 8,
     "flyer_source": "promotion-detail",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
@@ -25509,7 +25501,103 @@
     "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
     "flyer_promotion_grouping": "GROUPED",
     "flyer_promotion_name": "Dressings and Condiments",
-    "flyer_detail_count": 5,
+    "flyer_detail_count": 8,
+    "flyer_source": "promotion-detail",
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side",
+    "retailer": "Whole Foods"
+  },
+  {
+    "asin": "B0FQ821HDN",
+    "name": "Organicville Sun Dried Tomato & Garlic Salad Dressing",
+    "raw_name": "Organicville Sun Dried Tomato & Garlic Salad Dressing - Organic Vinaigrette & Marinade with No Seed Oils, Canola, or Soy, Keto & Paleo Friendly, Vegan, 0g Added Sugar Dressing - 8 fl oz",
+    "brand": "Organicville",
+    "source_brand": "Organicville",
+    "brand_source": "source",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Dressings & Mayo",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://m.media-amazon.com/images/I/61t9FxuGoLL._FMwebp__SR500,500_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FQ821HDN",
+    "unit_price": null,
+    "current_price": "16% off",
+    "basis_price": "$4.69 to $4.99 ea",
+    "prime_price": null,
+    "discount": "25% off",
+    "discount_percent": 25,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10328"
+    ],
+    "store_offers": [],
+    "asins": [
+      "B0FQ821HDN"
+    ],
+    "tags": [
+      "keto",
+      "organic",
+      "paleo",
+      "vegan"
+    ],
+    "rank": 30.005,
+    "flyer_rank": 30,
+    "sale_price": "16% off",
+    "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
+    "flyer_promotion_grouping": "GROUPED",
+    "flyer_promotion_name": "Dressings and Condiments",
+    "flyer_detail_count": 8,
+    "flyer_source": "promotion-detail",
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side",
+    "retailer": "Whole Foods"
+  },
+  {
+    "asin": "B0FQ81ZVKZ",
+    "name": "Organicville Balsamic Vinaigrette & Marinade Salad Dressing",
+    "raw_name": "Organicville Balsamic Vinaigrette & Marinade Salad Dressing - Organic Vinaigrette, No Seed Oils, Canola, or Soy, Keto & Paleo Friendly, Vegan, & Seed Oil Free, 0g Added Sugar, Dressing & Dip - 8 fl oz",
+    "brand": "Organicville",
+    "source_brand": "Organicville",
+    "brand_source": "source",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Dressings & Mayo",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://m.media-amazon.com/images/I/61DxdVYiBrL._FMwebp__SR500,500_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FQ81ZVKZ",
+    "unit_price": null,
+    "current_price": "16% off",
+    "basis_price": "$4.69 to $4.99 ea",
+    "prime_price": null,
+    "discount": "25% off",
+    "discount_percent": 25,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10328"
+    ],
+    "store_offers": [],
+    "asins": [
+      "B0FQ81ZVKZ"
+    ],
+    "tags": [
+      "keto",
+      "organic",
+      "paleo",
+      "vegan"
+    ],
+    "rank": 30.006,
+    "flyer_rank": 30,
+    "sale_price": "16% off",
+    "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
+    "flyer_promotion_grouping": "GROUPED",
+    "flyer_promotion_name": "Dressings and Condiments",
+    "flyer_detail_count": 8,
     "flyer_source": "promotion-detail",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
@@ -25548,13 +25636,58 @@
     "tags": [
       "organic"
     ],
-    "rank": 30.005,
+    "rank": 30.007,
     "flyer_rank": 30,
     "sale_price": "16% off",
     "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
     "flyer_promotion_grouping": "GROUPED",
     "flyer_promotion_name": "Dressings and Condiments",
-    "flyer_detail_count": 5,
+    "flyer_detail_count": 8,
+    "flyer_source": "promotion-detail",
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side",
+    "retailer": "Whole Foods"
+  },
+  {
+    "asin": "B0FQ7VTGL5",
+    "name": "Organicville Organic Salt Free Italian Dressing, 8 FZ",
+    "raw_name": "ORGANICVILLE Organic Salt Free Italian Dressing, 8 FZ",
+    "brand": "Organicville",
+    "source_brand": "Organicville",
+    "brand_source": "source",
+    "variation": null,
+    "category": "Pantry",
+    "subcategory": "Dressings & Mayo",
+    "category_confidence": 0.93,
+    "category_signals": [
+      "direct match: dipping sauce"
+    ],
+    "image": "https://m.media-amazon.com/images/I/5184PSGX0ML._FMwebp__SR500,500_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FQ7VTGL5",
+    "unit_price": null,
+    "current_price": "16% off",
+    "basis_price": "$4.69 to $4.99 ea",
+    "prime_price": null,
+    "discount": "25% off",
+    "discount_percent": 25,
+    "emoji": "🛒",
+    "available_store_ids": [
+      "10328"
+    ],
+    "store_offers": [],
+    "asins": [
+      "B0FQ7VTGL5"
+    ],
+    "tags": [
+      "organic"
+    ],
+    "rank": 30.008,
+    "flyer_rank": 30,
+    "sale_price": "16% off",
+    "flyer_promotion_id": "379c1531-9b7f-45b8-b2bf-bc9d3566ef77",
+    "flyer_promotion_grouping": "GROUPED",
+    "flyer_promotion_name": "Dressings and Condiments",
+    "flyer_detail_count": 8,
     "flyer_source": "promotion-detail",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
@@ -25935,7 +26068,7 @@
     "category_signals": [
       "direct match: frozen meal"
     ],
-    "image": "https://m.media-amazon.com/images/I/81dYV9vDjaS._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/912HgUucghL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B006KZYSWU",
     "unit_price": null,
     "current_price": "16% off",
@@ -27727,7 +27860,7 @@
     "category_signals": [
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71pa45f1CEL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71FWtjbczoL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
     "unit_price": null,
     "current_price": "11% off",
@@ -27901,7 +28034,7 @@
     "category_signals": [
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71Vf4AcsPIL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71KvSLwnUCL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00LMC505K",
     "unit_price": null,
     "current_price": "11% off",
@@ -27975,8 +28108,8 @@
   },
   {
     "asin": "B0DB2G5K65",
-    "name": "Siggi’s Extra Creamy Whole Milk Yogurt",
-    "raw_name": "siggi’s Extra Creamy Whole Milk Yogurt, Lemon, 4.4 oz. Single Serve Cup – Thick, Protein-Rich Yogurt Snack",
+    "name": "Siggi’s Whole Milk Yogurt, Lemon, 4.4 Oz. Single Serve Cup",
+    "raw_name": "siggi’s Whole Milk Yogurt, Lemon, 4.4 oz. Single Serve Cup – Thick, Protein-Rich Yogurt Snack",
     "brand": "Siggi's",
     "source_brand": "Siggi's",
     "brand_source": "source",
@@ -27988,7 +28121,7 @@
       "milk",
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71NJd1db6CL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71df002qexL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0DB2G5K65",
     "unit_price": null,
     "current_price": "11% off",
@@ -28079,7 +28212,7 @@
       "milk",
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/71aS0KlJbxL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71cOroAQCsL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B011YJQ4B4",
     "unit_price": null,
     "current_price": "11% off",
@@ -28167,7 +28300,7 @@
     "category_signals": [
       "snack"
     ],
-    "image": "https://m.media-amazon.com/images/I/81RcpiCm4TL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/817fCr83fCL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08NGDKSPW",
     "unit_price": null,
     "current_price": "11% off",
@@ -28214,7 +28347,7 @@
       "milk",
       "yogurt"
     ],
-    "image": "https://m.media-amazon.com/images/I/715b5cChs8L._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71AKLYlMTEL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B011YJQBRG",
     "unit_price": null,
     "current_price": "11% off",
@@ -28381,7 +28514,7 @@
   {
     "asin": "B0DB2GP18V",
     "name": "Siggi’s Icelandic Skyr Lowfat Yogurt",
-    "raw_name": "siggi’s Icelandic Skyr Lowfat Yogurt, Strawberry Banana, 5.3 oz.",
+    "raw_name": "siggi’s Icelandic Skyr Lowfat Yogurt, Strawberry Banana, 5.3 oz., Single Serve Cup",
     "brand": "Siggi's",
     "source_brand": "Siggi's",
     "brand_source": "source",
@@ -29049,8 +29182,8 @@
   },
   {
     "asin": "B00WW7ZQPS",
-    "name": "Guayaki Organic Yerba Mate, Mint Terere, 16 Oz",
-    "raw_name": "Guayaki Organic Yerba Mate, Mint Terere, 16 oz",
+    "name": "Yerba Madre Organic Mint Yerba Mate, 16 FZ",
+    "raw_name": "Yerba Madre Organic Mint Yerba Mate, 16 FZ",
     "brand": "Guayaki",
     "source_brand": "Guayaki",
     "brand_source": "source",
@@ -29059,7 +29192,7 @@
     "subcategory": null,
     "category_confidence": 0.25,
     "category_signals": [],
-    "image": "https://m.media-amazon.com/images/I/81cYEctjN5L._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71CLRjoqNGL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00WW7ZQPS",
     "unit_price": null,
     "current_price": "2 for $6.12",
@@ -30728,8 +30861,8 @@
   },
   {
     "asin": "B00PEADHDS",
-    "name": "Jarrow Formulas Magmind Mag L-Threonate, 90 CT",
-    "raw_name": "JARROW FORMULAS Magmind Mag L-Threonate, 90 CT",
+    "name": "Jarrow Formulas Magmind Brain Health, 90 CT",
+    "raw_name": "JARROW FORMULAS Magmind Brain Health, 90 CT",
     "brand": "Jarrow Formulas",
     "source_brand": "Jarrow Formulas",
     "brand_source": "source",
