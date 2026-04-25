@@ -87,8 +87,8 @@
   },
   {
     "asin": "B002B8Z98W",
-    "name": "Strawberries, 16 Oz",
-    "raw_name": "Strawberries, 16 oz",
+    "name": "Organic Strawberries, 1 Lb",
+    "raw_name": "Organic Strawberries, 1 Lb",
     "brand": null,
     "source_brand": null,
     "brand_source": null,
@@ -97,10 +97,11 @@
     "subcategory": "Fruit",
     "category_confidence": 0.99,
     "category_signals": [
-      "strawberries"
+      "strawberries",
+      "produce"
     ],
-    "image": "https://m.media-amazon.com/images/I/81RVKiOYKBL.jpg",
-    "url": null,
+    "image": "https://m.media-amazon.com/images/I/81knc9-4RHL._FMwebp__SR500,500_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B002B8Z98W",
     "unit_price": null,
     "current_price": "$5.32 ea",
     "basis_price": "$6.99 ea",
@@ -116,16 +117,23 @@
       "B002B8Z98W"
     ],
     "tags": [
+      "organic",
       "prime deal"
     ],
-    "rank": 2,
+    "rank": 2.001,
+    "flyer_rank": 2,
     "sale_price": "$5.32 ea",
     "flyer_promotion_id": "21a5a223-b652-43ec-a9ba-6172d526dd2a",
     "flyer_promotion_grouping": "SINGLE",
-    "flyer_source": "display-promotion",
+    "flyer_promotion_name": "Strawberries, 16 oz",
+    "flyer_detail_count": 1,
+    "flyer_source": "promotion-detail",
     "source_store_id": "10160",
     "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
+    "retailer": "Whole Foods",
+    "source_categories": [
+      "Fresh Produce"
+    ]
   },
   {
     "asin": "B07NRD9CZK",
@@ -787,8 +795,8 @@
   },
   {
     "asin": "B000RGZMTQ",
-    "name": "Honeycrisp Apples",
-    "raw_name": "Honeycrisp Apples",
+    "name": "Honeycrisp Apple",
+    "raw_name": "Honeycrisp Apple",
     "brand": null,
     "source_brand": null,
     "brand_source": null,
@@ -797,10 +805,11 @@
     "subcategory": "Fruit",
     "category_confidence": 0.99,
     "category_signals": [
-      "apple"
+      "apple",
+      "produce"
     ],
-    "image": "https://m.media-amazon.com/images/I/71ONuZtiFDL.jpg",
-    "url": null,
+    "image": "https://m.media-amazon.com/images/I/71PxRvQMaoL._FMwebp__SR500,500_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B000RGZMTQ",
     "unit_price": null,
     "current_price": "$3.10/lb",
     "basis_price": "$3.29/lb",
@@ -818,19 +827,25 @@
     "tags": [
       "prime deal"
     ],
-    "rank": 7,
+    "rank": 7.001,
+    "flyer_rank": 7,
     "sale_price": "$3.10/lb",
     "flyer_promotion_id": "55e616de-d194-4d35-bdd2-05d0a467d1ec",
     "flyer_promotion_grouping": "SINGLE",
-    "flyer_source": "display-promotion",
+    "flyer_promotion_name": "Honeycrisp Apples",
+    "flyer_detail_count": 1,
+    "flyer_source": "promotion-detail",
     "source_store_id": "10160",
     "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
+    "retailer": "Whole Foods",
+    "source_categories": [
+      "Fresh Produce"
+    ]
   },
   {
     "asin": "B0B2W8HBZ8",
-    "name": "Large Hass Avocados",
-    "raw_name": "Large Hass Avocados",
+    "name": "Produce Large Hass Avocados",
+    "raw_name": "PRODUCE Large Hass Avocados",
     "brand": null,
     "source_brand": null,
     "brand_source": null,
@@ -839,10 +854,11 @@
     "subcategory": "Vegetables",
     "category_confidence": 0.99,
     "category_signals": [
-      "avocado"
+      "avocado",
+      "produce"
     ],
-    "image": "https://m.media-amazon.com/images/I/81JhJ2QIN+L.jpg",
-    "url": null,
+    "image": "https://m.media-amazon.com/images/I/81LKLCmdAQL._FMwebp__SR500,500_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B2W8HBZ8",
     "unit_price": null,
     "current_price": "2 for $3.34",
     "basis_price": "$1.89 ea",
@@ -860,14 +876,20 @@
     "tags": [
       "prime deal"
     ],
-    "rank": 8,
+    "rank": 8.001,
+    "flyer_rank": 8,
     "sale_price": "2 for $3.34",
     "flyer_promotion_id": "e18fa2f6-518f-4601-a19a-7d7417e38f71",
     "flyer_promotion_grouping": "SINGLE",
-    "flyer_source": "display-promotion",
+    "flyer_promotion_name": "Large Hass Avocados",
+    "flyer_detail_count": 1,
+    "flyer_source": "promotion-detail",
     "source_store_id": "10160",
     "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
+    "retailer": "Whole Foods",
+    "source_categories": [
+      "Fresh Produce"
+    ]
   },
   {
     "asin": null,
@@ -9198,7 +9220,7 @@
     "category_signals": [
       "direct match: frozen meal"
     ],
-    "image": "https://m.media-amazon.com/images/I/81tKx6fVeAS._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/91x69HQ2xkL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00CJ8JJSK",
     "unit_price": null,
     "current_price": "16% off",
@@ -11412,8 +11434,8 @@
   },
   {
     "asin": "B00WW7ZQPS",
-    "name": "Yerba Madre Organic Mint Yerba Mate, 16 FZ",
-    "raw_name": "Yerba Madre Organic Mint Yerba Mate, 16 FZ",
+    "name": "Guayaki Organic Yerba Mate, Mint Terere, 16 Oz",
+    "raw_name": "Guayaki Organic Yerba Mate, Mint Terere, 16 oz",
     "brand": "Yerba Madre",
     "source_brand": "Yerba Madre",
     "brand_source": "source",
@@ -20555,7 +20577,7 @@
       "salmon",
       "fish"
     ],
-    "image": "https://m.media-amazon.com/images/I/81o8zj3Ch6L._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71rgfXjNIAL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B005HJ2LSS",
     "unit_price": null,
     "current_price": "11% off",
@@ -28790,7 +28812,7 @@
     "category_signals": [
       "direct match: frozen meal"
     ],
-    "image": "https://m.media-amazon.com/images/I/81tKx6fVeAS._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/91x69HQ2xkL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00CJ8JJSK",
     "unit_price": null,
     "current_price": "16% off",

@@ -4,11 +4,11 @@
     "https://www.hmart.com/237?map=productClusterIds&page=1",
     "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=1"
   ],
-  "product_count": 398,
+  "product_count": 400,
   "runs": [
     {
       "start_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC",
-      "records_filtered": 269,
+      "records_filtered": 266,
       "pages_scraped": 9,
       "product_count": 244
     },
