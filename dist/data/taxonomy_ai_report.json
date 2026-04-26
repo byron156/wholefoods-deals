@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-25T13:23:12.205634+00:00",
+  "generated_at": "2026-04-26T13:23:30.934501+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v16",
-  "product_count": 2863,
-  "completed_count": 2863,
-  "changed_count": 2801,
+  "product_count": 2865,
+  "completed_count": 2865,
+  "changed_count": 2804,
   "changed_examples": [
     "Bell & Evans Boneless Skinless Chicken Breast",
     "Bell & Evans Boneless Skinless Chicken Breast",
@@ -208,5 +208,5 @@
     "Amy's Frozen Black Bean Burrito, Vegan, Made with Organic Beans and Vegetables, 6.0 Ounce",
     "Burrito Bean Rice, 6 Ounce"
   ],
-  "last_product": "Yuzu Ssanghwa 5.07 Fl Oz (150ML) X 10 Ea"
+  "last_product": "Yuzu Pepper Sauce 5 Fl Oz (147ML)"
 }
