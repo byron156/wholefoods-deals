@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-26T13:23:30.934501+00:00",
+  "generated_at": "2026-04-27T13:23:32.615265+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v16",
-  "product_count": 2865,
-  "completed_count": 2865,
-  "changed_count": 2804,
+  "product_count": 2653,
+  "completed_count": 2653,
+  "changed_count": 2623,
   "changed_examples": [
     "Bell & Evans Boneless Skinless Chicken Breast",
     "Bell & Evans Boneless Skinless Chicken Breast",
