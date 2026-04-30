@@ -14,3 +14,9 @@ taxonomy_classification_debug.json
 taxonomy_*_queue*.json
 silver_manual_prompts/
 silver_manual_prompts_round*/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
