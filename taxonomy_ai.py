@@ -18,8 +18,8 @@ from fixed_taxonomy import FIXED_TAXONOMY_VERSION, build_fixed_taxonomy
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
-MODEL_VERSION = "taxonomy-local-ml-v16"
-PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v16"
+MODEL_VERSION = "taxonomy-local-ml-v17"
+PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v17"
 OLLAMA_CHAT_TIMEOUT = int(os.getenv("OLLAMA_CHAT_TIMEOUT", "420"))
 CLASSIFICATION_BATCH_SIZE = int(os.getenv("TAXONOMY_CLASSIFICATION_BATCH_SIZE", "20"))
 DISCOVERED_TAXONOMY_FILE = "discovered_taxonomy.json"
@@ -725,10 +725,13 @@ def text_has_any(text, terms):
 
 PACKAGED_PRODUCE_BLOCKERS = [
     "air bite",
+    "bar soap",
     "bites",
     "breakfast cereal",
     "capsule",
     "capsules",
+    "carton",
+    "canned",
     "cereal",
     "chips",
     "coffee",
@@ -741,7 +744,16 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "curl",
     "drink",
     "extract",
+    "face wash",
+    "fruit bar",
+    "fruit leather",
     "fruit jerky",
+    "fruit roll",
+    "fruit rolls",
+    "fruit snack",
+    "fruit snacks",
+    "fruit split",
+    "fruit splits",
     "gummies",
     "immunity blend",
     "immunity shot",
@@ -760,6 +772,8 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "protein",
     "repellent",
     "sauce",
+    "serum",
+    "soap",
     "sausage",
     "smoothie",
     "snack",
@@ -767,6 +781,7 @@ PACKAGED_PRODUCE_BLOCKERS = [
     "skin care",
     "superfood",
     "supplement",
+    "soup",
     "tablet",
     "tea",
     "turkey tail",
@@ -880,6 +895,8 @@ def fresh_produce_source_classification(product, taxonomy):
     if not has_source_fresh_produce(product):
         return None
     text = product_text(product)
+    if is_packaged_or_processed_for_produce(text):
+        return None
     if text_has_any(text, ["chunk", "chunks", "cut fruit", "cut vegetable", "fruit cup", "value pack"]):
         return local_result(taxonomy, "Produce", "Cut Fruit & Veg", reason="Whole Foods source labeled this card Fresh Produce.")
     if text_has_word(text, HERB_TERMS):
@@ -923,8 +940,12 @@ def packaged_form_classification(product, taxonomy):
 
     if text_has_any(text, ["cleanser", "face wash", "moisturizer", "face clay", "mud mask", "eye patches", "eye patch", "hydro gel", "serum", "aloe vera gel"]):
         return local_result(taxonomy, "Beauty & Personal Care", "Skin Care", reason="Skin-care treatment wording matched.")
+    if text_has_any(text, ["bar soap", "soap", "body wash", "hand wash"]):
+        return local_result(taxonomy, "Beauty & Personal Care", "Soap & Hand Wash", reason="Soap or hand-wash wording matched.")
     if text_has_any(text, ["anti-itch", "arthritis cream", "pain relieving", "healing balm", "body balm"]):
         return local_result(taxonomy, "Beauty & Personal Care", "Body Care", reason="Body-care treatment wording matched.")
+    if text_has_any(text, ["beard oil", "beard butter", "beard serum"]):
+        return local_result(taxonomy, "Beauty & Personal Care", "Body Care", reason="Beard-care wording matched.")
     if text_has_phrase_or_word(text, phrases=["whole milk kefir", "low fat kefir"], words=["kefir"]):
         return local_result(taxonomy, "Dairy & Eggs", "Yogurt", reason="Kefir dairy wording matched.")
     if text_has_any(text, ["green tea single serve"]) or ("green tea" in text and not text_has_any(text, ["ready to drink", "iced tea"])):
@@ -939,6 +960,8 @@ def packaged_form_classification(product, taxonomy):
         return local_result(taxonomy, "Frozen", "Frozen Vegetables", reason="Frozen fries wording matched.")
     if text_has_any(text, ["breakfast cereal", "protein cereal", "catalina crunch", "granola", "oatmeal"]):
         return local_result(taxonomy, "Pantry", "Cereal & Breakfast", reason="Packaged breakfast cereal wording matched.")
+    if text_has_any(text, ["soup", "broth", "stock"]) and not text_has_any(text, ["soup dumpling", "soup dumplings"]):
+        return local_result(taxonomy, "Pantry", "Soup & Broth", reason="Shelf-stable soup or broth wording matched.")
     if text_has_any(text, ["kosher salt", "sea salt", "pink salt"]) and not text_has_any(text, ["chocolate", "bar", "snack", "chips"]):
         return local_result(taxonomy, "Pantry", "Spices & Seasonings", reason="Salt seasoning wording matched.")
     if text_has_any(text, ["mandarin"]) and text_has_any(text, ["oz", "ounce", "ounces"]):
@@ -1297,6 +1320,8 @@ def deterministic_classification(product, taxonomy):
 
     if text_has_any(text, ["chips", "potato stick", "tortilla chip"]):
         return result("Snacks", "Chips", reason="Chip snack wording matched.")
+    if text_has_any(text, ["fruit snack", "fruit snacks", "fruit split", "fruit splits", "fruit leather", "fruit roll", "fruit rolls", "fruit bar", "fruit bars", "fruit chew", "fruit chews"]):
+        return result("Snacks", "Fruit Snacks", reason="Packaged fruit-snack wording matched.")
     if text_has_any(text, ["cracker", "crackers"]):
         return result("Snacks", "Crackers", reason="Cracker snack wording matched.")
     if text_has_any(text, ["bunny grahams", "graham snacks", "toasties"]):
