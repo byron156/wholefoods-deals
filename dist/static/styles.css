@@ -1220,12 +1220,12 @@ p {
   }
 
   .category-track {
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-    grid-auto-columns: auto;
-    overflow: visible;
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    grid-auto-columns: minmax(296px, 88vw);
+    overflow-x: auto;
     gap: 8px;
-    padding: 0;
+    padding-inline: 1px;
   }
 }
 
