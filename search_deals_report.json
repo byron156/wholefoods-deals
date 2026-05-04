@@ -1,12 +1,12 @@
 {
-  "product_count": 4103,
+  "product_count": 4147,
   "stores": [
     {
       "store_id": "10160",
       "store_name": "Columbus Circle",
       "search_url": "https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender",
-      "product_count": 2050,
-      "network_batch_count": 151,
+      "product_count": 2095,
+      "network_batch_count": 164,
       "sort_runs": [
         {
           "filter_label": null,
@@ -14,10 +14,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Relevance",
-          "new_products_found": 400,
-          "captured_events": 400,
+          "new_products_found": 395,
+          "captured_events": 395,
           "collection_request_count": 17,
-          "total_products_after_sort": 400,
+          "total_products_after_sort": 395,
           "skipped": false
         },
         {
@@ -26,10 +26,10 @@
           "sort_label": "Price: Low to High",
           "sort_rank": "price-asc-rank",
           "run_label": "Price: Low to High",
-          "new_products_found": 318,
-          "captured_events": 318,
+          "new_products_found": 326,
+          "captured_events": 326,
           "collection_request_count": 17,
-          "total_products_after_sort": 718,
+          "total_products_after_sort": 721,
           "skipped": false
         },
         {
@@ -38,10 +38,10 @@
           "sort_label": "Price: High to Low",
           "sort_rank": "price-desc-rank",
           "run_label": "Price: High to Low",
-          "new_products_found": 322,
-          "captured_events": 322,
+          "new_products_found": 327,
+          "captured_events": 327,
           "collection_request_count": 17,
-          "total_products_after_sort": 1040,
+          "total_products_after_sort": 1048,
           "skipped": false
         },
         {
@@ -50,10 +50,10 @@
           "sort_label": "Newest Arrivals",
           "sort_rank": "date-desc-rank",
           "run_label": "Newest Arrivals",
-          "new_products_found": 305,
-          "captured_events": 305,
+          "new_products_found": 310,
+          "captured_events": 310,
           "collection_request_count": 17,
-          "total_products_after_sort": 1345,
+          "total_products_after_sort": 1358,
           "skipped": false
         },
         {
@@ -62,10 +62,10 @@
           "sort_label": "Get it fast",
           "sort_rank": "get-it-fast-rank",
           "run_label": "Get it fast",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "collection_request_count": 2,
-          "total_products_after_sort": 1345,
+          "new_products_found": 87,
+          "captured_events": 87,
+          "collection_request_count": 13,
+          "total_products_after_sort": 1445,
           "skipped": false
         },
         {
@@ -77,7 +77,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 1345,
+          "total_products_after_sort": 1445,
           "skipped": false
         },
         {
@@ -89,7 +89,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 1345,
+          "total_products_after_sort": 1445,
           "skipped": false
         },
         {
@@ -98,10 +98,10 @@
           "sort_label": "Best Sellers",
           "sort_rank": "exact-aware-popularity-rank",
           "run_label": "Best Sellers",
-          "new_products_found": 130,
-          "captured_events": 130,
+          "new_products_found": 104,
+          "captured_events": 104,
           "collection_request_count": 17,
-          "total_products_after_sort": 1475,
+          "total_products_after_sort": 1549,
           "skipped": false
         },
         {
@@ -112,10 +112,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Amazon Brands / Relevance",
-          "new_products_found": 91,
-          "captured_events": 91,
+          "new_products_found": 85,
+          "captured_events": 85,
           "collection_request_count": 5,
-          "total_products_after_sort": 1566,
+          "total_products_after_sort": 1634,
           "skipped": false
         },
         {
@@ -126,10 +126,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "FSA or HSA Eligible / Relevance",
-          "new_products_found": 37,
-          "captured_events": 37,
+          "new_products_found": 40,
+          "captured_events": 40,
           "collection_request_count": 3,
-          "total_products_after_sort": 1603,
+          "total_products_after_sort": 1674,
           "skipped": false
         },
         {
@@ -140,10 +140,10 @@
           "sort_label": "Price: Low to High",
           "sort_rank": "price-asc-rank",
           "run_label": "Any Feature / Price: Low to High",
-          "new_products_found": 261,
-          "captured_events": 261,
+          "new_products_found": 250,
+          "captured_events": 250,
           "collection_request_count": 17,
-          "total_products_after_sort": 1864,
+          "total_products_after_sort": 1924,
           "skipped": false
         },
         {
@@ -154,10 +154,10 @@
           "sort_label": "Price: High to Low",
           "sort_rank": "price-desc-rank",
           "run_label": "Any Feature / Price: High to Low",
-          "new_products_found": 154,
-          "captured_events": 154,
+          "new_products_found": 146,
+          "captured_events": 146,
           "collection_request_count": 12,
-          "total_products_after_sort": 2018,
+          "total_products_after_sort": 2070,
           "skipped": false
         },
         {
@@ -168,10 +168,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Biodiversity / Relevance",
-          "new_products_found": 8,
-          "captured_events": 8,
+          "new_products_found": 5,
+          "captured_events": 5,
           "collection_request_count": 3,
-          "total_products_after_sort": 2026,
+          "total_products_after_sort": 2075,
           "skipped": false
         },
         {
@@ -185,7 +185,7 @@
           "new_products_found": 3,
           "captured_events": 3,
           "collection_request_count": 1,
-          "total_products_after_sort": 2029,
+          "total_products_after_sort": 2078,
           "skipped": false
         },
         {
@@ -196,10 +196,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Farming Practices / Relevance",
-          "new_products_found": 2,
-          "captured_events": 2,
-          "collection_request_count": 3,
-          "total_products_after_sort": 2031,
+          "new_products_found": 3,
+          "captured_events": 3,
+          "collection_request_count": 4,
+          "total_products_after_sort": 2081,
           "skipped": false
         },
         {
@@ -210,10 +210,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Forestry Practices / Relevance",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "collection_request_count": 2,
-          "total_products_after_sort": 2031,
+          "new_products_found": 1,
+          "captured_events": 1,
+          "collection_request_count": 3,
+          "total_products_after_sort": 2082,
           "skipped": false
         },
         {
@@ -224,10 +224,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Manufacturing Practices / Relevance",
-          "new_products_found": 2,
-          "captured_events": 2,
+          "new_products_found": 1,
+          "captured_events": 1,
           "collection_request_count": 1,
-          "total_products_after_sort": 2033,
+          "total_products_after_sort": 2083,
           "skipped": false
         },
         {
@@ -241,7 +241,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2033,
+          "total_products_after_sort": 2083,
           "skipped": false
         },
         {
@@ -255,7 +255,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2033,
+          "total_products_after_sort": 2083,
           "skipped": false
         },
         {
@@ -269,7 +269,7 @@
           "new_products_found": 6,
           "captured_events": 6,
           "collection_request_count": 2,
-          "total_products_after_sort": 2039,
+          "total_products_after_sort": 2089,
           "skipped": false
         },
         {
@@ -280,10 +280,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Safer Chemicals / Relevance",
-          "new_products_found": 11,
-          "captured_events": 11,
+          "new_products_found": 6,
+          "captured_events": 6,
           "collection_request_count": 5,
-          "total_products_after_sort": 2050,
+          "total_products_after_sort": 2095,
           "skipped": false
         },
         {
@@ -297,7 +297,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2050,
+          "total_products_after_sort": 2095,
           "skipped": false
         }
       ],
@@ -308,8 +308,8 @@
       "store_id": "10328",
       "store_name": "Upper West Side",
       "search_url": "https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender",
-      "product_count": 2053,
-      "network_batch_count": 150,
+      "product_count": 2052,
+      "network_batch_count": 152,
       "sort_runs": [
         {
           "filter_label": null,
@@ -317,10 +317,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Relevance",
-          "new_products_found": 398,
-          "captured_events": 398,
+          "new_products_found": 416,
+          "captured_events": 416,
           "collection_request_count": 17,
-          "total_products_after_sort": 398,
+          "total_products_after_sort": 416,
           "skipped": false
         },
         {
@@ -332,7 +332,7 @@
           "new_products_found": 321,
           "captured_events": 321,
           "collection_request_count": 17,
-          "total_products_after_sort": 719,
+          "total_products_after_sort": 737,
           "skipped": false
         },
         {
@@ -341,10 +341,10 @@
           "sort_label": "Price: High to Low",
           "sort_rank": "price-desc-rank",
           "run_label": "Price: High to Low",
-          "new_products_found": 324,
-          "captured_events": 324,
+          "new_products_found": 320,
+          "captured_events": 320,
           "collection_request_count": 17,
-          "total_products_after_sort": 1043,
+          "total_products_after_sort": 1057,
           "skipped": false
         },
         {
@@ -353,10 +353,10 @@
           "sort_label": "Newest Arrivals",
           "sort_rank": "date-desc-rank",
           "run_label": "Newest Arrivals",
-          "new_products_found": 307,
-          "captured_events": 307,
+          "new_products_found": 310,
+          "captured_events": 310,
           "collection_request_count": 17,
-          "total_products_after_sort": 1350,
+          "total_products_after_sort": 1367,
           "skipped": false
         },
         {
@@ -365,10 +365,10 @@
           "sort_label": "Get it fast",
           "sort_rank": "get-it-fast-rank",
           "run_label": "Get it fast",
-          "new_products_found": 0,
-          "captured_events": 0,
+          "new_products_found": 1,
+          "captured_events": 1,
           "collection_request_count": 2,
-          "total_products_after_sort": 1350,
+          "total_products_after_sort": 1368,
           "skipped": false
         },
         {
@@ -380,7 +380,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 1350,
+          "total_products_after_sort": 1368,
           "skipped": false
         },
         {
@@ -392,7 +392,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 1350,
+          "total_products_after_sort": 1368,
           "skipped": false
         },
         {
@@ -401,10 +401,10 @@
           "sort_label": "Best Sellers",
           "sort_rank": "exact-aware-popularity-rank",
           "run_label": "Best Sellers",
-          "new_products_found": 130,
-          "captured_events": 130,
+          "new_products_found": 125,
+          "captured_events": 125,
           "collection_request_count": 17,
-          "total_products_after_sort": 1480,
+          "total_products_after_sort": 1493,
           "skipped": false
         },
         {
@@ -415,10 +415,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Amazon Brands / Relevance",
-          "new_products_found": 91,
-          "captured_events": 91,
+          "new_products_found": 86,
+          "captured_events": 86,
           "collection_request_count": 5,
-          "total_products_after_sort": 1571,
+          "total_products_after_sort": 1579,
           "skipped": false
         },
         {
@@ -429,10 +429,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "FSA or HSA Eligible / Relevance",
-          "new_products_found": 35,
-          "captured_events": 35,
+          "new_products_found": 39,
+          "captured_events": 39,
           "collection_request_count": 3,
-          "total_products_after_sort": 1606,
+          "total_products_after_sort": 1618,
           "skipped": false
         },
         {
@@ -443,10 +443,10 @@
           "sort_label": "Price: Low to High",
           "sort_rank": "price-asc-rank",
           "run_label": "Any Feature / Price: Low to High",
-          "new_products_found": 259,
-          "captured_events": 259,
+          "new_products_found": 262,
+          "captured_events": 262,
           "collection_request_count": 17,
-          "total_products_after_sort": 1865,
+          "total_products_after_sort": 1880,
           "skipped": false
         },
         {
@@ -457,10 +457,10 @@
           "sort_label": "Price: High to Low",
           "sort_rank": "price-desc-rank",
           "run_label": "Any Feature / Price: High to Low",
-          "new_products_found": 156,
-          "captured_events": 156,
+          "new_products_found": 148,
+          "captured_events": 148,
           "collection_request_count": 12,
-          "total_products_after_sort": 2021,
+          "total_products_after_sort": 2028,
           "skipped": false
         },
         {
@@ -473,8 +473,8 @@
           "run_label": "Biodiversity / Relevance",
           "new_products_found": 5,
           "captured_events": 5,
-          "collection_request_count": 2,
-          "total_products_after_sort": 2026,
+          "collection_request_count": 3,
+          "total_products_after_sort": 2033,
           "skipped": false
         },
         {
@@ -488,7 +488,7 @@
           "new_products_found": 3,
           "captured_events": 3,
           "collection_request_count": 1,
-          "total_products_after_sort": 2029,
+          "total_products_after_sort": 2036,
           "skipped": false
         },
         {
@@ -499,10 +499,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Farming Practices / Relevance",
-          "new_products_found": 5,
-          "captured_events": 5,
-          "collection_request_count": 3,
-          "total_products_after_sort": 2034,
+          "new_products_found": 3,
+          "captured_events": 3,
+          "collection_request_count": 4,
+          "total_products_after_sort": 2039,
           "skipped": false
         },
         {
@@ -516,7 +516,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2034,
+          "total_products_after_sort": 2039,
           "skipped": false
         },
         {
@@ -527,10 +527,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Manufacturing Practices / Relevance",
-          "new_products_found": 2,
-          "captured_events": 2,
+          "new_products_found": 1,
+          "captured_events": 1,
           "collection_request_count": 1,
-          "total_products_after_sort": 2036,
+          "total_products_after_sort": 2040,
           "skipped": false
         },
         {
@@ -544,7 +544,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2036,
+          "total_products_after_sort": 2040,
           "skipped": false
         },
         {
@@ -558,7 +558,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2036,
+          "total_products_after_sort": 2040,
           "skipped": false
         },
         {
@@ -572,7 +572,7 @@
           "new_products_found": 6,
           "captured_events": 6,
           "collection_request_count": 2,
-          "total_products_after_sort": 2042,
+          "total_products_after_sort": 2046,
           "skipped": false
         },
         {
@@ -583,10 +583,10 @@
           "sort_label": "Relevance",
           "sort_rank": "relevanceblender",
           "run_label": "Safer Chemicals / Relevance",
-          "new_products_found": 11,
-          "captured_events": 11,
+          "new_products_found": 6,
+          "captured_events": 6,
           "collection_request_count": 5,
-          "total_products_after_sort": 2053,
+          "total_products_after_sort": 2052,
           "skipped": false
         },
         {
@@ -600,7 +600,7 @@
           "new_products_found": 0,
           "captured_events": 0,
           "collection_request_count": 2,
-          "total_products_after_sort": 2053,
+          "total_products_after_sort": 2052,
           "skipped": false
         }
       ],

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-03T13:24:03.802324+00:00",
+  "generated_at": "2026-05-04T13:23:47.156268+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v17",
-  "product_count": 3350,
-  "completed_count": 3350,
-  "changed_count": 3294,
+  "product_count": 3504,
+  "completed_count": 3504,
+  "changed_count": 3440,
   "changed_examples": [
     "Body Wash Moisturizing Aloe & White Tea, 32 Fl Oz",
     "Foaming Hand Soap, Citrus Sunshine, 12 Fl Oz",
