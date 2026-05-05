@@ -92,7 +92,7 @@
     "discount": "21% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Seafood/Frozen Seafood/",
       "/Seafood/"
@@ -167,12 +167,12 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160519/076371511025.png?v=638448905040700000",
     "url": "https://www.hmart.com/bcd-soon-tofu---plain-13oz-368g--1/p",
     "current_price": "$3.49",
-    "basis_price": "$8.99",
+    "basis_price": "$3.99",
     "prime_price": null,
-    "discount": "61% off",
+    "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Kimchi & SideDish & Deli/Tofu/",
       "/Kimchi & SideDish & Deli/"
@@ -412,7 +412,7 @@
     "discount": "11% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
@@ -592,7 +592,7 @@
     "discount": "4% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
@@ -612,7 +612,7 @@
     "discount": "33% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
@@ -666,13 +666,13 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/163933/copy-of-8801047169413__-_-20_460g.png?v=638448918735130000",
     "url": "https://www.hmart.com/clam-seaweed-soup--460g--1/p",
-    "current_price": "$4.99",
-    "basis_price": "$5.99",
+    "current_price": "$3.99",
+    "basis_price": "$4.99",
     "prime_price": null,
-    "discount": "17% off",
+    "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
@@ -752,7 +752,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Instant & Quick Food/Cooked Rice/",
       "/Instant & Quick Food/"
@@ -806,13 +806,13 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162414/880105602373_lotte_cooking_wine___60_87_fl_oz.png?v=638448912405800000",
     "url": "https://www.hmart.com/cooking-wine-60-87-floz-1-8l--1/p",
-    "current_price": "$8.49",
-    "basis_price": "$9.99",
+    "current_price": "$8.99",
+    "basis_price": "$10.99",
     "prime_price": null,
-    "discount": "15% off",
+    "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
       "/Oil & Seasoning & Canned Food/"
@@ -832,7 +832,7 @@
     "discount": "22% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Snacks & Candy & Nuts/Snacks/",
       "/Snacks & Candy & Nuts/"
@@ -952,7 +952,7 @@
     "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Ramen & Noodle/Small Cup/",
       "/Ramen & Noodle/"
@@ -966,8 +966,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/170730/697676027172.png?v=638840546683430000",
     "url": "https://www.hmart.com/cup-rice-braised-flavor-4-26oz--121g---------1/p",
-    "current_price": "$0.99",
-    "basis_price": "$1.99",
+    "current_price": "$1.25",
+    "basis_price": "$2.49",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -1012,7 +1012,7 @@
     "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Instant & Quick Food/Curry & Jjajang & Soup/",
       "/Instant & Quick Food/"
@@ -1112,7 +1112,7 @@
     "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Seafood/Dried Seafood/",
       "/Seafood/"
@@ -1332,7 +1332,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Produce/Vegetable/",
       "/Produce/"
@@ -1347,12 +1347,32 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/163820/copy-of-4901326040076.png?v=638448918261130000",
     "url": "https://www.hmart.com/fruit-100-mix-gummy-3-59oz--101g--1/p",
     "current_price": "$3.09",
-    "basis_price": "$3.99",
+    "basis_price": "$3.29",
     "prime_price": null,
-    "discount": "23% off",
+    "discount": "6% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "categories": [
+      "/Snacks & Candy & Nuts/Candy & Chocolate/",
+      "/Snacks & Candy & Nuts/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:1784",
+    "name": "Fruits Gummy Grape 3.77 OZ (107 G)",
+    "brand": "Kasugai",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/161253/4901326030848.png?v=638448907858300000",
+    "url": "https://www.hmart.com/fruits-gummy-grape-3-77-oz--107-g--1/p",
+    "current_price": "$3.29",
+    "basis_price": "$3.49",
+    "prime_price": null,
+    "discount": "6% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
     "categories": [
       "/Snacks & Candy & Nuts/Candy & Chocolate/",
       "/Snacks & Candy & Nuts/"
@@ -1520,26 +1540,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:431",
-    "name": "Golden Curry Sauce Mix Hot 7.8oz(220g)",
-    "brand": "S&B",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/160686/11030030.png?v=638448905686230000",
-    "url": "https://www.hmart.com/golden-curry-sauce-mix-hot-7-8oz-220g--1/p",
-    "current_price": "$3.99",
-    "basis_price": "$4.99",
-    "prime_price": null,
-    "discount": "20% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
-    "categories": [
-      "/Instant & Quick Food/Curry & Jjajang & Soup/",
-      "/Instant & Quick Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:430",
     "name": "Golden Curry Sauce Mix Medium Hot 7.8oz(220g)",
     "brand": "S&B",
@@ -1612,7 +1612,7 @@
     "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
       "/Beverage & Coffee & Tea & Honey/"
@@ -1692,7 +1692,7 @@
     "discount": "11% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Snacks & Candy & Nuts/Candy & Chocolate/",
       "/Snacks & Candy & Nuts/"
@@ -1980,26 +1980,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:6743",
-    "name": "Ice Cream (White Peach) 7.94oz(225g)",
-    "brand": "Hong Qi",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/168711/694309042014.png?v=638556159299330000",
-    "url": "https://www.hmart.com/ice-cream--white-peach--7-94oz-225g--1/p",
-    "current_price": "$8.49",
-    "basis_price": "$9.99",
-    "prime_price": null,
-    "discount": "15% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
-    "categories": [
-      "/Snacks & Candy & Nuts/Ice Cream/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:4083",
     "name": "Iemon Plus Kettochitaisaku 11.8floz(350ml)",
     "brand": "SUNTORY",
@@ -2052,7 +2032,7 @@
     "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
@@ -2066,10 +2046,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/164332/l-84603401513_1.jpg?v=638448920365070000",
     "url": "https://www.hmart.com/japanese-style-buckwheat-noodles--soba--3lb-1-4kg--1/p",
-    "current_price": "$5.49",
+    "current_price": "$5.99",
     "basis_price": "$6.99",
     "prime_price": null,
-    "discount": "21% off",
+    "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
@@ -2112,7 +2092,7 @@
     "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Seafood/Dried Seafood/",
       "/Seafood/"
@@ -2126,10 +2106,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/171198/880926967066.png?v=638840546683430000",
     "url": "https://www.hmart.com/yeon-bok-s-mokran-jjamppong-spicy-seafood-noodle-soup-net-wt--51-oz--1-44kg--1/p",
-    "current_price": "$9.99",
+    "current_price": "$10.99",
     "basis_price": "$13.99",
     "prime_price": null,
-    "discount": "29% off",
+    "discount": "21% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
@@ -2260,26 +2240,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:5536",
-    "name": "Korean BBQ Sauce for Pork 1.85lb(840g)",
-    "brand": "Chung Jung One",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/170347/880105299334.png?v=638840546683430000",
-    "url": "https://www.hmart.com/korean-bbq-sauce-for-pork-1-85lb-840g--1/p",
-    "current_price": "$5.99",
-    "basis_price": "$6.99",
-    "prime_price": null,
-    "discount": "14% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
-    "categories": [
-      "/Paste & Marinade & Sauce/Marinade/",
-      "/Paste & Marinade & Sauce/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:2918",
     "name": "Korean Galbi Flavored Cake 14oz(396g)",
     "brand": "Chung Jung One",
@@ -2312,7 +2272,7 @@
     "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Instant & Quick Food/Rice Cake/",
       "/Instant & Quick Food/"
@@ -2332,7 +2292,7 @@
     "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Seaweed & Dried Produce/Furikake/",
       "/Seaweed & Dried Produce/"
@@ -2352,7 +2312,7 @@
     "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Ramen & Noodle/Dried Noodle/",
       "/Ramen & Noodle/"
@@ -2432,7 +2392,7 @@
     "discount": "19% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
@@ -2492,7 +2452,7 @@
     "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
@@ -2507,12 +2467,12 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161257/4901326040397.png?v=638448907874670000",
     "url": "https://www.hmart.com/lychee-gummy-3-59oz--101g--1/p",
     "current_price": "$2.99",
-    "basis_price": "$3.99",
+    "basis_price": "$3.29",
     "prime_price": null,
-    "discount": "25% off",
+    "discount": "9% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Snacks & Candy & Nuts/Candy & Chocolate/",
       "/Snacks & Candy & Nuts/"
@@ -2772,7 +2732,7 @@
     "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
@@ -2840,26 +2800,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:2942",
-    "name": "Mushroom Japchae Vegan Kimbap 7.76oz(220g)",
-    "brand": "BOKMANSA",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/163129/8809398711626_mushroom_japchae_7_76oz_1_.png?v=638448915364400000",
-    "url": "https://www.hmart.com/mushroom-japchae-vegan-kimbap-7-76oz-220g--1/p",
-    "current_price": "$3.99",
-    "basis_price": "$4.99",
-    "prime_price": null,
-    "discount": "20% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
-    "categories": [
-      "/Instant & Quick Food/Instant Food/",
-      "/Instant & Quick Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:3434",
     "name": "Neoguri Spicy 4.2oz(120g) 4 Packs",
     "brand": "Nongshim",
@@ -2912,7 +2852,7 @@
     "discount": "22% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Ramen & Noodle/Fresh Noodle/",
       "/Ramen & Noodle/"
@@ -2992,7 +2932,7 @@
     "discount": "4% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
@@ -3205,10 +3145,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162617/880111776100_1_1.jpg?v=638448913253830000",
     "url": "https://www.hmart.com/peanut-and-squid-ball-snack-big-size-7-12oz-202g--1/p",
-    "current_price": "$2.99",
+    "current_price": "$3.49",
     "basis_price": "$3.99",
     "prime_price": null,
-    "discount": "25% off",
+    "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
@@ -3331,7 +3271,7 @@
     "discount": "43% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Snacks & Candy & Nuts/Candy & Chocolate/",
       "/Snacks & Candy & Nuts/"
@@ -3411,7 +3351,7 @@
     "discount": "43% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
@@ -3426,9 +3366,9 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162049/850028858448.png?v=638448910957830000",
     "url": "https://www.hmart.com/pork-loin-fritter-with-mozzarella-cheese-12oz-340g--1/p",
     "current_price": "$8.99",
-    "basis_price": "$10.99",
+    "basis_price": "$9.49",
     "prime_price": null,
-    "discount": "18% off",
+    "discount": "5% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
@@ -3531,30 +3471,10 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Tea/",
       "/Beverage & Coffee & Tea & Honey/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:3091",
-    "name": "Premium Korean Mackerel Fillet 1+1 Set 11.99oz(340g)",
-    "brand": "Suhyup",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/163027/8809317722917.png?v=638448914951270000",
-    "url": "https://www.hmart.com/premium-korean-mackerel-fillet-1-1-set-11-99oz-340g--1/p",
-    "current_price": "$7.99",
-    "basis_price": "$9.99",
-    "prime_price": null,
-    "discount": "20% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
-    "categories": [
-      "/Seafood/Frozen Seafood/",
-      "/Seafood/"
     ],
     "available_quantity": 10000
   },
@@ -3571,7 +3491,7 @@
     "discount": "40% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
@@ -3671,7 +3591,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
       "/Beverage & Coffee & Tea & Honey/"
@@ -3731,7 +3651,7 @@
     "discount": "9% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
@@ -3799,26 +3719,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:4333",
-    "name": "Red Bean Steamed Bun 9oz(255g)",
-    "brand": "Samlip",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/162471/880106838097_1.jpg?v=638448912644630000",
-    "url": "https://www.hmart.com/red-bean-steamed-bun-9oz-255g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$3.99",
-    "prime_price": null,
-    "discount": "25% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
-    "categories": [
-      "/Snacks & Candy & Nuts/Bread & Dessert/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:1188",
     "name": "Rice Cake with Beef Bone Soup (Cup) 151g",
     "brand": "Dongwon",
@@ -3855,26 +3755,6 @@
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Tea/",
       "/Beverage & Coffee & Tea & Honey/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:119",
-    "name": "Rice Noodle Tomato Flavor 10.8oz(306g)",
-    "brand": "Luobawang",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/161487/697020986074_1.png?v=638448908759200000",
-    "url": "https://www.hmart.com/rice-noodle-tomato-flavor-10-8oz-306g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$4.49",
-    "prime_price": null,
-    "discount": "33% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
-    "categories": [
-      "/Ramen & Noodle/Bundle/",
-      "/Ramen & Noodle/"
     ],
     "available_quantity": 10000
   },
@@ -3931,7 +3811,7 @@
     "discount": "19% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Rice & Grain/Rice up to 10LB/",
       "/Rice & Grain/"
@@ -3965,10 +3845,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162013/84603403164_1_1.jpg?v=638448910816400000",
     "url": "https://www.hmart.com/roasted-dried-squid-1-5oz-43g--1/p",
-    "current_price": "$3.99",
-    "basis_price": "$4.99",
+    "current_price": "$4.99",
+    "basis_price": "$5.99",
     "prime_price": null,
-    "discount": "20% off",
+    "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
@@ -4031,7 +3911,7 @@
     "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Seafood/Frozen Seafood/",
       "/Seafood/"
@@ -4045,8 +3925,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/174830/71176007308.png?v=638944306448000000",
     "url": "https://www.hmart.com/salted---cooked-duck-eggs-18-3-oz--518g--1/p",
-    "current_price": "$3.99",
-    "basis_price": "$7.99",
+    "current_price": "$3.75",
+    "basis_price": "$7.49",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -4131,7 +4011,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
@@ -4185,10 +4065,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161908/84603400647_1.jpg?v=638448910398630000",
     "url": "https://www.hmart.com/seasoned-bean-paste-ssamjang-1-1lb-500g--1/p",
-    "current_price": "$2.49",
+    "current_price": "$2.99",
     "basis_price": "$3.49",
     "prime_price": null,
-    "discount": "29% off",
+    "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
@@ -4226,12 +4106,12 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161118/28030012.png?v=638448907343170000",
     "url": "https://www.hmart.com/seasoned-pollock-roe-7oz-198g--1/p",
     "current_price": "$8.49",
-    "basis_price": "$9.99",
+    "basis_price": "$11.99",
     "prime_price": null,
-    "discount": "15% off",
+    "discount": "29% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Kimchi & SideDish & Deli/Side Dish/",
       "/Kimchi & SideDish & Deli/"
@@ -4311,7 +4191,7 @@
     "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
@@ -4331,7 +4211,7 @@
     "discount": "7% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
       "/Oil & Seasoning & Canned Food/"
@@ -4351,7 +4231,7 @@
     "discount": "12% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Oil & Seasoning & Canned Food/Powders & Sesame/",
       "/Oil & Seasoning & Canned Food/"
@@ -4371,7 +4251,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
     "categories": [
       "/Snacks & Candy & Nuts/Traditional Snack/",
       "/Snacks & Candy & Nuts/"
@@ -4445,13 +4325,13 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160508/0761898713617.png?v=638448904999030000",
     "url": "https://www.hmart.com/sliced-rice-cake-2-2-lb--1-kg-/p",
-    "current_price": "$3.49",
-    "basis_price": "$4.99",
+    "current_price": "$4.49",
+    "basis_price": "$4.69",
     "prime_price": null,
-    "discount": "30% off",
+    "discount": "4% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Instant & Quick Food/Rice Cake/",
       "/Instant & Quick Food/"
@@ -4495,26 +4375,6 @@
     "categories": [
       "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
       "/Oil & Seasoning & Canned Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:2520",
-    "name": "Soon Tofu 10.58oz(300g)",
-    "brand": "Pulmuone",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/161576/75321400775_1.png?v=638448909091800000",
-    "url": "https://www.hmart.com/soon-tofu-10-58oz-300g--1/p",
-    "current_price": "$0.75",
-    "basis_price": "$1.99",
-    "prime_price": null,
-    "discount": "62% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
-    "categories": [
-      "/Kimchi & SideDish & Deli/Tofu/",
-      "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000
   },
@@ -4606,9 +4466,9 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162095/8801005133203_1.png?v=638448911138200000",
     "url": "https://www.hmart.com/soy-sauce-jin-gold-f3-29-08oz-860ml--1/p",
     "current_price": "$4.49",
-    "basis_price": "$5.79",
+    "basis_price": "$5.99",
     "prime_price": null,
-    "discount": "22% off",
+    "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
@@ -4651,7 +4511,7 @@
     "discount": "6% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Paste & Marinade & Sauce/Marinade/",
       "/Paste & Marinade & Sauce/"
@@ -4751,7 +4611,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
@@ -4765,13 +4625,13 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161191/3314301135.png?v=638448907620470000",
     "url": "https://www.hmart.com/spicy-seafood---fish-roe-soup-19-40oz-550g--1/p",
-    "current_price": "$7.49",
-    "basis_price": "$7.99",
+    "current_price": "$5.49",
+    "basis_price": "$5.99",
     "prime_price": null,
-    "discount": "6% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
@@ -4845,13 +4705,13 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162550/8801114106945.png?v=638448912974700000",
     "url": "https://www.hmart.com/square-fired-tofu-pouches-11-60-oz--330-g-/p",
-    "current_price": "$6.49",
-    "basis_price": "$6.99",
+    "current_price": "$5.49",
+    "basis_price": "$8.99",
     "prime_price": null,
-    "discount": "7% off",
+    "discount": "39% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Kimchi & SideDish & Deli/Fish cake & Beancurd/",
       "/Kimchi & SideDish & Deli/"
@@ -4946,9 +4806,9 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161437/661799970525.png?v=638448908564930000",
     "url": "https://www.hmart.com/sunchang-gochujang-brown-rice-hot-pepper-paste-1-1lb--500g--1/p",
     "current_price": "$4.99",
-    "basis_price": "$5.99",
+    "basis_price": "$6.99",
     "prime_price": null,
-    "discount": "17% off",
+    "discount": "29% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
@@ -5031,7 +4891,7 @@
     "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
@@ -5111,7 +4971,7 @@
     "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Ramen & Noodle/Small Cup/",
       "/Ramen & Noodle/"
@@ -5139,66 +4999,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:125",
-    "name": "Teum Sae Ramen 4.23oz(120g) 5 Packs",
-    "brand": "Paldo",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/160648/10010015_1.png?v=638448905536330000",
-    "url": "https://www.hmart.com/teum-sae-ramen-4-23oz-120g--5-packs-1/p",
-    "current_price": "$5.49",
-    "basis_price": "$7.99",
-    "prime_price": null,
-    "discount": "31% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
-    "categories": [
-      "/Ramen & Noodle/Bundle/",
-      "/Ramen & Noodle/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:2827",
-    "name": "Thai Rice Noodle 16 OZ (450 G)",
-    "brand": "Sincere Orient",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/170679/60256900012.png?v=639071159939700000",
-    "url": "https://www.hmart.com/thai-rice-noodle-16-oz--450-g--1/p",
-    "current_price": "$1.99",
-    "basis_price": "$2.49",
-    "prime_price": null,
-    "discount": "20% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
-    "categories": [
-      "/Ramen & Noodle/Fresh Noodle/",
-      "/Ramen & Noodle/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:657",
-    "name": "Tonkatsu Sauce With Pineapple 14.1OZ (400G)",
-    "brand": "Chung Jung One",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/163971/copy-of-8801052733104__-_-14.png?v=638448918898900000",
-    "url": "https://www.hmart.com/tonkatsu-sauce-with-pineapple-14-1oz--400g--1/p",
-    "current_price": "$3.99",
-    "basis_price": "$4.99",
-    "prime_price": null,
-    "discount": "20% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
-    "categories": [
-      "/Paste & Marinade & Sauce/Ketchup & Sriracha & Others/",
-      "/Paste & Marinade & Sauce/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:380",
     "name": "Traditional Vermicelli 1.1lb(500g)",
     "brand": "Chung Jung One",
@@ -5211,7 +5011,7 @@
     "discount": "19% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
     "categories": [
       "/Ramen & Noodle/Vermicelli & Rice & Paper/",
       "/Ramen & Noodle/"
@@ -5251,7 +5051,7 @@
     "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
@@ -5411,30 +5211,10 @@
     "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Seaweed & Dried Produce/Seaweed & Kelp & Soup Base/",
       "/Seaweed & Dried Produce/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:3031",
-    "name": "Vegetable Steamed Bun 9oz(255g)",
-    "brand": "Samlip",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/161131/28060013.png?v=638448907392800000",
-    "url": "https://www.hmart.com/vegetable-steamed-bun-9oz-255g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$3.99",
-    "prime_price": null,
-    "discount": "25% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Snacks & Candy & Nuts/Bread & Dessert/",
-      "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000
   },
@@ -5591,7 +5371,7 @@
     "discount": "11% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=7",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=6",
     "categories": [
       "/Ramen & Noodle/Bundle/",
       "/Ramen & Noodle/"
