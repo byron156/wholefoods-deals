@@ -152,7 +152,7 @@
     "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
@@ -1040,26 +1040,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:2668",
-    "name": "Cut Cabbage Kimchi (Mat Kimchi) 2.2lb(1kg)",
-    "brand": "Jongga",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/160331/_-1kg_1_1.png?v=638448904304830000",
-    "url": "https://www.hmart.com/cut-cabbage-kimchi--mat-kimchi--2-2lb-1kg--1/p",
-    "current_price": "$10.49",
-    "basis_price": "$11.99",
-    "prime_price": null,
-    "discount": "13% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
-    "categories": [
-      "/Kimchi & SideDish & Deli/Kimchi/",
-      "/Kimchi & SideDish & Deli/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:649",
     "name": "Deep-Roasted Sesame Dressing 16.91fl oz(500ml)",
     "brand": "Kewpie",
@@ -1300,22 +1280,22 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:2632",
-    "name": "Fried Bean Curd 5.6oz(160g)",
-    "brand": "Sajo Daerim",
+    "asin": "hmart:2946",
+    "name": "Fried Tofu & Burdock Kimbap 8.11oz(230g)",
+    "brand": "Baba",
     "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/162455/880106660037_1.png?v=638448912575170000",
-    "url": "https://www.hmart.com/fried-bean-curd-5-6oz-160g--1/p",
-    "current_price": "$2.49",
-    "basis_price": "$2.99",
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/163344/8809869160304.png?v=638448916267670000",
+    "url": "https://www.hmart.com/fried-tofu---burdock-kimbap-8-11oz-230g--1/p",
+    "current_price": "$3.99",
+    "basis_price": "$4.99",
     "prime_price": null,
-    "discount": "17% off",
+    "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
-      "/Kimchi & SideDish & Deli/Fish cake & Beancurd/",
-      "/Kimchi & SideDish & Deli/"
+      "/Instant & Quick Food/Instant Food/",
+      "/Instant & Quick Food/"
     ],
     "available_quantity": 10000
   },
@@ -2800,26 +2780,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:3434",
-    "name": "Neoguri Spicy 4.2oz(120g) 4 Packs",
-    "brand": "Nongshim",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/164152/file_48.png?v=638448919671130000",
-    "url": "https://www.hmart.com/neoguri-spicy-4-2oz-120g--4-packs-1/p",
-    "current_price": "$6.49",
-    "basis_price": "$6.99",
-    "prime_price": null,
-    "discount": "7% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
-    "categories": [
-      "/Ramen & Noodle/Bundle/",
-      "/Ramen & Noodle/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:236",
     "name": "Neoguri Spicy Cup 3.56oz(75g) 6 Cups",
     "brand": "Nongshim",
@@ -3319,26 +3279,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:3950",
-    "name": "Pork & Chicken Gyoza Family Pack 1.54lb(700g)",
-    "brand": "Ajinomoto",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/178727/7175708007.png?v=639094380865230000",
-    "url": "https://www.hmart.com/pork---chicken-gyoza-family-pack-1-54lb-700g--1/p",
-    "current_price": "$9.99",
-    "basis_price": "$13.99",
-    "prime_price": null,
-    "discount": "29% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
-    "categories": [
-      "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
-      "/Instant & Quick Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:2914",
     "name": "Pork Loin Cutlet 12oz(340g)",
     "brand": "Chung Jung One",
@@ -3632,26 +3572,6 @@
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Snacks & Candy & Nuts/Bread & Dessert/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:7383",
-    "name": "REAL CORN BREAD 14.8 OZ (420G)",
-    "brand": "Daedoo Foods",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/172656/880799907751.png?v=638862516818200000",
-    "url": "https://www.hmart.com/real-corn-bread-14-8-oz--420g--1/p",
-    "current_price": "$9.99",
-    "basis_price": "$10.99",
-    "prime_price": null,
-    "discount": "9% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
@@ -4099,26 +4019,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:2873",
-    "name": "Seasoned Pollock Roe 7oz(198g)",
-    "brand": "Danya",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/161118/28030012.png?v=638448907343170000",
-    "url": "https://www.hmart.com/seasoned-pollock-roe-7oz-198g--1/p",
-    "current_price": "$8.49",
-    "basis_price": "$11.99",
-    "prime_price": null,
-    "discount": "29% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
-    "categories": [
-      "/Kimchi & SideDish & Deli/Side Dish/",
-      "/Kimchi & SideDish & Deli/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:7294",
     "name": "Seasoning Onion Powder 5.29oz(150g)",
     "brand": "Choripdong",
@@ -4272,6 +4172,26 @@
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=8",
+    "categories": [
+      "/Snacks & Candy & Nuts/Snacks/",
+      "/Snacks & Candy & Nuts/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:1438",
+    "name": "Shrimp Cracker Big Size 14.1oz(400g)",
+    "brand": "Nongshim",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/160694/12010005.png?v=638448905715200000",
+    "url": "https://www.hmart.com/shrimp-cracker-big-size-14-1oz-400g--1/p",
+    "current_price": "$5.94",
+    "basis_price": "$8.49",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Snacks/",
       "/Snacks & Candy & Nuts/"
