@@ -16,6 +16,22 @@
     "target_value_text": "$5.99 sale"
   },
   {
+    "asin": "target:6264b771e51a8357",
+    "name": "​​Annie's crispy granola snack bar",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_2127a15f-c146-490c-992e-d65e73a891f9?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=%E2%80%8B%E2%80%8BAnnie%27s+crispy+granola+snack+bar",
+    "current_price": "$3.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.49 sale"
+  },
+  {
     "asin": "target:c0a51d325aa146dd",
     "name": "Belgian Boys breakfast foods",
     "brand": null,
@@ -32,6 +48,22 @@
     "target_value_text": "20% off"
   },
   {
+    "asin": "target:53aff04774a4fbeb",
+    "name": "Belgioioso parmesan cheese",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_bc27ee86-2e46-468b-b4ae-8fdc36860e65?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Belgioioso+parmesan+cheese",
+    "current_price": "$3.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.99 sale"
+  },
+  {
     "asin": "target:0dd314169e841a45",
     "name": "Blue Bunny ice cream sandwiches",
     "brand": null,
@@ -46,6 +78,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "$3.49 sale"
+  },
+  {
+    "asin": "target:ddf324c15f2a6bc2",
+    "name": "Bobo's PB&Js oat crust bars",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_f19abee7-5bb3-4099-ab97-a91f82e3268a?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Bobo%27s+PB%26Js+oat+crust+bars",
+    "current_price": "$3.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.99 sale"
   },
   {
     "asin": "target:0b5de675c2c9fc1a",
@@ -128,6 +176,22 @@
     "target_value_text": "$2.99 sale"
   },
   {
+    "asin": "target:2c9a455106935ed5",
+    "name": "Clamato tomato cocktail drink",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_7655d07f-1117-423b-8943-01f83231da06?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Clamato+tomato+cocktail+drink",
+    "current_price": "$4.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.49 sale"
+  },
+  {
     "asin": "target:2f1e74700a61f54b",
     "name": "Club Sweet Hawaiian crackers",
     "brand": null,
@@ -142,6 +206,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "$3.49 sale"
+  },
+  {
+    "asin": "target:c2487e0f741499be",
+    "name": "De Soi non-alcoholic beverages",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_509bcf83-a51b-4c23-92e2-f8a8dc646540?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=De+Soi+non-alcoholic+beverages",
+    "current_price": "$13.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires July 4",
+    "target_value_text": "$13.99 sale"
   },
   {
     "asin": "target:654c7f05790018d5",
@@ -240,6 +320,22 @@
     "target_value_text": "$6.99 sale"
   },
   {
+    "asin": "target:7862b9058e7c94a6",
+    "name": "Ethel's Baking Co dessert bars",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_3f161e5c-4f7f-482f-bba6-afa565e4a41f?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Ethel%27s+Baking+Co+dessert+bars",
+    "current_price": "$4.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.99 sale"
+  },
+  {
     "asin": "target:1a867d1868f95cc4",
     "name": "Fat Tire",
     "brand": null,
@@ -286,6 +382,38 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "15% off"
+  },
+  {
+    "asin": "target:1d287ff0f71cd1eb",
+    "name": "Ferrero Rocher Chocolate Squares",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_bbb58b61-f82b-408e-aba4-3afe042667f4?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Ferrero+Rocher+Chocolate+Squares",
+    "current_price": "$1",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Coupon: $1 off"
+  },
+  {
+    "asin": "target:4c6364f5fdf3eb14",
+    "name": "Fre",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_fac6139c-2c62-4ed4-810c-0efd42721a2e?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Fre",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
   },
   {
     "asin": "target:e59260cb881c4c19",
@@ -352,6 +480,22 @@
     "target_value_text": "$7.99 sale"
   },
   {
+    "asin": "target:445f7f887007b916",
+    "name": "Glucerna meal replacement drinks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_51c50d99-7e7d-4a41-b4ad-fede0de04362?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Glucerna+meal+replacement+drinks",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "20% off"
+  },
+  {
     "asin": "target:dc1e6399e73c9c34",
     "name": "Good & Gather™ coffee creamer",
     "brand": null,
@@ -366,6 +510,22 @@
     "retailer": "Target",
     "expires": "Expires May 16",
     "target_value_text": "25% off"
+  },
+  {
+    "asin": "target:c8be3a963a20014d",
+    "name": "Good & Gather™ cold brew coffee",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_eb305b1b-2e20-4cfc-9e14-0ad06be070a4?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Good+%26+Gather%E2%84%A2+cold+brew+coffee",
+    "current_price": "$3.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.99 sale"
   },
   {
     "asin": "target:9682af7d02ea684e",
@@ -400,6 +560,22 @@
     "target_value_text": "$4.19 sale"
   },
   {
+    "asin": "target:3ff6aad7eefbe361",
+    "name": "Hillshire Farm frozen sandwiches",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_60737628-7f6a-49b3-b369-e221e9c7ef64?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Hillshire+Farm+frozen+sandwiches",
+    "current_price": "$4.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$4.99 sale"
+  },
+  {
     "asin": "target:6a1b3bf8590e0ee5",
     "name": "Hillshire Farms turkey & ham - 7oz",
     "brand": null,
@@ -430,6 +606,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "$0.99 sale"
+  },
+  {
+    "asin": "target:007a711d62682c68",
+    "name": "Home Run Inn frozen pizzas",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_3a7f7fba-3ced-470a-8ad1-1f42bc4f4295?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Home+Run+Inn+frozen+pizzas",
+    "current_price": "$6.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 30",
+    "target_value_text": "$6.99 sale"
   },
   {
     "asin": "target:56bacc4d69417df7",
@@ -576,6 +768,22 @@
     "target_value_text": "Rebate: $4 back when you buy 1"
   },
   {
+    "asin": "target:2dc8f8de05e623ee",
+    "name": "Just Egg Plant Based Egg - 16oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_1e64e2d3-6261-47ab-998e-ba1a7fb1cc16?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Just+Egg+Plant+Based+Egg+-+16oz",
+    "current_price": "$6.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$6.49 sale"
+  },
+  {
     "asin": "target:3e9595521d93ebe2",
     "name": "Kirin 12 pk",
     "brand": null,
@@ -606,6 +814,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "15% off"
+  },
+  {
+    "asin": "target:42fb025777633330",
+    "name": "Kozy Shack rice pudding - 6ct",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_291d5fc3-d18b-46f2-ae00-4baa34dbc9a0?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Kozy+Shack+rice+pudding+-+6ct",
+    "current_price": "$3.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$3.99 sale"
   },
   {
     "asin": "target:e1bb4e2e6e9cc759",
@@ -654,6 +878,38 @@
     "retailer": "Target",
     "expires": "Eligible with Target Circle membership",
     "target_value_text": "Rebate: $3 back when you buy 2"
+  },
+  {
+    "asin": "target:f4a1fbf2c6738b24",
+    "name": "Lagunitas 6 pks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_b56cca5e-cfa4-4e95-9d86-595867590ad6?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Lagunitas+6+pks",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
+  },
+  {
+    "asin": "target:6c5aa2bb27321fdd",
+    "name": "Lagunitas Hoppy Refresher 6 pk",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_8a12abb5-54e3-404f-a8e5-cd8aaa69b203?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Lagunitas+Hoppy+Refresher+6+pk",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
   },
   {
     "asin": "target:a38e938875ded477",
@@ -752,6 +1008,70 @@
     "target_value_text": "$11.99 sale"
   },
   {
+    "asin": "target:4bc9dff75a52504b",
+    "name": "Martinelli's sparkling cider",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_e2ced824-fea4-4be2-853b-497ab87739c8?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Martinelli%27s+sparkling+cider",
+    "current_price": "$3.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.99 sale"
+  },
+  {
+    "asin": "target:5796685466c58c97",
+    "name": "Metamucil Fiber Supplements",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_57402057-ab21-4d24-b3b9-d102658616fb?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Metamucil+Fiber+Supplements",
+    "current_price": "$1",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Coupon: $1 off"
+  },
+  {
+    "asin": "target:5c77be9623a0e955",
+    "name": "Mike's Hard® Dirty Lemonade",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_2c451861-05ae-4816-8c35-66b02af29881?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Mike%27s+Hard%C2%AE+Dirty+Lemonade",
+    "current_price": "$4",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $4 back when you buy 1"
+  },
+  {
+    "asin": "target:e0c0f60c0d493077",
+    "name": "Modelo, Corona, or Pacifico",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_b99e823c-6999-45d3-a6e6-bb23719aadbb?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Modelo%2C+Corona%2C+or+Pacifico",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
+  },
+  {
     "asin": "target:17069a20de357c00",
     "name": "My Fish Dish scallop frozen - 9oz",
     "brand": null,
@@ -766,6 +1086,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "$8.99 sale"
+  },
+  {
+    "asin": "target:539d13fa74539e94",
+    "name": "NOCA Boozy Beverage Multipacks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_1445369f-9ccd-4b4f-b3a5-c328626685a3?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=NOCA+Boozy+Beverage+Multipacks",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
   },
   {
     "asin": "target:25468d0391de4957",
@@ -830,6 +1166,38 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "25% off"
+  },
+  {
+    "asin": "target:2f1d02f7ce78522e",
+    "name": "Organic Valley ultra-filtered milk",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_94691167-2869-4cc1-b0d7-947a06dd1b6b?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Organic+Valley+ultra-filtered+milk",
+    "current_price": "$5.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$5.99 sale"
+  },
+  {
+    "asin": "target:35e4cfe323e953be",
+    "name": "Pabst Family of Brands",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_3d0d797c-9de2-4437-ba67-3e5358bc0c59?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Pabst+Family+of+Brands",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
   },
   {
     "asin": "target:58a8fed348bd5b25",
@@ -960,6 +1328,22 @@
     "target_value_text": "$1.99 sale"
   },
   {
+    "asin": "target:cbe8124aedf9c504",
+    "name": "Recess zero proof cocktails",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_94424aa1-13ab-4db9-8bae-f51a4763bd53?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Recess+zero+proof+cocktails",
+    "current_price": "$10.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires June 6",
+    "target_value_text": "$10.99 sale"
+  },
+  {
     "asin": "target:82c282c87300b7c8",
     "name": "Ritual Zero Proof Non-Alcoholic",
     "brand": null,
@@ -976,6 +1360,22 @@
     "target_value_text": "Rebate: $5 back when you buy 1"
   },
   {
+    "asin": "target:639594c1b0373c93",
+    "name": "Saint Spritz 4 pks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_103b4593-c4f8-41a8-a8ae-31c8f3335b3b?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Saint+Spritz+4+pks",
+    "current_price": "$3",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $3 back when you buy 1"
+  },
+  {
     "asin": "target:db4cd33523d91124",
     "name": "Santa Margherita",
     "brand": null,
@@ -990,6 +1390,22 @@
     "retailer": "Target",
     "expires": "Eligible with Target Circle membership",
     "target_value_text": "Rebate: $4 back when you buy 2"
+  },
+  {
+    "asin": "target:b7e0221a535ae47d",
+    "name": "select 5 Hour Energy drinks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_aafd269b-899e-4570-98bd-ebe24c4cb8a3?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+5+Hour+Energy+drinks",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "20% off"
   },
   {
     "asin": "target:f6dcd059b136ce23",
@@ -1056,6 +1472,22 @@
     "target_value_text": "Buy 1, get 1 25% off"
   },
   {
+    "asin": "target:86ffaf738c9575c7",
+    "name": "select Athenos crumbled cheese",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_ffe72903-8dd5-4033-ab93-839b55ef5535?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Athenos+crumbled+cheese",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "15% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "15% off"
+  },
+  {
     "asin": "target:b85807e9c7e2dc24",
     "name": "select beer",
     "brand": null,
@@ -1088,20 +1520,20 @@
     "target_value_text": "$16.99 sale"
   },
   {
-    "asin": "target:3f8fd327066ea0a9",
-    "name": "select Blue Bunny ice cream",
+    "asin": "target:b293a84f6e6dbe7a",
+    "name": "select Bellatoria frozen pizza",
     "brand": null,
     "variation": null,
-    "image": "https://target.scene7.com/is/image/Target/GUEST_a684dfd5-66b3-4baa-9b80-f59bd5072eae?wid=324&hei=324&qlt=45&fmt=jpeg",
-    "url": "https://www.target.com/s?searchTerm=select+Blue+Bunny+ice+cream",
-    "current_price": "$3.49",
+    "image": "https://target.scene7.com/is/image/Target/GUEST_d5ff2304-aee5-44c6-94bf-3fd84d8e01c5?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Bellatoria+frozen+pizza",
+    "current_price": "$5.99",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
     "retailer": "Target",
-    "expires": "Expires May 9",
-    "target_value_text": "$3.49 sale"
+    "expires": "Expires May 23",
+    "target_value_text": "$5.99 sale"
   },
   {
     "asin": "target:7d0bda3dc6cc0003",
@@ -1118,6 +1550,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "$3.99 sale"
+  },
+  {
+    "asin": "target:3f8fd327066ea0a9",
+    "name": "select Blue Bunny ice cream",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_a684dfd5-66b3-4baa-9b80-f59bd5072eae?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Blue+Bunny+ice+cream",
+    "current_price": "$3.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.49 sale"
   },
   {
     "asin": "target:5655d99ee23454a7",
@@ -1152,6 +1600,38 @@
     "target_value_text": "$2.99 sale"
   },
   {
+    "asin": "target:211be2c2f0c7f3be",
+    "name": "select Bristol bay scallops - 7oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_c5d8042c-92be-42b3-b94c-8193af1113fe?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Bristol+bay+scallops+-+7oz",
+    "current_price": "$6.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$6.99 sale"
+  },
+  {
+    "asin": "target:04d0041fde792a73",
+    "name": "select Bronco breakfast bagels",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_88a4392d-fc1c-45dd-adcd-ee6bc7285017?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Bronco+breakfast+bagels",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "15% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "15% off"
+  },
+  {
     "asin": "target:34b84bbffb216107",
     "name": "select Cacique milk cheese",
     "brand": null,
@@ -1182,6 +1662,38 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "20% off"
+  },
+  {
+    "asin": "target:9cafaa83df88394b",
+    "name": "select Cayman Jack margaritas",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_56bd7bed-bada-4971-ad70-399a3fe1190e?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Cayman+Jack+margaritas",
+    "current_price": "$9.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires July 4",
+    "target_value_text": "$9.99 sale"
+  },
+  {
+    "asin": "target:36e66e7fec54a44f",
+    "name": "select Cheddies cheddar crackers",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_9f84bb51-652d-4c02-8492-6eb6f7ea8038?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Cheddies+cheddar+crackers",
+    "current_price": "$3.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$3.99 sale"
   },
   {
     "asin": "target:c04dca1f490cf43b",
@@ -1230,6 +1742,38 @@
     "retailer": "Target",
     "expires": "Expires May 10",
     "target_value_text": "15% off"
+  },
+  {
+    "asin": "target:2b226adfccc3b817",
+    "name": "select Columbus meat - 6oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_4df122c5-ed0b-44e9-9b08-62fa98e0fbe0?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Columbus+meat+-+6oz",
+    "current_price": "$5.39",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$5.39 sale"
+  },
+  {
+    "asin": "target:e4633e3de5014441",
+    "name": "select Coro Foods Uncured meat",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_c7fe591c-ab32-436d-9e5e-723b5cefd5ca?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Coro+Foods+Uncured+meat",
+    "current_price": "$4.79",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.79 sale"
   },
   {
     "asin": "target:b062cebecf188654",
@@ -1296,6 +1840,22 @@
     "target_value_text": "20% off"
   },
   {
+    "asin": "target:12e07d15e938669a",
+    "name": "select Favorite Day™ cake pops",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_635f9693-0541-4d4f-a292-c91326bde80c?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Favorite+Day%E2%84%A2+cake+pops",
+    "current_price": "$5.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$5.99 sale"
+  },
+  {
     "asin": "target:22a5dfcb15dafc3b",
     "name": "select Favorite Day™ frozen tarts",
     "brand": null,
@@ -1310,6 +1870,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "20% off"
+  },
+  {
+    "asin": "target:631359af1f28456f",
+    "name": "select FITCRUNCH baked snack bars",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_ea0341e1-dda6-48d4-9563-1109b21e6d7a?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+FITCRUNCH+baked+snack+bars",
+    "current_price": "$14.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$14.99 sale"
   },
   {
     "asin": "target:53030a93f5768463",
@@ -1376,6 +1952,38 @@
     "target_value_text": "15% off"
   },
   {
+    "asin": "target:f7bc34ff08b60def",
+    "name": "select hard seltzers",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_470bc695-d09d-418a-90a9-7e7c7a43e242?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+hard+seltzers",
+    "current_price": "$16.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires July 4",
+    "target_value_text": "$16.99 sale"
+  },
+  {
+    "asin": "target:fb28a976618bd999",
+    "name": "select Hiyo non-alcoholic drinks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_7ca2d2be-fbb3-46e3-a1b1-cd0c76c910d5?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Hiyo+non-alcoholic+drinks",
+    "current_price": "$12.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires July 4",
+    "target_value_text": "$12.99 sale"
+  },
+  {
     "asin": "target:a727c0204c947741",
     "name": "select Hormel bacon",
     "brand": null,
@@ -1405,6 +2013,22 @@
     "unit_price": null,
     "retailer": "Target",
     "expires": "Expires May 9",
+    "target_value_text": "$6.49 sale"
+  },
+  {
+    "asin": "target:e89c89f61f02195c",
+    "name": "select InnovAsian frozen chicken",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_88e60f38-4f47-47cf-8209-535c44b64ea7?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+InnovAsian+frozen+chicken",
+    "current_price": "$6.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
     "target_value_text": "$6.49 sale"
   },
   {
@@ -1488,6 +2112,22 @@
     "target_value_text": "$3.09 sale"
   },
   {
+    "asin": "target:ce725bc1acce3ab7",
+    "name": "select Kemps ice cream",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_a3ce738a-e595-481b-bf3c-6532073c572b?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Kemps+ice+cream",
+    "current_price": "$4.39",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.39 sale"
+  },
+  {
     "asin": "target:289769716a6a2d38",
     "name": "select Kemps ice cream",
     "brand": null,
@@ -1536,6 +2176,22 @@
     "target_value_text": "$2.99 sale"
   },
   {
+    "asin": "target:d41bfddeab1ab9c4",
+    "name": "select Kiki Milk – 32 fl oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_5719049b-f336-436e-a3b0-3b3cca87be57?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Kiki+Milk+%E2%80%93+32+fl+oz",
+    "current_price": "$4.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$4.99 sale"
+  },
+  {
     "asin": "target:e18cc44a3c1bc1a3",
     "name": "select KIND protein bars",
     "brand": null,
@@ -1566,6 +2222,22 @@
     "retailer": "Target",
     "expires": "Expires July 4",
     "target_value_text": "$10.99 sale"
+  },
+  {
+    "asin": "target:ebef1cfd0d1cecd9",
+    "name": "select La Terra Fina quiche",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_3d288ef2-04cc-428b-abdf-519ffa0baf56?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+La+Terra+Fina+quiche",
+    "current_price": "$9.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$9.99 sale"
   },
   {
     "asin": "target:c1328ebd1e1492ca",
@@ -1616,6 +2288,22 @@
     "target_value_text": "$3.99 sale"
   },
   {
+    "asin": "target:363a5d04b2734a7f",
+    "name": "select maternity & baby care items",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_1d3c5dde-da7c-42d3-b9ac-b033576f0cea?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+maternity+%26+baby+care+items",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "10% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "10% off"
+  },
+  {
     "asin": "target:7f99260b3c2483cc",
     "name": "select Michelob beer",
     "brand": null,
@@ -1662,6 +2350,22 @@
     "retailer": "Target",
     "expires": "Eligible with Target Circle membership",
     "target_value_text": "Buy 1, get 1 25% off"
+  },
+  {
+    "asin": "target:2021efeaf388ad91",
+    "name": "select Ocean's Halo rolls",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_74e677ce-3c90-4d5c-8c91-158070e1b4f1?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Ocean%27s+Halo+rolls",
+    "current_price": "$4.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.99 sale"
   },
   {
     "asin": "target:9bcae12763b12aad",
@@ -1728,6 +2432,22 @@
     "target_value_text": "$9.99 sale"
   },
   {
+    "asin": "target:3d4d15b5c9bad534",
+    "name": "select Pulmuone dumplings - 8oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_086c1dbb-9e80-4b03-be41-d83503bef171?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Pulmuone+dumplings+-+8oz",
+    "current_price": "$5.39",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$5.39 sale"
+  },
+  {
     "asin": "target:66268766288b7311",
     "name": "select Q Mixers beverages",
     "brand": null,
@@ -1792,6 +2512,22 @@
     "target_value_text": "$7.49 sale"
   },
   {
+    "asin": "target:95df150ba7ab4b1f",
+    "name": "select Sabra hummus - 15oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_4e476a2b-d865-4172-b844-6d96f679a18e?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Sabra+hummus+-+15oz",
+    "current_price": "$4.79",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.79 sale"
+  },
+  {
     "asin": "target:a1a2dc3408b9306f",
     "name": "select Salud drink mixes",
     "brand": null,
@@ -1821,6 +2557,22 @@
     "unit_price": null,
     "retailer": "Target",
     "expires": "Expires May 9",
+    "target_value_text": "$4.99 sale"
+  },
+  {
+    "asin": "target:df83ca2a80354b23",
+    "name": "select Silver Hills Bakery bread",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_6c93c330-cf3d-4c3f-8679-8f8dbbf2044f?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+Silver+Hills+Bakery+bread",
+    "current_price": "$4.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
     "target_value_text": "$4.99 sale"
   },
   {
@@ -1918,6 +2670,38 @@
     "retailer": "Target",
     "expires": "Expires July 4",
     "target_value_text": "25% off"
+  },
+  {
+    "asin": "target:fe9aeaa57bcbf398",
+    "name": "select The Ginger People wellness",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_0e683c69-3876-4d79-86b8-914f3f8adf6c?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+The+Ginger+People+wellness",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "33% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "33% off"
+  },
+  {
+    "asin": "target:32f14cbeb46a20b2",
+    "name": "select True Story meat",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_cbd63747-13d8-49ad-a1d9-636994d2faf9?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=select+True+Story+meat",
+    "current_price": "$1.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$1.49 sale"
   },
   {
     "asin": "target:c11a1cd76772a29c",
@@ -2064,6 +2848,22 @@
     "target_value_text": "10% off"
   },
   {
+    "asin": "target:6fcb20b40508e420",
+    "name": "Silk Protein",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_8673e8ed-b9a6-4350-9428-e8598c44d27d?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Silk+Protein",
+    "current_price": "$2",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Coupon: $2 off"
+  },
+  {
     "asin": "target:8e95f821f7b579e9",
     "name": "Simply Potatoes hash browns",
     "brand": null,
@@ -2078,6 +2878,22 @@
     "retailer": "Target",
     "expires": "Expires May 16",
     "target_value_text": "$2.89 sale"
+  },
+  {
+    "asin": "target:fbae618e046b8a42",
+    "name": "State Fair frozen mini corn dogs",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_46627bed-dca6-4e17-8897-5ebd1afdfff2?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=State+Fair+frozen+mini+corn+dogs",
+    "current_price": "$9.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$9.49 sale"
   },
   {
     "asin": "target:c854c54e99791c2e",
@@ -2144,6 +2960,38 @@
     "target_value_text": "$11.99 sale"
   },
   {
+    "asin": "target:f9d947215feb8a3d",
+    "name": "The Original Cakerie ganache cake",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_b5a36a7a-1dc2-4c45-9e19-fc10627c5ba4?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=The+Original+Cakerie+ganache+cake",
+    "current_price": "$11.99",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$11.99 sale"
+  },
+  {
+    "asin": "target:e9bd9cb368a97155",
+    "name": "Three Bridges prepared meals",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_23fad3c8-68e8-4299-ba9e-7928bc3b27dc?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Three+Bridges+prepared+meals",
+    "current_price": "$3.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 16",
+    "target_value_text": "$3.49 sale"
+  },
+  {
     "asin": "target:f7ef0b4af5152445",
     "name": "Tillamook cream cheese spreads",
     "brand": null,
@@ -2158,6 +3006,22 @@
     "retailer": "Target",
     "expires": "Expires May 9",
     "target_value_text": "20% off"
+  },
+  {
+    "asin": "target:9c763a7252440e74",
+    "name": "TOOM Original garlic dip - 8oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_90a13d97-c677-488b-97c8-f232407a52dd?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=TOOM+Original+garlic+dip+-+8oz",
+    "current_price": "$4.49",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 9",
+    "target_value_text": "$4.49 sale"
   },
   {
     "asin": "target:cc4cdbcd8ef54ddf",
@@ -2272,6 +3136,22 @@
     "target_value_text": "$5.49 sale"
   },
   {
+    "asin": "target:8290889319e7163a",
+    "name": "Twisted Tea® 12 pks",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_cf8f9974-8b69-4c54-87eb-ec84dc34b56e?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Twisted+Tea%C2%AE+12+pks",
+    "current_price": "$5",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Eligible with Target Circle membership",
+    "target_value_text": "Rebate: $5 back when you buy 1"
+  },
+  {
     "asin": "target:d270da0ef7d0bcb3",
     "name": "Two Chicks 4 pks",
     "brand": null,
@@ -2302,6 +3182,38 @@
     "retailer": "Target",
     "expires": "Eligible with Target Circle membership",
     "target_value_text": "Rebate: $2 back when you buy 1"
+  },
+  {
+    "asin": "target:6305118bfc24eb45",
+    "name": "Udi's frozen hamburger buns",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_5273b5a1-32bc-4a8f-83fe-85ab7b9af817?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Udi%27s+frozen+hamburger+buns",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 30",
+    "target_value_text": "20% off"
+  },
+  {
+    "asin": "target:2de89a925b8c3948",
+    "name": "Udi's gluten free breads - 18oz",
+    "brand": null,
+    "variation": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_6937e98f-f038-4d19-a703-95d0e2fb5b52?wid=324&hei=324&qlt=45&fmt=jpeg",
+    "url": "https://www.target.com/s?searchTerm=Udi%27s+gluten+free+breads+-+18oz",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": "20% off",
+    "unit_price": null,
+    "retailer": "Target",
+    "expires": "Expires May 30",
+    "target_value_text": "20% off"
   },
   {
     "asin": "target:c567ffa1143a1b36",
