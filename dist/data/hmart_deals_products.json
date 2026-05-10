@@ -180,26 +180,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:375",
-    "name": "Asain Style Starch Noodle 12oz(340g)",
-    "brand": "HAIO",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/160776/1305110003.png?v=638448906036100000",
-    "url": "https://www.hmart.com/asain-style-starch-noodle-12oz-340g--1/p",
-    "current_price": "$3.49",
-    "basis_price": "$4.49",
-    "prime_price": null,
-    "discount": "22% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Ramen & Noodle/Vermicelli & Rice & Paper/",
-      "/Ramen & Noodle/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:1104",
     "name": "Bai Top Shell 14.1oz(400g)",
     "brand": "Haioreum",
@@ -600,26 +580,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:3218",
-    "name": "Buckwheat Noodle 1.7lb(770g)",
-    "brand": "Shirakiku",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/160407/0074410411138.png?v=638448904604730000",
-    "url": "https://www.hmart.com/buckwheat-noodle-1-7lb-770g--1/p",
-    "current_price": "$4.49",
-    "basis_price": "$5.49",
-    "prime_price": null,
-    "discount": "18% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Ramen & Noodle/Dried Noodle/",
-      "/Ramen & Noodle/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:2892",
     "name": "Bulgogi Flavored Vienna Sausage with Chunky Juicy Pork 12oz(340g)",
     "brand": "Beksul",
@@ -992,7 +952,7 @@
     "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Flour & Baking/Pancake Mix & Tempura Mix/",
       "/Flour & Baking/"
@@ -1093,26 +1053,6 @@
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
-    "categories": [
-      "/Snacks & Candy & Nuts/Bread & Dessert/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:3016",
-    "name": "Daedoo Foods Real Potato Bread 16.93oz(480g)",
-    "brand": "Daedoo Foods",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/162854/880799907718_1_.png?v=638448914226170000",
-    "url": "https://www.hmart.com/daedoo-foods-real-potato-bread-16-93oz-480g--1/p",
-    "current_price": "$9.49",
-    "basis_price": "$10.99",
-    "prime_price": null,
-    "discount": "14% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
@@ -1312,7 +1252,7 @@
     "discount": "29% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Oil & Seasoning & Canned Food/Vinegar & Syrup & Fish Sauce/",
       "/Oil & Seasoning & Canned Food/"
@@ -1327,9 +1267,9 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161983/84603402320_1.png?v=638448910693800000",
     "url": "https://www.hmart.com/fresh-potato-noodle2-2lb-1kg--1/p",
     "current_price": "$3.99",
-    "basis_price": "$5.99",
+    "basis_price": "$4.99",
     "prime_price": null,
-    "discount": "33% off",
+    "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
@@ -2220,26 +2160,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:3004",
-    "name": "Kimchi and Pork Dumplings 1.5lb(680g)",
-    "brand": "Chung Jung One",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/176787/85232000077.png?v=639021814958070000",
-    "url": "https://www.hmart.com/kimchi-and-pork-dumplings-1-5lb-680g--1/p",
-    "current_price": "$8.49",
-    "basis_price": "$10.99",
-    "prime_price": null,
-    "discount": "23% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
-      "/Instant & Quick Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:2935",
     "name": "Kimchi & Cheese Rice Balls 17.6oz(500g)",
     "brand": "Pulmuone",
@@ -2512,7 +2432,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Produce/Vegetable/",
       "/Produce/"
@@ -3335,26 +3255,6 @@
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Snacks & Candy & Nuts/Candy & Chocolate/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:1608",
-    "name": "O! Tube Sweet Chilli 4.06oz(115g)",
-    "brand": "Orion",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/162629/8801117982607_1.png?v=638448913304400000",
-    "url": "https://www.hmart.com/o--tube-sweet-chilli-4-06oz-115g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$3.99",
-    "prime_price": null,
-    "discount": "25% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
-    "categories": [
-      "/Snacks & Candy & Nuts/Snacks/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000
@@ -5111,7 +5011,7 @@
     "discount": "22% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Kimchi & SideDish & Deli/Pickle/",
       "/Kimchi & SideDish & Deli/"
@@ -5651,7 +5551,7 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=5",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
