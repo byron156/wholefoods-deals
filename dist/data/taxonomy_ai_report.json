@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-10T13:29:04.725403+00:00",
+  "generated_at": "2026-05-11T13:23:51.132821+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v17",
-  "product_count": 3579,
-  "completed_count": 3579,
-  "changed_count": 3509,
+  "product_count": 3450,
+  "completed_count": 3450,
+  "changed_count": 3383,
   "changed_examples": [
     "Tulips 15 Stem, Colors May Vary",
     "SEAFOOD Halibut Fillet",
@@ -66,6 +66,7 @@
     "Alba Botanica Mineral Sunscreen Lotion SPF 50, Broad Spectrum, Fragrance Free, 3 Fl Oz (Packaging May Vary)",
     "Naturtint 6N Dark Blonde Permanent Hair Color (Pack of 1), Ammonia Free, Vegan, Cruelty Free, up to 100% Gray Coverage, Long Lasting Results (Packaging may vary)",
     "Foaming Hand Soap, Lavender, 12 Fl Oz",
+    "MRS. MEYER'S CLEAN DAY Hand Soap, Peony Scent, 12.5 Fl Oz Bottle",
     "Liquid Hand Soap, Fragrance Free, 12.5 Fl Oz",
     "NATURTINT 2N Brown Black Hair Color, 5.07 FZ",
     "Foaming Shower Gel, Lavender, 32 Fl Oz",
@@ -120,6 +121,7 @@
     "PACHA SOAP Color Changing Froth Bomb 6 Count, 12 OZ",
     "Dr. Bronners Almond Castile Bar Soap, 5 OZ",
     "MOUTHWATCHERS Manual Toothbrush for Adults, Ultra CleanToothbrush with Flossing Bristles, Good for Sensitive Teeth and Gums, Turqoise, 1 Each",
+    "Foaming Hand Soap, Peach Sahara, 12 Fl Oz",
     "Volume & Thickness Shampoo with Rice Protein & Collagen, Rosemary Mint Scent, 32 Fl Oz",
     "Dr. Bronner's Magic Soaps Organic Naked Unflavored Lip Balm, 0.15 Ounce",
     "Eucalyptus Essential Oil, 2 Fl Oz",
@@ -144,6 +146,7 @@
     "Himalaya Botanique Whitening Complete Care Toothpaste, Peppermint Flavor - Whitening Toothpaste Without Fluoride for Brighter Teeth & Fresh Breath - Vegan, Gluten Free, 5.29 oz",
     "Purezero Coconut Milk Moisturizing Shampoo - 12 Fl Ounce - Intense Hydration & Increase Shine - Fight Dandruff & Frizz - Zero Sulfates, Parabens, Dyes - 100% Vegan & Cruelty Free",
     "HERITAGE STORE Rosewater - Refreshing Face Mist with Damask Rose, All Skin Types - Hydrating Rose Water Spray for Glowing Skin Care - No Dyes or Alcohol, Hypoallergenic, Vegan, 60-Day Guarantee, 8oz",
+    "Lavender Hand Sanitizer Wipes, 210 ct",
     "Dr. Bronner's Hand Sanitizer - Lavender - 2 Oz",
     "Fluoride-Free Toothpaste, Tartar Control & Whitening, Peppermint Flavor, 5.5 Ounce",
     "Expanding Dental Floss, Natural Mint Flavor with Beeswax Coating, 55 Yds",
@@ -182,6 +185,7 @@
     "Preserve Adult Ultra Soft Toothbrush with Mailer Assorted Colors",
     "Nemat Amber Eau De Parfum Spray, 50 Ml",
     "Eo Products Hand Soap, French Lavender Refill , 32 Oz",
+    "Tom's of Maine Whole Care Natural Toothpaste with Fluoride, Peppermint, 4 oz. 2-Pack (Packaging May Vary)",
     "Tom's of Maine Fluoride-Free Antiplaque & Whitening Natural Toothpaste, Peppermint, 5.5 oz. (Pack of 2)",
     "Freshwater Farm Australia Lem Myrt Manuka Honey Hand Wash, 16.9 FZ",
     "PACHA SOAP Muscle Salt Soak, 32 OZ",
@@ -202,11 +206,7 @@
     "PACHA SOAP Mystery Color Bath Bomb, 5 OZ",
     "Ultra Thin Pads, Made with Organic Cotton Pads, Super, 10 ct",
     "Soap 3 In 1 Vanilla Lavender, 32 Fl Oz",
-    "Preserve Adult Soft Toothbrush, 1 Ea",
-    "Alba Botanica Lotion Emollient Unscented, 32 Fl Oz",
-    "Weleda Skin Food Lip Balm",
-    "GIOVANNI L.A. Hold Hair Spritz - Maximum Hold Styling Spray, Lightweight, Lauryl & Laureth Sulfate Free - 5 oz",
-    "Lumineux Teeth Whitening Mouthwash 16 Oz. - Peroxide Free - Whitening Without The Sensitivity - NO Alcohol, Fluoride & SLS Free"
+    "Preserve Adult Soft Toothbrush, 1 Ea"
   ],
   "last_product": "Yuzu Pepper Sauce 5 Fl Oz (147ML)"
 }
