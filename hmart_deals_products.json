@@ -406,8 +406,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/177972/80717685458.png?v=639072013012270000",
     "url": "https://www.hmart.com/bibigo-parae-gim-seaweed-8pk-1-41-oz--40g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$5.99",
+    "current_price": "$2.49",
+    "basis_price": "$4.99",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -1660,6 +1660,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:8960",
+    "name": "Grade A Large White Egg Dozen",
+    "brand": "Today's Farm",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/175241/84603402136.png?v=638960427552030000",
+    "url": "https://www.hmart.com/today-s-farm-grade-a-large-white-egg-dozen-1/p",
+    "current_price": "$2.75",
+    "basis_price": "$5.49",
+    "prime_price": null,
+    "discount": "50% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Dairy & Egg/Egg/",
+      "/Dairy & Egg/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:2791",
     "name": "Grade A Organic 12 Large Brown Eggs 24oz(681g)",
     "brand": "Today's Farm",
@@ -2533,6 +2553,26 @@
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
+      "/Beverage & Coffee & Tea & Honey/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:2088",
+    "name": "Konjac Jelly Melon 5.29oz(150g)",
+    "brand": "Tarami",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/161333/495512902820.png?v=638448908168600000",
+    "url": "https://www.hmart.com/konjac-jelly-melon-5-29oz-150g--1/p",
+    "current_price": "$1.49",
+    "basis_price": "$2.99",
+    "prime_price": null,
+    "discount": "50% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
       "/Beverage & Coffee & Tea & Honey/"
@@ -4316,6 +4356,26 @@
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Water & Juice & Soda/",
       "/Beverage & Coffee & Tea & Honey/"
+    ],
+    "available_quantity": 10000
+  },
+  {
+    "asin": "hmart:10685",
+    "name": "Real Ojelly Assorted Box 23.6oz (670g)",
+    "brand": "Orion",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/178688/880111797840.png?v=639093706280830000",
+    "url": "https://www.hmart.com/real-ojelly-assorted-box-23-6oz--670g--1/p",
+    "current_price": "$6.99",
+    "basis_price": "$13.99",
+    "prime_price": null,
+    "discount": "50% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Snacks & Candy & Nuts/Candy & Chocolate/",
+      "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000
   },

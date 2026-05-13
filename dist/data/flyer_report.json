@@ -1,15 +1,15 @@
 {
-  "product_count": 1357,
+  "product_count": 710,
   "stores": [
     {
       "store_id": "10160",
       "store_name": "Columbus Circle",
-      "product_count": 490
+      "product_count": 358
     },
     {
       "store_id": "10328",
       "store_name": "Upper West Side",
-      "product_count": 867
+      "product_count": 352
     }
   ]
 }
