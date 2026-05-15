@@ -9789,8 +9789,8 @@
     "asin": "B0FFTMCLM3",
     "name": "Momofuku Spicy Soy Ramen Noodles by David Chang",
     "raw_name": "Momofuku Spicy Soy Ramen Noodles by David Chang, 4 Pack of Restaurant Quality Air-Dried Instant Noodles Now with More Sauce & 10g of Protein",
-    "brand": "Momofuku",
-    "source_brand": "Momofuku",
+    "brand": "MOMOFUKU",
+    "source_brand": "MOMOFUKU",
     "brand_source": "source",
     "variation": null,
     "category": "Pantry",
@@ -15753,8 +15753,8 @@
   },
   {
     "asin": "B07D772W3G",
-    "name": "Renew Life Women's Daily Probiotic + Prebiotics, 60 CT",
-    "raw_name": "Renew Life Women's Daily Probiotic + Prebiotics, 60 CT",
+    "name": "Renew Life Ultimate Flora Womens Probiotic and Prebiotic with Cranberry",
+    "raw_name": "Renew Life Ultimate Flora Womens Probiotic and Prebiotic with Cranberry | 20 Billion CFU | 60 Vegetarian Capsules | Supports Vaginal & Urinary Health | Dairy, Soy and Gluten-Free Supplement",
     "brand": "Renew Life",
     "source_brand": "Renew Life",
     "brand_source": "source",
@@ -15781,7 +15781,10 @@
     "asins": [
       "B07D772W3G"
     ],
-    "tags": [],
+    "tags": [
+      "gluten-free",
+      "vegetarian"
+    ],
     "rank": 53.001,
     "flyer_rank": 53,
     "sale_price": "15% off",
@@ -16127,7 +16130,7 @@
     "category_signals": [
       "direct match: multivitamin"
     ],
-    "image": "https://m.media-amazon.com/images/I/71wS+N1OWDL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71nSV6WOpoL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBX171Q",
     "unit_price": null,
     "current_price": "15% off",
@@ -26601,8 +26604,8 @@
     "asin": "B0FFTMCLM3",
     "name": "Momofuku Spicy Soy Ramen Noodles by David Chang",
     "raw_name": "Momofuku Spicy Soy Ramen Noodles by David Chang, 4 Pack of Restaurant Quality Air-Dried Instant Noodles Now with More Sauce & 10g of Protein",
-    "brand": "Momofuku",
-    "source_brand": "Momofuku",
+    "brand": "MOMOFUKU",
+    "source_brand": "MOMOFUKU",
     "brand_source": "source",
     "variation": null,
     "category": "Pantry",
@@ -32895,7 +32898,7 @@
     "category_signals": [
       "direct match: multivitamin"
     ],
-    "image": "https://m.media-amazon.com/images/I/71wS+N1OWDL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/71nSV6WOpoL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBX171Q",
     "unit_price": null,
     "current_price": "15% off",
