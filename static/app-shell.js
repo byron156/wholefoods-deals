@@ -9,6 +9,8 @@
   const rawData = JSON.parse(appDataNode.textContent || "{}");
   const feedbackEndpoint = rawData.feedback_endpoint || "/api/fixes";
   const profileEndpoint = rawData.profile_endpoint || "/api/profile";
+  const newsletterSignupEndpoint = rawData.newsletter_signup_endpoint || "/api/newsletter/signup";
+  const newsletterOnboardingEndpoint = rawData.newsletter_onboarding_endpoint || "/api/newsletter/onboarding";
   const subcategoryOptions = rawData.subcategory_options || {};
   const initialCategoryOrder = rawData.category_order || {};
   const stores = rawData.stores || [];
@@ -38,6 +40,7 @@
     retailerChipRow: document.getElementById("retailer-chip-row"),
     storeChipRow: document.getElementById("store-chip-row"),
     savedListToggle: document.getElementById("saved-list-toggle"),
+    newsletterToggle: document.getElementById("newsletter-toggle"),
     filterDrawer: document.getElementById("filter-drawer"),
     filterCategory: document.getElementById("filter-category"),
     filterSubcategory: document.getElementById("filter-subcategory"),
@@ -56,6 +59,19 @@
     queueSubcategoryFix: document.getElementById("queue-subcategory-fix"),
     queueBrandFix: document.getElementById("queue-brand-fix"),
     categorySheetClose: document.getElementById("category-sheet-close"),
+    newsletterSheetBackdrop: document.getElementById("newsletter-sheet-backdrop"),
+    newsletterSheet: document.getElementById("newsletter-sheet"),
+    newsletterSheetClose: document.getElementById("newsletter-sheet-close"),
+    newsletterEmail: document.getElementById("newsletter-email"),
+    newsletterCadence: document.getElementById("newsletter-cadence"),
+    newsletterStoreRow: document.getElementById("newsletter-store-row"),
+    newsletterCategoryRow: document.getElementById("newsletter-category-row"),
+    newsletterDislikedCategoryRow: document.getElementById("newsletter-disliked-category-row"),
+    newsletterFavoriteBrands: document.getElementById("newsletter-favorite-brands"),
+    newsletterHiddenBrands: document.getElementById("newsletter-hidden-brands"),
+    newsletterBudgetSensitivity: document.getElementById("newsletter-budget-sensitivity"),
+    newsletterSampleGrid: document.getElementById("newsletter-sample-grid"),
+    newsletterSave: document.getElementById("newsletter-save"),
   };
 
   function escapeHtml(value) {
@@ -71,6 +87,7 @@
     const normalizedSubcategory = product.ai_subcategory || product.subcategory || "";
     const normalizedCategory = product.ai_category || product.category || "Pantry";
     const sources = Array.isArray(product.sources) ? product.sources : [];
+    const sourceCategories = Array.isArray(product.source_categories) ? product.source_categories : [];
     return {
       ...product,
       key: product.asin || (product.asins && product.asins[0]) || `product-${index}`,
@@ -85,6 +102,7 @@
       source_labels: Array.isArray(product.source_labels) && product.source_labels.length
         ? product.source_labels
         : sources.map(sourceLabel),
+      source_categories: sourceCategories,
       available_store_ids: Array.isArray(product.available_store_ids) ? product.available_store_ids : [],
       store_offers: Array.isArray(product.store_offers) ? product.store_offers : [],
       discount_percent: Number(product.discount_percent || 0),
@@ -203,10 +221,31 @@
       dislikedKeys: Array.isArray(source.dislikedKeys) ? source.dislikedKeys : [],
       savedKeys: Array.isArray(source.savedKeys) ? source.savedKeys : [],
       categoryOrderByRetailer: source.categoryOrderByRetailer || { ...initialCategoryOrder },
+      newsletterEnabled: Boolean(source.newsletterEnabled),
+      newsletterCadence: source.newsletterCadence || "daily",
+      newsletterOnboardingCompleted: Boolean(source.newsletterOnboardingCompleted),
+      newsletterEmail: source.newsletterEmail || "",
+      onboardingAnswers: source.onboardingAnswers || {},
+      newsletterPreferences: normalizeNewsletterPreferences(source.newsletterPreferences || {}),
       filters: {
         ...defaultFilters(),
         ...(source.filters || {}),
       },
+    };
+  }
+
+  function normalizeNewsletterPreferences(preferences) {
+    const source = preferences || {};
+    return {
+      preferredCategories: Array.isArray(source.preferredCategories) ? source.preferredCategories : [],
+      dislikedCategories: Array.isArray(source.dislikedCategories) ? source.dislikedCategories : [],
+      favoriteBrands: Array.isArray(source.favoriteBrands) ? source.favoriteBrands : [],
+      hiddenBrands: Array.isArray(source.hiddenBrands) ? source.hiddenBrands : [],
+      preferredStoreIds: Array.isArray(source.preferredStoreIds) ? source.preferredStoreIds : [],
+      budgetSensitivity: source.budgetSensitivity || "",
+      cadenceSettings: source.cadenceSettings || {},
+      onboardingAnswers: source.onboardingAnswers || {},
+      sampledProductFeedback: source.sampledProductFeedback || {},
     };
   }
 
@@ -218,6 +257,12 @@
       dislikedKeys: [],
       savedKeys: [],
       categoryOrderByRetailer: { ...initialCategoryOrder },
+      newsletterEnabled: false,
+      newsletterCadence: "daily",
+      newsletterOnboardingCompleted: false,
+      newsletterEmail: "",
+      onboardingAnswers: {},
+      newsletterPreferences: normalizeNewsletterPreferences({}),
     };
   }
 
@@ -237,6 +282,14 @@
     categorySheetMode: "feedback",
     categoryScope: "similar",
     viewMode: "all",
+    newsletterOpen: false,
+    newsletterOnboarding: {
+      subscriber: {},
+      preferences: normalizeNewsletterPreferences({}),
+      categories: categoryList.slice(),
+      sample_products: [],
+      stores,
+    },
   };
 
   function saveProfile() {
@@ -256,6 +309,202 @@
     }).catch((error) => {
       console.warn("Could not save profile remotely:", error);
     });
+  }
+
+  function parseCsvList(value) {
+    return Array.from(new Set(String(value || "")
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean)));
+  }
+
+  function toggleChoice(list, value) {
+    const current = Array.isArray(list) ? list.slice() : [];
+    return current.includes(value)
+      ? current.filter((item) => item !== value)
+      : current.concat(value);
+  }
+
+  function openNewsletterSheet() {
+    state.newsletterOpen = true;
+    nodes.newsletterSheetBackdrop.classList.remove("hidden");
+    nodes.newsletterSheet.classList.remove("hidden");
+    nodes.newsletterSheet.setAttribute("aria-hidden", "false");
+    renderNewsletterSheet();
+    loadNewsletterOnboarding();
+  }
+
+  function closeNewsletterSheet() {
+    state.newsletterOpen = false;
+    nodes.newsletterSheetBackdrop.classList.add("hidden");
+    nodes.newsletterSheet.classList.add("hidden");
+    nodes.newsletterSheet.setAttribute("aria-hidden", "true");
+  }
+
+  function renderNewsletterChipRow(node, values, selectedValues, dataKey) {
+    node.innerHTML = (values || []).map((entry) => {
+      const value = entry.value || entry.id || entry.name;
+      const label = entry.label || entry.name || entry.value || value;
+      const selected = (selectedValues || []).includes(value);
+      return `<button class="chip ${selected ? "is-selected" : ""}" data-newsletter-key="${escapeHtml(dataKey)}" data-newsletter-value="${escapeHtml(value)}" type="button">${escapeHtml(label)}</button>`;
+    }).join("");
+  }
+
+  function sampleFeedbackForProduct(key) {
+    return (state.profile.newsletterPreferences || {}).sampledProductFeedback?.[key] || "";
+  }
+
+  function renderNewsletterSamples() {
+    const samples = state.newsletterOnboarding.sample_products || [];
+    if (!samples.length) {
+      nodes.newsletterSampleGrid.innerHTML = `<div class="empty-state">We’ll pull products from your saved list and strongest deals once the feed is loaded.</div>`;
+      return;
+    }
+
+    nodes.newsletterSampleGrid.innerHTML = samples.map((product, index) => {
+      const key = product.key || product.asin || `sample-${index}`;
+      const feedback = sampleFeedbackForProduct(key);
+      const image = product.image
+        ? `<img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}">`
+        : `<span class="image-fallback">No image</span>`;
+      return `
+        <article class="newsletter-sample-card">
+          <div class="newsletter-sample-media">${image}</div>
+          <div class="newsletter-sample-copy">
+            <p class="deal-meta-line">${escapeHtml(product.retailer || "Whole Foods")} · ${escapeHtml(product.category || "Pantry")}</p>
+            <h4>${escapeHtml(product.name)}</h4>
+            <p class="prime">${escapeHtml(product.prime_price || product.current_price || "")}</p>
+          </div>
+          <div class="deal-actions">
+            <button class="deal-action ${feedback === "thumbs_up" ? "is-active" : ""}" data-newsletter-feedback="thumbs_up" data-newsletter-product="${escapeHtml(key)}" type="button">Care</button>
+            <button class="deal-action is-subtle ${feedback === "thumbs_down" ? "is-active" : ""}" data-newsletter-feedback="thumbs_down" data-newsletter-product="${escapeHtml(key)}" type="button">Nope</button>
+            <button class="deal-action ${feedback === "save" ? "is-active" : ""}" data-newsletter-feedback="save" data-newsletter-product="${escapeHtml(key)}" type="button">Save</button>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  function renderNewsletterSheet() {
+    if (!nodes.newsletterSheet) {
+      return;
+    }
+    const subscriber = state.newsletterOnboarding.subscriber || {};
+    const preferences = state.profile.newsletterPreferences || normalizeNewsletterPreferences({});
+    nodes.newsletterEmail.value = state.profile.newsletterEmail || subscriber.email || "";
+    nodes.newsletterCadence.value = state.profile.newsletterCadence || subscriber.cadence || "daily";
+    nodes.newsletterFavoriteBrands.value = (preferences.favoriteBrands || []).join(", ");
+    nodes.newsletterHiddenBrands.value = (preferences.hiddenBrands || []).join(", ");
+    nodes.newsletterBudgetSensitivity.value = preferences.budgetSensitivity || "";
+    renderNewsletterChipRow(
+      nodes.newsletterStoreRow,
+      (state.newsletterOnboarding.stores || []).map((store) => ({ value: store.id, label: store.label || store.name || store.id })),
+      preferences.preferredStoreIds || state.profile.selectedStoreIds || [],
+      "preferredStoreIds"
+    );
+    renderNewsletterChipRow(
+      nodes.newsletterCategoryRow,
+      (state.newsletterOnboarding.categories || categoryList).map((name) => ({ value: name, label: name })),
+      preferences.preferredCategories || [],
+      "preferredCategories"
+    );
+    renderNewsletterChipRow(
+      nodes.newsletterDislikedCategoryRow,
+      (state.newsletterOnboarding.categories || categoryList).map((name) => ({ value: name, label: name })),
+      preferences.dislikedCategories || [],
+      "dislikedCategories"
+    );
+    renderNewsletterSamples();
+  }
+
+  async function loadNewsletterOnboarding() {
+    try {
+      const response = await fetch(`${newsletterOnboardingEndpoint}?device_id=${encodeURIComponent(deviceId)}`);
+      if (!response.ok) {
+        renderNewsletterSheet();
+        return;
+      }
+      const payload = await response.json();
+      if (payload?.onboarding) {
+        state.newsletterOnboarding = {
+          ...state.newsletterOnboarding,
+          ...payload.onboarding,
+        };
+        if (payload.onboarding.preferences) {
+          state.profile.newsletterPreferences = normalizeNewsletterPreferences(payload.onboarding.preferences);
+        }
+        renderNewsletterSheet();
+      }
+    } catch (error) {
+      console.warn("Could not load newsletter onboarding:", error);
+    }
+  }
+
+  async function saveNewsletterPreferences() {
+    const currentPreferences = normalizeNewsletterPreferences({
+      ...(state.profile.newsletterPreferences || {}),
+      favoriteBrands: parseCsvList(nodes.newsletterFavoriteBrands.value),
+      hiddenBrands: parseCsvList(nodes.newsletterHiddenBrands.value),
+      budgetSensitivity: nodes.newsletterBudgetSensitivity.value,
+    });
+    state.profile.newsletterEnabled = true;
+    state.profile.newsletterEmail = (nodes.newsletterEmail.value || "").trim();
+    state.profile.newsletterCadence = nodes.newsletterCadence.value || "daily";
+    state.profile.newsletterOnboardingCompleted = true;
+    state.profile.newsletterPreferences = currentPreferences;
+    saveProfile();
+
+    const signupResponse = await fetch(newsletterSignupEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        device_id: deviceId,
+        email: state.profile.newsletterEmail,
+        cadence: state.profile.newsletterCadence,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "America/New_York",
+      }),
+    });
+    if (!signupResponse.ok) {
+      throw new Error(`Newsletter signup failed with status ${signupResponse.status}`);
+    }
+
+    const onboardingResponse = await fetch(newsletterOnboardingEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        device_id: deviceId,
+        email: state.profile.newsletterEmail,
+        cadence: state.profile.newsletterCadence,
+        preferences: currentPreferences,
+        answers: {
+          cadence: state.profile.newsletterCadence,
+          preferredStoreIds: currentPreferences.preferredStoreIds,
+          preferredCategories: currentPreferences.preferredCategories,
+          dislikedCategories: currentPreferences.dislikedCategories,
+          favoriteBrands: currentPreferences.favoriteBrands,
+          hiddenBrands: currentPreferences.hiddenBrands,
+          budgetSensitivity: currentPreferences.budgetSensitivity,
+          sampledProductFeedback: currentPreferences.sampledProductFeedback,
+        },
+      }),
+    });
+    if (!onboardingResponse.ok) {
+      throw new Error(`Newsletter onboarding failed with status ${onboardingResponse.status}`);
+    }
+    const payload = await onboardingResponse.json();
+    if (payload?.profile) {
+      state.profile = normalizeProfile(payload.profile);
+      saveProfile();
+    }
+    if (payload?.onboarding) {
+      state.newsletterOnboarding = {
+        ...state.newsletterOnboarding,
+        ...payload.onboarding,
+      };
+    }
+    renderFeed();
+    renderNewsletterSheet();
+    window.alert("Newsletter preferences saved.");
   }
 
   function toggleValue(list, value) {
@@ -414,8 +663,71 @@
     return 10;
   }
 
+  function sourceCategoriesText(product) {
+    return (product.source_categories || []).join(" ").toLowerCase();
+  }
+
+  function currentSelectedStoreId() {
+    return (state.profile.selectedStoreIds || [])[0] || "";
+  }
+
+  function shelfAuthorityScore(product) {
+    const category = effectiveCategory(product);
+    const subcategory = effectiveSubcategory(product);
+    const sourceCategoryText = sourceCategoriesText(product);
+    const selectedStoreId = currentSelectedStoreId();
+    let score = 0;
+
+    if (selectedStoreId && (product.available_store_ids || []).includes(selectedStoreId)) {
+      score += 28;
+    }
+
+    if (state.activeRetailer === "All" && product.retailer === "Whole Foods") {
+      score += 10;
+    }
+
+    if (category === "Produce") {
+      if (sourceCategoryText.includes("fresh produce")) {
+        score += 220;
+      }
+      if (subcategory === "Fruits" || subcategory === "Vegetables") {
+        score += 34;
+      } else if (subcategory === "Cut Fruit & Veg") {
+        score += 24;
+      } else if (subcategory === "Salad Greens" || subcategory === "Fresh Herbs" || subcategory === "Mushrooms") {
+        score += 16;
+      }
+      if (product.retailer === "Whole Foods") {
+        score += 18;
+      }
+      return score;
+    }
+
+    if (category === "Meat & Seafood") {
+      if (sourceCategoryText.includes("/meat/") || sourceCategoryText.includes("/seafood/")) {
+        score += 80;
+      }
+      return score;
+    }
+
+    if (category === "Prepared Foods") {
+      if (sourceCategoryText.includes("instant food") || sourceCategoryText.includes("quick food") || sourceCategoryText.includes("deli")) {
+        score += 55;
+      }
+      return score;
+    }
+
+    if (category === "Pantry") {
+      if (sourceCategoryText.includes("/oil & seasoning") || sourceCategoryText.includes("/canned food") || sourceCategoryText.includes("/seaweed & dried produce/")) {
+        score += 26;
+      }
+    }
+
+    return score;
+  }
+
   function baseDealScore(product) {
-    let score = (product.discount_percent || 0) * 4;
+    let score = (product.discount_percent || 0) * 3;
     if (product.prime_price) {
       score += 18;
     }
@@ -425,6 +737,7 @@
     if (!product.discount_percent && !product.basis_price) {
       score -= 18;
     }
+    score += shelfAuthorityScore(product);
     score += Math.max(0, (product.source_count || 0) - 1) * 10;
     score += Math.round((product.category_confidence || 0) * 12);
     return score;
@@ -433,15 +746,35 @@
   function preferenceScore(product, liked, disliked) {
     let score = 0;
     const category = effectiveCategory(product);
+    const subcategory = effectiveSubcategory(product);
+    const preferences = state.profile.newsletterPreferences || normalizeNewsletterPreferences({});
     if ((state.profile.likedKeys || []).includes(product.key)) {
-      score += 24;
+      score += 72;
     }
     if ((state.profile.dislikedKeys || []).includes(product.key)) {
-      score -= 90;
+      score -= 180;
+    }
+    if ((state.profile.savedKeys || []).includes(product.key)) {
+      score += 120;
+    }
+    if ((preferences.preferredCategories || []).includes(category)) {
+      score += 42;
+    }
+    if (subcategory && (preferences.preferredCategories || []).includes(subcategory)) {
+      score += 28;
+    }
+    if ((preferences.dislikedCategories || []).includes(category) || (subcategory && (preferences.dislikedCategories || []).includes(subcategory))) {
+      score -= 110;
     }
     score += (liked.categories[category] || 0) * 16;
     score -= (disliked.categories[category] || 0) * 20;
     if (product.brand) {
+      if ((preferences.favoriteBrands || []).includes(product.brand)) {
+        score += 38;
+      }
+      if ((preferences.hiddenBrands || []).includes(product.brand)) {
+        score -= 120;
+      }
       score += (liked.brands[product.brand] || 0) * 16;
       score -= (disliked.brands[product.brand] || 0) * 22;
     }
@@ -450,6 +783,34 @@
       score -= (disliked.tags[tag] || 0) * 10;
     });
     return score;
+  }
+
+  function formFactorKey(product) {
+    const brandTokens = String(product.brand || "").toLowerCase().split(/\s+/).filter(Boolean);
+    const brandSet = new Set(brandTokens);
+    const stopwords = new Set(["organic", "fresh", "market", "whole", "foods", "brand", "natural", "mini", "large", "small", "count", "ct", "oz", "lb", "ea", "pack", "bag", "box"]);
+    const tokens = String(product.name || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .split(/\s+/)
+      .filter((token) => token && !stopwords.has(token) && !brandSet.has(token) && !/\d/.test(token));
+    return tokens.slice(0, 3).join(" ");
+  }
+
+  function diversityPenalty(product, seen) {
+    let penalty = 0;
+    if (product.brand) {
+      penalty += (seen.brands[product.brand] || 0) * 32;
+    }
+    const subcategory = effectiveSubcategory(product);
+    if (subcategory) {
+      penalty += (seen.subcategories[subcategory] || 0) * 18;
+    }
+    const form = formFactorKey(product);
+    if (form) {
+      penalty += (seen.forms[form] || 0) * 16;
+    }
+    return penalty;
   }
 
   function scoreProduct(product, liked, disliked) {
@@ -489,7 +850,34 @@
     ranked.sort((left, right) => {
       return right._score - left._score || (right.discount_percent || 0) - (left.discount_percent || 0) || (left.name || "").localeCompare(right.name || "");
     });
-    return ranked;
+    const selected = [];
+    const remaining = ranked.slice();
+    const seen = { brands: {}, subcategories: {}, forms: {} };
+    while (remaining.length) {
+      let bestIndex = 0;
+      let bestScore = null;
+      remaining.slice(0, 24).forEach((product, index) => {
+        const adjusted = product._score - diversityPenalty(product, seen);
+        if (bestScore === null || adjusted > bestScore) {
+          bestScore = adjusted;
+          bestIndex = index;
+        }
+      });
+      const chosen = remaining.splice(bestIndex, 1)[0];
+      selected.push(chosen);
+      if (chosen.brand) {
+        seen.brands[chosen.brand] = (seen.brands[chosen.brand] || 0) + 1;
+      }
+      const subcategory = effectiveSubcategory(chosen);
+      if (subcategory) {
+        seen.subcategories[subcategory] = (seen.subcategories[subcategory] || 0) + 1;
+      }
+      const form = formFactorKey(chosen);
+      if (form) {
+        seen.forms[form] = (seen.forms[form] || 0) + 1;
+      }
+    }
+    return selected;
   }
 
   function buildCategoryShelves() {
@@ -560,6 +948,11 @@
         ? "Back to deals"
         : `Saved list (${savedCount})`;
       nodes.savedListToggle.classList.toggle("is-selected", state.viewMode === "saved");
+    }
+    if (nodes.newsletterToggle) {
+      nodes.newsletterToggle.textContent = state.profile.newsletterEnabled
+        ? "Newsletter preferences"
+        : "Sign up for newsletter!";
     }
   }
 
@@ -974,6 +1367,40 @@
     if (scopeButton && state.categoryTargetKey) {
       state.categoryScope = scopeButton.dataset.categoryScope;
       renderCategorySheet(productByKey.get(state.categoryTargetKey));
+      return;
+    }
+
+    const newsletterChip = event.target.closest("[data-newsletter-key]");
+    if (newsletterChip) {
+      const key = newsletterChip.dataset.newsletterKey;
+      const value = newsletterChip.dataset.newsletterValue;
+      const preferences = normalizeNewsletterPreferences(state.profile.newsletterPreferences || {});
+      preferences[key] = toggleChoice(preferences[key] || [], value);
+      state.profile.newsletterPreferences = preferences;
+      renderNewsletterSheet();
+      return;
+    }
+
+    const newsletterFeedbackButton = event.target.closest("[data-newsletter-feedback]");
+    if (newsletterFeedbackButton) {
+      const productKey = newsletterFeedbackButton.dataset.newsletterProduct;
+      const action = newsletterFeedbackButton.dataset.newsletterFeedback;
+      const preferences = normalizeNewsletterPreferences(state.profile.newsletterPreferences || {});
+      preferences.sampledProductFeedback = {
+        ...(preferences.sampledProductFeedback || {}),
+        [productKey]: action,
+      };
+      state.profile.newsletterPreferences = preferences;
+      if (action === "thumbs_up") {
+        applyPreferenceSignals(productByKey.get(productKey) || { key: productKey }, "up");
+      } else if (action === "thumbs_down") {
+        applyPreferenceSignals(productByKey.get(productKey) || { key: productKey }, "down");
+      } else if (action === "save") {
+        state.profile.savedKeys = toggleValue(state.profile.savedKeys || [], productKey);
+        saveProfile();
+      }
+      renderFeed();
+      renderNewsletterSheet();
     }
   });
 
@@ -1016,6 +1443,23 @@
   nodes.categorySelect.addEventListener("change", () => {
     renderSubcategorySelect(nodes.categorySelect.value, "");
   });
+  if (nodes.newsletterToggle) {
+    nodes.newsletterToggle.addEventListener("click", openNewsletterSheet);
+  }
+  if (nodes.newsletterSheetBackdrop) {
+    nodes.newsletterSheetBackdrop.addEventListener("click", closeNewsletterSheet);
+  }
+  if (nodes.newsletterSheetClose) {
+    nodes.newsletterSheetClose.addEventListener("click", closeNewsletterSheet);
+  }
+  if (nodes.newsletterSave) {
+    nodes.newsletterSave.addEventListener("click", () => {
+      saveNewsletterPreferences().catch((error) => {
+        console.warn("Could not save newsletter preferences:", error);
+        window.alert("Could not save newsletter preferences right now.");
+      });
+    });
+  }
 
   renderFeed();
   loadRemoteProfile();

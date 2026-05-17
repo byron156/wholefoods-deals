@@ -3,11 +3,17 @@ import re
 import requests
 import os
 import math
+import secrets
+import smtplib
 from collections import Counter, defaultdict
+from datetime import datetime, timedelta, timezone
 from functools import lru_cache
+from email.message import EmailMessage
 from urllib.parse import urljoin
 from flask import Flask, jsonify, render_template, request, send_from_directory
+from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
 from brand_ai import build_brand_family_map
+from ranking import rank_products
 from taxonomy_ai import (
     CLASSIFICATION_CACHE_FILE as TAXONOMY_CLASSIFICATION_CACHE_FILENAME,
     DISCOVERED_TAXONOMY_FILE as DISCOVERED_TAXONOMY_FILENAME,
@@ -32,11 +38,23 @@ from subcategory_ai import (
     train_subcategory_model,
 )
 from supabase_state import (
+    load_latest_newsletter_delivery_from_supabase,
+    load_newsletter_feedback_token_from_supabase,
+    load_newsletter_preferences_from_supabase,
+    load_newsletter_subscriber_from_supabase,
     load_device_profile_from_supabase,
     load_fixes_from_supabase,
+    list_active_newsletter_subscribers_from_supabase,
+    mark_newsletter_feedback_token_used_in_supabase,
+    save_newsletter_delivery_to_supabase,
+    save_newsletter_event_to_supabase,
+    save_newsletter_feedback_token_to_supabase,
+    save_newsletter_preferences_to_supabase,
+    save_recommendation_snapshot_to_supabase,
     save_device_profile_to_supabase,
     save_fix_to_supabase,
     supabase_enabled,
+    upsert_newsletter_subscriber_to_supabase,
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -48,6 +66,7 @@ TARGET_DEALS_FILE = os.path.join(BASE_DIR, "target_deals_products.json")
 HMART_DEALS_FILE = os.path.join(BASE_DIR, "hmart_deals_products.json")
 FIXES_TO_DEPLOY_FILE = os.path.join(BASE_DIR, "fixes_to_deploy.json")
 DEVICE_PROFILES_FILE = os.path.join(BASE_DIR, "device_profiles.json")
+NEWSLETTER_STATE_FILE = os.path.join(BASE_DIR, "newsletter_state.json")
 TAXONOMY_GOLD_LABELS_FILE = os.path.join(BASE_DIR, "taxonomy_gold_labels.json")
 SUBCATEGORY_AI_MODEL_FILE = os.path.join(BASE_DIR, "subcategory_ai_model.pkl")
 SUBCATEGORY_AI_METADATA_FILE = os.path.join(BASE_DIR, "subcategory_ai_metadata.json")
@@ -58,9 +77,19 @@ TAXONOMY_AI_REPORT_FILE = build_report_artifact(BASE_DIR)
 SUBCATEGORY_AI_MIN_CONFIDENCE = 0.0
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = os.getenv("APP_SECRET_KEY", "wholefoods-deals-local-secret")
 PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")
 CORS_ALLOW_ORIGIN = os.getenv("CORS_ALLOW_ORIGIN", "*")
 API_ONLY_MODE = os.getenv("API_ONLY_MODE", "").strip().lower() in {"1", "true", "yes"}
+NEWSLETTER_FROM_EMAIL = os.getenv("NEWSLETTER_FROM_EMAIL", "").strip()
+NEWSLETTER_REPLY_TO = os.getenv("NEWSLETTER_REPLY_TO", "").strip()
+EMAIL_TRANSPORT = os.getenv("EMAIL_TRANSPORT", "smtp").strip().lower() or "smtp"
+RESEND_API_KEY = os.getenv("RESEND_API_KEY", "").strip()
+SMTP_HOST = os.getenv("SMTP_HOST", "smtp.mail.me.com").strip()
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587").strip() or "587")
+SMTP_USERNAME = os.getenv("SMTP_USERNAME", "").strip()
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "").strip()
+SMTP_USE_TLS = os.getenv("SMTP_USE_TLS", "1").strip().lower() not in {"0", "false", "no"}
 
 
 @app.after_request
@@ -780,19 +809,28 @@ def parse_price_sort_value(text):
     return float(match.group(1))
 
 
-def sort_products_for_display(products):
-    ordered = list(products)
-    ordered.sort(
-        key=lambda product: (
-            -(product.get("discount_percent") or extract_discount_sort_value(product.get("discount"))),
-            -(1 if product.get("prime_price") else 0),
-            -(1 if product.get("basis_price") else 0),
-            -product.get("source_count", 0),
-            -(product.get("category_confidence") or 0),
-            normalize_text_key(product.get("name")),
+def sort_products_for_display(products, profile=None, retailer_context="All", category_context=None):
+    prepared = []
+    for index, product in enumerate(products or []):
+        candidate = dict(product)
+        if not candidate.get("key"):
+            candidate["key"] = (
+                candidate.get("asin")
+                or (candidate.get("asins") or [None])[0]
+                or f"product-{index}"
+            )
+        candidate["discount_percent"] = int(
+            candidate.get("discount_percent")
+            or extract_discount_sort_value(candidate.get("discount"))
+            or 0
         )
+        prepared.append(candidate)
+    return rank_products(
+        prepared,
+        profile=profile or {},
+        retailer_context=retailer_context,
+        category_context=category_context,
     )
-    return ordered
 
 
 def normalize_retailer(value=None, url=None, sources=None):
@@ -2639,6 +2677,123 @@ def default_device_profiles():
     return {}
 
 
+def default_newsletter_state():
+    return {
+        "subscribers": [],
+        "preferences_by_device": {},
+        "deliveries": [],
+        "feedback_tokens": {},
+        "events": [],
+    }
+
+
+def load_newsletter_state_local():
+    try:
+        with open(NEWSLETTER_STATE_FILE, "r", encoding="utf-8") as state_file:
+            data = json.load(state_file)
+    except FileNotFoundError:
+        return default_newsletter_state()
+    except json.JSONDecodeError:
+        return default_newsletter_state()
+
+    if not isinstance(data, dict):
+        return default_newsletter_state()
+
+    state = default_newsletter_state()
+    for key, default_value in state.items():
+        value = data.get(key)
+        if isinstance(default_value, list) and isinstance(value, list):
+            state[key] = value
+        elif isinstance(default_value, dict) and isinstance(value, dict):
+            state[key] = value
+    return state
+
+
+def save_newsletter_state_local(state):
+    with open(NEWSLETTER_STATE_FILE, "w", encoding="utf-8") as state_file:
+        json.dump(state, state_file, indent=2, ensure_ascii=False)
+        state_file.write("\n")
+
+
+def utcnow():
+    return datetime.now(timezone.utc)
+
+
+def iso_utc(value):
+    return value.astimezone(timezone.utc).isoformat()
+
+
+def newsletter_serializer():
+    return URLSafeTimedSerializer(app.config["SECRET_KEY"], salt="newsletter-feedback")
+
+
+def default_newsletter_preferences():
+    return {
+        "preferredCategories": [],
+        "dislikedCategories": [],
+        "favoriteBrands": [],
+        "hiddenBrands": [],
+        "budgetSensitivity": "",
+        "preferredStoreIds": [],
+        "cadenceSettings": {},
+        "onboardingAnswers": {},
+        "sampledProductFeedback": {},
+    }
+
+
+def normalize_string_list(values):
+    if not isinstance(values, list):
+        return []
+    output = []
+    seen = set()
+    for value in values:
+        text = str(value or "").strip()
+        if not text:
+            continue
+        if text in seen:
+            continue
+        seen.add(text)
+        output.append(text)
+    return output
+
+
+def normalize_newsletter_preferences(preferences):
+    source = preferences or {}
+    normalized = default_newsletter_preferences()
+    normalized["preferredCategories"] = normalize_string_list(source.get("preferredCategories"))
+    normalized["dislikedCategories"] = normalize_string_list(source.get("dislikedCategories"))
+    normalized["favoriteBrands"] = normalize_string_list(source.get("favoriteBrands"))
+    normalized["hiddenBrands"] = normalize_string_list(source.get("hiddenBrands"))
+    normalized["preferredStoreIds"] = normalize_string_list(source.get("preferredStoreIds"))
+    normalized["budgetSensitivity"] = str(source.get("budgetSensitivity") or "").strip()
+    normalized["cadenceSettings"] = dict(source.get("cadenceSettings") or {})
+    normalized["onboardingAnswers"] = dict(source.get("onboardingAnswers") or {})
+    sample_feedback = source.get("sampledProductFeedback") or {}
+    normalized["sampledProductFeedback"] = {
+        str(key): str(value)
+        for key, value in sample_feedback.items()
+        if str(value) in {"thumbs_up", "thumbs_down", "save"}
+    }
+    return normalized
+
+
+def normalize_profile_payload(profile):
+    source = profile or {}
+    return {
+        "selectedStoreIds": source.get("selectedStoreIds") or [],
+        "likedKeys": source.get("likedKeys") or [],
+        "dislikedKeys": source.get("dislikedKeys") or [],
+        "savedKeys": source.get("savedKeys") or [],
+        "categoryOrderByRetailer": source.get("categoryOrderByRetailer") or {},
+        "newsletterEnabled": bool(source.get("newsletterEnabled")),
+        "newsletterCadence": str(source.get("newsletterCadence") or "daily").strip() or "daily",
+        "newsletterOnboardingCompleted": bool(source.get("newsletterOnboardingCompleted")),
+        "newsletterPreferences": normalize_newsletter_preferences(source.get("newsletterPreferences") or {}),
+        "newsletterEmail": str(source.get("newsletterEmail") or "").strip().lower(),
+        "onboardingAnswers": dict(source.get("onboardingAnswers") or {}),
+    }
+
+
 def load_device_profiles_local():
     try:
         with open(DEVICE_PROFILES_FILE, "r", encoding="utf-8") as profiles_file:
@@ -2661,29 +2816,17 @@ def save_device_profiles_local(profiles):
 def load_device_profile(device_id):
     remote_profile = load_device_profile_from_supabase(device_id)
     if remote_profile:
-        return remote_profile
+        return normalize_profile_payload(remote_profile)
 
     profiles = load_device_profiles_local()
     profile = profiles.get(device_id)
     if not isinstance(profile, dict):
         return None
-    return {
-        "selectedStoreIds": profile.get("selectedStoreIds") or [],
-        "likedKeys": profile.get("likedKeys") or [],
-        "dislikedKeys": profile.get("dislikedKeys") or [],
-        "savedKeys": profile.get("savedKeys") or [],
-        "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
-    }
+    return normalize_profile_payload(profile)
 
 
 def save_device_profile(device_id, profile):
-    normalized = {
-        "selectedStoreIds": profile.get("selectedStoreIds") or [],
-        "likedKeys": profile.get("likedKeys") or [],
-        "dislikedKeys": profile.get("dislikedKeys") or [],
-        "savedKeys": profile.get("savedKeys") or [],
-        "categoryOrderByRetailer": profile.get("categoryOrderByRetailer") or {},
-    }
+    normalized = normalize_profile_payload(profile)
 
     if save_device_profile_to_supabase(device_id, normalized):
         return normalized
@@ -2692,6 +2835,203 @@ def save_device_profile(device_id, profile):
     profiles[device_id] = normalized
     save_device_profiles_local(profiles)
     return normalized
+
+
+def load_local_newsletter_subscriber(device_id):
+    state = load_newsletter_state_local()
+    for subscriber in state.get("subscribers") or []:
+        if subscriber.get("device_id") == device_id:
+            return subscriber
+    return None
+
+
+def save_local_newsletter_subscriber(device_id, *, email, cadence="daily", timezone_name="America/New_York", status="active"):
+    state = load_newsletter_state_local()
+    subscribers = list(state.get("subscribers") or [])
+    existing = None
+    for subscriber in subscribers:
+        if subscriber.get("device_id") == device_id or subscriber.get("email") == email.strip().lower():
+            existing = subscriber
+            break
+    now_iso = iso_utc(utcnow())
+    if existing is None:
+        existing = {
+            "id": f"local-subscriber-{secrets.token_hex(8)}",
+            "device_id": device_id,
+            "email": email.strip().lower(),
+            "status": status,
+            "cadence": cadence,
+            "timezone": timezone_name or "America/New_York",
+            "onboarded_at": None,
+            "unsubscribed_at": None,
+            "created_at": now_iso,
+            "updated_at": now_iso,
+        }
+        subscribers.append(existing)
+    else:
+        existing["email"] = email.strip().lower()
+        existing["status"] = status
+        existing["cadence"] = cadence
+        existing["timezone"] = timezone_name or existing.get("timezone") or "America/New_York"
+        existing["updated_at"] = now_iso
+        if status == "active":
+            existing["unsubscribed_at"] = None
+    state["subscribers"] = subscribers
+    save_newsletter_state_local(state)
+    return existing
+
+
+def load_newsletter_subscriber(device_id):
+    remote = load_newsletter_subscriber_from_supabase(device_id)
+    if remote:
+        return remote
+    return load_local_newsletter_subscriber(device_id)
+
+
+def save_newsletter_preferences(device_id, preferences):
+    normalized = normalize_newsletter_preferences(preferences)
+    if save_newsletter_preferences_to_supabase(device_id=device_id, preferences=normalized):
+        return normalized
+    state = load_newsletter_state_local()
+    state["preferences_by_device"][device_id] = normalized
+    save_newsletter_state_local(state)
+    return normalized
+
+
+def load_newsletter_preferences(device_id):
+    remote = load_newsletter_preferences_from_supabase(device_id)
+    if remote:
+        return normalize_newsletter_preferences(
+            {
+                "preferredCategories": remote.get("preferred_categories") or [],
+                "dislikedCategories": remote.get("disliked_categories") or [],
+                "favoriteBrands": remote.get("favorite_brands") or [],
+                "hiddenBrands": remote.get("hidden_brands") or [],
+                "cadenceSettings": remote.get("cadence_settings") or {},
+                "onboardingAnswers": remote.get("onboarding_answers") or {},
+                "sampledProductFeedback": remote.get("sampled_product_feedback") or {},
+            }
+        )
+    state = load_newsletter_state_local()
+    return normalize_newsletter_preferences((state.get("preferences_by_device") or {}).get(device_id) or {})
+
+
+def save_newsletter_feedback_token_record(token, subscriber, product_key, action, expires_at, metadata=None):
+    if subscriber and subscriber.get("id") and save_newsletter_feedback_token_to_supabase(
+        token=token,
+        subscriber_id=subscriber.get("id"),
+        product_key=product_key,
+        action=action,
+        expires_at=expires_at,
+        metadata=metadata or {},
+    ):
+        return True
+    state = load_newsletter_state_local()
+    state["feedback_tokens"][token] = {
+        "subscriber_id": (subscriber or {}).get("id"),
+        "device_id": (subscriber or {}).get("device_id"),
+        "email": (subscriber or {}).get("email"),
+        "product_key": product_key,
+        "action": action,
+        "expires_at": expires_at,
+        "used_at": None,
+        "metadata": metadata or {},
+    }
+    save_newsletter_state_local(state)
+    return True
+
+
+def load_newsletter_feedback_token_record(token):
+    remote = load_newsletter_feedback_token_from_supabase(token)
+    if remote:
+        return remote
+    state = load_newsletter_state_local()
+    return (state.get("feedback_tokens") or {}).get(token)
+
+
+def mark_newsletter_feedback_token_used(token):
+    if mark_newsletter_feedback_token_used_in_supabase(token):
+        return True
+    state = load_newsletter_state_local()
+    feedback_tokens = state.get("feedback_tokens") or {}
+    if token in feedback_tokens:
+        feedback_tokens[token]["used_at"] = iso_utc(utcnow())
+        save_newsletter_state_local(state)
+        return True
+    return False
+
+
+def save_newsletter_delivery(subscriber, digest_date, status, payload_metadata=None):
+    if subscriber and subscriber.get("id") and save_newsletter_delivery_to_supabase(
+        subscriber_id=subscriber.get("id"),
+        digest_date=digest_date,
+        status=status,
+        payload_metadata=payload_metadata or {},
+    ):
+        return True
+    state = load_newsletter_state_local()
+    deliveries = list(state.get("deliveries") or [])
+    deliveries.append(
+        {
+            "subscriber_id": (subscriber or {}).get("id"),
+            "device_id": (subscriber or {}).get("device_id"),
+            "digest_date": digest_date,
+            "sent_at": iso_utc(utcnow()),
+            "status": status,
+            "payload_metadata": payload_metadata or {},
+        }
+    )
+    state["deliveries"] = deliveries
+    save_newsletter_state_local(state)
+    return True
+
+
+def latest_newsletter_delivery(subscriber):
+    if subscriber and subscriber.get("id"):
+        remote = load_latest_newsletter_delivery_from_supabase(subscriber_id=subscriber.get("id"))
+        if remote:
+            return remote
+    state = load_newsletter_state_local()
+    deliveries = [
+        delivery for delivery in (state.get("deliveries") or [])
+        if delivery.get("subscriber_id") == (subscriber or {}).get("id")
+        or delivery.get("device_id") == (subscriber or {}).get("device_id")
+    ]
+    deliveries.sort(key=lambda row: row.get("sent_at") or "", reverse=True)
+    return deliveries[0] if deliveries else None
+
+
+def save_newsletter_event(subscriber, event_type, product_key=None, metadata=None):
+    if subscriber and subscriber.get("id") and save_newsletter_event_to_supabase(
+        subscriber_id=subscriber.get("id"),
+        event_type=event_type,
+        product_key=product_key,
+        metadata=metadata or {},
+    ):
+        return True
+    state = load_newsletter_state_local()
+    events = list(state.get("events") or [])
+    events.append(
+        {
+            "subscriber_id": (subscriber or {}).get("id"),
+            "device_id": (subscriber or {}).get("device_id"),
+            "event_type": event_type,
+            "product_key": product_key,
+            "metadata": metadata or {},
+            "created_at": iso_utc(utcnow()),
+        }
+    )
+    state["events"] = events
+    save_newsletter_state_local(state)
+    return True
+
+
+def list_active_newsletter_subscribers():
+    remote = list_active_newsletter_subscribers_from_supabase()
+    if remote:
+        return remote
+    state = load_newsletter_state_local()
+    return [subscriber for subscriber in (state.get("subscribers") or []) if subscriber.get("status") == "active"]
 
 
 def sorted_count_map(values):
@@ -3565,6 +3905,13 @@ def filter_products_for_api(products):
 
 def sort_products_for_api(products):
     sort_mode = (request.args.get("sort") or "").strip().lower()
+    device_id = (request.args.get("device_id") or "").strip()
+    profile = load_device_profile(device_id) if device_id else {}
+    retailer_context = "All"
+    retailers = [value.strip() for value in (request.args.get("retailer") or "").split(",") if value.strip()]
+    if len(retailers) == 1:
+        retailer_context = retailers[0]
+    category_context = (request.args.get("category") or "").strip() or None
     ordered = list(products)
     if sort_mode == "discount":
         ordered.sort(key=lambda product: (-(product.get("discount_percent") or 0), normalize_text_key(product.get("name"))))
@@ -3575,7 +3922,368 @@ def sort_products_for_api(products):
     if sort_mode == "source-count":
         ordered.sort(key=lambda product: (-(product.get("source_count") or 0), -(product.get("discount_percent") or 0), normalize_text_key(product.get("name"))))
         return ordered
-    return sort_products_for_display(ordered)
+    return sort_products_for_display(
+        ordered,
+        profile=profile or {},
+        retailer_context=retailer_context,
+        category_context=category_context,
+    )
+
+
+def product_key_for_index(product, index):
+    return (
+        product.get("key")
+        or product.get("asin")
+        or (product.get("asins") or [None])[0]
+        or product.get("product_key")
+        or f"product-{index}"
+    )
+
+
+def combined_products_with_keys():
+    products = []
+    for index, product in enumerate(load_combined_products()):
+        candidate = dict(product)
+        candidate["key"] = product_key_for_index(candidate, index)
+        products.append(candidate)
+    return products
+
+
+def product_map_by_key(products=None):
+    products = products or combined_products_with_keys()
+    return {product.get("key"): product for product in products if product.get("key")}
+
+
+def newsletter_onboarding_payload(device_id):
+    profile = load_device_profile(device_id) or normalize_profile_payload({})
+    subscriber = load_newsletter_subscriber(device_id)
+    preferences = load_newsletter_preferences(device_id)
+    if not preferences:
+        preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
+    else:
+        preferences = normalize_newsletter_preferences(preferences)
+
+    all_products = combined_products_with_keys()
+    ranked = sort_products_for_display(all_products, profile=profile)
+    products_by_key = product_map_by_key(all_products)
+    sample_products = []
+    seen = set()
+
+    def push_sample(key):
+        product = products_by_key.get(key)
+        if product and key not in seen:
+            sample_products.append(product)
+            seen.add(key)
+
+    for key in profile.get("savedKeys") or []:
+        push_sample(key)
+    for key in (profile.get("likedKeys") or []) + (profile.get("dislikedKeys") or []):
+        push_sample(key)
+    for product in ranked[:12]:
+        push_sample(product.get("key"))
+    ambiguous = sorted(
+        [product for product in all_products if float(product.get("category_confidence") or 0) < 0.75],
+        key=lambda product: (float(product.get("category_confidence") or 0), normalize_text_key(product.get("name"))),
+    )
+    for product in ambiguous[:4]:
+        push_sample(product.get("key"))
+
+    return {
+        "subscriber": subscriber or {},
+        "preferences": preferences,
+        "categories": [category.get("name") for category in load_active_taxonomy().get("categories") or [] if category.get("name") != FAILED_CATEGORY],
+        "stores": SUPPORTED_STORES,
+        "sample_products": sample_products[:12],
+    }
+
+
+def create_feedback_token(subscriber, product_key, action):
+    issued_at = utcnow()
+    payload = {
+        "subscriber_id": subscriber.get("id"),
+        "device_id": subscriber.get("device_id"),
+        "product_key": product_key,
+        "action": action,
+        "nonce": secrets.token_urlsafe(8),
+        "issued_at": iso_utc(issued_at),
+    }
+    token = newsletter_serializer().dumps(payload)
+    expires_at = iso_utc(issued_at + timedelta(days=7))
+    save_newsletter_feedback_token_record(
+        token,
+        subscriber,
+        product_key,
+        action,
+        expires_at,
+        metadata={"issued_at": payload["issued_at"]},
+    )
+    return token
+
+
+def apply_newsletter_feedback(device_id, product_key, action):
+    profile = load_device_profile(device_id) or normalize_profile_payload({})
+    if action == "thumbs_up":
+        profile["likedKeys"] = sorted(set((profile.get("likedKeys") or []) + [product_key]))
+        profile["dislikedKeys"] = [key for key in (profile.get("dislikedKeys") or []) if key != product_key]
+    elif action == "thumbs_down":
+        profile["dislikedKeys"] = sorted(set((profile.get("dislikedKeys") or []) + [product_key]))
+        profile["likedKeys"] = [key for key in (profile.get("likedKeys") or []) if key != product_key]
+    elif action == "save":
+        profile["savedKeys"] = sorted(set((profile.get("savedKeys") or []) + [product_key]))
+    save_device_profile(device_id, profile)
+
+    preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
+    sampled_feedback = dict(preferences.get("sampledProductFeedback") or {})
+    sampled_feedback[product_key] = action
+    preferences["sampledProductFeedback"] = sampled_feedback
+    profile["newsletterPreferences"] = preferences
+    save_newsletter_preferences(device_id, preferences)
+    save_device_profile(device_id, profile)
+    return profile
+
+
+def profile_for_subscriber(subscriber):
+    device_id = (subscriber or {}).get("device_id")
+    if not device_id:
+        return normalize_profile_payload({})
+    profile = load_device_profile(device_id) or normalize_profile_payload({})
+    preferences = load_newsletter_preferences(device_id)
+    if preferences:
+        profile["newsletterPreferences"] = normalize_newsletter_preferences(preferences)
+    return profile
+
+
+def product_permalink(product):
+    asin = product.get("asin") or (product.get("asins") or [None])[0]
+    if asin:
+        return f"https://www.wholefoodsmarket.com/grocery/product/{asin}"
+    return product.get("url") or api_url("/")
+
+
+def generate_newsletter_digest_for_subscriber(subscriber, products=None):
+    products = products or combined_products_with_keys()
+    profile = profile_for_subscriber(subscriber)
+    preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
+    preferred_categories = preferences.get("preferredCategories") or []
+    categories = preferred_categories[:3] or ["Produce", "Meat & Seafood", "Pantry"]
+    by_category = defaultdict(list)
+    for product in products:
+        by_category[product.get("category") or "Pantry"].append(product)
+
+    sections = []
+    recommendation_snapshot = []
+    for category in categories:
+        ranked = sort_products_for_display(
+            by_category.get(category) or [],
+            profile=profile,
+            category_context=category,
+        )[:4]
+        if not ranked:
+            continue
+        entries = []
+        for product in ranked:
+            feedback = {
+                "up": create_feedback_token(subscriber, product.get("key"), "thumbs_up"),
+                "down": create_feedback_token(subscriber, product.get("key"), "thumbs_down"),
+                "save": create_feedback_token(subscriber, product.get("key"), "save"),
+            }
+            entries.append(
+                {
+                    "product": product,
+                    "reason": (product.get("_rank") or {}).get("reason") or "Good fit for your feed",
+                    "feedback": feedback,
+                }
+            )
+            recommendation_snapshot.append(
+                {
+                    "product_key": product.get("key"),
+                    "category": category,
+                    "score": (product.get("_rank") or {}).get("total_score"),
+                    "reason": (product.get("_rank") or {}).get("reason"),
+                }
+            )
+        sections.append({"category": category, "entries": entries})
+
+    return {
+        "profile": profile,
+        "subscriber": subscriber,
+        "sections": sections,
+        "snapshot": recommendation_snapshot,
+    }
+
+
+def feedback_url(token):
+    return api_url(f"/api/newsletter/feedback/{token}")
+
+
+def render_digest_html(digest):
+    sections_html = []
+    for section in digest.get("sections") or []:
+        cards = []
+        for entry in section.get("entries") or []:
+            product = entry.get("product") or {}
+            image_html = f'<img src="{product.get("image")}" alt="{product.get("name")}" style="width:96px;height:96px;object-fit:contain;border-radius:12px;background:#f8faf8;">' if product.get("image") else ""
+            cards.append(
+                f"""
+                <div style="border:1px solid #dce6df;border-radius:18px;padding:16px;margin:0 0 14px;background:#fff;">
+                  <div style="display:flex;gap:14px;align-items:flex-start;">
+                    <div>{image_html}</div>
+                    <div style="flex:1;min-width:0;">
+                      <div style="color:#657169;font-size:13px;margin-bottom:4px;">{product.get('retailer') or 'Whole Foods'} · {product.get('category') or 'Pantry'}</div>
+                      <div style="font-size:22px;font-weight:800;color:#163a2b;line-height:1.2;margin-bottom:6px;">{product.get('name')}</div>
+                      <div style="font-size:30px;font-weight:900;color:#dd4b39;line-height:1;">{product.get('prime_price') or product.get('current_price') or ''}</div>
+                      <div style="font-size:15px;font-weight:700;color:#5d6b62;margin-top:8px;">{('Was ' + str(product.get('basis_price'))) if product.get('basis_price') else ''}</div>
+                      <div style="font-size:14px;font-weight:800;color:#0b6b45;margin-top:8px;">{entry.get('reason') or ''}</div>
+                      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
+                        <a href="{feedback_url(entry['feedback']['up'])}" style="background:#0b6b45;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:800;">Thumbs up</a>
+                        <a href="{feedback_url(entry['feedback']['down'])}" style="background:#f4efe6;color:#163a2b;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:800;">Thumbs down</a>
+                        <a href="{feedback_url(entry['feedback']['save'])}" style="background:#dcefe6;color:#0b6b45;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:800;">Save</a>
+                        <a href="{product_permalink(product)}" style="color:#0b6b45;font-weight:800;padding:10px 0 0;text-decoration:none;">View deal</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                """
+            )
+        sections_html.append(
+            f"""
+            <section style="margin:0 0 22px;">
+              <h2 style="margin:0 0 12px;font-size:28px;line-height:1.1;color:#163a2b;">{section.get('category')}</h2>
+              {''.join(cards)}
+            </section>
+            """
+        )
+
+    return f"""
+    <html>
+      <body style="margin:0;background:#f7f4ec;color:#163a2b;font-family:'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif;">
+        <div style="max-width:720px;margin:0 auto;padding:28px 16px 40px;">
+          <div style="background:#ffffff;border-radius:28px;padding:24px 24px 10px;box-shadow:0 14px 34px rgba(17,61,41,0.08);">
+            <div style="display:inline-block;background:#dcefe6;color:#0b6b45;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;">Whole Foods Deals</div>
+            <h1 style="margin:16px 0 8px;font-size:38px;line-height:1;color:#163a2b;">Your grocery digest</h1>
+            <p style="margin:0 0 18px;font-size:18px;line-height:1.6;color:#5d6b62;">Personalized from your saved list, category taste, and the strongest deals from the latest refresh.</p>
+            {''.join(sections_html) or '<p style="font-size:16px;color:#5d6b62;">No deals matched your current preferences today.</p>'}
+          </div>
+        </div>
+      </body>
+    </html>
+    """
+
+
+def cadence_allows_delivery(subscriber, latest_delivery, today_date):
+    cadence = str((subscriber or {}).get("cadence") or "daily").strip().lower()
+    if not latest_delivery:
+        return True
+    latest_date = str(latest_delivery.get("digest_date") or "")
+    if latest_date == today_date:
+        return False
+    if cadence == "daily":
+        return True
+    latest_sent_at = latest_delivery.get("sent_at") or ""
+    if cadence == "few-times-week":
+        return latest_sent_at < iso_utc(utcnow() - timedelta(days=2))
+    if cadence == "weekly":
+        return latest_sent_at < iso_utc(utcnow() - timedelta(days=6))
+    return True
+
+
+def send_smtp_email(*, to_email, subject, html):
+    if not NEWSLETTER_FROM_EMAIL or not SMTP_USERNAME or not SMTP_PASSWORD:
+        return {"ok": False, "error": "Missing SMTP configuration"}
+
+    message = EmailMessage()
+    message["Subject"] = subject
+    message["From"] = NEWSLETTER_FROM_EMAIL
+    message["To"] = to_email
+    if NEWSLETTER_REPLY_TO:
+        message["Reply-To"] = NEWSLETTER_REPLY_TO
+    message.set_content("Open this message in an HTML-capable email client to view your grocery digest.")
+    message.add_alternative(html, subtype="html")
+
+    try:
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30) as smtp:
+            if SMTP_USE_TLS:
+                smtp.starttls()
+            smtp.login(SMTP_USERNAME, SMTP_PASSWORD)
+            smtp.send_message(message)
+        return {"ok": True, "data": {"transport": "smtp", "host": SMTP_HOST}}
+    except Exception as error:
+        return {"ok": False, "error": str(error)}
+
+
+def send_resend_email(*, to_email, subject, html):
+    if not RESEND_API_KEY or not NEWSLETTER_FROM_EMAIL:
+        return {"ok": False, "error": "Missing Resend configuration"}
+    payload = {
+        "from": NEWSLETTER_FROM_EMAIL,
+        "to": [to_email],
+        "subject": subject,
+        "html": html,
+    }
+    if NEWSLETTER_REPLY_TO:
+        payload["reply_to"] = NEWSLETTER_REPLY_TO
+    try:
+        response = requests.post(
+            "https://api.resend.com/emails",
+            headers={
+                "Authorization": f"Bearer {RESEND_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=30,
+        )
+    except Exception as error:
+        return {"ok": False, "error": str(error)}
+    if not response.ok:
+        return {"ok": False, "error": response.text}
+    return {"ok": True, "data": response.json()}
+
+
+def send_newsletter_email(*, to_email, subject, html):
+    if EMAIL_TRANSPORT == "resend":
+        return send_resend_email(to_email=to_email, subject=subject, html=html)
+    return send_smtp_email(to_email=to_email, subject=subject, html=html)
+
+
+def send_newsletter_digests(products=None):
+    products = products or combined_products_with_keys()
+    subscribers = list_active_newsletter_subscribers()
+    today_date = utcnow().date().isoformat()
+    results = []
+    for subscriber in subscribers:
+        latest_delivery = latest_newsletter_delivery(subscriber)
+        if not cadence_allows_delivery(subscriber, latest_delivery, today_date):
+            save_newsletter_delivery(subscriber, today_date, "skipped", {"reason": "cadence"})
+            results.append({"email": subscriber.get("email"), "status": "skipped"})
+            continue
+        digest = generate_newsletter_digest_for_subscriber(subscriber, products=products)
+        html = render_digest_html(digest)
+        send_result = send_newsletter_email(
+            to_email=subscriber.get("email"),
+            subject="Your grocery deals digest",
+            html=html,
+        )
+        metadata = {
+            "section_count": len(digest.get("sections") or []),
+            "snapshot_count": len(digest.get("snapshot") or []),
+            "transport": EMAIL_TRANSPORT,
+        }
+        if send_result.get("ok"):
+            save_newsletter_delivery(subscriber, today_date, "sent", metadata)
+            save_newsletter_event(subscriber, "email_sent", metadata=metadata)
+            save_recommendation_snapshot_to_supabase(
+                device_id=subscriber.get("device_id"),
+                store_scope=(profile_for_subscriber(subscriber).get("selectedStoreIds") or []),
+                recommendations=digest.get("snapshot") or [],
+                metadata={"source": "newsletter"},
+            )
+            results.append({"email": subscriber.get("email"), "status": "sent"})
+        else:
+            metadata["error"] = send_result.get("error")
+            save_newsletter_delivery(subscriber, today_date, "failed", metadata)
+            save_newsletter_event(subscriber, "email_failed", metadata=metadata)
+            results.append({"email": subscriber.get("email"), "status": "failed", "error": send_result.get("error")})
+    return results
 
 
 def api_limit(default=60, maximum=200):
@@ -3678,6 +4386,161 @@ def api_profile():
             "storage": "supabase" if supabase_enabled() else "local",
         }
     )
+
+
+@app.route("/api/newsletter/signup", methods=["POST", "OPTIONS"])
+def api_newsletter_signup():
+    if request.method == "OPTIONS":
+        return ("", 204)
+
+    payload = request.get_json(silent=True) or {}
+    device_id = (payload.get("device_id") or "").strip()
+    email = (payload.get("email") or "").strip().lower()
+    cadence = (payload.get("cadence") or "daily").strip()
+    timezone_name = (payload.get("timezone") or "America/New_York").strip()
+    if not device_id or not email:
+        return jsonify({"error": "Missing device_id or email"}), 400
+
+    subscriber = upsert_newsletter_subscriber_to_supabase(
+        device_id=device_id,
+        email=email,
+        cadence=cadence,
+        timezone=timezone_name,
+        status="active",
+    )
+    if not subscriber:
+        subscriber = save_local_newsletter_subscriber(
+            device_id,
+            email=email,
+            cadence=cadence,
+            timezone_name=timezone_name,
+            status="active",
+        )
+
+    profile = load_device_profile(device_id) or normalize_profile_payload({})
+    profile["newsletterEnabled"] = True
+    profile["newsletterCadence"] = cadence
+    profile["newsletterEmail"] = email
+    save_device_profile(device_id, profile)
+    save_newsletter_event(subscriber, "signup", metadata={"cadence": cadence})
+    return jsonify(
+        {
+            "ok": True,
+            "subscriber": subscriber,
+            "profile": load_device_profile(device_id),
+            "onboarding": newsletter_onboarding_payload(device_id),
+        }
+    )
+
+
+@app.route("/api/newsletter/onboarding", methods=["GET", "POST", "OPTIONS"])
+def api_newsletter_onboarding():
+    if request.method == "OPTIONS":
+        return ("", 204)
+
+    if request.method == "GET":
+        device_id = (request.args.get("device_id") or "").strip()
+        if not device_id:
+            return jsonify({"error": "Missing device_id"}), 400
+        return jsonify({"ok": True, "onboarding": newsletter_onboarding_payload(device_id)})
+
+    payload = request.get_json(silent=True) or {}
+    device_id = (payload.get("device_id") or "").strip()
+    if not device_id:
+        return jsonify({"error": "Missing device_id"}), 400
+
+    preferences = normalize_newsletter_preferences(payload.get("preferences") or {})
+    answers = dict(payload.get("answers") or {})
+    cadence = (payload.get("cadence") or "daily").strip()
+    email = (payload.get("email") or "").strip().lower()
+    profile = load_device_profile(device_id) or normalize_profile_payload({})
+    if email:
+        profile["newsletterEmail"] = email
+    profile["newsletterEnabled"] = True
+    profile["newsletterCadence"] = cadence
+    profile["newsletterOnboardingCompleted"] = True
+    profile["newsletterPreferences"] = preferences
+    profile["onboardingAnswers"] = answers
+    save_device_profile(device_id, profile)
+    save_newsletter_preferences(
+        device_id,
+        {
+            **preferences,
+            "cadenceSettings": {
+                **(preferences.get("cadenceSettings") or {}),
+                "cadence": cadence,
+            },
+            "onboardingAnswers": answers,
+        },
+    )
+    subscriber = load_newsletter_subscriber(device_id)
+    if not subscriber and email:
+        subscriber = save_local_newsletter_subscriber(device_id, email=email, cadence=cadence)
+    if subscriber:
+        save_newsletter_event(subscriber, "onboarding_completed", metadata={"cadence": cadence})
+    return jsonify(
+        {
+            "ok": True,
+            "profile": load_device_profile(device_id),
+            "onboarding": newsletter_onboarding_payload(device_id),
+        }
+    )
+
+
+@app.route("/api/newsletter/feedback/<path:token>")
+def api_newsletter_feedback(token):
+    token = token.strip()
+    if not token:
+        return ("Missing token", 400, {"Content-Type": "text/plain; charset=utf-8"})
+
+    try:
+        payload = newsletter_serializer().loads(token, max_age=7 * 24 * 60 * 60)
+    except SignatureExpired:
+        return ("This feedback link expired. Open the latest digest for a fresh link.", 410, {"Content-Type": "text/plain; charset=utf-8"})
+    except BadSignature:
+        return ("This feedback link is invalid.", 400, {"Content-Type": "text/plain; charset=utf-8"})
+
+    record = load_newsletter_feedback_token_record(token)
+    if not record:
+        return ("This feedback link is no longer available.", 404, {"Content-Type": "text/plain; charset=utf-8"})
+    if record.get("used_at"):
+        return ("This feedback was already recorded. Thanks.", 200, {"Content-Type": "text/plain; charset=utf-8"})
+
+    expires_at = record.get("expires_at")
+    if expires_at and expires_at < iso_utc(utcnow()):
+        return ("This feedback link expired. Open the latest digest for a fresh link.", 410, {"Content-Type": "text/plain; charset=utf-8"})
+
+    action = payload.get("action")
+    product_key = payload.get("product_key")
+    device_id = payload.get("device_id") or record.get("device_id")
+    if not device_id or not product_key or action not in {"thumbs_up", "thumbs_down", "save"}:
+        return ("This feedback link is missing required data.", 400, {"Content-Type": "text/plain; charset=utf-8"})
+
+    apply_newsletter_feedback(device_id, product_key, action)
+    subscriber = load_newsletter_subscriber(device_id)
+    save_newsletter_event(subscriber, action, product_key=product_key)
+    mark_newsletter_feedback_token_used(token)
+    product = product_map_by_key().get(product_key) or {}
+    action_label = {
+        "thumbs_up": "Thumbs up saved",
+        "thumbs_down": "Thumbs down saved",
+        "save": "Saved to your list",
+    }[action]
+    html = f"""
+    <html>
+      <body style="margin:0;background:#f7f4ec;color:#163a2b;font-family:'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif;">
+        <div style="max-width:560px;margin:48px auto;padding:0 16px;">
+          <div style="background:#fff;border-radius:24px;padding:24px;box-shadow:0 14px 34px rgba(17,61,41,0.08);">
+            <div style="display:inline-block;background:#dcefe6;color:#0b6b45;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;">Feedback saved</div>
+            <h1 style="margin:16px 0 8px;font-size:32px;line-height:1.05;">{action_label}</h1>
+            <p style="margin:0;color:#5d6b62;font-size:18px;line-height:1.6;">{product.get('name') or 'This deal'} will influence future shelf ranking and your next digest.</p>
+            <p style="margin:18px 0 0;"><a href="{api_url('/')}" style="color:#0b6b45;font-weight:800;text-decoration:none;">Back to the deals page</a></p>
+          </div>
+        </div>
+      </body>
+    </html>
+    """
+    return (html, 200, {"Content-Type": "text/html; charset=utf-8"})
 
 
 @app.route("/api/fixes", methods=["GET", "POST", "OPTIONS"])
@@ -3890,6 +4753,8 @@ def combined_products_home():
         feedback_endpoint=api_url("/api/fixes"),
         profile_endpoint=api_url("/api/profile"),
         feed_endpoint=api_url("/api/feed"),
+        newsletter_signup_endpoint=api_url("/api/newsletter/signup"),
+        newsletter_onboarding_endpoint=api_url("/api/newsletter/onboarding"),
         page_subtitle="Browse Whole Foods, Target, and H Mart deals in one place.",
     )
 

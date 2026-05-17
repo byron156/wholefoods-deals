@@ -45,6 +45,7 @@
         <div class="status-row">
             <div class="search-meta" id="search-meta">{{ deal_count }} live deals</div>
             <div class="freshness-meta">
+                <button class="ghost-button newsletter-link" type="button" id="newsletter-toggle">Sign up for newsletter!</button>
                 <button class="ghost-button saved-link" type="button" id="saved-list-toggle">Saved list</button>
                 <a class="quality-link" href="/reports/catalog_quality_audit.html">Data Quality</a>
             </div>
@@ -57,6 +58,7 @@
 </div>
 
 <div class="sheet-backdrop hidden" id="category-sheet-backdrop"></div>
+<div class="sheet-backdrop hidden" id="newsletter-sheet-backdrop"></div>
 <section class="category-sheet hidden" id="category-sheet" aria-hidden="true">
     <div class="sheet-header">
         <div>
@@ -82,8 +84,69 @@
     </div>
 </section>
 
+<section class="preferences-sheet hidden" id="newsletter-sheet" aria-hidden="true">
+    <div class="sheet-header">
+        <div>
+            <h3 id="newsletter-sheet-title">Get the daily digest</h3>
+            <p id="newsletter-sheet-copy">Tell us what you actually care about so the email gets smarter than a generic coupon blast.</p>
+        </div>
+        <button class="ghost-button" type="button" id="newsletter-sheet-close">Close</button>
+    </div>
+    <div class="sheet-field">
+        <label for="newsletter-email">Email address</label>
+        <input id="newsletter-email" class="search-input" type="email" placeholder="you@example.com">
+    </div>
+    <div class="sheet-field">
+        <label for="newsletter-cadence">How often should we send it?</label>
+        <select id="newsletter-cadence" class="sheet-select">
+            <option value="daily">Up to once a day</option>
+            <option value="few-times-week">A few times a week</option>
+            <option value="weekly">Weekly best-of</option>
+        </select>
+    </div>
+    <div class="sheet-section">
+        <h3>Store focus</h3>
+        <p>Pick the store locations you most care about first.</p>
+        <div class="chip-row" id="newsletter-store-row"></div>
+    </div>
+    <div class="sheet-section">
+        <h3>Categories you want more of</h3>
+        <p>Choose the shelves that should lead your digest.</p>
+        <div class="chip-row" id="newsletter-category-row"></div>
+    </div>
+    <div class="sheet-section">
+        <h3>Categories you want less of</h3>
+        <p>We’ll suppress these unless a deal is truly exceptional.</p>
+        <div class="chip-row" id="newsletter-disliked-category-row"></div>
+    </div>
+    <div class="sheet-field">
+        <label for="newsletter-favorite-brands">Favorite brands</label>
+        <input id="newsletter-favorite-brands" class="search-input" type="text" placeholder="365, Applegate, Kevin's">
+    </div>
+    <div class="sheet-field">
+        <label for="newsletter-hidden-brands">Brands to hide or reduce</label>
+        <input id="newsletter-hidden-brands" class="search-input" type="text" placeholder="Type comma-separated brands">
+    </div>
+    <div class="sheet-field">
+        <label for="newsletter-budget-sensitivity">What matters more?</label>
+        <select id="newsletter-budget-sensitivity" class="sheet-select">
+            <option value="">Balanced mix</option>
+            <option value="strong-deals">Only the strongest deals</option>
+            <option value="premium-quality">Quality first</option>
+        </select>
+    </div>
+    <div class="sheet-section">
+        <h3>Rapid-fire calibration</h3>
+        <p>Thumbs up, thumbs down, or save a few products so the digest learns your taste fast.</p>
+        <div class="newsletter-sample-grid" id="newsletter-sample-grid"></div>
+    </div>
+    <div class="sheet-actions">
+        <button class="primary-button" type="button" id="newsletter-save">Save newsletter preferences</button>
+    </div>
+</section>
+
 <script id="app-data" type="application/json">
-{{ {"products": products, "stores": available_stores, "categories": category_names, "subcategory_options": subcategory_options, "category_order": category_order, "feedback_endpoint": feedback_endpoint, "profile_endpoint": profile_endpoint, "feed_endpoint": feed_endpoint}|tojson }}
+{{ {"products": products, "stores": available_stores, "categories": category_names, "subcategory_options": subcategory_options, "category_order": category_order, "feedback_endpoint": feedback_endpoint, "profile_endpoint": profile_endpoint, "feed_endpoint": feed_endpoint, "newsletter_signup_endpoint": newsletter_signup_endpoint, "newsletter_onboarding_endpoint": newsletter_onboarding_endpoint}|tojson }}
 </script>
 <script>
 if ("serviceWorker" in navigator) {

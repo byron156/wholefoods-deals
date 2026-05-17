@@ -147,6 +147,71 @@ create table if not exists public.recommendation_snapshots (
     )
 );
 
+create table if not exists public.newsletter_subscribers (
+    id uuid primary key default gen_random_uuid(),
+    email text unique not null,
+    device_profile_id uuid not null references public.device_profiles(id) on delete cascade,
+    status text not null default 'active' check (status in ('active', 'paused', 'unsubscribed')),
+    cadence text not null default 'daily' check (cadence in ('daily', 'few-times-week', 'weekly')),
+    timezone text not null default 'America/New_York',
+    onboarded_at timestamptz,
+    unsubscribed_at timestamptz,
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
+);
+
+create index if not exists newsletter_subscribers_device_profile_idx on public.newsletter_subscribers(device_profile_id);
+
+create table if not exists public.newsletter_preferences (
+    id uuid primary key default gen_random_uuid(),
+    subscriber_id uuid unique not null references public.newsletter_subscribers(id) on delete cascade,
+    preferred_categories jsonb not null default '[]'::jsonb,
+    disliked_categories jsonb not null default '[]'::jsonb,
+    favorite_brands jsonb not null default '[]'::jsonb,
+    hidden_brands jsonb not null default '[]'::jsonb,
+    cadence_settings jsonb not null default '{}'::jsonb,
+    onboarding_answers jsonb not null default '{}'::jsonb,
+    sampled_product_feedback jsonb not null default '{}'::jsonb,
+    created_at timestamptz not null default now(),
+    updated_at timestamptz not null default now()
+);
+
+create table if not exists public.newsletter_deliveries (
+    id uuid primary key default gen_random_uuid(),
+    subscriber_id uuid not null references public.newsletter_subscribers(id) on delete cascade,
+    digest_date date not null,
+    sent_at timestamptz not null default now(),
+    status text not null default 'queued' check (status in ('queued', 'sent', 'skipped', 'failed')),
+    payload_metadata jsonb not null default '{}'::jsonb,
+    created_at timestamptz not null default now()
+);
+
+create index if not exists newsletter_deliveries_subscriber_idx on public.newsletter_deliveries(subscriber_id);
+create index if not exists newsletter_deliveries_digest_date_idx on public.newsletter_deliveries(digest_date);
+
+create table if not exists public.newsletter_feedback_tokens (
+    token text primary key,
+    subscriber_id uuid not null references public.newsletter_subscribers(id) on delete cascade,
+    product_key text not null,
+    action text not null check (action in ('thumbs_up', 'thumbs_down', 'save')),
+    expires_at timestamptz not null,
+    used_at timestamptz,
+    metadata jsonb not null default '{}'::jsonb,
+    created_at timestamptz not null default now()
+);
+
+create index if not exists newsletter_feedback_tokens_subscriber_idx on public.newsletter_feedback_tokens(subscriber_id);
+create index if not exists newsletter_feedback_tokens_product_idx on public.newsletter_feedback_tokens(product_key);
+
+create table if not exists public.newsletter_events (
+    id uuid primary key default gen_random_uuid(),
+    subscriber_id uuid not null references public.newsletter_subscribers(id) on delete cascade,
+    event_type text not null check (event_type in ('signup', 'onboarding_completed', 'email_sent', 'email_failed', 'thumbs_up', 'thumbs_down', 'save', 'open', 'click')),
+    product_key text,
+    metadata jsonb not null default '{}'::jsonb,
+    created_at timestamptz not null default now()
+);
+
 create table if not exists public.taxonomy_fixes (
     id text primary key,
     fix_type text not null check (fix_type in ('subcategory', 'brand')),

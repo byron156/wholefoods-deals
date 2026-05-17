@@ -11,6 +11,7 @@ from app import (
     build_combined_products,
     fetch_products,
     load_all_deals,
+    send_newsletter_digests,
     load_hmart_deals,
     load_saved_flyer_products,
     load_search_deals,
@@ -335,6 +336,14 @@ def main():
     print(f"Combined unique products: {len(combined_products)}")
     if args.sample_size:
         print(f"Sample size used for taxonomy/classification: {args.sample_size}")
+
+    try:
+        newsletter_results = send_newsletter_digests(products=combined_products)
+        print(f"Newsletter dispatch attempted for {len(newsletter_results)} subscriber(s).")
+    except Exception as exc:
+        print(f"Newsletter dispatch failed, but refresh completed successfully: {exc}")
+        traceback.print_exc()
+
     print("\nPages:")
     print("  /")
     print("  /flyer")
