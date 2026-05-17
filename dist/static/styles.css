@@ -756,6 +756,29 @@ p {
   color: var(--muted);
 }
 
+.sheet-field.has-error .search-input {
+  border-color: rgba(221, 75, 59, 0.62);
+  box-shadow: 0 0 0 4px rgba(221, 75, 59, 0.12);
+}
+
+.form-message {
+  margin: 0;
+  border-radius: 14px;
+  padding: 10px 12px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.form-message.is-error {
+  color: #8f261b;
+  background: rgba(255, 226, 220, 0.9);
+}
+
+.form-message.is-success {
+  color: var(--green);
+  background: rgba(231, 243, 238, 0.95);
+}
+
 .sheet-select {
   width: 100%;
   border: 1px solid rgba(17, 61, 41, 0.14);

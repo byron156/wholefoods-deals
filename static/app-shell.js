@@ -63,6 +63,7 @@
     newsletterSheet: document.getElementById("newsletter-sheet"),
     newsletterSheetClose: document.getElementById("newsletter-sheet-close"),
     newsletterEmail: document.getElementById("newsletter-email"),
+    newsletterStatus: document.getElementById("newsletter-status"),
     newsletterCadence: document.getElementById("newsletter-cadence"),
     newsletterStoreRow: document.getElementById("newsletter-store-row"),
     newsletterCategoryRow: document.getElementById("newsletter-category-row"),
@@ -385,6 +386,42 @@
     }).join("");
   }
 
+  function emailLooksValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function setNewsletterStatus(message, type = "error") {
+    if (!nodes.newsletterStatus) {
+      return;
+    }
+    nodes.newsletterStatus.textContent = message || "";
+    nodes.newsletterStatus.classList.toggle("hidden", !message);
+    nodes.newsletterStatus.classList.toggle("is-error", Boolean(message) && type === "error");
+    nodes.newsletterStatus.classList.toggle("is-success", Boolean(message) && type === "success");
+  }
+
+  async function responseErrorMessage(response, fallback) {
+    try {
+      const payload = await response.json();
+      if (payload?.error) {
+        return payload.error;
+      }
+      if (payload?.message) {
+        return payload.message;
+      }
+    } catch (error) {
+      try {
+        const text = await response.text();
+        if (text) {
+          return text;
+        }
+      } catch (_) {
+        // Keep the cleaner fallback if the response body has already been read.
+      }
+    }
+    return fallback;
+  }
+
   function renderNewsletterSheet() {
     if (!nodes.newsletterSheet) {
       return;
@@ -447,8 +484,20 @@
       hiddenBrands: parseCsvList(nodes.newsletterHiddenBrands.value),
       budgetSensitivity: nodes.newsletterBudgetSensitivity.value,
     });
+    const email = (nodes.newsletterEmail.value || "").trim().toLowerCase();
+    nodes.newsletterEmail.closest(".sheet-field")?.classList.remove("has-error");
+    setNewsletterStatus("");
+    if (!emailLooksValid(email)) {
+      nodes.newsletterEmail.closest(".sheet-field")?.classList.add("has-error");
+      setNewsletterStatus("Enter a valid email address before saving your digest preferences.");
+      nodes.newsletterSheet.scrollTo({ top: 0, behavior: "smooth" });
+      nodes.newsletterEmail.focus();
+      return;
+    }
+    nodes.newsletterSave.disabled = true;
+    nodes.newsletterSave.textContent = "Saving...";
     state.profile.newsletterEnabled = true;
-    state.profile.newsletterEmail = (nodes.newsletterEmail.value || "").trim();
+    state.profile.newsletterEmail = email;
     state.profile.newsletterCadence = nodes.newsletterCadence.value || "daily";
     state.profile.newsletterOnboardingCompleted = true;
     state.profile.newsletterPreferences = currentPreferences;
@@ -465,7 +514,7 @@
       }),
     });
     if (!signupResponse.ok) {
-      throw new Error(`Newsletter signup failed with status ${signupResponse.status}`);
+      throw new Error(await responseErrorMessage(signupResponse, `Newsletter signup failed with status ${signupResponse.status}`));
     }
 
     const onboardingResponse = await fetch(newsletterOnboardingEndpoint, {
@@ -489,7 +538,7 @@
       }),
     });
     if (!onboardingResponse.ok) {
-      throw new Error(`Newsletter onboarding failed with status ${onboardingResponse.status}`);
+      throw new Error(await responseErrorMessage(onboardingResponse, `Newsletter onboarding failed with status ${onboardingResponse.status}`));
     }
     const payload = await onboardingResponse.json();
     if (payload?.profile) {
@@ -504,7 +553,9 @@
     }
     renderFeed();
     renderNewsletterSheet();
-    window.alert("Newsletter preferences saved.");
+    setNewsletterStatus("Newsletter preferences saved.", "success");
+    nodes.newsletterSave.disabled = false;
+    nodes.newsletterSave.textContent = "Save newsletter preferences";
   }
 
   function toggleValue(list, value) {
@@ -1456,7 +1507,9 @@
     nodes.newsletterSave.addEventListener("click", () => {
       saveNewsletterPreferences().catch((error) => {
         console.warn("Could not save newsletter preferences:", error);
-        window.alert("Could not save newsletter preferences right now.");
+        setNewsletterStatus(error.message || "Could not save newsletter preferences right now.");
+        nodes.newsletterSave.disabled = false;
+        nodes.newsletterSave.textContent = "Save newsletter preferences";
       });
     });
   }
