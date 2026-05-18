@@ -71,6 +71,10 @@
     newsletterFavoriteBrands: document.getElementById("newsletter-favorite-brands"),
     newsletterHiddenBrands: document.getElementById("newsletter-hidden-brands"),
     newsletterBudgetSensitivity: document.getElementById("newsletter-budget-sensitivity"),
+    newsletterDigestLength: document.getElementById("newsletter-digest-length"),
+    newsletterDigestLengthValue: document.getElementById("newsletter-digest-length-value"),
+    newsletterDiscoveryMix: document.getElementById("newsletter-discovery-mix"),
+    newsletterDiscoveryMixValue: document.getElementById("newsletter-discovery-mix-value"),
     newsletterSampleGrid: document.getElementById("newsletter-sample-grid"),
     newsletterSave: document.getElementById("newsletter-save"),
   };
@@ -244,6 +248,8 @@
       hiddenBrands: Array.isArray(source.hiddenBrands) ? source.hiddenBrands : [],
       preferredStoreIds: Array.isArray(source.preferredStoreIds) ? source.preferredStoreIds : [],
       budgetSensitivity: source.budgetSensitivity || "",
+      digestLength: clampNumber(source.digestLength || 12, 4, 24),
+      discoveryMix: clampNumber(source.discoveryMix ?? 25, 0, 100),
       cadenceSettings: source.cadenceSettings || {},
       onboardingAnswers: source.onboardingAnswers || {},
       sampledProductFeedback: source.sampledProductFeedback || {},
@@ -284,6 +290,7 @@
     categoryScope: "similar",
     viewMode: "all",
     newsletterOpen: false,
+    newsletterFormHydrated: false,
     newsletterOnboarding: {
       subscriber: {},
       preferences: normalizeNewsletterPreferences({}),
@@ -319,6 +326,33 @@
       .filter(Boolean)));
   }
 
+  function clampNumber(value, min, max) {
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed)) {
+      return min;
+    }
+    return Math.min(max, Math.max(min, parsed));
+  }
+
+  function discoveryMixLabel(value) {
+    const normalized = clampNumber(value, 0, 100);
+    if (normalized <= 0) return "Mostly favorites";
+    if (normalized <= 25) return "Balanced";
+    if (normalized <= 50) return "Curious";
+    if (normalized <= 75) return "Explore";
+    return "Full treasure hunt";
+  }
+
+  function syncNewsletterRangeLabels() {
+    if (nodes.newsletterDigestLength && nodes.newsletterDigestLengthValue) {
+      const count = clampNumber(nodes.newsletterDigestLength.value || 12, 4, 24);
+      nodes.newsletterDigestLengthValue.textContent = `${count} deal${count === 1 ? "" : "s"}`;
+    }
+    if (nodes.newsletterDiscoveryMix && nodes.newsletterDiscoveryMixValue) {
+      nodes.newsletterDiscoveryMixValue.textContent = discoveryMixLabel(nodes.newsletterDiscoveryMix.value || 25);
+    }
+  }
+
   function toggleChoice(list, value) {
     const current = Array.isArray(list) ? list.slice() : [];
     return current.includes(value)
@@ -328,6 +362,7 @@
 
   function openNewsletterSheet() {
     state.newsletterOpen = true;
+    state.newsletterFormHydrated = false;
     nodes.newsletterSheetBackdrop.classList.remove("hidden");
     nodes.newsletterSheet.classList.remove("hidden");
     nodes.newsletterSheet.setAttribute("aria-hidden", "false");
@@ -422,17 +457,27 @@
     return fallback;
   }
 
-  function renderNewsletterSheet() {
+  function renderNewsletterSheet(options = {}) {
     if (!nodes.newsletterSheet) {
       return;
     }
+    const preserveInputs = Boolean(options.preserveInputs || state.newsletterFormHydrated);
     const subscriber = state.newsletterOnboarding.subscriber || {};
     const preferences = state.profile.newsletterPreferences || normalizeNewsletterPreferences({});
-    nodes.newsletterEmail.value = state.profile.newsletterEmail || subscriber.email || "";
-    nodes.newsletterCadence.value = state.profile.newsletterCadence || subscriber.cadence || "daily";
-    nodes.newsletterFavoriteBrands.value = (preferences.favoriteBrands || []).join(", ");
-    nodes.newsletterHiddenBrands.value = (preferences.hiddenBrands || []).join(", ");
-    nodes.newsletterBudgetSensitivity.value = preferences.budgetSensitivity || "";
+    if (!preserveInputs) {
+      nodes.newsletterEmail.value = state.profile.newsletterEmail || subscriber.email || "";
+      nodes.newsletterCadence.value = state.profile.newsletterCadence || subscriber.cadence || "daily";
+      nodes.newsletterFavoriteBrands.value = (preferences.favoriteBrands || []).join(", ");
+      nodes.newsletterHiddenBrands.value = (preferences.hiddenBrands || []).join(", ");
+      nodes.newsletterBudgetSensitivity.value = preferences.budgetSensitivity || "";
+      if (nodes.newsletterDigestLength) {
+        nodes.newsletterDigestLength.value = preferences.digestLength || 12;
+      }
+      if (nodes.newsletterDiscoveryMix) {
+        nodes.newsletterDiscoveryMix.value = preferences.discoveryMix ?? 25;
+      }
+    }
+    syncNewsletterRangeLabels();
     renderNewsletterChipRow(
       nodes.newsletterStoreRow,
       (state.newsletterOnboarding.stores || []).map((store) => ({ value: store.id, label: store.label || store.name || store.id })),
@@ -452,6 +497,7 @@
       "dislikedCategories"
     );
     renderNewsletterSamples();
+    state.newsletterFormHydrated = true;
   }
 
   async function loadNewsletterOnboarding() {
@@ -483,6 +529,8 @@
       favoriteBrands: parseCsvList(nodes.newsletterFavoriteBrands.value),
       hiddenBrands: parseCsvList(nodes.newsletterHiddenBrands.value),
       budgetSensitivity: nodes.newsletterBudgetSensitivity.value,
+      digestLength: nodes.newsletterDigestLength ? Number(nodes.newsletterDigestLength.value) : 12,
+      discoveryMix: nodes.newsletterDiscoveryMix ? Number(nodes.newsletterDiscoveryMix.value) : 25,
     });
     const email = (nodes.newsletterEmail.value || "").trim().toLowerCase();
     nodes.newsletterEmail.closest(".sheet-field")?.classList.remove("has-error");
@@ -533,6 +581,8 @@
           favoriteBrands: currentPreferences.favoriteBrands,
           hiddenBrands: currentPreferences.hiddenBrands,
           budgetSensitivity: currentPreferences.budgetSensitivity,
+          digestLength: currentPreferences.digestLength,
+          discoveryMix: currentPreferences.discoveryMix,
           sampledProductFeedback: currentPreferences.sampledProductFeedback,
         },
       }),
@@ -552,7 +602,7 @@
       };
     }
     renderFeed();
-    renderNewsletterSheet();
+    renderNewsletterSheet({ preserveInputs: true });
     setNewsletterStatus("Newsletter preferences saved.", "success");
     nodes.newsletterSave.disabled = false;
     nodes.newsletterSave.textContent = "Save newsletter preferences";
@@ -1428,7 +1478,7 @@
       const preferences = normalizeNewsletterPreferences(state.profile.newsletterPreferences || {});
       preferences[key] = toggleChoice(preferences[key] || [], value);
       state.profile.newsletterPreferences = preferences;
-      renderNewsletterSheet();
+      renderNewsletterSheet({ preserveInputs: true });
       return;
     }
 
@@ -1451,7 +1501,7 @@
         saveProfile();
       }
       renderFeed();
-      renderNewsletterSheet();
+      renderNewsletterSheet({ preserveInputs: true });
     }
   });
 
@@ -1512,6 +1562,12 @@
         nodes.newsletterSave.textContent = "Save newsletter preferences";
       });
     });
+  }
+  if (nodes.newsletterDigestLength) {
+    nodes.newsletterDigestLength.addEventListener("input", syncNewsletterRangeLabels);
+  }
+  if (nodes.newsletterDiscoveryMix) {
+    nodes.newsletterDiscoveryMix.addEventListener("input", syncNewsletterRangeLabels);
   }
 
   renderFeed();

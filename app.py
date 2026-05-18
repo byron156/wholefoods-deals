@@ -2735,6 +2735,8 @@ def default_newsletter_preferences():
         "favoriteBrands": [],
         "hiddenBrands": [],
         "budgetSensitivity": "",
+        "digestLength": 12,
+        "discoveryMix": 25,
         "preferredStoreIds": [],
         "cadenceSettings": {},
         "onboardingAnswers": {},
@@ -2758,6 +2760,14 @@ def normalize_string_list(values):
     return output
 
 
+def clamp_int(value, default, min_value, max_value):
+    try:
+        parsed = int(float(value))
+    except (TypeError, ValueError):
+        parsed = default
+    return max(min_value, min(max_value, parsed))
+
+
 def normalize_newsletter_preferences(preferences):
     source = preferences or {}
     normalized = default_newsletter_preferences()
@@ -2768,6 +2778,18 @@ def normalize_newsletter_preferences(preferences):
     normalized["preferredStoreIds"] = normalize_string_list(source.get("preferredStoreIds"))
     normalized["budgetSensitivity"] = str(source.get("budgetSensitivity") or "").strip()
     normalized["cadenceSettings"] = dict(source.get("cadenceSettings") or {})
+    normalized["digestLength"] = clamp_int(
+        source.get("digestLength", normalized["cadenceSettings"].get("digestLength")),
+        12,
+        4,
+        24,
+    )
+    normalized["discoveryMix"] = clamp_int(
+        source.get("discoveryMix", normalized["cadenceSettings"].get("discoveryMix")),
+        25,
+        0,
+        100,
+    )
     normalized["onboardingAnswers"] = dict(source.get("onboardingAnswers") or {})
     sample_feedback = source.get("sampledProductFeedback") or {}
     normalized["sampledProductFeedback"] = {
@@ -4077,44 +4099,70 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None):
     profile = profile_for_subscriber(subscriber)
     preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
     preferred_categories = preferences.get("preferredCategories") or []
-    categories = preferred_categories[:3] or ["Produce", "Meat & Seafood", "Pantry"]
+    target_count = clamp_int(preferences.get("digestLength"), 12, 4, 24)
+    discovery_mix = clamp_int(preferences.get("discoveryMix"), 25, 0, 100)
+    discovery_count = min(target_count // 2, round(target_count * discovery_mix / 100 * 0.35))
+    primary_count = max(1, target_count - discovery_count)
+    category_pool = preferred_categories or ["Produce", "Meat & Seafood", "Pantry"]
+    category_count = min(len(category_pool), max(1, math.ceil(primary_count / 4)))
+    categories = category_pool[:category_count]
     by_category = defaultdict(list)
     for product in products:
         by_category[product.get("category") or "Pantry"].append(product)
 
     sections = []
     recommendation_snapshot = []
+    selected_keys = set()
+
+    def build_entry(product, category, reason=None):
+        selected_keys.add(product.get("key"))
+        rank_reason = (product.get("_rank") or {}).get("reason")
+        entry_reason = reason or rank_reason or "Good fit for your feed"
+        feedback = {
+            "up": create_feedback_token(subscriber, product.get("key"), "thumbs_up"),
+            "down": create_feedback_token(subscriber, product.get("key"), "thumbs_down"),
+            "save": create_feedback_token(subscriber, product.get("key"), "save"),
+        }
+        recommendation_snapshot.append(
+            {
+                "product_key": product.get("key"),
+                "category": category,
+                "score": (product.get("_rank") or {}).get("total_score"),
+                "reason": entry_reason,
+            }
+        )
+        return {"product": product, "reason": entry_reason, "feedback": feedback}
+
+    per_category_limit = max(1, math.ceil(primary_count / max(1, len(categories))))
     for category in categories:
         ranked = sort_products_for_display(
             by_category.get(category) or [],
             profile=profile,
             category_context=category,
-        )[:4]
+        )
+        ranked = [product for product in ranked if product.get("key") not in selected_keys][:per_category_limit]
         if not ranked:
             continue
-        entries = []
-        for product in ranked:
-            feedback = {
-                "up": create_feedback_token(subscriber, product.get("key"), "thumbs_up"),
-                "down": create_feedback_token(subscriber, product.get("key"), "thumbs_down"),
-                "save": create_feedback_token(subscriber, product.get("key"), "save"),
-            }
-            entries.append(
-                {
-                    "product": product,
-                    "reason": (product.get("_rank") or {}).get("reason") or "Good fit for your feed",
-                    "feedback": feedback,
-                }
-            )
-            recommendation_snapshot.append(
-                {
-                    "product_key": product.get("key"),
-                    "category": category,
-                    "score": (product.get("_rank") or {}).get("total_score"),
-                    "reason": (product.get("_rank") or {}).get("reason"),
-                }
-            )
+        entries = [build_entry(product, category) for product in ranked]
         sections.append({"category": category, "entries": entries})
+
+    if discovery_count:
+        ranked_all = sort_products_for_display(products, profile=profile)
+        discovery_entries = []
+        for product in ranked_all:
+            if len(discovery_entries) >= discovery_count:
+                break
+            if product.get("key") in selected_keys:
+                continue
+            category = product.get("category") or "Pantry"
+            if category in categories and discovery_mix < 75:
+                continue
+            reason = "Discovery pick: strong deal outside your usual front shelf"
+            if int(product.get("discount_percent") or 0) >= 50:
+                reason = "Explore: unusually strong deal"
+            discovery_entries.append(build_entry(product, "Explore", reason=reason))
+        if discovery_entries:
+            sections.append({"category": "Explore", "entries": discovery_entries})
 
     return {
         "profile": profile,
@@ -4488,6 +4536,8 @@ def api_newsletter_onboarding():
             "cadenceSettings": {
                 **(preferences.get("cadenceSettings") or {}),
                 "cadence": cadence,
+                "digestLength": preferences.get("digestLength", 12),
+                "discoveryMix": preferences.get("discoveryMix", 25),
             },
             "onboardingAnswers": answers,
         },
@@ -4564,7 +4614,8 @@ def api_newsletter_feedback(token):
             <div style="display:inline-block;background:#dcefe6;color:#0b6b45;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;">Feedback saved</div>
             <h1 style="margin:16px 0 8px;font-size:32px;line-height:1.05;">{action_label}</h1>
             <p style="margin:0;color:#5d6b62;font-size:18px;line-height:1.6;">{product.get('name') or 'This deal'} will influence future shelf ranking and your next digest.</p>
-            <p style="margin:18px 0 0;"><a href="{api_url('/')}" style="color:#0b6b45;font-weight:800;text-decoration:none;">Back to the deals page</a></p>
+            <button type="button" onclick="window.close(); setTimeout(function(){{ document.getElementById('close-help').style.display='block'; }}, 250);" style="margin:18px 0 0;background:#0b6b45;color:#fff;border:0;border-radius:999px;padding:12px 18px;font-weight:900;font-size:15px;cursor:pointer;">Close this page</button>
+            <p id="close-help" style="display:none;margin:14px 0 0;color:#5d6b62;font-size:14px;line-height:1.5;">If your browser keeps this tab open, it is safe to close it now.</p>
           </div>
         </div>
       </body>

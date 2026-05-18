@@ -323,6 +323,9 @@ def save_newsletter_preferences_to_supabase(*, device_id, preferences):
     subscriber = load_newsletter_subscriber_from_supabase(device_id)
     if not subscriber:
         return False
+    cadence_settings = dict(preferences.get("cadenceSettings") or {})
+    cadence_settings["digestLength"] = preferences.get("digestLength", 12)
+    cadence_settings["discoveryMix"] = preferences.get("discoveryMix", 25)
     try:
         client.table("newsletter_preferences").upsert(
             {
@@ -331,7 +334,7 @@ def save_newsletter_preferences_to_supabase(*, device_id, preferences):
                 "disliked_categories": preferences.get("dislikedCategories") or [],
                 "favorite_brands": preferences.get("favoriteBrands") or [],
                 "hidden_brands": preferences.get("hiddenBrands") or [],
-                "cadence_settings": preferences.get("cadenceSettings") or {},
+                "cadence_settings": cadence_settings,
                 "onboarding_answers": preferences.get("onboardingAnswers") or {},
                 "sampled_product_feedback": preferences.get("sampledProductFeedback") or {},
             },

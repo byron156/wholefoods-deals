@@ -812,6 +812,33 @@ p {
   line-height: 1.5;
 }
 
+.range-field {
+  gap: 10px;
+}
+
+.range-label-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.range-label-row strong {
+  color: var(--forest);
+  white-space: nowrap;
+}
+
+.range-field p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.sheet-range {
+  width: 100%;
+  accent-color: var(--green);
+}
+
 .newsletter-sample-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
