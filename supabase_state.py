@@ -292,6 +292,30 @@ def load_newsletter_subscriber_from_supabase(device_id):
         return None
 
 
+def load_newsletter_subscriber_by_id_from_supabase(subscriber_id):
+    client = get_supabase_client()
+    if client is None or not subscriber_id:
+        return None
+    try:
+        rows = (
+            client.table("newsletter_subscribers")
+            .select("*")
+            .eq("id", subscriber_id)
+            .limit(1)
+            .execute()
+            .data
+            or []
+        )
+        if not rows:
+            return None
+        row = rows[0]
+        row["device_id"] = _device_id_for_profile_id(row.get("device_profile_id"))
+        return row
+    except Exception as error:
+        print(f"Supabase load_newsletter_subscriber_by_id_from_supabase failed: {error}")
+        return None
+
+
 def save_newsletter_preferences_to_supabase(*, device_id, preferences):
     client = get_supabase_client()
     if client is None:

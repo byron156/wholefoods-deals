@@ -41,6 +41,7 @@ from supabase_state import (
     load_latest_newsletter_delivery_from_supabase,
     load_newsletter_feedback_token_from_supabase,
     load_newsletter_preferences_from_supabase,
+    load_newsletter_subscriber_by_id_from_supabase,
     load_newsletter_subscriber_from_supabase,
     load_device_profile_from_supabase,
     load_fixes_from_supabase,
@@ -2888,6 +2889,17 @@ def load_newsletter_subscriber(device_id):
     return load_local_newsletter_subscriber(device_id)
 
 
+def load_newsletter_subscriber_by_id(subscriber_id):
+    remote = load_newsletter_subscriber_by_id_from_supabase(subscriber_id)
+    if remote:
+        return remote
+    state = load_newsletter_state_local()
+    for subscriber in state.get("subscribers") or []:
+        if subscriber.get("id") == subscriber_id:
+            return subscriber
+    return None
+
+
 def save_newsletter_preferences(device_id, preferences):
     normalized = normalize_newsletter_preferences(preferences)
     if save_newsletter_preferences_to_supabase(device_id=device_id, preferences=normalized):
@@ -4015,7 +4027,7 @@ def create_feedback_token(subscriber, product_key, action):
         product_key,
         action,
         expires_at,
-        metadata={"issued_at": payload["issued_at"]},
+        metadata={"issued_at": payload["issued_at"], "device_id": subscriber.get("device_id")},
     )
     return token
 
@@ -4500,15 +4512,21 @@ def api_newsletter_feedback(token):
     if not token:
         return ("Missing token", 400, {"Content-Type": "text/plain; charset=utf-8"})
 
+    record = load_newsletter_feedback_token_record(token)
+    payload = None
+    signature_error = None
     try:
         payload = newsletter_serializer().loads(token, max_age=7 * 24 * 60 * 60)
-    except SignatureExpired:
-        return ("This feedback link expired. Open the latest digest for a fresh link.", 410, {"Content-Type": "text/plain; charset=utf-8"})
-    except BadSignature:
-        return ("This feedback link is invalid.", 400, {"Content-Type": "text/plain; charset=utf-8"})
+    except SignatureExpired as error:
+        signature_error = error
+    except BadSignature as error:
+        signature_error = error
 
-    record = load_newsletter_feedback_token_record(token)
     if not record:
+        if isinstance(signature_error, SignatureExpired):
+            return ("This feedback link expired. Open the latest digest for a fresh link.", 410, {"Content-Type": "text/plain; charset=utf-8"})
+        if signature_error:
+            return ("This feedback link is invalid.", 400, {"Content-Type": "text/plain; charset=utf-8"})
         return ("This feedback link is no longer available.", 404, {"Content-Type": "text/plain; charset=utf-8"})
     if record.get("used_at"):
         return ("This feedback was already recorded. Thanks.", 200, {"Content-Type": "text/plain; charset=utf-8"})
@@ -4517,14 +4535,19 @@ def api_newsletter_feedback(token):
     if expires_at and expires_at < iso_utc(utcnow()):
         return ("This feedback link expired. Open the latest digest for a fresh link.", 410, {"Content-Type": "text/plain; charset=utf-8"})
 
-    action = payload.get("action")
-    product_key = payload.get("product_key")
-    device_id = payload.get("device_id") or record.get("device_id")
+    metadata = record.get("metadata") or {}
+    subscriber = None
+    action = (payload or {}).get("action") or record.get("action")
+    product_key = (payload or {}).get("product_key") or record.get("product_key")
+    device_id = (payload or {}).get("device_id") or record.get("device_id") or metadata.get("device_id")
+    if not device_id and record.get("subscriber_id"):
+        subscriber = load_newsletter_subscriber_by_id(record.get("subscriber_id"))
+        device_id = (subscriber or {}).get("device_id")
     if not device_id or not product_key or action not in {"thumbs_up", "thumbs_down", "save"}:
         return ("This feedback link is missing required data.", 400, {"Content-Type": "text/plain; charset=utf-8"})
 
     apply_newsletter_feedback(device_id, product_key, action)
-    subscriber = load_newsletter_subscriber(device_id)
+    subscriber = subscriber or load_newsletter_subscriber(device_id)
     save_newsletter_event(subscriber, action, product_key=product_key)
     mark_newsletter_feedback_token_used(token)
     product = product_map_by_key().get(product_key) or {}
