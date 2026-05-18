@@ -119,6 +119,16 @@ def main():
         action="store_true",
         help="Do not refresh missing CLIP audit rows before taxonomy classification.",
     )
+    parser.add_argument(
+        "--force-newsletter",
+        action="store_true",
+        help="Send newsletter digests even if cadence would normally skip this run.",
+    )
+    parser.add_argument(
+        "--newsletter-email",
+        default="",
+        help="Limit newsletter dispatch to one subscriber email address.",
+    )
     args = parser.parse_args()
 
     if args.skip_refresh:
@@ -338,8 +348,14 @@ def main():
         print(f"Sample size used for taxonomy/classification: {args.sample_size}")
 
     try:
-        newsletter_results = send_newsletter_digests(products=combined_products)
+        newsletter_results = send_newsletter_digests(
+            products=combined_products,
+            force=args.force_newsletter,
+            target_email=args.newsletter_email,
+        )
         print(f"Newsletter dispatch attempted for {len(newsletter_results)} subscriber(s).")
+        for result in newsletter_results:
+            print(f"  {result}")
     except Exception as exc:
         print(f"Newsletter dispatch failed, but refresh completed successfully: {exc}")
         traceback.print_exc()

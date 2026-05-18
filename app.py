@@ -4175,7 +4175,8 @@ def cadence_allows_delivery(subscriber, latest_delivery, today_date):
     if not latest_delivery:
         return True
     latest_date = str(latest_delivery.get("digest_date") or "")
-    if latest_date == today_date:
+    latest_status = str(latest_delivery.get("status") or "").strip().lower()
+    if latest_date == today_date and latest_status in {"sent", "skipped"}:
         return False
     if cadence == "daily":
         return True
@@ -4245,14 +4246,20 @@ def send_newsletter_email(*, to_email, subject, html):
     return send_smtp_email(to_email=to_email, subject=subject, html=html)
 
 
-def send_newsletter_digests(products=None):
+def send_newsletter_digests(products=None, *, force=False, target_email=None):
     products = products or combined_products_with_keys()
     subscribers = list_active_newsletter_subscribers()
+    if target_email:
+        normalized_target_email = str(target_email or "").strip().lower()
+        subscribers = [
+            subscriber for subscriber in subscribers
+            if str(subscriber.get("email") or "").strip().lower() == normalized_target_email
+        ]
     today_date = utcnow().date().isoformat()
     results = []
     for subscriber in subscribers:
         latest_delivery = latest_newsletter_delivery(subscriber)
-        if not cadence_allows_delivery(subscriber, latest_delivery, today_date):
+        if not force and not cadence_allows_delivery(subscriber, latest_delivery, today_date):
             save_newsletter_delivery(subscriber, today_date, "skipped", {"reason": "cadence"})
             results.append({"email": subscriber.get("email"), "status": "skipped"})
             continue
