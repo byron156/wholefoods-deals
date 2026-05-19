@@ -1,8 +1,8 @@
 {
   "source_url": "https://www.target.com/c/grocery-deals/-/N-k4uyq",
-  "result_count_text": "137 results",
-  "product_count": 116,
-  "load_more_clicks": 6,
-  "reused_previous": true,
-  "error": "Page.goto: Timeout 120000ms exceeded.\nCall log:\n  - navigating to \"https://www.target.com/c/grocery-deals/-/N-k4uyq\", waiting until \"domcontentloaded\"\n"
+  "result_count_text": "404 results",
+  "product_count": 187,
+  "load_more_clicks": 18,
+  "reused_previous": false,
+  "error": null
 }

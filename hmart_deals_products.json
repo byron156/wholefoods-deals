@@ -240,6 +240,26 @@
     "available_quantity": 10000
   },
   {
+    "asin": "hmart:10103",
+    "name": "Baby Radish Sprout Kimchi 4lbs (1.8kg)",
+    "brand": "Tobagi",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/176543/84080901234.png?v=639008877550400000",
+    "url": "https://www.hmart.com/baby-radish-sprout-kimchi-4lbs--1-8kg--1/p",
+    "current_price": "$9.25",
+    "basis_price": "$18.49",
+    "prime_price": null,
+    "discount": "50% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000
+  },
+  {
     "asin": "hmart:1104",
     "name": "Bai Top Shell 14.1oz(400g)",
     "brand": "Haioreum",
@@ -1666,8 +1686,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/176535/67001001004.png?v=639008876475230000",
     "url": "https://www.hmart.com/green-onion-kimchi-12-oz--340g--1/p",
-    "current_price": "$4.49",
-    "basis_price": "$8.99",
+    "current_price": "$3.75",
+    "basis_price": "$7.49",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -1866,8 +1886,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160993/18010031.png?v=638448906858000000",
     "url": "https://www.hmart.com/harvest-whole-cabbage-kimchi-7lb-3-18kg--1/p",
-    "current_price": "$19.99",
-    "basis_price": "$39.99",
+    "current_price": "$16.99",
+    "basis_price": "$33.99",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -2196,26 +2216,6 @@
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:10448",
-    "name": "Jamdown Low Calories Blueberry Jam 3.53 Oz (100g)",
-    "brand": "Bokumjari",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/177652/880599960913.png?v=639063371318970000",
-    "url": "https://www.hmart.com/jamdown-low-calories-blueberry-jam-3-53-oz--100g--1/p",
-    "current_price": "$1.49",
-    "basis_price": "$2.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
-    "categories": [
-      "/Snacks & Candy & Nuts/Bread & Dessert/",
-      "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000
   },
@@ -5466,8 +5466,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/176545/84080901279.png?v=639008877855500000",
     "url": "https://www.hmart.com/stuffed-cucumber-kimchi-24-oz--680g--1/p",
-    "current_price": "$5.49",
-    "basis_price": "$10.99",
+    "current_price": "$5.25",
+    "basis_price": "$10.49",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
@@ -6226,8 +6226,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161834/840809010943_1_1.jpg?v=638448910093370000",
     "url": "https://www.hmart.com/white-cabbage-kimchi-3lb-1-36kg--1/p",
-    "current_price": "$9.49",
-    "basis_price": "$18.99",
+    "current_price": "$8.49",
+    "basis_price": "$16.99",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
