@@ -27,6 +27,15 @@ fi
 
 cd "$PROJECT_DIR"
 
+if [[ -f "$PROJECT_DIR/.env" ]]; then
+  set -a
+  source "$PROJECT_DIR/.env"
+  set +a
+  echo "[$(timestamp)] Loaded environment from $PROJECT_DIR/.env"
+else
+  echo "[$(timestamp)] No .env file found; continuing with launchd environment only"
+fi
+
 if ! mkdir "$LOCK_DIR" 2>/dev/null; then
   echo "[$(timestamp)] Another refresh appears to be running; exiting without starting a second one."
   exit 0
