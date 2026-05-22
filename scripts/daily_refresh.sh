@@ -40,11 +40,40 @@ else
   echo "[$(timestamp)] No .env file found; continuing with launchd environment only"
 fi
 
-if ! mkdir "$LOCK_DIR" 2>/dev/null; then
-  echo "[$(timestamp)] Another refresh appears to be running; exiting without starting a second one."
+acquire_lock() {
+  if mkdir "$LOCK_DIR" 2>/dev/null; then
+    echo "$$" > "$LOCK_DIR/pid"
+    return 0
+  fi
+
+  local lock_pid
+  lock_pid="$(cat "$LOCK_DIR/pid" 2>/dev/null || true)"
+  if [[ -n "$lock_pid" ]] && kill -0 "$lock_pid" 2>/dev/null; then
+    echo "[$(timestamp)] Another refresh appears to be running under pid $lock_pid; exiting without starting a second one."
+    return 1
+  fi
+
+  echo "[$(timestamp)] Removing stale refresh lock at $LOCK_DIR"
+  rm -f "$LOCK_DIR/pid" 2>/dev/null || true
+  if ! rmdir "$LOCK_DIR" 2>/dev/null; then
+    echo "[$(timestamp)] Could not remove stale refresh lock; exiting without starting a second one." >&2
+    return 1
+  fi
+
+  mkdir "$LOCK_DIR"
+  echo "$$" > "$LOCK_DIR/pid"
+  return 0
+}
+
+cleanup_lock() {
+  rm -f "$LOCK_DIR/pid" 2>/dev/null || true
+  rmdir "$LOCK_DIR" 2>/dev/null || true
+}
+
+if ! acquire_lock; then
   exit 0
 fi
-trap 'rmdir "$LOCK_DIR" 2>/dev/null || true' EXIT
+trap cleanup_lock EXIT
 
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "[$(timestamp)] $PROJECT_DIR is not a git repository. Initialize or clone the repo before enabling the launchd job." >&2
