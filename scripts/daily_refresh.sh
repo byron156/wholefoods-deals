@@ -14,6 +14,10 @@ timestamp() {
 }
 
 echo "[$(timestamp)] Starting daily Whole Foods refresh"
+refresh_args=("$@")
+if [[ "${#refresh_args[@]}" -gt 0 ]]; then
+  echo "[$(timestamp)] Refresh args: ${refresh_args[*]}"
+fi
 
 if [[ ! -x "$PYTHON_BIN" ]]; then
   echo "[$(timestamp)] Missing Python interpreter at $PYTHON_BIN" >&2
@@ -69,7 +73,7 @@ fi
 
 for attempt in $(seq 1 "$refresh_attempts"); do
   echo "[$(timestamp)] Full refresh attempt $attempt of $refresh_attempts"
-  if "$PYTHON_BIN" -u refresh_and_post_results.py; then
+  if "$PYTHON_BIN" -u refresh_and_post_results.py "${refresh_args[@]}"; then
     refresh_succeeded=1
     break
   fi
@@ -83,7 +87,13 @@ done
 
 if [[ "$refresh_succeeded" -ne 1 ]]; then
   echo "[$(timestamp)] Full refresh failed after $refresh_attempts attempts; rebuilding from last successful scrape so launchd does not publish a broken site." >&2
-  "$PYTHON_BIN" -u refresh_and_post_results.py --skip-refresh
+  fallback_args=("--skip-refresh")
+  for arg in "${refresh_args[@]}"; do
+    if [[ "$arg" != "--skip-refresh" ]]; then
+      fallback_args+=("$arg")
+    fi
+  done
+  "$PYTHON_BIN" -u refresh_and_post_results.py "${fallback_args[@]}"
 fi
 
 "$PYTHON_BIN" -u scripts/catalog_quality_audit.py
