@@ -10,6 +10,7 @@ from datetime import datetime, timedelta, timezone
 from functools import lru_cache
 from email.message import EmailMessage
 from urllib.parse import urljoin
+from zoneinfo import ZoneInfo
 from flask import Flask, jsonify, render_template, request, send_from_directory
 from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
 from brand_ai import build_brand_family_map
@@ -91,6 +92,7 @@ SMTP_PORT = int(os.getenv("SMTP_PORT", "587").strip() or "587")
 SMTP_USERNAME = os.getenv("SMTP_USERNAME", "").strip()
 SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "").strip()
 SMTP_USE_TLS = os.getenv("SMTP_USE_TLS", "1").strip().lower() not in {"0", "false", "no"}
+DISPLAY_TIMEZONE = ZoneInfo(os.getenv("DISPLAY_TIMEZONE", "America/New_York"))
 
 
 @app.after_request
@@ -2724,6 +2726,29 @@ def iso_utc(value):
     return value.astimezone(timezone.utc).isoformat()
 
 
+def latest_feed_updated_at():
+    candidates = [
+        path
+        for path in [
+            COMBINED_PRODUCTS_FILE,
+            SEARCH_DEALS_FILE,
+            DISCOVERED_DEALS_FILE,
+            FLYER_PRODUCTS_FILE,
+            TARGET_DEALS_FILE,
+            HMART_DEALS_FILE,
+        ]
+        if os.path.exists(path)
+    ]
+    if not candidates:
+        return None
+    newest_mtime = max(os.path.getmtime(path) for path in candidates)
+    updated = datetime.fromtimestamp(newest_mtime, timezone.utc).astimezone(DISPLAY_TIMEZONE)
+    return {
+        "iso": updated.isoformat(),
+        "display": updated.strftime("%b %-d, %-I:%M %p %Z"),
+    }
+
+
 def newsletter_serializer():
     return URLSafeTimedSerializer(app.config["SECRET_KEY"], salt="newsletter-feedback")
 
@@ -4836,6 +4861,7 @@ def combined_products_home():
         feed_endpoint=api_url("/api/feed"),
         newsletter_signup_endpoint=api_url("/api/newsletter/signup"),
         newsletter_onboarding_endpoint=api_url("/api/newsletter/onboarding"),
+        last_updated=latest_feed_updated_at(),
         page_subtitle="Browse Whole Foods, Target, and H Mart deals in one place.",
     )
 

@@ -392,6 +392,21 @@ p {
   margin: 0 auto;
   display: grid;
   gap: 14px;
+  position: relative;
+}
+
+.last-updated-pill {
+  justify-self: end;
+  width: fit-content;
+  padding: 7px 11px;
+  border: 1px solid rgba(17, 61, 41, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
+  box-shadow: 0 10px 22px rgba(17, 61, 41, 0.08);
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1;
 }
 
 .search-panel,
@@ -1107,6 +1122,12 @@ p {
 
   .app-shell {
     gap: 12px;
+  }
+
+  .last-updated-pill {
+    justify-self: center;
+    font-size: 11px;
+    padding: 6px 10px;
   }
 
   .search-panel,

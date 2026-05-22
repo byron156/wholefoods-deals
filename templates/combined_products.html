@@ -14,6 +14,9 @@
 
 <body class="app-body">
 <div class="app-shell">
+    {% if last_updated %}
+    <div class="last-updated-pill" title="{{ last_updated.iso }}">Last updated: {{ last_updated.display }}</div>
+    {% endif %}
     <section class="search-panel">
         <label class="sr-only" for="global-search">Search deals</label>
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search grocery deals">
