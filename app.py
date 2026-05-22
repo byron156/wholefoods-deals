@@ -2749,6 +2749,18 @@ def latest_feed_updated_at():
     }
 
 
+def subscriber_timezone(subscriber):
+    timezone_name = str((subscriber or {}).get("timezone") or "").strip() or "America/New_York"
+    try:
+        return ZoneInfo(timezone_name)
+    except Exception:
+        return DISPLAY_TIMEZONE
+
+
+def subscriber_digest_date(subscriber):
+    return utcnow().astimezone(subscriber_timezone(subscriber)).date().isoformat()
+
+
 def newsletter_serializer():
     return URLSafeTimedSerializer(app.config["SECRET_KEY"], salt="newsletter-feedback")
 
@@ -4259,6 +4271,9 @@ def cadence_allows_delivery(subscriber, latest_delivery, today_date):
     cadence = str((subscriber or {}).get("cadence") or "daily").strip().lower()
     if not latest_delivery:
         return True
+    latest_metadata = latest_delivery.get("payload_metadata") or {}
+    if latest_metadata.get("force"):
+        return True
     latest_date = str(latest_delivery.get("digest_date") or "")
     latest_status = str(latest_delivery.get("status") or "").strip().lower()
     if latest_date == today_date and latest_status in {"sent", "skipped"}:
@@ -4334,19 +4349,28 @@ def send_newsletter_email(*, to_email, subject, html):
 def send_newsletter_digests(products=None, *, force=False, target_email=None):
     products = products or combined_products_with_keys()
     subscribers = list_active_newsletter_subscribers()
+    print(f"[newsletter] active subscribers loaded: {len(subscribers)}")
     if target_email:
         normalized_target_email = str(target_email or "").strip().lower()
         subscribers = [
             subscriber for subscriber in subscribers
             if str(subscriber.get("email") or "").strip().lower() == normalized_target_email
         ]
-    today_date = utcnow().date().isoformat()
+        print(f"[newsletter] subscribers after target filter {normalized_target_email}: {len(subscribers)}")
     results = []
     for subscriber in subscribers:
+        today_date = subscriber_digest_date(subscriber)
         latest_delivery = latest_newsletter_delivery(subscriber)
         if not force and not cadence_allows_delivery(subscriber, latest_delivery, today_date):
-            save_newsletter_delivery(subscriber, today_date, "skipped", {"reason": "cadence"})
-            results.append({"email": subscriber.get("email"), "status": "skipped"})
+            latest_metadata = latest_delivery.get("payload_metadata") or {}
+            skip_metadata = {
+                "reason": "cadence",
+                "latest_digest_date": latest_delivery.get("digest_date"),
+                "latest_status": latest_delivery.get("status"),
+                "latest_transport": latest_metadata.get("transport"),
+            }
+            save_newsletter_delivery(subscriber, today_date, "skipped", skip_metadata)
+            results.append({"email": subscriber.get("email"), "status": "skipped", **skip_metadata})
             continue
         digest = generate_newsletter_digest_for_subscriber(subscriber, products=products)
         html = render_digest_html(digest)
@@ -4359,6 +4383,8 @@ def send_newsletter_digests(products=None, *, force=False, target_email=None):
             "section_count": len(digest.get("sections") or []),
             "snapshot_count": len(digest.get("snapshot") or []),
             "transport": EMAIL_TRANSPORT,
+            "force": bool(force),
+            "digest_date_timezone": str(subscriber_timezone(subscriber)),
         }
         if send_result.get("ok"):
             save_newsletter_delivery(subscriber, today_date, "sent", metadata)
