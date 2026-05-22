@@ -1,13 +1,28 @@
 import json
+import os
 import shutil
 from pathlib import Path
-
-from app import app
 
 
 BASE_DIR = Path(__file__).resolve().parent
 DIST_DIR = BASE_DIR / "dist"
 STATIC_DIR = BASE_DIR / "static"
+
+
+def load_dotenv_file() -> None:
+    env_path = BASE_DIR / ".env"
+    if not env_path.exists():
+        return
+    for line in env_path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in stripped:
+            continue
+        key, value = stripped.split("=", 1)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
+load_dotenv_file()
+from app import app
 ROOT_STATIC_FILES = [
     "manifest.webmanifest",
     "service-worker.js",
