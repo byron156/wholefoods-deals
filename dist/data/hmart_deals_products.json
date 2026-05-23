@@ -79,26 +79,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:597",
-    "name": "100% Soybean Oil 60.86FL OZ (1800ML)",
-    "brand": "Beksul",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/162122/8801007402345_1.png?v=638448911243200000",
-    "url": "https://www.hmart.com/100--soybean-oil-60-86fl-oz--1800ml--1/p",
-    "current_price": "$5.49",
-    "basis_price": "$10.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
-      "/Oil & Seasoning & Canned Food/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:9899",
     "name": "17 Mimi Fashion Model In The Clothin",
     "brand": "Mimiworld",
@@ -411,7 +391,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
       "/Oil & Seasoning & Canned Food/"
@@ -815,26 +795,6 @@
     "categories": [
       "/Health/Ginseng & Extract/",
       "/Health/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:8953",
-    "name": "Asian Style Chips Yellow Curry 6 Oz (170g)",
-    "brand": "Calbee",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/176178/7114600954.png?v=638995650791500000",
-    "url": "https://www.hmart.com/asian-style-chips-yellow-curry-6-oz--170g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$5.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Snacks & Candy & Nuts/Snacks/",
-      "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000
   },
@@ -1895,26 +1855,6 @@
     "categories": [
       "/Book & Stationery & Hobby/Stationery/",
       "/Book & Stationery & Hobby/"
-    ],
-    "available_quantity": 10000
-  },
-  {
-    "asin": "hmart:3704",
-    "name": "Chanko Miso Hot Pot Soup Base 26oz(750g)",
-    "brand": "Daisho",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/165885/49046210422022.png?v=638455483271930000",
-    "url": "https://www.hmart.com/chanko-miso-hot-pot-soup-base-26oz-750g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$5.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Seaweed & Dried Produce/Seaweed & Kelp & Soup Base/",
-      "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000
   },
@@ -2997,26 +2937,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:8849",
-    "name": "Damage Care Red Protein Conditioner 23 Oz (680ml)",
-    "brand": "Amore",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/174741/880992513007.png?v=638938171770100000",
-    "url": "https://www.hmart.com/damage-care-red-protein-conditioner-23-oz--680ml--1/p",
-    "current_price": "$6.49",
-    "basis_price": "$12.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Beauty/Haircare & Bodycare/",
-      "/Beauty/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:8848",
     "name": "Damage Care Red Protein Shampoo 23 Oz (680ml)",
     "brand": "Amore",
@@ -3169,7 +3089,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Instant & Quick Food/Cooked Rice/",
       "/Instant & Quick Food/"
@@ -5969,7 +5889,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Snacks & Candy & Nuts/Snacks/",
       "/Snacks & Candy & Nuts/"
@@ -8868,7 +8788,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Paste & Marinade & Sauce/Soy Sauce/",
       "/Paste & Marinade & Sauce/"
@@ -9612,26 +9532,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:8900",
-    "name": "Pink Peeler",
-    "brand": "BUKCAL",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/175850/880904212204.png?v=638984871772530000",
-    "url": "https://www.hmart.com/pink-peeler-1/p",
-    "current_price": "$1.99",
-    "basis_price": "$3.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Household & Home/Kitchenware/",
-      "/Household & Home/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:10579",
     "name": "Pirikara Ramen 5pcs 15.87oz (450g)",
     "brand": "Yamamoto Tanukioyaji",
@@ -9704,7 +9604,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Household & Home/Kitchenware/",
       "/Household & Home/"
@@ -11070,26 +10970,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:453",
-    "name": "Rice Powder 5lb(2.27kg)",
-    "brand": "Nature's",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/167543/1305402042.png?v=638481869641600000",
-    "url": "https://www.hmart.com/sweet-rice-5lb-2-27kg--1/p",
-    "current_price": "$5.99",
-    "basis_price": "$11.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Rice & Grain/Mixed Grain & Powder/",
-      "/Rice & Grain/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:4473",
     "name": "Rice Rose 15lb (6800g)",
     "brand": "Kokuho",
@@ -11382,7 +11262,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Snacks & Candy & Nuts/Nuts & Cereal & Jerky/",
       "/Snacks & Candy & Nuts/"
@@ -13188,26 +13068,6 @@
     "available_quantity": 10000
   },
   {
-    "asin": "hmart:1650",
-    "name": "Spicy Sriracha Peas 9.9oz(280g)",
-    "brand": "Hapi",
-    "variation": null,
-    "image": "https://hmartus.vtexassets.com/arquivos/ids/163467/copy-of-0011152145952__.png?v=638448916772030000",
-    "url": "https://www.hmart.com/spicy-sriracha-peas-9-9oz-280g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$5.99",
-    "prime_price": null,
-    "discount": "50% off",
-    "unit_price": null,
-    "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
-    "categories": [
-      "/Snacks & Candy & Nuts/Nuts & Cereal & Jerky/",
-      "/Snacks & Candy & Nuts/"
-    ],
-    "available_quantity": 10000
-  },
-  {
     "asin": "hmart:10265",
     "name": "Square Egg Fry Pan With Induction Base 5x7 In (13x18 Cm)",
     "brand": "Hello",
@@ -13340,7 +13200,7 @@
     "discount": "50% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=10",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=9",
     "categories": [
       "/Household & Home/Home Appliances/",
       "/Household & Home/"
@@ -14674,8 +14534,8 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/164542/vto15001.png?v=638448921175100000",
     "url": "https://www.hmart.com/watermelon-sparkling-soda-10-58oz-300ml--1/p",
-    "current_price": "$1.49",
-    "basis_price": "$2.99",
+    "current_price": "$0.99",
+    "basis_price": "$1.99",
     "prime_price": null,
     "discount": "50% off",
     "unit_price": null,
