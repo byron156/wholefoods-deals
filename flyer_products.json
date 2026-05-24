@@ -1,8 +1,8 @@
 [
   {
     "asin": "B002B8Z98W",
-    "name": "Organic Strawberries, 1 Lb",
-    "raw_name": "Organic Strawberries, 1 Lb",
+    "name": "Strawberries, 16 Oz",
+    "raw_name": "Strawberries, 16 oz",
     "brand": null,
     "source_brand": null,
     "brand_source": null,
@@ -11,11 +11,10 @@
     "subcategory": "Fruit",
     "category_confidence": 0.99,
     "category_signals": [
-      "strawberries",
-      "produce"
+      "strawberries"
     ],
-    "image": "https://m.media-amazon.com/images/I/81knc9-4RHL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B002B8Z98W",
+    "image": "https://m.media-amazon.com/images/I/91q0thONENL.jpg",
+    "url": null,
     "unit_price": null,
     "current_price": "$5.32 ea",
     "basis_price": "$6.99 ea",
@@ -31,23 +30,16 @@
       "B002B8Z98W"
     ],
     "tags": [
-      "organic",
       "prime deal"
     ],
-    "rank": 1.001,
-    "flyer_rank": 1,
+    "rank": 1,
     "sale_price": "$5.32 ea",
     "flyer_promotion_id": "fdcb3a22-9398-467e-b4e8-e1f0448b79d4",
     "flyer_promotion_grouping": "SINGLE",
-    "flyer_promotion_name": "Strawberries, 16 oz",
-    "flyer_detail_count": 1,
-    "flyer_source": "promotion-detail",
+    "flyer_source": "display-promotion",
     "source_store_id": "10160",
     "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods",
-    "source_categories": [
-      "Fresh Produce"
-    ]
+    "retailer": "Whole Foods"
   },
   {
     "asin": "B09V3F71WW",
@@ -237,301 +229,47 @@
   },
   {
     "asin": "B09K6VX62C",
-    "name": "Carne Asada Chicken Fajita",
-    "raw_name": "Carne Asada Chicken Fajita",
-    "brand": "Carne Asada",
-    "source_brand": null,
-    "brand_source": "derived",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Chicken & Turkey",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "chicken"
-    ],
-    "image": "https://m.media-amazon.com/images/I/51UV8MG6fTL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B09K6VX62C",
-    "unit_price": null,
-    "current_price": "11% off",
-    "basis_price": "$8.99 to $18.99/lb",
-    "prime_price": null,
-    "discount": "20% off",
-    "discount_percent": 20,
-    "emoji": "🍗",
-    "available_store_ids": [
-      "10160"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B09K6VX62C"
-    ],
-    "tags": [],
-    "rank": 3.001,
-    "flyer_rank": 3,
-    "sale_price": "11% off",
-    "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10160",
-    "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B07HG7RH1P",
-    "name": "Carne Asada Chicken Breast Kabob",
-    "raw_name": "Carne Asada Chicken Breast Kabob",
-    "brand": "Carne Asada",
-    "source_brand": null,
-    "brand_source": "derived",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Chicken & Turkey",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "chicken"
-    ],
-    "image": "https://m.media-amazon.com/images/I/51Bq1nBkDLL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07HG7RH1P",
-    "unit_price": null,
-    "current_price": "11% off",
-    "basis_price": "$8.99 to $18.99/lb",
-    "prime_price": null,
-    "discount": "20% off",
-    "discount_percent": 20,
-    "emoji": "🍗",
-    "available_store_ids": [
-      "10160"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B07HG7RH1P"
-    ],
-    "tags": [],
-    "rank": 3.002,
-    "flyer_rank": 3,
-    "sale_price": "11% off",
-    "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10160",
-    "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B0CHB5GS5S",
-    "name": "Chicken Kabob Garlic and Herb",
-    "raw_name": "Chicken Kabob Garlic And Herb",
-    "brand": null,
-    "source_brand": null,
-    "brand_source": null,
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Chicken & Turkey",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "chicken"
-    ],
-    "image": "https://m.media-amazon.com/images/I/51H-6SGae3L._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0CHB5GS5S",
-    "unit_price": null,
-    "current_price": "11% off",
-    "basis_price": "$8.99 to $18.99/lb",
-    "prime_price": null,
-    "discount": "20% off",
-    "discount_percent": 20,
-    "emoji": "🍗",
-    "available_store_ids": [
-      "10160"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B0CHB5GS5S"
-    ],
-    "tags": [],
-    "rank": 3.003,
-    "flyer_rank": 3,
-    "sale_price": "11% off",
-    "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10160",
-    "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B07FZ96L6P",
-    "name": "Chicken Kabobs with Vegetables",
-    "raw_name": "Chicken Kabobs with Vegetables",
-    "brand": null,
-    "source_brand": null,
-    "brand_source": null,
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Chicken & Turkey",
-    "category_confidence": 0.85,
-    "category_signals": [
-      "chicken"
-    ],
-    "image": "https://m.media-amazon.com/images/I/51YI83FRkkL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FZ96L6P",
-    "unit_price": null,
-    "current_price": "11% off",
-    "basis_price": "$8.99 to $18.99/lb",
-    "prime_price": null,
-    "discount": "20% off",
-    "discount_percent": 20,
-    "emoji": "🍗",
-    "available_store_ids": [
-      "10160"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B07FZ96L6P"
-    ],
-    "tags": [],
-    "rank": 3.004,
-    "flyer_rank": 3,
-    "sale_price": "11% off",
-    "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10160",
-    "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B07FZJD18C",
-    "name": "Steakhouse Marinated Chicken Kabobs",
-    "raw_name": "Steakhouse Marinated Chicken Kabobs",
-    "brand": "Steakhouse Marinated",
-    "source_brand": null,
-    "brand_source": "derived",
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Chicken & Turkey",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "chicken"
-    ],
-    "image": "https://m.media-amazon.com/images/I/515HoS6xoaL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FZJD18C",
-    "unit_price": null,
-    "current_price": "11% off",
-    "basis_price": "$8.99 to $18.99/lb",
-    "prime_price": null,
-    "discount": "20% off",
-    "discount_percent": 20,
-    "emoji": "🍗",
-    "available_store_ids": [
-      "10160"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B07FZJD18C"
-    ],
-    "tags": [],
-    "rank": 3.005,
-    "flyer_rank": 3,
-    "sale_price": "11% off",
-    "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10160",
-    "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B07C3VBG5D",
-    "name": "Beef Kabob Steakhouse",
-    "raw_name": "Beef Kabob Steakhouse",
-    "brand": null,
-    "source_brand": null,
-    "brand_source": null,
+    "name": "Ready-To-Cook Beef or Chicken Kabobs",
+    "raw_name": "Ready-to-Cook Beef or Chicken Kabobs",
+    "brand": "No-Antibiotics-Ever",
+    "source_brand": "No-Antibiotics-Ever",
+    "brand_source": "source",
     "variation": null,
     "category": "Meat & Seafood",
     "subcategory": "Beef, Pork & Lamb",
     "category_confidence": 0.99,
     "category_signals": [
+      "chicken",
       "beef"
     ],
-    "image": "https://m.media-amazon.com/images/I/51611jrrWJL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07C3VBG5D",
+    "image": "https://m.media-amazon.com/images/I/712QBPqzHbL.jpg",
+    "url": null,
     "unit_price": null,
     "current_price": "11% off",
     "basis_price": "$8.99 to $18.99/lb",
     "prime_price": null,
     "discount": "20% off",
     "discount_percent": 20,
-    "emoji": "🥩",
+    "emoji": "🍗",
     "available_store_ids": [
       "10160"
     ],
     "store_offers": [],
     "asins": [
-      "B07C3VBG5D"
-    ],
-    "tags": [],
-    "rank": 3.006,
-    "flyer_rank": 3,
-    "sale_price": "11% off",
-    "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10160",
-    "source_store_name": "Columbus Circle",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B0CHB6ZCJ5",
-    "name": "Beef Garlic Herb Kabob",
-    "raw_name": "Beef Garlic Herb Kabob",
-    "brand": null,
-    "source_brand": null,
-    "brand_source": null,
-    "variation": null,
-    "category": "Meat & Seafood",
-    "subcategory": "Beef, Pork & Lamb",
-    "category_confidence": 0.99,
-    "category_signals": [
-      "beef"
-    ],
-    "image": "https://m.media-amazon.com/images/I/51O3LtLVMdL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0CHB6ZCJ5",
-    "unit_price": null,
-    "current_price": "11% off",
-    "basis_price": "$8.99 to $18.99/lb",
-    "prime_price": null,
-    "discount": "20% off",
-    "discount_percent": 20,
-    "emoji": "🥩",
-    "available_store_ids": [
-      "10160"
-    ],
-    "store_offers": [],
-    "asins": [
+      "B09K6VX62C",
+      "B07HG7RH1P",
+      "B0CHB5GS5S",
+      "B07FZ96L6P",
+      "B07FZJD18C",
+      "B07C3VBG5D",
       "B0CHB6ZCJ5"
     ],
     "tags": [],
-    "rank": 3.007,
-    "flyer_rank": 3,
+    "rank": 3,
     "sale_price": "11% off",
     "flyer_promotion_id": "fe4f4cb6-7d9d-4be2-96a4-6030bde278b4",
     "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Ready-to-Cook Beef or Chicken Kabobs",
-    "flyer_detail_count": 7,
-    "flyer_source": "promotion-detail",
+    "flyer_source": "display-promotion",
     "source_store_id": "10160",
     "source_store_name": "Columbus Circle",
     "retailer": "Whole Foods"
@@ -13236,7 +12974,7 @@
     "category_signals": [
       "direct match: multivitamin"
     ],
-    "image": "https://m.media-amazon.com/images/I/71-0RyFqOzL._FMwebp__SR500,500_.jpg",
+    "image": "https://m.media-amazon.com/images/I/715Phj33elL._FMwebp__SR500,500_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07D9WSWFR",
     "unit_price": null,
     "current_price": "15% off",
@@ -29443,156 +29181,20 @@
   },
   {
     "asin": "B08YKJX832",
-    "name": "Vital Proteins Collagen Gummies",
-    "raw_name": "Vital Proteins Collagen Gummies, 2.5g of Clinically-Tested Collagen for Hair, Skin, Nails & Wrinkles, 120 ct, 30-Day Supply, Grape Flavor",
-    "brand": "Vital Proteins",
-    "source_brand": "Vital Proteins",
-    "brand_source": "source",
-    "variation": null,
-    "category": "Supplements & Wellness",
-    "subcategory": "Protein & Collagen",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: multivitamin"
-    ],
-    "image": "https://m.media-amazon.com/images/I/51B2RWxgEML._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08YKJX832",
-    "unit_price": null,
-    "current_price": "15% off",
-    "basis_price": "$19.99 to $46.49 ea",
-    "prime_price": null,
-    "discount": "23% off",
-    "discount_percent": 23,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10328"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B08YKJX832"
-    ],
-    "tags": [
-      "high-protein"
-    ],
-    "rank": 53.001,
-    "flyer_rank": 53,
-    "sale_price": "15% off",
-    "flyer_promotion_id": "8bc943d3-f55f-4365-ac38-a6a12e7c19b5",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Beauty Supplements",
-    "flyer_detail_count": 5,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B0D19FGYZG",
-    "name": "Vital Proteins Collagen Peptides + Biotin 10000MCG Hair Complex",
-    "raw_name": "Vital Proteins Collagen Peptides + Biotin 10000mcg Hair Complex, Hair Growth Supplement - Clinically Studied Lustriva to Promote Thicker Fuller Hair, 20g Unflavored Collagen for Women 11.4oz Powder",
-    "brand": "Vital Proteins",
-    "source_brand": "Vital Proteins",
-    "brand_source": "source",
-    "variation": null,
-    "category": "Supplements & Wellness",
-    "subcategory": "Beauty From Within",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: multivitamin"
-    ],
-    "image": "https://m.media-amazon.com/images/I/61Ty-xtt7pL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0D19FGYZG",
-    "unit_price": null,
-    "current_price": "15% off",
-    "basis_price": "$19.99 to $46.49 ea",
-    "prime_price": null,
-    "discount": "23% off",
-    "discount_percent": 23,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10328"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B0D19FGYZG"
-    ],
-    "tags": [
-      "high-protein"
-    ],
-    "rank": 53.002,
-    "flyer_rank": 53,
-    "sale_price": "15% off",
-    "flyer_promotion_id": "8bc943d3-f55f-4365-ac38-a6a12e7c19b5",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Beauty Supplements",
-    "flyer_detail_count": 5,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B00NLQXXDQ",
-    "name": "Vital Proteins Beef Gelatin Powder - Grass-Fed 16.4 Oz",
-    "raw_name": "Vital Proteins Beef Gelatin Powder - Grass-Fed 16.4 oz",
+    "name": "Beauty Supplements",
+    "raw_name": "Beauty Supplements",
     "brand": "Vital Proteins",
     "source_brand": "Vital Proteins",
     "brand_source": "source",
     "variation": null,
     "category": "Supplements & Wellness",
     "subcategory": null,
-    "category_confidence": 0.99,
-    "category_signals": [
-      "powder",
-      "protein"
-    ],
-    "image": "https://m.media-amazon.com/images/I/71sF9s3JacL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00NLQXXDQ",
-    "unit_price": null,
-    "current_price": "15% off",
-    "basis_price": "$19.99 to $46.49 ea",
-    "prime_price": null,
-    "discount": "23% off",
-    "discount_percent": 23,
-    "emoji": "🥩",
-    "available_store_ids": [
-      "10328"
-    ],
-    "store_offers": [],
-    "asins": [
-      "B00NLQXXDQ"
-    ],
-    "tags": [
-      "high-protein"
-    ],
-    "rank": 53.003,
-    "flyer_rank": 53,
-    "sale_price": "15% off",
-    "flyer_promotion_id": "8bc943d3-f55f-4365-ac38-a6a12e7c19b5",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Beauty Supplements",
-    "flyer_detail_count": 5,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B0D19MF171",
-    "name": "Vital Proteins Collagen Peptides for Women",
-    "raw_name": "Vital Proteins Collagen Peptides for Women - 20g Hydrolyzed Collagen, Vitamin C, Hyaluronic Acid, Reduce Fine Lines & Wrinkles, Verisol & Holimel - Skin Complex Supplement, Unflavored 11.9oz Powder",
-    "brand": "Vital Proteins",
-    "source_brand": "Vital Proteins",
-    "brand_source": "source",
-    "variation": null,
-    "category": "Supplements & Wellness",
-    "subcategory": "Protein & Collagen",
     "category_confidence": 0.93,
     "category_signals": [
       "direct match: multivitamin"
     ],
-    "image": "https://m.media-amazon.com/images/I/61bzQRq7UYL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0D19MF171",
+    "image": "https://m.media-amazon.com/images/I/91aiuY5gZcL.jpg",
+    "url": null,
     "unit_price": null,
     "current_price": "15% off",
     "basis_price": "$19.99 to $46.49 ea",
@@ -29605,64 +29207,20 @@
     ],
     "store_offers": [],
     "asins": [
-      "B0D19MF171"
-    ],
-    "tags": [
-      "high-protein"
-    ],
-    "rank": 53.004,
-    "flyer_rank": 53,
-    "sale_price": "15% off",
-    "flyer_promotion_id": "8bc943d3-f55f-4365-ac38-a6a12e7c19b5",
-    "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Beauty Supplements",
-    "flyer_detail_count": 5,
-    "flyer_source": "promotion-detail",
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side",
-    "retailer": "Whole Foods"
-  },
-  {
-    "asin": "B07D9WSWFR",
-    "name": "Vital Proteins Marine Collagen Peptides Powder Supplement for Skin Hair Nail Joint",
-    "raw_name": "Vital Proteins Marine Collagen Peptides Powder Supplement for Skin Hair Nail Joint - Hydrolyzed Collagen - 12g per Serving - 7.8 oz Canister",
-    "brand": "Vital Proteins",
-    "source_brand": "Vital Proteins",
-    "brand_source": "source",
-    "variation": null,
-    "category": "Supplements & Wellness",
-    "subcategory": "Protein & Collagen",
-    "category_confidence": 0.93,
-    "category_signals": [
-      "direct match: multivitamin"
-    ],
-    "image": "https://m.media-amazon.com/images/I/71-0RyFqOzL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07D9WSWFR",
-    "unit_price": null,
-    "current_price": "15% off",
-    "basis_price": "$19.99 to $46.49 ea",
-    "prime_price": null,
-    "discount": "23% off",
-    "discount_percent": 23,
-    "emoji": "🛒",
-    "available_store_ids": [
-      "10328"
-    ],
-    "store_offers": [],
-    "asins": [
+      "B08YKJX832",
+      "B0D19FGYZG",
+      "B00NLQXXDQ",
+      "B0D19MF171",
       "B07D9WSWFR"
     ],
     "tags": [
       "high-protein"
     ],
-    "rank": 53.005,
-    "flyer_rank": 53,
+    "rank": 53,
     "sale_price": "15% off",
     "flyer_promotion_id": "8bc943d3-f55f-4365-ac38-a6a12e7c19b5",
     "flyer_promotion_grouping": "GROUPED",
-    "flyer_promotion_name": "Beauty Supplements",
-    "flyer_detail_count": 5,
-    "flyer_source": "promotion-detail",
+    "flyer_source": "display-promotion",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
     "retailer": "Whole Foods"
@@ -33714,10 +33272,10 @@
   },
   {
     "asin": "B07G4GK9P1",
-    "name": "Rose All Day Rose, 750 ML",
-    "raw_name": "Rose All Day Rose, 750 ML",
-    "brand": "Rose All Day",
-    "source_brand": "Rose All Day",
+    "name": "Rosé, 750 Ml",
+    "raw_name": "Rosé, 750 ml",
+    "brand": "Rosé All Day",
+    "source_brand": "Rosé All Day",
     "brand_source": "source",
     "variation": null,
     "category": "Alcohol",
@@ -33726,8 +33284,8 @@
     "category_signals": [
       "direct match: hard seltzer"
     ],
-    "image": "https://m.media-amazon.com/images/I/61of9saPaBL._FMwebp__SR500,500_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07G4GK9P1",
+    "image": "https://m.media-amazon.com/images/I/91JXGck+NHL.jpg",
+    "url": null,
     "unit_price": null,
     "current_price": "10% off",
     "basis_price": "$13.99 ea",
@@ -33743,14 +33301,11 @@
       "B07G4GK9P1"
     ],
     "tags": [],
-    "rank": 57.001,
-    "flyer_rank": 57,
+    "rank": 57,
     "sale_price": "10% off",
     "flyer_promotion_id": "efe4bece-5fd3-41cf-bb0a-1e7250dac77a",
     "flyer_promotion_grouping": "SINGLE",
-    "flyer_promotion_name": "Rosé, 750 ml",
-    "flyer_detail_count": 1,
-    "flyer_source": "promotion-detail",
+    "flyer_source": "display-promotion",
     "source_store_id": "10328",
     "source_store_name": "Upper West Side",
     "retailer": "Whole Foods"
