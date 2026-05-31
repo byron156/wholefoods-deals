@@ -17,5 +17,13 @@ services:
         sync: false
       - key: CORS_ALLOW_ORIGIN
         sync: false
+      - key: EMAIL_TRANSPORT
+        value: resend
+      - key: RESEND_API_KEY
+        sync: false
+      - key: NEWSLETTER_FROM_EMAIL
+        sync: false
+      - key: NEWSLETTER_REPLY_TO
+        sync: false
       - key: API_ONLY_MODE
         value: "true"

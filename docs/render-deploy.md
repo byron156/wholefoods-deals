@@ -29,6 +29,9 @@ In the web service settings, set:
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `PUBLIC_API_BASE_URL`
 - `CORS_ALLOW_ORIGIN`
+- `RESEND_API_KEY`
+- `NEWSLETTER_FROM_EMAIL`
+- `NEWSLETTER_REPLY_TO`
 
 Recommended values:
 
@@ -36,6 +39,13 @@ Recommended values:
 - `SUPABASE_SERVICE_ROLE_KEY=<your service role key>`
 - `PUBLIC_API_BASE_URL=https://YOUR-RENDER-SERVICE.onrender.com`
 - `CORS_ALLOW_ORIGIN=https://YOUR-CLOUDFLARE-SITE`
+- `RESEND_API_KEY=<your Resend API key>`
+- `NEWSLETTER_FROM_EMAIL=Grocery Deals <newsletter@grocerydeals.donaldduckwebsite.com>`
+- `NEWSLETTER_REPLY_TO=<your reply-to email>`
+
+The blueprint sets `EMAIL_TRANSPORT=resend`. Use an address at a verified Resend
+domain for `NEWSLETTER_FROM_EMAIL`; otherwise Resend limits delivery to the
+account owner's test address.
 
 ## 4. Verify the API
 
