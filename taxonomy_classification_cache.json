@@ -5,7 +5,7 @@
   "model_version": "taxonomy-local-ml-v17",
   "gold_labels_digest": "336cd82bd9869c62",
   "silver_labels_digest": "670a54b02fa26423",
-  "clip_audit_digest": "7f9c225e240a171a",
+  "clip_audit_digest": "7bf2ee9e045000b6",
   "clip_primary_min_score": 0.55,
   "clip_rescue_min_score": 0.4,
   "items": {
@@ -45,7 +45,7 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "37c9e4103220b70086e0663be817ffbb5b42c234389869e87f23a85ccc783cbe": {
+    "2acc2c183a8720e9508e6af6cadf372ab4ba24883b1de763c9581d2e60460b08": {
       "category": "Produce",
       "subcategory": "Cut Fruit & Veg",
       "confidence": 0.99,
@@ -285,7 +285,7 @@
     "c5a3a6c67bd09630cc953cb19e53c35061f0e2559a2802f3f46e81f211f63651": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0748,
+      "confidence": 0.0747,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -345,7 +345,7 @@
     "963a7f1b166a0d4075c5d27c2e6ef1d653cc64350c969da283132ab56cc63bc8": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.3212,
+      "confidence": 0.3198,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -441,7 +441,7 @@
       "label_source": "silver",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "172c8addec65f75be5086518f036356fee870842b1c0c5d497b0f0fc0fa1e2b2": {
+    "20cb408513921344fa655da644820e8afe7212f3eb6ca93f5cc08b70fba739b4": {
       "category": "Supplements & Wellness",
       "subcategory": "Digestive Support",
       "confidence": 0.99,
@@ -822,7 +822,7 @@
     "452d540ae6375b82c6261abaa6eb49baf269c7e148b983c36154cfe5a103b120": {
       "category": "Frozen",
       "subcategory": "Frozen Meat & Seafood",
-      "confidence": 0.4769,
+      "confidence": 0.4763,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -1099,7 +1099,7 @@
     "f6ea10248776f1f09c832e0b8ee0d8587a418bdf1a90095d9e970ddd6febaaa4": {
       "category": "Pantry",
       "subcategory": "Spices & Seasonings",
-      "confidence": 0.0695,
+      "confidence": 0.0691,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -1240,7 +1240,7 @@
     "5aa452ff19d95c07ade7ec4e57b058af7be0484f56732e4616665fc2fd49ae5f": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1447,
+      "confidence": 0.1446,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -1756,7 +1756,7 @@
     "ccf117c0ddc88785da925ba7d770c3de23372ac023a473a621f444b09397aa7d": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.1,
+      "confidence": 0.0981,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -2338,7 +2338,7 @@
     "c716654596aa52a5a7e90dc1d7c4aa509503ad7e662b5a1756679aa7e4ca4fa1": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0765,
+      "confidence": 0.0763,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -2524,7 +2524,7 @@
     "0749d0cf20374f00ed1e1b442e3d772f4b3f360239184e190bc26dbd3fa6fe05": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0535,
+      "confidence": 0.0531,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3175,7 +3175,7 @@
     "5b137f744a2b424e0c868016ce1b01262ddddb4001be2039fad7444aeaa66787": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1547,
+      "confidence": 0.1544,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3184,7 +3184,7 @@
     "92c2e302e6d1642533fd0b0fedfc236ce06ce3047bf554ad13ca4d424ebbb4fc": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1628,
+      "confidence": 0.1619,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3253,7 +3253,7 @@
     "f55310b71ea23a9aebecdf7df4625c8bf4cb6f71c8c97ea6f3f38e90914a5a6e": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0568,
+      "confidence": 0.0566,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3280,7 +3280,7 @@
     "a0dd29f4f8ce46091c0faeb3d66489cdbe0694f518fd558f1a28218582b21dd4": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0611,
+      "confidence": 0.0609,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3373,7 +3373,7 @@
     "2e966c6984ac0ef50a308c3e5248a53987e052f8862d164cf079868c8c39b18d": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0613,
+      "confidence": 0.0612,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3382,7 +3382,7 @@
     "647b9273dfb9ae4fabd18cd0642766d25ca21414ed9a6f2ba88ef34c0280a90b": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0659,
+      "confidence": 0.0657,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3409,7 +3409,7 @@
     "017ec6cdd279e587ee20dbb0f242e20e1c38f482f614bb1510472ccc6c29a586": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0564,
+      "confidence": 0.0562,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3476,11 +3476,11 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "ee9de5ad5ff2de7ffe37e2a2ec55862283d4a4a879001bcd187403fe51fb45de": {
-      "category": "Beverages",
-      "subcategory": "Soda",
-      "confidence": 0.0586,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.35,
+      "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
+      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
@@ -3523,7 +3523,7 @@
     "06d486f73554774196606217b0bd8ab18b30ee025301dc7c666e059e7aa2d1f2": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0472,
+      "confidence": 0.0468,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3859,7 +3859,7 @@
     "49740cabef4278c6b36ce2f8195276fe63f0307e94b93ad4c5360db6e22e91c9": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0832,
+      "confidence": 0.0829,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3877,7 +3877,7 @@
     "73cad67e78212457242bdfec19609484e7e4074d697fe4b912d2496a2fc5c036": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0935,
+      "confidence": 0.0933,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3895,7 +3895,7 @@
     "236e7fc5e9c9f67f503b4d142140550c6a31150722ba3b460602e62a934b0cd6": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0744,
+      "confidence": 0.0743,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3913,7 +3913,7 @@
     "d26c76b875420f2be284f1d079c4114abca4958ee2529039ef2ebee4a9a413a5": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.078,
+      "confidence": 0.0777,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3943,7 +3943,7 @@
     "89ba145950acea7b9a755dda8ad2eac39dfaaaca18fa29a58964d45128bda092": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0942,
+      "confidence": 0.0939,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3952,7 +3952,7 @@
     "2210be7e6478bb797bb0800b06755a5057ffad0a7b263603f15a598f00db9b9c": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.1037,
+      "confidence": 0.1035,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -3961,7 +3961,7 @@
     "817cf0eb333834dc6e68844431ff1303b45a6453f81bd53c785da936d25f263f": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0897,
+      "confidence": 0.0895,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4039,7 +4039,7 @@
     "79b6ae234349598fccb2d1bf4c7edb52720756f28bd0c637b5ad2f7a87a97081": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0651,
+      "confidence": 0.0649,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4066,7 +4066,7 @@
     "e2f1358b4d0a89cdab7115d1102598f2ab6c61d2718b3b823d3333b275014836": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0603,
+      "confidence": 0.0596,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4132,7 +4132,7 @@
     "31224abc5ea6f7434b2e20409c888a86ea4ce7d296e0d8cba294066ddd9f6196": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0837,
+      "confidence": 0.0835,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4262,7 +4262,7 @@
     "a0934322ed3f4c27f5a803a1424d06cb3275fb51d24bae958141d0386f6d94e5": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1287,
+      "confidence": 0.1286,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4361,7 +4361,7 @@
     "e77904c53c9dd63b13bdba54ff15e76153e6972bbd94eb6908dbf40ba88d8ee7": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1346,
+      "confidence": 0.1341,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4424,7 +4424,7 @@
     "50aecffd1526fd23fa73796e333f974ac6ad7bc221aa035361bb210d0480f4a6": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1187,
+      "confidence": 0.1183,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4454,7 +4454,7 @@
     "e5a900ac9f57b4c48f4af32a999c6e3294e5a935a3695cca032626a92c70d87f": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1281,
+      "confidence": 0.1279,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4592,7 +4592,7 @@
     "6b25447c23b930c99f5cd914318690a46272066ab12954a90f3d80b2920b04b2": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1557,
+      "confidence": 0.1555,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4695,7 +4695,7 @@
       "clip_score": 0.8368,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "2e6dd9e43f075966f73e388930bcca3b43f2dbab5b8fe9254588c04ad19a4880": {
+    "e774c2aab8b62312422b21e26017abe38e89e41630a501737cf0dfed5156bf2c": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
@@ -4776,7 +4776,7 @@
     "5d5afd4855540af4d44797144d244e9a5ef91e862c9381065f329f05a538a013": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1313,
+      "confidence": 0.131,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -4983,7 +4983,7 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "d17d980c2a1562d5a5ef1b8672f0f623a4164e3a790fd1145626ed9aff70694e": {
+    "41672c2f6a4678f0ccdbc467180793ad5c56eeac7a0763d372e2d40be81dbd9b": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
@@ -5028,7 +5028,7 @@
     "d2ae5a275e0679cc665c1e765fb032477e53c37e6bbb625d0505dad3accf5073": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1151,
+      "confidence": 0.1149,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5118,7 +5118,7 @@
     "9165f0a43106dfe00a6f9ad3105a9427a10794b5ac4be8d3428d2bc920369fc3": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1376,
+      "confidence": 0.1374,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5280,7 +5280,7 @@
     "09c67ce9b8c69a4cea7bb09ce874ea523267b85133d85666ea7007fd21ab9489": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1642,
+      "confidence": 0.1638,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5430,7 +5430,7 @@
     "8d75af82d09194a61c3e2ce495daf36a178b4aadfa2c03e689518a99b2a266c9": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1475,
+      "confidence": 0.1472,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5457,7 +5457,7 @@
     "f039d1b606c161ecde53d12794ad59e9b8f1d26d552d22d1d00331650e5d8df4": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1863,
+      "confidence": 0.186,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5559,7 +5559,7 @@
     "517fd7c28ef0f5bb776858f3bf2b795f015360253fb29772d8de1f483f8a07af": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1111,
+      "confidence": 0.111,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5601,7 +5601,7 @@
     "c1bbee06da022f03499627fc4764b875e54f52bfaed81829299994699bd61c24": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.0968,
+      "confidence": 0.0966,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5832,7 +5832,7 @@
     "03ea932a65d364ebab8a6d9a2b100556e397892e5db59147cd4a093a32b77500": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1202,
+      "confidence": 0.1199,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -5853,7 +5853,7 @@
     "078a96b67535ca354dc401e7b3dde3dd53483dedc473c086067d9362e63a1c56": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1349,
+      "confidence": 0.1347,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6003,7 +6003,7 @@
     "92be56a9d46bdae8f459d1aaefd4ac1f4b6f79aa70f9ad7d7fff3ee62ad321f9": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1184,
+      "confidence": 0.1171,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6147,7 +6147,7 @@
     "57375f3dfbc62fbfd2255274488a3a15989626b365fc8df8da6065392d64541d": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1293,
+      "confidence": 0.126,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6156,7 +6156,7 @@
     "cf9c618efbd5abb4c8994aa7a1f55be4f9a509302f23a9e777976c7d31195d86": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1193,
+      "confidence": 0.119,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6225,7 +6225,7 @@
     "a7c0b7278d51fbcb4062345bd08810064b1986cc18e5075d564d5c64866d363a": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1562,
+      "confidence": 0.1559,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6364,7 +6364,7 @@
     "3564b9658f49280f19b58c27dc3ba8ccac8ee5b30f9c082ebcfd1f8881bee697": {
       "category": "Beverages",
       "subcategory": "Sparkling Water",
-      "confidence": 0.1121,
+      "confidence": 0.1122,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6539,7 +6539,7 @@
     "7a9096daa64c06623955f459fef7b77b817f07f3b1745c489a8775cda613b12b": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1275,
+      "confidence": 0.1273,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6548,7 +6548,7 @@
     "e9618b44d62d9126a55ab94e7bb5d294b0bc500cdd21c363b3298255daa7dcdd": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1216,
+      "confidence": 0.1214,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6719,7 +6719,7 @@
     "042a979ffba288783c37007436f8e77aacfa713bdd8c11d77a91ab8b1679e4e1": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1254,
+      "confidence": 0.1252,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -6834,7 +6834,7 @@
     "bb67f5f4f9dbcbf64cca6acdb6e81f01c6cfe18fca81b34c753a523f67012a7b": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1312,
+      "confidence": 0.1311,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7093,7 +7093,7 @@
     "5e31ec0d6b9347e4a51a276d1d3fc1506f5c0d54a97fdc9d916caf24609605f6": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.0747,
+      "confidence": 0.0746,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7171,7 +7171,7 @@
     "47812ad51b9fdcc10400c1917b133a88270ace6b85417b36b3558a023d26fd22": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.153,
+      "confidence": 0.1528,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7210,7 +7210,7 @@
     "55913d304ad7867e42784ceefb692e0afda56a5118aba24750c40435978010d3": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0616,
+      "confidence": 0.062,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7375,7 +7375,7 @@
     "b1c86515ed963dc8fac5a1dedea90463352f37a607c4e2910a4b15bc083efd3d": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1535,
+      "confidence": 0.1532,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7475,7 +7475,7 @@
     "3d9a7d6291aa01d6b4a6bd1abb65c321d1e82ad30415fedf4a4d02be7da20d80": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1252,
+      "confidence": 0.125,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7595,10 +7595,10 @@
       "clip_score": 0.6784,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "39222f4f52ae2110aa069ce63c379c6f3c151ea7738cdcea69f7f991b4bef580": {
+    "201cf1003b24481704375ee92515b0bdb1e1c0820528d6b06304f0fa4827eefd": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1395,
+      "confidence": 0.1703,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7607,7 +7607,7 @@
     "9552ec275ffbadf3892ed996f0fd0e311099eb9d502c29968d63378479bb031b": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1148,
+      "confidence": 0.115,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7769,7 +7769,7 @@
     "f58ad1494483bd38d5eec072ac00b6eec7c6088836c5df206588d0507982e70d": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1427,
+      "confidence": 0.1425,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7901,7 +7901,7 @@
     "d367bad3690a1c938f3b29cda255d7cf1ea3fb310cc1aa2bc30a091fd0a247e1": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1318,
+      "confidence": 0.1315,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -7985,7 +7985,7 @@
     "1829086580fd826e112137c742f558d6716dfd4db74136ad2ac41368cc4957f4": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.13,
+      "confidence": 0.1298,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8180,7 +8180,7 @@
     "5829883492d774e83fcb7f47e62f0aa4f9d0e2553788ade4f69be5468829cc60": {
       "category": "Beverages",
       "subcategory": "Sparkling Water",
-      "confidence": 0.1196,
+      "confidence": 0.1199,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8289,7 +8289,7 @@
     "2b195bcd7abbc35ec6c0968e46f2aef32c4fd4cb3b27f891c55a4061f233f21c": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1491,
+      "confidence": 0.1488,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8318,7 +8318,7 @@
     "8045186de1916a22dd6d61fe50b4b8302832dc142a26fc4ce2735fd2c1aeeb1e": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1097,
+      "confidence": 0.1096,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8351,7 +8351,7 @@
     "bcc4541a67d0a9c939243d762a18ac3b635d3815198e4c114df9c47b207c0e36": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1271,
+      "confidence": 0.1268,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8450,7 +8450,7 @@
     "12c309ec3c8946e531620b3dcee2658b4688b1fe425b23375174b618ca142d2b": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1235,
+      "confidence": 0.1234,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8546,7 +8546,7 @@
     "194e86094cd88b5b3dd30cc60521b27ac9ce35730b7bda8dab96e8313faa09c2": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1371,
+      "confidence": 0.1367,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8585,7 +8585,7 @@
     "aac5c6e4e0b97f2af804783a89d5ef123836ab35de5c59792e753b0dc8c8a1bf": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1247,
+      "confidence": 0.1245,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8594,7 +8594,7 @@
     "0418873805ff4e02a5e3f2091b2969843a4b612c45f15a7fc4a10ca569763bbc": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1242,
+      "confidence": 0.1178,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8672,7 +8672,7 @@
     "f686fa338f3536bbc0a31ffef6d975ebf7c40588e15a40bf000ece5dcbefbab9": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.1441,
+      "confidence": 0.1436,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8738,7 +8738,7 @@
     "7e921e84d69e8fa86231f37bba0ce473b5e6fdfe7fd0c5d27aa1063fec87b580": {
       "category": "Household",
       "subcategory": "Home Essentials",
-      "confidence": 0.0982,
+      "confidence": 0.098,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8822,7 +8822,7 @@
     "1d34176a9654f13bce8a341078efebf88e09552daf80fbab1b94465ecc0dbace": {
       "category": "Beverages",
       "subcategory": "Sparkling Water",
-      "confidence": 0.1599,
+      "confidence": 0.1591,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -8831,7 +8831,7 @@
     "95275de6fe175d64b99d9c4e6d3240d72602b39f409a8b1a718fb25b8fa18a26": {
       "category": "Beauty & Personal Care",
       "subcategory": "Sun Care",
-      "confidence": 0.0287,
+      "confidence": 0.0285,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -9005,7 +9005,7 @@
     "047a92edc123442f73296eb55899aa6fd4eeb4217f21518e5c86fe7dfe02e911": {
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
-      "confidence": 0.0457,
+      "confidence": 0.0456,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -9272,7 +9272,7 @@
     "4442537f2397ddc550545dc7be56ccee937b02f858cf6f2ec3a26a5d5c7ea5aa": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0289,
+      "confidence": 0.029,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -9367,7 +9367,7 @@
     "82954bcf37c80e5a6511d0b2029cc2acab8d71045a91359e7a35fd8ce330d090": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.0346,
+      "confidence": 0.0344,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -9737,7 +9737,7 @@
     "9560d92a2330a81b9dd01808e495ef3bf10e82b0c722f686370537b72e5c3984": {
       "category": "Frozen",
       "subcategory": "Frozen Meat & Seafood",
-      "confidence": 0.0301,
+      "confidence": 0.03,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -9875,7 +9875,7 @@
     "8b9bd46fa43170c03091983a55b7cc8d18e53d158cdb0f034c63369413d58eec": {
       "category": "Frozen",
       "subcategory": "Frozen Meat & Seafood",
-      "confidence": 0.0255,
+      "confidence": 0.0254,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -9884,7 +9884,7 @@
     "247cdc61015b37a2b51872f4375a490c18f3480f06ee869311b93e0004459b6d": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.0303,
+      "confidence": 0.0301,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -10570,7 +10570,7 @@
     "38be15d451b88ffbbcb23454a18285ba618a23a007547a7f76bbdb532d4b0351": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.049,
+      "confidence": 0.0487,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -11123,7 +11123,7 @@
     "8afd22aaf780cd544dc993d19fd0ba239e9f9fe0fd8e65d80ce0f45f20401d60": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0613,
+      "confidence": 0.0608,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -11354,7 +11354,7 @@
     "7d2de24ca236bb1fc09ab1b4020950857ea791e86ae5441e7a9caf6d4fc0aede": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
-      "confidence": 0.0351,
+      "confidence": 0.035,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -11429,7 +11429,7 @@
     "24e3fb2f58e894598e0b9a5cfb888dd70bede12482a078778d64847bc5a78c54": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
-      "confidence": 0.0336,
+      "confidence": 0.0335,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -11585,7 +11585,7 @@
     "efce78aff2221d4e0e3a4f6baf4a18dec7e4c63a2718b6204c8688cbe46b5749": {
       "category": "Dairy & Eggs",
       "subcategory": "Cream & Creamers",
-      "confidence": 0.0312,
+      "confidence": 0.0311,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -11847,7 +11847,7 @@
     "e4ee434cb97e90212d6df83ca27bdb20dd419a589dcd42524f453ca63aef91bc": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
-      "confidence": 0.0373,
+      "confidence": 0.0371,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -11941,7 +11941,7 @@
     "c0d95efb17556193f26854324f92ae8ff2489f020dfd52e77c09d78b0c0a4e01": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.1715,
+      "confidence": 0.1689,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -12350,7 +12350,7 @@
     "299ea8d0961ddbf825261af271db33dbdf2b17949de71a6571a98594a54dd300": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0366,
+      "confidence": 0.0363,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -12843,7 +12843,7 @@
     "6ccf4765922fc8b647e8b02003759696bd2923aa4b08bc8b8d986e4db2cc54b7": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
-      "confidence": 0.029,
+      "confidence": 0.0289,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -12952,7 +12952,7 @@
     "462f7cdd617d469bb23ab5f091dd460a47d9b8e604ad04a66735a39ade47ec14": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0308,
+      "confidence": 0.037,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -13194,7 +13194,7 @@
     "c3f7927f336b77f68714f2bccae96a620ab9adf97738bc1676f35947130a0861": {
       "category": "Prepared Foods",
       "subcategory": "Ready-to-Eat Protein",
-      "confidence": 0.0401,
+      "confidence": 0.0399,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -13335,7 +13335,7 @@
     "5e91fd3782b4af23952b015cfb39dbcc36f8ed772297110e5e4b4a6fc58c110c": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.0391,
+      "confidence": 0.0382,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -13447,7 +13447,7 @@
     "7837608a71bfb01f0c8455fc5299ff85a784c4091fcbe9efc75e12404a619c41": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.2379,
+      "confidence": 0.2366,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -13517,7 +13517,7 @@
     "7b945d3ba828e531d87d632dcd841792ec0f02264420215e15a2e9be2c95e677": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
-      "confidence": 0.0296,
+      "confidence": 0.0293,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -13746,7 +13746,7 @@
     "2d6c2f5bb39264b00c4d57d42e285a10e9ee0f621d3211e425a5fbfe8e0142a3": {
       "category": "Dairy & Eggs",
       "subcategory": "Cream & Creamers",
-      "confidence": 0.0448,
+      "confidence": 0.0446,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -14285,7 +14285,7 @@
     "aefc49017aacff66236b7e171806fc6bf66d8cde3a02d8fd515b93a66e93cfac": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
-      "confidence": 0.0354,
+      "confidence": 0.0352,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -14493,7 +14493,7 @@
     "1688a6bdb6c19d4dcd40b1c18f3f4d53d83b766512e150a19b5b8728030876b8": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.0254,
+      "confidence": 0.0253,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -14592,7 +14592,7 @@
     "69803a18abac22ff0b3a6e9f3b35792da36c05c1ab40f6eb126821e0bcaa2ad1": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0364,
+      "confidence": 0.0387,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -14622,7 +14622,7 @@
     "83ebae7a9f17fa7eaf2c5413130a3abb1f1a70efec3a137400a836b9b9ac2177": {
       "category": "Snacks",
       "subcategory": "Nuts & Trail Mix",
-      "confidence": 0.2194,
+      "confidence": 0.219,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -14843,7 +14843,7 @@
     "ebb03754c743dd508e1396d825ae436ffc2fb1f7a901521044bf6cfe5610256b": {
       "category": "Dairy & Eggs",
       "subcategory": "Plant-Based Milk",
-      "confidence": 0.0348,
+      "confidence": 0.034,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -15653,7 +15653,7 @@
     "c889b23ac294a566a523f45d153a53d51c9dc979087118e789d37ed27d2a7959": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.0362,
+      "confidence": 0.0361,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -15711,9 +15711,9 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "823f777b72863c2ea7b01fce3d693b9649be5951a6ec82c090c27c4298b7c6b9": {
-      "category": "Snacks",
-      "subcategory": "Candy & Chocolate",
-      "confidence": 0.029,
+      "category": "Dairy & Eggs",
+      "subcategory": "Plant-Based Yogurt",
+      "confidence": 0.0295,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -16082,7 +16082,7 @@
     "229ac6dd49da569e76077d97a14e7853df318a729ef106ae5c61fde70cf9930d": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0452,
+      "confidence": 0.0451,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -16091,7 +16091,7 @@
     "91fa90ff1076ac91c3835661650ec9d1f5396d9ab78fde2398516f437c877a5a": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0455,
+      "confidence": 0.0453,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -16562,7 +16562,7 @@
     "9d48a579e3fcfb63708be0cb3bdc9d7fb49bb248ee9c985f68474d9a85888c05": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.057,
+      "confidence": 0.0565,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -17281,7 +17281,7 @@
     "e37a899169aa55167ea65cf9912e50d3c05517dc233d6c30391c993f5a838125": {
       "category": "Dairy & Eggs",
       "subcategory": "Plant-Based Yogurt",
-      "confidence": 0.0318,
+      "confidence": 0.0314,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -17413,7 +17413,7 @@
     "808755d536332e995645e7981cf1fb1470ea60c564af614e0bebf7d1c81e8d7f": {
       "category": "Dairy & Eggs",
       "subcategory": "Cream & Creamers",
-      "confidence": 0.037,
+      "confidence": 0.0369,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -17518,7 +17518,7 @@
     "e5e7e381907e41fe146e42465ebd978636f089bdb2948ce2ba8c07b7b38fc268": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.0383,
+      "confidence": 0.0382,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -17602,7 +17602,7 @@
     "a5018e1cc699d6c3874924aa92afbf1860f37b7f68c09caf0a44ede012c554d7": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.034,
+      "confidence": 0.0337,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -17699,7 +17699,7 @@
     "7383575b17a372f5ff8d08b5b02b1019aee5cec3ab7bdddb2c67d8648dae0e5b": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
-      "confidence": 0.0267,
+      "confidence": 0.0265,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -18063,7 +18063,7 @@
     "6c3d5d6b34821f9a600920fbeb0b578b9664a6c1136d39edec116e140e61d85c": {
       "category": "Pantry",
       "subcategory": "Beans & Legumes",
-      "confidence": 0.0424,
+      "confidence": 0.0391,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -18746,7 +18746,7 @@
     "7f095dda11d94d5f84734a56e8248bc096e1d14e68480f432fd0d8ecfba79f84": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
-      "confidence": 0.0254,
+      "confidence": 0.0262,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -19352,7 +19352,7 @@
     "437a5a58dd3a2aa3d3df5e6e8cfb73124cb24b6c60c963c03debc72e650497e0": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.033,
+      "confidence": 0.0327,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -19446,7 +19446,7 @@
     "7fa5fe6018310fd3e188379179dd722f91ea1fd88ae628cebaffc08c10fb41d4": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.045,
+      "confidence": 0.0449,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -19786,7 +19786,7 @@
     "50b7fbb82ea6c22658d665084762dd179521dbd814ce4641d8aea58e2da9522a": {
       "category": "Alcohol",
       "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.0578,
+      "confidence": 0.0583,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -19879,7 +19879,7 @@
     "5bc3438cc46c7f015af5d973b60bc52b04536e2fca8b51ba7c0558eaac7dd1d5": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.2881,
+      "confidence": 0.2866,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -19966,7 +19966,7 @@
     "19b8d32cd1d476948bedf78cf66f97f0906b2b9614f5357e8a46efc2c2bd5874": {
       "category": "Beverages",
       "subcategory": "Coffee Pods & K-Cups",
-      "confidence": 0.0347,
+      "confidence": 0.0341,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -19975,7 +19975,7 @@
     "124f913d656abf4a2ce2bcf3635383c5b0ac69a83078d6853b327982b47f9e9f": {
       "category": "Beverages",
       "subcategory": "Coffee Pods & K-Cups",
-      "confidence": 0.0333,
+      "confidence": 0.0328,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -20047,7 +20047,7 @@
     "5f0d0d4be23d2009b5973f138c6f050d366e8019746a408ce9f3de95bd482d40": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.025,
+      "confidence": 0.0248,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -20320,7 +20320,7 @@
     "71fa8b4637b3a0e5098b3f3235cf425cea878bb23b01577623a4c4f4ec602819": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
-      "confidence": 0.0268,
+      "confidence": 0.0267,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -20536,7 +20536,7 @@
     "59eaf0c279954ff6e2bdb24b7af94ca33428bdfeaae50c692cda24cf76dba2d8": {
       "category": "Beverages",
       "subcategory": "Coconut Water",
-      "confidence": 0.034,
+      "confidence": 0.0337,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -20930,7 +20930,7 @@
     "bc7268f59301595bbf6fbde1bec610983f333fc142cc6fb73f4ca5a2cdc4f161": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
-      "confidence": 0.0269,
+      "confidence": 0.0266,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -20963,7 +20963,7 @@
     "f567e008bb58f46346cbf678761321d3e14afba03d968c6d0d0faa8467a4f6b8": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0516,
+      "confidence": 0.0474,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -21059,7 +21059,7 @@
     "d1e45a49736c0c6c728985d0c156e10354085bc874c4a9ded8c5b6540b494e68": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
-      "confidence": 0.0413,
+      "confidence": 0.0412,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -21582,7 +21582,7 @@
     "8d6798a7d24301257cf76401168fe5dd3b4141a8e6716a059a571a600624805e": {
       "category": "Pantry",
       "subcategory": "Beans & Legumes",
-      "confidence": 0.361,
+      "confidence": 0.3609,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -21691,7 +21691,7 @@
     "45269a05e6e001eaf585480cea2e0862981fd720b71899a8402642bf2d2e7069": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0464,
+      "confidence": 0.0447,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -21934,7 +21934,7 @@
     "76b73f9eb616b7a74a9b68bae2893b7e17a7af6a12dde7708cf7e7d5bf77b249": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0791,
+      "confidence": 0.0781,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22158,7 +22158,7 @@
     "90e412a30aa3ddb030a93902765df91b6c39dd33252d672de531e7cdbfb91404": {
       "category": "Beverages",
       "subcategory": "Coffee Concentrates",
-      "confidence": 0.0996,
+      "confidence": 0.0994,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22179,7 +22179,7 @@
     "c468bad44dbfa8b940ca0342fd4f9666c3fcc693c94589eddf8886b52a56e4b5": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.0456,
+      "confidence": 0.047,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22258,7 +22258,7 @@
     "5b1b5ca0effcc32546bd40df65d34b7390d8d2a97a78bd82ba1fb9f1a730bdfc": {
       "category": "Beverages",
       "subcategory": "Coffee Concentrates",
-      "confidence": 0.3525,
+      "confidence": 0.3502,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22510,7 +22510,7 @@
     "f794be5d34d95abb493cba7276f0ebbbe13d56ef211afda683a2a9a6d09b29e0": {
       "category": "Pantry",
       "subcategory": "Spices & Seasonings",
-      "confidence": 0.0422,
+      "confidence": 0.0418,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22519,7 +22519,7 @@
     "50e48515fa6dc42ae4fc899c10aec4bff2348984a63b6e7f54478b3166609a52": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0527,
+      "confidence": 0.0522,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22528,7 +22528,7 @@
     "86f5c686c0c400ae02104296854ad3ded057a4d0118b700b858f2c9f732aede2": {
       "category": "Pantry",
       "subcategory": "Spices & Seasonings",
-      "confidence": 0.0788,
+      "confidence": 0.0778,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22537,7 +22537,7 @@
     "d653a1683c3cbb416f3cd5aaf5fa35f0d993eed6a5eb0b8daa7a6a50ce02028e": {
       "category": "Pantry",
       "subcategory": "Spices & Seasonings",
-      "confidence": 0.0467,
+      "confidence": 0.0462,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22585,7 +22585,7 @@
     "cb082f0dad1939af3bf0dd5d8e6d830b09216538aca086fa938940c417daec7e": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
-      "confidence": 0.0393,
+      "confidence": 0.0391,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22837,20 +22837,11 @@
       "clip_score": 0.4634,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "ec40585dc753c565be5279d2e786a5b4426aeeda7d57f1c9cab3e12f6e789a49": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Herbal Supplements",
-      "confidence": 0.95,
-      "reasoning": "Supplement form wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "9a363fbce42476f531c30561f0a3fa2fc4f38e478606b9cd34a6598c08bf6629": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Herbal Supplements",
-      "confidence": 0.95,
-      "reasoning": "Supplement form wording matched.",
+    "0c0afad4b0e5ee515e6d90a3b24cd13be9c86c37e1c6232fea4d784f64ddfd3d": {
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "confidence": 0.99,
+      "reasoning": "Pasta wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -22888,7 +22879,7 @@
       "clip_score": 0.7225,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "1bf0e124b1b24c0a7fe74181cd13dbaebd6747860788101f78d9631ed7768fd8": {
+    "e8e44e3fb7590c05185950869da64b7fd60b9591149917e2c8174ea41a97fabc": {
       "category": "Produce",
       "subcategory": "Fruits",
       "confidence": 0.99,
@@ -22909,7 +22900,7 @@
     "6a62da3645b578473681f5a770d2eff14fc0d745ec5a631ab9dcd8dddfbc448a": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.0464,
+      "confidence": 0.0461,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -22990,15 +22981,6 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "f9d755f4f14fd6bef75f31a594631fa3587247a4c92ce8d7171fd6ac750b6542": {
-      "category": "Pantry",
-      "subcategory": "Pasta",
-      "confidence": 0.99,
-      "reasoning": "Pasta wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "1e7ab5a7542c84d64a7b520cc9616d736e32b886c9cb098be1300d5504e13cff": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
@@ -23026,16 +23008,22 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "b36ba2a06698c62105496840dcd0f4d1765b6b8d2f077af056a77045199233c2": {
-      "category": "Alcohol",
-      "subcategory": "Beer",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.5912. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
+    "241b826c287cbfc597fc5e25fc69e1ae575ab940e9540059b52b670b4e9cabd9": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Candy wording matched.",
+      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "subcategory-first",
-      "clip_score": 0.5912,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "920dc25bcdbee49aefd4f82254f2d5498a28773b8d3afa620b40a4acca7f160c": {
+      "category": "Produce",
+      "subcategory": "Fruits",
+      "confidence": 0.99,
+      "reasoning": "Fresh fruit wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "6fc70b4757a7c58593f0b26a5cbfac14193d2ea5c59411ee350450ee3862dae9": {
@@ -23048,15 +23036,6 @@
       "label_source": "clip-primary",
       "clip_source": "subcategory-first",
       "clip_score": 0.9159,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "7f8adadfa0e6bc918307c157a4d97b018ac6399f2a4b54f4df6525d37a8b0b70": {
-      "category": "Pantry",
-      "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.99,
-      "reasoning": "Cooking-sauce wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "e7b4ce47a0eb30a66fec21754f997f1ef184b1140ca5161aadea75249281721b": {
@@ -23104,10 +23083,22 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "76a906762a2def85be493a8e2fc95539b14fb76c39dd691b716222cb70c81344": {
+      "category": "Pantry",
+      "subcategory": "Jams & Honey",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.6597. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.6597,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "d4c0c7bc8e1c76e79fea3e5906b15650b048ac8d143496b17398a261f5681561": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
-      "confidence": 0.0353,
+      "confidence": 0.0339,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -23131,16 +23122,16 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "a72796cc16243d7f985a2d80bf9a32847a3f294f5a6fc51e4e1481556213b1e5": {
+    "9a45421fb0f5f2846096dca130d4f6232742bd459d93a6ebe4cf08639cd5e5a0": {
       "category": "Supplements & Wellness",
       "subcategory": "Vitamins",
-      "confidence": 0.1013,
+      "confidence": 0.1207,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "6471157a0fad49b64e8124c483abfd77dbbd6c743c72537f46ae31a6443e11e1": {
+    "22e522fc8c870d0e90be0482604c672aa5fccf0fd992ec0b7181805857017217": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
       "confidence": 0.78,
@@ -23198,6 +23189,15 @@
       "clip_score": 0.8728,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "3b5a66ababdf66bf5023a1f69e23590287cb424a153516f33bd4e012d284b8fc": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.35,
+      "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "f2028bfc9a730a2c45570d5d6c8556dd723e8d4556aad57185226496c4eeefc0": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
@@ -23223,6 +23223,18 @@
       "reasoning": "Pasta wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "f5d3808cf5ae72ba9f615abc935b0c953e0cb3dc36511042ff504cf6448cee18": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.9297. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.9297,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "0d72dbb33e7ac0dc9a367bee5d1e0a84e0049bb54122d8054cb2fc5cf68da58f": {
@@ -23273,15 +23285,6 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "1624cf096df54c626955d63879b940a77e2ca0bc04945963c420666c88974ad6": {
-      "category": "Pantry",
-      "subcategory": "Cereal & Breakfast",
-      "confidence": 0.99,
-      "reasoning": "Packaged breakfast cereal wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "b99f2d57e2c2d1335bcdb7cfd3fe84c1f57a8af68589bde3ff4da0c953c73066": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
@@ -23305,6 +23308,15 @@
       "subcategory": "Cereal & Breakfast",
       "confidence": 0.99,
       "reasoning": "Packaged breakfast cereal wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "7bf7ceff1822f28d4577d3fd3e066d8d5b065cd2839c4ca80ab93b7ed3bbc476": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Oral Care",
+      "confidence": 0.99,
+      "reasoning": "Oral-care wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -23349,24 +23361,6 @@
       "label_source": "clip-primary",
       "clip_source": "subcategory-first",
       "clip_score": 0.6947,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "85718fae50ad974f76a8f9aae14c5f9842f598898fef69cf05871e70b71997c8": {
-      "category": "Alcohol",
-      "subcategory": "Beer",
-      "confidence": 0.99,
-      "reasoning": "Beer wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "51d30408517f53228a27ec1ad8418b4e9e9969ee19cfd306022eb6690fce31b7": {
-      "category": "Beverages",
-      "subcategory": "Coffee Beans & Grounds",
-      "confidence": 0.99,
-      "reasoning": "Coffee bean or ground coffee wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "d6095fc55dc332a62d980835e4aa4b359251e9c086ab07af541222839544c011": {
@@ -23433,9 +23427,9 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "0e4f499f114aa8bc571c1cb3291646df004fb2956cffde4b79108a2beb589db1": {
-      "category": "Prepared Foods",
-      "subcategory": "Ready-to-Eat Protein",
-      "confidence": 0.0298,
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "confidence": 0.1027,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -23453,7 +23447,7 @@
       "clip_score": 0.855,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "d0ebc7082ab0b9df9401f8a7c2d521d625edc38a8b3c780dccce22e391500711": {
+    "c17c4c0e8e236cddf067c57a7aedfdb3ac5c327fb5ec548e70a2f5ccef2438cc": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
       "confidence": 0.78,
@@ -23477,6 +23471,36 @@
       "clip_score": 0.8983,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "bec13ce0bd5676ad4ebb0283016792781442cf806e0d4ca34bdf5eeffdbb3ae9": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Vitamins",
+      "confidence": 0.99,
+      "reasoning": "Vitamin D wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "a42bd1b6f0403c5c61eb172fc25f6eaacc82e274667a62a574264724a5711698": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Skin-care wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "fc2159665ab642f42aa7048e5ff739f8afc73601ceb944671f941318c05330ce": {
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.8165. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.8165,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "b467b56a4c824cab74084d00669149a96a986ce5528286a1f1e8bdd39433630c": {
       "category": "Pantry",
       "subcategory": "Cereal & Breakfast",
@@ -23486,25 +23510,25 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "870fab215890ef97c864bbcf7d53c0fec3232ff312fc28482185cff2f869cb56": {
-      "category": "Pantry",
-      "subcategory": "Jams & Honey",
-      "confidence": 0.99,
-      "reasoning": "Honey or jam wording matched.",
-      "model_name": "local-taxonomy-classifier",
+    "f2851d2d7cdc76e3090b3cb20f356652477fe932c5f3e537ebd8e09e80cdc58e": {
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "confidence": 0.0873,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
+      "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "e7f5dbe68bc3906c22c9cd9ec0461640dffb3f1754bbc4225a100c134ab8a103": {
+    "ab97735c0bc4a5e6844ecd693221e26b7301daa295d18f04055f95b0f3350049": {
       "category": "Snacks",
-      "subcategory": "Snack Bars",
+      "subcategory": "Crackers",
       "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7380. Gold/manual labels still override this.",
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9181. Gold/manual labels still override this.",
       "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
       "label_source": "clip-primary",
-      "clip_source": "category-first",
-      "clip_score": 0.738,
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9181,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "3596adffaf11c43b9dedf48f9d962d76efddf66d42b795ebd19f35e6ebb4f9c9": {
@@ -23549,18 +23573,6 @@
       "clip_score": 0.8346,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "4915fea38edf550ea61f4e31f5f3463c73d266869219fe1ba2d5b099fb6aeeb8": {
-      "category": "Pantry",
-      "subcategory": "Pasta Sauces",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.8001. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
-      "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "subcategory-first",
-      "clip_score": 0.8001,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "debba4c72aea4c446007f0eb84ad2b89f51760ff7f50480ee926f25ead13e694": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
@@ -23579,11 +23591,11 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "a059a8febd8e6e27f436dc738062ec151efd1859240dc1e3b4ed20c41f23ed5f": {
-      "category": "Snacks",
-      "subcategory": "Candy & Chocolate",
+    "074c9cd3e8e7a30994210bee865711c30c1c8b6248876506dc217d899899cc91": {
+      "category": "Pantry",
+      "subcategory": "Oils & Vinegars",
       "confidence": 0.99,
-      "reasoning": "Candy wording matched.",
+      "reasoning": "Cooking-oil wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -23621,16 +23633,13 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "8a8476de0a02af90c879a21406b8ed1aafcfe7751b95306ee0a191224f0a6bba": {
-      "category": "Snacks",
-      "subcategory": "Protein Bars",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9344. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
+    "e34ab513d05678817badf196ab6b4dfc3fc222bc8a6d6af256f3fa0cb361b9a1": {
+      "category": "Meat & Seafood",
+      "subcategory": "Deli Meats",
+      "confidence": 0.99,
+      "reasoning": "Deli-meat wording matched.",
+      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "subcategory-first",
-      "clip_score": 0.9344,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "d6eb1858b76f2737d21f59680deb7f6cd4b2b509da83a61c52d499f9e7554baa": {
@@ -23645,11 +23654,20 @@
       "clip_score": 0.6743,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "fc899c6f5750cab284bf2570ab65cf5c7512ea3bc5404fff9467384b25673714": {
-      "category": "Pantry",
-      "subcategory": "Oils & Vinegars",
+    "36287941f9d7fadbe8dd420232ad7a766eae7067a5e431a9c0057d75b4f43962": {
+      "category": "Frozen",
+      "subcategory": "Ice Cream",
       "confidence": 0.99,
-      "reasoning": "Cooking-oil wording matched.",
+      "reasoning": "Frozen dessert wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "a356d597d4756573e67661f52504db3989e1399a157bba81ca2124652d31e26e": {
+      "category": "Prepared Foods",
+      "subcategory": "Refrigerated Pasta & Noodles",
+      "confidence": 0.99,
+      "reasoning": "Refrigerated filled-pasta wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -23711,6 +23729,15 @@
       "clip_score": 0.9276,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "bc753d3536bf1c20f13f3d218ba4c8ee650711f5810a584a3388e54dffd419af": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "confidence": 0.95,
+      "reasoning": "Supplement form wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "64daeda37389370dbafc83cc04ad4d80e3bbe0e137af05e2d1283e084958efe8": {
       "category": "Supplements & Wellness",
       "subcategory": "Vitamins",
@@ -23721,6 +23748,18 @@
       "label_source": "clip-primary",
       "clip_source": "category-first",
       "clip_score": 0.5533,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "c376465ee85a4936645f00cc4653fe6595af295f9b285a2fbf9defc9ed2739d1": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Sun Care",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6730. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.673,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "438818f28909c35c18848e098b114196f3dc882a596fec6f7aa09a7dea71f168": {
@@ -23762,15 +23801,6 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "6e63ddeb07603d010d75287a5a21215e0a72ea6745b43ff1bd8f9ee99e4708a4": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Skin Care",
-      "confidence": 0.99,
-      "reasoning": "Skin-care wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "601a4eb8ad02882ea2ea4f8f335e5173e8a6a2b367b8435d021a718e21e557d1": {
       "category": "Supplements & Wellness",
       "subcategory": "Probiotics",
@@ -23783,28 +23813,22 @@
       "clip_score": 0.9752,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "6e4098039cf7993d33a3c0f8fc31310fde775152bfed284870bc1ad3868b0c83": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Soap & Hand Wash",
-      "confidence": 0.62,
-      "reasoning": "Provisional CLIP rescue for an otherwise unresolved fallback item. Locked pair source=category-first, score=0.5240. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
+    "65b219ac17c5aeed4c75854160ce84b756966379d2ba62bbedec6500ffc6254a": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Immune Support",
+      "confidence": 0.99,
+      "reasoning": "Wellness support wording matched.",
+      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-provisional",
-      "clip_source": "category-first",
-      "clip_score": 0.524,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "c51b43119af72137f775c97f99e45bf0b31783224e68ac4b87c4612f3c961d85": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Oral Care",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.8407. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
+    "cd9cdac80e4af42ad0d673b272870b70e29518c7549f7386ff0b9583eed99727": {
+      "category": "Pantry",
+      "subcategory": "Rice & Grains",
+      "confidence": 0.029,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
+      "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "category-first",
-      "clip_score": 0.8407,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "0fda22149e133e5decbbec5e38c13beb0f8f8701c26aee86a711780d83f0c743": {
@@ -23812,15 +23836,6 @@
       "subcategory": "Vegetables",
       "confidence": 0.99,
       "reasoning": "Fresh vegetable wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "76332e739e71ef8d954a7651402b6693df953bc77f2525f11dfaededb83ba7b0": {
-      "category": "Snacks",
-      "subcategory": "Candy & Chocolate",
-      "confidence": 0.99,
-      "reasoning": "Candy wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -23834,14 +23849,13 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "45bb6461c52895740c1d543ad14f659b3ff92df4c71296536c200d75aaecf613": {
-      "category": "Frozen",
-      "subcategory": "Frozen Desserts",
-      "confidence": 1.0,
-      "reasoning": "Manual gold taxonomy label.",
-      "model_name": "manual-gold-label",
+    "3fa2e383baf24c2cfb308e2b8cbfaa11e86bde8bc13d5cd4ee0cdc40d7542f28": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Candy wording matched.",
+      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
-      "label_source": "gold",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "817b15a54721d6c8c6a942d23d61975d09b3affcf406c99009d9e680ceee154a": {
@@ -23898,7 +23912,7 @@
       "clip_score": 0.5781,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "73a5b4702a95bd0f104b2b96db4225e58a3f1b245110945fd5ffe81962f53f54": {
+    "46d52c7218955db2a6a157e7305bb1c0826903bbed5799ef5f7995c15d734765": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
       "confidence": 0.78,
@@ -23908,6 +23922,15 @@
       "label_source": "clip-primary",
       "clip_source": "category-first",
       "clip_score": 0.8756,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "55789ff7ed6051d8989c02e2ec111084c5d362706cab1ff42f08e7b93ae7b2a7": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Omega & Fish Oil",
+      "confidence": 0.99,
+      "reasoning": "Omega or fish-oil supplement wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "9026a1358a021d59e87136dbc03cab50da70bd0e4d5dac895801b4ea82697364": {
@@ -23967,7 +23990,7 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "737cbf159dc99d6d3ea75276efbd002a6e166194fb321507d5f373ad285a8b3d": {
+    "9fc875c1fd29100b4c1b2b39cc147f019c6e88076130e91765bd31853e1a227d": {
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
       "confidence": 0.99,
@@ -23976,7 +23999,7 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "4d3da07cb324611890dc9c93f0fb3a854e1c5aa890a52d1cd0b6dcf069976ca3": {
+    "b2fd397e929e231ccf4ec29d7059ac5ef8607130539b243008d48c81c39b7f6d": {
       "category": "Snacks",
       "subcategory": "Chips",
       "confidence": 0.99,
@@ -24033,16 +24056,16 @@
       "clip_score": 0.9468,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "6c51842420511e7babf937c010a6c7fb066be07aa86ed53349b79f104c91f350": {
-      "category": "Beverages",
-      "subcategory": "Sparkling Water",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.8566. Gold/manual labels still override this.",
+    "b4ab1936ff3cecbea3cbd8dd537feb7709456b59c8d710fb88a406f91902f5e1": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "confidence": 0.62,
+      "reasoning": "Provisional CLIP rescue for an otherwise unresolved fallback item. Locked pair source=category-first, score=0.5035. Gold/manual labels still override this.",
       "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "subcategory-first",
-      "clip_score": 0.8566,
+      "label_source": "clip-provisional",
+      "clip_source": "category-first",
+      "clip_score": 0.5035,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "83e4a4f26084a123fcf8248bc69f3c54cfab0c85a7ec3de0c89bf075887f9b2a": {
@@ -24055,7 +24078,7 @@
       "label_source": "gold",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "4894efbfb80a3c8f4aa2b1a1a7ea18873e6ecdd710e7e1946757e7dfab6a49db": {
+    "b0067b962a4726dcc7d3a345dd2bae202a4e9f7d331a8b6315f008c6b513792b": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
       "confidence": 0.99,
@@ -24069,6 +24092,24 @@
       "subcategory": "Chicken",
       "confidence": 0.99,
       "reasoning": "Chicken wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "a564548947732007e0fde5ec164fbe869c6d8df2fe380f4cb24769336dd638b1": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "confidence": 0.0352,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
+      "model_name": "local-sklearn",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "dda055db56a9c0fad32815f3de586f23082764698458a5982a1b0b78c3719db3": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.35,
+      "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -24107,7 +24148,7 @@
     "01d3807db63eafc670ab5894edbb5ce109ef656517e1636222d28283ec11bfb4": {
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
-      "confidence": 0.041,
+      "confidence": 0.0399,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -24126,7 +24167,7 @@
     "ad388572ca7ae27dc47785bca0f67bf304208cb9eb986d9d0ac07f85dad1b124": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0448,
+      "confidence": 0.0443,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -24135,18 +24176,9 @@
     "ae63a54984a1541df53293d108c55a8fc554944447132c55fb1471d85447e7fc": {
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
-      "confidence": 0.0558,
+      "confidence": 0.055,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "5181657220e4990e80e0f3f247561e866d722c7c287761e9464ff58b6b1325ef": {
-      "category": "Pantry",
-      "subcategory": "Meal Kits & Sides",
-      "confidence": 0.35,
-      "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
-      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
@@ -24249,7 +24281,28 @@
       "clip_score": 0.8341,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "c22a67535424a646c80940b1e13754ff8443d736dd3550da188c4cc09a4a862a": {
+    "cbbe4bf616567edd174492ed81f4b0e26c647adf97c1371a5e9cf7318de88281": {
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6384. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.6384,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "de8e7ed0bb6393646ddab3ad31bf813d7683eabe944568999d4ca1d9d3037dcc": {
+      "category": "Produce",
+      "subcategory": "Vegetables",
+      "confidence": 0.99,
+      "reasoning": "Fresh vegetable wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "4a49ec60774a041e4f19d060e9665415cbda30299a3a010747cda711d18aec8d": {
       "category": "Bakery",
       "subcategory": "Bread",
       "confidence": 0.99,
@@ -24270,6 +24323,15 @@
       "clip_score": 0.5924,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "35368c8ac3197237ac0cbe9b20e467604cc2612d6afd770e3b59bc56bb5b052c": {
+      "category": "Pantry",
+      "subcategory": "Jams & Honey",
+      "confidence": 0.99,
+      "reasoning": "Honey or jam wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "1c7177a955bcbc377fd9cde25232ae0662e1d417fdca2e056005283d10a2f366": {
       "category": "Meat & Seafood",
       "subcategory": "Seafood",
@@ -24282,7 +24344,16 @@
     "91bd081a65bb13ed911bd217ec16b3d9100e028c3093dcac6c60f991be76e38c": {
       "category": "Snacks",
       "subcategory": "Jerky & Meat Snacks",
-      "confidence": 0.051,
+      "confidence": 0.0508,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
+      "model_name": "local-sklearn",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "1c3d5745a39817dabb1b8688ccd054be2bc1386c393a6e3a062f6d08f3f821fd": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.0307,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -24300,18 +24371,6 @@
       "clip_score": 0.4894,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "e0e51c628b930f44611876b7c03e57f9f29cce523c8fee525e8d1b1e0f6643c2": {
-      "category": "Meat & Seafood",
-      "subcategory": "Beef",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6333. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
-      "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "category-first",
-      "clip_score": 0.6333,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "51d537cc2cd27c958819c6fc24131eccc64c18caeabf398aaca1e5ba81f28939": {
       "category": "Meat & Seafood",
       "subcategory": "Bacon",
@@ -24321,24 +24380,21 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "53a06d6f5b46b96b3b443ed29c890d0c015a99c7883ecffd0816178b5a6cb823": {
-      "category": "Meat & Seafood",
-      "subcategory": "Beef",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7727. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
-      "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "category-first",
-      "clip_score": 0.7727,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "6d7c916bda87967adc37f2ce90080bbbc98290ea6cc7ebc68d1514a6901ac438": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0744,
+      "confidence": 0.0735,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "f032a1e5f52a862e9303bf888caffe25cfcb390ea0d17279e56e63539a2e1780": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Immune Support",
+      "confidence": 0.99,
+      "reasoning": "Wellness support wording matched.",
+      "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
@@ -24375,18 +24431,6 @@
       "clip_score": 0.8608,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "e67e5f8e968255d4b123bb0005834dcb9abbccfbff8791b65b7329904ebfbe87": {
-      "category": "Pantry",
-      "subcategory": "Canned Fish & Meat",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.5771. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
-      "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "subcategory-first",
-      "clip_score": 0.5771,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "208bf7cb1eeffa081060289a311d48facf787bc57edba7983d9a4a5dcdbaf2e0": {
       "category": "Meat & Seafood",
       "subcategory": "Chicken",
@@ -24394,18 +24438,6 @@
       "reasoning": "Chicken wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "32b83a74d3d67e95f735a4a1e25e16fb0c87d6dd73a01e78384bbe3244139ffe": {
-      "category": "Pantry",
-      "subcategory": "Oils & Vinegars",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.8495. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
-      "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "subcategory-first",
-      "clip_score": 0.8495,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "07caec6dbc9eba5329adf8da810555048fbf810071a25400a655ad3dadd8990a": {
@@ -24454,11 +24486,11 @@
       "clip_score": 0.5626,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "ca411d54081d0d7641f0e03f243ad92fd09d18cb3ff325e9a071a69f563ae245": {
-      "category": "Snacks",
-      "subcategory": "Candy & Chocolate",
-      "confidence": 0.99,
-      "reasoning": "Candy wording matched.",
+    "3c915107aa14d0e0a1d0410d8065af5b73ad0297528ca1fee90fc085206c57ed": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.35,
+      "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -24514,19 +24546,19 @@
       "clip_score": 0.6309,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "374408db8704f380ada7b3013372db8c42c4c0495eb332e9c77ebf1c1bb7e329": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Probiotics",
+    "0d6aa8929795e101d218b7ed5f7ab9b6bd817da6a843b4c5a3d952e2b92d5b74": {
+      "category": "Pantry",
+      "subcategory": "Canned Fish & Meat",
       "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.5544. Gold/manual labels still override this.",
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.7352. Gold/manual labels still override this.",
       "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
       "label_source": "clip-primary",
-      "clip_source": "category-first",
-      "clip_score": 0.5544,
+      "clip_source": "subcategory-first",
+      "clip_score": 0.7352,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "95a1795dae488a58dbb3d692d3b82b3136d70640ee128826d484a6d2b5278bb9": {
+    "a1623c06f6611b4a97a8b9233c3ddfc4808b9ce8a17f5a0c96630b889f009fb3": {
       "category": "Household",
       "subcategory": "Foil, Wrap & Bags",
       "confidence": 0.99,
@@ -24547,7 +24579,7 @@
     "61ac5801a50e9adee9b6f0528aabea53b4d390413566ee3c03e4b44b590c19f5": {
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
-      "confidence": 0.0309,
+      "confidence": 0.0304,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -24739,20 +24771,20 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "ef98baa2538c467745eec5da553333e5524783a50c420e19fe357ca23c1aa45c": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Herbal Supplements",
-      "confidence": 0.99,
-      "reasoning": "Greens supplement wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "174bbbb66d6bbb1d628817dcbe3459b80c1003716718df5f9d5d40193b745bb3": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
       "confidence": 0.99,
       "reasoning": "Rice or grain wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "014d37495042d14296b15a62f2d3139b9800d90144e5356b0fe0a2803ab7f57a": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "confidence": 0.95,
+      "reasoning": "Supplement form wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -24823,6 +24855,15 @@
       "clip_score": 0.8997,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "a8f67c822761e7ff88bfae97eba55bbce84ad913a47e1b5fb902268e69593c04": {
+      "category": "Alcohol",
+      "subcategory": "Beer",
+      "confidence": 0.99,
+      "reasoning": "Beer wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "4f89733e2be3df0aef4198f9c763e87a6cd85e738d7456f3fa9173fa306ddbb7": {
       "category": "Supplements & Wellness",
       "subcategory": "Vitamins",
@@ -24862,6 +24903,16 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "f53629b6c7e3fdc821e9a44fbe55126b4cdcce7e1faa6fcc050d6739bc154dea": {
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "confidence": 0.92,
+      "reasoning": "Frozen biryani meal",
+      "model_name": "openai-silver-label",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "silver",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "9843d965598cb8491ddd67bf30d8e283cb1d4370cf46b1551fb7f1f43ac53ced": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
@@ -24892,6 +24943,15 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "26e05b994a12da1b6c271e1e7d4b71ef88f124f39cbea16852e61d3bf04ecf00": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Cheese",
+      "confidence": 0.99,
+      "reasoning": "Cheese wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "c42b4d99ab7e4020c7c8153dc297e4aa292279b3726bd57e3492d66af4752cd8": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
@@ -24913,11 +24973,29 @@
       "clip_score": 0.8571,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "6adbc545241a36a131969a6f5f4ea721b8f0479bf8f9d4c7788afd3578e67be5": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.0291,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
+      "model_name": "local-sklearn",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "d76ae3a5d9d6a8f156b10c8702028aee996782986ea3294b1ec8a3c1c184bfc9": {
       "category": "Produce",
       "subcategory": "Vegetables",
       "confidence": 0.99,
       "reasoning": "Fresh vegetable wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "d1c657e4eb54295df161643f13d0d119a4626b05cbbb181e9032869f7dfe6599": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
+      "confidence": 0.99,
+      "reasoning": "Creamer wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -24944,7 +25022,7 @@
     "316bba746e08dfa152ad19aac9b846a0edb95a86be74ed5ec457e1fc3b733553": {
       "category": "Dairy & Eggs",
       "subcategory": "Plant-Based Yogurt",
-      "confidence": 0.0352,
+      "confidence": 0.035,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -25037,6 +25115,27 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "e9c3d998d723a579b48e6d3e2123d6ee01513e696f90d153f76d7c8755caf663": {
+      "category": "Pantry",
+      "subcategory": "Nut Butters & Spreads",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.7064. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.7064,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "db5c7b3c48f626d685779fe0883b43bb32a1f4a1ee0c2d84f3866bc561212a2b": {
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
+      "confidence": 0.99,
+      "reasoning": "Packaged breakfast cereal wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "c3afbdbac77bff2c55bdad2879820820d8b85ace9ab5cdc2759fc387da3d7330": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
@@ -25091,18 +25190,6 @@
       "clip_score": 0.8256,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "23c0aabb2671ed50f3b4538312932ffd6ccd1015d7163ace1dd60fddd2d033f3": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Hair Care",
-      "confidence": 0.78,
-      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7339. Gold/manual labels still override this.",
-      "model_name": "local-clip-audit",
-      "model_version": "taxonomy-local-ml-v17",
-      "label_source": "clip-primary",
-      "clip_source": "category-first",
-      "clip_score": 0.7339,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "ef95fc223d98cdd45a23192aa188f0086372c6f1cfb647392f1443b1e2ddf98f": {
       "category": "Supplements & Wellness",
       "subcategory": "Protein & Collagen",
@@ -25113,15 +25200,6 @@
       "label_source": "clip-primary",
       "clip_source": "subcategory-first",
       "clip_score": 0.937,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "f2d90bd0b3798f08b8ecf29d35fa344a1c03b1050f42736a6aa3dcb61da7fcdb": {
-      "category": "Pantry",
-      "subcategory": "Rice & Grains",
-      "confidence": 0.99,
-      "reasoning": "Rice or grain wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "e36ba1f3ac3f175c9bd5a096325d24bc1e964088e96ccf017dd732404b05e199": {
@@ -25157,13 +25235,16 @@
       "clip_score": 0.9435,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "064ba7e1694c162d2d0e7a851980bb3b21b27c332dfa87e17089e32841753867": {
+    "1e8773913d0bcd5c1e65fbf58c32adc9d83d4908431e53bbb64caaf58b8d6a14": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.99,
-      "reasoning": "Soda wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.7413. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.7413,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "d0c0206c0f56f19bae6d36b187d3615b1a7488217396bfb650ea634a9fa90a32": {
@@ -25189,15 +25270,6 @@
       "subcategory": "Functional Drinks",
       "confidence": 0.99,
       "reasoning": "Drink or smoothie wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "9e29c7c0f912e7f757335f3a3280a3231a20eca5b3b9883cac8ee5bc86a4a7e8": {
-      "category": "Meat & Seafood",
-      "subcategory": "Pork",
-      "confidence": 0.99,
-      "reasoning": "Pork wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -25235,7 +25307,7 @@
     "36a00d8f5b1089d7df28886fbc0b1a0f379003f17365079363afd21f729a1b4f": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
-      "confidence": 0.0469,
+      "confidence": 0.0468,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -25265,7 +25337,7 @@
       "clip_score": 0.4262,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "b61a2699a3206ebe1f66cd38ca2a98ba856a2a15361e63a93bd88b5fd6d37ea6": {
+    "30aa5a47c3a388503bd13df75218df6408601ce3149f57df9535c0947ba5e6f6": {
       "category": "Produce",
       "subcategory": "Vegetables",
       "confidence": 0.99,
@@ -25283,7 +25355,7 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "366f8ac820ba52581e07db28d54e019b5933a79892ac94868fcfa0a608a3d412": {
+    "ef701c54a078726d5d9daef7a8fa69efbaf7147216d357df45a7ed27105083be": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
       "confidence": 0.95,
@@ -25292,11 +25364,11 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "ef701c54a078726d5d9daef7a8fa69efbaf7147216d357df45a7ed27105083be": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Herbal Supplements",
-      "confidence": 0.95,
-      "reasoning": "Supplement form wording matched.",
+    "2cf522019d61e9d821ff8509a772e004897dec662785b57dad9c7a82a86591c0": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Candy wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -25346,7 +25418,28 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "fa394b03b06d6c07e5007ab5540df2ca9982da052b630c72f0161319d21160ab": {
+      "category": "Beverages",
+      "subcategory": "Coffee Concentrates",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.5500. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.55,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "9d644ac313ed48c048d17bad392d431e2a3e34b42507d96ae7871161dbd91a68": {
+      "category": "Alcohol",
+      "subcategory": "Beer",
+      "confidence": 0.99,
+      "reasoning": "Beer wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "c5938ca619e8813851d161ad706478b3f03ded54cd1970a5382e3fef1a3864f6": {
       "category": "Alcohol",
       "subcategory": "Beer",
       "confidence": 0.99,
@@ -25365,20 +25458,38 @@
       "label_source": "gold",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "1a558df1747e99716365d9ecb4719cb7ce9e6e17effc9edb9ae15b72b7c4b9a0": {
-      "category": "Beverages",
-      "subcategory": "Coffee Beans & Grounds",
-      "confidence": 0.99,
-      "reasoning": "Coffee bean or ground coffee wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "3a38e992f790ee4963a9faa1b03ab9ec6821e2254a3ad4ac3ca68a754615b624": {
       "category": "Supplements & Wellness",
       "subcategory": "Protein & Collagen",
       "confidence": 0.99,
       "reasoning": "Protein or collagen supplement wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "3e0a797536e3c723eb1105cdd3c112c80d6aee5618fb5f9f52294d2f9b8b4f05": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.35,
+      "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "2f47f580da11d078b705d05cf7da3e7b8b49712302ae5d0e9edb954ce6a96382": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Protein & Collagen",
+      "confidence": 0.99,
+      "reasoning": "Protein or collagen supplement wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "7d85365c44f88af07581d45d2813c63632f94b702f7f1847c5d379a03b8e432a": {
+      "category": "Beverages",
+      "subcategory": "Functional Drinks",
+      "confidence": 0.99,
+      "reasoning": "Drink or smoothie wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -25469,24 +25580,6 @@
       "subcategory": "Frozen Meals",
       "confidence": 0.94,
       "reasoning": "Frozen product wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "a51a265706fc6abbf820b39438a46bb901d7ab33b6421bf79cdc5dc939fc65ad": {
-      "category": "Snacks",
-      "subcategory": "Candy & Chocolate",
-      "confidence": 0.99,
-      "reasoning": "Candy wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "8f79a041357ac60f2718037c65dcefb9aa8c3a662f8fa0e63156bbcd8af24c69": {
-      "category": "Snacks",
-      "subcategory": "Snack Bars",
-      "confidence": 0.99,
-      "reasoning": "Snack-bar wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -25671,6 +25764,18 @@
       "clip_score": 0.5733,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "bb94c375ca940dc15b335b796cb8c1a79bcd403b08e603be608f430ac66b136b": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Multivitamins",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6151. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.6151,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "cfa398cb4db6c429a3659242db94d22bb91c93d6a885397846a0d2377008f669": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
@@ -25678,6 +25783,18 @@
       "reasoning": "Fresh Produce was blocked because the product text looks packaged or processed.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "8f6baf79ba8e6ae59482536641e1baeba8acde3f43cdb1257d6bed03ad9e1170": {
+      "category": "Snacks",
+      "subcategory": "Chips",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.7555. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.7555,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "f81483696ed9c82e82557f533673e8942b3846cf3a0989c1f0e4b082188ccd2c": {
@@ -25782,6 +25899,15 @@
       "clip_score": 0.6302,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "2c881be1292479aaa7c2623e91eee7836a4c9c09d6c57e2f51df56193ae7079e": {
+      "category": "Pantry",
+      "subcategory": "Spices & Seasonings",
+      "confidence": 0.99,
+      "reasoning": "Salt seasoning wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "eccadab34545b64719422df9d6450a1a117da9595c2474f263337f25327a8163": {
       "category": "Supplements & Wellness",
       "subcategory": "Vitamins",
@@ -25810,6 +25936,15 @@
       "label_source": "clip-primary",
       "clip_source": "subcategory-first",
       "clip_score": 0.8458,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "901efc218ad22db05bfde5e2e3395ee11908ba0d9e9b7cd83fef1c1b8948c25f": {
+      "category": "Frozen",
+      "subcategory": "Frozen Vegetables",
+      "confidence": 0.99,
+      "reasoning": "Frozen fries wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "e1593c8383a20adf949bc9cf7cf9b9c48f6d50d6baf4838e79a07c5f42b93a98": {
@@ -25866,7 +26001,7 @@
     "1bedae762f9dbe25b5e1583f40fdc68dc78f9c3aed7679b63f983863f88fc805": {
       "category": "Frozen",
       "subcategory": "Ice Cream",
-      "confidence": 0.0439,
+      "confidence": 0.0438,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -25953,6 +26088,18 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "7bb4d14054e46d17d5c6dca53cbb02b09780c5b33936bab26765df8da2f092e9": {
+      "category": "Beverages",
+      "subcategory": "Sports Drinks",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9498. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9498,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "d9da082fa85f3c116bfe47e8e22495c64d18d184673ff61e7e923823c9d8c6ea": {
       "category": "Beverages",
       "subcategory": "Sports Drinks",
@@ -25965,13 +26112,16 @@
       "clip_score": 0.9498,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "fd018c598527661f8638f6c4cfca441255ef5299791dad37e58ac46c4ed690d4": {
-      "category": "Pantry",
-      "subcategory": "Rice & Grains",
-      "confidence": 0.0324,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
+    "4dda91ac2a6db3eb39e6f47da15c97c0e9606e6b6eaad40cfbe38c71aea0ec64": {
+      "category": "Beverages",
+      "subcategory": "Sports Drinks",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9498. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9498,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "fc187ea79e7e018e77ba4de6ddce2d21e8a0c21fce1fd6770f2d5f3766d44f25": {
@@ -25988,15 +26138,6 @@
       "subcategory": "Cereal & Breakfast",
       "confidence": 0.99,
       "reasoning": "Packaged breakfast cereal wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "68f3496dc3b748b73d9eb3a1b3bff9c12d29d27ebc8bad50cfd990bf85d25e96": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.99,
-      "reasoning": "Non-alcoholic beer or hop beverage wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -26040,7 +26181,7 @@
     "133e80c1b71dd20119d25988e1f3893f5270d7d6bcab47b7db891fda4e9e7121": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
-      "confidence": 0.0408,
+      "confidence": 0.0405,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26049,7 +26190,7 @@
     "8d04b48dae6aac6074c5cb63d720cc0d41e8282c0fa22bf557a6d6f79bf185c6": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
-      "confidence": 0.0321,
+      "confidence": 0.0319,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26083,9 +26224,9 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "52586e34024c10e2234018603e67479e1a2bebca101a71789be25861d018d68e": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Skin Care",
-      "confidence": 0.0221,
+      "category": "Alcohol",
+      "subcategory": "Beer",
+      "confidence": 0.0227,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26103,13 +26244,16 @@
       "clip_score": 0.7914,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "747c64ea8d36aafc8f1ce501fb16f98e5c2c7e4fbe96a19df686c9c5357e0a76": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Herbal Supplements",
-      "confidence": 0.95,
-      "reasoning": "Supplement form wording matched.",
-      "model_name": "local-taxonomy-classifier",
+    "63e7ac7c9cf2fc0be07f9cd7e6b9b5e913146a3d2a6a463c59b53fcdaed3593a": {
+      "category": "Beverages",
+      "subcategory": "Sports Drinks",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9529. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9529,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "aff14e12ef1bd3746d92c822241346ea541068f9a2fe69fa4810e257f6ece2e7": {
@@ -26139,7 +26283,7 @@
     "a3235d395b2ace6ba2363bfbc69e84227b53d648feb84acbef7ba45cbb60d065": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0279,
+      "confidence": 0.0278,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26171,15 +26315,6 @@
       "subcategory": "Herbal Supplements",
       "confidence": 0.95,
       "reasoning": "Supplement form wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "2793c14f3af36c1f4c81c667a869336aabd30726263ccbaac605d35ee5a411b5": {
-      "category": "Pantry",
-      "subcategory": "Soup & Broth",
-      "confidence": 0.99,
-      "reasoning": "Shelf-stable soup or broth wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -26298,7 +26433,7 @@
     "d2e5372bee1ef589a41d5e52f7c0f825ecf5141dd1a3dc0ce4e22bde61973ae5": {
       "category": "Beverages",
       "subcategory": "Coconut Water",
-      "confidence": 0.0292,
+      "confidence": 0.0289,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26325,10 +26460,19 @@
       "clip_score": 0.8559,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "93e0d544375b1c05b696c336797d806b49a9934b62fa0aa18ae018d94265e142": {
+      "category": "Produce",
+      "subcategory": "Fruits",
+      "confidence": 0.99,
+      "reasoning": "Fresh fruit wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "630ff09e16048da9462384430509c388515187ebab2112d7e84ae26a6c35d047": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
-      "confidence": 0.0391,
+      "confidence": 0.0389,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26360,15 +26504,6 @@
       "subcategory": "Herbal Supplements",
       "confidence": 0.95,
       "reasoning": "Supplement form wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "df583e2dc2e11f5125a6516718f37825a1074f4f5b019075cb1ba9046fff1271": {
-      "category": "Frozen",
-      "subcategory": "Ice Cream",
-      "confidence": 0.99,
-      "reasoning": "Frozen dessert wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -26442,7 +26577,7 @@
     "ebb1b7b35f40bf2e4ea7e525b75eb094cca4cb6e02c17894d9eca8e0497790b1": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.2356,
+      "confidence": 0.2345,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26589,7 +26724,7 @@
     "f0205607b3e50b3f3813147e8bbbc8be59bcac37b388777a2d9365aa7cc10582": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.0288,
+      "confidence": 0.0287,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26628,7 +26763,7 @@
     "687a32868a5af4e0b1687bfcbcc143a94f173eedc344f53d26d965f99ac4c7a4": {
       "category": "Dairy & Eggs",
       "subcategory": "Cheese",
-      "confidence": 0.0351,
+      "confidence": 0.0347,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26653,15 +26788,6 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "856f059dc0bcc6ea0d105c3fd6dd4750edb67cea518e904a3a381505a5833cce": {
-      "category": "Supplements & Wellness",
-      "subcategory": "Herbal Supplements",
-      "confidence": 0.95,
-      "reasoning": "Supplement form wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "7d068020041d5b146169bc122aeee82188a4f10ff8455447256385cf5ff8ea9c": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
       "confidence": 0.95,
@@ -26763,6 +26889,15 @@
       "clip_score": 0.9833,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "03556f6cd4be041c9b77c73486c96f5d4e5238af354eef3dee897a5466a28c2e": {
+      "category": "Meat & Seafood",
+      "subcategory": "Beef",
+      "confidence": 0.99,
+      "reasoning": "Beef wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "77d5e1fda82e8077dc1638d7c97e34c0619ebf4c4481cd96b98b5d7ea5f21263": {
       "category": "Alcohol",
       "subcategory": "Non-Alcoholic Beer & Wine",
@@ -26775,7 +26910,7 @@
     "674bd693f986692f2592f3d426fa320a25f976ad4610d9c4e8b4b652cd645e1e": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
-      "confidence": 0.0361,
+      "confidence": 0.0357,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -26791,6 +26926,15 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "aa2129152ac2f25e74d3d908e5e04cf776c77f59908d46dcb19ad80a34d6bc32": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Essential Oils",
+      "confidence": 0.99,
+      "reasoning": "Essential-oil wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "797561a60483b58466a790ab1048e6b77ece989de2fd01dfd8384af27c747ea9": {
       "category": "Supplements & Wellness",
       "subcategory": "Essential Oils",
       "confidence": 0.99,
@@ -26937,20 +27081,20 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "5fa7deb3d0f0180994c24c4cf289d62df3b82734d52a4557ab4423e5c32ee0d4": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.99,
-      "reasoning": "Non-alcoholic beer or hop beverage wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "4e74c8e1c521c940cb863f4af03879b08d55c682d55f748f889a3635993ef072": {
       "category": "Supplements & Wellness",
       "subcategory": "Mushroom Supplements",
       "confidence": 0.99,
       "reasoning": "Mushroom supplement wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "370b2e8029fed46b71a53da1f3f44971f7a0dbe497f08e333a85fb67670e5721": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Soap & Hand Wash",
+      "confidence": 0.99,
+      "reasoning": "Soap or wash wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -26991,7 +27135,7 @@
     "a6d5e33936c48f43c8376874a2fba536f0354ad2ccd6d42d6fa40545bdb01a2b": {
       "category": "Beverages",
       "subcategory": "Sparkling Water",
-      "confidence": 0.0565,
+      "confidence": 0.0564,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27016,15 +27160,6 @@
       "label_source": "clip-primary",
       "clip_source": "subcategory-first",
       "clip_score": 0.9501,
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "c911a2f8f7e98cca07ae907093bcd7fc8c246919df22fac1f394c4724899c942": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.99,
-      "reasoning": "Non-alcoholic beer or hop beverage wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "d3aaca9b0bed696e16167dd983da9f1ed34fb8152fcd4e90f8e62787aa9d2671": {
@@ -27063,7 +27198,7 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "daeb7853f19ebd71d50434ff1d1d686c0fefba37d282136573d53eb2816cc1a8": {
+    "c9176fd01b5d2766d74d348e0c2131a3cfca3747e85f6e6ea309a818ee840ca3": {
       "category": "Beverages",
       "subcategory": "Sparkling Water",
       "confidence": 0.99,
@@ -27133,24 +27268,6 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "5ab6cc50d904bf7b83f3bd6d7b85449ebe5e6dd710cce42c65f749dc42e9f262": {
-      "category": "Frozen",
-      "subcategory": "Ice Cream",
-      "confidence": 0.99,
-      "reasoning": "Frozen dessert wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "9f47fd873ef32487149e9ae31f90d12a5f5f80b75d4e6750805375af9f74325e": {
-      "category": "Frozen",
-      "subcategory": "Ice Cream",
-      "confidence": 0.99,
-      "reasoning": "Frozen dessert wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "d509e19c172e0df1899ad685e64a4268b77a0dceea2f5da2428a68b64b3bb40e": {
       "category": "Frozen",
       "subcategory": "Ice Cream",
       "confidence": 0.99,
@@ -27231,6 +27348,16 @@
       "clip_score": 0.9284,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "be479eeb07865ca1115885d8e4dd0da6284fe2f3638095c46360dbc7c41fc149": {
+      "category": "Alcohol",
+      "subcategory": "Beer",
+      "confidence": 0.92,
+      "reasoning": "Pale ale beer pack",
+      "model_name": "openai-silver-label",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "silver",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "c8882efa1b9cddf32fd43780f45ad94257340b6a494e1aeefd1990ec9305415e": {
       "category": "Supplements & Wellness",
       "subcategory": "Herbal Supplements",
@@ -27281,6 +27408,15 @@
       "subcategory": "Oils & Vinegars",
       "confidence": 0.99,
       "reasoning": "Cooking-oil wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "47cee598940795dbf7635d28bd9dcab912633abb955f58ab15dbc63f4f657555": {
+      "category": "Pantry",
+      "subcategory": "Oils & Vinegars",
+      "confidence": 0.99,
+      "reasoning": "Oil or vinegar wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -27357,6 +27493,39 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "7fad4b217387d666bea343e4d3ac12a3951135ec8e6cfec251838554269e2b61": {
+      "category": "Pantry",
+      "subcategory": "Oils & Vinegars",
+      "confidence": 0.99,
+      "reasoning": "Cooking-oil wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "1420adc23fba80b03c861084055f4e596a01e6eea008f094f7c7737078447c3f": {
+      "category": "Alcohol",
+      "subcategory": "Hard Seltzer",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9995. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9995,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "0cc2002d0c15ee80f58aa14595c6ea3e7628b02da4370f7334f5ceb596f56092": {
+      "category": "Alcohol",
+      "subcategory": "Hard Seltzer",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9988. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9988,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "93d429092d3a1a3c89f9faeb506bae8d371ca74ea151659d1660ada1174f77e7": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
@@ -27375,15 +27544,6 @@
       "confidence": 0.99,
       "reasoning": "Farro grain wording matched.",
       "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "aa6238b229c14cf08d17d391ca902ba7dc8a470ebb3b091ffb5178f3eebfacd7": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Sun Care",
-      "confidence": 0.0284,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
@@ -27411,10 +27571,19 @@
       "clip_score": 0.8692,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "6c4a9bc5aa6933e506320022206c9c188d5c6ad652446b08b175910e0e1893bf": {
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
+      "confidence": 0.0613,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
+      "model_name": "local-sklearn",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "32deea9c525205786aaac3ad07407f9b1af3035cedbd1941edb32aabcbedde51": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.0432,
+      "confidence": 0.0429,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27531,10 +27700,10 @@
       "clip_score": 0.4341,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "b5663f7729ee78bb7baa1e6daca83d8a995b0833e937a71e4d4b3f876769a7c9": {
+    "a7423a78bebc40bfa5e8a1a269c68bd655d12f1e7b78e9a3e24c75a1edd8ca3f": {
       "category": "Beverages",
       "subcategory": "Soda",
-      "confidence": 0.0659,
+      "confidence": 0.0566,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27573,19 +27742,10 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "48ad03dc32e1c2164a913a045a9383ea0cb7630556160fd537df9ee8c1f3b274": {
-      "category": "Beauty & Personal Care",
-      "subcategory": "Body Care",
-      "confidence": 0.0255,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "6ebd1691ffd6e8809132d21fa26e3d46224fa2cd7ed8ec274b2343e136287e05": {
       "category": "Beauty & Personal Care",
       "subcategory": "Body Care",
-      "confidence": 0.0239,
+      "confidence": 0.0237,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27648,11 +27808,20 @@
       "clip_score": 0.7371,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "0f52418d65f9ac813a6e8e796fe1f41f35ef7ce649fa015be711eab53b247856": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
+    "5f571e46e943fbb84b663ae202671f69ea2583f84123b2e09d3b9863e7419925": {
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "confidence": 0.94,
+      "reasoning": "Frozen product wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "dbbb63feadfbfa5d3614a14c37325b59a4cac4b3c5ab53e6e27d211564be35b7": {
+      "category": "Meat & Seafood",
+      "subcategory": "Seafood",
       "confidence": 0.99,
-      "reasoning": "Non-alcoholic beer or hop beverage wording matched.",
+      "reasoning": "Seafood wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -27660,7 +27829,7 @@
     "c8f170e6234f370ed95b8f73f79aad92e24ef2db1ecf729ee9cc92056805cfd8": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0529,
+      "confidence": 0.0525,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27669,7 +27838,7 @@
     "b10464038718e1a3c2ab3393ec825fbbde65922f600f67d1286e065d6e3b4a53": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0525,
+      "confidence": 0.0521,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27696,6 +27865,15 @@
       "clip_score": 0.8704,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "947dd5730e30bc1e5c66cc19f99a722660c66a53687ad3dee52a22aaa178252f": {
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "confidence": 0.94,
+      "reasoning": "Frozen product wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "32b28ed258a9df482ac64738436291953b0f7d87e9a301d8a1f921dd1d79a795": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
@@ -27703,6 +27881,18 @@
       "reasoning": "Cooking-oil wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "ce3d79a57eb1a3f91eacc1ecc6c76d891f5a8d83482c72a1aaad8a16d87d7c67": {
+      "category": "Meat & Seafood",
+      "subcategory": "Smoked Seafood",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.5591. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.5591,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "deab8fb0e0011be54873f0a6680a2f7ccdde7088915634ff6ee21fd1271fc613": {
@@ -27736,6 +27926,18 @@
       "label_source": "clip-primary",
       "clip_source": "category-first",
       "clip_score": 0.7801,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
+    "897fa2c185b2a6443fec0f0e4dd7d606cc460e44d4783017588e777c6084f448": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Hair Care",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.5792. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.5792,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "bd8bfb0a0c397ef266789922a5a23554d77e5514b72307a525703b2e439b596f": {
@@ -27798,7 +28000,7 @@
     "c8634ca7305f789287a3db8103ebe006fd3cd198a3f6cd7ce184021e589e01f2": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
-      "confidence": 0.0282,
+      "confidence": 0.028,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27813,11 +28015,11 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "89c8201e9d017201977f4e4b7b174402373d8fc644a88ee5ccafacc41a328f0d": {
-      "category": "Pantry",
-      "subcategory": "Oils & Vinegars",
+    "1e010fdca9b28d841564691322cb7a33aad043537acda68bfad5634e7424f3f7": {
+      "category": "Beverages",
+      "subcategory": "Soda",
       "confidence": 0.99,
-      "reasoning": "Cooking-oil wording matched.",
+      "reasoning": "Soda wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -27846,25 +28048,7 @@
     "50ccf05a2957c962057934afb04b4dcb9409097f40d7385bea51e7d14e3639b4": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
-      "confidence": 0.066,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "11b1370e39403c92843086bb6b31f0b4f7c579b51dd96a21719b7c75a12c0c3f": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.097,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "1cf272104b48ba833f55ad061a579922dcb5cc88102f05acd061d464ef01c6eb": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.0987,
+      "confidence": 0.065,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27888,15 +28072,6 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
-    "f522e48e41ef69f512416db85df350a83f9511f455de830506a08563f302d518": {
-      "category": "Alcohol",
-      "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.1102,
-      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
-      "model_name": "local-sklearn",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
     "79959e5e3f6ed200ec2e7aefd327274947b4c021d87f400f256561880e714b00": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
@@ -27909,7 +28084,7 @@
     "f9cde6e68ce03479aded422b28ad9ae3d4ae7b7a53008835a84aa6b8ba03773f": {
       "category": "Snacks",
       "subcategory": "Protein Bars",
-      "confidence": 0.0785,
+      "confidence": 0.0806,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27936,10 +28111,22 @@
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
     },
+    "c65b154b84e2f8f6008aa00770034ba7c87b9fb6c29e341de1223c73a01523c0": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Sun Care",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.9351. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.9351,
+      "taxonomy_version": "fixed-taxonomy-v5"
+    },
     "ed5790acd613899f02e9380619dc5b50ff04f38f023128ab6e6cf44f517a5897": {
       "category": "Pantry",
       "subcategory": "Spices & Seasonings",
-      "confidence": 0.1538,
+      "confidence": 0.1535,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -27999,7 +28186,7 @@
     "ec45fd6dfe0ebe72ef3730115a409038fe6ac06f68949d27e42e7e3b3b640173": {
       "category": "Pantry",
       "subcategory": "Rice & Grains",
-      "confidence": 0.1168,
+      "confidence": 0.1157,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28010,15 +28197,6 @@
       "subcategory": "Sun Care",
       "confidence": 0.99,
       "reasoning": "Sun-care wording matched.",
-      "model_name": "local-taxonomy-classifier",
-      "model_version": "taxonomy-local-ml-v17",
-      "taxonomy_version": "fixed-taxonomy-v5"
-    },
-    "50a6211c3e4f63b87cbc4d799c71302f844347dcc71d126c1f9428bfaade1224": {
-      "category": "Pantry",
-      "subcategory": "Hot Sauce & BBQ Sauce",
-      "confidence": 0.99,
-      "reasoning": "Hot-sauce wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -28215,7 +28393,7 @@
     "1a7194168e7e9d0c57f6ddb4ae8837a41c7eb435a1160566834f0df7032420fc": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0321,
+      "confidence": 0.0347,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28287,7 +28465,7 @@
     "b2a6676122ac4bfc018adb7a0a0a58fdbc9ac5e6e07d01446dc329fdaf036e9b": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1154,
+      "confidence": 0.1116,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28347,7 +28525,7 @@
     "3fdc480d09838e0473bf049c1b4f0e3b3710cc91c74bf2edf0a6808cc3775482": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.128,
+      "confidence": 0.1248,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28356,8 +28534,8 @@
     "4dacc2dfbe7a4daefb70aa338fc18608a6a82da1c465affd86db542cebf5c6fa": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.2098,
-      "reasoning": "Local text classifier prediction.",
+      "confidence": 0.1998,
+      "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
@@ -28377,7 +28555,7 @@
     "5b1f75e353472c0bb8e83c721a2be7f21f4bcfad24de6095822c4949bbb54ca4": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0864,
+      "confidence": 0.0882,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28386,7 +28564,7 @@
     "12f2762be6b8c3e8f02a49debce124b9fb15bb967852ac634ce50cff8803bacd": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0737,
+      "confidence": 0.0722,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28413,7 +28591,7 @@
     "ca0c5fb58eb678e3b736c105d6dcb007b84a8d43902b3ff5bc4639adcb1b7599": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0776,
+      "confidence": 0.0772,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28452,7 +28630,7 @@
     "f8f4ce8ff85e07a21cfcb723475dbf4574f85d0532afdc8277b29a671605e0c5": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1891,
+      "confidence": 0.1807,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28558,7 +28736,7 @@
     "cc4e738869e84debc5e680a19ce249b99b15b78615732692eb1470914d4f4e4e": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1602,
+      "confidence": 0.1592,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28567,7 +28745,7 @@
     "6fdfc02f43d80fb5966b44649b1cf32cd60a0e6a1fbbb81815b969a3a76fe9d5": {
       "category": "Alcohol",
       "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.147,
+      "confidence": 0.1485,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28594,7 +28772,7 @@
     "c54756233523ef9ab7bfb50bca194a94de94f3999bd3c3ef664b53376321d204": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.2186,
+      "confidence": 0.2082,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28633,7 +28811,7 @@
     "f4ca4f807c4b0a3296d41cbdc84914892adb13fb081040e80ee567d0efb58659": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0768,
+      "confidence": 0.0741,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28642,7 +28820,7 @@
     "e639c34cb33963fd65dc62d37ead7235cb3fb3ae0a87c14066d07c24c23fede7": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.165,
+      "confidence": 0.1581,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28661,7 +28839,7 @@
     "c6ecea20a6721d696e270910e5263286403337229563ad0b498c50d0a222652b": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1502,
+      "confidence": 0.1449,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28733,7 +28911,7 @@
     "d2e685b57758fc95170e832efba8854771922827e0f09aecacd299fd1910a422": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1494,
+      "confidence": 0.1481,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28763,7 +28941,7 @@
     "2dfc77f6becb36e6b6a4371e836399b20a63f4fe7cff493ed36c9c5b67733b95": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0706,
+      "confidence": 0.0696,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28850,7 +29028,7 @@
     "7cb1bf7c34737666f26063484d1cf6833f352c89164e00aefe871f5486ba1792": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1269,
+      "confidence": 0.1221,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28913,7 +29091,7 @@
     "fc9e722b826e7d41f4be89b7d340c1fce817b13ec2877c59cbd97234f918a5dd": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1563,
+      "confidence": 0.1498,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28934,7 +29112,7 @@
     "fe05adf424e020091e30db57a60e9a2e79e667a45ec81aa34b1f3f08f22093c9": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.2215,
+      "confidence": 0.2113,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28973,7 +29151,7 @@
     "38d01ab132c481816475c0b384715578c7e5e5fb2691f4722c76be41ee1b78d1": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1011,
+      "confidence": 0.0981,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28982,7 +29160,7 @@
     "ceb3115c9f61dd3dce4dbe4515f6f9ca224a3c70c3d33715f7bd40b7076951c9": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1759,
+      "confidence": 0.1676,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -28991,7 +29169,7 @@
     "5ade4f755951b16dd821c8f52d48121e22d257cf4aae2b2e346e65b31f3ddcc8": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0928,
+      "confidence": 0.0896,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29202,7 +29380,7 @@
     "1700b1c4eb18a3910cfbabb0be96583e6dc0b883c642841433f2aeb94f20af5a": {
       "category": "Alcohol",
       "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.1199,
+      "confidence": 0.1204,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29220,7 +29398,7 @@
     "0c7e69f8502461658225e7b0f127f073fff9d5d595eade1231375662ecb6a3ca": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.074,
+      "confidence": 0.0724,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29229,7 +29407,7 @@
     "e8048b9dd615ca86ee0b1e22141c3aa966eb5b23706d4fe303a4dd2f4c16c0d8": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1533,
+      "confidence": 0.1463,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29278,7 +29456,7 @@
     "a6b96f15d0554cecc1b43248a0b55e23db232219c72f6cdf36ba56851f1a514c": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1177,
+      "confidence": 0.114,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29315,7 +29493,7 @@
     "58d2fd7493da7b856e6faf1a265dbafc4cf5502523059f673b3826f359d6704e": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.2927,
+      "confidence": 0.2843,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29336,7 +29514,7 @@
     "68af93f18f43a7b2aa397b1d4d9cc01a8eeb93638c9345d0c4818e6e8b543dcb": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1177,
+      "confidence": 0.1141,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29345,7 +29523,7 @@
     "cb8e9336fe3a9ea253fc1af54215a52ff80feba049503e6dedd1d2a86bb1b7ef": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.2292,
+      "confidence": 0.2197,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29390,7 +29568,7 @@
     "1eefa4c253973a66c589d34e75d655ecf1598b81f1d5f96f964a46ad51213b76": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0931,
+      "confidence": 0.0898,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29399,7 +29577,7 @@
     "69f9dcea13ce46336415953e2ed292e04c81f29ea13c371e64b3216403266c44": {
       "category": "Alcohol",
       "subcategory": "Non-Alcoholic Beer & Wine",
-      "confidence": 0.1239,
+      "confidence": 0.1246,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29429,7 +29607,7 @@
     "865e853e2486782aa8e301e56dda832f506830c3d00ac98b3fdd182bc58494f0": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1002,
+      "confidence": 0.0965,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29505,7 +29683,7 @@
     "a7bfc61ab7c4c40c4b0aa9df16f4cb524541046b84dd7a428643d1ec17154282": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0942,
+      "confidence": 0.0932,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29532,7 +29710,7 @@
     "93c71bbd2cd87b806dc348beb55c47d1eabe54f738252c20def76433c9010193": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0983,
+      "confidence": 0.0955,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29586,7 +29764,7 @@
     "b71d57b21064c407781a1c7f4a5379a3f767e60a26ccb3e1bf023bb3db7f7bdb": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0677,
+      "confidence": 0.067,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29595,7 +29773,7 @@
     "bf581cd2b9dd5455598468cf90b320921db8cd8fab928ec4d818b595772a0f40": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0897,
+      "confidence": 0.087,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29799,7 +29977,7 @@
     "c26aa5a78ac0f4246044fc3013bdbb76800d263920933112c19156ad2b2b5132": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.4368,
+      "confidence": 0.4365,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29899,7 +30077,7 @@
     "fa09f83a435ab9030fba1e3625877d91f426b5d744e63d88522582bd16cc1bd8": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1419,
+      "confidence": 0.1423,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29908,7 +30086,7 @@
     "18677c72b0d288351ed02a6b21b56022efcba3a24133d1fbbf9a50bed56ee3ba": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.0947,
+      "confidence": 0.0936,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -29977,7 +30155,7 @@
     "2fae3d08e0d9a77c3a1f16414367592d41f3d15fe79014509365ab379c3229a0": {
       "category": "Beverages",
       "subcategory": "Drink Mixes",
-      "confidence": 0.107,
+      "confidence": 0.1068,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30007,7 +30185,7 @@
     "2f785dfac5f2d1714b742172f3498d0bad78bb63c51164e975989dd73ee72d2b": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.4575,
+      "confidence": 0.4571,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30064,7 +30242,7 @@
     "7d2b4d60164d6766d5f48e2b05dcd9352497d4e7e417dfa07dababd329d75e0a": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.0993,
+      "confidence": 0.0995,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30115,7 +30293,7 @@
     "cf78ab814135b25804db910684703ffb179a5556a1175a9ce6a90d7dd77edc5b": {
       "category": "Prepared Foods",
       "subcategory": "Ready-to-Eat Protein",
-      "confidence": 0.1061,
+      "confidence": 0.1059,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30154,7 +30332,7 @@
     "6141da789b9ab3b21358013bfa4c21e20e70f88840b34df40e9f6596b1c3ebba": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.4417,
+      "confidence": 0.4415,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30256,7 +30434,7 @@
     "e73a989e37b215cdf4c861b61f2a0c4fa3beba61a9482f21db0db3d4e8569c5d": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1436,
+      "confidence": 0.144,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30274,7 +30452,7 @@
     "23f38604ae2850ea2cdb981b11e47edf48455d1c85e8f0cf34cb1d881e0c4ab7": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1047,
+      "confidence": 0.1049,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30328,7 +30506,7 @@
     "584f87c00f6c9964025ab717c5da98e24a186e843bbddc009764d8f2a43f0961": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.4502,
+      "confidence": 0.4499,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30346,7 +30524,7 @@
     "e5ee75c31eb4da1d5163b568fe05d1be9f81c3a39f01d16e985585bfffc39592": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1231,
+      "confidence": 0.1215,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30373,7 +30551,7 @@
     "770abc4fc92551a2d009ebaf381600e8823ede0ffd78f766e6bd740120e24ec8": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1208,
+      "confidence": 0.1213,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30391,7 +30569,7 @@
     "98750316ba768c167d20bdd0d2369708dac0c6183bee79bc685493aa1aed70fb": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.1169,
+      "confidence": 0.1173,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30485,7 +30663,7 @@
     "f56831bc953c519d292fbdb1d61580dd1ce8dd04f8474b46e6c7cc9237c3c39c": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1118,
+      "confidence": 0.1068,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30555,7 +30733,7 @@
     "9740c6d240684bd3d2cd8771a506d62dab5a0ccf91b2c02833728213bb066060": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1198,
+      "confidence": 0.1157,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30576,7 +30754,7 @@
     "b1e8aca6926f47de80d4679d8d1830d40a1c5e3bbdd590e9cf43e527d0fa8c90": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0919,
+      "confidence": 0.0903,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30623,8 +30801,8 @@
     },
     "8911274609376f5787eab2bfd8347107908a91e660f2a14157cf9a6559c74416": {
       "category": "Alcohol",
-      "subcategory": "Beer",
-      "confidence": 0.1013,
+      "subcategory": "Spirits",
+      "confidence": 0.1001,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30633,7 +30811,7 @@
     "f0d6a21b4f821d7815f67e54c09c5056b43ca05d54e80b11eadf2dcb77ed099b": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0766,
+      "confidence": 0.0746,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30682,7 +30860,7 @@
     "a71d40bddc955e213564bd0ed34cb95c2cf927e0e449e8841751fdc492bbfebd": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.1883,
+      "confidence": 0.1815,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30763,7 +30941,7 @@
     "eb362351ebcdb2d00d8eaab166dc8d427675f734b4be9bdbdbfb86a490fc23cd": {
       "category": "Snacks",
       "subcategory": "Chips",
-      "confidence": 0.0253,
+      "confidence": 0.0251,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30772,7 +30950,7 @@
     "9167046cd1bc737dce5dce6e0b4d3e1e82ee9630a0ad6587c4eaa49419a39806": {
       "category": "Snacks",
       "subcategory": "Chips",
-      "confidence": 0.0276,
+      "confidence": 0.0275,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30805,7 +30983,7 @@
     "804a80427d02d5fa1a37b2917dbb8855ed4a7c3a115a54cd081b18d863ea0e28": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0302,
+      "confidence": 0.0301,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30856,7 +31034,7 @@
     "9820071b2ad9f349cf74051e5590e560ea25b7a601ae8ad95870096a4e709bdb": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
-      "confidence": 0.0278,
+      "confidence": 0.0276,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30874,7 +31052,7 @@
     "d3e77ea9ba98f0ac9117fa2018a024432c2821838277f92f563fe38d3acc38e5": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.1401,
+      "confidence": 0.1393,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -30955,7 +31133,7 @@
     "12ffea145f4f9cd4288dc05a3f15a525fa4f69a55b000f4ea0301c4a3c0f8c97": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0468,
+      "confidence": 0.0466,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31060,7 +31238,7 @@
     "b2006a22ce57096ef17a64a3f6a0cccc389362286eaf6047e98c29e47556ff88": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.0302,
+      "confidence": 0.0301,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31174,7 +31352,7 @@
     "438a6811c44921bdfee5dc099f8381432423de8a4fb20c988c60c204bd238b99": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0335,
+      "confidence": 0.0337,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31333,7 +31511,7 @@
     "a400315d8aae702990b94dc2525c23eadaee2dcf4d890232559ca17464642570": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
-      "confidence": 0.0316,
+      "confidence": 0.0315,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31342,7 +31520,7 @@
     "14d238cc99eeb9dd0e752e375bed0bc1aa809c1a56cd283ace9f9922fcd6882f": {
       "category": "Pantry",
       "subcategory": "Jams & Honey",
-      "confidence": 0.0352,
+      "confidence": 0.0351,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31489,7 +31667,7 @@
     "0b63b705ea8a92629125976d3a5c08f9a1859cb4fa7150a0ce612ad1ef500945": {
       "category": "Prepared Foods",
       "subcategory": "Sushi",
-      "confidence": 0.0729,
+      "confidence": 0.0727,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31498,7 +31676,7 @@
     "df464c67a83a1b18c183248991eb7c284fb4ad037c489dc5b7f4e46c7f67f987": {
       "category": "Prepared Foods",
       "subcategory": "Sushi",
-      "confidence": 0.0872,
+      "confidence": 0.0869,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31719,7 +31897,7 @@
     "af3958234a3187db59a2e78dfc85dc716925e8e1885b0275893582f73cf00939": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.1006,
+      "confidence": 0.1001,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -31839,7 +32017,7 @@
     "dbee01f781eae3eff8889564dd2104085d6fac206d2d086657921904c68d1418": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.115,
+      "confidence": 0.1144,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -32113,7 +32291,7 @@
     "bfadedbf9fe39de0947091fbb864043d73e8df98cb9f4bda4107e2c13ea7d4e4": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.2503,
+      "confidence": 0.2494,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -32298,7 +32476,7 @@
     "2a62161697f987932f94adf342dd03fd0616051ca43e54aa14d90db0db0cea0d": {
       "category": "Prepared Foods",
       "subcategory": "Sushi",
-      "confidence": 0.0737,
+      "confidence": 0.0736,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -32307,7 +32485,7 @@
     "51ffffe188b52105cae6a65809b184568669b1f4e9a9f9ca52f197fea83daca5": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0351,
+      "confidence": 0.035,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -32325,7 +32503,7 @@
     "0da60aaf667ed9f5be9c6a22c8bc30813e414980ba21a6c1f5308bb41bce4b2c": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.0265,
+      "confidence": 0.0264,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -32391,7 +32569,7 @@
     "c8145beb37a842feb9faf2132214daa9e4e5be97ef67dc903d0e4628ab2fd6c8": {
       "category": "Bakery",
       "subcategory": "Pastries",
-      "confidence": 0.0265,
+      "confidence": 0.0264,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -32418,7 +32596,7 @@
     "9c671f0564ca8f2659f6c83a70125ff29c95e15ddc57dac8f2f945f77d0dcac2": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.2588,
+      "confidence": 0.2579,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -33259,7 +33437,7 @@
     "85df0e45b369fcf51301ab4d1779a8a7f47be48c46e1a0f92683fbab88f7db4d": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0556,
+      "confidence": 0.0554,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -33299,7 +33477,7 @@
     "6bb0edfe8c21b022e2fde8acb61f892d1202ec073241664188073b15d3b074ba": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0363,
+      "confidence": 0.0362,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -33450,7 +33628,7 @@
     "e44aa62e553b039fe96a3ddcb4fe4d6400d0547b3f630ac0f863bfc30d25a16a": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.0296,
+      "confidence": 0.0295,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -33621,7 +33799,7 @@
     "5870fe03025e54f77d472aec0339c5bc0ee7c3508123702b07b7ef2cc498c52c": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.0352,
+      "confidence": 0.0365,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -33991,7 +34169,7 @@
     "b0654519582032fcbf61ec470647590d0da314e5cf7831357564bbee56d7b25d": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.125,
+      "confidence": 0.1245,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -34000,7 +34178,7 @@
     "b6349129a9fe4d87b7d849ab8b59783eebdacc69960dad144527786c862306a0": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0376,
+      "confidence": 0.0374,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -34009,7 +34187,7 @@
     "e7274eb8c47bfb1c4a67f49b940c8a7434f5ade3cae9319aad312073a3f4bb89": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0337,
+      "confidence": 0.0334,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -34066,7 +34244,7 @@
     "35dae67b1ae1989cff43574d6c27a10948b3ea4d14fa86be0329345cbd21af57": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0262,
+      "confidence": 0.0261,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -34330,7 +34508,7 @@
     "8694b4e328f42a6f2ba455857faf2dc92538f9f41794bac9980ab0226fda7a9d": {
       "category": "Bakery",
       "subcategory": "Pastries",
-      "confidence": 0.0371,
+      "confidence": 0.0369,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -34339,7 +34517,7 @@
     "c6c0fe02d107b952735ace6400d289373261f6251e5e19aecbdf1e13013e3d4e": {
       "category": "Bakery",
       "subcategory": "Pastries",
-      "confidence": 0.0371,
+      "confidence": 0.037,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -35076,7 +35254,7 @@
     "d83c9dc445d491f661a1e8a9c6af3e9a7a5eb5ddfde56384b01f8a219f72b522": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0293,
+      "confidence": 0.0292,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -35253,7 +35431,7 @@
     "3cbd44a2b862e66947184d6c06c2939572a7bad06b59fe0230c6f580305b0130": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
-      "confidence": 0.0312,
+      "confidence": 0.031,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -35316,7 +35494,7 @@
     "fb03f9695f3df21af1a7d83a83cc9895ff379c8c537c581e1d455e2f6f0d921f": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
-      "confidence": 0.0359,
+      "confidence": 0.0357,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -36391,7 +36569,7 @@
     "f90aafbeba3c7cf13dd0195d104ab19df0e3443e4d38fc928d8a11465590db89": {
       "category": "International",
       "subcategory": "Asian Noodles & Dumplings",
-      "confidence": 0.0275,
+      "confidence": 0.0274,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -36418,7 +36596,7 @@
     "a36751ae49f09102c5c7192db9269fcaed16e93c2b136b0057fe04f7a2041db6": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.088,
+      "confidence": 0.0876,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -37033,7 +37211,7 @@
     "a03b1401f48adae705c6e413cc6d14e7340f8a70e7c35ed872193b8089e062f4": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0348,
+      "confidence": 0.0347,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -37051,7 +37229,7 @@
     "ed86693b583a67eae8f44142449a4690bf368252f6751d6b11a4a6e3d738503a": {
       "category": "Pantry",
       "subcategory": "Marinades & Cooking Sauces",
-      "confidence": 0.0291,
+      "confidence": 0.029,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -37881,7 +38059,7 @@
     "654e39df760f7dd7840d7106b44b3f48e19e5b2e45545bfdc6751a49f1ffb00b": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.2599,
+      "confidence": 0.259,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -37890,7 +38068,7 @@
     "16adca2d8353498a903357ba89941d8ad5d51d860f3db3acff11a238ab5d7eca": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.216,
+      "confidence": 0.2151,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -37945,7 +38123,7 @@
     "b92a36b50ef9fb1f0b6ac1a3dc689fe023a1063e6578fc9e851357a5b57cc244": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.1296,
+      "confidence": 0.1289,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",
@@ -37954,7 +38132,7 @@
     "c4cfa19cc9821b267c5422acd4baab63e21bfb73f2cfa31a520aa7309a3dedfd": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.107,
+      "confidence": 0.1064,
       "reasoning": "Best-effort local text classifier rescue after deterministic and CLIP fallback.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v17",

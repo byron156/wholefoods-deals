@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-31T00:46:25.041735+00:00",
+  "generated_at": "2026-05-31T13:26:06.192745+00:00",
   "taxonomy_version": "fixed-taxonomy-v5",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v17",
-  "product_count": 3748,
-  "completed_count": 3748,
-  "changed_count": 3672,
+  "product_count": 3765,
+  "completed_count": 3765,
+  "changed_count": 3690,
   "changed_examples": [
     "Strawberries, 16 oz",
     "Watermelon Chunks Small",
