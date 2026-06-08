@@ -32155,24 +32155,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B00060MQMO",
-    "brand": "De Cecco",
-    "name": "De Cecco Cavatappi No. 87 Pasta, 16 Oz, Authentic, Slow Dried, Made with Durum Wheat, Versatile Pasta for Sauces & Recipes, Made in Italy",
-    "image": "https://m.media-amazon.com/images/I/710Bd32oYlL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00060MQMO",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0006GZE22",
     "brand": "Nordic Naturals",
     "name": "Nordic Naturals Omega-3, Lemon Flavor - 60 Soft Gels - 690 mg Omega-3 - Fish Oil - EPA & DHA - Immune Support, Brain & Heart Health, Optimal Wellness - Non-GMO - 30 Servings",
@@ -32220,7 +32202,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "6 Flavors, 2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -32392,16 +32373,16 @@
   },
   {
     "asin": "B000O6EG7I",
-    "brand": "Organic Valley",
     "name": "Organic Half and Half, 32 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71QrTrBSusL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B000O6EG7I",
-    "current_price": null,
+    "brand": "Organic Valley",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71QrTrBSusL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-half-and-half-32-ounce-b000o6eg7i?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -32446,17 +32427,16 @@
   },
   {
     "asin": "B000O6K8NY",
-    "brand": "Organic Valley",
     "name": "Organic 2% Milk, 64 Oz (Half Gallon)",
-    "image": "https://m.media-amazon.com/images/I/71f6OpJvCnL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B000O6K8NY",
-    "current_price": null,
+    "brand": "Organic Valley",
+    "variation": "1 Flavors, 1 Sizes",
+    "image": "https://m.media-amazon.com/images/I/71f6OpJvCnL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-2-milk-64-oz-half-gallon-b000o6k8ny?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "1 Flavors, 1 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -32662,24 +32642,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B000R6QREU",
-    "brand": "FIJI",
-    "name": "FIJI Natural Artesian Bottled Water 1 Liter / 33.8 Fl Ounce Bottle (Single)",
-    "image": "https://m.media-amazon.com/images/I/71pYMTUByiL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B000R6QREU",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B000RGYJI6",
     "brand": "Fresh Produce (Brands May Vary)",
     "name": "Organic Red Seedless Grapes",
@@ -32775,6 +32737,24 @@
     "name": "Colavita, Extra Virgin Olive Oil, 34 fl oz",
     "image": "https://m.media-amazon.com/images/I/71K698ejyRL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B000VD6HGC",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B000VHBO20",
+    "brand": "think!",
+    "name": "think! High Protein Bars - Chunky Peanut Butter, 20g Protein, 0g Sugar, No Artificial Sweeteners, Gluten Free, GMO Free, 2.1 Oz bar, 2.1 Oz",
+    "image": "https://m.media-amazon.com/images/I/71BGert08TL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B000VHBO20",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -32969,16 +32949,16 @@
   },
   {
     "asin": "B000YD5OMM",
-    "brand": "Organic Valley",
     "name": "Organic Valley 3 Cheese Organic Finely Shredded Mexican Cheese Blend",
-    "image": "https://m.media-amazon.com/images/I/71FoaZ3xH4L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B000YD5OMM",
-    "current_price": null,
+    "brand": "Organic Valley",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71FoaZ3xH4L._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-valley-3-cheese-organic-finely-shredded-mexican-cheese-blend-b000yd5omm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -33275,17 +33255,16 @@
   },
   {
     "asin": "B00120VWJ0",
-    "brand": "Dr. Bronner's",
     "name": "Dr. Bronner's Pure-Castile Liquid Soap - Peppermint 32oz",
-    "image": "https://m.media-amazon.com/images/I/81oNLrDwCPL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00120VWJ0",
-    "current_price": null,
+    "brand": "Dr. Bronner's",
+    "variation": "5 Scent, 4 Sizes",
+    "image": "https://m.media-amazon.com/images/I/81oNLrDwCPL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/dr-bronner-s-dr-bronner-s-pure-castile-liquid-soap-peppermint-32oz-b00120vwj0?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "5 Scent, 4 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -33329,11 +33308,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0013G8P20",
-    "brand": "Naturtint",
-    "name": "Naturtint 5G Light Golden Chestnut Hair Color, 5.07 FZ",
-    "image": "https://m.media-amazon.com/images/I/818tQN7zo5L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0013G8P20",
+    "asin": "B00134M726",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "name": "Lemons, 2 Lb Bag",
+    "image": "https://m.media-amazon.com/images/I/81m-pzkYOcL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00134M726",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -33347,11 +33326,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0014CRZH4",
-    "brand": "De Cecco",
-    "name": "De Cecco Farfalle No. 93 Pasta, 16 Oz, Authentic, Slow Dried, Made with Durum Wheat, Versatile Pasta for Sauces & Recipes, Made in Italy",
-    "image": "https://m.media-amazon.com/images/I/71yPCYajanL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0014CRZH4",
+    "asin": "B0013G8P20",
+    "brand": "Naturtint",
+    "name": "Naturtint 5G Light Golden Chestnut Hair Color, 5.07 FZ",
+    "image": "https://m.media-amazon.com/images/I/818tQN7zo5L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0013G8P20",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -33421,6 +33400,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0015R3L5S",
+    "brand": "Renew Life",
+    "name": "Renew Life Detox Cleanse More, Reduces Bloating and Restores Regularity, Overnight Constipation Relief, Soy, Dairy and gluten-free, 100 Capsules",
+    "image": "https://m.media-amazon.com/images/I/71qbx8rdpxL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0015R3L5S",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0015R9DD2",
     "brand": "Renew Life",
     "name": "Renew Life Adult Cleanse - CandiSmart - 15-Day Yeast Cleansing Program - 2-Part Kit - Gluten & Dairy Free - 60 Vegetarian Capsules + 1 Fl. Oz. Tincture",
@@ -33451,24 +33448,6 @@
     "unit_price": null,
     "availability": null,
     "variation": "2 Sizes",
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0016XMXYG",
-    "brand": "Kirin Ichiban",
-    "name": "Kirin, Ichiban, 6pk, 12 Fl Oz",
-    "image": "https://m.media-amazon.com/images/I/81YDl5NXqPL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0016XMXYG",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -33549,24 +33528,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B001E0V7LG",
-    "brand": "NeoCell",
-    "name": "Neocell Super Collagen Powder A 6,600mg Collagen Types 1 & 3 - Unflavored - 7 Ounces",
-    "image": "https://m.media-amazon.com/images/I/819x-w1cyqL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B001E0V7LG",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B001GIP2A8",
     "name": "Organic Honeycrisp Apple",
     "brand": "Fresh Produce (Brands May Vary)",
@@ -33586,10 +33547,28 @@
   },
   {
     "asin": "B001GIP5CI",
-    "brand": "Fresh Produce (Brands May Vary)",
     "name": "Organic Gala Apple",
-    "image": "https://m.media-amazon.com/images/I/81Ofs9N2dQL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B001GIP5CI",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/81Ofs9N2dQL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-brands-may-vary-organic-gala-apple-b001gip5ci?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B001GIP5E6",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "name": "Cantaloupe Melon, Organic, 1 Melon (United States or Mexico)",
+    "image": "https://m.media-amazon.com/images/I/81use32aNLL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B001GIP5E6",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -33603,11 +33582,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B001GIP5E6",
-    "brand": "Fresh Produce (Brands May Vary)",
-    "name": "Cantaloupe Melon, Organic, 1 Melon (United States or Mexico)",
-    "image": "https://m.media-amazon.com/images/I/81use32aNLL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B001GIP5E6",
+    "asin": "B001J1PYRI",
+    "brand": "Nordic Naturals",
+    "name": "Nordic Naturals Ultimate Omega-D3, Lemon Flavor - 60 Soft Gels - 1280 mg Omega-3 + 1000 IU Vitamin D3 - EPA & DHA - Promotes Brain, Heart, & Immune Health - 30 Servings",
+    "image": "https://m.media-amazon.com/images/I/61+j+kIGR+L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B001J1PYRI",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -33698,24 +33677,6 @@
     "name": "The Republic of Tea – Organic Double Red Rooibos, Naturally Caffeine-Free Rooibos Powder and Leaves, Steeps 36 Cups",
     "image": "https://m.media-amazon.com/images/I/81NYNTa2gsL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0024SCJHS",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0026X3MKO",
-    "brand": "Himalaya",
-    "name": "Himalaya Botanique Neem & Pomegranate Toothpaste, Mint Flavor - Fluoride Free Toothpaste Fights Plaque & for Fresh Breath - Vegan, Gluten Free, No SLS, No Artificial Flavors or Colors, 5.29 oz",
-    "image": "https://m.media-amazon.com/images/I/81OsKLLd8AL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0026X3MKO",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -34002,17 +33963,16 @@
   },
   {
     "asin": "B003DGZREM",
-    "brand": "New Chapter",
     "name": "New Chapter Every Woman's One Daily Multivitamin - Bone, Energy & Immune Support* - Whole-Food Fermented Nutrients - No Added Sugar - Vegetarian & Gluten-Free - 72 Tablets",
-    "image": "https://m.media-amazon.com/images/I/61g+Oot2NqL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B003DGZREM",
-    "current_price": null,
+    "brand": "New Chapter",
+    "variation": "4 Sizes, 1 Style",
+    "image": "https://m.media-amazon.com/images/I/61g+Oot2NqL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/new-chapter-new-chapter-every-woman-s-one-daily-multivitamin-bone-energy-immune-support-whole-food-fermented-nutrients-no-added-sugar-vegetarian-gluten-free-72-tablets-b003dgzrem?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "4 Sizes, 1 Style",
     "available_store_ids": [
       "10328"
     ],
@@ -34056,24 +34016,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B003DH3O3C",
-    "name": "New Chapter Every Woman's One Daily Multivitamin - Bone, Energy & Immune Support* - Whole-Food Fermented Nutrients - No Added Sugar - Vegetarian & Gluten-Free - 48 Tablets",
-    "brand": "New Chapter",
-    "variation": "4 Sizes, 1 Style",
-    "image": "https://m.media-amazon.com/images/I/61BGz3zVgyL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/new-chapter-new-chapter-every-woman-s-one-daily-multivitamin-bone-energy-immune-support-whole-food-fermented-nutrients-no-added-sugar-vegetarian-gluten-free-48-tablets-b003dh3o3c?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B003DH5RJG",
     "name": "New Chapter Perfect Prenatal Vitamins - 96ct, Organic Prenatal Vitamins, Non-GMO Ingredients for Healthy Baby & Mom - Folate (Methylfolate), Iron, Vitamin D3, Fermented with Whole Foods and Probiotics",
     "brand": "New Chapter",
@@ -34085,24 +34027,6 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B003DI79GE",
-    "brand": "Naturtint",
-    "name": "Naturtint 6N Dark Blonde Permanent Hair Color (Pack of 1), Ammonia Free, Vegan, Cruelty Free, up to 100% Gray Coverage, Long Lasting Results (Packaging may vary)",
-    "image": "https://m.media-amazon.com/images/I/81Mix-OyeqL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B003DI79GE",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -34201,17 +34125,17 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B003RLNOYS",
-    "brand": "LÄRABAR",
-    "name": "Larabar Chocolate Chip Cookie Dough Fruit and Nut Bars, Gluten Free and Vegan, 16 Ct, 25.6 oz",
-    "image": "https://m.media-amazon.com/images/I/81Feg5Yc4wL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B003RLNOYS",
-    "current_price": null,
+    "asin": "B003SO4N4O",
+    "name": "Chocolove Cherries and Almonds in Dark Chocolate, 3.2 oz",
+    "brand": "Chocolove",
+    "variation": "5 Flavors, 3 Sizes",
+    "image": "https://m.media-amazon.com/images/I/71VBrYCgElL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/chocolove-chocolove-cherries-and-almonds-in-dark-chocolate-3-2-oz-b003so4n4o?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -34238,16 +34162,16 @@
   },
   {
     "asin": "B003TQ6IY4",
-    "name": "Organic Yellow Nectarine",
     "brand": "Fresh Produce (Brands May Vary)",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71qULTmNm+L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-brands-may-vary-organic-yellow-nectarine-b003tq6iy4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Organic Yellow Nectarine",
+    "image": "https://m.media-amazon.com/images/I/71qULTmNm+L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B003TQ6IY4",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -34260,6 +34184,24 @@
     "name": "Pear Bosc Organic",
     "image": "https://m.media-amazon.com/images/I/71tffOhfBjL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B003TQBYKC",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B003TVJJ4K",
+    "brand": "Cento",
+    "name": "Cento Foods Extra Virgin Olive Oil, 16.9 FZ",
+    "image": "https://m.media-amazon.com/images/I/719dhDT-4qL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B003TVJJ4K",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -34400,17 +34342,16 @@
   },
   {
     "asin": "B004CDQ73K",
-    "brand": "THINK",
     "name": "Thinkbaby SPF 50+ Baby Sunscreen, 3 Oz. – Safe, Natural Mineral Sun Cream for Babies - Water Resistant, Broad Spectrum UVA/UVB Sun Protection – Vegan Sunscreen for Kids",
-    "image": "https://m.media-amazon.com/images/I/51QGtQIAV0L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B004CDQ73K",
-    "current_price": null,
+    "brand": "THINK",
+    "variation": "2 Sizes",
+    "image": "https://m.media-amazon.com/images/I/51QGtQIAV0L._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/think-thinkbaby-spf-50-baby-sunscreen-3-oz-safe-natural-mineral-sun-cream-for-babies-water-resistant-broad-spectrum-uva-uvb-sun-protection-vegan-sunscreen-for-kids-b004cdq73k?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -34562,24 +34503,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B004VMGTY4",
-    "brand": "Burt's Bees",
-    "name": "Burt's Bees Calming Day Face Lotion With Aloe and Rice Milk, Soothing Face Lotion for Sensitive Skin, 98.9 Percent Natural Origin Skin Care, 1.8 oz. Bottle",
-    "image": "https://m.media-amazon.com/images/I/71uLxcyPumL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B004VMGTY4",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B004X96JGI",
     "brand": "New Chapter",
     "name": "New Chapter Tiny Tabs Multivitamin with 20+ Nutrients for Immune, Cellular Energy & Stress Support, Including Vitamin D3 + B Vitamins, 192 Count",
@@ -34658,6 +34581,24 @@
     "name": "Eden Foods Organic Black Beans, 29 oz",
     "image": "https://m.media-amazon.com/images/I/91JTuCfFe4L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0052OOVSG",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0052P10ZM",
+    "brand": "Andalou Naturals",
+    "name": "Andalou Naturals Resveratrol Q10 Night Repair Cream, For Dry Skin, Fine Lines & Wrinkles, For Softer, Smoother, Younger Looking Skin, 1.7 Ounce",
+    "image": "https://m.media-amazon.com/images/I/71YLZ4hXnLL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0052P10ZM",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -34998,11 +34939,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B006I74AGO",
-    "brand": "Nordic Naturals",
-    "name": "Omega Complete Lemon",
-    "image": "https://m.media-amazon.com/images/I/71h6v3o-TcL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B006I74AGO",
+    "asin": "B006K3RCPC",
+    "brand": "La Tourangelle",
+    "name": "La Tourangelle Avocado Oil 16.9 Fl Oz, All-Natural, Artisanal, Great for Salads, Fruit, Fish or Vegetables, Buttery Flavor",
+    "image": "https://m.media-amazon.com/images/I/71HALGM+tVL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B006K3RCPC",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -35179,6 +35120,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B007A1XD6U",
+    "brand": "New Chapter",
+    "name": "New Chapter Men’s Multivitamin 40+, Extra B6 & B12, D3, Vitamin C & Zinc, Immune, Heart, Cellular Energy, and Brain Health, Gentle on The Stomach, One Daily, Non-GMO, Gluten-Free, 48 Tablets",
+    "image": "https://m.media-amazon.com/images/I/61MmRiudhNL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B007A1XD6U",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B007A1XDWY",
     "name": "New Chapter One Daily Every Man's Multivitamin 40+ - Offers Eyesight, Immune System & Cellular Energy Support* - Contains Vitamin C, Saw Palmetto & More - Gluten Free & Vegetarian - 72 Tablets",
     "brand": "New Chapter",
@@ -35203,6 +35162,24 @@
     "variation": "4 Sizes",
     "image": "https://m.media-amazon.com/images/I/61JxFnrYrLL._FMwebp_.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/new-chapter-new-chapter-every-woman-s-one-daily-40-multivitamin-for-women-supports-immune-bone-hormone-cellular-energy-health-non-gmo-gluten-free-dairy-free-vegetarian-kosher-48-tablets-b007a1xfae?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B007A1XG5I",
+    "name": "New Chapter Every Woman’s One Daily 40+ - Multivitamin for Women - Supports Immune, Bone, Hormone & Cellular Energy Health* - Non-GMO, Gluten Free, Dairy Free, Vegetarian & Kosher - 72 Tablets",
+    "brand": "New Chapter",
+    "variation": "4 Sizes",
+    "image": "https://m.media-amazon.com/images/I/61PzHV2IqAL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/new-chapter-new-chapter-every-woman-s-one-daily-40-multivitamin-for-women-supports-immune-bone-hormone-cellular-energy-health-non-gmo-gluten-free-dairy-free-vegetarian-kosher-72-tablets-b007a1xg5i?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
     "current_price": "",
     "basis_price": null,
     "prime_price": null,
@@ -35342,24 +35319,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B007SYSQ7K",
-    "brand": "Garden of Life",
-    "name": "Garden of Life Protein Powder, Vegan Protein Powder, BCAA, Probiotics & Digestive Enzymes, Gluten & Lactose Free, Chocolate, 1.5 LB",
-    "image": "https://m.media-amazon.com/images/I/81ZKhMRiMqL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B007SYSQ7K",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B007SYT7LO",
     "brand": "Garden of Life",
     "name": "Protein Powder, Vegan Protein Powder, Bcaa, Probiotics and Digestive Enzymes, Gluten and Lactose Free, Vanilla, 23.3 Ounce",
@@ -35371,7 +35330,7 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "5 Flavors, 6 Sizes",
+    "variation": "5 Flavors, 7 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -35470,16 +35429,16 @@
   },
   {
     "asin": "B008HU3ING",
-    "brand": "Garden of Life",
     "name": "Garden Of Life, Meal Raw Chocolate Organic, 35.9 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71mVNEJO9XL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B008HU3ING",
-    "current_price": null,
+    "brand": "Garden of Life",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71mVNEJO9XL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/garden-of-life-garden-of-life-meal-raw-chocolate-organic-35-9-ounce-b008hu3ing?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -35516,24 +35475,6 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0091OCBJ4",
-    "brand": "Andalou Naturals",
-    "name": "Andalou Naturals Hyaluronic DMAE Lift & Firm Skin Cream | Anti Aging Face Moisturizer with Hyaluronic Acid | Helps Reduce Fine Lines & Wrinkles | 1.7 oz",
-    "image": "https://m.media-amazon.com/images/I/71SCAAsFPvL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0091OCBJ4",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -35614,16 +35555,16 @@
   },
   {
     "asin": "B009AE7WWQ",
-    "brand": "Nature's Bakery",
     "name": "Nature's Bakery Raspberry Fig Bars, 2 Oz, 6 Ct",
-    "image": "https://m.media-amazon.com/images/I/8139AyuwPBL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B009AE7WWQ",
-    "current_price": null,
+    "brand": "Nature's Bakery",
+    "variation": "8 Flavors, 14 Sizes",
+    "image": "https://m.media-amazon.com/images/I/8139AyuwPBL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/nature-s-bakery-nature-s-bakery-raspberry-fig-bars-2-oz-6-ct-b009ae7wwq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -35904,16 +35845,17 @@
   },
   {
     "asin": "B00CIQIWGS",
-    "name": "Annie's Cheddar Snack Mix With Assorted Crackers and Pretzels, Made with Real Cheese, 9 oz",
     "brand": "Annie's Homegrown",
-    "variation": "2 Flavors, 2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/81xK4iOLkZL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/annie-s-homegrown-annie-s-cheddar-snack-mix-with-assorted-crackers-and-pretzels-made-with-real-cheese-9-oz-b00ciqiwgs?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Annie's Cheddar Snack Mix With Assorted Crackers and Pretzels, Made with Real Cheese, 9 oz",
+    "image": "https://m.media-amazon.com/images/I/81xK4iOLkZL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00CIQIWGS",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "variation": "2 Flavors, 3 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -35922,17 +35864,16 @@
   },
   {
     "asin": "B00CIZCSIM",
-    "brand": "Organic Valley",
     "name": "Organic Eggs Free Range Large Brown, 12 Count",
-    "image": "https://m.media-amazon.com/images/I/71PPGi1mZJL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00CIZCSIM",
-    "current_price": null,
+    "brand": "Organic Valley",
+    "variation": "2 Style",
+    "image": "https://m.media-amazon.com/images/I/71PPGi1mZJL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-eggs-free-range-large-brown-12-count-b00cizcsim?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "2 Style",
     "available_store_ids": [
       "10328"
     ],
@@ -36035,24 +35976,6 @@
     "name": "Eden Organic Garbanzo Beans, 29 oz Can, No Salt, Non-GMO, Gluten Free, Vegan, Kosher, U.S. Grown, Heat and Serve, Macrobiotic, Chickpeas",
     "image": "https://m.media-amazon.com/images/I/714h2meuwBS.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00CQ7RJFE",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B00CYML9FW",
-    "brand": "Chosen Foods",
-    "name": "Chosen Foods Avocado Oil, 16.9 Fl Oz - All Purpose Cooking Oil made from 100% Pure Avocados - Non-GMO, Gluten-Free, Keto Friendly, Glyphosate Free - 500mL (Pack Of 1)",
-    "image": "https://m.media-amazon.com/images/I/61LP-9UOfUL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00CYML9FW",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -36446,42 +36369,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B00H00FNNW",
-    "brand": "Vermont Creamery",
-    "name": "Vermont Creamery Bonne Bouche Goat Cheese, 4 OZ",
-    "image": "https://m.media-amazon.com/images/I/81GUiI02kPL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00H00FNNW",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B00H3T8XM8",
-    "brand": "Cento",
-    "name": "Cento Foods Marinara Pasta Sauce, 25.5 OZ",
-    "image": "https://m.media-amazon.com/images/I/81RDRFWU5XL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00H3T8XM8",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B00HNNQLZ0",
     "brand": "Babo Botanicals",
     "name": "Babo Botanicals Sheer Zinc Mineral Sunscreen Lotion SPF30 - Natural Zinc Oxide - Shea Butter - Face & Body - Water Resistant - Fragrance-Free - EWG Verified - Vegan - For all ages - 1 or 2 Pack",
@@ -36538,6 +36425,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B00HSXT8EQ",
+    "brand": "Annie's Homegrown",
+    "name": "Annie's Gluten Free Chewy Granola Bars, Double Chocolate Chip, 5 Bars, 4.9 oz",
+    "image": "https://m.media-amazon.com/images/I/9116+0U8jXL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00HSXT8EQ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B00HVLBSH0",
     "brand": "Love Crunch",
     "name": "Love Crunch Organic Dark Chocolate & Coconut Granola, 11.5 oz (Pack of 1), Non-GMO, Fair Trade, by Nature's Path",
@@ -36556,11 +36461,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B00HWOH0JQ",
-    "brand": "Saffron Road",
-    "name": "Saffron Road Korean BBQ Crunchy Chickpea Snack, 6oz - Gluten Free, Non-GMO, Halal, Kosher, Vegan",
-    "image": "https://m.media-amazon.com/images/I/81Kd8Xxi4QL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00HWOH0JQ",
+    "asin": "B00HXIXJJQ",
+    "brand": "Manitoba Harvest",
+    "name": "Manitoba Harvest Organic Hemp Hearts, Shelled Hemp Seeds - 7oz - 10g Plant Protein & 12g Omega 3 & 6 per 30g serving - Easy-to-Digest seeds with 9 Essential Amino Acids - Gluten Free, Vegan, Non-GMO",
+    "image": "https://m.media-amazon.com/images/I/71nImvPPTuL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00HXIXJJQ",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -36574,11 +36479,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B00HXIXJJQ",
-    "brand": "Manitoba Harvest",
-    "name": "Manitoba Harvest Organic Hemp Hearts, Shelled Hemp Seeds - 7oz - 10g Plant Protein & 12g Omega 3 & 6 per 30g serving - Easy-to-Digest seeds with 9 Essential Amino Acids - Gluten Free, Vegan, Non-GMO",
-    "image": "https://m.media-amazon.com/images/I/71nImvPPTuL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00HXIXJJQ",
+    "asin": "B00I3DJ796",
+    "brand": "Alba Botanica",
+    "name": "Alba Botanica Mineral Sunscreen Lotion SPF 50, Broad Spectrum, Fragrance Free, 3 Fl Oz (Packaging May Vary)",
+    "image": "https://m.media-amazon.com/images/I/61pV9zeNKbL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00I3DJ796",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -36628,24 +36533,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B00IZF0LCE",
-    "brand": "KIND",
-    "name": "KIND Healthy Snacks Bars, Caramel Almond & Sea Salt, Gluten Free, Low Sugar, High Fiber Snacks, 6g Protein, 12 Count",
-    "image": "https://m.media-amazon.com/images/I/71nYq+jqbfL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00IZF0LCE",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B00JAQJ59C",
     "brand": "Rustic Bakery",
     "name": "Flatbread Sel Gris Organic, 6 Ounce",
@@ -36675,6 +36562,42 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B00JRJPKGE",
+    "brand": "Annie's Homegrown",
+    "name": "Annie's Organic Graham Crackers, Cinnamon, Made With Whole Grain, 14.4 oz",
+    "image": "https://m.media-amazon.com/images/I/814LiBnNQ-L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00JRJPKGE",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B00JSCGQFY",
+    "brand": "Vita Coco",
+    "name": "Vita Coco Pure Coconut Water, 16.9 Fl Oz",
+    "image": "https://m.media-amazon.com/images/I/713+75zf3qL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00JSCGQFY",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -36919,24 +36842,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B00L9Z6JKA",
-    "brand": "Saffron Road",
-    "name": "Saffron Road Frozen Chicken Pad Thai – High Protein, Seed Oil Free, Chickens Raised with No Antibiotics, No Artificial Ingredients, Gluten-Free – 10 Ounce",
-    "image": "https://m.media-amazon.com/images/I/91P9moHwQ9L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00L9Z6JKA",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B00L9Z6JV4",
     "brand": "Saffron Road",
     "name": "Saffron Road Frozen Lamb Saag – High Protein, Seed Oil Free, Made with Grass Fed Lamb, No Artificial Ingredients, Gluten-Free – 10 Ounce",
@@ -37040,24 +36945,6 @@
     "unit_price": null,
     "availability": null,
     "variation": "6 Sizes",
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B00MEBT00O",
-    "brand": "Saffron Road",
-    "name": "Saffron Road Frozen Chicken Biryani – High Protein, Seed Oil Free, Chickens Raised with No Antibiotics, No Artificial Ingredients, Gluten-Free – 10 Ounce",
-    "image": "https://m.media-amazon.com/images/I/91C4X4u-EwL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00MEBT00O",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -37175,16 +37062,16 @@
   },
   {
     "asin": "B00MYUQASK",
-    "brand": "Stonyfield Organic",
     "name": "Stonyfield Organic Kids Blueberry Apple Carrot Whole Milk Yogurt Pouch, 3.5 oz., Single Serve – Real Fruit & Veggie",
-    "image": "https://m.media-amazon.com/images/I/71OkNCozLNL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00MYUQASK",
-    "current_price": null,
+    "brand": "Stonyfield Organic",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71OkNCozLNL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/stonyfield-organic-stonyfield-organic-kids-blueberry-apple-carrot-whole-milk-yogurt-pouch-3-5-oz-single-serve-real-fruit-veggie-b00myuqask?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -37193,16 +37080,16 @@
   },
   {
     "asin": "B00MYUQB3O",
-    "brand": "Stonyfield Organic",
     "name": "Stonyfield Organic Kids Strawberry Lowfat Yogurt Pouch, 3.5 oz, Single Serve – Includes Live Active Cultures",
-    "image": "https://m.media-amazon.com/images/I/71KHIgpLJHL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00MYUQB3O",
-    "current_price": null,
+    "brand": "Stonyfield Organic",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71KHIgpLJHL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/stonyfield-organic-stonyfield-organic-kids-strawberry-lowfat-yogurt-pouch-3-5-oz-single-serve-includes-live-active-cultures-b00myuqb3o?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -37211,17 +37098,16 @@
   },
   {
     "asin": "B00MYUQB52",
-    "brand": "Stonyfield Organic",
     "name": "Stonyfield Organic Kids Strawberry Beet Berry Whole Milk Yogurt Pouch, 3.5 oz., Single Serve – Real Fruit & Veggie",
-    "image": "https://m.media-amazon.com/images/I/71A49mp+rYL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B00MYUQB52",
-    "current_price": null,
+    "brand": "Stonyfield Organic",
+    "variation": "2 Sizes",
+    "image": "https://m.media-amazon.com/images/I/71A49mp+rYL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/stonyfield-organic-stonyfield-organic-kids-strawberry-beet-berry-whole-milk-yogurt-pouch-3-5-oz-single-serve-real-fruit-veggie-b00myuqb52?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -37296,6 +37182,24 @@
     "prime_price": null,
     "discount": "Starbucks Medium Roast Iced Coffee, Black Unsweetened, 48 Fl Oz Bottle",
     "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B00O2CVF56",
+    "brand": "ONNIT",
+    "name": "Onnit MCT Oil - Pure MCT Coconut Oil, Ketogenic Diet and Paleo Optimized with C8, C10, Lauric Acid - Perfect for Coffee, Shakes, and Cooking (Flavorless - 24oz)",
+    "image": "https://m.media-amazon.com/images/I/81Jwy02FAaL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00O2CVF56",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -37429,6 +37333,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B00RQJCUHY",
+    "brand": "Stonyfield Organic",
+    "name": "Stonyfield Organic Kids Strawberry Beet Berry Whole Milk Yogurt Pouches, 3.5 oz., 4 Ct – Real Fruit and Veggie; On The Go Snack and Breakfast Addition",
+    "image": "https://m.media-amazon.com/images/I/81yF-enMZsL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00RQJCUHY",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B00T8SBD74",
     "brand": "New Chapter",
     "name": "Postnatal Vitamins Lactation Supplement, Complete Multivitamin with Fermented Vitamin D3 + B Vitamins, Made with Organic Vegetables & Herbs, Non-GMO Ingredients, 96 Count",
@@ -37441,6 +37363,24 @@
     "unit_price": null,
     "availability": null,
     "variation": "2 Sizes",
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B00TDF0F5I",
+    "brand": "NuGo",
+    "name": "NuGo Dark Chocolate Pretzel w/Sea Salt, 12g Protein Bar, Vegan, Gluten Free, Non-GMO, Kosher Pareve, 12 Count",
+    "image": "https://m.media-amazon.com/images/I/71m33Xv7GBL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00TDF0F5I",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -37664,6 +37604,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B00ZSXMH4Q",
+    "brand": "New Chapter",
+    "name": "New Chapter Prostate Supplement - Prostate 5LX™ with Clinical Strength Saw Palmetto + Fermented Selenium for Men’s Wellness - 120 ct Vegetarian Capsule",
+    "image": "https://m.media-amazon.com/images/I/610KCm7B3KL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00ZSXMH4Q",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B00ZSXMPSE",
     "name": "New Chapter Prostate Supplement - Prostate 5LX™ with Clinical Strength Saw Palmetto + Fermented Selenium for Men’s Wellness - 180 ct Vegetarian Capsule",
     "brand": "New Chapter",
@@ -37864,6 +37822,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B014NF6S30",
+    "brand": "thinkThin",
+    "name": "think! Protein Bars, High Protein Snacks, Gluten Free, Sugar Free Energy Bar with Whey Protein Isolate, Brownie Crunch, Nutrition Bars Without Artificial Sweeteners, 2.1 Oz (10 Count)",
+    "image": "https://m.media-amazon.com/images/I/81jX2RTK4GL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B014NF6S30",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B014Q34CJ6",
     "brand": "Chameleon Cold Brew",
     "name": "CHAMELEON COLD BREW Organic Original Cold Brew Coffee Concentrate, 32 FZ",
@@ -37887,24 +37863,6 @@
     "name": "CHAMELEON COLD BREW BEV RTD VNLLA 10 OZ",
     "image": "https://m.media-amazon.com/images/I/71ayRyHCgYL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B014Q34FQ6",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B014RRJZPW",
-    "brand": "Epic",
-    "name": "Epic Provisions, Bison Bacon Cranberry Bar, 1.3 Ounce",
-    "image": "https://m.media-amazon.com/images/I/81R-xC1KMcL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B014RRJZPW",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -38155,16 +38113,16 @@
   },
   {
     "asin": "B01ALY9ARS",
-    "name": "BABO Botanicals Super Shield SPF 50 Stick Sunscreen - 70% Organic Ingredients - Natural Zinc Oxide - for All Ages - NSF & Made Safe Certified - EWG Verified - Water Resistant - Fragrance-Free",
     "brand": "Babo Botanicals",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/61VbJCFeZAL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/babo-botanicals-babo-botanicals-super-shield-spf-50-stick-sunscreen-70-organic-ingredients-natural-zinc-oxide-for-all-ages-nsf-made-safe-certified-ewg-verified-water-resistant-fragrance-free-b01aly9ars?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "BABO Botanicals Super Shield SPF 50 Stick Sunscreen - 70% Organic Ingredients - Natural Zinc Oxide - for All Ages - NSF & Made Safe Certified - EWG Verified - Water Resistant - Fragrance-Free",
+    "image": "https://m.media-amazon.com/images/I/61VbJCFeZAL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01ALY9ARS",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -38291,7 +38249,60 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "2 Sizes",
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B01B8V7AC0",
+    "brand": "Nature Valley",
+    "name": "EPIC Beef Tallow, Grass-Fed, Keto Friendly, Whole30, 11oz Jar",
+    "image": "https://m.media-amazon.com/images/I/814ZQfPAw1L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01B8V7AC0",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B01BTDN7T2",
+    "brand": "Nuun",
+    "name": "Nuun Sport Hydration Lemon Lime, 10 Drink Tablets",
+    "image": "https://m.media-amazon.com/images/I/51cstUO0X-L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01BTDN7T2",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B01CWYERWI",
+    "brand": "Himalaya",
+    "name": "Himalaya Botanique Complete Care Toothpaste, Herbal, Mint Flavor, Fights Plaque, Freshens Breath, Fluoride Free, No Artificial Flavors, SLS Free, Cruelty Free, Foaming, 5.29 Oz, 1 Pack",
+    "image": "https://m.media-amazon.com/images/I/819Thu6ZzlS.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01CWYERWI",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -38605,6 +38616,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B01JENEEFK",
+    "brand": "The New Primal",
+    "name": "The New Primal Spicy Beef Stick - 100% Grass Fed Beef - Whole30 Approved, Certified Paleo, Keto, and Gluten-Free Meat Snack with 6g of Protein and Zero Sugar - 1 oz. (1 Count)",
+    "image": "https://m.media-amazon.com/images/I/51k91bum5wL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01JENEEFK",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B01KNZ4JMQ",
     "brand": "Organic Valley",
     "name": "Organic Valley Organic Thick Cut Shredded Sharp Cheddar Cheese",
@@ -38634,7 +38663,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "5 Flavors, 3 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -38714,6 +38742,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B01LXX6LV8",
+    "brand": "Primal Kitchen",
+    "name": "Primal Kitchen Ranch Salad Dressing & Marinade made with Avocado Oil, Whole30 Approved, Paleo Friendly, and Keto Certified, 8 Fluid Ounces",
+    "image": "https://m.media-amazon.com/images/I/71jBxEQYOZL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01LXX6LV8",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B01LY90QSC",
     "brand": "Good Day Chocolate",
     "name": "Chocolate Sleep Supplement, 8 Count",
@@ -38755,6 +38801,24 @@
     "name": "Chameleon Cold Brew Coffee Espress, Ready to Drink, 10 Fl oz",
     "image": "https://m.media-amazon.com/images/I/71zBie3SI3L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B01LZEJ0EN",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B01M1RN0G5",
+    "brand": "Michaels Of Brooklyn",
+    "name": "Michaels Of Brooklyn Home Style Sauce, 32 Oz",
+    "image": "https://m.media-amazon.com/images/I/71cvT9OoOhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01M1RN0G5",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -38822,6 +38886,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B01MQ20QEQ",
+    "brand": "SO DELICIOUS",
+    "name": "So Delicious Dairy Free Coconut Milk Frozen Dessert Sandwich, Vanilla Bean, Vegan, Non-GMO Project Verified, 8 Pack",
+    "image": "https://m.media-amazon.com/images/I/81MyCBYjZcL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01MQ20QEQ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B01MQUH7U5",
     "brand": "Sambazon",
     "name": "Sambazon Organic Original Açaí Berry Sorbet, 16 Oz",
@@ -38845,6 +38927,24 @@
     "name": "Elements Truffles Sea Salt Flavoured Dark Chocolate Bar| Ayurvedic, Vegan & Gluten Free | No Refined Sugar & Artificial Flavours | Enriched with Cocoa, Coconut Sugar & Turmeric 50g",
     "image": "https://m.media-amazon.com/images/I/81TpviZCYBL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B01MSB5XDQ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B01MT65VJ3",
+    "brand": "THAYERS",
+    "name": "THAYERS Alcohol-Free Rose Petal Witch Hazel Facial Toner for Glowing Skin, Soothing, Hydrating, Refreshing Toner for Normal and Combination Skin, 3oz",
+    "image": "https://m.media-amazon.com/images/I/61PhiH8bgVL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01MT65VJ3",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -38905,6 +39005,24 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B01N1T6F3P",
+    "brand": "SO DELICIOUS",
+    "name": "So Delicious Dairy Free Almond Milk Dipped Frozen Dessert Bar, Mocha Almond Fudge, Vegan, Non-GMO Project Verified, 4 Count (Pack of 1)",
+    "image": "https://m.media-amazon.com/images/I/71g3ISNnFCL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01N1T6F3P",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -39003,6 +39121,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B01N9VFQ48",
+    "brand": "Elements Truffles",
+    "name": "Elements Truffles Raspberry Flavoured Dark Chocolate Bar| Ayurvedic, Vegan & Gluten Free | No Refined Sugar & Artificial Flavours | Enriched with Cocoa, Coconut Sugar & Raspberry 50g",
+    "image": "https://m.media-amazon.com/images/I/71XW8mAPdhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B01N9VFQ48",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B01NA7VLNL",
     "brand": "Garden of Life",
     "name": "Garden of Life Raw Organic Fit Vanilla Flavor Vegan Protein Powder – 28g Plant Based Powder for Weight Management, Raw Protein, Probiotics & Fiber, Non-GMO, Gluten-Free, Vegan, 20 Servings",
@@ -39076,24 +39212,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B06X9VGMRY",
-    "brand": "Firestone Walker",
-    "name": "IPA Union Jack, 6pk, 12 Fl Oz Cans",
-    "image": "https://m.media-amazon.com/images/I/8186og2MrFL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B06X9VGMRY",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B06XD2Q3JY",
     "brand": "SIERRA NEVADA",
     "name": "Sierra Nevada, Ale Pale, 12pk, 12 Fl Oz Cans",
@@ -39148,11 +39266,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B06XDD24JQ",
+    "asin": "B06XDG16VC",
     "brand": "Annie's Homegrown",
-    "name": "Annie's Organic Cheddar Bunnies Baked Snack Crackers, 12 oz., 12 Pouches",
-    "image": "https://m.media-amazon.com/images/I/81KvAeGApyL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XDD24JQ",
+    "name": "Annie's Organic Chocolate Chip Cookie Bites, 10 Pouches, 10.5 oz",
+    "image": "https://m.media-amazon.com/images/I/81BN0MiE2bL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XDG16VC",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -39166,11 +39284,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B06XDG16VC",
-    "brand": "Annie's Homegrown",
-    "name": "Annie's Organic Chocolate Chip Cookie Bites, 10 Pouches, 10.5 oz",
-    "image": "https://m.media-amazon.com/images/I/81BN0MiE2bL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XDG16VC",
+    "asin": "B06XG9QJLM",
+    "brand": "New Chapter",
+    "name": "New Chapter Every Woman's One Daily 55+ - Multivitamin for Women - Supports Immune, Bone & Vision Health* - Gentle on the Stomach - Non-GMO, Gluten Free, Dairy Free, Vegetarian & Kosher - 48 Tablets",
+    "image": "https://m.media-amazon.com/images/I/61s0RXukWGL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XG9QJLM",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -39204,16 +39322,17 @@
   },
   {
     "asin": "B06XGCL6QJ",
-    "name": "New Chapter Every Woman's One Daily 55+ - Multivitamin for Women - Supports Immune, Bone & Vision Health* - Gentle on the Stomach - Non-GMO, Gluten Free, Dairy Free, Vegetarian & Kosher - 72 Tablets",
     "brand": "New Chapter",
-    "variation": "4 Sizes, 1 Pattern Name",
-    "image": "https://m.media-amazon.com/images/I/61zZ9iO7AML._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/new-chapter-new-chapter-every-woman-s-one-daily-55-multivitamin-for-women-supports-immune-bone-vision-health-gentle-on-the-stomach-non-gmo-gluten-free-dairy-free-vegetarian-kosher-72-tablets-b06xgcl6qj?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "New Chapter Every Woman's One Daily 55+ - Multivitamin for Women - Supports Immune, Bone & Vision Health* - Gentle on the Stomach - Non-GMO, Gluten Free, Dairy Free, Vegetarian & Kosher - 72 Tablets",
+    "image": "https://m.media-amazon.com/images/I/61zZ9iO7AML.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XGCL6QJ",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "variation": "4 Sizes, 1 Pattern Name",
     "available_store_ids": [
       "10328"
     ],
@@ -39221,11 +39340,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B06XRC3B6M",
-    "brand": "Vital Proteins",
-    "name": "Vital Proteins Collagen Peptide Protein Powder, 10 OZ",
-    "image": "https://m.media-amazon.com/images/I/81YfeNwHSsL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XRC3B6M",
+    "asin": "B06XPK3Q4C",
+    "brand": "Nordic Naturals",
+    "name": "Nordic Naturals Vitamin D3 + K2 Gummies, Pomegranate - 60 Gummies - 1000 IU Vitamin D3 + 45 mcg K2 - Great Taste - Bone Health, Promotes Healthy Muscle Function - Non-GMO - 60 Servings",
+    "image": "https://m.media-amazon.com/images/I/51G++Vnj7GL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XPK3Q4C",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -39263,6 +39382,24 @@
     "name": "Heinz Organic Yellow Mustard (20 oz Bottle)",
     "image": "https://m.media-amazon.com/images/I/71iNDByzp8L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B06XS1KXNZ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B06XS2TKTB",
+    "brand": "Nordic Naturals",
+    "name": "Nordic Naturals Ultimate Omega Mini D3, Lemon Flavor - 60 Mini Soft Gels - 1120 mg Omega-3 + 1000 IU Vitamin D3 - EPA & DHA - Promotes Brain & Heart Health - 30 Servings",
+    "image": "https://m.media-amazon.com/images/I/61wQRegSbyL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B06XS2TKTB",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -39425,6 +39562,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0716L2C1D",
+    "brand": "Primal Kitchen",
+    "name": "Primal Kitchen Caesar Salad Dressing & Marinade made with Avocado Oil, Whole30 Approved, Paleo Friendly, and Keto Certified, 8 Fluid Ounces",
+    "image": "https://m.media-amazon.com/images/I/71Qv2by8+DL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0716L2C1D",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B071VLWWZ9",
     "brand": "Epic",
     "name": "Epic Snack Strips, Wagyu Beef Steak, 0.8 oz. (1 Count)",
@@ -39526,6 +39681,7 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
+    "variation": "3 Flavors, 3 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -39538,6 +39694,24 @@
     "name": "Natures Path Granola Coconut Cashew Butter, 11 oz",
     "image": "https://m.media-amazon.com/images/I/81yiRfdEzeL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B072N4BB6F",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B072W8GXP5",
+    "brand": "Beekeeper's Naturals",
+    "name": "Beekeeper's Naturals - 100% Raw Bee Pollen Granules, Natural Preserved Enzymes, Source of Vitamin B, Minerals, Amino Acids & Protein - Paleo & Keto Friendly, Gluten Free (5.2 oz)",
+    "image": "https://m.media-amazon.com/images/I/61g6AfW5rLL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B072W8GXP5",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -39606,16 +39780,16 @@
   },
   {
     "asin": "B074H5ZK94",
-    "name": "Organic Mozzarella Shred, 16 Ounce",
     "brand": "365 by Whole Foods Market",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71SbEKVdQhL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/365-by-whole-foods-market-organic-mozzarella-shred-16-ounce-b074h5zk94?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Organic Mozzarella Shred, 16 Ounce",
+    "image": "https://m.media-amazon.com/images/I/71SbEKVdQhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B074H5ZK94",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -39787,24 +39961,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B074VBCLT8",
-    "brand": "Changing Seas",
-    "name": "Salmon Cold Smoked, 4 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71ZHs5u1tgL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B074VBCLT8",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B074VDFD62",
     "brand": "Wellshire Farms",
     "name": "Wellshire Farms 8 oz Organic Uncured Bacon – Made from Organic Pork with Sea Salt & Celery Powder, No Nitrates or Nitrites Added",
@@ -39824,16 +39980,17 @@
   },
   {
     "asin": "B074Y2PYQQ",
-    "name": "Seggiano Organic Fusilli Pasta, 13.2 OZ",
     "brand": "Seggiano",
-    "variation": "2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/71L-ezxJEVL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/seggiano-seggiano-organic-fusilli-pasta-13-2-oz-b074y2pyqq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Seggiano Organic Fusilli Pasta, 13.2 OZ",
+    "image": "https://m.media-amazon.com/images/I/71L-ezxJEVL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B074Y2PYQQ",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "variation": "2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -39878,16 +40035,16 @@
   },
   {
     "asin": "B075LYR6Y4",
-    "brand": "Stonyfield Organic",
     "name": "Stonyfield Organic Kids Blueberry Lowfat Yogurt, 3.5 oz. Pouch, Single Serve – Includes Live Active Cultures",
-    "image": "https://m.media-amazon.com/images/I/71+r2npAjBL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B075LYR6Y4",
-    "current_price": null,
+    "brand": "Stonyfield Organic",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71+r2npAjBL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/stonyfield-organic-stonyfield-organic-kids-blueberry-lowfat-yogurt-3-5-oz-pouch-single-serve-includes-live-active-cultures-b075lyr6y4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -39896,16 +40053,16 @@
   },
   {
     "asin": "B076CKWRYD",
-    "name": "Perfect Bar Gluten-Free Dark Chocolate Chip Peanut Butter Refrigerated Protein Bar, 2.3 oz",
     "brand": "Perfect Snacks",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71PqcgpIc7L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/perfect-snacks-perfect-bar-gluten-free-dark-chocolate-chip-peanut-butter-refrigerated-protein-bar-2-3-oz-b076ckwryd?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Perfect Bar Gluten-Free Dark Chocolate Chip Peanut Butter Refrigerated Protein Bar, 2.3 oz",
+    "image": "https://m.media-amazon.com/images/I/71PqcgpIc7L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B076CKWRYD",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -40003,6 +40160,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B077F8L47Z",
+    "brand": "Epic",
+    "name": "Epic Artisanal Bone Broth, Homestyle Savory Chicken, 14 oz.",
+    "image": "https://m.media-amazon.com/images/I/81lleGqIZcL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B077F8L47Z",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B077GCSMX4",
     "brand": "SKINNYDIPPED",
     "name": "SkinnyDipped Dark Chocolate Cocoa Almonds, Healthy Snack, Plant Protein, Gluten Free, 3.5 Oz Resealable Bag, Pack of 1",
@@ -40058,29 +40233,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07811PV59",
-    "brand": "Roth",
-    "name": "Horseradish Havarti, 6 Ounce",
-    "image": "https://m.media-amazon.com/images/I/91SFvN2PSaL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07811PV59",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B078125NXR",
-    "brand": "Fresh Produce (Brands May Vary)",
-    "name": "Melon Honeydew Gold Conventional, 1 Each",
-    "image": "https://m.media-amazon.com/images/I/41zzj8EThXL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B078125NXR",
+    "asin": "B07811CF7S",
+    "brand": "Gusto",
+    "name": "Gusto Calabrese and Asiago Snack Pack, 2 OZ",
+    "image": "https://m.media-amazon.com/images/I/81fR+xL4VbL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07811CF7S",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -40131,17 +40288,16 @@
   },
   {
     "asin": "B07813N6LQ",
-    "brand": "poppi",
     "name": "Poppi Sparkling Prebiotic Soda Beverage with Apple Cider Vinegar, Seltzer Water and Fruit Juice, Strawberry Lemon Flavor, 12 Fl Oz, 1 Count, Packaging May Vary",
-    "image": "https://m.media-amazon.com/images/I/71IZJUUvRuL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07813N6LQ",
-    "current_price": null,
+    "brand": "poppi",
+    "variation": "15 Flavors, 5 Sizes",
+    "image": "https://m.media-amazon.com/images/I/71IZJUUvRuL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/poppi-poppi-sparkling-prebiotic-soda-beverage-with-apple-cider-vinegar-seltzer-water-and-fruit-juice-strawberry-lemon-flavor-12-fl-oz-1-count-packaging-may-vary-b07813n6lq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
-    "variation": "15 Flavors, 5 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -40208,24 +40364,6 @@
     "name": "Ducktrap River Smoked Sockeye Salmon, 8 OZ",
     "image": "https://m.media-amazon.com/images/I/81vFUAMuxZL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07814J83H",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0787VGWSG",
-    "brand": "Somerdale",
-    "name": "Somerdale Coopers Hill",
-    "image": "https://m.media-amazon.com/images/I/61Ii6b2f2uL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0787VGWSG",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -40401,6 +40539,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B078B59WTX",
+    "brand": "North Country Smokehouse",
+    "name": "North Country Smokehouse Applewood Smoked Pork Bacon, 12 Ounce",
+    "image": "https://m.media-amazon.com/images/I/61ZJB6gtiiL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B078B59WTX",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B078B9JPN3",
     "brand": "Artisola",
     "name": "Artisola Organic Portabella Mushroom Ravioli, 8 OZ",
@@ -40478,6 +40634,24 @@
     "name": "Annie's Organic Vegan Mac Shells and Sweet Potato Pumpkin, Pasta and Sauce, 6 oz",
     "image": "https://m.media-amazon.com/images/I/81UG8bGZcsL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B078HM91WM",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B078K4XJR1",
+    "brand": "SO DELICIOUS",
+    "name": "SO DELICIOUS Dessert Coconut Milk Bar Mini Chocolate Vanilla No Sugar Added, 2.3 Fl Oz, 4 Count",
+    "image": "https://m.media-amazon.com/images/I/714rbSzV3HL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B078K4XJR1",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -40635,6 +40809,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0795ZZ58Y",
+    "brand": "Flow",
+    "name": "Flow Alkaline Spring Water, 100% Naturally Alkaline, 1L (33.8 Fl Oz)",
+    "image": "https://m.media-amazon.com/images/I/61BxLa+QulL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0795ZZ58Y",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B079JMTDH4",
     "name": "Organic Gold Kiwi, 1 lb",
     "brand": "Fresh Produce (Brands May Vary)",
@@ -40646,42 +40838,6 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B079K77D2W",
-    "brand": "Enzymedica",
-    "name": "Apple Cider Vinegar, Healthy Weight and Digestive Support, 60 Count",
-    "image": "https://m.media-amazon.com/images/I/71DqXLOPUUS.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B079K77D2W",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B079K9VLRS",
-    "brand": "Sixpoint Brewery",
-    "name": "Sixpoint, IPA Resin, 6pk, 12 Fl Oz Cans",
-    "image": "https://m.media-amazon.com/images/I/81fz8y0zGrL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B079K9VLRS",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -40712,6 +40868,24 @@
     "name": "Neal's Yard, Keens Farmhouse Cheddar",
     "image": "https://m.media-amazon.com/images/I/616-KDj2sjL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B079N838N4",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B079N9JQ2B",
+    "brand": "Roli Roti",
+    "name": "Roli Roti Organic Beef Bone Broth, 24 FZ",
+    "image": "https://m.media-amazon.com/images/I/71NHS1JOKvL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B079N9JQ2B",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -40959,6 +41133,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07BBYNQTB",
+    "brand": "Red Vines",
+    "name": "Licorice Twists Mixed Berry, 4 Ounce",
+    "image": "https://m.media-amazon.com/images/I/81VK+D+g22L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07BBYNQTB",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07BDNY5DV",
     "brand": "Mitica",
     "name": "Mitica Cabra Romero Rosemary Goat",
@@ -41103,11 +41295,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07C6P9Y1H",
+    "asin": "B07CCGCN8X",
     "brand": "The Good Crisp Company",
-    "name": "Chips Stacked Original, 5.64 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71BKOw-c8aL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07C6P9Y1H",
+    "name": "The Good Crisp Company Sour Cream & Onion Gluten-Free Potato Chips, 5.6 Ounce (Pack of 1), Non-GMO & Allergen-Friendly Snacks",
+    "image": "https://m.media-amazon.com/images/I/71kIrHkxBmL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07CCGCN8X",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -41175,6 +41367,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07CZGVXKY",
+    "brand": "Garden of Life",
+    "name": "Garden of Life Probiotics for Women and Men - Raw Probiotics Colon Care 50 Billion CFU and Enzymes, Shelf Stable Once Daily Acidophilus Probiotic for Regularity and Immune Health Support, 30 Capsules",
+    "image": "https://m.media-amazon.com/images/I/81z7be4DjKL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07CZGVXKY",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07D6SPV33",
     "name": "Fragrance Free Kid's Sunscreen SPF 50, 5.3 Ounce",
     "brand": "365 by Whole Foods Market",
@@ -41193,11 +41403,47 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07D6V7NLV",
+    "brand": "Agour",
+    "name": "Agour 6 Month Aged Ossau Iraty",
+    "image": "https://m.media-amazon.com/images/I/51c+X8oLkZL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07D6V7NLV",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07D772W3G",
     "brand": "Renew Life",
     "name": "Renew Life Ultimate Flora Womens Probiotic and Prebiotic with Cranberry | 20 Billion CFU | 60 Vegetarian Capsules | Supports Vaginal & Urinary Health | Dairy, Soy and Gluten-Free Supplement",
     "image": "https://m.media-amazon.com/images/I/71HsZL8H9oL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07D772W3G",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07D77HWQW",
+    "brand": "Ark Foods",
+    "name": "Ark Foods Shishito Peppers Party Pack, 12 OZ",
+    "image": "https://m.media-amazon.com/images/I/81InwDf2rPL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07D77HWQW",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -41270,24 +41516,6 @@
     "name": "Organic Unsweetened Ketchup, 11.3 oz",
     "image": "https://m.media-amazon.com/images/I/719jFIPxh4L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07DL78BF5",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B07DPV15K3",
-    "brand": "La Casearia Carpenedo",
-    "name": "La Casearia Carpenedo 61 Cranberry Blue",
-    "image": "https://m.media-amazon.com/images/I/51WqA4XRlnL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07DPV15K3",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -41679,24 +41907,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07FXNVM14",
-    "brand": "Jacks Abby Brewing",
-    "name": "Lager House, 4pk, 16 Fl Oz Cans",
-    "image": "https://m.media-amazon.com/images/I/81ZGdVUsbLL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FXNVM14",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B07FXYSK9D",
     "brand": "Bilinski",
     "name": "Organic Mild Italian Chicken Sausage, 12 Ounce",
@@ -41734,16 +41944,17 @@
   },
   {
     "asin": "B07FYCRJ2R",
-    "name": "Flow Water, Organic Cucumber Mint Spring Water, 16.9 Fl Oz, Packaging may vary",
     "brand": "JP Secure",
-    "variation": "2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/61y1+g5Q-BL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/jp-secure-flow-water-organic-cucumber-mint-spring-water-16-9-fl-oz-packaging-may-vary-b07fycrj2r?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Flow Water, Organic Cucumber Mint Spring Water, 16.9 Fl Oz, Packaging may vary",
+    "image": "https://m.media-amazon.com/images/I/61y1+g5Q-BL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYCRJ2R",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "variation": "2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -41751,11 +41962,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07FYLL14P",
-    "brand": "Fruits de Mer",
-    "name": "Fruits de Mer Marinated Mussels with Garlic, 7 OZ",
-    "image": "https://m.media-amazon.com/images/I/81LKe2y8aoL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYLL14P",
+    "asin": "B07FYQCV5W",
+    "brand": "Gusto",
+    "name": "Gusto Sopressata Cheddar Snack Pack, 2 Oz",
+    "image": "https://m.media-amazon.com/images/I/81IJqBV032L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYQCV5W",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -41810,24 +42021,6 @@
     "name": "Organic Packham Pear",
     "image": "https://m.media-amazon.com/images/I/7109zNpqpbL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYYB639",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B07FYZMNCG",
-    "brand": "Wellshire Farms",
-    "name": "Wellshire Farms Virginia Ham",
-    "image": "https://m.media-amazon.com/images/I/51c4WIpvjOL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07FYZMNCG",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -41949,6 +42142,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07G33VGJM",
+    "brand": "Bio-K Plus",
+    "name": "Bio-K Plus Organic Blueberry Fermented Rice Probiotic Sgl, 3.5 FZ",
+    "image": "https://m.media-amazon.com/images/I/71gnWeAW3wL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07G33VGJM",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07G4GK9P1",
     "brand": "Rose All Day",
     "name": "Rose All Day Rose, 750 ML",
@@ -41972,24 +42183,6 @@
     "name": "Flow Alkaline Spring Water, 100% Naturally Alkaline,1L (Pack of 6)",
     "image": "https://m.media-amazon.com/images/I/61VfopHT3QL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07G4MD3MD",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B07G4RFW9K",
-    "brand": "Orlana",
-    "name": "Orlana Vinho Verde, 750 mL",
-    "image": "https://m.media-amazon.com/images/I/61S2b3A43nL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07G4RFW9K",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -42093,17 +42286,35 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07HH7BWWT",
-    "name": "Grapefruit Star Conventional, 1 Each",
-    "brand": "Fresh Produce (Brands May Vary)",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/41Z5TFyDjhL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-brands-may-vary-grapefruit-star-conventional-1-each-b07hh7bwwt?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "asin": "B07H6BYRD4",
+    "brand": "Beths Farm Kitchen",
+    "name": "Beths Farm Kitchen Lemon Curd, 8 OZ",
+    "image": "https://m.media-amazon.com/images/I/81xytTuOneL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07H6BYRD4",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07HH7BWWT",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "name": "Grapefruit Star Conventional, 1 Each",
+    "image": "https://m.media-amazon.com/images/I/41Z5TFyDjhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07HH7BWWT",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -42129,11 +42340,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07JVPQZ69",
-    "brand": "BJORNQORN",
-    "name": "Bjornqorn, Popcorn Sun Popped Classic, 3 Ounce",
-    "image": "https://m.media-amazon.com/images/I/81YXivdiTtL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07JVPQZ69",
+    "asin": "B07HMC7VGJ",
+    "brand": "Seafood",
+    "name": "Halibut Fillet",
+    "image": "https://m.media-amazon.com/images/I/61xb0xSwMzL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07HMC7VGJ",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -42147,11 +42358,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07JZ36HKR",
-    "brand": "Spindrift",
-    "name": "Sparkling Water, Lemon, 12 oz, (pack of 8)",
-    "image": "https://m.media-amazon.com/images/I/711YE+T9PlL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07JZ36HKR",
+    "asin": "B07JVPQZ69",
+    "brand": "BJORNQORN",
+    "name": "Bjornqorn, Popcorn Sun Popped Classic, 3 Ounce",
+    "image": "https://m.media-amazon.com/images/I/81YXivdiTtL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07JVPQZ69",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -42291,17 +42502,18 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07MKP36Q9",
-    "brand": "Vita Coco",
-    "name": "Vita Coco Extra Coconut, Coconut Water, 33.8 Fl Oz",
-    "image": "https://m.media-amazon.com/images/I/71T0cVgO40L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07MKP36Q9",
+    "asin": "B07MWJLWZJ",
+    "brand": "Badger",
+    "name": "Badger Kids Mineral Sunscreen Cream SPF 40, 98% Organic Ingredients, Zinc Oxide Sunscreen for Kids Face & Body, Water Resistant, Reef Friendly, Hawaii Approved Broad Spectrum Sunblock, 2.9 fl oz",
+    "image": "https://m.media-amazon.com/images/I/61oAyh17a3L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07MWJLWZJ",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
     "availability": null,
+    "variation": "3 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -42309,17 +42521,17 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07MWJLWZJ",
-    "name": "Badger Kids Mineral Sunscreen Cream SPF 40, 98% Organic Ingredients, Zinc Oxide Sunscreen for Kids Face & Body, Water Resistant, Reef Friendly, Hawaii Approved Broad Spectrum Sunblock, 2.9 fl oz",
-    "brand": "Badger",
-    "variation": "3 Sizes",
-    "image": "https://m.media-amazon.com/images/I/61oAyh17a3L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/badger-badger-kids-mineral-sunscreen-cream-spf-40-98-organic-ingredients-zinc-oxide-sunscreen-for-kids-face-body-water-resistant-reef-friendly-hawaii-approved-broad-spectrum-sunblock-2-9-fl-oz-b07mwjlwzj?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "asin": "B07N1PTG64",
+    "brand": "Kite Hill",
+    "name": "Kite Hill Tortellini, 9 Oz",
+    "image": "https://m.media-amazon.com/images/I/81nZqkpOdLL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07N1PTG64",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -42353,7 +42565,7 @@
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
-    "discount": null,
+    "discount": "Chocolove Almonds, Toffee & Sea Salt Dark Chocolate Bar, 3.2 OZ",
     "unit_price": null,
     "availability": null,
     "available_store_ids": [
@@ -42435,24 +42647,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07NQPWTMC",
-    "brand": "Meat (Suppliers May Vary)",
-    "name": "Pork Loin Chop Bone-In",
-    "image": "https://m.media-amazon.com/images/I/61bZyncKWdL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07NQPWTMC",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B07NRBP9PL",
     "brand": "GREYSTON BAKERY",
     "name": "Greyston Bakery Cinnamon Roll Vegan Blondie - Gourmet Food Gift - Preservative Free Certified Kosher - 1 unit Individually Wrapped 2.5 oz",
@@ -42507,11 +42701,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07NRJ7LJV",
-    "brand": "Beths Farm Kitchen",
-    "name": "Beths Farm Kitchen Wild Berry Jam, 8 OZ",
-    "image": "https://m.media-amazon.com/images/I/81ES+tMp+sL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07NRJ7LJV",
+    "asin": "B07NRQZ5ZH",
+    "brand": "Bisousweet Confections",
+    "name": "Bisousweet Confections Cinnamon Doughnut Muffins, 9 OZ",
+    "image": "https://m.media-amazon.com/images/I/91glFUJpEZL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07NRQZ5ZH",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -42615,11 +42809,47 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07PCGSG2K",
+    "name": "SkinnyDipped Dark Chocolate Peanut Butter Almonds, Healthy Snack, Plant Protein, Gluten Free, 3.5 oz Resealable Bags, Pack of 1",
+    "brand": "SKINNYDIPPED",
+    "variation": "2 Flavors, 1 Sizes",
+    "image": "https://m.media-amazon.com/images/I/71ZlIe6FgFL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/skinnydipped-skinnydipped-dark-chocolate-peanut-butter-almonds-healthy-snack-plant-protein-gluten-free-3-5-oz-resealable-bags-pack-of-1-b07pcgsg2k?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07PDHTT8N",
     "brand": "Manitoba Harvest",
     "name": "Manitoba Harvest Hemp Hearts, Shelled Hemp Seeds - 24oz - 10g Plant Protein & 12g Omega 3 & 6 per 30g serving - Easy to Digest with 9 Amino Acids - Gluten Free, Non-GMO Project Verified",
     "image": "https://m.media-amazon.com/images/I/718TSHhfnyL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07PDHTT8N",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07PJTJW7H",
+    "brand": "Tillamook",
+    "name": "Tillamook Kosher Medium Cheddar Bar, 8 OZ",
+    "image": "https://m.media-amazon.com/images/I/712vnFagetL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07PJTJW7H",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -42674,24 +42904,6 @@
     "name": "Nordic Naturals Baby’s Nordic Flora Probiotic Powder, Unflavored - 30 Packets - 4 Billion CFU - Digestive Health & Immune Support for Babies & Toddlers (6 Months to 3 Years) - 30 Servings",
     "image": "https://m.media-amazon.com/images/I/61D6MDLofxL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07PN733FR",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B07PPJL4FS",
-    "brand": "Picnic Gourmet Spreads",
-    "name": "Spread Herbed Goat Cheese, 8 Ounce",
-    "image": "https://m.media-amazon.com/images/I/81M0OqpJNwL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07PPJL4FS",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -42795,6 +43007,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07Q6PHT5C",
+    "brand": "Tonnino",
+    "name": "Tonnino Yellowfin Tuna Fillets in Olive Oil, 6.7 OZ",
+    "image": "https://m.media-amazon.com/images/I/81oNZg6aB7L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07Q6PHT5C",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07Q97HRH8",
     "brand": "BIXBI",
     "name": "BIXBI Liberty Grain-Free Dry Dog Food, Chicken Recipe – Fresh Meat, High Protein, No Meat Meals – USA Made, 4 lbs",
@@ -42836,24 +43066,6 @@
     "name": "Organic Sage Chicken Breakfast Sausage, 12 Ounce",
     "image": "https://m.media-amazon.com/images/I/81nwhDg0LOL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07QGXKTYB",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B07QJ32S2B",
-    "brand": "Bilinski",
-    "name": "Organic Apple Chicken Breakfast Sausage, 12 Ounce",
-    "image": "https://m.media-amazon.com/images/I/81QyGwVHXML.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B07QJ32S2B",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -43068,6 +43280,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B07RCMX6V7",
+    "brand": "The New Primal",
+    "name": "Snack Mates by Turkey Stick, All-Natural Turkey, High Protein and Low Sugar Kids Snack, Certified Paleo, Certified Gluten-Free, Lunchbox Friendly, 0.5 oz, Pack of 5",
+    "image": "https://m.media-amazon.com/images/I/81b7OXuWZyL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07RCMX6V7",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B07RCNGXJW",
     "brand": "Primal Kitchen",
     "name": "Primal Kitchen Organic No Soy Teriyaki Sauce & Marinade, 8.5 OZ",
@@ -43091,6 +43321,24 @@
     "name": "Heirloom Cheddar Cheese Balls by 4.5 Oz",
     "image": "https://m.media-amazon.com/images/I/71R23PuiDEL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07RK583MS",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07RSQVHYD",
+    "brand": "Ste Venture",
+    "name": "STE VENTURE Rose, 750 ML",
+    "image": "https://m.media-amazon.com/images/I/61cU6idfe9L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07RSQVHYD",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -43145,6 +43393,24 @@
     "name": "Ellenos Yogurt, Mango, 5.3 Oz",
     "image": "https://m.media-amazon.com/images/I/71Y8mOPiLsL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07S98HH62",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07SCHCB3T",
+    "brand": "Ellenos",
+    "name": "Ellenos Yogurt, Lemon Curd, 5.3 Oz",
+    "image": "https://m.media-amazon.com/images/I/71WnRp-BwyL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07SCHCB3T",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -43230,17 +43496,54 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B07TC852VV",
-    "name": "FLOW WATER Organic Blackberry Hibiscus Alkaline Water, 16.9 FZ",
-    "brand": "Flow",
-    "variation": "3 Flavors, 2 Sizes",
-    "image": "https://m.media-amazon.com/images/I/618peWGhIML._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/flow-flow-water-organic-blackberry-hibiscus-alkaline-water-16-9-fz-b07tc852vv?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "asin": "B07T883TRN",
+    "brand": "Burt's Bees",
+    "name": "Burt’s Bees Micellar Rose Water Facial Towelettes, 100% Plant Based Cloth; 99% Natural Origin; Remove Makeup, Cleanse, Hydrate; No Greasy, Oily Residue; All Skin Types (Pack May Vary)",
+    "image": "https://m.media-amazon.com/images/I/71Te5plkQOL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07T883TRN",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07TC852VV",
+    "brand": "Flow",
+    "name": "FLOW WATER Organic Blackberry Hibiscus Alkaline Water, 16.9 FZ",
+    "image": "https://m.media-amazon.com/images/I/618peWGhIML.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07TC852VV",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "variation": "3 Flavors, 2 Sizes",
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07TLFXQFF",
+    "brand": "Wonderful Pistachios",
+    "name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 5.5 Ounce Resealable Bag, Protein Snacks, Gluten Free Travel Snacks, Healthy Snack",
+    "image": "https://m.media-amazon.com/images/I/81eGcpq5zhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07TLFXQFF",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -43267,16 +43570,16 @@
   },
   {
     "asin": "B07TRQHH8S",
-    "name": "Strong Roots Cauliflower Hash Browns, 7 Frozen Patties, Vegan & Gluten Free, No Sugar, Low in Salt & Saturated Fat",
     "brand": "STRONG ROOTS",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/81aFxN6CbKL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/strong-roots-strong-roots-cauliflower-hash-browns-7-frozen-patties-vegan-gluten-free-no-sugar-low-in-salt-saturated-fat-b07trqhh8s?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Strong Roots Cauliflower Hash Browns, 7 Frozen Patties, Vegan & Gluten Free, No Sugar, Low in Salt & Saturated Fat",
+    "image": "https://m.media-amazon.com/images/I/81aFxN6CbKL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07TRQHH8S",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -43289,6 +43592,24 @@
     "name": "Ellenos Yogurt, Passion Fruit, 5.3 Oz",
     "image": "https://m.media-amazon.com/images/I/71g9MTo8rOL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07TXDVZPJ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07V1YVH2M",
+    "brand": "HUMBLE SIMPLE AND TRUE.",
+    "name": "Humble Aluminum-Free Deodorant for Women & Men, Bergamot & Ginger - Baking Soda-Free Natural Deodorant Stick for Sensitive Skin with Essential Oils for Long-Lasting Odor Control, 2.5 Oz",
+    "image": "https://m.media-amazon.com/images/I/71UHb204l8L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07V1YVH2M",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -43331,6 +43652,60 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07VMHMS34",
+    "brand": "Van Leeuwen",
+    "name": "Van Leeuwen Premium Vanilla Bean French Ice Cream, 14 oz (Frozen)",
+    "image": "https://m.media-amazon.com/images/I/71Nv9c8dvoL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07VMHMS34",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07VRSBFSW",
+    "brand": "Van Leeuwen",
+    "name": "Van Leeuwen Premium Honeycomb French Ice Cream, 14 oz (Frozen)",
+    "image": "https://m.media-amazon.com/images/I/51Qtdjh4rWL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07VRSBFSW",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B07VVRYZS3",
+    "brand": "Van Leeuwen",
+    "name": "Van Leeuwen Premium Cookies & Cream French Ice Cream, 14 oz (Frozen)",
+    "image": "https://m.media-amazon.com/images/I/71x8RpNeN2L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B07VVRYZS3",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -44439,6 +44814,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B086G5HQVL",
+    "brand": "Annie's Homegrown",
+    "name": "Annie's Organic Bunny Grahams Snacks, Neapolitan, 7.5 oz",
+    "image": "https://m.media-amazon.com/images/I/81f-Kv1ADxL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B086G5HQVL",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B086G94P8F",
     "brand": "LÄRABAR",
     "name": "Larabar Minis Peanut Butter Chocolate Chip, Gluten Free Vegan Fruit and Nut Bars, 7.8 oz, 10 Ct",
@@ -44548,6 +44941,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B088B493SX",
+    "brand": "Chosen Foods",
+    "name": "Chosen Foods Avocado Oil Spray, 4.7 OZ",
+    "image": "https://m.media-amazon.com/images/I/61a27d6IM9L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B088B493SX",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B089CFLDZR",
     "brand": "New Chapter",
     "name": "New Chapter Elderberry Kids Syrup, Advanced Immune Defense for Ages 2+, 64x Concentrated Elderberry, Sweetened with Throat-Soothing Grade A Honey, Non-GMO Project Verified, 4 Fl Ounce",
@@ -44571,24 +44982,6 @@
     "name": "Primal Kitchen Unsweetened Cocktail Sauce, Organic, 8.5 Oz",
     "image": "https://m.media-amazon.com/images/I/71loe7Irw0L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B089DP97MW",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B089RCGL42",
-    "brand": "Epic",
-    "name": "Epic Provisions Beef Sea Salt & Pepper Bar, 1.3 Oz",
-    "image": "https://m.media-amazon.com/images/I/712nimnAtRL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B089RCGL42",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -44746,24 +45139,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B08CBWZZR4",
-    "brand": "Renew Life",
-    "name": "PROBIOTIC 50 Plus 30B",
-    "image": "https://m.media-amazon.com/images/I/81huMyH5heL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZZR4",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B08CBX171Q",
     "name": "Renew Life Women's Probiotic Capsules, Supports pH Balance for Women, Vaginal, Urinary, Digestive and Immune Health, L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 90 Billion CFU - 60 Ct",
     "brand": "Renew Life",
@@ -44872,24 +45247,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B08CBZXQ5Z",
-    "brand": "Applegate",
-    "name": "Organic Uncured Beef Hot Dogs, 10 OZ",
-    "image": "https://m.media-amazon.com/images/I/91PY3h0xzzL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBZXQ5Z",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B08CS1PLY5",
     "brand": "FitJoy",
     "name": "Fitjoy Pretzels Tngy Dijn Mstrd 4.5 OZ",
@@ -44931,42 +45288,6 @@
     "name": "Smallhold Fresh Organic Lion’s Mane Mushroom – 8oz | Locally Grown Gourmet Mushroom | Ready to Cook, Nutrient-Dense Superfood",
     "image": "https://m.media-amazon.com/images/I/712XAFSZqtL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08D1YQ2KV",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B08DX4K9Z1",
-    "brand": "Saffron Road",
-    "name": "Saffron Road Frozen Coconut Curry Chicken – High Protein, Seed Oil Free, Chickens Raised with No Antibiotics, No Artificial Ingredients, Gluten-Free – 10 Ounce",
-    "image": "https://m.media-amazon.com/images/I/91akXryMDoL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08DX4K9Z1",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B08DXBH4H9",
-    "brand": "Saffron Road",
-    "name": "Saffron Road Frozen Vegetable Biryani – Seed Oil Free, No Artificial Ingredients, Gluten-Free, Vegan – 10 Ounce",
-    "image": "https://m.media-amazon.com/images/I/91zr79+Qb+L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08DXBH4H9",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -45070,24 +45391,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B08G6Q4S8B",
-    "brand": "Sweet Grass Dairy",
-    "name": "Spread Pimento Cheese, 6 Ounce",
-    "image": "https://m.media-amazon.com/images/I/81w7GtKlemL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08G6Q4S8B",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B08GZ7QGHH",
     "brand": "De La Calle",
     "name": "De La Calle Organic Traditional Pineapple Spice Tepache, 12 FZ",
@@ -45129,6 +45432,24 @@
     "name": "Good Day Chocolate Melatonin for Adults [ 80 Count ] - Fair Trade Non-GMO Chocolate with Chamomile and Melatonin 3 mg - Adult Melatonin, Adult Natural Sleep Aid Supplement",
     "image": "https://m.media-amazon.com/images/I/71ZfogMpboL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08H1RS63T",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B08HJLD2RH",
+    "brand": "Primal Kitchen",
+    "name": "Buffalo Sauce, 8.5 Ounce",
+    "image": "https://m.media-amazon.com/images/I/71ZDFPlB88L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08HJLD2RH",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -45298,7 +45619,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "9 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -45306,17 +45626,17 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B08JPYGPMT",
-    "name": "Mild Guacamole with No Tomato Small",
-    "brand": "Whole Foods Market",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/514569NyejL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/whole-foods-market-mild-guacamole-with-no-tomato-small-b08jpygpmt?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "asin": "B08J97H61K",
+    "brand": "MUSH",
+    "name": "MUSH Overnight Oats - Blueberry - Good Source of Fiber, Non-GMO, Dairy Free, Gluten Free, 5oz",
+    "image": "https://m.media-amazon.com/images/I/511rRiQM2NL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08J97H61K",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -45432,11 +45752,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B08ML6GMY4",
-    "brand": "Snap Supplements",
-    "name": "Snap Supplements Heart Health Support Supplement - Botanical Support for Heart Health, Healthy Circulation, and Nitric Oxide Levels, 30-Day Supply, 90 Capsules (Packaging May Vary)",
-    "image": "https://m.media-amazon.com/images/I/71S+IdSMKIL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08ML6GMY4",
+    "asin": "B08LWXPYCZ",
+    "brand": "nutpods",
+    "name": "nutpods® Unsweetened Original Coffee Creamer, dairy-free, 25.4oz",
+    "image": "https://m.media-amazon.com/images/I/617caNdc-aL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08LWXPYCZ",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -45480,7 +45800,7 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "1 Flavors, 7 Sizes",
+    "variation": "1 Flavors, 8 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -45508,16 +45828,16 @@
   },
   {
     "asin": "B08NGCG4V7",
-    "name": "MUSH Overnight Oats - Peanut Butter Protein - 15g of Protein, Good Source of Fiber, Non-GMO, Dairy Free, Gluten Free, 5oz",
     "brand": "MUSH",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/512nLUb7ZtL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/mush-mush-overnight-oats-peanut-butter-protein-15g-of-protein-good-source-of-fiber-non-gmo-dairy-free-gluten-free-5oz-b08ngcg4v7?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "MUSH Overnight Oats - Peanut Butter Protein - 15g of Protein, Good Source of Fiber, Non-GMO, Dairy Free, Gluten Free, 5oz",
+    "image": "https://m.media-amazon.com/images/I/512nLUb7ZtL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08NGCG4V7",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -45651,6 +45971,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B08P4VWLQ8",
+    "brand": "gardein",
+    "name": "Gardein Ultimate Plant-Based Chick'n Filets, Vegan, Frozen, 15 oz.",
+    "image": "https://m.media-amazon.com/images/I/51DDYvi2tfL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08P4VWLQ8",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B08P4W54XF",
     "brand": "Organico Bello",
     "name": "Organico Bello Organic Premium Diced Tomatoes, 28 OZ",
@@ -45705,6 +46043,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B08PD1CDC5",
+    "brand": "Teton Waters Ranch",
+    "name": "Teton Waters Ranch 100% Grass-Fed Beef Kielbasa Polish Rope Sausage, Uncured & No Sugar Added, Certified Humane - 12oz",
+    "image": "https://m.media-amazon.com/images/I/71lHX2C2nhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08PD1CDC5",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B08PHFPLTZ",
     "brand": "Cerebelly",
     "name": "Cerebelly Organic Toddler Snack Bars, Carrot Date Smart Bars, 16 Brain-Supporting Nutrients, No Added Sugar, Gluten Free, Nut Free, Kids Snacks, 5 Pack",
@@ -45728,24 +46084,6 @@
     "name": "Cerebelly Organic Baby Food Pouches, Purple Carrot Blueberry Dairy-Free Smoothies, 16 Nutrients, No Added Sugar, Fiber & Non-GMO, 4oz, 1 Count",
     "image": "https://m.media-amazon.com/images/I/61sJjvFpbhL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08PHLTLGY",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B08PLQ5JTP",
-    "brand": "Ripple",
-    "name": "Ripple Kids Non-Dairy Milk, Vegan, Original, 48 Fl Oz",
-    "image": "https://m.media-amazon.com/images/I/61N39zcWDZL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B08PLQ5JTP",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -45800,6 +46138,24 @@
     "name": "YumEarth Organic Pops Variety Pack, 60 Fruit Flavored Favorites Lollipops, Allergy Friendly, Gluten Free, Non-GMO, Vegan, No Artificial Dyes",
     "image": "https://m.media-amazon.com/images/I/71xfQJmaQqL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08PX626SG",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B08Q5W6KSL",
+    "brand": "OLIPOP",
+    "name": "OLIPOP Sparkling Blackberry Vanilla Tonic, 12 FZ, Shelf Stable",
+    "image": "https://m.media-amazon.com/images/I/71G6hJq5B+L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08Q5W6KSL",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -46210,6 +46566,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B08TPXKJXW",
+    "brand": "LÄRABAR",
+    "name": "Larabar Blueberry Muffin Fruit and Nut Bars, Gluten Free and Vegan, 9.6 oz, 6 Ct",
+    "image": "https://m.media-amazon.com/images/I/71QiZBrvNNL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08TPXKJXW",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B08TSHX913",
     "brand": "Deek Creek",
     "name": "Deer Creek 18 Month Cheddar",
@@ -46372,6 +46746,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B08X3V1RLY",
+    "brand": "Wild Planet",
+    "name": "Wild Planet Ready-To-Eat Wild Tuna White Bean Salad With Organic Chickpeas, Carrots, Red Peppers & Green Olives 5.6oz, Pack Of 1, Packaging May Vary",
+    "image": "https://m.media-amazon.com/images/I/A1vNWDE9ytL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08X3V1RLY",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B08X9LB2F3",
     "brand": "Organic Valley",
     "name": "Organic Valley® Butter (Unsalted) — Organic, Pasture Raised, Non GMO — 4 Sticks — 16 oz",
@@ -46437,7 +46829,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -46446,16 +46837,35 @@
   },
   {
     "asin": "B08Y9B73QB",
-    "name": "Badger Sport Mineral Sunscreen, Reef Safe, SPF 40, 98% Organic with Zinc Oxide, Water Resistant, Hawaii Reef Act 104 Compliant, Unscented & Hypoallergenic, For Sports & Adventures, 2.9 fl oz",
     "brand": "Badger",
-    "variation": "3 Sizes, 1 Style",
-    "image": "https://m.media-amazon.com/images/I/71PoLcIDz9L._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/badger-badger-sport-mineral-sunscreen-reef-safe-spf-40-98-organic-with-zinc-oxide-water-resistant-hawaii-reef-act-104-compliant-unscented-hypoallergenic-for-sports-adventures-2-9-fl-oz-b08y9b73qb?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Badger Sport Mineral Sunscreen, Reef Safe, SPF 40, 98% Organic with Zinc Oxide, Water Resistant, Hawaii Reef Act 104 Compliant, Unscented & Hypoallergenic, For Sports & Adventures, 2.9 fl oz",
+    "image": "https://m.media-amazon.com/images/I/71PoLcIDz9L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08Y9B73QB",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
+    "variation": "3 Sizes, 1 Style",
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B08Z9LSX4V",
+    "brand": "Epic",
+    "name": "EPIC Pink Himalayan and Sea Salt Baked Pork Rinds, Keto Friendly, Protein Snacks, 5 oz",
+    "image": "https://m.media-amazon.com/images/I/81NTSoupAEL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08Z9LSX4V",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -46486,6 +46896,42 @@
     "name": "Sambazon Organic Unsweetened Acai Superfruit Packs, 14.1 OZ",
     "image": "https://m.media-amazon.com/images/I/61LcgedKngL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08ZQDQJM1",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B08ZVHMNPS",
+    "brand": "KIND",
+    "name": "KIND FROZEN Plant Based Frozen Treat Bar, Dark Chocolate Almond Sea Salt & Nut Treat Bars, 5 Pack, 1.6 Oz Bars",
+    "image": "https://m.media-amazon.com/images/I/8188u7jILUL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08ZVHMNPS",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B08ZWRN55V",
+    "brand": "KIND",
+    "name": "KIND FROZEN Frozen Dark Chocolate Peanut Butter Treat Bars, 1.60 Fl Oz (Pack Of 5) (Frozen)",
+    "image": "https://m.media-amazon.com/images/I/81uWz38UynL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08ZWRN55V",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -46591,7 +47037,7 @@
   {
     "asin": "B09327Z9DB",
     "brand": "Andalou Naturals",
-    "name": "Andalou Naturals Deep Hydration Reviving Eye Cream, 0.45 Oz",
+    "name": "Andalou Naturals Deep Hydration Reviving Eye Cream for Dark Circles, Puffiness, and Fine Lines | Hydrating Anti Aging Under Eye Cream with Collagen and Hyaluronic Acid - 0.45 fl oz",
     "image": "https://m.media-amazon.com/images/I/61kL7gRujmL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09327Z9DB",
     "current_price": null,
@@ -46716,6 +47162,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B09592QL2S",
+    "brand": "Winged Wellness",
+    "name": "Winged Wellness Sleepyhead Natural Sleep Gummies for Women - Prime Sleep Support Aid for Adults with 3mg Melatonin, L-Theanine, 5-HTP - Blueberry Lavender Flavored - 30 Servings",
+    "image": "https://m.media-amazon.com/images/I/81m+oUwQaaL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09592QL2S",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B095HYZSDF",
     "brand": "WOLFFER ESTATE",
     "name": "Wolffer Estate, Cider Dry Rose 139, 4pk, 12 Fl Oz Cans, 6.9% ABV",
@@ -46757,42 +47221,6 @@
     "name": "GIOVANNI Men 2 in 1 Daily Shampoo and Conditioner - Ginseng & Eucalyptus Botanicals, Cleansing & Moisturizing Hair Care for Men, Color-Safe, Cruelty-Free, Vegan-Friendly Men's Shampoo - 16.9 Fl Oz",
     "image": "https://m.media-amazon.com/images/I/71K54otSRoL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B096CTXPK2",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B096G4KH44",
-    "brand": "GIOVANNI",
-    "name": "GIOVANNI Men Cedarwood Clay Hair Styling Paste - Strong Hold Matte Hair Formula for Men, Texturizing & Defining Hair Styling Paste for Sculpting & Styling, Vegan-Friendly, Barber-Approved- 2.75 Oz",
-    "image": "https://m.media-amazon.com/images/I/71V-TSWk+SL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B096G4KH44",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B096YGBWG3",
-    "brand": "Murphy's Naturals",
-    "name": "Murphy’s Naturals Mosquito Repellent Wipes, Plant-Based with Lemongrass & Rosemary Oil, Fast-Absorbing & Travel-Friendly, 10 Wipes, 1-Pack",
-    "image": "https://m.media-amazon.com/images/I/714jxLVZGrL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B096YGBWG3",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -47114,6 +47542,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B09CCG8WM9",
+    "brand": "Swoon",
+    "name": "Lemonade Classic Zero Sugar, 12 Fl Oz",
+    "image": "https://m.media-amazon.com/images/I/71YlkpbeivL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09CCG8WM9",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B09CCHH4J6",
     "brand": "Oats Overnight",
     "name": "Oats Overnight Maple Brown Sugar Overnight Oats Shake, 2.2 OZ",
@@ -47235,6 +47681,24 @@
     "unit_price": null,
     "availability": null,
     "variation": "2 Sizes",
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09G9GZJCR",
+    "brand": "poppi",
+    "name": "Poppi Prebiotic Soda, Doc Pop, 12 Fl Oz (Pack of 1)",
+    "image": "https://m.media-amazon.com/images/I/71Kl+STdPGL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09G9GZJCR",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -47386,6 +47850,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B09JTWBSJT",
+    "brand": "Seven Sundays",
+    "name": "Seven Sundays Cereal Mple Sea Slt Gfree 8 OZ",
+    "image": "https://m.media-amazon.com/images/I/8126spCpuiL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09JTWBSJT",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B09K4QDQQG",
     "name": "Health Ade, Kombucha Pomegranate Organic, 48 Ounce",
     "brand": "Health-Ade",
@@ -47523,7 +48005,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "5 Flavors, 3 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -48216,11 +48697,47 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B09TX1QF1D",
+    "brand": "MOMOFUKU",
+    "name": "Momofuku Black Truffle Chili Crunch by David Chang, (5.5 Ounces), Chili Oil with Crunchy Garlic and Shallots, Spicy Chili Crisp with Real Truffle for Cooking as Sauce or Topping (Packaging May Vary)",
+    "image": "https://m.media-amazon.com/images/I/818snUm6e0L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09TX1QF1D",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B09V3BV6BN",
-    "brand": "Fresh Produce (Brands May Vary)",
     "name": "Watermelon Chunks Medium",
-    "image": "https://m.media-amazon.com/images/I/51Ca0k1ksyL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3BV6BN",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/51Ca0k1ksyL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/fresh-produce-brands-may-vary-watermelon-chunks-medium-b09v3bv6bn?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09V3F2JRS",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "name": "Grapes Small",
+    "image": "https://m.media-amazon.com/images/I/41xygBhbuQL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3F2JRS",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -48288,6 +48805,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B09VHHTMC4",
+    "name": "365 by Whole Foods Market Kiwi Strawberry Effervescent C Powder, 0.26 OZ",
+    "brand": "365 by Whole Foods Market",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/41DKkzuBC6L._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/365-by-whole-foods-market-365-by-whole-foods-market-kiwi-strawberry-effervescent-c-powder-0-26-oz-b09vhhtmc4?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B09VHHWNWR",
     "name": "365 by Whole Foods Market Orange Effervescent C Powder, 0.25 OZ",
     "brand": "365 by Whole Foods Market",
@@ -48324,11 +48859,65 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B09WZ6D6MM",
+    "asin": "B09VQDDH7N",
+    "brand": "MUSH",
+    "name": "MUSH Overnight Oats - Peanut Butter Chocolate Chip Protein - 15g Protein, Good Source of Fiber, Non-GMO, Dairy Free, Gluten Free, 5oz",
+    "image": "https://m.media-amazon.com/images/I/51YOaHMp8rL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09VQDDH7N",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09VQDPYNJ",
+    "brand": "The New Primal",
+    "name": "The New Primal Snack Mates, Chicken and Apple Stick - All Natural Chicken, High Protein and Low Sugar Kids Snack, Certified Paleo, Gluten Free, Lunchbox Friendly - 1 Count (Pack of 5)",
+    "image": "https://m.media-amazon.com/images/I/81P57fJt9DL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09VQDPYNJ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09WZ6CR3L",
     "brand": "Fresh Produce (Brands May Vary)",
-    "name": "Mild Guacamole Dip Small",
-    "image": "https://m.media-amazon.com/images/I/51u4zlK3mAL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B09WZ6D6MM",
+    "name": "Hot Guacamole Dip Extra Small",
+    "image": "https://m.media-amazon.com/images/I/51TP-e99sML.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09WZ6CR3L",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09WZ97NPK",
+    "brand": "Fresh Produce (Brands May Vary)",
+    "name": "Mild Guacamole Dip Extra Small",
+    "image": "https://m.media-amazon.com/images/I/51TP-e99sML.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09WZ97NPK",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -48347,6 +48936,42 @@
     "name": "Hot Guacamole Dip Small",
     "image": "https://m.media-amazon.com/images/I/51PBCgCs-vL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09WZ9XCZQ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09WZT1SHY",
+    "name": "365 by Whole Foods Market Raspberry Effervescent C Powder Single, 0.26 OZ",
+    "brand": "365 by Whole Foods Market",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/41WDsWnbZOL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/365-by-whole-foods-market-365-by-whole-foods-market-raspberry-effervescent-c-powder-single-0-26-oz-b09wzt1shy?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09WZXP7GC",
+    "brand": "365 by Whole Foods Market",
+    "name": "365 By Whole Foods Market, Effervescent C Powder Raspberry 30 Count, 0.26 Ounce",
+    "image": "https://m.media-amazon.com/images/I/71ggyiDdG6L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09WZXP7GC",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -48401,6 +49026,24 @@
     "name": "Four Sigmatic Organic High Caffeine Lion's Mane Ground Coffee, 10 OZ",
     "image": "https://m.media-amazon.com/images/I/81xZ73trBBL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09XGDV2KS",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B09XGFZJVS",
+    "brand": "Four Sigmatic",
+    "name": "Four Sigmatic Organic Lion's Mane Ground Coffee, 10 OZ",
+    "image": "https://m.media-amazon.com/images/I/815UEb-ewjL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09XGFZJVS",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -48613,16 +49256,16 @@
   },
   {
     "asin": "B0B1468YMV",
-    "brand": "AEROFARMS",
     "name": "AeroFarms Rainbow Mix Microgreens, 2 OZ",
-    "image": "https://m.media-amazon.com/images/I/81usyTimYUL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B1468YMV",
-    "current_price": null,
+    "brand": "AEROFARMS",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/81usyTimYUL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/aerofarms-aerofarms-rainbow-mix-microgreens-2-oz-b0b1468ymv?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -48696,6 +49339,60 @@
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0B2Q1Y44M",
+    "brand": "Sweet Loren's",
+    "name": "Sweet Loren's Gluten Free & Vegan Less Sugar Chocolate Chunk Cookie Dough",
+    "image": "https://m.media-amazon.com/images/I/81lIaPZRrGL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B2Q1Y44M",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0B2V1FGHT",
+    "brand": "Icelandic Provisions",
+    "name": "Yogurt Skyr Whole Milk Plain, 30 Ounce",
+    "image": "https://m.media-amazon.com/images/I/812UY0bVSXL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B2V1FGHT",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0B2VJ56BQ",
+    "brand": "Icelandic Provisions",
+    "name": "Yogurt Skyr Lowfat Plain, 30 Ounce",
+    "image": "https://m.media-amazon.com/images/I/81hdob+18lL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B2VJ56BQ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -48855,10 +49552,9 @@
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
-    "discount": "Four Sigmatic Organic Cold Brew Coffee Grounds | Dark Roast, Coarse Grounds with Lion's Mane and Chaga | Cold Brew Mushroom Coffee for Crash-Free Focus | 12 oz Bag",
+    "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "2 Sizes, 2 Coffee roast level, 7 Flavors",
     "available_store_ids": [
       "10328"
     ],
@@ -48956,24 +49652,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0B6DFD1XW",
-    "brand": "Wild Planet",
-    "name": "WILD PLANET EVOO Skipjack Snack Cup, 2.82 OZ",
-    "image": "https://m.media-amazon.com/images/I/91FoQtq20AL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B6DFD1XW",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0B6DHYZJ8",
     "brand": "Wild Planet",
     "name": "Wild Planet Wild Smoked Pink Salmon Fillets in Extra Virgin Olive Oil, Tinned Fish, Canned Salmon, Sustainably Wild-Caught, Non-GMO, Keto and Paleo, 3.9 oz",
@@ -49015,6 +49693,24 @@
     "name": "Brainjuice Classic Decaf BrainJuice SGL, 2.5 FZ",
     "image": "https://m.media-amazon.com/images/I/71DwbiTBypL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0B6GP7PB5",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0B6W1CX95",
+    "brand": "Old Chatham Creamery",
+    "name": "Old Chatham Sheepherding Co Plain Sheep Milk Yogurt, 5.3 OZ",
+    "image": "https://m.media-amazon.com/images/I/61ozSJqusrL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0B6W1CX95",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -49363,6 +50059,7 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
+    "variation": "2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -49478,24 +50175,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0BJ4QQ4J4",
-    "brand": "Tsar Nicoulai",
-    "name": "TSAR NICOULAI Golden Osetra Caviar, 1 OZ",
-    "image": "https://m.media-amazon.com/images/I/71CRLt9uDgL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BJ4QQ4J4",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0BJ7G8NLV",
     "name": "Salad Smoked Mozzarella Pasta Kibberia Fresh Pack",
     "brand": "Whole Foods Market",
@@ -49561,7 +50240,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "variation": "11 Flavors, 3 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -49695,11 +50373,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0BKR35V77",
+    "asin": "B0BKQZ37VS",
     "brand": "BIXBI",
-    "name": "Liberty Dry Food Salmon Recipe for Cats, 3lb",
-    "image": "https://m.media-amazon.com/images/I/71hVwF6N5aL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BKR35V77",
+    "name": "BIXBI Liberty Dry Food Indoor Cat Health Chicken & Salmon Recipe, 3lb",
+    "image": "https://m.media-amazon.com/images/I/71l55nQD8bL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BKQZ37VS",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -49862,6 +50540,24 @@
     "name": "Welly Bravery Badge Value Pack | Adhesive Flexible Fabric Bandages | Assorted Shapes and Patterns for Minor Cuts, Scrapes, and Wounds - 100 Count",
     "image": "https://m.media-amazon.com/images/I/71JQg9G8xLL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0BNLVDJX3",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0BNP5XMQ6",
+    "brand": "Gotham Greens",
+    "name": "Gotham Greens Butterhead Salad, 9 OZ",
+    "image": "https://m.media-amazon.com/images/I/810YMi0oPEL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BNP5XMQ6",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -50127,6 +50823,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0BQXR1ZWZ",
+    "brand": "Siete",
+    "name": "Siete Family Foods, Chips Tortilla Corn Lime Maiz Yellow White, 7.5 Ounce",
+    "image": "https://m.media-amazon.com/images/I/71n1y2-JlmL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BQXR1ZWZ",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0BQXV1PD2",
     "brand": "GORGIE",
     "name": "GORGIE Sugar Free Natural Energy Drinks, Peach Tea 12 Fz - Healthy Energy Drinks - Natural Coffee Replacement with Green Tea Caffeine and Biotin - 150mg Caffeine, Vegan, & Low Calorie",
@@ -50136,6 +50850,24 @@
     "basis_price": null,
     "prime_price": null,
     "discount": "GORGIE Sugar Free Natural Energy Drinks, Peach Tea 12 Fz - Healthy Energy Drinks - Natural Coffee Replacement with Green Tea Caffeine and Biotin - 150mg Caffeine, Vegan, & Low Calorie",
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0BQXZ9PXB",
+    "brand": "Siete",
+    "name": "Siete Maiz Blue Corn Tortilla Chips 7.5 OZ",
+    "image": "https://m.media-amazon.com/images/I/812Ya9+xr9L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BQXZ9PXB",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
     "unit_price": null,
     "availability": null,
     "available_store_ids": [
@@ -50253,11 +50985,47 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0BR9ZXM1F",
+    "brand": "Wonderful Pistachios",
+    "name": "WONDERFUL PISTACHIO Sea Salt & Pepper No Shells Pistachios, 5.5 OZ",
+    "image": "https://m.media-amazon.com/images/I/81f-sxzAfbL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BR9ZXM1F",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0BRBBX5B5",
-    "brand": "Organic Valley",
     "name": "Organic Valley Grassmilk Organic Grass Fed Whole Milk, 59 oz",
-    "image": "https://m.media-amazon.com/images/I/71OfoLzdKQL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BRBBX5B5",
+    "brand": "Organic Valley",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71OfoLzdKQL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/organic-valley-organic-valley-grassmilk-organic-grass-fed-whole-milk-59-oz-b0brbbx5b5?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0BRKTZKZ5",
+    "brand": "Thats It",
+    "name": "Thats it Mango Blueberry Mini Bars 10 Count, 7 OZ",
+    "image": "https://m.media-amazon.com/images/I/81xBiqyHBhL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BRKTZKZ5",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -50487,11 +51255,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0BV7DX1TF",
-    "brand": "Plant People",
-    "name": "Plant People WonderFocus Mushroom Gummies with Lion’s Mane & Cordyceps - Nootropic Brain Supplement Boosts Memory, Focus, Energy & Mood in Adults | No Sugar, 100% Vegan, Citrus Flavor, 60 Count",
-    "image": "https://m.media-amazon.com/images/I/71xaXftkBWL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BV7DX1TF",
+    "asin": "B0BTMMQ69H",
+    "brand": "Chosen Foods",
+    "name": "Chosen Foods Classic Mayo Squeeze, 11.25 Fl Oz",
+    "image": "https://m.media-amazon.com/images/I/71-euAc++aL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BTMMQ69H",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -50510,24 +51278,6 @@
     "name": "Tomatoes Sundried Extra Virgin Olive Oil Organic, 7.93 Ounce",
     "image": "https://m.media-amazon.com/images/I/81VAjylxoPL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVMM8DL3",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0BVMWDBFM",
-    "brand": "think!",
-    "name": "think! Protein Bars, High Protein Snacks, Gluten Free, Kosher Friendly, Girl Scouts Thin Mint, Nutrition Bars, 2.1 Oz per Bar, 10 Count (Packaging May Vary)",
-    "image": "https://m.media-amazon.com/images/I/71vlhdLUGUL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVMWDBFM",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -51089,9 +51839,10 @@
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
-    "discount": null,
+    "discount": "Death Wish Coffee",
     "unit_price": null,
     "availability": null,
+    "variation": "1 Flavors, 2 Sizes",
     "available_store_ids": [
       "10328"
     ],
@@ -51158,6 +51909,24 @@
     "name": "Death Wish Coffee Co Organic Espresso Roast Ground Coffee, 9 OZ",
     "image": "https://m.media-amazon.com/images/I/71FTeKMPT4L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0C383JJLX",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0C386SD6D",
+    "brand": "Four Sigmatic",
+    "name": "Four Sigmatic Mushroom Coffee K-Cups | Organic Dark Roast Coffee with Lion’s Mane Mushroom Powder & Yacon | Focus & Immune Support | Vegan & Keto | Sustainable Pods | 10 Count",
+    "image": "https://m.media-amazon.com/images/I/8175Oy9IrzL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0C386SD6D",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -51417,24 +52186,6 @@
     "unit_price": null,
     "availability": null,
     "variation": "2 Sizes",
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0C5S33P1V",
-    "brand": "Bio-K Plus",
-    "name": "Bio-K Plus Organic Extra Stress Support Liquid with Sensoril Single, 3.5 FZ",
-    "image": "https://m.media-amazon.com/images/I/81AQXlETxnL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0C5S33P1V",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -51892,6 +52643,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0CDQJTH4Y",
+    "brand": "Van Leeuwen",
+    "name": "Van Leeuwen Coffee Affogato French Ice Cream, 14 oz (Frozen)",
+    "image": "https://m.media-amazon.com/images/I/51+BVLK0P+L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0CDQJTH4Y",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0CFFZWC4S",
     "brand": "Sunwarrior",
     "name": "Creatine Monohydrate Powder Micronized PreWorkout Recovery Supplement Support Muscle Building Strength Training Cognition Vegan & Keto Friendly, Easily Mixes 50 Servings Lemonade Flavored",
@@ -52049,24 +52818,6 @@
     "unit_price": null,
     "availability": null,
     "variation": "2 Sizes, 2 Style",
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0CHSHMKFQ",
-    "name": "Muddy Bites - Milk Chocolate - Waffle Cone Snack Bite Sized Filled Cone Bites for Snack or Dessert Made with Cane Sugar, Kosher, Fair Trade Certified",
-    "brand": "Muddy Bites",
-    "variation": "3 Color",
-    "image": "https://m.media-amazon.com/images/I/51g3QddRIOL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/muddy-bites-muddy-bites-milk-chocolate-waffle-cone-snack-bite-sized-filled-cone-bites-for-snack-or-dessert-made-with-cane-sugar-kosher-fair-trade-certified-b0chshmkfq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
     "available_store_ids": [
       "10328"
     ],
@@ -54056,24 +54807,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0CZS6MFR5",
-    "brand": "ORGANIC RANCHER",
-    "name": "Organic Rancher, Organic Ground Lamb, 100% Grass Fed, USDA Organic, Pasture Raised Free Range, 1 lb (16 oz)",
-    "image": "https://m.media-amazon.com/images/I/61cBzfmAGzL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0CZS6MFR5",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0CZYCRGCV",
     "name": "Trace Minerals Research Salty Berry Lemonade Zerolyte Sgl, 0.25 OZ",
     "brand": "Trace Minerals",
@@ -54508,24 +55241,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0D35X4L91",
-    "brand": "Perfect Bar",
-    "name": "Perfect Bar Chocolate Chip Cookie Dough Protein Bar 8 Count, 2.18 OZ",
-    "image": "https://m.media-amazon.com/images/I/51Pi6+IV3ZL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0D35X4L91",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0D3FQ8P3C",
     "brand": "Kuli Kuli",
     "name": "Kuli Kuli Organic Marine Glow Superfood Blend, 6 OZ",
@@ -54657,24 +55372,6 @@
     "name": "TRUBAR Vegan Protein Bar, Whole Lotta Macchiato, Gluten Free, Plant Based Protein, Dairy Free, Non GMO, Soy Free, No Sugar Alcohols, 12G Protein, 12G Fiber, 23G Carb, On the Go Snack Bars, 1 CT",
     "image": "https://m.media-amazon.com/images/I/71lHsLiWVUL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0D47VTP9X",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0D4GMZXQ5",
-    "brand": "Blender Bombs",
-    "name": "Blender Bombs Glow Getter Smoothie Booster, 5 OZ",
-    "image": "https://m.media-amazon.com/images/I/71KG4hjpnoL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0D4GMZXQ5",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -55498,24 +56195,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0DCWZHMVR",
-    "brand": "divya's",
-    "name": "Divya's, Kitchari Soothing Single Serve, 4 Ounce",
-    "image": "https://m.media-amazon.com/images/I/41UApMrd+QL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DCWZHMVR",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0DDBBRSF7",
     "brand": "Kuli Kuli",
     "name": "Kuli Kuli Matcha Moringa Organic Superfood Latte - Matcha Green Tea Powder for Natural Caffeine & Antioxidants with Moringa and Lion’s Mane for Cognitive Support and Mental Focus",
@@ -55761,24 +56440,6 @@
     "discount": null,
     "unit_price": null,
     "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0DFZH7MSH",
-    "name": "Superbelly Powder Strawberry Hibiscus SGL, 0.14 Ounce",
-    "brand": "Blume",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/61G3asKvIIL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/blume-superbelly-powder-strawberry-hibiscus-sgl-0-14-ounce-b0dfzh7msh?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
     "available_store_ids": [
       "10328"
     ],
@@ -56128,11 +56789,11 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0DJRGRK13",
-    "brand": "Acme Smoked Fish",
-    "name": "Tuna Ahi Smoked Sesame Crusted, 3 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71gq9DC2FeL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DJRGRK13",
+    "asin": "B0DJTKT835",
+    "brand": "JonnyPops",
+    "name": "JonnyPops Birthday Surprise Cream Minis Frozen Pops 6ct",
+    "image": "https://m.media-amazon.com/images/I/81nFQcIWBjL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DJTKT835",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -56241,24 +56902,6 @@
     "name": "Leisure Hydration, Refresher EleCountrolyte Wild Blueberry, 16 Fl Oz",
     "image": "https://m.media-amazon.com/images/I/61NEZjvR7nL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0DK22NJM3",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0DK259K9L",
-    "brand": "Nuun",
-    "name": "Electrolyte Zero Sugar Rasplemonade Tube, 10 Count",
-    "image": "https://m.media-amazon.com/images/I/71l0W-y+R4L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DK259K9L",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -56992,6 +57635,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0DLBH5XCT",
+    "brand": "Alec's",
+    "name": "Alec's Pistachio Crunch Ice Cream - A2 Dairy, 14 fl oz",
+    "image": "https://m.media-amazon.com/images/I/71XvaiTf-8L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DLBH5XCT",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0DLJ3DBVH",
     "brand": "Nixie",
     "name": "Nixie Organic Zero Sugar Soda, Cream Soda, 0 Sugar, 0 Calories, Healthy Soda Pop, Non-GMO, Caffeine Free, 12oz Can (1 Count)",
@@ -57443,6 +58104,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0DNR36HDG",
+    "brand": "Ayeya",
+    "name": "AYÉYA Whipped Body Butter, Unscented (Gratitude) – Simple & Pure Shea Butter and Coconut Oil Moisturizer for Extremely Dry Skin, 5 Oz Ea",
+    "image": "https://m.media-amazon.com/images/I/71z9j0qFEuL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DNR36HDG",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0DNR36QFN",
     "brand": "Ayeya",
     "name": "AYÉYA Liquid African Black Soap – Peace | Lavender, Ginger & Patchouli for Calming | Soothing Vegan Face & Body Wash | Natural African Soap with Shea | Handmade in Ghana | 12 Fl Oz",
@@ -57534,16 +58213,16 @@
   },
   {
     "asin": "B0DP1GCFFV",
-    "brand": "RECOVER 180",
     "name": "Recover 180 Rocket Pop Hydration Drink, 16.9 FZ",
-    "image": "https://m.media-amazon.com/images/I/61BytI4AvVL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DP1GCFFV",
-    "current_price": null,
+    "brand": "RECOVER 180",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/61BytI4AvVL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/recover-180-recover-180-rocket-pop-hydration-drink-16-9-fz-b0dp1gcffv?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -57965,17 +58644,35 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0DQ5N5QBM",
-    "brand": "Liquid Death",
-    "name": "Liquid Death Rootbeer Wrath Sparkling Water, 12 FZ",
-    "image": "https://m.media-amazon.com/images/I/81EDH4uNq6L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQ5N5QBM",
+    "asin": "B0DPXVMR5Y",
+    "brand": "De Cecco",
+    "name": "De Cecco Pasta Potato Gnocchi, 18 Ounce",
+    "image": "https://m.media-amazon.com/images/I/719cFmOd1-L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DPXVMR5Y",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
     "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0DQ5N5QBM",
+    "name": "Liquid Death Rootbeer Wrath Sparkling Water, 12 FZ",
+    "brand": "Liquid Death",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/81EDH4uNq6L._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/liquid-death-liquid-death-rootbeer-wrath-sparkling-water-12-fz-b0dq5n5qbm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
     "available_store_ids": [
       "10328"
     ],
@@ -58199,24 +58896,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0DQVHD5HW",
-    "brand": "Nightingale Ice Cream Sandwiches",
-    "name": "Banana Pudding Ice Cream Sandwich, 2.6 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71zzhqD7j1L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQVHD5HW",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0DQVJHVT3",
     "brand": "Nightingale Ice Cream Sandwiches",
     "name": "The Classic Ice Cream Sandwich, 2.6 Ounce (Pack of 1)",
@@ -58258,6 +58937,24 @@
     "name": "Key Lime Pie Ice Cream Sandwich, 2.6 Ounce (Pack of 1)",
     "image": "https://m.media-amazon.com/images/I/71jDbCWmbWL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQVM8XW1",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0DQXZ1G9H",
+    "brand": "Applegate",
+    "name": "Applegate Naturals Chicken & Maple Breakfast Sausage Links Family Size",
+    "image": "https://m.media-amazon.com/images/I/814QM4blVxL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQXZ1G9H",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -58348,42 +59045,6 @@
     "name": "CLIF Salted Almond Caramel Bar, 1.97 OZ",
     "image": "https://m.media-amazon.com/images/I/71k9o7MBUtL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0DSQ2SYVX",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0DSQ8725Y",
-    "brand": "Vital Proteins",
-    "name": "Vital Proteins Grass Fed Collagen Peptides Powder, Supports Hair, Skin, Nails, Bones, and Joints Health, Hydrolyzed Peptides - Zero Sugar, Unflavored, 20oz",
-    "image": "https://m.media-amazon.com/images/I/71xs4jzKxoL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DSQ8725Y",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0DSWJNXTV",
-    "brand": "LaBelle Patrimoine",
-    "name": "LaBelle Patrimoine Ancestral Blend Pasture Raised Ground Chicken",
-    "image": "https://m.media-amazon.com/images/I/71xE7r0UnBL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DSWJNXTV",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -58829,24 +59490,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0DWHFTX62",
-    "brand": "Cappellos",
-    "name": "Cappello's Classic Crispy Crust Five Cheese Pizza, Gluten Free, Frozen Pizza 18oz",
-    "image": "https://m.media-amazon.com/images/I/61EIzA9EH2L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DWHFTX62",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0DWTDHFNZ",
     "brand": "SIMPLi",
     "name": "SIMPLi Regenerative Organic Certified® Spanish Extra Virgin Olive Oil, Fruity & Smooth, High in Polyphenols, Cold-Pressed, Non-GMO, 16.9 fl oz",
@@ -59009,24 +59652,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0DYF7VBQ8",
-    "brand": "AYOH",
-    "name": "Ayoh! Dill Pickle Mayo with Avocado Oil | 12 oz (Pack of 1) | Seed Oil Free, Gluten Free, Non-GMO, Keto Friendly | Ultimate Condiment for Sandwiches, Burgers, Bowls, Fries, Dips & Dressings | Craveable Dill Pickle Flavor by Molly Baz",
-    "image": "https://m.media-amazon.com/images/I/51wp-O7x0BL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DYF7VBQ8",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0DYFX82QR",
     "brand": "Seggiano",
     "name": "Seggiano Pistachio Pesto, 6.7 Ounce",
@@ -59104,6 +59729,24 @@
     "name": "The Good Crisp Company Cheddar Cheese Balls, 4 Ounce",
     "image": "https://m.media-amazon.com/images/I/61JiTiyJ+EL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0DYPKSMD1",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0DYQMTGMQ",
+    "brand": "HALS NEW YORK",
+    "name": "Hals New York Vanilla Creme Seltzer 8pk, 12 FZ",
+    "image": "https://m.media-amazon.com/images/I/61Irdi2r9bL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DYQMTGMQ",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -59369,24 +60012,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0F3B9BJGQ",
-    "brand": "Sauz",
-    "name": "Pistachio Shallot Alfredo, 14.1 Ounce",
-    "image": "https://m.media-amazon.com/images/I/71stcAsHWOL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0F3B9BJGQ",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0F3BCHP9T",
     "brand": "Sauz",
     "name": "Lemon Pepper Pesto, 6.7 Ounce",
@@ -59460,16 +60085,16 @@
   },
   {
     "asin": "B0F3XK74B2",
-    "name": "Organic Rancher, Organic Beef Burger 80% Lean/10% Fat, 100% Grass Fed & Grass Finished, USDA Organic, Pasture Raised, Free Range, 16 oz",
     "brand": "ORGANIC RANCHER",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/61kBn0S26HL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/organic-rancher-organic-rancher-organic-beef-burger-80-lean-10-fat-100-grass-fed-grass-finished-usda-organic-pasture-raised-free-range-16-oz-b0f3xk74b2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Organic Rancher, Organic Beef Burger 80% Lean/10% Fat, 100% Grass Fed & Grass Finished, USDA Organic, Pasture Raised, Free Range, 16 oz",
+    "image": "https://m.media-amazon.com/images/I/61kBn0S26HL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0F3XK74B2",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -59482,6 +60107,24 @@
     "name": "Hiyo Organic Social Tonic - Pineapple Coconut, 4 pack - N.A. Functional Seltzer, Sparkling Water Crafted with Organic Adaptogens, Nootropics & Botanicals",
     "image": "https://m.media-amazon.com/images/I/71hHJXH2AqL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0F4LQ9XV9",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0F4M3826G",
+    "brand": "HIYO",
+    "name": "Hiyo Organic Social Tonic - Pineapple Coconut, 12 FZ - N.A. Functional Seltzer, Sparkling Water Crafted with Organic Adaptogens, Nootropics & Botanicals",
+    "image": "https://m.media-amazon.com/images/I/61Umckkpx6L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0F4M3826G",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -59734,6 +60377,24 @@
     "name": "Recover 180 Organic Strawberry Banana Hydration Drink, 16.9 FZ",
     "image": "https://m.media-amazon.com/images/I/71hmUGrbpIL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0F814L4G9",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
+    "asin": "B0F84HHSL4",
+    "brand": "Sunwarrior",
+    "name": "Sunwarrior Lemonade Active Creatine Stick Pack 30ct, 0.24 OZ",
+    "image": "https://m.media-amazon.com/images/I/714bCUQU4zL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0F84HHSL4",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -60017,24 +60678,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0FC48H53Y",
-    "brand": "The Better Fish",
-    "name": "The Better Fish Barramundi Fillet, 12 Ounce",
-    "image": "https://m.media-amazon.com/images/I/81-g2-uyYAL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FC48H53Y",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0FCG4VQXW",
     "brand": "Navitas Organics",
     "name": "Superfood Digestive Blend Organic, 5.3 Ounce",
@@ -60058,24 +60701,6 @@
     "name": "365 by Whole Foods Market Organic Mozzarella Bar, 6 OZ",
     "image": "https://m.media-amazon.com/images/I/5157XcEXg7L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0FCNS75H6",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0FDCV2N1H",
-    "brand": "Scott & Jons",
-    "name": "Scott & Jons Fish Tikka Masala Bowl, 9.6 OZ",
-    "image": "https://m.media-amazon.com/images/I/71j2Z+diB3L.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FDCV2N1H",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -60305,24 +60930,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0FGQH474Y",
-    "brand": "Acme Smoked Fish",
-    "name": "Acme Smoked Fish Cold Smoked Sockeye Salmon, 3 Ounce",
-    "image": "https://m.media-amazon.com/images/I/51c8eyJyezL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FGQH474Y",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0FH5SKYTG",
     "brand": "Sunwarrior",
     "name": "Organic Plant-Based Protein Powder for Performance 21g Protein | BCAAs Pea Fava Mung & Chia Blend | Recovery Energy Keto Friendly Smooth Great Taste with Prebiotic Fiber | Vanilla Flavored 28 Servings",
@@ -60539,24 +61146,6 @@
     "source_store_name": "Upper West Side"
   },
   {
-    "asin": "B0FM4FX69L",
-    "brand": "Purezero",
-    "name": "Shampoo Clarifying Rosemary Mint, 12 Fl Oz",
-    "image": "https://m.media-amazon.com/images/I/51iP97kcltL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FM4FX69L",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
     "asin": "B0FM4JNPDP",
     "brand": "nutpods",
     "name": "Nutpods Organic Choc Hazelnut Creamer, 16 FZ",
@@ -60702,16 +61291,16 @@
   },
   {
     "asin": "B0FNSN8D5D",
-    "name": "Poppi Punch Pop Prebiotic Soda 12 fl oz",
     "brand": "poppi",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/71vojuLM1UL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/poppi-poppi-punch-pop-prebiotic-soda-12-fl-oz-b0fnsn8d5d?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Poppi Punch Pop Prebiotic Soda 12 fl oz",
+    "image": "https://m.media-amazon.com/images/I/71vojuLM1UL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FNSN8D5D",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -61893,16 +62482,16 @@
   },
   {
     "asin": "B0G4B4KH3G",
-    "brand": "Sunwarrior",
     "name": "Sunwarrior Raspberry Active Creatine Stick Pack SGL, 0.24 OZ",
-    "image": "https://m.media-amazon.com/images/I/71qnaHr6FlL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0G4B4KH3G",
-    "current_price": null,
+    "brand": "Sunwarrior",
+    "variation": null,
+    "image": "https://m.media-amazon.com/images/I/71qnaHr6FlL._FMwebp_.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/sunwarrior-sunwarrior-raspberry-active-creatine-stick-pack-sgl-0-24-oz-b0g4b4kh3g?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+    "current_price": "",
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
-    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -62289,16 +62878,16 @@
   },
   {
     "asin": "B0GCKPVTJG",
-    "name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Chocolate Covered Strawberry 3.5oz 4-Pack",
     "brand": "Alec's",
-    "variation": null,
-    "image": "https://m.media-amazon.com/images/I/51TBQUVndfL._FMwebp_.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-    "current_price": "",
+    "name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Chocolate Covered Strawberry 3.5oz 4-Pack",
+    "image": "https://m.media-amazon.com/images/I/51TBQUVndfL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0GCKPVTJG",
+    "current_price": null,
     "basis_price": null,
     "prime_price": null,
     "discount": null,
     "unit_price": null,
+    "availability": null,
     "available_store_ids": [
       "10328"
     ],
@@ -62432,6 +63021,24 @@
     "source_store_name": "Upper West Side"
   },
   {
+    "asin": "B0GGC3ZBDK",
+    "brand": "Paesanol",
+    "name": "Paesanol Organic Regnerative Unfiltered Extra Virgin Olive Oil, 16.9 OZ",
+    "image": "https://m.media-amazon.com/images/I/51sTotyr-eL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0GGC3ZBDK",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "unit_price": null,
+    "availability": null,
+    "available_store_ids": [
+      "10328"
+    ],
+    "source_store_id": "10328",
+    "source_store_name": "Upper West Side"
+  },
+  {
     "asin": "B0GH2HZXSC",
     "brand": "Lagunitas",
     "name": "Lagunitas Brewing Non-Alcoholic Spritz Refresher 6pk Cans, 12 FZ",
@@ -62489,7 +63096,7 @@
     "asin": "B0GMYFJ37X",
     "brand": "Leisure",
     "name": "Leisure Hydration Strawberry Breeze Elecytrolyte Refresher Sgl, 16 FZ",
-    "image": "https://m.media-amazon.com/images/I/61VYYu1EvEL.jpg",
+    "image": "https://m.media-amazon.com/images/I/71winTkqhTL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0GMYFJ37X",
     "current_price": null,
     "basis_price": null,
@@ -62635,24 +63242,6 @@
     "name": "Pacific Foods Organic Butter Chicken Soup with Rice, 16.3 oz Can",
     "image": "https://m.media-amazon.com/images/I/81jtUvOD9UL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0GR1QFNDL",
-    "current_price": null,
-    "basis_price": null,
-    "prime_price": null,
-    "discount": null,
-    "unit_price": null,
-    "availability": null,
-    "available_store_ids": [
-      "10328"
-    ],
-    "source_store_id": "10328",
-    "source_store_name": "Upper West Side"
-  },
-  {
-    "asin": "B0GSVQYQT8",
-    "brand": "Robert Hall Winery",
-    "name": "Robert Hall Winery ROC Cabernet Sauvignon, 750 ML",
-    "image": "https://m.media-amazon.com/images/I/61kVS1MpqoL.jpg",
-    "url": "https://www.wholefoodsmarket.com/grocery/product/B0GSVQYQT8",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
