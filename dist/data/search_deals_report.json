@@ -9,7 +9,7 @@
       "network_batch_count": 0,
       "sort_runs": [],
       "reused_previous": true,
-      "error": "Location modal did not appear, so the scraper refused to use the page-level search box."
+      "error": "Could not search for Columbus Circle inside the location modal."
     },
     {
       "store_id": "10328",
