@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-23T01:03:14.739543+00:00",
+  "generated_at": "2026-06-24T09:40:54.618617+00:00",
   "summary": {
     "total_products": 3684,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3684
   },
   "taxonomy_report": {
-    "generated_at": "2026-06-22T22:31:03.510321+00:00",
+    "generated_at": "2026-06-24T04:03:46.853565+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -6080,45 +6080,6 @@
       }
     ],
     "clip_high_confidence_disagreements": [
-      {
-        "asin": "B0756548HD",
-        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
-        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
-        "brand": "Babo Botanicals",
-        "source_brand": "Babo Botanicals",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Hair Care",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Hair Care",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
       {
         "asin": "B0004N1K1Q",
         "name": "Green Mountain Gringo Mild Salsa, 16 Oz",
@@ -12286,6 +12247,76 @@
             "sources": [
               "Flyer",
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B08CBWZYR4",
+        "asins": [
+          "B08CBWZYR4"
+        ],
+        "name": "Renew Life Women's Probiotic Capsules",
+        "raw_name": "Renew Life Women's Probiotic Capsules, 50 Billion CFU Guaranteed, Supports pH Balance, Vaginal, Urinary, Digestive and Immune Health(2), L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 30 Count",
+        "brand": "Renew Life",
+        "source_brand": "Renew Life",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "15% off",
+        "basis_price": "prices vary",
+        "prime_price": "$36.32 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "unit_price": "$1.35/count",
+        "image": "https://m.media-amazon.com/images/I/81wLAj3cQLL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
+        "tags": [
+          "multi-source deal",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10328",
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "current_price": "$40.36",
+            "basis_price": "$47.49 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
+            "sources": [
+              "Flyer",
+              "Search Deals"
+            ],
+            "prime_price": "$36.32 ea",
+            "unit_price": "$1.35/count"
+          },
+          {
+            "store_id": "10160",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
+            "sources": [
+              "Flyer"
             ]
           }
         ]
@@ -20500,6 +20531,45 @@
         ]
       },
       {
+        "asin": "B0756548HD",
+        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
+        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
+        "brand": "Babo Botanicals",
+        "source_brand": "Babo Botanicals",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Hair Care",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Hair Care",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B07NJPR4TN",
         "name": "Babo Botanicals Sensitive Baby Mineral Sunscreen Lotion SPF50",
         "raw_name": "Babo Botanicals Sensitive Baby Mineral Sunscreen Lotion SPF50 - Natural Zinc Oxide - Face & Body - Fragrance-Free - Water-Resistant - EWG Verified - Vegan - Extra Sensitive Skin - For Babies & Kids",
@@ -20840,72 +20910,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B008XJ7F1W",
             "sources": [
               "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DBMCRH47",
-        "name": "Babylife Organics Stage 2",
-        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
-        "brand": "Babylife Organics Stage",
-        "brand_source": "derived",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Baby",
-        "subcategory": "Baby Food",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Baby",
-        "ai_subcategory": "Baby Food",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$2.50",
-        "basis_price": "$2.96 ea",
-        "prime_price": "$2.25 ea",
-        "discount": "24% off",
-        "discount_percent": 24,
-        "unit_price": "($0.71/ounce)",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-        "tags": [
-          "organic",
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$2.50",
-            "basis_price": "$2.96 ea",
-            "prime_price": "$2.25 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "($0.71/ounce)",
-            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$2.50",
-            "basis_price": "$2.96 ea",
-            "prime_price": "$2.25 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "($0.71/ounce)",
-            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-            "sources": [
-              "All Deals"
             ]
           }
         ]
@@ -23166,62 +23170,6 @@
             "url": "https://www.wholefoodsmarket.com/Bears-Fruit-Habanero-Sparkling-Probiotic/dp/B09QR5XM9S?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B09QR5XM9S&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_123_i",
             "sources": [
               "All Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08YKJX832",
-        "asins": [
-          "B08YKJX832",
-          "B0D19FGYZG",
-          "B00NLQXXDQ",
-          "B0D19MF171",
-          "B07D9WSWFR"
-        ],
-        "name": "Beauty Supplements",
-        "raw_name": "Beauty Supplements",
-        "brand": "Vital Proteins",
-        "source_brand": "Vital Proteins",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Protein & Collagen",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.8265,
-        "ai_clip_source": "category-first",
-        "current_price": "15% off",
-        "basis_price": "$19.99 to $46.49 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/91aiuY5gZcL.jpg",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "$19.99 to $46.49 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "sources": [
-              "Flyer"
             ]
           }
         ]
@@ -29820,70 +29768,6 @@
             "discount": "28% off",
             "discount_percent": 28,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B07SQB7GF2",
-        "asins": [
-          "B07SQB7GF2"
-        ],
-        "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Dark Chocolate - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
-        "brand": "Catalina Crunch",
-        "source_brand": "Catalina Crunch",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Cereal & Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Cereal & Breakfast",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "20% off",
-        "basis_price": "$5.75 to $8.99 ea",
-        "discount": "28% off",
-        "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
             "sources": [
               "Flyer"
             ]
@@ -39855,6 +39739,68 @@
         ]
       },
       {
+        "asin": "B07ZPP9MNV",
+        "name": "ECOS Laundry Detergent Sheets Vegan",
+        "raw_name": "ECOS Laundry Detergent Sheets Vegan, No Plastic Jug, No Mess & Liquid Free - Laundry Sheets in Washer - Hypoallergenic, Plant Powered Laundry Detergent Sheets - Magnolia & Lily - 50 Sheets (Pack of 1)",
+        "brand": "Ecos",
+        "source_brand": "Ecos",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Household",
+        "subcategory": "Laundry",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Household",
+        "ai_subcategory": "Laundry",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "$14.23",
+        "basis_price": "$17.79 ea",
+        "prime_price": "$12.81 ea",
+        "discount": "28% off",
+        "discount_percent": 0,
+        "unit_price": "$0.28/load",
+        "image": "https://m.media-amazon.com/images/I/71G1AlcNTtL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B07ZPP9MNV",
+        "tags": [
+          "prime deal",
+          "vegan"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07ZPP9MNV",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$14.23",
+            "basis_price": "$17.79 ea",
+            "prime_price": "$12.81 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "unit_price": "$0.28/load",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07ZPP9MNV",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0D2F7T7BD",
         "name": "ECOS Ultra Concentrated Liquid Laundry Detergent",
         "raw_name": "ECOS Ultra Concentrated Liquid Laundry Detergent, Sustainable Aluminum Bottle, Up to 78 Washer Loads - Hypoallergenic Laundry Soap - High Efficiency & Standard Machine Washing - Lavender, 16 Fl Oz",
@@ -43159,6 +43105,70 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00JAQJ59C",
             "sources": [
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FP47KN38",
+        "name": "FLO Period Underwear Heavy Flow",
+        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
+        "brand": "Flo",
+        "brand_source": "derived",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Feminine Care",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Feminine Care",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6438,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$21.24",
+        "basis_price": "$24.99 ea",
+        "prime_price": "$19.12 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$21.24",
+            "basis_price": "$24.99 ea",
+            "prime_price": "$19.12 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$21.24",
+            "basis_price": "$24.99 ea",
+            "prime_price": "$19.12 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+            "sources": [
+              "All Deals"
             ]
           }
         ]
@@ -51076,6 +51086,69 @@
         ]
       },
       {
+        "asin": "B0DFKV19Y4",
+        "name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil",
+        "raw_name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 33.8 Fl Oz (1L)",
+        "brand": "Graza",
+        "source_brand": "Graza",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Household",
+        "subcategory": "Insect Repellent",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Household",
+        "ai_subcategory": "Insect Repellent",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6437,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$17.88",
+        "basis_price": "$22.99 ea",
+        "prime_price": "$16.09 ea",
+        "discount": "30% off",
+        "discount_percent": 0,
+        "unit_price": "$0.53/fluid ounce",
+        "image": "https://m.media-amazon.com/images/I/71apd0DH2YL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DFKV19Y4",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DFKV19Y4",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$17.88",
+            "basis_price": "$22.99 ea",
+            "prime_price": "$16.09 ea",
+            "discount": "30% off",
+            "discount_percent": 30,
+            "unit_price": "$0.53/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DFKV19Y4",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0DLC59VGW",
         "name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil",
         "raw_name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Glass Bottle - Single Origin Olive Oils from Spain - 25.3 Fl Oz (750ml)",
@@ -55030,58 +55103,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B075FG1TQ5",
             "sources": [
               "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B07V1YVH2M",
-        "name": "Humble Aluminum-Free Deodorant for Women & Men",
-        "raw_name": "Humble Aluminum-Free Deodorant for Women & Men, Bergamot & Ginger - Baking Soda-Free Natural Deodorant Stick for Sensitive Skin with Essential Oils for Long-Lasting Odor Control, 2.5 Oz",
-        "brand": "Humble Simple AND True.",
-        "source_brand": "Humble Simple AND True.",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Deodorant",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Deodorant",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$9.59",
-        "basis_price": "$11.99 ea",
-        "prime_price": "$8.63 ea",
-        "discount": "28% off",
-        "discount_percent": 28,
-        "unit_price": "$3.84/ounce",
-        "image": "https://m.media-amazon.com/images/I/71UHb204l8L.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07V1YVH2M",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "$9.59",
-            "basis_price": "$11.99 ea",
-            "prime_price": "$8.63 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "unit_price": "$3.84/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07V1YVH2M",
-            "sources": [
-              "Search Deals"
             ]
           }
         ]
@@ -107435,69 +107456,6 @@
             "discount_percent": 20,
             "unit_price": "$0.36/ounce",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B011YJQBRG",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0837HHNSN",
-        "name": "Siggi's Kids Lowfat Yogurt Pouches",
-        "raw_name": "siggi's Kids Lowfat Yogurt Pouches, Mixed Berries, 3.5 oz. Each, 4 Ct – 2% Milkfat",
-        "brand": "Siggi's",
-        "source_brand": "Siggi's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Plant-Based Yogurt",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Plant-Based Yogurt",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.656,
-        "ai_clip_source": "subcategory-first",
-        "current_price": "$6.48",
-        "basis_price": "$7.29 ea",
-        "prime_price": "$5.83 ea",
-        "discount": "20% off",
-        "discount_percent": 0,
-        "unit_price": "$0.46/ounce",
-        "image": "https://m.media-amazon.com/images/I/71LjXSzjUNL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0837HHNSN",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0837HHNSN",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$6.48",
-            "basis_price": "$7.29 ea",
-            "prime_price": "$5.83 ea",
-            "discount": "20% off",
-            "discount_percent": 20,
-            "unit_price": "$0.46/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0837HHNSN",
             "sources": [
               "Search Deals"
             ]
