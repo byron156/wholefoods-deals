@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T09:40:54.618617+00:00",
+  "generated_at": "2026-06-25T01:45:28.792982+00:00",
   "summary": {
     "total_products": 3684,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3684
   },
   "taxonomy_report": {
-    "generated_at": "2026-06-24T04:03:46.853565+00:00",
+    "generated_at": "2026-06-25T01:45:25.324909+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -12181,147 +12181,6 @@
         ]
       },
       {
-        "asin": "B08CBX171Q",
-        "asins": [
-          "B08CBX171Q"
-        ],
-        "name": "Renew Life Women's Probiotic Capsules",
-        "raw_name": "Renew Life Women's Probiotic Capsules, Supports pH Balance for Women, Vaginal, Urinary, Digestive and Immune Health, L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 90 Billion CFU - 60 Ct",
-        "brand": "Renew Life",
-        "source_brand": "Renew Life",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer",
-          "Search Deals"
-        ],
-        "source_count": 2,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "prime_price": "$71.90 ea",
-        "discount": "23% off",
-        "discount_percent": 0,
-        "unit_price": "$1.33/count",
-        "image": "https://m.media-amazon.com/images/I/71nSV6WOpoL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "multi-source deal",
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "$79.89",
-            "basis_price": "$93.99 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Flyer",
-              "Search Deals"
-            ],
-            "prime_price": "$71.90 ea",
-            "unit_price": "$1.33/count"
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Flyer",
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08CBWZYR4",
-        "asins": [
-          "B08CBWZYR4"
-        ],
-        "name": "Renew Life Women's Probiotic Capsules",
-        "raw_name": "Renew Life Women's Probiotic Capsules, 50 Billion CFU Guaranteed, Supports pH Balance, Vaginal, Urinary, Digestive and Immune Health(2), L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 30 Count",
-        "brand": "Renew Life",
-        "source_brand": "Renew Life",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer",
-          "Search Deals"
-        ],
-        "source_count": 2,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "prime_price": "$36.32 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "unit_price": "$1.35/count",
-        "image": "https://m.media-amazon.com/images/I/81wLAj3cQLL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-        "tags": [
-          "multi-source deal",
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "$40.36",
-            "basis_price": "$47.49 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-            "sources": [
-              "Flyer",
-              "Search Deals"
-            ],
-            "prime_price": "$36.32 ea",
-            "unit_price": "$1.35/count"
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B07FV2PB14",
         "asins": [
           "B07FV2PB14"
@@ -20910,6 +20769,72 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B008XJ7F1W",
             "sources": [
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DBMCRH47",
+        "name": "Babylife Organics Stage 2",
+        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
+        "brand": "Babylife Organics Stage",
+        "brand_source": "derived",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Baby",
+        "subcategory": "Baby Food",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Baby",
+        "ai_subcategory": "Baby Food",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "$2.50",
+        "basis_price": "$2.96 ea",
+        "prime_price": "$2.25 ea",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "($0.71/ounce)",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+        "tags": [
+          "organic",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$2.50",
+            "basis_price": "$2.96 ea",
+            "prime_price": "$2.25 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "unit_price": "($0.71/ounce)",
+            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$2.50",
+            "basis_price": "$2.96 ea",
+            "prime_price": "$2.25 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "unit_price": "($0.71/ounce)",
+            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+            "sources": [
+              "All Deals"
             ]
           }
         ]
@@ -29711,12 +29636,12 @@
         ]
       },
       {
-        "asin": "B0FMKMXS8R",
+        "asin": "B07SQB7GF2",
         "asins": [
-          "B0FMKMXS8R"
+          "B07SQB7GF2"
         ],
         "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Breakfast Cereal with 10g of Protein, No Added Sugar - Gluten Free - Apple Turnover - 8 oz Bag (Pack of 1)",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Dark Chocolate - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
         "brand": "Catalina Crunch",
         "source_brand": "Catalina Crunch",
         "brand_source": "source",
@@ -29739,8 +29664,8 @@
         "basis_price": "$5.75 to $8.99 ea",
         "discount": "28% off",
         "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/81vSIVyVZtL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+        "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
         "tags": [
           "flyer-only deal",
           "high-protein"
@@ -29756,7 +29681,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
             "sources": [
               "Flyer"
             ]
@@ -29767,7 +29692,71 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B08QDP3S8X",
+        "asins": [
+          "B08QDP3S8X"
+        ],
+        "name": "Catalina Crunch Protein Cereal",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Chocolate Peanut Butter - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
+        "brand": "Catalina Crunch",
+        "source_brand": "Catalina Crunch",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Cereal & Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Cereal & Breakfast",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "20% off",
+        "basis_price": "$5.75 to $8.99 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/71o4Dej26pL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+        "tags": [
+          "flyer-only deal",
+          "high-protein"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "20% off",
+            "basis_price": "$5.75 to $8.99 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "20% off",
+            "basis_price": "$5.75 to $8.99 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
             "sources": [
               "Flyer"
             ]
@@ -107212,67 +107201,6 @@
             "discount_percent": 25,
             "unit_price": "$0.88/ounce",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B071XY8BDQ",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B01KNZ4QBK",
-        "name": "Siggi's® 2% Icelandic Strained Lowfat Yogurt",
-        "raw_name": "siggi's® 2% Icelandic Strained Lowfat Yogurt, Black Cherry, 5.3 oz., Single Serve Cup",
-        "brand": "Siggis",
-        "source_brand": "Siggis",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Yogurt",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Yogurt",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$1.59",
-        "basis_price": "$1.79 ea",
-        "prime_price": "$1.43 ea",
-        "discount": "20% off",
-        "discount_percent": 0,
-        "unit_price": "$0.30/ounce",
-        "image": "https://m.media-amazon.com/images/I/71FWtjbczoL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$1.59",
-            "basis_price": "$1.79 ea",
-            "prime_price": "$1.43 ea",
-            "discount": "20% off",
-            "discount_percent": 20,
-            "unit_price": "$0.30/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
             "sources": [
               "Search Deals"
             ]
