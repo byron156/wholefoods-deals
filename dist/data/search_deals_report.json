@@ -9,7 +9,7 @@
       "network_batch_count": 0,
       "sort_runs": [],
       "reused_previous": true,
-      "error": "Page.goto: net::ERR_NETWORK_CHANGED at https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\nCall log:\n  - navigating to \"https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\", waiting until \"domcontentloaded\"\n"
+      "error": "The page still did not show \"Columbus Circle\" as the selected store before deals scrolling began."
     },
     {
       "store_id": "10328",
@@ -19,7 +19,7 @@
       "network_batch_count": 0,
       "sort_runs": [],
       "reused_previous": true,
-      "error": "Page.goto: net::ERR_NETWORK_CHANGED at https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\nCall log:\n  - navigating to \"https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\", waiting until \"domcontentloaded\"\n"
+      "error": "Products did not render for the run \"Relevance\"."
     }
   ]
 }

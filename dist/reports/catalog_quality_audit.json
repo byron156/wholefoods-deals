@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T01:45:28.792982+00:00",
+  "generated_at": "2026-06-26T13:13:41.704118+00:00",
   "summary": {
     "total_products": 3684,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3684
   },
   "taxonomy_report": {
-    "generated_at": "2026-06-25T01:45:25.324909+00:00",
+    "generated_at": "2026-06-26T13:03:15.729817+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -6080,6 +6080,45 @@
       }
     ],
     "clip_high_confidence_disagreements": [
+      {
+        "asin": "B0756548HD",
+        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
+        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
+        "brand": "Babo Botanicals",
+        "source_brand": "Babo Botanicals",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Hair Care",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Hair Care",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
       {
         "asin": "B0004N1K1Q",
         "name": "Green Mountain Gringo Mild Salsa, 16 Oz",
@@ -12176,6 +12215,77 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B07D772W3G",
             "sources": [
               "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B08CBX171Q",
+        "asins": [
+          "B08CBX171Q"
+        ],
+        "name": "Renew Life Women's Probiotic Capsules",
+        "raw_name": "Renew Life Women's Probiotic Capsules, Supports pH Balance for Women, Vaginal, Urinary, Digestive and Immune Health, L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 90 Billion CFU - 60 Ct",
+        "brand": "Renew Life",
+        "source_brand": "Renew Life",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "15% off",
+        "basis_price": "prices vary",
+        "prime_price": "$71.90 ea",
+        "discount": "23% off",
+        "discount_percent": 0,
+        "unit_price": "$1.33/count",
+        "image": "https://m.media-amazon.com/images/I/71nSV6WOpoL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "multi-source deal",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10328",
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "current_price": "$79.89",
+            "basis_price": "$93.99 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Flyer",
+              "Search Deals"
+            ],
+            "prime_price": "$71.90 ea",
+            "unit_price": "$1.33/count"
+          },
+          {
+            "store_id": "10160",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Flyer",
+              "Search Deals"
             ]
           }
         ]
@@ -20383,45 +20493,6 @@
             "store_id": "10160",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00TDMHELE",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0756548HD",
-        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
-        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
-        "brand": "Babo Botanicals",
-        "source_brand": "Babo Botanicals",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Hair Care",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Hair Care",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
             "sources": [
               "Search Deals"
             ]
@@ -29636,6 +29707,70 @@
         ]
       },
       {
+        "asin": "B0FMKMXS8R",
+        "asins": [
+          "B0FMKMXS8R"
+        ],
+        "name": "Catalina Crunch Protein Cereal",
+        "raw_name": "Catalina Crunch Protein Cereal - Breakfast Cereal with 10g of Protein, No Added Sugar - Gluten Free - Apple Turnover - 8 oz Bag (Pack of 1)",
+        "brand": "Catalina Crunch",
+        "source_brand": "Catalina Crunch",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Cereal & Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Cereal & Breakfast",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "20% off",
+        "basis_price": "$5.75 to $8.99 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/81vSIVyVZtL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+        "tags": [
+          "flyer-only deal",
+          "high-protein"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "20% off",
+            "basis_price": "$5.75 to $8.99 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "20% off",
+            "basis_price": "$5.75 to $8.99 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B07SQB7GF2",
         "asins": [
           "B07SQB7GF2"
@@ -37511,67 +37646,6 @@
         ]
       },
       {
-        "asin": "B07QC84J6G",
-        "name": "Divine Chocolate Chocolate",
-        "raw_name": "DIVINE CHOCOLATE Chocolate, 70% Dark Chocolate with Mint Crisp, 3 Oz",
-        "brand": "Divine Chocolate",
-        "source_brand": "Divine Chocolate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$3.33",
-        "basis_price": "$4.99 ea",
-        "prime_price": "$3.00 ea",
-        "discount": "40% off",
-        "discount_percent": 0,
-        "unit_price": "$1.11/ounce",
-        "image": "https://m.media-amazon.com/images/I/71-4jeUKQoL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$3.33",
-            "basis_price": "$4.99 ea",
-            "prime_price": "$3.00 ea",
-            "discount": "40% off",
-            "discount_percent": 40,
-            "unit_price": "$1.11/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0DK9QFV5D",
         "name": "Doctor Death Sparkling Water 6 Pack, 12 Fl Oz",
         "raw_name": "Doctor Death Sparkling Water 6 Pack, 12 Fl Oz",
@@ -37854,71 +37928,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QTYO",
             "sources": [
               "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0FPGBGXQ1",
-        "name": "Dr. Bronners",
-        "raw_name": "Dr. Bronners, Castile Soap Lavender 18 Inch 1 Organic, 3.4 Fl Oz",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Soap & Hand Wash",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Soap & Hand Wash",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.9328,
-        "ai_clip_source": "category-first",
-        "current_price": "$4.26",
-        "basis_price": "$4.99 ea",
-        "prime_price": "$3.83 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "unit_price": "($1.25/fluid ounce)",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/41H93MxFgSL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Dr-Bronners-Castile-Lavender-Organic/dp/B0FPGBGXQ1?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FPGBGXQ1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_156_i",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$4.26",
-            "basis_price": "$4.99 ea",
-            "prime_price": "$3.83 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "unit_price": "($1.25/fluid ounce)",
-            "url": "https://www.wholefoodsmarket.com/Dr-Bronners-Castile-Lavender-Organic/dp/B0FPGBGXQ1?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FPGBGXQ1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_156_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$4.26",
-            "basis_price": "$4.99 ea",
-            "prime_price": "$3.83 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "unit_price": "($1.25/fluid ounce)",
-            "url": "https://www.wholefoodsmarket.com/Dr-Bronners-Castile-Lavender-Organic/dp/B0FPGBGXQ1?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FPGBGXQ1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_156_i",
-            "sources": [
-              "All Deals"
             ]
           }
         ]
@@ -43094,70 +43103,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00JAQJ59C",
             "sources": [
               "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0FP47KN38",
-        "name": "FLO Period Underwear Heavy Flow",
-        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
-        "brand": "Flo",
-        "brand_source": "derived",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Feminine Care",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Feminine Care",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6438,
-        "ai_clip_source": "subcategory-first",
-        "current_price": "$21.24",
-        "basis_price": "$24.99 ea",
-        "prime_price": "$19.12 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$21.24",
-            "basis_price": "$24.99 ea",
-            "prime_price": "$19.12 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$21.24",
-            "basis_price": "$24.99 ea",
-            "prime_price": "$19.12 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-            "sources": [
-              "All Deals"
             ]
           }
         ]
@@ -57854,69 +57799,6 @@
             "discount": "23% off",
             "discount_percent": 23,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B001EHBF5W",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0013OUK3E",
-        "asins": [
-          "B0013OUK3E"
-        ],
-        "name": "Jarrow Formulas Fem-Dophilus",
-        "raw_name": "Jarrow Formulas Fem-Dophilus - 5 Billion CFU Per Serving - Women's Probiotic Supplement - Urinary Tract & Vaginal Health - Up to 30 Servings (Veggie Caps)",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/71QwFBcLFOL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
             "sources": [
               "Flyer"
             ]
@@ -103771,34 +103653,6 @@
         ]
       },
       {
-        "asin": "target:72c6b79f9a59a3cc",
-        "name": "Select Clover Sonoma Milk",
-        "raw_name": "select Clover Sonoma milk",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Milk",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Milk",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$5.49",
-        "prime_price": "$5.49 ea",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_dafad149-f302-4378-b7b3-62a9cd51932c?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=select+Clover+Sonoma+milk",
-        "tags": [
-          "prime deal"
-        ]
-      },
-      {
         "asin": "target:6e834d55852daeae",
         "name": "Select Clover Sonoma Milk - 0.5gal",
         "raw_name": "select Clover Sonoma milk - 0.5gal",
@@ -106475,67 +106329,6 @@
         ]
       },
       {
-        "asin": "B0DD4JMMX9",
-        "name": "Siete Family Foods",
-        "raw_name": "Siete Family Foods, Chips Tortilla Maiz Taco Seasoning, 7.5 Ounce",
-        "brand": "Siete",
-        "source_brand": "Siete",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$4.99",
-        "basis_price": "$5.99 ea",
-        "prime_price": "$4.49 ea",
-        "discount": "25% off",
-        "discount_percent": 0,
-        "unit_price": "$0.67/ounce",
-        "image": "https://m.media-amazon.com/images/I/81yln1PmuhL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD4JMMX9",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD4JMMX9",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$4.99",
-            "basis_price": "$5.99 ea",
-            "prime_price": "$4.49 ea",
-            "discount": "25% off",
-            "discount_percent": 25,
-            "unit_price": "$0.67/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD4JMMX9",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0DJFXM6PR",
         "name": "Siete Family Foods Mexican Street Corn Maiz Tortilla Chips",
         "raw_name": "Siete Family Foods Mexican Street Corn Maiz Tortilla Chips, 7.5 OZ",
@@ -107201,67 +106994,6 @@
             "discount_percent": 25,
             "unit_price": "$0.88/ounce",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B071XY8BDQ",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B002M3ZBPW",
-        "name": "Siggi’s® Icelandic Strained Nonfat Yogurt",
-        "raw_name": "siggi’s® Icelandic Strained Nonfat Yogurt, Vanilla, 5.3 oz. Single Serve Cup – Thick, Protein-Rich Yogurt",
-        "brand": "Siggis",
-        "source_brand": "Siggis",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Yogurt",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Yogurt",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$1.59",
-        "basis_price": "$1.79 ea",
-        "prime_price": "$1.43 ea",
-        "discount": "20% off",
-        "discount_percent": 0,
-        "unit_price": "$0.30/ounce",
-        "image": "https://m.media-amazon.com/images/I/71txB8DEthL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B002M3ZBPW",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B002M3ZBPW",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$1.59",
-            "basis_price": "$1.79 ea",
-            "prime_price": "$1.43 ea",
-            "discount": "20% off",
-            "discount_percent": 20,
-            "unit_price": "$0.30/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B002M3ZBPW",
             "sources": [
               "Search Deals"
             ]
