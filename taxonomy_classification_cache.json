@@ -5,7 +5,7 @@
   "model_version": "taxonomy-local-ml-v17",
   "gold_labels_digest": "336cd82bd9869c62",
   "silver_labels_digest": "670a54b02fa26423",
-  "clip_audit_digest": "cf354a0890634f70",
+  "clip_audit_digest": "a906d58aaf8386ac",
   "clip_primary_min_score": 0.55,
   "clip_rescue_min_score": 0.4,
   "items": {
@@ -25148,11 +25148,14 @@
     },
     "db19f58baf121bad70ef3f34c453eea5c993d7746157dca74d3db7e575bfbe89": {
       "category": "Supplements & Wellness",
-      "subcategory": "Immune Support",
-      "confidence": 0.99,
-      "reasoning": "Wellness support wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "subcategory": "Multivitamins",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.5896. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.5896,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "159d8a6d5388f884a530b91f8da71a1e08a4a262f0b9cbc18aa16acfbae27300": {
@@ -29015,10 +29018,13 @@
     "11db3aa5009b076d30f45845e60e7e00a35e142011e987ce3403b42a59dd802b": {
       "category": "Supplements & Wellness",
       "subcategory": "Protein & Collagen",
-      "confidence": 0.99,
-      "reasoning": "Protein or collagen supplement wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7797. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7797,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "459f81b2de9b06b1d55a96a130c9a69163cde3658fbfed7e0500f053d8f7cf9c": {
@@ -31148,12 +31154,15 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "d390057d21229aa4951e8b8ce6cfa2c60a233051ec901c58e194992e00061638": {
-      "category": "Pantry",
-      "subcategory": "Baking Supplies",
-      "confidence": 0.99,
-      "reasoning": "Baking supply wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9007. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9007,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "dfd415d839d4ab1737b6b69c47b48ed543c9200fee4b927170ac1eaddecb9a49": {
@@ -36841,10 +36850,13 @@
     "aae474617d2e8679eb978a5fe4ee56c4518fbada8a2c93fa625eeb9bff24b821": {
       "category": "Beverages",
       "subcategory": "Sparkling Water",
-      "confidence": 0.99,
-      "reasoning": "Sparkling-water wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9698. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9698,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "a157b8d8e1eaa5db1fc700697a12e87ddeb1b749509a1db8817e5bae923f707f": {
@@ -37459,11 +37471,14 @@
     },
     "dadc435f0b532abac8fdc924d9ccf2609bfe9e2dfa1b3ee68cd64991929cea8f": {
       "category": "Snacks",
-      "subcategory": "Candy & Chocolate",
-      "confidence": 0.99,
-      "reasoning": "Candy wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "subcategory": "Fruit Snacks",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6320. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.632,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "9067ab650b34c6f94bb3d67aa42bfd6f09fdedd5c8bc7e6430853eedb5bddf41": {
@@ -38347,11 +38362,14 @@
     },
     "6e4de862781452b7294fd09f8627202781b1c8b8e00ff5cb2adba21e50ba4f23": {
       "category": "Snacks",
-      "subcategory": "Snack Bars",
-      "confidence": 0.99,
-      "reasoning": "Snack-bar wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "subcategory": "Protein Bars",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9844. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9844,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "447b78ae2af7f51c8f819ba324649a7c20af903b533f9a4d0117267217b7f7bc": {
@@ -38605,12 +38623,15 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "e398ed0e9f85fe91cb014a640a98bc1849731d9c86d52efae2e4cf458a4194e1": {
-      "category": "Snacks",
-      "subcategory": "Cookies",
-      "confidence": 0.99,
-      "reasoning": "Cookie or wafer snack wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "category": "Frozen",
+      "subcategory": "Ice Cream",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.6224. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.6224,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "25b8e2ae1dfd2f0cda7339d2dbbb514b6eccafc6ae9ad57689df2a611bc7ded5": {

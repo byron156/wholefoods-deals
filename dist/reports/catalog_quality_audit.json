@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-28T11:45:20.156474+00:00",
+  "generated_at": "2026-06-29T23:34:10.143803+00:00",
   "summary": {
     "total_products": 4960,
     "failed_products": 0,
     "failed_percent": "0.0%",
-    "clip_covered_products": 4929,
-    "clip_missing_products": 31,
-    "clip_missing_percent": "0.6%",
+    "clip_covered_products": 4956,
+    "clip_missing_products": 4,
+    "clip_missing_percent": "0.1%",
     "suspicious_category_products": 155,
     "brand_issue_products": 216,
     "data_issue_products": 3511,
@@ -28,7 +28,7 @@
     "combined_unique_count": 4960
   },
   "taxonomy_report": {
-    "generated_at": "2026-06-28T11:45:02.825997+00:00",
+    "generated_at": "2026-06-29T23:17:38.415576+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -244,16 +244,16 @@
       "Dairy & Eggs": 423,
       "Supplements & Wellness": 707,
       "Beverages": 652,
-      "Pantry": 797,
+      "Pantry": 796,
       "International": 170,
       "Produce": 158,
       "Beauty & Personal Care": 373,
-      "Snacks": 665,
+      "Snacks": 664,
       "Meat & Seafood": 225,
       "Prepared Foods": 143,
-      "Frozen": 258,
+      "Frozen": 259,
       "Alcohol": 201,
-      "Bakery": 76,
+      "Bakery": 77,
       "Household": 66,
       "Baby": 46
     },
@@ -264,7 +264,7 @@
       "Supplements & Wellness / Herbal Supplements": 225,
       "Beverages / Soda": 63,
       "Pantry / Pasta": 41,
-      "Supplements & Wellness / Immune Support": 81,
+      "Supplements & Wellness / Immune Support": 80,
       "Supplements & Wellness / Probiotics": 61,
       "International / Asian Noodles & Dumplings": 94,
       "Produce / Fresh Herbs": 14,
@@ -272,7 +272,7 @@
       "Beauty & Personal Care / Hair Care": 73,
       "Beauty & Personal Care / Sun Care": 62,
       "Dairy & Eggs / Plant-Based Yogurt": 38,
-      "Snacks / Candy & Chocolate": 219,
+      "Snacks / Candy & Chocolate": 218,
       "Meat & Seafood / Chicken": 38,
       "Pantry / Spices & Seasonings": 57,
       "Supplements & Wellness / Protein & Collagen": 53,
@@ -282,7 +282,7 @@
       "Produce / Fruits": 68,
       "Produce / Vegetables": 54,
       "Meat & Seafood / Beef": 39,
-      "Frozen / Ice Cream": 140,
+      "Frozen / Ice Cream": 141,
       "Snacks / Chips": 136,
       "Pantry / Oils & Vinegars": 102,
       "Produce / Cut Fruit & Veg": 9,
@@ -304,7 +304,7 @@
       "Supplements & Wellness / Wellness Shots": 7,
       "Pantry / Pasta Sauces": 36,
       "Snacks / Pita Chips & Dippers": 6,
-      "Supplements & Wellness / Multivitamins": 77,
+      "Supplements & Wellness / Multivitamins": 78,
       "Supplements & Wellness / Mushroom Supplements": 26,
       "Household / Foil, Wrap & Bags": 4,
       "Dairy & Eggs / Milk": 50,
@@ -317,7 +317,7 @@
       "Meat & Seafood / Crab & Lobster": 3,
       "Supplements & Wellness / Kids Supplements": 1,
       "Meat & Seafood / Pork": 28,
-      "Snacks / Protein Bars": 92,
+      "Snacks / Protein Bars": 93,
       "Beverages / Water": 52,
       "Beauty & Personal Care / Lip Care": 14,
       "Meat & Seafood / Sausage": 25,
@@ -332,12 +332,12 @@
       "Dairy & Eggs / Dairy Alternatives": 18,
       "Baby / Baby Food": 34,
       "Dairy & Eggs / Butter & Margarine": 17,
-      "Snacks / Snack Bars": 16,
+      "Snacks / Snack Bars": 15,
       "Beauty & Personal Care / Soap & Hand Wash": 57,
       "Beauty & Personal Care / Body Care": 21,
       "Pantry / Soup & Broth": 61,
-      "Bakery / Cookies & Brownies": 9,
-      "Snacks / Fruit Snacks": 10,
+      "Bakery / Cookies & Brownies": 10,
+      "Snacks / Fruit Snacks": 11,
       "Pantry / Mayo & Mustard": 14,
       "Beauty & Personal Care / Cosmetics": 8,
       "International / Japanese Foods": 19,
@@ -363,8 +363,8 @@
       "Pantry / Beans & Legumes": 20,
       "Prepared Foods / Sushi": 21,
       "Baby / Baby Wellness": 9,
-      "Snacks / Cookies": 45,
-      "Pantry / Baking Supplies": 11,
+      "Snacks / Cookies": 44,
+      "Pantry / Baking Supplies": 10,
       "Household / Insect Repellent": 6,
       "Pantry / Cereal & Breakfast": 16,
       "Prepared Foods / Tofu & Plant-Based Proteins": 27,
@@ -436,22 +436,22 @@
       "Target": 247
     },
     "label_sources": {
-      "model": 2982,
-      "clip-primary": 1630,
+      "model": 2975,
+      "clip-primary": 1637,
       "gold": 140,
       "clip-provisional": 89,
       "silver": 119
     },
     "models": {
-      "local-taxonomy-classifier": 2461,
-      "local-clip-audit": 1719,
+      "local-taxonomy-classifier": 2454,
+      "local-clip-audit": 1726,
       "local-sklearn": 521,
       "manual-gold-label": 140,
       "openai-silver-label": 119
     },
     "confidence_buckets": {
-      "0.90-1.00": 2633,
-      "0.75-0.89": 1647,
+      "0.90-1.00": 2626,
+      "0.75-0.89": 1654,
       "0.00-0.34": 498,
       "0.55-0.74": 91,
       "0.35-0.54": 91
@@ -7468,6 +7468,45 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B09VN8W7HL",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0756548HD",
+        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
+        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
+        "brand": "Babo Botanicals",
+        "source_brand": "Babo Botanicals",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Hair Care",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Hair Care",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
             "sources": [
               "Search Deals"
             ]
@@ -14732,6 +14771,75 @@
         ]
       },
       {
+        "asin": "B0BZ9TP4PP",
+        "asins": [
+          "B0BZ9TP4PP"
+        ],
+        "name": "Olipop Prebiotic Soda Pop",
+        "raw_name": "OLIPOP Prebiotic Soda Pop, Cherry Cola, Prebiotics, Botanicals, Plant Fiber, 12 fl oz can",
+        "brand": "Olipop",
+        "source_brand": "Olipop",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.92,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.92,
+        "ai_label_source": "silver",
+        "ai_model_name": "openai-silver-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "3 for $6.66",
+        "basis_price": "$2.59 ea",
+        "prime_price": "$2.00 ea",
+        "discount": "23% off",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71wn3knr1vL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+        "tags": [
+          "multi-source deal",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "3 for $6.66",
+            "basis_price": "$2.59 ea",
+            "prime_price": "$2.00 ea",
+            "discount": "23% off",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+            "sources": [
+              "Flyer",
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "3 for $6.66",
+            "basis_price": "$2.59 ea",
+            "prime_price": "$2.00 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0BZ9NTXRG",
         "asins": [
           "B0BZ9NTXRG"
@@ -21397,6 +21505,45 @@
         ]
       },
       {
+        "asin": "B0DHJ5L3HW",
+        "name": "Acure Advanced Hydration Leave-In Conditioner",
+        "raw_name": "Acure Advanced Hydration Leave-In Conditioner - Hair Hydration & Conditioning Spray, Amino Acids for Moisturizing, Detangling, & Conditioning for Women & Men, Marine Algae & Yuzu Ingredients - 4 fl oz",
+        "brand": "Acure",
+        "source_brand": "Acure",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Hair Care",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Hair Care",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/6139PVgKmkL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/acure-acure-advanced-hydration-leave-in-conditioner-hair-hydration-conditioning-spray-amino-acids-for-moisturizing-detangling-conditioning-for-women-men-marine-algae-yuzu-ingredients-4-fl-oz-b0dhj5l3hw?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/acure-acure-advanced-hydration-leave-in-conditioner-hair-hydration-conditioning-spray-amino-acids-for-moisturizing-detangling-conditioning-for-women-men-marine-algae-yuzu-ingredients-4-fl-oz-b0dhj5l3hw?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0CMZ58SMT",
         "name": "Acure Bonding Hair Mask",
         "raw_name": "Acure Bonding Hair Mask - Weekly Deep Conditioning Hair Mask for Damaged Locks, Rescue Bond Repair Treatment for Dry, Damaged, Thin, Fine Locks, Natural Ingredients, Vegan - 5 fl oz",
@@ -22415,162 +22562,6 @@
         ]
       },
       {
-        "asin": "B0GCKKTXZ9",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Dark Chocolate Honeycomb Crunch 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81BfZPZ0-OL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKPVTJG",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Chocolate Covered Strawberry 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81BwP16llRL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKR2SKR",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Peanut Butter Cup 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81sUwDFwDtL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-peanut-butter-cup-3-5oz-4-pack-b0gckr2skr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-peanut-butter-cup-3-5oz-4-pack-b0gckr2skr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKTHLHM",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Mint Chocolate Cookie 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81k6s+jgpDL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B000REL6E8",
         "name": "Alexia Foods Onion Rings with Sea Salt, 11 OZ",
         "raw_name": "Alexia Foods Onion Rings With Sea Salt, 11 OZ",
@@ -22759,6 +22750,45 @@
             "store_id": "10160",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B003UWNJSA",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FFTPTX9J",
+        "name": "Alice Mushrooms Brainstorm Mushroom Chocolate 10 Count",
+        "raw_name": "Alice Mushrooms Brainstorm Mushroom Chocolate 10 Count, 2.5 OZ",
+        "brand": "Alice",
+        "source_brand": "Alice",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Candy & Chocolate",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Candy & Chocolate",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71BgJXoMmiL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FFTPTX9J",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FFTPTX9J",
             "sources": [
               "Search Deals"
             ]
@@ -23319,92 +23349,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-maple-sea-salt-protein-bar-12-ct-b0bx7g9n83?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B06Y1MMDMC",
-        "name": "Aloha Organic Plant Based Protein Bars",
-        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Mint, 1.98 Oz (Pack of 12)",
-        "brand": "Aloha",
-        "source_brand": "Aloha",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Protein Bars",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Protein Bars",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/7139RLiq91L._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "high-protein",
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0795D5G91",
-        "name": "Aloha Organic Plant Based Protein Bars",
-        "raw_name": "ALOHA Organic Plant Based Protein Bars, Vegan, Low Sugar & Carb, Paleo, Non-GMO, Gluten/Stevia/Soy Free, No Sugar Alcohols, Chocolate Mint, 1.98 Oz",
-        "brand": "Aloha",
-        "source_brand": "Aloha",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Protein Bars",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Protein Bars",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71rn3YdoeWL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "high-protein",
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
             "sources": [
               "Search Deals"
             ]
@@ -24084,47 +24028,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVZ2DHH",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DXVYNSCN",
-        "name": "Amylu Foods Chicken Sausage Breakfast Patties",
-        "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Breakfast Time, Natural Ingredients, 16g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
-        "brand": "Amylu",
-        "source_brand": "Amylu",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Frozen",
-        "subcategory": "Frozen Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Frozen",
-        "ai_subcategory": "Frozen Breakfast",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.5731,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61ZjZhwJ-xL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
             "sources": [
               "Search Deals"
             ]
@@ -28554,45 +28457,6 @@
         ]
       },
       {
-        "asin": "B0756548HD",
-        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
-        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
-        "brand": "Babo Botanicals",
-        "source_brand": "Babo Botanicals",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Hair Care",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Hair Care",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B07NJPR4TN",
         "name": "Babo Botanicals Sensitive Baby Mineral Sunscreen Lotion SPF50",
         "raw_name": "Babo Botanicals Sensitive Baby Mineral Sunscreen Lotion SPF50 - Natural Zinc Oxide - Face & Body - Fragrance-Free - Water-Resistant - EWG Verified - Vegan - Extra Sensitive Skin - For Babies & Kids",
@@ -28921,6 +28785,72 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVGJ2VVP",
             "sources": [
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DBMCRH47",
+        "name": "Babylife Organics Stage 2",
+        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
+        "brand": "Babylife Organics Stage",
+        "brand_source": "derived",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Baby",
+        "subcategory": "Baby Food",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Baby",
+        "ai_subcategory": "Baby Food",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "$2.50",
+        "basis_price": "$2.96 ea",
+        "prime_price": "$2.25 ea",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "($0.71/ounce)",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+        "tags": [
+          "organic",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$2.50",
+            "basis_price": "$2.96 ea",
+            "prime_price": "$2.25 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "unit_price": "($0.71/ounce)",
+            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$2.50",
+            "basis_price": "$2.96 ea",
+            "prime_price": "$2.25 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "unit_price": "($0.71/ounce)",
+            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+            "sources": [
+              "All Deals"
             ]
           }
         ]
@@ -32765,6 +32695,45 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0CGBLHTY6",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0CGBKQJ25",
+        "name": "Bigelow Tea Whispering Wildflowers Plus L-Theanine Herbal Tea",
+        "raw_name": "Bigelow Tea Whispering Wildflowers plus L-Theanine Herbal Tea, Caffeine Free, 18 Total Tea Bags (Pack of 1)",
+        "brand": "Bigelow Tea",
+        "source_brand": "Bigelow Tea",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Tea",
+        "classification_status": "classified",
+        "category_confidence": 0.0967,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Tea",
+        "ai_confidence": 0.0967,
+        "ai_label_source": "model",
+        "ai_model_name": "local-sklearn",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/91BF-BgJlOL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0CGBKQJ25",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0CGBKQJ25",
             "sources": [
               "Search Deals"
             ]
@@ -47191,45 +47160,6 @@
         ]
       },
       {
-        "asin": "B07QC84J6G",
-        "name": "Divine Chocolate Chocolate",
-        "raw_name": "DIVINE CHOCOLATE Chocolate, 70% Dark Chocolate with Mint Crisp, 3 Oz",
-        "brand": "Divine Chocolate",
-        "source_brand": "Divine Chocolate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71-4jeUKQoL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0CBNCWT3Y",
         "name": "Doughlicious Chocolate Truffle Cookie Dough & Gelato Bites",
         "raw_name": "DOUGHLICIOUS Chocolate Truffle Cookie Dough & Gelato Bites, 6.77 OZ",
@@ -53499,6 +53429,70 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00JAQJ59C",
             "sources": [
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FP47KN38",
+        "name": "FLO Period Underwear Heavy Flow",
+        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
+        "brand": "Flo",
+        "brand_source": "derived",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Feminine Care",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Feminine Care",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6438,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$21.24",
+        "basis_price": "$24.99 ea",
+        "prime_price": "$19.12 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$21.24",
+            "basis_price": "$24.99 ea",
+            "prime_price": "$19.12 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$21.24",
+            "basis_price": "$24.99 ea",
+            "prime_price": "$19.12 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+            "sources": [
+              "All Deals"
             ]
           }
         ]
@@ -60807,6 +60801,48 @@
         ]
       },
       {
+        "asin": "B0CF2VCH7Y",
+        "name": "Goodpop - Organic Mango Ice Pops - Fruit Juice, No Artifical Dyes or Flavors, No Added Sugar, 6 Count",
+        "raw_name": "GOODPOP - Organic Mango Ice Pops - Fruit Juice, No Artifical Dyes or Flavors, No Added Sugar, 6 Count",
+        "brand": "Goodpop",
+        "source_brand": "Goodpop",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Functional Drinks",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Functional Drinks",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81VSS9Vq2GL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0CF2VCH7Y",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0CF2VCH7Y",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0FPYXPJX1",
         "name": "Goodpop Peaches N' Cream Ice Cream Bars",
         "raw_name": "GoodPop Peaches n' Cream Ice Cream Bars - Dairy Free, Gluten Free - 4 Pops",
@@ -61786,47 +61822,6 @@
             "store_id": "10160",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0CNB9JLZ5",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DFKV19Y4",
-        "name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil",
-        "raw_name": "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 33.8 Fl Oz (1L)",
-        "brand": "Graza",
-        "source_brand": "Graza",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Household",
-        "subcategory": "Insect Repellent",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Household",
-        "ai_subcategory": "Insect Repellent",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6437,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71apd0DH2YL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DFKV19Y4",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DFKV19Y4",
             "sources": [
               "Search Deals"
             ]
@@ -69586,6 +69581,69 @@
         ]
       },
       {
+        "asin": "B0013OUK3E",
+        "asins": [
+          "B0013OUK3E"
+        ],
+        "name": "Jarrow Formulas Fem-Dophilus",
+        "raw_name": "Jarrow Formulas Fem-Dophilus - 5 Billion CFU Per Serving - Women's Probiotic Supplement - Urinary Tract & Vaginal Health - Up to 30 Servings (Veggie Caps)",
+        "brand": "Jarrow Formulas",
+        "source_brand": "Jarrow Formulas",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "15% off",
+        "basis_price": "prices vary",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://m.media-amazon.com/images/I/71QwFBcLFOL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10328",
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10160",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B002USILBK",
         "asins": [
           "B002USILBK"
@@ -70023,6 +70081,45 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OXA90",
             "sources": [
               "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B01I56QLL2",
+        "name": "Jarrow Formulas Mastic Gum 1000 Mg",
+        "raw_name": "Jarrow Formulas Mastic Gum 1000 mg - 60 Veggie Caps - Mastic Gum Capsules Supporting Stomach and Duodenal Health - 30 Servings",
+        "brand": "Jarrow Formulas",
+        "source_brand": "Jarrow Formulas",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Herbal Supplements",
+        "classification_status": "classified",
+        "category_confidence": 0.95,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Herbal Supplements",
+        "ai_confidence": 0.95,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71r75p7eXOL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/jarrow-formulas-jarrow-formulas-mastic-gum-1000-mg-60-veggie-caps-mastic-gum-capsules-supporting-stomach-and-duodenal-health-30-servings-b01i56qll2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/jarrow-formulas-jarrow-formulas-mastic-gum-1000-mg-60-veggie-caps-mastic-gum-capsules-supporting-stomach-and-duodenal-health-30-servings-b01i56qll2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
             ]
           }
         ]
@@ -74359,6 +74456,45 @@
         ]
       },
       {
+        "asin": "B09ZH3THDH",
+        "name": "Kettle Brand Backyard Barbeque Kettle Potato Chips",
+        "raw_name": "Kettle Brand Backyard Barbeque Kettle Potato Chips, Gluten-Free, Non-GMO, 7.5 oz Bag",
+        "brand": "Kettle Brand",
+        "source_brand": "Kettle Brand",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Chips",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71k9LAP1ttL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B09ZH3THDH",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B09ZH3THDH",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0DG457ZQR",
         "name": "Kettle Brand Made with Avocado Oil Special Sauce Chips",
         "raw_name": "Kettle Brand Made with Avocado Oil Special Sauce Chips, 6 Oz Bag",
@@ -74430,47 +74566,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FRGH3ZGD",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B00NWJE9NK",
-        "name": "Kettle Brand Potato Chips",
-        "raw_name": "Kettle Brand Potato Chips, Jalapeno Kettle Chips, Party Size, 13 Oz",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.8607,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71iKwhQivvL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
             "sources": [
               "Search Deals"
             ]
@@ -74588,6 +74683,45 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL934XQ",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FRNNJGJP",
+        "name": "Kettle Brand Smoky Buffalo Potato Chips, 7.5 Oz Bag",
+        "raw_name": "Kettle Brand Smoky Buffalo Potato Chips, 7.5 Oz Bag",
+        "brand": "Kettle Brand",
+        "source_brand": "Kettle Brand",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Chips",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71Dm4k0ne1L.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FRNNJGJP",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FRNNJGJP",
             "sources": [
               "Search Deals"
             ]
@@ -78597,6 +78731,48 @@
         ]
       },
       {
+        "asin": "B09GZWLBBV",
+        "name": "Late July Blue Corn Dippers Organic Tortilla Chips",
+        "raw_name": "Late July Blue Corn Dippers Organic Tortilla Chips, 7.4 Oz Bag",
+        "brand": "Late July",
+        "source_brand": "Late July",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Chips",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81gdivU0Y2L.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B09GZWLBBV",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B09GZWLBBV",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B09GZKL9V1",
         "name": "Late July Organic Sea Salt Multigrain Tortilla Chips",
         "raw_name": "Late July Organic Sea Salt Multigrain Tortilla Chips, 7.5 Ounce",
@@ -79758,6 +79934,48 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0CZMRLL17",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DD1V3ZBV",
+        "name": "Lesserevil Organic Real Cheddar Space Ball Puffs Party Size",
+        "raw_name": "Lesserevil Organic Real Cheddar Space Ball Puffs Party Size, 7 OZ",
+        "brand": "Lesserevil",
+        "source_brand": "Lesserevil",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Dairy & Eggs",
+        "subcategory": "Cheese",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Dairy & Eggs",
+        "ai_subcategory": "Cheese",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/817FbVfdFLL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD1V3ZBV",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD1V3ZBV",
             "sources": [
               "Search Deals"
             ]
@@ -86294,6 +86512,45 @@
         ]
       },
       {
+        "asin": "B00028OMXQ",
+        "name": "Megafood Magnesium Supplement with Fermented Magnesium Glycinate",
+        "raw_name": "MegaFood Magnesium Supplement with Fermented Magnesium Glycinate - Chelated - Supports Heart & Nervous System - Vegan Gluten-Free Non-GMO Kosher - Made Without 9 Food Allergens - 60 Tablets",
+        "brand": "MegaFood",
+        "source_brand": "MegaFood",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Minerals",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Minerals",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71kOKgF0kPL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00028OMXQ",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00028OMXQ",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0DWVDX7XG",
         "name": "Megafood Magtein Magnesium L-Threonate",
         "raw_name": "MegaFood Magtein Magnesium L-Threonate - Magnesium Supplement 2000mg Per Serving - Supports Short-Term Memory, Focus, Alertness & Normal Sleep Cycles - Vegan, Gluten Free - 90 Capsules, 30 Servings",
@@ -87837,6 +88094,50 @@
             "store_id": "10160",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B08M2VSQ6N",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0BVWFRMSG",
+        "name": "Mezcla Puff Crispy Protein Bars",
+        "raw_name": "Mezcla Puff Crispy Protein Bars, Gluten Free & Vegan Protein Bars, 10g Protein, Alt for Crispy Rice Treat, Granola Bars & Breakfast Bars, Healthy Snacks for Adults, Pistachio Chocolate, 1 Count",
+        "brand": "Mezcla",
+        "source_brand": "Mezcla",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7107,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81Z4BYTLK3L.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVWFRMSG",
+        "tags": [
+          "high-protein"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVWFRMSG",
             "sources": [
               "Search Deals"
             ]
@@ -90759,6 +91060,48 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B08KJZ1X4Y",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B095LF2YGJ",
+        "name": "Morton & Bassett Organic Italian Herb Blend, 0.8 OZ",
+        "raw_name": "Morton & Bassett Organic Italian Herb Blend, 0.8 OZ",
+        "brand": "Morton & Bassett",
+        "source_brand": "Morton & Bassett",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Beans & Legumes",
+        "classification_status": "classified",
+        "category_confidence": 0.0376,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Beans & Legumes",
+        "ai_confidence": 0.0376,
+        "ai_label_source": "model",
+        "ai_model_name": "local-sklearn",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/819qVRc4+kL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B095LF2YGJ",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B095LF2YGJ",
             "sources": [
               "Search Deals"
             ]
@@ -95482,6 +95825,48 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSS25J",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FZXSRDQY",
+        "name": "Nixie Organic Zero Sugar Soda",
+        "raw_name": "Nixie Organic Zero Sugar Soda, NEW Strawberry Cream, Healthy Soda Pop, Non-GMO, 0 Sugar, 0 Calories, Caffeine Free, 12oz Can (1 Count)",
+        "brand": "Nixie",
+        "source_brand": "Nixie",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61nrwXfpcoL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
             "sources": [
               "Search Deals"
             ]
@@ -111260,6 +111645,45 @@
         ]
       },
       {
+        "asin": "B0D9PJ2YK4",
+        "name": "Pork Pancetta Breed Heritage, 4 Ounce",
+        "raw_name": "Pork Pancetta Breed Heritage, 4 Ounce",
+        "brand": "True Story Foods",
+        "source_brand": "True Story Foods",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Meat & Seafood",
+        "subcategory": "Pork",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Meat & Seafood",
+        "ai_subcategory": "Pork",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61HqQVhS8NL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0D9PJ2YK4",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0D9PJ2YK4",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B07814HZY1",
         "asins": [
           "B07814HZY1"
@@ -116983,6 +117407,45 @@
         ]
       },
       {
+        "asin": "B00U3RIGH4",
+        "name": "Rishi Tea Masala Chai Black Sachet Tea Bag Blend",
+        "raw_name": "Rishi Tea Masala Chai Black Sachet Tea Bag Blend - Organic, Assam with Whole Spices, Energizing & Caffeinated - 15 Count (Pack of 1)",
+        "brand": "Rishi Tea",
+        "source_brand": "Rishi Tea",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Tea",
+        "classification_status": "classified",
+        "category_confidence": 0.412,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Tea",
+        "ai_confidence": 0.412,
+        "ai_label_source": "model",
+        "ai_model_name": "local-sklearn",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71ldgpgblZL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00U3RIGH4",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00U3RIGH4",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B00J5HSQ6Y",
         "name": "Rishi Tea Matcha Super Green Japanese Tea",
         "raw_name": "Rishi Tea Matcha Super Green Japanese Tea - Organic, Caffeinated Sachet Bags, Umami, Antioxidant Rich Sencha & Matcha Blend - 15 Count (Pack of 1)",
@@ -117754,6 +118217,45 @@
         ]
       },
       {
+        "asin": "B017KQXWUQ",
+        "name": "Rosewater Facial Toner by Multipurpose Spray to Set Makeup",
+        "raw_name": "Rosewater Facial Toner by Multipurpose Spray to Set Makeup, Double Cleanse, and Balance Skins pH, Made with Rose Hydrosol, 4 Fl Oz",
+        "brand": "Cocokind",
+        "source_brand": "Cocokind",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Skin Care",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Skin Care",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71Zkc031R6L.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B017KQXWUQ",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B017KQXWUQ",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0785XBB9D",
         "name": "Roth, Original Havarti, 6 Ounce",
         "raw_name": "Roth, Original Havarti, 6 Ounce",
@@ -117903,6 +118405,45 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0CC3QPGZV",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0C6W2HTRL",
+        "name": "Rudis Bakery Garlic Texas Toast, 11.8 OZ",
+        "raw_name": "Rudis Bakery Garlic Texas Toast, 11.8 OZ",
+        "brand": "Rudis",
+        "source_brand": "Rudis",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Produce",
+        "subcategory": "Vegetables",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Produce",
+        "ai_subcategory": "Vegetables",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71qL0QQOaEL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6W2HTRL",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6W2HTRL",
             "sources": [
               "Search Deals"
             ]
@@ -118667,6 +119208,45 @@
         ],
         "tags": [
           "prime deal"
+        ]
+      },
+      {
+        "asin": "B0FS7VL99B",
+        "name": "Saltfields Brewing Nodogoshi Lager Cans, 4 Pack, 64 Fl Oz",
+        "raw_name": "Saltfields Brewing Nodogoshi Lager Cans, 4 Pack, 64 Fl Oz",
+        "brand": "Saltfields Brewing",
+        "source_brand": "Saltfields Brewing",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Alcohol",
+        "subcategory": "Beer",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Alcohol",
+        "ai_subcategory": "Beer",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61HabjozBeL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS7VL99B",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS7VL99B",
+            "sources": [
+              "Search Deals"
+            ]
+          }
         ]
       },
       {
@@ -124753,6 +125333,84 @@
         ]
       },
       {
+        "asin": "B01KNZ4QBK",
+        "name": "Siggi's® 2% Icelandic Strained Lowfat Yogurt",
+        "raw_name": "siggi's® 2% Icelandic Strained Lowfat Yogurt, Black Cherry, 5.3 oz., Single Serve Cup",
+        "brand": "Siggis",
+        "source_brand": "Siggis",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Dairy & Eggs",
+        "subcategory": "Yogurt",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Dairy & Eggs",
+        "ai_subcategory": "Yogurt",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71FWtjbczoL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B01KNZ4QBK",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B002M3ZBPW",
+        "name": "Siggi’s® Icelandic Strained Nonfat Yogurt",
+        "raw_name": "siggi’s® Icelandic Strained Nonfat Yogurt, Vanilla, 5.3 oz. Single Serve Cup – Thick, Protein-Rich Yogurt",
+        "brand": "Siggis",
+        "source_brand": "Siggis",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Dairy & Eggs",
+        "subcategory": "Yogurt",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Dairy & Eggs",
+        "ai_subcategory": "Yogurt",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71txB8DEthL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B002M3ZBPW",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B002M3ZBPW",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B011YJQ4B4",
         "name": "Siggi’s® Icelandic Strained Whole Milk Yogurt",
         "raw_name": "siggi’s® Icelandic Strained Whole Milk Yogurt, Vanilla, 4.4 oz. Single Serve Cup – Thick, Protein-Rich Yogurt Snack",
@@ -124824,6 +125482,47 @@
             "store_id": "10160",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B011YJQBRG",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0837HHNSN",
+        "name": "Siggi's Kids Lowfat Yogurt Pouches",
+        "raw_name": "siggi's Kids Lowfat Yogurt Pouches, Mixed Berries, 3.5 oz. Each, 4 Ct – 2% Milkfat",
+        "brand": "Siggi's",
+        "source_brand": "Siggi's",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Dairy & Eggs",
+        "subcategory": "Plant-Based Yogurt",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Dairy & Eggs",
+        "ai_subcategory": "Plant-Based Yogurt",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.656,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71LjXSzjUNL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0837HHNSN",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0837HHNSN",
             "sources": [
               "Search Deals"
             ]
@@ -126761,6 +127460,45 @@
         ]
       },
       {
+        "asin": "B0DM3VSGKY",
+        "name": "Smearcase Vanilla Bean Froco",
+        "raw_name": "Smearcase Vanilla Bean FroCo - Frozen Cottage Cheese Ice Cream, 40g Protein Per Pint, Collagen Boosted, Gluten Free, 14 fl oz",
+        "brand": "Smearcase",
+        "source_brand": "Smearcase",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Protein & Collagen",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Protein & Collagen",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61w65dCcz7L.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DM3VSGKY",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DM3VSGKY",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "hmart:10229",
         "name": "Smile Babble Soju Glass 6PC Set",
         "raw_name": "Smile Babble Soju Glass 6pc Set",
@@ -127475,6 +128213,45 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQ6348Z9",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DQ63GXFZ",
+        "name": "Soap Bar Cold Plunge Falls Yosemite, 5 Ounce",
+        "raw_name": "Soap Bar Cold Plunge Falls Yosemite, 5 Ounce",
+        "brand": "Every Man Jack",
+        "source_brand": "Every Man Jack",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Soap & Hand Wash",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Soap & Hand Wash",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/91Dkztp-hjL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQ63GXFZ",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQ63GXFZ",
             "sources": [
               "Search Deals"
             ]
@@ -133200,6 +133977,45 @@
         ]
       },
       {
+        "asin": "B08TGWS7ZS",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Lemon Berry - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71L3EIxL0VL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "hmart:1660",
         "name": "Takoyaki Ball Snack",
         "raw_name": "Takoyaki Ball Snack",
@@ -134043,47 +134859,6 @@
         ]
       },
       {
-        "asin": "B0007R72HK",
-        "name": "Taylors of Harrogate English Breakfast",
-        "raw_name": "Taylors of Harrogate English Breakfast, Black Tea, Pillow Tea Bags, 50 Count (Pack of 1), Rich, Bright & Malty, Caffeinated, Enjoy Hot or Iced, 50 Teabags",
-        "brand": "Taylors of Harrogate",
-        "source_brand": "Taylors of Harrogate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Tea",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Tea",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6246,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/41OMjAz9ECL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B000I4M1SM",
         "name": "Taylors of Harrogate English Breakfast",
         "raw_name": "Taylors of Harrogate English Breakfast, Black Loose Leaf, 4.41 Ounce Tin Caddy (Pack of 1), Rich, Bright & Malty, Caffeinated, Premium Whole Leaf Tea",
@@ -134586,6 +135361,48 @@
         ]
       },
       {
+        "asin": "B0G1N8XV2M",
+        "name": "Tejari Organic Cacao Peanut Butter Pouch, 25.9 OZ",
+        "raw_name": "Tejari Organic Cacao Peanut Butter Pouch, 25.9 OZ",
+        "brand": "Tejari",
+        "source_brand": "Tejari",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Baby",
+        "subcategory": "Baby Food",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Baby",
+        "ai_subcategory": "Baby Food",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71n6Fb1BWqL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0G1N8XV2M",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0G1N8XV2M",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B08L7HS4XG",
         "name": "Tejari Organic Plant Based Protein Blend",
         "raw_name": "TEJARI Organic Plant Based Protein Blend | Organic Cacao | 16 oz, 16 Servings | Vegan, Low Sugar, Gluten Free, Low Carb, Non-GMO, Stevia Free, Soy Free, No Sugar Alcohols",
@@ -134747,6 +135564,48 @@
             "store_id": "10160",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FPRNTC4K",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0B3ZCKZ9V",
+        "name": "Tepache Cactus Prickly Pear Organic, 12 Fl Oz",
+        "raw_name": "Tepache Cactus Prickly Pear Organic, 12 Fl Oz",
+        "brand": "De La Calle",
+        "source_brand": "De La Calle",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Salad Dressings",
+        "classification_status": "classified",
+        "category_confidence": 0.0365,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Salad Dressings",
+        "ai_confidence": 0.0365,
+        "ai_label_source": "model",
+        "ai_model_name": "local-sklearn",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61XyziJdLoL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0B3ZCKZ9V",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0B3ZCKZ9V",
             "sources": [
               "Search Deals"
             ]
@@ -146423,6 +147282,45 @@
         ]
       },
       {
+        "asin": "B085DGRLYR",
+        "name": "Wonderful Pistachios No Shells",
+        "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
+        "brand": "Wonderful Pistachios",
+        "source_brand": "Wonderful Pistachios",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Nuts & Trail Mix",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Nuts & Trail Mix",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81C6pkmpSnL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B08Z9W3BQL",
         "name": "Wonderful Pistachios No Shells",
         "raw_name": "Wonderful Pistachios No Shells, Lightly Salted Nuts, 12 Ounce Resealable Bag, Protein Snacks, Gluten Free, Healthy Snack",
@@ -149006,126 +149904,6 @@
     ],
     "clip_missing_products": [
       {
-        "asin": "B0DHJ5L3HW",
-        "name": "Acure Advanced Hydration Leave-In Conditioner",
-        "raw_name": "Acure Advanced Hydration Leave-In Conditioner - Hair Hydration & Conditioning Spray, Amino Acids for Moisturizing, Detangling, & Conditioning for Women & Men, Marine Algae & Yuzu Ingredients - 4 fl oz",
-        "brand": "Acure",
-        "source_brand": "Acure",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Hair Care",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Hair Care",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/6139PVgKmkL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/acure-acure-advanced-hydration-leave-in-conditioner-hair-hydration-conditioning-spray-amino-acids-for-moisturizing-detangling-conditioning-for-women-men-marine-algae-yuzu-ingredients-4-fl-oz-b0dhj5l3hw?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/acure-acure-advanced-hydration-leave-in-conditioner-hair-hydration-conditioning-spray-amino-acids-for-moisturizing-detangling-conditioning-for-women-men-marine-algae-yuzu-ingredients-4-fl-oz-b0dhj5l3hw?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0FFTPTX9J",
-        "name": "Alice Mushrooms Brainstorm Mushroom Chocolate 10 Count",
-        "raw_name": "Alice Mushrooms Brainstorm Mushroom Chocolate 10 Count, 2.5 OZ",
-        "brand": "Alice",
-        "source_brand": "Alice",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71BgJXoMmiL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FFTPTX9J",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FFTPTX9J",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B07G3NZL7C",
-        "name": "Ancient Nutrition Multi Collagen Protein Sgl, 0.36 OZ",
-        "raw_name": "Ancient Nutrition Multi Collagen Protein Sgl, 0.36 OZ",
-        "brand": "Ancient Nutrition",
-        "source_brand": "Ancient Nutrition",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Protein & Collagen",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71cUToQbltL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07G3NZL7C",
-        "tags": [
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07G3NZL7C",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "target:237a84e19296ca9e",
         "name": "Babybel Plant-Based Vegan Cheese",
         "raw_name": "Babybel plant-based vegan cheese",
@@ -149154,45 +149932,6 @@
         "tags": [
           "prime deal",
           "vegan"
-        ]
-      },
-      {
-        "asin": "B0CGBKQJ25",
-        "name": "Bigelow Tea Whispering Wildflowers Plus L-Theanine Herbal Tea",
-        "raw_name": "Bigelow Tea Whispering Wildflowers plus L-Theanine Herbal Tea, Caffeine Free, 18 Total Tea Bags (Pack of 1)",
-        "brand": "Bigelow Tea",
-        "source_brand": "Bigelow Tea",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Tea",
-        "classification_status": "classified",
-        "category_confidence": 0.0967,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Tea",
-        "ai_confidence": 0.0967,
-        "ai_label_source": "model",
-        "ai_model_name": "local-sklearn",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/91BF-BgJlOL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0CGBKQJ25",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0CGBKQJ25",
-            "sources": [
-              "Search Deals"
-            ]
-          }
         ]
       },
       {
@@ -149231,123 +149970,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DMT746DH",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DPXTV4SW",
-        "name": "Fruit Riot X Olipop Crunchy Candy Cherries",
-        "raw_name": "Fruit Riot x Olipop Crunchy Candy Cherries, Vintage Cola, Made with Real Fruit, 8oz, Gluten-Free",
-        "brand": "Fruit Riot!",
-        "source_brand": "Fruit Riot!",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81WtgZnCjVL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DPXTV4SW",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DPXTV4SW",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B00280M14I",
-        "name": "Garden of Life Vitamin Code Men's Multivitamin with Probiotics",
-        "raw_name": "Garden of Life Vitamin Code Men's Multivitamin with Probiotics - Heart Health, Prostate Health and Digestive Support, Non-GMO, 120 Capsules",
-        "brand": "Garden of Life",
-        "source_brand": "Garden of Life",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81dsMgxMRBL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00280M14I",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00280M14I",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0FDD9T14K",
-        "name": "Gelato Boy Cookies & Cream Cones 3CT, 14.25 FZ",
-        "raw_name": "Gelato Boy Cookies & Cream Cones 3ct, 14.25 FZ",
-        "brand": "Gelato Boy",
-        "source_brand": "Gelato Boy",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Cookies",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Cookies",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81dfxCrYv1L.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FDD9T14K",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FDD9T14K",
             "sources": [
               "Search Deals"
             ]
@@ -149399,330 +150021,6 @@
         ]
       },
       {
-        "asin": "B0CF2VCH7Y",
-        "name": "Goodpop - Organic Mango Ice Pops - Fruit Juice, No Artifical Dyes or Flavors, No Added Sugar, 6 Count",
-        "raw_name": "GOODPOP - Organic Mango Ice Pops - Fruit Juice, No Artifical Dyes or Flavors, No Added Sugar, 6 Count",
-        "brand": "Goodpop",
-        "source_brand": "Goodpop",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Functional Drinks",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Functional Drinks",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81VSS9Vq2GL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0CF2VCH7Y",
-        "tags": [
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0CF2VCH7Y",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B01I56QLL2",
-        "name": "Jarrow Formulas Mastic Gum 1000 Mg",
-        "raw_name": "Jarrow Formulas Mastic Gum 1000 mg - 60 Veggie Caps - Mastic Gum Capsules Supporting Stomach and Duodenal Health - 30 Servings",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Herbal Supplements",
-        "classification_status": "classified",
-        "category_confidence": 0.95,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Herbal Supplements",
-        "ai_confidence": 0.95,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71r75p7eXOL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/jarrow-formulas-jarrow-formulas-mastic-gum-1000-mg-60-veggie-caps-mastic-gum-capsules-supporting-stomach-and-duodenal-health-30-servings-b01i56qll2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/jarrow-formulas-jarrow-formulas-mastic-gum-1000-mg-60-veggie-caps-mastic-gum-capsules-supporting-stomach-and-duodenal-health-30-servings-b01i56qll2?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B09ZH3THDH",
-        "name": "Kettle Brand Backyard Barbeque Kettle Potato Chips",
-        "raw_name": "Kettle Brand Backyard Barbeque Kettle Potato Chips, Gluten-Free, Non-GMO, 7.5 oz Bag",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71k9LAP1ttL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B09ZH3THDH",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B09ZH3THDH",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0FRNNJGJP",
-        "name": "Kettle Brand Smoky Buffalo Potato Chips, 7.5 Oz Bag",
-        "raw_name": "Kettle Brand Smoky Buffalo Potato Chips, 7.5 Oz Bag",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71Dm4k0ne1L.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FRNNJGJP",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FRNNJGJP",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B09GZWLBBV",
-        "name": "Late July Blue Corn Dippers Organic Tortilla Chips",
-        "raw_name": "Late July Blue Corn Dippers Organic Tortilla Chips, 7.4 Oz Bag",
-        "brand": "Late July",
-        "source_brand": "Late July",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81gdivU0Y2L.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B09GZWLBBV",
-        "tags": [
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B09GZWLBBV",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DD1V3ZBV",
-        "name": "Lesserevil Organic Real Cheddar Space Ball Puffs Party Size",
-        "raw_name": "Lesserevil Organic Real Cheddar Space Ball Puffs Party Size, 7 OZ",
-        "brand": "Lesserevil",
-        "source_brand": "Lesserevil",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Cheese",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Cheese",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/817FbVfdFLL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD1V3ZBV",
-        "tags": [
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DD1V3ZBV",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B00028OMXQ",
-        "name": "Megafood Magnesium Supplement with Fermented Magnesium Glycinate",
-        "raw_name": "MegaFood Magnesium Supplement with Fermented Magnesium Glycinate - Chelated - Supports Heart & Nervous System - Vegan Gluten-Free Non-GMO Kosher - Made Without 9 Food Allergens - 60 Tablets",
-        "brand": "MegaFood",
-        "source_brand": "MegaFood",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Minerals",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Minerals",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71kOKgF0kPL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00028OMXQ",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00028OMXQ",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B095LF2YGJ",
-        "name": "Morton & Bassett Organic Italian Herb Blend, 0.8 OZ",
-        "raw_name": "Morton & Bassett Organic Italian Herb Blend, 0.8 OZ",
-        "brand": "Morton & Bassett",
-        "source_brand": "Morton & Bassett",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Beans & Legumes",
-        "classification_status": "classified",
-        "category_confidence": 0.0376,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Beans & Legumes",
-        "ai_confidence": 0.0376,
-        "ai_label_source": "model",
-        "ai_model_name": "local-sklearn",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/819qVRc4+kL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B095LF2YGJ",
-        "tags": [
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B095LF2YGJ",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0GDGWC38G",
         "name": "Om Mushroom Superfood Organic Mushroom Vanilla Chai Latte SGL",
         "raw_name": "Om Mushroom Superfood Organic Mushroom Vanilla Chai Latte SGL, 0.28 OZ",
@@ -149758,483 +150056,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0GDGWC38G",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0D9PJ2YK4",
-        "name": "Pork Pancetta Breed Heritage, 4 Ounce",
-        "raw_name": "Pork Pancetta Breed Heritage, 4 Ounce",
-        "brand": "True Story Foods",
-        "source_brand": "True Story Foods",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Meat & Seafood",
-        "subcategory": "Pork",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Meat & Seafood",
-        "ai_subcategory": "Pork",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61HqQVhS8NL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0D9PJ2YK4",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0D9PJ2YK4",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B00U3RIGH4",
-        "name": "Rishi Tea Masala Chai Black Sachet Tea Bag Blend",
-        "raw_name": "Rishi Tea Masala Chai Black Sachet Tea Bag Blend - Organic, Assam with Whole Spices, Energizing & Caffeinated - 15 Count (Pack of 1)",
-        "brand": "Rishi Tea",
-        "source_brand": "Rishi Tea",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Tea",
-        "classification_status": "classified",
-        "category_confidence": 0.412,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Tea",
-        "ai_confidence": 0.412,
-        "ai_label_source": "model",
-        "ai_model_name": "local-sklearn",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71ldgpgblZL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00U3RIGH4",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00U3RIGH4",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B017KQXWUQ",
-        "name": "Rosewater Facial Toner by Multipurpose Spray to Set Makeup",
-        "raw_name": "Rosewater Facial Toner by Multipurpose Spray to Set Makeup, Double Cleanse, and Balance Skins pH, Made with Rose Hydrosol, 4 Fl Oz",
-        "brand": "Cocokind",
-        "source_brand": "Cocokind",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Skin Care",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Skin Care",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71Zkc031R6L.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B017KQXWUQ",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B017KQXWUQ",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0C6W2HTRL",
-        "name": "Rudis Bakery Garlic Texas Toast, 11.8 OZ",
-        "raw_name": "Rudis Bakery Garlic Texas Toast, 11.8 OZ",
-        "brand": "Rudis",
-        "source_brand": "Rudis",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Produce",
-        "subcategory": "Vegetables",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Produce",
-        "ai_subcategory": "Vegetables",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71qL0QQOaEL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6W2HTRL",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6W2HTRL",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0F8D58FJM",
-        "name": "Rxbar High Protein Bars",
-        "raw_name": "RXBAR High Protein Bars, Gluten Free, Protein Snacks, Vanilla Peanut Butter, 25.3oz Box (12 Bars)",
-        "brand": "Rxbar",
-        "source_brand": "Rxbar",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Snack Bars",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Snack Bars",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/7162Eag7XAL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0F8D58FJM",
-        "tags": [
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0F8D58FJM",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0FS7VL99B",
-        "name": "Saltfields Brewing Nodogoshi Lager Cans, 4 Pack, 64 Fl Oz",
-        "raw_name": "Saltfields Brewing Nodogoshi Lager Cans, 4 Pack, 64 Fl Oz",
-        "brand": "Saltfields Brewing",
-        "source_brand": "Saltfields Brewing",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Alcohol",
-        "subcategory": "Beer",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Alcohol",
-        "ai_subcategory": "Beer",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61HabjozBeL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS7VL99B",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS7VL99B",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08M3L44SS",
-        "name": "Simple Mills Almond Flour Baking Mix, Chocolate Brownie Mix",
-        "raw_name": "Simple Mills Almond Flour Baking Mix, Chocolate Brownie Mix - Gluten Free, Plant Based, 12.9 Ounce (Pack of 1)",
-        "brand": "Simple Mills",
-        "source_brand": "Simple Mills",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Baking Supplies",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Baking Supplies",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71BWcear7oL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08M3L44SS",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08M3L44SS",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DM3VSGKY",
-        "name": "Smearcase Vanilla Bean Froco",
-        "raw_name": "Smearcase Vanilla Bean FroCo - Frozen Cottage Cheese Ice Cream, 40g Protein Per Pint, Collagen Boosted, Gluten Free, 14 fl oz",
-        "brand": "Smearcase",
-        "source_brand": "Smearcase",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Protein & Collagen",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61w65dCcz7L.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DM3VSGKY",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DM3VSGKY",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DQ63GXFZ",
-        "name": "Soap Bar Cold Plunge Falls Yosemite, 5 Ounce",
-        "raw_name": "Soap Bar Cold Plunge Falls Yosemite, 5 Ounce",
-        "brand": "Every Man Jack",
-        "source_brand": "Every Man Jack",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Soap & Hand Wash",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Soap & Hand Wash",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/91Dkztp-hjL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQ63GXFZ",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQ63GXFZ",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0G1N8XV2M",
-        "name": "Tejari Organic Cacao Peanut Butter Pouch, 25.9 OZ",
-        "raw_name": "Tejari Organic Cacao Peanut Butter Pouch, 25.9 OZ",
-        "brand": "Tejari",
-        "source_brand": "Tejari",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Baby",
-        "subcategory": "Baby Food",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Baby",
-        "ai_subcategory": "Baby Food",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71n6Fb1BWqL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0G1N8XV2M",
-        "tags": [
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0G1N8XV2M",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0B3ZCKZ9V",
-        "name": "Tepache Cactus Prickly Pear Organic, 12 Fl Oz",
-        "raw_name": "Tepache Cactus Prickly Pear Organic, 12 Fl Oz",
-        "brand": "De La Calle",
-        "source_brand": "De La Calle",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Salad Dressings",
-        "classification_status": "classified",
-        "category_confidence": 0.0365,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Salad Dressings",
-        "ai_confidence": 0.0365,
-        "ai_label_source": "model",
-        "ai_model_name": "local-sklearn",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61XyziJdLoL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0B3ZCKZ9V",
-        "tags": [
-          "organic"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0B3ZCKZ9V",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DKR649RQ",
-        "name": "Waterloo Sparkling Water Ruby Red Tangerine Sparkling Water Single",
-        "raw_name": "Waterloo Sparkling Water Ruby Red Tangerine Sparkling Water Single, 12 FZ",
-        "brand": "Waterloo Sparkling Water",
-        "source_brand": "Waterloo Sparkling Water",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Sparkling Water",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Sparkling Water",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71-gme89a-L._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/waterloo-sparkling-water-waterloo-sparkling-water-ruby-red-tangerine-sparkling-water-single-12-fz-b0dkr649rq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/waterloo-sparkling-water-waterloo-sparkling-water-ruby-red-tangerine-sparkling-water-single-12-fz-b0dkr649rq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
             "sources": [
               "Search Deals"
             ]
@@ -174063,13 +173884,15 @@
         "category": "Supplements & Wellness",
         "subcategory": "Protein & Collagen",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Supplements & Wellness",
         "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7797,
+        "ai_clip_source": "category-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/71cUToQbltL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B07G3NZL7C",
@@ -208185,15 +208008,17 @@
         ],
         "source_count": 1,
         "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
+        "subcategory": "Fruit Snacks",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_subcategory": "Fruit Snacks",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.632,
+        "ai_clip_source": "category-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/81WtgZnCjVL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0DPXTV4SW",
@@ -210047,15 +209872,17 @@
         ],
         "source_count": 1,
         "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
+        "subcategory": "Multivitamins",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_subcategory": "Multivitamins",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.5896,
+        "ai_clip_source": "category-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/81dsMgxMRBL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B00280M14I",
@@ -210446,16 +210273,18 @@
           "Search Deals"
         ],
         "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Cookies",
+        "category": "Frozen",
+        "subcategory": "Ice Cream",
         "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Cookies",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "category_confidence": 0.78,
+        "ai_category": "Frozen",
+        "ai_subcategory": "Ice Cream",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6224,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/81dfxCrYv1L.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0FDD9T14K",
@@ -270733,15 +270562,17 @@
         ],
         "source_count": 1,
         "category": "Snacks",
-        "subcategory": "Snack Bars",
+        "subcategory": "Protein Bars",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Snacks",
-        "ai_subcategory": "Snack Bars",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9844,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/7162Eag7XAL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0F8D58FJM",
@@ -279487,16 +279318,18 @@
           "Search Deals"
         ],
         "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Baking Supplies",
+        "category": "Bakery",
+        "subcategory": "Cookies & Brownies",
         "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Baking Supplies",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "category_confidence": 0.78,
+        "ai_category": "Bakery",
+        "ai_subcategory": "Cookies & Brownies",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9007,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/71BWcear7oL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B08M3L44SS",
@@ -298839,13 +298672,15 @@
         "category": "Beverages",
         "subcategory": "Sparkling Water",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Beverages",
         "ai_subcategory": "Sparkling Water",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9698,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/71-gme89a-L._FMwebp_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/waterloo-sparkling-water-waterloo-sparkling-water-ruby-red-tangerine-sparkling-water-single-12-fz-b0dkr649rq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
@@ -313484,13 +313319,15 @@
         "category": "Supplements & Wellness",
         "subcategory": "Protein & Collagen",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Supplements & Wellness",
         "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7797,
+        "ai_clip_source": "category-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/71cUToQbltL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B07G3NZL7C",
@@ -344053,15 +343890,17 @@
         ],
         "source_count": 1,
         "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
+        "subcategory": "Fruit Snacks",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_subcategory": "Fruit Snacks",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.632,
+        "ai_clip_source": "category-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/81WtgZnCjVL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0DPXTV4SW",
@@ -345864,15 +345703,17 @@
         ],
         "source_count": 1,
         "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
+        "subcategory": "Multivitamins",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_subcategory": "Multivitamins",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.5896,
+        "ai_clip_source": "category-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/81dsMgxMRBL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B00280M14I",
@@ -346263,16 +346104,18 @@
           "Search Deals"
         ],
         "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Cookies",
+        "category": "Frozen",
+        "subcategory": "Ice Cream",
         "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Cookies",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "category_confidence": 0.78,
+        "ai_category": "Frozen",
+        "ai_subcategory": "Ice Cream",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6224,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/81dfxCrYv1L.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0FDD9T14K",
@@ -400839,15 +400682,17 @@
         ],
         "source_count": 1,
         "category": "Snacks",
-        "subcategory": "Snack Bars",
+        "subcategory": "Protein Bars",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Snacks",
-        "ai_subcategory": "Snack Bars",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9844,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/7162Eag7XAL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0F8D58FJM",
@@ -407244,16 +407089,18 @@
           "Search Deals"
         ],
         "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Baking Supplies",
+        "category": "Bakery",
+        "subcategory": "Cookies & Brownies",
         "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Baking Supplies",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "category_confidence": 0.78,
+        "ai_category": "Bakery",
+        "ai_subcategory": "Cookies & Brownies",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9007,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/71BWcear7oL.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/B08M3L44SS",
@@ -425603,13 +425450,15 @@
         "category": "Beverages",
         "subcategory": "Sparkling Water",
         "classification_status": "classified",
-        "category_confidence": 0.99,
+        "category_confidence": 0.78,
         "ai_category": "Beverages",
         "ai_subcategory": "Sparkling Water",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
         "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9698,
+        "ai_clip_source": "subcategory-first",
         "discount_percent": 0,
         "image": "https://m.media-amazon.com/images/I/71-gme89a-L._FMwebp_.jpg",
         "url": "https://www.wholefoodsmarket.com/grocery/product/waterloo-sparkling-water-waterloo-sparkling-water-ruby-red-tangerine-sparkling-water-single-12-fz-b0dkr649rq?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
@@ -471227,7 +471076,7 @@
     },
     {
       "title": "Refresh CLIP coverage after big scrapes",
-      "detail": "31 products have no matching CLIP audit row. Those cannot benefit from the vision fallback until `vision_category_audit.full.json` is regenerated."
+      "detail": "4 products have no matching CLIP audit row. Those cannot benefit from the vision fallback until `vision_category_audit.full.json` is regenerated."
     },
     {
       "title": "Prefer source-backed rules over broad keyword guessing",
