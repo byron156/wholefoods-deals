@@ -200912,7 +200912,7 @@
     "ai_category": "Supplements & Wellness",
     "ai_subcategory": "Mushroom Supplements",
     "ai_confidence": 0.99,
-    "ai_reasoning": "Mushroom supplement wording matched.",
+    "ai_reasoning": "Mushroom supplement wording matched. Fresh Produce was blocked because packaged/processed product-form wording was present.",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v17",
     "ai_taxonomy_version": "fixed-taxonomy-v5",

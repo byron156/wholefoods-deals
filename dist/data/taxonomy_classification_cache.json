@@ -5,7 +5,7 @@
   "model_version": "taxonomy-local-ml-v17",
   "gold_labels_digest": "336cd82bd9869c62",
   "silver_labels_digest": "670a54b02fa26423",
-  "clip_audit_digest": "a906d58aaf8386ac",
+  "clip_audit_digest": "fb7fcc374b60c379",
   "clip_primary_min_score": 0.55,
   "clip_rescue_min_score": 0.4,
   "items": {
@@ -40192,7 +40192,7 @@
       "category": "Supplements & Wellness",
       "subcategory": "Mushroom Supplements",
       "confidence": 0.99,
-      "reasoning": "Mushroom supplement wording matched.",
+      "reasoning": "Mushroom supplement wording matched. Fresh Produce was blocked because packaged/processed product-form wording was present.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v17",
       "taxonomy_version": "fixed-taxonomy-v5"
