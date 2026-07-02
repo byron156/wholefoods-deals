@@ -9,7 +9,7 @@
       "network_batch_count": 0,
       "sort_runs": [],
       "reused_previous": true,
-      "error": "BrowserType.launch: Executable doesn't exist at /Users/jonathancampbell/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+      "error": "Relevance: products API returned HTTP 0 at offset 30."
     },
     {
       "store_id": "10328",
@@ -19,7 +19,7 @@
       "network_batch_count": 0,
       "sort_runs": [],
       "reused_previous": true,
-      "error": "The page still did not show \"Upper West Side\" as the selected store after the page-level store flow."
+      "error": "Page.goto: net::ERR_NETWORK_CHANGED at https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\nCall log:\n  - navigating to \"https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\", waiting until \"domcontentloaded\"\n"
     }
   ]
 }
