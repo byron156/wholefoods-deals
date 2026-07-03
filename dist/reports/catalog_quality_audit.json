@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T08:31:54.497746+00:00",
+  "generated_at": "2026-07-03T18:08:01.306801+00:00",
   "summary": {
     "total_products": 4960,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 4960
   },
   "taxonomy_report": {
-    "generated_at": "2026-07-02T08:16:13.324780+00:00",
+    "generated_at": "2026-07-03T17:43:15.732844+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -7274,6 +7274,45 @@
         ]
       },
       {
+        "asin": "B0756548HD",
+        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
+        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
+        "brand": "Babo Botanicals",
+        "source_brand": "Babo Botanicals",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Hair Care",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Hair Care",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0005ZJ45W",
         "name": "Salsa, Hot, 16 Oz",
         "raw_name": "Salsa, Hot, 16 oz",
@@ -7306,47 +7345,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0005ZJ45W",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0CSKJ95SH",
-        "name": "Siete Family Foods",
-        "raw_name": "Siete Family Foods, Cookies Grain Free Mexican Vanilla Chocolate Chip, 4.5 Ounce",
-        "brand": "Siete",
-        "source_brand": "Siete",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Bakery",
-        "subcategory": "Cookies & Brownies",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Bakery",
-        "ai_subcategory": "Cookies & Brownies",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6418,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81pLS3458ZL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0CSKJ95SH",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0CSKJ95SH",
             "sources": [
               "Search Deals"
             ]
@@ -14524,6 +14522,75 @@
             "discount": "23% off",
             "discount_percent": 23,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0B4C564Q8",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0BZ9TP4PP",
+        "asins": [
+          "B0BZ9TP4PP"
+        ],
+        "name": "Olipop Prebiotic Soda Pop",
+        "raw_name": "OLIPOP Prebiotic Soda Pop, Cherry Cola, Prebiotics, Botanicals, Plant Fiber, 12 fl oz can",
+        "brand": "Olipop",
+        "source_brand": "Olipop",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.92,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.92,
+        "ai_label_source": "silver",
+        "ai_model_name": "openai-silver-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "3 for $6.66",
+        "basis_price": "$2.59 ea",
+        "prime_price": "$2.00 ea",
+        "discount": "23% off",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71wn3knr1vL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+        "tags": [
+          "multi-source deal",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "3 for $6.66",
+            "basis_price": "$2.59 ea",
+            "prime_price": "$2.00 ea",
+            "discount": "23% off",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+            "sources": [
+              "Flyer",
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "3 for $6.66",
+            "basis_price": "$2.59 ea",
+            "prime_price": "$2.00 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
             "sources": [
               "Flyer"
             ]
@@ -22253,45 +22320,6 @@
         ]
       },
       {
-        "asin": "B0GCKKTXZ9",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Dark Chocolate Honeycomb Crunch 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81BfZPZ0-OL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0GCKPVTJG",
         "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
         "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Chocolate Covered Strawberry 3.5oz 4-Pack",
@@ -23203,6 +23231,49 @@
         ]
       },
       {
+        "asin": "B06Y1MMDMC",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Mint, 1.98 Oz (Pack of 12)",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/7139RLiq91L._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B08ZVHH13J",
         "name": "Aloha Organic Plant Based Protein Bars",
         "raw_name": "ALOHA Organic Plant Based Protein Bars - Peanut Butter Cup Bar - 12 Bars, Vegan, Low Sugar, Gluten-Free, Low Carb, Non-GMO, No Stevia, No Erythritol",
@@ -23875,47 +23946,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVZ2DHH",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DXVYNSCN",
-        "name": "Amylu Foods Chicken Sausage Breakfast Patties",
-        "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Breakfast Time, Natural Ingredients, 16g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
-        "brand": "Amylu",
-        "source_brand": "Amylu",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Frozen",
-        "subcategory": "Frozen Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Frozen",
-        "ai_subcategory": "Frozen Breakfast",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.5731,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61ZjZhwJ-xL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
             "sources": [
               "Search Deals"
             ]
@@ -28345,45 +28375,6 @@
         ]
       },
       {
-        "asin": "B0756548HD",
-        "name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-IN-1 Shampoo & Wash",
-        "raw_name": "Babo Botanicals Sensitive Baby Fragrance-Free 2-in-1 Shampoo & Wash - Shea Butter, Calendula & Aloe Vera - EWG Verified - Cruelty-Free - Vegan - Pediatrician Tested - For Babies & Kids",
-        "brand": "Babo Botanicals",
-        "source_brand": "Babo Botanicals",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Hair Care",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Hair Care",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61vx9x0z9nL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0756548HD",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B07NJPR4TN",
         "name": "Babo Botanicals Sensitive Baby Mineral Sunscreen Lotion SPF50",
         "raw_name": "Babo Botanicals Sensitive Baby Mineral Sunscreen Lotion SPF50 - Natural Zinc Oxide - Face & Body - Fragrance-Free - Water-Resistant - EWG Verified - Vegan - Extra Sensitive Skin - For Babies & Kids",
@@ -28712,6 +28703,72 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVGJ2VVP",
             "sources": [
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DBMCRH47",
+        "name": "Babylife Organics Stage 2",
+        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
+        "brand": "Babylife Organics Stage",
+        "brand_source": "derived",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Baby",
+        "subcategory": "Baby Food",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Baby",
+        "ai_subcategory": "Baby Food",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "$2.50",
+        "basis_price": "$2.96 ea",
+        "prime_price": "$2.25 ea",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "($0.71/ounce)",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+        "tags": [
+          "organic",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$2.50",
+            "basis_price": "$2.96 ea",
+            "prime_price": "$2.25 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "unit_price": "($0.71/ounce)",
+            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$2.50",
+            "basis_price": "$2.96 ea",
+            "prime_price": "$2.25 ea",
+            "discount": "24% off",
+            "discount_percent": 24,
+            "unit_price": "($0.71/ounce)",
+            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
+            "sources": [
+              "All Deals"
             ]
           }
         ]
@@ -37732,134 +37789,6 @@
             "discount": "28% off",
             "discount_percent": 28,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B07SQB7GF2",
-        "asins": [
-          "B07SQB7GF2"
-        ],
-        "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Dark Chocolate - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
-        "brand": "Catalina Crunch",
-        "source_brand": "Catalina Crunch",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Cereal & Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Cereal & Breakfast",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "20% off",
-        "basis_price": "$5.75 to $8.99 ea",
-        "discount": "28% off",
-        "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08QDP3S8X",
-        "asins": [
-          "B08QDP3S8X"
-        ],
-        "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Chocolate Peanut Butter - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
-        "brand": "Catalina Crunch",
-        "source_brand": "Catalina Crunch",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Cereal & Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Cereal & Breakfast",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "20% off",
-        "basis_price": "$5.75 to $8.99 ea",
-        "discount": "28% off",
-        "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/71o4Dej26pL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
             "sources": [
               "Flyer"
             ]
@@ -46965,45 +46894,6 @@
         ]
       },
       {
-        "asin": "B07QC84J6G",
-        "name": "Divine Chocolate Chocolate",
-        "raw_name": "DIVINE CHOCOLATE Chocolate, 70% Dark Chocolate with Mint Crisp, 3 Oz",
-        "brand": "Divine Chocolate",
-        "source_brand": "Divine Chocolate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Candy & Chocolate",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Candy & Chocolate",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71-4jeUKQoL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07QC84J6G",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0CBNCWT3Y",
         "name": "Doughlicious Chocolate Truffle Cookie Dough & Gelato Bites",
         "raw_name": "DOUGHLICIOUS Chocolate Truffle Cookie Dough & Gelato Bites, 6.77 OZ",
@@ -47262,6 +47152,71 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QTYO",
             "sources": [
               "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FPGBGXQ1",
+        "name": "Dr. Bronners",
+        "raw_name": "Dr. Bronners, Castile Soap Lavender 18 Inch 1 Organic, 3.4 Fl Oz",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Soap & Hand Wash",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Soap & Hand Wash",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.9328,
+        "ai_clip_source": "category-first",
+        "current_price": "$4.26",
+        "basis_price": "$4.99 ea",
+        "prime_price": "$3.83 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "unit_price": "($1.25/fluid ounce)",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41H93MxFgSL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Dr-Bronners-Castile-Lavender-Organic/dp/B0FPGBGXQ1?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FPGBGXQ1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_156_i",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$4.26",
+            "basis_price": "$4.99 ea",
+            "prime_price": "$3.83 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "unit_price": "($1.25/fluid ounce)",
+            "url": "https://www.wholefoodsmarket.com/Dr-Bronners-Castile-Lavender-Organic/dp/B0FPGBGXQ1?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FPGBGXQ1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_156_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$4.26",
+            "basis_price": "$4.99 ea",
+            "prime_price": "$3.83 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "unit_price": "($1.25/fluid ounce)",
+            "url": "https://www.wholefoodsmarket.com/Dr-Bronners-Castile-Lavender-Organic/dp/B0FPGBGXQ1?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FPGBGXQ1&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_156_i",
+            "sources": [
+              "All Deals"
             ]
           }
         ]
@@ -74517,6 +74472,47 @@
         ]
       },
       {
+        "asin": "B0BBL55GT7",
+        "name": "Kettle Brand Potato Chips",
+        "raw_name": "Kettle Brand Potato Chips, Air Fried Sea Salt & Vinegar Kettle Chips, 6.5 Oz Bag",
+        "brand": "Kettle Brand",
+        "source_brand": "Kettle Brand",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Chips",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Chips",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6387,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81Me8RNEgrL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL55GT7",
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL55GT7",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0BBL934XQ",
         "name": "Kettle Brand Potato Chips",
         "raw_name": "Kettle Brand Potato Chips, Air Fried Himalayan Salt Kettle Chips, 6.5 Oz Bag",
@@ -87967,6 +87963,94 @@
         ]
       },
       {
+        "asin": "B09KT2M7ZC",
+        "name": "Mezcla Puff Crispy Protein Bars",
+        "raw_name": "Mezcla Puff Crispy Protein Bars, Gluten Free & Vegan Protein Bars, 10g Protein, Alt for Crispy Rice Treat, Granola Bars & Breakfast Bars, Healthy Snacks for Adults, Peanut Butter Chocolate, 1 Count",
+        "brand": "Mezcla",
+        "source_brand": "Mezcla",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7254,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/813sGsplrfL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B09KT2M7ZC",
+        "tags": [
+          "high-protein"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B09KT2M7ZC",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0BVWFRMSG",
+        "name": "Mezcla Puff Crispy Protein Bars",
+        "raw_name": "Mezcla Puff Crispy Protein Bars, Gluten Free & Vegan Protein Bars, 10g Protein, Alt for Crispy Rice Treat, Granola Bars & Breakfast Bars, Healthy Snacks for Adults, Pistachio Chocolate, 1 Count",
+        "brand": "Mezcla",
+        "source_brand": "Mezcla",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7107,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81Z4BYTLK3L.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVWFRMSG",
+        "tags": [
+          "high-protein"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVWFRMSG",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0D6X216T6",
         "name": "Mezcla Puff Crispy Protein Bars",
         "raw_name": "Mezcla Puff Crispy Protein Bars, Gluten Free & Vegan Protein Bars, 10g Protein, Alt for Crispy Rice Treat, Granola Bars & Breakfast Bars, Healthy Snacks for Adults, Matcha Vanilla, 4 Count",
@@ -97532,6 +97616,72 @@
             "discount": "30% off",
             "discount_percent": 30,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DR3L2S1D",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DR3Q39PK",
+        "asins": [
+          "B0DR3Q39PK"
+        ],
+        "name": "Ocean's Halo Organic Coconut Curry Noodle Soup",
+        "raw_name": "Ocean's Halo Organic Coconut Curry Noodle Soup, USDA Certified Organic, Vegetarian, Shelf-Stable, 16.9 oz",
+        "brand": "Ocean's Halo",
+        "source_brand": "Ocean's Halo",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Soup & Broth",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Soup & Broth",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.701,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "22% off",
+        "basis_price": "$3.95 to $19.99 ea",
+        "discount": "30% off",
+        "discount_percent": 30,
+        "image": "https://m.media-amazon.com/images/I/61dNrbr0N0L._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DR3Q39PK",
+        "tags": [
+          "flyer-only deal",
+          "organic"
+        ],
+        "available_store_ids": [
+          "10328",
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "current_price": "22% off",
+            "basis_price": "$3.95 to $19.99 ea",
+            "discount": "30% off",
+            "discount_percent": 30,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DR3Q39PK",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10160",
+            "current_price": "22% off",
+            "basis_price": "$3.95 to $19.99 ea",
+            "discount": "30% off",
+            "discount_percent": 30,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DR3Q39PK",
             "sources": [
               "Flyer"
             ]
@@ -110117,47 +110267,6 @@
         ]
       },
       {
-        "asin": "B0CLYZC56V",
-        "name": "Plantstrong MILK",
-        "raw_name": "PLANTSTRONG MILK – Whole Plant-Based Milk, Fortified with Calcium, B12 & D3, No Gums or Oils, Non-GMO Project Verified, Gluten Free, Vegan (32 Fl Oz - Pack of 1)",
-        "brand": "Plantstrong",
-        "source_brand": "Plantstrong",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Plant-Based Milk",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Plant-Based Milk",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6564,
-        "ai_clip_source": "category-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61q3JPrGlZL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0CLYZC56V",
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0CLYZC56V",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0CLYZC5SZ",
         "name": "Plantstrong MILK",
         "raw_name": "PLANTSTRONG MILK – Whole Plant-Based Milk, Fortified with Calcium, B12 & D3, No Gums or Oils, Non-GMO Project Verified, Gluten Free, Vegan (32 Fl Oz, Almond Milk)",
@@ -116129,69 +116238,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DWFLRK6N",
             "sources": [
               "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08CBWZYR4",
-        "asins": [
-          "B08CBWZYR4"
-        ],
-        "name": "Renew Life Women's Probiotic Capsules",
-        "raw_name": "Renew Life Women's Probiotic Capsules, 50 Billion CFU Guaranteed, Supports pH Balance, Vaginal, Urinary, Digestive and Immune Health(2), L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 30 Count",
-        "brand": "Renew Life",
-        "source_brand": "Renew Life",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/81wLAj3cQLL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-            "sources": [
-              "Flyer"
             ]
           }
         ]
@@ -147069,45 +147115,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00BIZ2NLU",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B085DGRLYR",
-        "name": "Wonderful Pistachios No Shells",
-        "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
-        "brand": "Wonderful Pistachios",
-        "source_brand": "Wonderful Pistachios",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Nuts & Trail Mix",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Nuts & Trail Mix",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81C6pkmpSnL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
             "sources": [
               "Search Deals"
             ]
