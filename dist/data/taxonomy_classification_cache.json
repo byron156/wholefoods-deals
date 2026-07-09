@@ -5,7 +5,7 @@
   "model_version": "taxonomy-local-ml-v17",
   "gold_labels_digest": "336cd82bd9869c62",
   "silver_labels_digest": "670a54b02fa26423",
-  "clip_audit_digest": "b104de7f2efbdbe3",
+  "clip_audit_digest": "242d2d583de1c0c7",
   "clip_primary_min_score": 0.55,
   "clip_rescue_min_score": 0.4,
   "items": {
@@ -10576,12 +10576,15 @@
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "26483db089c2b4aeed27a3b5ff0f3893cfcb98be0c8e673cd19149e76b66af89": {
-      "category": "Meat & Seafood",
-      "subcategory": "Beef",
-      "confidence": 0.99,
-      "reasoning": "Beef wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "category": "Snacks",
+      "subcategory": "Jerky & Meat Snacks",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.8775. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.8775,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "6a4e5e2b1699925585adf92ecef01ed797e69e422f8dec3ec3fa3601dbf6a632": {
@@ -25510,10 +25513,13 @@
     "69b531d7154ee8adb655886fffd5291b1264b5fb9ce5b50aae3942d84b24ec70": {
       "category": "Meat & Seafood",
       "subcategory": "Beef",
-      "confidence": 0.99,
-      "reasoning": "Beef wording matched.",
-      "model_name": "local-taxonomy-classifier",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7613. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
       "model_version": "taxonomy-local-ml-v17",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7613,
       "taxonomy_version": "fixed-taxonomy-v5"
     },
     "46cc29cc3daf625c4ff3886b6242b9c1c1acb6d12c375d65ab9c7eef275c9583": {
