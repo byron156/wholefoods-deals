@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T21:31:00.856585+00:00",
+  "generated_at": "2026-07-23T14:05:24.522446+00:00",
   "summary": {
     "total_products": 3954,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3954
   },
   "taxonomy_report": {
-    "generated_at": "2026-07-22T21:30:44.904176+00:00",
+    "generated_at": "2026-07-23T14:05:06.418852+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -13051,6 +13051,72 @@
         ]
       },
       {
+        "asin": "B08CBX171Q",
+        "asins": [
+          "B08CBX171Q"
+        ],
+        "name": "Renew Life Women's Probiotic Capsules",
+        "raw_name": "Renew Life Women's Probiotic Capsules, Supports pH Balance for Women, Vaginal, Urinary, Digestive and Immune Health, L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 90 Billion CFU - 60 Ct",
+        "brand": "Renew Life",
+        "source_brand": "Renew Life",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "15% off",
+        "basis_price": "prices vary",
+        "discount": "23% off",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71nSV6WOpoL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "multi-source deal"
+        ],
+        "available_store_ids": [
+          "10328",
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Flyer",
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10160",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Flyer",
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0BQ5HL128",
         "asins": [
           "B0BQ5HL128"
@@ -19946,56 +20012,6 @@
         ]
       },
       {
-        "asin": "B0DXVYNSCN",
-        "name": "Amylu Foods Chicken Sausage Breakfast Patties",
-        "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Breakfast Time, Natural Ingredients, 16g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
-        "brand": "Amylu",
-        "source_brand": "Amylu",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Frozen",
-        "subcategory": "Frozen Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Frozen",
-        "ai_subcategory": "Frozen Breakfast",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.5731,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61ZjZhwJ-xL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0DXVZ4F4R",
         "name": "Amylu Foods Chicken Sausage Breakfast Patties",
         "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Maple, Natural Ingredients, 14g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
@@ -24840,72 +24856,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVGJ2VVP",
             "sources": [
               "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DBMCRH47",
-        "name": "Babylife Organics Stage 2",
-        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
-        "brand": "Babylife Organics Stage",
-        "brand_source": "derived",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Baby",
-        "subcategory": "Baby Food",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Baby",
-        "ai_subcategory": "Baby Food",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$2.50",
-        "basis_price": "$2.96 ea",
-        "prime_price": "$2.25 ea",
-        "discount": "24% off",
-        "discount_percent": 24,
-        "unit_price": "($0.71/ounce)",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-        "tags": [
-          "organic",
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$2.50",
-            "basis_price": "$2.96 ea",
-            "prime_price": "$2.25 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "($0.71/ounce)",
-            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$2.50",
-            "basis_price": "$2.96 ea",
-            "prime_price": "$2.25 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "($0.71/ounce)",
-            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-            "sources": [
-              "All Deals"
             ]
           }
         ]
@@ -32877,12 +32827,12 @@
         ]
       },
       {
-        "asin": "B07SQB7GF2",
+        "asin": "B08QDP3S8X",
         "asins": [
-          "B07SQB7GF2"
+          "B08QDP3S8X"
         ],
         "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Dark Chocolate - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Chocolate Peanut Butter - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
         "brand": "Catalina Crunch",
         "source_brand": "Catalina Crunch",
         "brand_source": "source",
@@ -32905,8 +32855,8 @@
         "basis_price": "$5.75 to $8.99 ea",
         "discount": "28% off",
         "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
+        "image": "https://m.media-amazon.com/images/I/71o4Dej26pL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
         "tags": [
           "flyer-only deal",
           "high-protein"
@@ -32922,7 +32872,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
             "sources": [
               "Flyer"
             ]
@@ -32933,7 +32883,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
             "sources": [
               "Flyer"
             ]
@@ -106764,34 +106714,6 @@
         ]
       },
       {
-        "asin": "target:72c6b79f9a59a3cc",
-        "name": "Select Clover Sonoma Milk",
-        "raw_name": "select Clover Sonoma milk",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Milk",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Milk",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$5.49",
-        "prime_price": "$5.49 ea",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_dafad149-f302-4378-b7b3-62a9cd51932c?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=select+Clover+Sonoma+milk",
-        "tags": [
-          "prime deal"
-        ]
-      },
-      {
         "asin": "target:6e834d55852daeae",
         "name": "Select Clover Sonoma Milk - 0.5gal",
         "raw_name": "select Clover Sonoma milk - 0.5gal",
@@ -116874,56 +116796,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B000MN630Q",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0007R72HK",
-        "name": "Taylors of Harrogate English Breakfast",
-        "raw_name": "Taylors of Harrogate English Breakfast, Black Tea, Pillow Tea Bags, 50 Count (Pack of 1), Rich, Bright & Malty, Caffeinated, Enjoy Hot or Iced, 50 Teabags",
-        "brand": "Taylors of Harrogate",
-        "source_brand": "Taylors of Harrogate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Tea",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Tea",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6246,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/41OMjAz9ECL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
             "sources": [
               "Search Deals"
             ]
