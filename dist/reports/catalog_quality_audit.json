@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T22:13:45.686707+00:00",
+  "generated_at": "2026-07-29T21:25:56.423117+00:00",
   "summary": {
     "total_products": 3954,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3954
   },
   "taxonomy_report": {
-    "generated_at": "2026-07-28T22:13:29.809220+00:00",
+    "generated_at": "2026-07-29T21:25:41.051585+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -18808,6 +18808,54 @@
         ]
       },
       {
+        "asin": "B0GCKPVTJG",
+        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
+        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Chocolate Covered Strawberry 3.5oz 4-Pack",
+        "brand": "Alec's",
+        "source_brand": "Alec's",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81BwP16llRL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0GCKR2SKR",
         "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
         "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Peanut Butter Cup 3.5oz 4-Pack",
@@ -18849,54 +18897,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-peanut-butter-cup-3-5oz-4-pack-b0gckr2skr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKTHLHM",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Mint Chocolate Cookie 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81k6s+jgpDL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
             "sources": [
               "Search Deals"
             ]
@@ -19344,9 +19344,9 @@
         ]
       },
       {
-        "asin": "B06Y1MMDMC",
+        "asin": "B0795D5G91",
         "name": "Aloha Organic Plant Based Protein Bars",
-        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Mint, 1.98 Oz (Pack of 12)",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Vegan, Low Sugar & Carb, Paleo, Non-GMO, Gluten/Stevia/Soy Free, No Sugar Alcohols, Chocolate Mint, 1.98 Oz",
         "brand": "Aloha",
         "source_brand": "Aloha",
         "brand_source": "source",
@@ -19366,8 +19366,8 @@
         "ai_model_name": "manual-gold-label",
         "ai_model_version": "taxonomy-local-ml-v17",
         "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/7139RLiq91L._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "image": "https://m.media-amazon.com/images/I/71rn3YdoeWL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
         "tags": [
           "high-protein",
           "organic"
@@ -19380,7 +19380,7 @@
           {
             "store_id": "10160",
             "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
             "sources": [
               "Search Deals"
             ]
@@ -19388,7 +19388,7 @@
           {
             "store_id": "10328",
             "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
             "sources": [
               "Search Deals"
             ]
@@ -47236,6 +47236,70 @@
         ]
       },
       {
+        "asin": "B0FP47KN38",
+        "name": "FLO Period Underwear Heavy Flow",
+        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
+        "brand": "Flo",
+        "brand_source": "derived",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals"
+        ],
+        "source_count": 1,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Feminine Care",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Feminine Care",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.6438,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$21.24",
+        "basis_price": "$24.99 ea",
+        "prime_price": "$19.12 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "$21.24",
+            "basis_price": "$24.99 ea",
+            "prime_price": "$19.12 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+            "sources": [
+              "All Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "$21.24",
+            "basis_price": "$24.99 ea",
+            "prime_price": "$19.12 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
+            "sources": [
+              "All Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0010ED368",
         "name": "Flora - Flor-Essence - Gentle Detox Tea for a Full-Body Cleanse - Contains Organic Slippery Elm Bark, Rhubarb, Burdock Root & More - Vegan, Non-Gmo & Gluten-Free - 17 Fl. Oz.",
         "raw_name": "Flora - Flor-Essence - Gentle Detox Tea for a Full-Body Cleanse - Contains Organic Slippery Elm Bark, Rhubarb, Burdock Root & More - Vegan, Non-GMO & Gluten-Free - 17 fl. oz.",
@@ -60092,69 +60156,6 @@
         ]
       },
       {
-        "asin": "B0013OUK3E",
-        "asins": [
-          "B0013OUK3E"
-        ],
-        "name": "Jarrow Formulas Fem-Dophilus",
-        "raw_name": "Jarrow Formulas Fem-Dophilus - 5 Billion CFU Per Serving - Women's Probiotic Supplement - Urinary Tract & Vaginal Health - Up to 30 Servings (Veggie Caps)",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/71QwFBcLFOL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B002USILBK",
         "asins": [
           "B002USILBK"
@@ -64015,56 +64016,6 @@
         ]
       },
       {
-        "asin": "B00NWJE9NK",
-        "name": "Kettle Brand Potato Chips",
-        "raw_name": "Kettle Brand Potato Chips, Jalapeno Kettle Chips, Party Size, 13 Oz",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.8607,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71iKwhQivvL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B09ZH1BMNN",
         "name": "Kettle Brand Potato Chips",
         "raw_name": "Kettle Brand Potato Chips, Krinkle Cut, Dill Pickle Kettle Chips, 7.5 Oz",
@@ -64154,56 +64105,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B09ZH9RBHB",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0BBL5TWP3",
-        "name": "Kettle Brand Potato Chips",
-        "raw_name": "Kettle Brand Potato Chips, Air Fried Jalapeño Kettle Chips, 6.5 Oz Bag",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6608,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71oxxU4RmfL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL5TWP3",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL5TWP3",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL5TWP3",
             "sources": [
               "Search Deals"
             ]
@@ -82556,6 +82457,57 @@
         ]
       },
       {
+        "asin": "B0FZXSRDQY",
+        "name": "Nixie Organic Zero Sugar Soda",
+        "raw_name": "Nixie Organic Zero Sugar Soda, NEW Strawberry Cream, Healthy Soda Pop, Non-GMO, 0 Sugar, 0 Calories, Caffeine Free, 12oz Can (1 Count)",
+        "brand": "Nixie",
+        "source_brand": "Nixie",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61nrwXfpcoL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "target:539d13fa74539e94",
         "name": "NOCA Boozy Beverage Multipacks",
         "raw_name": "NOCA Boozy Beverage Multipacks",
@@ -85068,6 +85020,73 @@
             "discount": "23% off",
             "discount_percent": 23,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ98Q75Y",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0BZ9TP4PP",
+        "asins": [
+          "B0BZ9TP4PP"
+        ],
+        "name": "Olipop Prebiotic Soda Pop",
+        "raw_name": "OLIPOP Prebiotic Soda Pop, Cherry Cola, Prebiotics, Botanicals, Plant Fiber, 12 fl oz can",
+        "brand": "Olipop",
+        "source_brand": "Olipop",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.92,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.92,
+        "ai_label_source": "silver",
+        "ai_model_name": "openai-silver-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "3 for $6.66",
+        "basis_price": "$2.59 ea",
+        "prime_price": "$2.00 ea",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://m.media-amazon.com/images/I/71wn3knr1vL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+        "tags": [
+          "flyer-only deal",
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "3 for $6.66",
+            "basis_price": "$2.59 ea",
+            "prime_price": "$2.00 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "3 for $6.66",
+            "basis_price": "$2.59 ea",
+            "prime_price": "$2.00 ea",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BZ9TP4PP",
             "sources": [
               "Flyer"
             ]
@@ -115880,6 +115899,102 @@
         ]
       },
       {
+        "asin": "B000QJ8CLO",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Pure - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71UmeF4CqzL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B08TGWS7ZS",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Lemon Berry - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71L3EIxL0VL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0CX237RCJ",
         "name": "Taffy Strawberries Creme, 3.3 Ounce",
         "raw_name": "Taffy Strawberries Creme, 3.3 Ounce",
@@ -116606,56 +116721,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B000MN630Q",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0007R72HK",
-        "name": "Taylors of Harrogate English Breakfast",
-        "raw_name": "Taylors of Harrogate English Breakfast, Black Tea, Pillow Tea Bags, 50 Count (Pack of 1), Rich, Bright & Malty, Caffeinated, Enjoy Hot or Iced, 50 Teabags",
-        "brand": "Taylors of Harrogate",
-        "source_brand": "Taylors of Harrogate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Tea",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Tea",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6246,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/41OMjAz9ECL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
             "sources": [
               "Search Deals"
             ]
@@ -126535,54 +126600,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00BIZ2NLU",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B085DGRLYR",
-        "name": "Wonderful Pistachios No Shells",
-        "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
-        "brand": "Wonderful Pistachios",
-        "source_brand": "Wonderful Pistachios",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Nuts & Trail Mix",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Nuts & Trail Mix",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81C6pkmpSnL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
             "sources": [
               "Search Deals"
             ]
