@@ -9,7 +9,7 @@
       "network_batch_count": 0,
       "sort_runs": [],
       "reused_previous": true,
-      "error": "Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender\", waiting until \"domcontentloaded\"\n"
+      "error": "Could not search for Columbus Circle inside the location modal."
     },
     {
       "store_id": "10328",
