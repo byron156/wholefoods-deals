@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T13:46:03.361084+00:00",
+  "generated_at": "2026-08-13T22:34:17.200115+00:00",
   "summary": {
     "total_products": 3954,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3954
   },
   "taxonomy_report": {
-    "generated_at": "2026-08-12T13:45:47.572893+00:00",
+    "generated_at": "2026-08-13T22:34:00.954821+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -13051,72 +13051,6 @@
         ]
       },
       {
-        "asin": "B08CBX171Q",
-        "asins": [
-          "B08CBX171Q"
-        ],
-        "name": "Renew Life Women's Probiotic Capsules",
-        "raw_name": "Renew Life Women's Probiotic Capsules, Supports pH Balance for Women, Vaginal, Urinary, Digestive and Immune Health, L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 90 Billion CFU - 60 Ct",
-        "brand": "Renew Life",
-        "source_brand": "Renew Life",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer",
-          "Search Deals"
-        ],
-        "source_count": 2,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "discount": "23% off",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71nSV6WOpoL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "multi-source deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Flyer",
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/renew-life-renew-life-women-s-probiotic-capsules-supports-ph-balance-for-women-vaginal-urinary-digestive-and-immune-health-l-rhamnosus-gg-dairy-soy-and-gluten-free-90-billion-cfu-60-ct-b08cbx171q?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Flyer",
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0BQ5HL128",
         "asins": [
           "B0BQ5HL128"
@@ -19392,6 +19326,110 @@
         ]
       },
       {
+        "asin": "B06Y1MMDMC",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Mint, 1.98 Oz (Pack of 12)",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/7139RLiq91L._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "organic"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0795D5G91",
+        "name": "Aloha Organic Plant Based Protein Bars",
+        "raw_name": "ALOHA Organic Plant Based Protein Bars, Vegan, Low Sugar & Carb, Paleo, Non-GMO, Gluten/Stevia/Soy Free, No Sugar Alcohols, Chocolate Mint, 1.98 Oz",
+        "brand": "Aloha",
+        "source_brand": "Aloha",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Protein Bars",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Protein Bars",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71rn3YdoeWL._FMwebp_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+        "tags": [
+          "high-protein",
+          "organic"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B08ZVHH13J",
         "name": "Aloha Organic Plant Based Protein Bars",
         "raw_name": "ALOHA Organic Plant Based Protein Bars - Peanut Butter Cup Bar - 12 Bars, Vegan, Low Sugar, Gluten-Free, Low Carb, Non-GMO, No Stevia, No Erythritol",
@@ -23010,6 +23048,56 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B07Q1JTB18",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B00016QSPO",
+        "name": "Aura Cacia Essential Oil",
+        "raw_name": "Aura Cacia Essential Oil, Inspiring Lemongrass, 0.5 Fluid Ounce, Packaging May Vary",
+        "brand": "Aura Cacia",
+        "source_brand": "Aura Cacia",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Essential Oils",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Essential Oils",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7777,
+        "ai_clip_source": "category-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/619x33qSFNL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
             "sources": [
               "Search Deals"
             ]
@@ -32900,6 +32988,70 @@
             "discount": "28% off",
             "discount_percent": 28,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B08QDP3S8X",
+        "asins": [
+          "B08QDP3S8X"
+        ],
+        "name": "Catalina Crunch Protein Cereal",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Chocolate Peanut Butter - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
+        "brand": "Catalina Crunch",
+        "source_brand": "Catalina Crunch",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Pantry",
+        "subcategory": "Cereal & Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Pantry",
+        "ai_subcategory": "Cereal & Breakfast",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "20% off",
+        "basis_price": "$5.75 to $8.99 ea",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "image": "https://m.media-amazon.com/images/I/71o4Dej26pL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+        "tags": [
+          "flyer-only deal",
+          "high-protein"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "current_price": "20% off",
+            "basis_price": "$5.75 to $8.99 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "current_price": "20% off",
+            "basis_price": "$5.75 to $8.99 ea",
+            "discount": "28% off",
+            "discount_percent": 28,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
             "sources": [
               "Flyer"
             ]
@@ -101564,69 +101716,6 @@
         ]
       },
       {
-        "asin": "B08CBWZYR4",
-        "asins": [
-          "B08CBWZYR4"
-        ],
-        "name": "Renew Life Women's Probiotic Capsules",
-        "raw_name": "Renew Life Women's Probiotic Capsules, 50 Billion CFU Guaranteed, Supports pH Balance, Vaginal, Urinary, Digestive and Immune Health(2), L. Rhamnosus GG, Dairy, Soy and Gluten-Free, 30 Count",
-        "brand": "Renew Life",
-        "source_brand": "Renew Life",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/81wLAj3cQLL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08CBWZYR4",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B01LYF2NJN",
         "name": "Revive Reishi Chocolate, 12 Ounce",
         "raw_name": "Revive Reishi Chocolate, 12 Ounce",
@@ -116747,56 +116836,6 @@
         ]
       },
       {
-        "asin": "B0007R72HK",
-        "name": "Taylors of Harrogate English Breakfast",
-        "raw_name": "Taylors of Harrogate English Breakfast, Black Tea, Pillow Tea Bags, 50 Count (Pack of 1), Rich, Bright & Malty, Caffeinated, Enjoy Hot or Iced, 50 Teabags",
-        "brand": "Taylors of Harrogate",
-        "source_brand": "Taylors of Harrogate",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Beverages",
-        "subcategory": "Tea",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beverages",
-        "ai_subcategory": "Tea",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6246,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/41OMjAz9ECL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0007R72HK",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B000I4M1SM",
         "name": "Taylors of Harrogate English Breakfast",
         "raw_name": "Taylors of Harrogate English Breakfast, Black Loose Leaf, 4.41 Ounce Tin Caddy (Pack of 1), Rich, Bright & Malty, Caffeinated, Premium Whole Leaf Tea",
@@ -126669,54 +126708,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00BIZ2NLU",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B085DGRLYR",
-        "name": "Wonderful Pistachios No Shells",
-        "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
-        "brand": "Wonderful Pistachios",
-        "source_brand": "Wonderful Pistachios",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Nuts & Trail Mix",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Nuts & Trail Mix",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81C6pkmpSnL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
             "sources": [
               "Search Deals"
             ]
