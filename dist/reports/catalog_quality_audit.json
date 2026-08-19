@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T13:25:59.098982+00:00",
+  "generated_at": "2026-08-19T23:36:15.965862+00:00",
   "summary": {
     "total_products": 3954,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3954
   },
   "taxonomy_report": {
-    "generated_at": "2026-08-18T13:25:43.627479+00:00",
+    "generated_at": "2026-08-19T23:36:00.952982+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -18760,198 +18760,6 @@
         ]
       },
       {
-        "asin": "B0GCKKTXZ9",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Dark Chocolate Honeycomb Crunch 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81BfZPZ0-OL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-dark-chocolate-honeycomb-crunch-3-5oz-4-pack-b0gckktxz9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKPVTJG",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Chocolate Covered Strawberry 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81BwP16llRL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-chocolate-covered-strawberry-3-5oz-4-pack-b0gckpvtjg?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKR2SKR",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Peanut Butter Cup 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81sUwDFwDtL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-peanut-butter-cup-3-5oz-4-pack-b0gckr2skr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-peanut-butter-cup-3-5oz-4-pack-b0gckr2skr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-peanut-butter-cup-3-5oz-4-pack-b0gckr2skr?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0GCKTHLHM",
-        "name": "Alec's Culture CUP™ Probiotic A2 Dairy Ice Cream",
-        "raw_name": "Alec's CULTURE CUP™ Probiotic A2 Dairy Ice Cream - Mint Chocolate Cookie 3.5oz 4-Pack",
-        "brand": "Alec's",
-        "source_brand": "Alec's",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81k6s+jgpDL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/alec-s-alec-s-culture-cup-probiotic-a2-dairy-ice-cream-mint-chocolate-cookie-3-5oz-4-pack-b0gckthlhm?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0FFTPTX9J",
         "name": "Alice Mushrooms Brainstorm Mushroom Chocolate 10 Count",
         "raw_name": "Alice Mushrooms Brainstorm Mushroom Chocolate 10 Count, 2.5 OZ",
@@ -19385,58 +19193,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-maple-sea-salt-protein-bar-12-ct-b0bx7g9n83?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0795D5G91",
-        "name": "Aloha Organic Plant Based Protein Bars",
-        "raw_name": "ALOHA Organic Plant Based Protein Bars, Vegan, Low Sugar & Carb, Paleo, Non-GMO, Gluten/Stevia/Soy Free, No Sugar Alcohols, Chocolate Mint, 1.98 Oz",
-        "brand": "Aloha",
-        "source_brand": "Aloha",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Protein Bars",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Protein Bars",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71rn3YdoeWL._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "high-protein",
-          "organic"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-vegan-low-sugar-carb-paleo-non-gmo-gluten-stevia-soy-free-no-sugar-alcohols-chocolate-mint-1-98-oz-b0795d5g91?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
             "sources": [
               "Search Deals"
             ]
@@ -20057,6 +19813,56 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVZ2DHH",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0DXVYNSCN",
+        "name": "Amylu Foods Chicken Sausage Breakfast Patties",
+        "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Breakfast Time, Natural Ingredients, 16g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
+        "brand": "Amylu",
+        "source_brand": "Amylu",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Frozen",
+        "subcategory": "Frozen Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Frozen",
+        "ai_subcategory": "Frozen Breakfast",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.5731,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61ZjZhwJ-xL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
             "sources": [
               "Search Deals"
             ]
@@ -26837,62 +26643,6 @@
         ]
       },
       {
-        "asin": "B08YKJX832",
-        "asins": [
-          "B08YKJX832",
-          "B0D19FGYZG",
-          "B00NLQXXDQ",
-          "B0D19MF171",
-          "B07D9WSWFR"
-        ],
-        "name": "Beauty Supplements",
-        "raw_name": "Beauty Supplements",
-        "brand": "Vital Proteins",
-        "source_brand": "Vital Proteins",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Protein & Collagen",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.8265,
-        "ai_clip_source": "category-first",
-        "current_price": "15% off",
-        "basis_price": "$19.99 to $46.49 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/91aiuY5gZcL.jpg",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "$19.99 to $46.49 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0011CZ6HI",
         "name": "Beecher's World's Best Mac & Cheese Frozen Box, 20 Oz",
         "raw_name": "Beecher's World's Best Mac & Cheese Frozen Box, 20 Oz",
@@ -32887,12 +32637,12 @@
         ]
       },
       {
-        "asin": "B0FMKMXS8R",
+        "asin": "B07SQB7GF2",
         "asins": [
-          "B0FMKMXS8R"
+          "B07SQB7GF2"
         ],
         "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Breakfast Cereal with 10g of Protein, No Added Sugar - Gluten Free - Apple Turnover - 8 oz Bag (Pack of 1)",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Dark Chocolate - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
         "brand": "Catalina Crunch",
         "source_brand": "Catalina Crunch",
         "brand_source": "source",
@@ -32915,8 +32665,8 @@
         "basis_price": "$5.75 to $8.99 ea",
         "discount": "28% off",
         "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/81vSIVyVZtL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+        "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
         "tags": [
           "flyer-only deal",
           "high-protein"
@@ -32932,7 +32682,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
             "sources": [
               "Flyer"
             ]
@@ -32943,71 +32693,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FMKMXS8R",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08QDP3S8X",
-        "asins": [
-          "B08QDP3S8X"
-        ],
-        "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Chocolate Peanut Butter - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
-        "brand": "Catalina Crunch",
-        "source_brand": "Catalina Crunch",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Cereal & Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Cereal & Breakfast",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "20% off",
-        "basis_price": "$5.75 to $8.99 ea",
-        "discount": "28% off",
-        "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/71o4Dej26pL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "20% off",
-            "basis_price": "$5.75 to $8.99 ea",
-            "discount": "28% off",
-            "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
             "sources": [
               "Flyer"
             ]
@@ -64215,56 +63901,6 @@
         ]
       },
       {
-        "asin": "B0BBL55GT7",
-        "name": "Kettle Brand Potato Chips",
-        "raw_name": "Kettle Brand Potato Chips, Air Fried Sea Salt & Vinegar Kettle Chips, 6.5 Oz Bag",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6387,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/81Me8RNEgrL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL55GT7",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL55GT7",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL55GT7",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0BBL934XQ",
         "name": "Kettle Brand Potato Chips",
         "raw_name": "Kettle Brand Potato Chips, Air Fried Himalayan Salt Kettle Chips, 6.5 Oz Bag",
@@ -82603,6 +82239,57 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSS25J",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B0FZXSRDQY",
+        "name": "Nixie Organic Zero Sugar Soda",
+        "raw_name": "Nixie Organic Zero Sugar Soda, NEW Strawberry Cream, Healthy Soda Pop, Non-GMO, 0 Sugar, 0 Calories, Caffeine Free, 12oz Can (1 Count)",
+        "brand": "Nixie",
+        "source_brand": "Nixie",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61nrwXfpcoL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
             "sources": [
               "Search Deals"
             ]
@@ -116111,6 +115798,54 @@
         ]
       },
       {
+        "asin": "B08TGWS7ZS",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Lemon Berry - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71L3EIxL0VL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0CX237RCJ",
         "name": "Taffy Strawberries Creme, 3.3 Ounce",
         "raw_name": "Taffy Strawberries Creme, 3.3 Ounce",
@@ -126766,6 +126501,54 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00BIZ2NLU",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B085DGRLYR",
+        "name": "Wonderful Pistachios No Shells",
+        "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
+        "brand": "Wonderful Pistachios",
+        "source_brand": "Wonderful Pistachios",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Nuts & Trail Mix",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Nuts & Trail Mix",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81C6pkmpSnL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
             "sources": [
               "Search Deals"
             ]
