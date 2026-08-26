@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T13:26:03.816991+00:00",
+  "generated_at": "2026-08-26T09:30:28.463584+00:00",
   "summary": {
     "total_products": 3954,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3954
   },
   "taxonomy_report": {
-    "generated_at": "2026-08-24T13:25:48.800124+00:00",
+    "generated_at": "2026-08-26T09:30:27.383787+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -19392,58 +19392,6 @@
         ]
       },
       {
-        "asin": "B06Y1MMDMC",
-        "name": "Aloha Organic Plant Based Protein Bars",
-        "raw_name": "ALOHA Organic Plant Based Protein Bars, Chocolate Mint, 1.98 Oz (Pack of 12)",
-        "brand": "Aloha",
-        "source_brand": "Aloha",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Protein Bars",
-        "classification_status": "classified",
-        "category_confidence": 1.0,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Protein Bars",
-        "ai_confidence": 1.0,
-        "ai_label_source": "gold",
-        "ai_model_name": "manual-gold-label",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/7139RLiq91L._FMwebp_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-        "tags": [
-          "high-protein",
-          "organic"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/aloha-aloha-organic-plant-based-protein-bars-chocolate-mint-1-98-oz-pack-of-12-b06y1mmdmc?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B08ZVHH13J",
         "name": "Aloha Organic Plant Based Protein Bars",
         "raw_name": "ALOHA Organic Plant Based Protein Bars - Peanut Butter Cup Bar - 12 Bars, Vegan, Low Sugar, Gluten-Free, Low Carb, Non-GMO, No Stevia, No Erythritol",
@@ -20057,56 +20005,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVZ2DHH",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DXVYNSCN",
-        "name": "Amylu Foods Chicken Sausage Breakfast Patties",
-        "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Breakfast Time, Natural Ingredients, 16g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
-        "brand": "Amylu",
-        "source_brand": "Amylu",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Frozen",
-        "subcategory": "Frozen Breakfast",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Frozen",
-        "ai_subcategory": "Frozen Breakfast",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.5731,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61ZjZhwJ-xL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
             "sources": [
               "Search Deals"
             ]
@@ -23119,56 +23017,6 @@
         ]
       },
       {
-        "asin": "B00016QSPO",
-        "name": "Aura Cacia Essential Oil",
-        "raw_name": "Aura Cacia Essential Oil, Inspiring Lemongrass, 0.5 Fluid Ounce, Packaging May Vary",
-        "brand": "Aura Cacia",
-        "source_brand": "Aura Cacia",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Essential Oils",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Essential Oils",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.7777,
-        "ai_clip_source": "category-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/619x33qSFNL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B002Q4UCGK",
         "name": "Aura Cacia Essential Oil",
         "raw_name": "Aura Cacia Essential Oil, Awakening Lemon Eucalyptus, 2 Fluid Ounce",
@@ -24958,72 +24806,6 @@
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0BVGJ2VVP",
             "sources": [
               "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0DBMCRH47",
-        "name": "Babylife Organics Stage 2",
-        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
-        "brand": "Babylife Organics Stage",
-        "brand_source": "derived",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Baby",
-        "subcategory": "Baby Food",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Baby",
-        "ai_subcategory": "Baby Food",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$2.50",
-        "basis_price": "$2.96 ea",
-        "prime_price": "$2.25 ea",
-        "discount": "24% off",
-        "discount_percent": 24,
-        "unit_price": "($0.71/ounce)",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-        "tags": [
-          "organic",
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$2.50",
-            "basis_price": "$2.96 ea",
-            "prime_price": "$2.25 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "($0.71/ounce)",
-            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$2.50",
-            "basis_price": "$2.96 ea",
-            "prime_price": "$2.25 ea",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "($0.71/ounce)",
-            "url": "https://www.wholefoodsmarket.com/Babylife-Organic-Apple-Carrot-Spinach/dp/B0DBMCRH47?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0DBMCRH47&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_212_i",
-            "sources": [
-              "All Deals"
             ]
           }
         ]
@@ -26932,62 +26714,6 @@
             "url": "https://www.wholefoodsmarket.com/Bears-Fruit-Habanero-Sparkling-Probiotic/dp/B09QR5XM9S?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B09QR5XM9S&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_123_i",
             "sources": [
               "All Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B08YKJX832",
-        "asins": [
-          "B08YKJX832",
-          "B0D19FGYZG",
-          "B00NLQXXDQ",
-          "B0D19MF171",
-          "B07D9WSWFR"
-        ],
-        "name": "Beauty Supplements",
-        "raw_name": "Beauty Supplements",
-        "brand": "Vital Proteins",
-        "source_brand": "Vital Proteins",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Protein & Collagen",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Protein & Collagen",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.8265,
-        "ai_clip_source": "category-first",
-        "current_price": "15% off",
-        "basis_price": "$19.99 to $46.49 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/91aiuY5gZcL.jpg",
-        "tags": [
-          "flyer-only deal",
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "$19.99 to $46.49 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "sources": [
-              "Flyer"
             ]
           }
         ]
@@ -33051,12 +32777,12 @@
         ]
       },
       {
-        "asin": "B08QDP3S8X",
+        "asin": "B07SQB7GF2",
         "asins": [
-          "B08QDP3S8X"
+          "B07SQB7GF2"
         ],
         "name": "Catalina Crunch Protein Cereal",
-        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Chocolate Peanut Butter - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
+        "raw_name": "Catalina Crunch Protein Cereal - Sugar Free Breakfast Cereal with 11g of Protein - Gluten Free - Dark Chocolate - 9 oz. Bag (Pack of 1) (Packaging May Vary)",
         "brand": "Catalina Crunch",
         "source_brand": "Catalina Crunch",
         "brand_source": "source",
@@ -33079,8 +32805,8 @@
         "basis_price": "$5.75 to $8.99 ea",
         "discount": "28% off",
         "discount_percent": 28,
-        "image": "https://m.media-amazon.com/images/I/71o4Dej26pL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+        "image": "https://m.media-amazon.com/images/I/81GC0wmhiOL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
         "tags": [
           "flyer-only deal",
           "high-protein"
@@ -33096,7 +32822,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
             "sources": [
               "Flyer"
             ]
@@ -33107,7 +32833,7 @@
             "basis_price": "$5.75 to $8.99 ea",
             "discount": "28% off",
             "discount_percent": 28,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B08QDP3S8X",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B07SQB7GF2",
             "sources": [
               "Flyer"
             ]
@@ -47376,70 +47102,6 @@
         ]
       },
       {
-        "asin": "B0FP47KN38",
-        "name": "FLO Period Underwear Heavy Flow",
-        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
-        "brand": "Flo",
-        "brand_source": "derived",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Feminine Care",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Feminine Care",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6438,
-        "ai_clip_source": "subcategory-first",
-        "current_price": "$21.24",
-        "basis_price": "$24.99 ea",
-        "prime_price": "$19.12 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$21.24",
-            "basis_price": "$24.99 ea",
-            "prime_price": "$19.12 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$21.24",
-            "basis_price": "$24.99 ea",
-            "prime_price": "$19.12 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-            "sources": [
-              "All Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0010ED368",
         "name": "Flora - Flor-Essence - Gentle Detox Tea for a Full-Body Cleanse - Contains Organic Slippery Elm Bark, Rhubarb, Burdock Root & More - Vegan, Non-Gmo & Gluten-Free - 17 Fl. Oz.",
         "raw_name": "Flora - Flor-Essence - Gentle Detox Tea for a Full-Body Cleanse - Contains Organic Slippery Elm Bark, Rhubarb, Burdock Root & More - Vegan, Non-GMO & Gluten-Free - 17 fl. oz.",
@@ -60296,6 +59958,69 @@
         ]
       },
       {
+        "asin": "B0013OUK3E",
+        "asins": [
+          "B0013OUK3E"
+        ],
+        "name": "Jarrow Formulas Fem-Dophilus",
+        "raw_name": "Jarrow Formulas Fem-Dophilus - 5 Billion CFU Per Serving - Women's Probiotic Supplement - Urinary Tract & Vaginal Health - Up to 30 Servings (Veggie Caps)",
+        "brand": "Jarrow Formulas",
+        "source_brand": "Jarrow Formulas",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "current_price": "15% off",
+        "basis_price": "prices vary",
+        "discount": "23% off",
+        "discount_percent": 23,
+        "image": "https://m.media-amazon.com/images/I/71QwFBcLFOL._FMwebp__SR500,500_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10328",
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
+            "sources": [
+              "Flyer"
+            ]
+          },
+          {
+            "store_id": "10160",
+            "current_price": "15% off",
+            "basis_price": "prices vary",
+            "discount": "23% off",
+            "discount_percent": 23,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B002USILBK",
         "asins": [
           "B002USILBK"
@@ -64156,56 +63881,6 @@
         ]
       },
       {
-        "asin": "B00NWJE9NK",
-        "name": "Kettle Brand Potato Chips",
-        "raw_name": "Kettle Brand Potato Chips, Jalapeno Kettle Chips, Party Size, 13 Oz",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.8607,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71iKwhQivvL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B00NWJE9NK",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B09ZH1BMNN",
         "name": "Kettle Brand Potato Chips",
         "raw_name": "Kettle Brand Potato Chips, Krinkle Cut, Dill Pickle Kettle Chips, 7.5 Oz",
@@ -64295,56 +63970,6 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B09ZH9RBHB",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0BBL5TWP3",
-        "name": "Kettle Brand Potato Chips",
-        "raw_name": "Kettle Brand Potato Chips, Air Fried Jalapeño Kettle Chips, 6.5 Oz Bag",
-        "brand": "Kettle Brand",
-        "source_brand": "Kettle Brand",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Chips",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Chips",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6608,
-        "ai_clip_source": "subcategory-first",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71oxxU4RmfL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL5TWP3",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL5TWP3",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BBL5TWP3",
             "sources": [
               "Search Deals"
             ]
@@ -116072,54 +115697,6 @@
         ]
       },
       {
-        "asin": "B000QJ8CLO",
-        "name": "Synergy the Real Kombucha",
-        "raw_name": "SYNERGY The Real Kombucha - Pure - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
-        "brand": "Synergy",
-        "source_brand": "Synergy",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71UmeF4CqzL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0CX237RCJ",
         "name": "Taffy Strawberries Creme, 3.3 Ounce",
         "raw_name": "Taffy Strawberries Creme, 3.3 Ounce",
@@ -126725,6 +126302,54 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B00BIZ2NLU",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B085DGRLYR",
+        "name": "Wonderful Pistachios No Shells",
+        "raw_name": "Wonderful Pistachios No Shells, Chili Roasted Nuts, 11 Ounce Resealable Bag, Protein Snacks, Gluten Free College Snacks, Healthy Snacks for Adults",
+        "brand": "Wonderful Pistachios",
+        "source_brand": "Wonderful Pistachios",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Snacks",
+        "subcategory": "Nuts & Trail Mix",
+        "classification_status": "classified",
+        "category_confidence": 1.0,
+        "ai_category": "Snacks",
+        "ai_subcategory": "Nuts & Trail Mix",
+        "ai_confidence": 1.0,
+        "ai_label_source": "gold",
+        "ai_model_name": "manual-gold-label",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/81C6pkmpSnL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B085DGRLYR",
             "sources": [
               "Search Deals"
             ]
