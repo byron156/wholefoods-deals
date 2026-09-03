@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T23:33:37.659917+00:00",
+  "generated_at": "2026-09-03T15:28:44.898923+00:00",
   "summary": {
     "total_products": 3954,
     "failed_products": 0,
@@ -28,7 +28,7 @@
     "combined_unique_count": 3954
   },
   "taxonomy_report": {
-    "generated_at": "2026-09-02T23:33:36.290373+00:00",
+    "generated_at": "2026-09-03T15:28:44.097659+00:00",
     "taxonomy_version": "fixed-taxonomy-v5",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v17",
@@ -20012,6 +20012,56 @@
         ]
       },
       {
+        "asin": "B0DXVYNSCN",
+        "name": "Amylu Foods Chicken Sausage Breakfast Patties",
+        "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Breakfast Time, Natural Ingredients, 16g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
+        "brand": "Amylu",
+        "source_brand": "Amylu",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Frozen",
+        "subcategory": "Frozen Breakfast",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Frozen",
+        "ai_subcategory": "Frozen Breakfast",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.5731,
+        "ai_clip_source": "subcategory-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61ZjZhwJ-xL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DXVYNSCN",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "B0DXVZ4F4R",
         "name": "Amylu Foods Chicken Sausage Breakfast Patties",
         "raw_name": "Amylu Foods Chicken Sausage Breakfast Patties, Maple, Natural Ingredients, 14g of Protein, GAP Chicken Raised with No Antibiotics, Fully Cooked, Gluten-Free, Pork-Free, No Nitrates or Nitrites, 12 oz",
@@ -23010,6 +23060,56 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B07Q1JTB18",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B00016QSPO",
+        "name": "Aura Cacia Essential Oil",
+        "raw_name": "Aura Cacia Essential Oil, Inspiring Lemongrass, 0.5 Fluid Ounce, Packaging May Vary",
+        "brand": "Aura Cacia",
+        "source_brand": "Aura Cacia",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Essential Oils",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Essential Oils",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "ai_clip_score": 0.7777,
+        "ai_clip_source": "category-first",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/619x33qSFNL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00016QSPO",
             "sources": [
               "Search Deals"
             ]
@@ -47232,70 +47332,6 @@
         ]
       },
       {
-        "asin": "B0FP47KN38",
-        "name": "FLO Period Underwear Heavy Flow",
-        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
-        "brand": "Flo",
-        "brand_source": "derived",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals"
-        ],
-        "source_count": 1,
-        "category": "Beauty & Personal Care",
-        "subcategory": "Feminine Care",
-        "classification_status": "classified",
-        "category_confidence": 0.78,
-        "ai_category": "Beauty & Personal Care",
-        "ai_subcategory": "Feminine Care",
-        "ai_confidence": 0.78,
-        "ai_label_source": "clip-primary",
-        "ai_model_name": "local-clip-audit",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "ai_clip_score": 0.6438,
-        "ai_clip_source": "subcategory-first",
-        "current_price": "$21.24",
-        "basis_price": "$24.99 ea",
-        "prime_price": "$19.12 ea",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "current_price": "$21.24",
-            "basis_price": "$24.99 ea",
-            "prime_price": "$19.12 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=CGwGt&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=B21G9KN1SRHWABC28QBQ&pd_rd_wg=yo65h&pd_rd_r=40761eff-e37b-430a-b191-6c164874423d&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-            "sources": [
-              "All Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "current_price": "$21.24",
-            "basis_price": "$24.99 ea",
-            "prime_price": "$19.12 ea",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/Here-Flo-Period-Panties-US/dp/B0FP47KN38?pd_rd_w=Nygny&content-id=amzn1.sym.5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_p=5bf7fc1d-c3c3-472b-84c7-ff1e6c65eafd&pf_rd_r=CKEREF5XH4K0JW2WZH1W&pd_rd_wg=YS5U2&pd_rd_r=1722073d-5d5d-45aa-aeb6-f6f43f8a0bcb&pd_rd_i=B0FP47KN38&fpw=alm&almBrandId=VUZHIFdob2xlIEZvb2Rz&ref_=pd_alm_wf_dsk_dl_adl_dfyg_sg_1_4_i",
-            "sources": [
-              "All Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0010ED368",
         "name": "Flora - Flor-Essence - Gentle Detox Tea for a Full-Body Cleanse - Contains Organic Slippery Elm Bark, Rhubarb, Burdock Root & More - Vegan, Non-Gmo & Gluten-Free - 17 Fl. Oz.",
         "raw_name": "Flora - Flor-Essence - Gentle Detox Tea for a Full-Body Cleanse - Contains Organic Slippery Elm Bark, Rhubarb, Burdock Root & More - Vegan, Non-GMO & Gluten-Free - 17 fl. oz.",
@@ -60145,69 +60181,6 @@
             "discount": "23% off",
             "discount_percent": 23,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B001EHBF5W",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "asin": "B0013OUK3E",
-        "asins": [
-          "B0013OUK3E"
-        ],
-        "name": "Jarrow Formulas Fem-Dophilus",
-        "raw_name": "Jarrow Formulas Fem-Dophilus - 5 Billion CFU Per Serving - Women's Probiotic Supplement - Urinary Tract & Vaginal Health - Up to 30 Servings (Veggie Caps)",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Immune Support",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Immune Support",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "15% off",
-        "basis_price": "prices vary",
-        "discount": "23% off",
-        "discount_percent": 23,
-        "image": "https://m.media-amazon.com/images/I/71QwFBcLFOL._FMwebp__SR500,500_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328",
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
-            "sources": [
-              "Flyer"
-            ]
-          },
-          {
-            "store_id": "10160",
-            "current_price": "15% off",
-            "basis_price": "prices vary",
-            "discount": "23% off",
-            "discount_percent": 23,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0013OUK3E",
             "sources": [
               "Flyer"
             ]
@@ -82516,6 +82489,57 @@
         ]
       },
       {
+        "asin": "B0FZXSRDQY",
+        "name": "Nixie Organic Zero Sugar Soda",
+        "raw_name": "Nixie Organic Zero Sugar Soda, NEW Strawberry Cream, Healthy Soda Pop, Non-GMO, 0 Sugar, 0 Calories, Caffeine Free, 12oz Can (1 Count)",
+        "brand": "Nixie",
+        "source_brand": "Nixie",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Soda",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Soda",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/61nrwXfpcoL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+        "tags": [
+          "organic"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FZXSRDQY",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "asin": "target:539d13fa74539e94",
         "name": "NOCA Boozy Beverage Multipacks",
         "raw_name": "NOCA Boozy Beverage Multipacks",
@@ -103564,54 +103588,6 @@
         ]
       },
       {
-        "asin": "B0C6VTCN1Q",
-        "name": "Rudis Bakery",
-        "raw_name": "Rudis Bakery, Frozen, Toast Texas 3 Cheese With Garlic, 13.8 Ounce",
-        "brand": "Rudis",
-        "source_brand": "Rudis",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Frozen",
-        "subcategory": "Frozen Meals",
-        "classification_status": "classified",
-        "category_confidence": 0.94,
-        "ai_category": "Frozen",
-        "ai_subcategory": "Frozen Meals",
-        "ai_confidence": 0.94,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/61FE9n-sXbL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6VTCN1Q",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6VTCN1Q",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "discount_percent": 0,
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0C6VTCN1Q",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "asin": "B0CC3QPGZV",
         "name": "Rudis Bakery 3 Cheese Garlic Texas Toast, 13.8 OZ",
         "raw_name": "Rudis Bakery 3 Cheese Garlic Texas Toast, 13.8 OZ",
@@ -106638,34 +106614,6 @@
         "discount_percent": 0,
         "image": "https://target.scene7.com/is/image/Target/GUEST_c19f14ed-2f12-408f-a6be-032e57c4ba73?wid=324&hei=324&qlt=45&fmt=jpeg",
         "url": "https://www.target.com/s?searchTerm=select+Clover+Sonoma+butter+-+16oz",
-        "tags": [
-          "prime deal"
-        ]
-      },
-      {
-        "asin": "target:72c6b79f9a59a3cc",
-        "name": "Select Clover Sonoma Milk",
-        "raw_name": "select Clover Sonoma milk",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Milk",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Milk",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v17",
-        "current_price": "$5.49",
-        "prime_price": "$5.49 ea",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_dafad149-f302-4378-b7b3-62a9cd51932c?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=select+Clover+Sonoma+milk",
         "tags": [
           "prime deal"
         ]
@@ -115924,6 +115872,54 @@
             "store_id": "10328",
             "discount_percent": 0,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B089CCL9B4",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "asin": "B000QJ8CLO",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Pure - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Supplements & Wellness",
+        "subcategory": "Immune Support",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Immune Support",
+        "ai_confidence": 0.99,
+        "ai_label_source": "model",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v17",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71UmeF4CqzL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "discount_percent": 0,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
             "sources": [
               "Search Deals"
             ]
