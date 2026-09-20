@@ -41,11 +41,28 @@ python3 build_static_site.py
 That generates:
 
 - `dist/index.html`
-- `dist/flyer/index.html`
-- `dist/all-deals/index.html`
-- `dist/combined-products/index.html`
+- `dist/meal-plan/index.html`
 - `dist/static/*`
 - `dist/data/*`
+
+## Weekly Meal Planner
+
+Open `/meal-plan/` or select **Weekly meal plan** in the deal browser. The planner
+works in both Flask and the static build, with no external AI service required.
+It generates seven days of breakfast, lunch, and dinner, scales ingredients for
+1–12 people, and consolidates them into a printable, downloadable grocery list.
+Choose a retailer, Whole Foods location, mixed or vegetarian menu, and whether
+to use Prime prices. Pantry flags, shopping checkmarks, and preferences are saved
+in the browser. Rebuilding the menu resets shopping checkmarks.
+
+Recipe selection favors matching discounted ingredients while varying meals.
+Missing deals become explicit regular-price purchases. Prices are recorded offer
+prices, not a basket estimate; quantities describe recipe needs, not package counts.
+The planner excludes dated expired offers and reports known collection failures,
+but cannot verify undated offers or guarantee current availability. Rebuild the
+static site after refreshing the catalog to update its embedded deals.
+
+Validate the planner with `node --test tests/meal-planner.test.js`.
 
 ## Local AI Taxonomy Runtime
 

@@ -3,6 +3,7 @@ import re
 import requests
 import os
 import math
+import random
 import secrets
 import smtplib
 from collections import Counter, defaultdict
@@ -42,6 +43,7 @@ from supabase_state import (
     load_latest_newsletter_delivery_from_supabase,
     load_newsletter_feedback_token_from_supabase,
     load_newsletter_preferences_from_supabase,
+    load_recent_newsletter_deliveries_from_supabase,
     load_newsletter_subscriber_by_id_from_supabase,
     load_newsletter_subscriber_from_supabase,
     load_device_profile_from_supabase,
@@ -3065,11 +3067,55 @@ def latest_newsletter_delivery(subscriber):
     state = load_newsletter_state_local()
     deliveries = [
         delivery for delivery in (state.get("deliveries") or [])
-        if delivery.get("subscriber_id") == (subscriber or {}).get("id")
-        or delivery.get("device_id") == (subscriber or {}).get("device_id")
+        if ((subscriber or {}).get("id") and delivery.get("subscriber_id") == subscriber.get("id"))
+        or ((subscriber or {}).get("device_id") and delivery.get("device_id") == subscriber.get("device_id"))
     ]
     deliveries.sort(key=lambda row: row.get("sent_at") or "", reverse=True)
     return deliveries[0] if deliveries else None
+
+
+def product_keys_from_delivery(delivery):
+    metadata = (delivery or {}).get("payload_metadata") or {}
+    keys = metadata.get("product_keys") or []
+    if not isinstance(keys, list):
+        return []
+    return [str(key) for key in keys if key]
+
+
+def recent_newsletter_product_keys(subscriber, latest_delivery=None, max_deliveries=3):
+    recent_keys = []
+    seen_keys = set()
+
+    def remember(delivery):
+        status = str((delivery or {}).get("status") or "").strip().lower()
+        if status != "sent":
+            return
+        for key in product_keys_from_delivery(delivery):
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            recent_keys.append(key)
+
+    remember(latest_delivery)
+
+    if subscriber and subscriber.get("id"):
+        for delivery in load_recent_newsletter_deliveries_from_supabase(
+            subscriber_id=subscriber.get("id"),
+            limit=max_deliveries,
+        ):
+            remember(delivery)
+
+    state = load_newsletter_state_local()
+    local_deliveries = [
+        delivery for delivery in (state.get("deliveries") or [])
+        if ((subscriber or {}).get("id") and delivery.get("subscriber_id") == subscriber.get("id"))
+        or ((subscriber or {}).get("device_id") and delivery.get("device_id") == subscriber.get("device_id"))
+    ]
+    local_deliveries.sort(key=lambda row: row.get("sent_at") or "", reverse=True)
+    for delivery in local_deliveries[:max(0, int(max_deliveries or 0))]:
+        remember(delivery)
+
+    return recent_keys
 
 
 def save_newsletter_event(subscriber, event_type, product_key=None, metadata=None):
@@ -4131,10 +4177,11 @@ def product_permalink(product):
     return product.get("url") or api_url("/")
 
 
-def generate_newsletter_digest_for_subscriber(subscriber, products=None):
+def generate_newsletter_digest_for_subscriber(subscriber, products=None, recent_product_keys=None):
     products = products or combined_products_with_keys()
     profile = profile_for_subscriber(subscriber)
     preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
+    recent_product_keys = set(str(key) for key in (recent_product_keys or []) if key)
     preferred_categories = preferences.get("preferredCategories") or []
     target_count = clamp_int(preferences.get("digestLength"), 12, 4, 24)
     discovery_mix = clamp_int(preferences.get("discoveryMix"), 25, 0, 100)
@@ -4150,6 +4197,42 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None):
     sections = []
     recommendation_snapshot = []
     selected_keys = set()
+    rng = random.SystemRandom()
+
+    def rank_key(product):
+        return str(product.get("key") or "")
+
+    def product_selection_weight(product):
+        rank = product.get("_rank") or {}
+        total = float(rank.get("total_score") or 0)
+        shelf = float(rank.get("shelf_authority_score") or 0)
+        personalization = float(rank.get("personalization_score") or 0)
+        value = float(rank.get("value_score") or 0)
+        discount = float(product.get("discount_percent") or 0)
+        score_lens = rng.choice(
+            [
+                total,
+                total,
+                shelf + value * 0.8,
+                personalization + value,
+                value + discount * 1.6,
+            ]
+        )
+        weight = max(1.0, score_lens + 40)
+        if rank_key(product) in recent_product_keys:
+            weight *= 0.35
+        return weight
+
+    def weighted_ranked_sample(ranked, limit, candidate_window=18):
+        selected = []
+        pool = [product for product in ranked if rank_key(product) and rank_key(product) not in selected_keys]
+        while pool and len(selected) < limit:
+            candidates = pool[:candidate_window]
+            weights = [product_selection_weight(product) for product in candidates]
+            chosen = rng.choices(candidates, weights=weights, k=1)[0]
+            selected.append(chosen)
+            pool.remove(chosen)
+        return selected
 
     def build_entry(product, category, reason=None):
         selected_keys.add(product.get("key"))
@@ -4177,7 +4260,7 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None):
             profile=profile,
             category_context=category,
         )
-        ranked = [product for product in ranked if product.get("key") not in selected_keys][:per_category_limit]
+        ranked = weighted_ranked_sample(ranked, per_category_limit)
         if not ranked:
             continue
         entries = [build_entry(product, category) for product in ranked]
@@ -4186,11 +4269,14 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None):
     if discovery_count:
         ranked_all = sort_products_for_display(products, profile=profile)
         discovery_entries = []
-        for product in ranked_all:
+        discovery_candidates = [
+            product for product in ranked_all
+            if (product.get("category") or "Pantry") not in categories or discovery_mix >= 75
+        ]
+        discovery_pool = weighted_ranked_sample(discovery_candidates, discovery_count, candidate_window=32)
+        for product in discovery_pool:
             if len(discovery_entries) >= discovery_count:
                 break
-            if product.get("key") in selected_keys:
-                continue
             category = product.get("category") or "Pantry"
             if category in categories and discovery_mix < 75:
                 continue
@@ -4372,16 +4458,28 @@ def send_newsletter_digests(products=None, *, force=False, target_email=None):
             save_newsletter_delivery(subscriber, today_date, "skipped", skip_metadata)
             results.append({"email": subscriber.get("email"), "status": "skipped", **skip_metadata})
             continue
-        digest = generate_newsletter_digest_for_subscriber(subscriber, products=products)
+        recent_keys = recent_newsletter_product_keys(subscriber, latest_delivery=latest_delivery)
+        digest = generate_newsletter_digest_for_subscriber(
+            subscriber,
+            products=products,
+            recent_product_keys=recent_keys,
+        )
         html = render_digest_html(digest)
         send_result = send_newsletter_email(
             to_email=subscriber.get("email"),
             subject="Your grocery deals digest",
             html=html,
         )
+        digest_product_keys = [
+            item.get("product_key")
+            for item in (digest.get("snapshot") or [])
+            if item.get("product_key")
+        ]
         metadata = {
             "section_count": len(digest.get("sections") or []),
             "snapshot_count": len(digest.get("snapshot") or []),
+            "product_keys": digest_product_keys,
+            "recent_product_key_count": len(recent_keys),
             "transport": EMAIL_TRANSPORT,
             "force": bool(force),
             "digest_date_timezone": str(subscriber_timezone(subscriber)),
@@ -4854,6 +4952,22 @@ def api_fixes_to_deploy():
         return jsonify({"ok": True, "kind": kind, "retailer": retailer, "order": order, "storage": "legacy-noop"})
 
     return jsonify({"error": "Invalid fix kind"}), 400
+
+
+@app.route("/meal-plan/")
+def weekly_meal_plan():
+    fields = ("name", "category", "retailer", "current_price", "sale_price",
+              "prime_price", "basis_price", "expires", "url", "store_offers")
+    products = [{key: product.get(key) for key in fields} for product in load_combined_products()]
+    note = "Built from the saved deal catalog."
+    try:
+        with open(os.path.join(BASE_DIR, "search_deals_report.json"), encoding="utf-8") as handle:
+            report = json.load(handle)
+        if any(store.get("reused_previous") for store in report.get("stores", [])):
+            note += " The latest Whole Foods collection reused earlier results after a refresh failure; those prices have not been freshly verified."
+    except (OSError, ValueError, TypeError):
+        note += " The latest collection status is unavailable."
+    return render_template("meal_plan.html", products=products, stores=SUPPORTED_STORES, catalog_note=note)
 
 
 @app.route("/", methods=["GET", "HEAD"])

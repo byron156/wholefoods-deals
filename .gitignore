@@ -5,6 +5,8 @@ __pycache__/
 logs/
 .env
 device_profiles.json
+newsletter_state.json
+.daily_refresh.lock/
 .cache/
 vision_category_audit*.json
 

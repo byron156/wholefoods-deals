@@ -1,6 +1,7 @@
 {
   "routes": [
-    "/"
+    "/",
+    "/meal-plan/"
   ],
   "copied_data_files": [
     "flyer_products.json",

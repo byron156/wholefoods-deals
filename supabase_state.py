@@ -508,6 +508,28 @@ def load_latest_newsletter_delivery_from_supabase(*, subscriber_id):
         return None
 
 
+def load_recent_newsletter_deliveries_from_supabase(*, subscriber_id, limit=3):
+    client = get_supabase_client()
+    if client is None:
+        return []
+    try:
+        rows = (
+            client.table("newsletter_deliveries")
+            .select("*")
+            .eq("subscriber_id", subscriber_id)
+            .eq("status", "sent")
+            .order("sent_at", desc=True)
+            .limit(max(1, int(limit or 1)))
+            .execute()
+            .data
+            or []
+        )
+        return rows
+    except Exception as error:
+        print(f"Supabase load_recent_newsletter_deliveries_from_supabase failed: {error}")
+        return []
+
+
 def save_newsletter_event_to_supabase(*, subscriber_id, event_type, product_key=None, metadata=None):
     client = get_supabase_client()
     if client is None:

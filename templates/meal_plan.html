@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b6b45"><title>Weekly Meal Plan · Grocery Deals</title>
+<link rel="stylesheet" href="/static/styles.css?v=20260920"><link rel="stylesheet" href="/static/meal-plan.css?v=20260920">
+<link rel="icon" href="/static/favicon.ico">
+</head>
+<body>
+<main class="planner-shell">
+  <nav class="planner-nav"><a href="/">← Browse deals</a><span>GROCERY DEALS / YOUR WEEK</span></nav>
+  <header class="planner-header"><p class="eyebrow">A good week starts with a plan</p><h1>Shop the sales.<br>Make the week.</h1><p>Seven days of breakfast, lunch, and dinner, built around the available deals. One grocery list with quantities for your household.</p></header>
+  <form id="planner-form" class="planner-controls">
+    <label>People<input name="servings" type="number" min="1" max="12" value="2" required></label>
+    <label>Shop<select name="retailer"><option>Whole Foods</option><option>Target</option><option>H Mart</option><option>All</option></select></label>
+    <label>Whole Foods location<select name="store"><option value="">All locations</option>{% for store in stores %}<option value="{{ store.id }}">{{ store.name }}</option>{% endfor %}</select></label>
+    <label>Menu<select name="diet"><option value="all">Mixed menu</option><option value="vegetarian">Vegetarian</option></select></label>
+    <label class="check-control"><input name="prime" type="checkbox">Use Prime prices</label>
+    <button class="primary-button" type="submit">Build my week</button>
+  </form>
+  <aside class="planner-notice">{{ catalog_note }} Sale matches use recorded prices, exclude expired dated offers, and require a discount against the regular price. Check current price and availability at your store.</aside>
+  <p id="planner-status" role="status" aria-live="polite"></p>
+  <div class="planner-actions"><button id="download-plan" class="ghost-button" type="button">Download plan & list</button><button id="print-plan" class="ghost-button" type="button">Print</button></div>
+  <section aria-labelledby="week-title"><h2 id="week-title">Your seven-day menu</h2><p class="section-note">Open a meal for ingredients and cooking steps. Quantities are for everyone at the table.</p><div id="week-grid" class="week-grid"></div></section>
+  <section class="grocery-section" aria-labelledby="grocery-title"><h2 id="grocery-title">Your grocery list</h2><p class="section-note">Check off items as you shop, or mark ingredients you already have. Amounts are recipe quantities, not package counts; buy enough packages to cover them. Canned bean quantities are drained weights. Prices shown are per listed offer, not a weekly total.</p><div id="grocery-list"></div></section>
+  <noscript><p>Enable JavaScript to generate your weekly meal plan and grocery list.</p></noscript>
+</main>
+<script id="planner-data" type="application/json">{{ {"products": products, "catalog_note": catalog_note}|tojson }}</script>
+<script src="/static/meal-planner.js?v=20260920"></script><script src="/static/meal-plan-ui.js?v=20260920"></script>
+</body></html>

@@ -56,6 +56,7 @@ DATA_FILES = [
 ]
 ROUTES = {
     "/": DIST_DIR / "index.html",
+    "/meal-plan/": DIST_DIR / "meal-plan" / "index.html",
 }
 
 
