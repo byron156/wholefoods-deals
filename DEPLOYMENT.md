@@ -104,3 +104,14 @@ The daily flow is:
 4. `git commit`
 5. `git push origin main`
 6. Cloudflare Pages deploys automatically from GitHub
+
+The meal planner defaults to Prime pricing, with a checkbox to opt out. Existing
+planner preferences migrate once to this default; subsequent choices are retained.
+
+The digest includes a meal-plan link and a signed unsubscribe confirmation link.
+Set `PUBLIC_SITE_BASE_URL` to the public website URL when the API is hosted on a
+separate origin. `PUBLIC_API_BASE_URL` must point to the API for email feedback
+and unsubscribe links. Keep `APP_SECRET_KEY` stable across deployments so signed
+links remain valid. Newsletter cadence uses successful deliveries, and digests
+skip missing, expired dated, non-discounted, hidden, and out-of-store offers.
+Run `python -m unittest discover -s tests -p 'test_*.py'` for newsletter checks.

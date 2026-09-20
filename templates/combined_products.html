@@ -7,10 +7,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260517a">
+<link rel="stylesheet" href="/static/styles.css?v=20260920b">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260517a">
+<link rel="manifest" href="/manifest.webmanifest?v=20260920b">
 </head>
 
 <body class="app-body">
@@ -47,10 +47,10 @@
             <button class="link-action" type="button" id="clear-filters">Clear filters</button>
         </div>
         <div class="status-row">
-            <div class="search-meta" id="search-meta">{{ deal_count }} live deals</div>
+            <div class="search-meta" id="search-meta">{{ deal_count }} catalog deals</div>
             <div class="freshness-meta">
                 <a class="ghost-button" href="/meal-plan/">Weekly meal plan</a>
-                <button class="ghost-button newsletter-link" type="button" id="newsletter-toggle">Sign up for newsletter!</button>
+                <button class="ghost-button newsletter-link" type="button" id="newsletter-toggle">Get the deals digest</button>
                 <button class="ghost-button saved-link" type="button" id="saved-list-toggle">Saved list</button>
                 <a class="quality-link" href="/reports/catalog_quality_audit.html">Data Quality</a>
             </div>
@@ -89,17 +89,17 @@
     </div>
 </section>
 
-<section class="preferences-sheet hidden" id="newsletter-sheet" aria-hidden="true">
+<section class="preferences-sheet hidden" id="newsletter-sheet" role="dialog" aria-modal="true" aria-labelledby="newsletter-sheet-title" aria-hidden="true">
     <div class="sheet-header">
         <div>
-            <h3 id="newsletter-sheet-title">Get the daily digest</h3>
-            <p id="newsletter-sheet-copy">Tell us what you actually care about so the email gets smarter than a generic coupon blast.</p>
+            <h3 id="newsletter-sheet-title">Your best deals, in your inbox</h3>
+            <p id="newsletter-sheet-copy">Choose your stores, favorite foods, and delivery schedule. Get a short list of relevant deals with Prime prices where available.</p>
         </div>
         <button class="ghost-button" type="button" id="newsletter-sheet-close">Close</button>
     </div>
     <div class="sheet-field">
         <label for="newsletter-email">Email address</label>
-        <input id="newsletter-email" class="search-input" type="email" placeholder="you@example.com">
+        <input id="newsletter-email" class="search-input" type="email" autocomplete="email" placeholder="you@example.com">
     </div>
     <div class="sheet-field">
         <label for="newsletter-cadence">How often should we send it?</label>
@@ -109,6 +109,7 @@
             <option value="weekly">Weekly best-of</option>
         </select>
     </div>
+    <details class="newsletter-customize"><summary>Personalize stores, categories &amp; brands</summary>
     <div class="sheet-section">
         <h3>Store focus</h3>
         <p>Pick the store locations you most care about first.</p>
@@ -121,7 +122,7 @@
     </div>
     <div class="sheet-section">
         <h3>Categories you want less of</h3>
-        <p>We’ll suppress these unless a deal is truly exceptional.</p>
+        <p>These categories will not appear in your digest.</p>
         <div class="chip-row" id="newsletter-disliked-category-row"></div>
     </div>
     <div class="sheet-field">
@@ -129,7 +130,7 @@
         <input id="newsletter-favorite-brands" class="search-input" type="text" placeholder="365, Applegate, Kevin's">
     </div>
     <div class="sheet-field">
-        <label for="newsletter-hidden-brands">Brands to hide or reduce</label>
+        <label for="newsletter-hidden-brands">Brands to hide</label>
         <input id="newsletter-hidden-brands" class="search-input" type="text" placeholder="Type comma-separated brands">
     </div>
     <div class="sheet-field">
@@ -161,6 +162,7 @@
         <p>Thumbs up, thumbs down, or save a few products so the digest learns your taste fast.</p>
         <div class="newsletter-sample-grid" id="newsletter-sample-grid"></div>
     </div>
+    </details>
     <div class="sheet-actions">
         <button class="primary-button" type="button" id="newsletter-save">Save newsletter preferences</button>
         <p class="form-message hidden" id="newsletter-status" role="status" aria-live="polite"></p>
@@ -186,7 +188,7 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/app-shell.js?v=20260517a"></script>
+<script src="/static/app-shell.js?v=20260920b"></script>
 
 <noscript>
     <section class="noscript-fallback">

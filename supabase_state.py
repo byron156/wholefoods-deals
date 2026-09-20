@@ -496,6 +496,7 @@ def load_latest_newsletter_delivery_from_supabase(*, subscriber_id):
             client.table("newsletter_deliveries")
             .select("*")
             .eq("subscriber_id", subscriber_id)
+            .eq("status", "sent")
             .order("sent_at", desc=True)
             .limit(1)
             .execute()

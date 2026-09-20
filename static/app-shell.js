@@ -363,15 +363,19 @@
   function openNewsletterSheet() {
     state.newsletterOpen = true;
     state.newsletterFormHydrated = false;
+    document.body.style.overflow = "hidden";
     nodes.newsletterSheetBackdrop.classList.remove("hidden");
     nodes.newsletterSheet.classList.remove("hidden");
     nodes.newsletterSheet.setAttribute("aria-hidden", "false");
     renderNewsletterSheet();
+    nodes.newsletterEmail.focus();
     loadNewsletterOnboarding();
   }
 
   function closeNewsletterSheet() {
     state.newsletterOpen = false;
+    document.body.style.overflow = "";
+    nodes.newsletterToggle.focus();
     nodes.newsletterSheetBackdrop.classList.add("hidden");
     nodes.newsletterSheet.classList.add("hidden");
     nodes.newsletterSheet.setAttribute("aria-hidden", "true");
@@ -544,10 +548,8 @@
     }
     nodes.newsletterSave.disabled = true;
     nodes.newsletterSave.textContent = "Saving...";
-    state.profile.newsletterEnabled = true;
     state.profile.newsletterEmail = email;
     state.profile.newsletterCadence = nodes.newsletterCadence.value || "daily";
-    state.profile.newsletterOnboardingCompleted = true;
     state.profile.newsletterPreferences = currentPreferences;
     saveProfile();
 
@@ -601,6 +603,9 @@
         ...payload.onboarding,
       };
     }
+    state.profile.newsletterEnabled = true;
+    state.profile.newsletterOnboardingCompleted = true;
+    saveProfile();
     renderFeed();
     renderNewsletterSheet({ preserveInputs: true });
     setNewsletterStatus("Newsletter preferences saved.", "success");
@@ -1043,7 +1048,7 @@
     const savedCount = (state.profile.savedKeys || []).length;
     nodes.searchMeta.textContent = state.viewMode === "saved"
       ? `${visible.length.toLocaleString()} saved items`
-      : `${visible.length.toLocaleString()} live deals`;
+      : `${visible.length.toLocaleString()} catalog deals`;
     if (nodes.savedListToggle) {
       nodes.savedListToggle.textContent = state.viewMode === "saved"
         ? "Back to deals"
@@ -1053,7 +1058,7 @@
     if (nodes.newsletterToggle) {
       nodes.newsletterToggle.textContent = state.profile.newsletterEnabled
         ? "Newsletter preferences"
-        : "Sign up for newsletter!";
+        : "Get the deals digest";
     }
   }
 
@@ -1145,6 +1150,27 @@
     nodes.feedGrid.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
   }
 
+  const shelfLimits = new Map();
+  nodes.feedGrid.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-more-shelf]");
+    if (!button) return;
+    const category = button.dataset.moreShelf;
+    shelfLimits.set(category, (shelfLimits.get(category) || 24) + 24);
+    const section = button.closest("section");
+    const previousCount = section.querySelectorAll(".deal-card").length;
+    renderShelves();
+    const updated = [...nodes.feedGrid.querySelectorAll("section")].find(el => el.querySelector("h3")?.textContent === category);
+    const nextCard = updated?.querySelectorAll(".deal-card")[previousCount];
+    if (nextCard) {nextCard.setAttribute("tabindex", "-1"); nextCard.focus();}
+  });
+  nodes.newsletterSheet?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {event.preventDefault(); closeNewsletterSheet(); return;}
+    if (event.key !== "Tab") return;
+    const elements = [...nodes.newsletterSheet.querySelectorAll('button:not([disabled]), input, select, a[href], summary')].filter(el => el.offsetParent !== null);
+    const first = elements[0], last = elements[elements.length - 1];
+    if (event.shiftKey && document.activeElement === first) {event.preventDefault(); last.focus();}
+    else if (!event.shiftKey && document.activeElement === last) {event.preventDefault(); first.focus();}
+  });
   function renderShelves() {
     const shelves = buildCategoryShelves();
     if (!shelves.length) {
@@ -1159,9 +1185,11 @@
           <div class="category-section-head">
             <h3>${escapeHtml(shelf.category)}</h3>
           </div>
+          <p class="shelf-count">Showing ${Math.min(shelf.total, shelfLimits.get(shelf.category) || 24)} of ${shelf.total} deals</p>
           <div class="category-track">
-            ${shelf.items.map((product) => renderProductCard(product)).join("")}
+            ${shelf.items.slice(0, shelfLimits.get(shelf.category) || 24).map((product) => renderProductCard(product)).join("")}
           </div>
+          ${shelf.total > (shelfLimits.get(shelf.category) || 24) ? `<button type="button" class="ghost-button" data-more-shelf="${escapeHtml(shelf.category)}">Show more ${escapeHtml(shelf.category)} deals</button>` : ""}
         </section>
       `)
       .join("");
@@ -1572,4 +1600,5 @@
 
   renderFeed();
   loadRemoteProfile();
+  if (window.location.hash === "#newsletter") openNewsletterSheet();
 })();

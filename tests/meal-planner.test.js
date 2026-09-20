@@ -24,7 +24,7 @@ test('sales influence the menu and vegetarian plans exclude meat', () => {
 });
 test('location, retailer, Prime, expired offers, and missing prices are respected', () => {
   const p = deal('Broccoli',{store_offers:[{store_id:'a',current_price:'$5.00',basis_price:'$6.00',prime_price:'$4.00'}]});
-  assert.equal(planner.generate([p],{store:'a'}).groceries.find(i=>i.id==='broccoli').deal.price,5);
+  assert.equal(planner.generate([p],{store:'a',prime:false}).groceries.find(i=>i.id==='broccoli').deal.price,5);
   assert.equal(planner.generate([p],{store:'a',prime:true}).groceries.find(i=>i.id==='broccoli').deal.price,4);
   for (const opts of [{store:'b'},{retailer:'Target'}]) assert.equal(planner.generate([p],opts).matchedCount,0);
   assert.equal(planner.generate([deal('Broccoli',{expires:'2020-01-01'})]).matchedCount,0);
@@ -54,4 +54,20 @@ test('invalid serving counts are bounded and pantry quantities remain available'
   assert.equal(planner.generate([],{servings:100}).options.servings,12);
   const p=planner.generate([],{pantry:['oil']});
   assert.ok(p.groceries.find(i=>i.id==='oil').pantry);
+});
+
+test('Prime prices are the default with a non-Prime opt-out', () => {
+  const item=deal('Broccoli',{prime_price:'$2.00'});
+  const find=options=>planner.generate([item],options).groceries.find(i=>i.id==='broccoli').deal;
+  assert.equal(find({}).price,2);
+  assert.equal(find({}).isPrime,true);
+  assert.equal(find({prime:false}).price,3);
+  assert.equal(find({prime:false}).isPrime,false);
+});
+
+test('missing location Prime price never falls back to another store', () => {
+  const item=deal('Broccoli',{prime_price:'$1.00',store_offers:[{store_id:'a',current_price:'$4.00',basis_price:'$5.00'}]});
+  const matched=planner.generate([item],{store:'a'}).groceries.find(i=>i.id==='broccoli').deal;
+  assert.equal(matched.price,4);
+  assert.equal(matched.isPrime,false);
 });

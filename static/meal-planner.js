@@ -97,7 +97,7 @@
       if (options.store && p.retailer === 'Whole Foods') {
         const offer = (p.store_offers || []).find(o => String(o.store_id) === options.store);
         if (!offer) return []; // Never substitute another location's price.
-        p = {...p, ...offer};
+        p = {...p, current_price:null, sale_price:null, prime_price:null, basis_price:null, ...offer};
       }
       if (p.expires) {
         const expiry = Date.parse(p.expires);
@@ -106,7 +106,7 @@
       const priceText = options.prime ? (p.prime_price || p.current_price || p.sale_price) : (p.current_price || p.sale_price);
       const price = money(priceText), regular = money(p.basis_price);
       if (!(price > 0 && regular > price)) return [];
-      return [{...p,priceText,price,discount:Math.round((1-price/regular)*100)}];
+      return [{...p,priceText,price,isPrime:Boolean(options.prime && p.prime_price && p.retailer === 'Whole Foods'),discount:Math.round((1-price/regular)*100)}];
     });
     const deals = {};
     for (const id of Object.keys(ingredients)) {
@@ -115,7 +115,7 @@
     return {deals,eligibleCount:eligible.length};
   }
   function generate(products, supplied = {}) {
-    const options = {servings:2,retailer:'Whole Foods',store:'',prime:false,vegetarian:false,pantry:[],...supplied};
+    const options = {servings:2,retailer:'Whole Foods',store:'',prime:true,vegetarian:false,pantry:[],...supplied};
     options.servings = Math.max(1,Math.min(12,Math.floor(Number(options.servings) || 2)));
     const {deals,eligibleCount} = analyze(products,options);
     const usage = {}, totals = {}, days = [];

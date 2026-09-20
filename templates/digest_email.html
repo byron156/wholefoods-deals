@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Your grocery digest</title></head>
+<body style="margin:0;background:#f7f4ec;color:#163a2b;font-family:Arial,Helvetica,sans-serif;">
+<div style="display:none;max-height:0;overflow:hidden;">{{ deal_count }} selected deals, Prime prices where available, and a plan for your week.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:#ffffff;border-radius:20px;"><tr><td style="padding:28px 24px;">
+<p style="font-size:12px;font-weight:bold;letter-spacing:2px;color:#0b6b45;">GROCERY DEALS · PICKED FOR YOU</p>
+<h1 style="font-size:34px;line-height:1.1;margin:16px 0;">Good deals.<br>A better week.</h1>
+<p style="line-height:1.6;color:#5d6b62;">{{ deal_count }} deals selected for your preferences. Whole Foods prices use Prime offers where available; membership is required for those prices.</p>
+<table role="presentation" width="100%" style="background:#edf5ed;border-radius:12px;"><tr><td style="padding:18px;"><strong>Turn the sales into dinner.</strong><p style="line-height:1.5;">Build seven days of meals and one grocery list for your household.</p><a href="{{ meal_plan_url }}" style="display:inline-block;background:#0b6b45;color:white;text-decoration:none;padding:12px 18px;border-radius:8px;">Build my weekly meal plan →</a></td></tr></table>
+{% for section in digest.sections %}
+<h2 style="font-size:23px;margin:28px 0 16px;">{{ section.category }}</h2>
+{% for entry in section.entries %}{% set product = entry.product %}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #dce6df;"><tr>
+{% if safe_url(product.image) %}<td width="80" valign="top" style="padding:18px 12px 18px 0;"><img src="{{ safe_url(product.image) }}" alt="" width="72" height="72" style="object-fit:contain;"></td>{% endif %}
+<td style="padding:18px 0;">
+<p style="font-size:12px;color:#5d6b62;margin:0 0 7px;">{{ product.retailer or 'Whole Foods' }}{% if product.store_id %} · {{ product.store_label or product.store_id }}{% endif %}</p>
+<a href="{{ safe_url(product_permalink(product)) }}" style="font-size:18px;line-height:1.4;color:#163a2b;font-weight:bold;text-decoration:none;">{{ product.name }}</a>
+<p style="margin:10px 0;"><strong style="font-size:25px;color:#0b6b45;">{{ product.newsletter_price or product.prime_price or product.current_price or 'Check price' }}</strong> <span style="font-size:12px;">{{ product.newsletter_price_label or 'Listed price' }}</span></p>
+<p style="font-size:13px;color:#5d6b62;">{% if product.basis_price %}Regular <s>{{ product.basis_price }}</s>{% endif %}{% if product.discount_percent %} · <strong>{{ product.discount_percent }}% off</strong>{% endif %}</p>
+<p style="font-size:13px;color:#5d6b62;line-height:1.5;">{{ entry.reason }}</p>
+<p style="font-size:13px;line-height:2;margin-bottom:0;"><a href="{{ feedback_url(entry.feedback.up) }}" style="color:#0b6b45;">More like this</a> &nbsp;·&nbsp; <a href="{{ feedback_url(entry.feedback.down) }}" style="color:#5d6b62;">Less like this</a> &nbsp;·&nbsp; <a href="{{ feedback_url(entry.feedback.save) }}" style="color:#0b6b45;">Save deal</a></p>
+</td></tr></table>
+{% endfor %}{% endfor %}
+{% if not deal_count %}<p>No discounted offers matched your preferences today.</p>{% endif %}
+<p style="font-size:12px;line-height:1.6;color:#5d6b62;border-top:1px solid #dce6df;padding-top:20px;margin-top:24px;">Prices come from the saved catalog and may include earlier collection results. Confirm current price, availability, and offer terms with the store. Prices are per listed offer.</p>
+<p style="font-size:12px;line-height:1.8;"><a href="{{ preferences_url }}" style="color:#0b6b45;">Manage preferences</a> &nbsp;·&nbsp; <a href="{{ unsubscribe_url }}" style="color:#5d6b62;">Unsubscribe</a></p>
+</td></tr></table></td></tr></table></body></html>

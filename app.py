@@ -12,7 +12,7 @@ from functools import lru_cache
 from email.message import EmailMessage
 from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
-from flask import Flask, jsonify, render_template, request, send_from_directory
+from flask import Flask, jsonify, render_template, request, send_from_directory, has_request_context
 from itsdangerous import BadSignature, SignatureExpired, URLSafeTimedSerializer
 from brand_ai import build_brand_family_map
 from ranking import rank_products
@@ -82,6 +82,7 @@ SUBCATEGORY_AI_MIN_CONFIDENCE = 0.0
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("APP_SECRET_KEY", "wholefoods-deals-local-secret")
+PUBLIC_SITE_BASE_URL = os.getenv("PUBLIC_SITE_BASE_URL", "").rstrip("/")
 PUBLIC_API_BASE_URL = os.getenv("PUBLIC_API_BASE_URL", "").rstrip("/")
 CORS_ALLOW_ORIGIN = os.getenv("CORS_ALLOW_ORIGIN", "*")
 API_ONLY_MODE = os.getenv("API_ONLY_MODE", "").strip().lower() in {"1", "true", "yes"}
@@ -3070,6 +3071,7 @@ def latest_newsletter_delivery(subscriber):
         if ((subscriber or {}).get("id") and delivery.get("subscriber_id") == subscriber.get("id"))
         or ((subscriber or {}).get("device_id") and delivery.get("device_id") == subscriber.get("device_id"))
     ]
+    deliveries = [delivery for delivery in deliveries if delivery.get("status") == "sent"]
     deliveries.sort(key=lambda row: row.get("sent_at") or "", reverse=True)
     return deliveries[0] if deliveries else None
 
@@ -3111,6 +3113,7 @@ def recent_newsletter_product_keys(subscriber, latest_delivery=None, max_deliver
         if ((subscriber or {}).get("id") and delivery.get("subscriber_id") == subscriber.get("id"))
         or ((subscriber or {}).get("device_id") and delivery.get("device_id") == subscriber.get("device_id"))
     ]
+    local_deliveries = [delivery for delivery in local_deliveries if delivery.get("status") == "sent"]
     local_deliveries.sort(key=lambda row: row.get("sent_at") or "", reverse=True)
     for delivery in local_deliveries[:max(0, int(max_deliveries or 0))]:
         remember(delivery)
@@ -3145,7 +3148,7 @@ def save_newsletter_event(subscriber, event_type, product_key=None, metadata=Non
 
 def list_active_newsletter_subscribers():
     remote = list_active_newsletter_subscribers_from_supabase()
-    if remote:
+    if remote or supabase_enabled():
         return remote
     state = load_newsletter_state_local()
     return [subscriber for subscriber in (state.get("subscribers") or []) if subscriber.get("status") == "active"]
@@ -4177,9 +4180,57 @@ def product_permalink(product):
     return product.get("url") or api_url("/")
 
 
+def newsletter_candidates(products, profile):
+    """Select usable discounted offers before applying personalization ranking."""
+    preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
+    stores = preferences.get("preferredStoreIds") or profile.get("selectedStoreIds") or []
+    hidden = {str(brand).strip().casefold() for brand in preferences.get("hiddenBrands") or []}
+    excluded = set(preferences.get("dislikedCategories") or [])
+    disliked = set(profile.get("dislikedKeys") or [])
+    result = []
+    seen = set()
+    for original in products:
+        product = dict(original)
+        key = product.get("key")
+        if not key or key in seen or key in disliked:
+            continue
+        if str(product.get("brand") or "").strip().casefold() in hidden:
+            continue
+        if product.get("category") in excluded or product.get("subcategory") in excluded:
+            continue
+        if product.get("category") == FAILED_CATEGORY:
+            continue
+        if stores and product.get("retailer") == WHOLE_FOODS_RETAILER:
+            offers = [offer for offer in product.get("store_offers") or [] if str(offer.get("store_id")) in stores]
+            if not offers:
+                continue
+            offer = min(offers, key=lambda row: parse_price_sort_value(row.get("prime_price") or row.get("current_price")))
+            product.update({field: None for field in ("current_price", "sale_price", "prime_price", "basis_price")})
+            product.update(offer)
+            product["store_label"] = next((store.get("name") for store in SUPPORTED_STORES if str(store.get("id")) == str(offer.get("store_id"))), str(offer.get("store_id")))
+        expiry = str(product.get("expires") or "")
+        if expiry:
+            try:
+                if datetime.fromisoformat(expiry.replace("Z", "+00:00")).date() < utcnow().date():
+                    continue
+            except ValueError:
+                pass
+        price = parse_price_sort_value(product.get("prime_price") or product.get("current_price") or product.get("sale_price"))
+        regular = parse_price_sort_value(product.get("basis_price"))
+        if not (math.isfinite(price) and math.isfinite(regular) and 0 < price < regular):
+            continue
+        product["discount_percent"] = round((1 - price / regular) * 100)
+        product["newsletter_price"] = product.get("prime_price") or product.get("current_price") or product.get("sale_price")
+        product["newsletter_price_label"] = "Prime price" if product.get("prime_price") and product.get("retailer") == WHOLE_FOODS_RETAILER else "Sale price"
+        seen.add(key)
+        result.append(product)
+    return result
+
+
 def generate_newsletter_digest_for_subscriber(subscriber, products=None, recent_product_keys=None):
-    products = products or combined_products_with_keys()
+    products = combined_products_with_keys() if products is None else products
     profile = profile_for_subscriber(subscriber)
+    products = newsletter_candidates(products, profile)
     preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
     recent_product_keys = set(str(key) for key in (recent_product_keys or []) if key)
     preferred_categories = preferences.get("preferredCategories") or []
@@ -4188,7 +4239,7 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None, recent_
     discovery_count = min(target_count // 2, round(target_count * discovery_mix / 100 * 0.35))
     primary_count = max(1, target_count - discovery_count)
     category_pool = preferred_categories or ["Produce", "Meat & Seafood", "Pantry"]
-    category_count = min(len(category_pool), max(1, math.ceil(primary_count / 4)))
+    category_count = min(len(category_pool), primary_count)
     categories = category_pool[:category_count]
     by_category = defaultdict(list)
     for product in products:
@@ -4253,14 +4304,14 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None, recent_
         )
         return {"product": product, "reason": entry_reason, "feedback": feedback}
 
-    per_category_limit = max(1, math.ceil(primary_count / max(1, len(categories))))
-    for category in categories:
+    per_category_limit, extra_slots = divmod(primary_count, max(1, len(categories)))
+    for category_index, category in enumerate(categories):
         ranked = sort_products_for_display(
             by_category.get(category) or [],
             profile=profile,
             category_context=category,
         )
-        ranked = weighted_ranked_sample(ranked, per_category_limit)
+        ranked = weighted_ranked_sample(ranked, min(per_category_limit + (category_index < extra_slots), primary_count - len(selected_keys)))
         if not ranked:
             continue
         entries = [build_entry(product, category) for product in ranked]
@@ -4287,6 +4338,13 @@ def generate_newsletter_digest_for_subscriber(subscriber, products=None, recent_
         if discovery_entries:
             sections.append({"category": "Explore", "entries": discovery_entries})
 
+    remaining = target_count - len(selected_keys)
+    if remaining > 0:
+        ranked = sort_products_for_display(products, profile=profile)
+        extras = weighted_ranked_sample(ranked, remaining, candidate_window=32)
+        if extras:
+            sections.append({"category": "More deals for your week", "entries": [build_entry(product, product.get("category") or "Pantry") for product in extras]})
+
     return {
         "profile": profile,
         "subscriber": subscriber,
@@ -4299,66 +4357,33 @@ def feedback_url(token):
     return api_url(f"/api/newsletter/feedback/{token}")
 
 
-def render_digest_html(digest):
-    sections_html = []
-    for section in digest.get("sections") or []:
-        cards = []
-        for entry in section.get("entries") or []:
-            product = entry.get("product") or {}
-            image_html = f'<img src="{product.get("image")}" alt="{product.get("name")}" style="width:96px;height:96px;object-fit:contain;border-radius:12px;background:#f8faf8;">' if product.get("image") else ""
-            cards.append(
-                f"""
-                <div style="border:1px solid #dce6df;border-radius:18px;padding:16px;margin:0 0 14px;background:#fff;">
-                  <div style="display:flex;gap:14px;align-items:flex-start;">
-                    <div>{image_html}</div>
-                    <div style="flex:1;min-width:0;">
-                      <div style="color:#657169;font-size:13px;margin-bottom:4px;">{product.get('retailer') or 'Whole Foods'} · {product.get('category') or 'Pantry'}</div>
-                      <div style="font-size:22px;font-weight:800;color:#163a2b;line-height:1.2;margin-bottom:6px;">{product.get('name')}</div>
-                      <div style="font-size:30px;font-weight:900;color:#dd4b39;line-height:1;">{product.get('prime_price') or product.get('current_price') or ''}</div>
-                      <div style="font-size:15px;font-weight:700;color:#5d6b62;margin-top:8px;">{('Was ' + str(product.get('basis_price'))) if product.get('basis_price') else ''}</div>
-                      <div style="font-size:14px;font-weight:800;color:#0b6b45;margin-top:8px;">{entry.get('reason') or ''}</div>
-                      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
-                        <a href="{feedback_url(entry['feedback']['up'])}" style="background:#0b6b45;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:800;">Thumbs up</a>
-                        <a href="{feedback_url(entry['feedback']['down'])}" style="background:#f4efe6;color:#163a2b;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:800;">Thumbs down</a>
-                        <a href="{feedback_url(entry['feedback']['save'])}" style="background:#dcefe6;color:#0b6b45;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:800;">Save</a>
-                        <a href="{product_permalink(product)}" style="color:#0b6b45;font-weight:800;padding:10px 0 0;text-decoration:none;">View deal</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                """
-            )
-        sections_html.append(
-            f"""
-            <section style="margin:0 0 22px;">
-              <h2 style="margin:0 0 12px;font-size:28px;line-height:1.1;color:#163a2b;">{section.get('category')}</h2>
-              {''.join(cards)}
-            </section>
-            """
-        )
+def public_site_url(path):
+    base = PUBLIC_SITE_BASE_URL or (CORS_ALLOW_ORIGIN if CORS_ALLOW_ORIGIN.startswith(("https://", "http://")) else "") or PUBLIC_API_BASE_URL
+    if not base and has_request_context():
+        base = request.url_root.rstrip("/")
+    return f"{base.rstrip('/')}{path}"
 
-    return f"""
-    <html>
-      <body style="margin:0;background:#f7f4ec;color:#163a2b;font-family:'Avenir Next','Helvetica Neue',Helvetica,Arial,sans-serif;">
-        <div style="max-width:720px;margin:0 auto;padding:28px 16px 40px;">
-          <div style="background:#ffffff;border-radius:28px;padding:24px 24px 10px;box-shadow:0 14px 34px rgba(17,61,41,0.08);">
-            <div style="display:inline-block;background:#dcefe6;color:#0b6b45;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;">Whole Foods Deals</div>
-            <h1 style="margin:16px 0 8px;font-size:38px;line-height:1;color:#163a2b;">Your grocery digest</h1>
-            <p style="margin:0 0 18px;font-size:18px;line-height:1.6;color:#5d6b62;">Personalized from your saved list, category taste, and the strongest deals from the latest refresh.</p>
-            {''.join(sections_html) or '<p style="font-size:16px;color:#5d6b62;">No deals matched your current preferences today.</p>'}
-          </div>
-        </div>
-      </body>
-    </html>
-    """
+
+def safe_newsletter_url(value):
+    value = str(value or "")
+    return value if value.startswith(("https://", "http://", "/")) and not value.startswith("//") else ""
+
+
+def render_digest_html(digest):
+    subscriber = digest.get("subscriber") or {}
+    token = URLSafeTimedSerializer(app.config["SECRET_KEY"], salt="newsletter-unsubscribe").dumps({"id": subscriber.get("id")})
+    return app.jinja_env.get_template("digest_email.html").render(
+        digest=digest, feedback_url=feedback_url,
+        product_permalink=product_permalink, safe_url=safe_newsletter_url,
+        meal_plan_url=public_site_url("/meal-plan/"), preferences_url=public_site_url("/#newsletter"),
+        unsubscribe_url=api_url(f"/api/newsletter/unsubscribe/{token}"),
+        deal_count=sum(len(section.get("entries") or []) for section in digest.get("sections") or []),
+    )
 
 
 def cadence_allows_delivery(subscriber, latest_delivery, today_date):
     cadence = str((subscriber or {}).get("cadence") or "daily").strip().lower()
     if not latest_delivery:
-        return True
-    latest_metadata = latest_delivery.get("payload_metadata") or {}
-    if latest_metadata.get("force"):
         return True
     latest_date = str(latest_delivery.get("digest_date") or "")
     latest_status = str(latest_delivery.get("status") or "").strip().lower()
@@ -4370,7 +4395,7 @@ def cadence_allows_delivery(subscriber, latest_delivery, today_date):
     if cadence == "few-times-week":
         return latest_sent_at < iso_utc(utcnow() - timedelta(days=2))
     if cadence == "weekly":
-        return latest_sent_at < iso_utc(utcnow() - timedelta(days=6))
+        return latest_sent_at < iso_utc(utcnow() - timedelta(days=7))
     return True
 
 
@@ -4433,7 +4458,7 @@ def send_newsletter_email(*, to_email, subject, html):
 
 
 def send_newsletter_digests(products=None, *, force=False, target_email=None):
-    products = products or combined_products_with_keys()
+    products = combined_products_with_keys() if products is None else products
     subscribers = list_active_newsletter_subscribers()
     print(f"[newsletter] active subscribers loaded: {len(subscribers)}")
     if target_email:
@@ -4464,10 +4489,14 @@ def send_newsletter_digests(products=None, *, force=False, target_email=None):
             products=products,
             recent_product_keys=recent_keys,
         )
+        if not digest.get("snapshot"):
+            save_newsletter_delivery(subscriber, today_date, "skipped", {"reason": "no_matching_deals"})
+            results.append({"email": subscriber.get("email"), "status": "skipped", "reason": "no_matching_deals"})
+            continue
         html = render_digest_html(digest)
         send_result = send_newsletter_email(
             to_email=subscriber.get("email"),
-            subject="Your grocery deals digest",
+            subject=f"{len(digest.get('snapshot') or [])} grocery deals picked for you",
             html=html,
         )
         digest_product_keys = [
@@ -4604,6 +4633,32 @@ def api_profile():
     )
 
 
+@app.route("/api/newsletter/unsubscribe/<token>", methods=["GET", "POST"])
+def newsletter_unsubscribe(token):
+    try:
+        payload = URLSafeTimedSerializer(app.config["SECRET_KEY"], salt="newsletter-unsubscribe").loads(token)
+    except BadSignature:
+        return "This unsubscribe link is invalid.", 400
+    subscriber = load_newsletter_subscriber_by_id(payload.get("id")) if payload.get("id") else None
+    if not subscriber:
+        return "This subscription could not be found.", 404
+    complete = subscriber.get("status") == "unsubscribed"
+    if request.method == "POST" and not complete:
+        device_id = subscriber.get("device_id")
+        updated = upsert_newsletter_subscriber_to_supabase(
+            device_id=device_id, email=subscriber["email"], cadence=subscriber.get("cadence") or "daily",
+            timezone=subscriber.get("timezone") or "America/New_York", status="unsubscribed",
+        )
+        if not updated and supabase_enabled():
+            return "Could not update your subscription. Please try again.", 503
+        save_local_newsletter_subscriber(device_id, email=subscriber["email"], cadence=subscriber.get("cadence") or "daily", status="unsubscribed")
+        profile = load_device_profile(device_id) or normalize_profile_payload({})
+        profile["newsletterEnabled"] = False
+        save_device_profile(device_id, profile)
+        complete = True
+    return render_template("newsletter_unsubscribe.html", complete=complete)
+
+
 @app.route("/api/newsletter/signup", methods=["POST", "OPTIONS"])
 def api_newsletter_signup():
     if request.method == "OPTIONS":
@@ -4616,6 +4671,10 @@ def api_newsletter_signup():
     timezone_name = (payload.get("timezone") or "America/New_York").strip()
     if not device_id or not email:
         return jsonify({"error": "Missing device_id or email"}), 400
+    if not re.fullmatch(r"[^\s@]+@[^\s@]+\.[^\s@]+", email):
+        return jsonify({"error": "Enter a valid email address"}), 400
+    if cadence not in {"daily", "few-times-week", "weekly"}:
+        return jsonify({"error": "Choose a supported delivery schedule"}), 400
 
     subscriber = upsert_newsletter_subscriber_to_supabase(
         device_id=device_id,
