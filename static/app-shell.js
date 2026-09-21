@@ -1188,8 +1188,8 @@
           <p class="shelf-count">Showing ${Math.min(shelf.total, shelfLimits.get(shelf.category) || 24)} of ${shelf.total} deals</p>
           <div class="category-track">
             ${shelf.items.slice(0, shelfLimits.get(shelf.category) || 24).map((product) => renderProductCard(product)).join("")}
+            ${shelf.total > (shelfLimits.get(shelf.category) || 24) ? `<button type="button" class="shelf-more-card" data-more-shelf="${escapeHtml(shelf.category)}" aria-label="Show more ${escapeHtml(shelf.category)} deals"><span class="shelf-more-arrow" aria-hidden="true">→</span><strong>Show more deals</strong><span>${shelf.total - (shelfLimits.get(shelf.category) || 24)} more in ${escapeHtml(shelf.category)}</span></button>` : ""}
           </div>
-          ${shelf.total > (shelfLimits.get(shelf.category) || 24) ? `<button type="button" class="ghost-button" data-more-shelf="${escapeHtml(shelf.category)}">Show more ${escapeHtml(shelf.category)} deals</button>` : ""}
         </section>
       `)
       .join("");
