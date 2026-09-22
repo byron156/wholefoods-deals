@@ -1,28 +1,30 @@
 {
+  "reused_previous": false,
+  "error": null,
   "source_urls": [
     "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC",
     "https://www.hmart.com/237?map=productClusterIds&page=1",
     "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=1"
   ],
-  "product_count": 722,
+  "product_count": 114,
   "runs": [
     {
       "start_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC",
-      "records_filtered": 252,
-      "pages_scraped": 9,
-      "product_count": 242
+      "records_filtered": 57,
+      "pages_scraped": 2,
+      "product_count": 57
     },
     {
       "start_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
-      "records_filtered": 487,
-      "pages_scraped": 17,
-      "product_count": 480
+      "records_filtered": 57,
+      "pages_scraped": 2,
+      "product_count": 55
     },
     {
       "start_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=1",
-      "records_filtered": 203,
+      "records_filtered": 166,
       "pages_scraped": 2,
-      "product_count": 11
+      "product_count": 2
     }
   ]
 }

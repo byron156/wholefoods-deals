@@ -3,6 +3,6 @@
   "result_count_text": "366 results",
   "product_count": 247,
   "load_more_clicks": 18,
-  "reused_previous": false,
-  "error": null
+  "reused_previous": true,
+  "error": "BrowserType.launch: Executable doesn't exist at /Users/jonathancampbell/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
 }

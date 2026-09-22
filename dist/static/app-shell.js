@@ -64,6 +64,8 @@
     newsletterSheetClose: document.getElementById("newsletter-sheet-close"),
     newsletterEmail: document.getElementById("newsletter-email"),
     newsletterStatus: document.getElementById("newsletter-status"),
+    newsletterPrime: document.getElementById("newsletter-prime"),
+    primeToggle: document.getElementById("prime-toggle"),
     newsletterCadence: document.getElementById("newsletter-cadence"),
     newsletterStoreRow: document.getElementById("newsletter-store-row"),
     newsletterCategoryRow: document.getElementById("newsletter-category-row"),
@@ -221,6 +223,7 @@
     return {
       ...getDefaultProfile(),
       ...source,
+      prime: OfferPricing.readPrime(source.prime !== false),
       selectedStoreIds: normalizeSelectedStoreIds(source.selectedStoreIds),
       likedKeys: Array.isArray(source.likedKeys) ? source.likedKeys : [],
       dislikedKeys: Array.isArray(source.dislikedKeys) ? source.dislikedKeys : [],
@@ -242,6 +245,7 @@
   function normalizeNewsletterPreferences(preferences) {
     const source = preferences || {};
     return {
+      prime: source.prime !== false,
       preferredCategories: Array.isArray(source.preferredCategories) ? source.preferredCategories : [],
       dislikedCategories: Array.isArray(source.dislikedCategories) ? source.dislikedCategories : [],
       favoriteBrands: Array.isArray(source.favoriteBrands) ? source.favoriteBrands : [],
@@ -258,6 +262,7 @@
 
   function getDefaultProfile() {
     return {
+      prime: OfferPricing.readPrime(),
       selectedStoreIds: [],
       filters: defaultFilters(),
       likedKeys: [],
@@ -395,7 +400,7 @@
   }
 
   function renderNewsletterSamples() {
-    const samples = state.newsletterOnboarding.sample_products || [];
+    const samples = (state.newsletterOnboarding.sample_products || []).map(p => OfferPricing.select(p, nodes.newsletterPrime.checked, state.profile.newsletterPreferences.preferredStoreIds || [])).filter(Boolean);
     if (!samples.length) {
       nodes.newsletterSampleGrid.innerHTML = `<div class="empty-state">We’ll pull products from your saved list and strongest deals once the feed is loaded.</div>`;
       return;
@@ -413,7 +418,7 @@
           <div class="newsletter-sample-copy">
             <p class="deal-meta-line">${escapeHtml(product.retailer || "Whole Foods")} · ${escapeHtml(product.category || "Pantry")}</p>
             <h4>${escapeHtml(product.name)}</h4>
-            <p class="prime">${escapeHtml(product.prime_price || product.current_price || "")}</p>
+            <p class="prime">${escapeHtml(product.display_price || "See promotion")}</p>
           </div>
           <div class="deal-actions">
             <button class="deal-action ${feedback === "thumbs_up" ? "is-active" : ""}" data-newsletter-feedback="thumbs_up" data-newsletter-product="${escapeHtml(key)}" type="button">Care</button>
@@ -469,6 +474,7 @@
     const subscriber = state.newsletterOnboarding.subscriber || {};
     const preferences = state.profile.newsletterPreferences || normalizeNewsletterPreferences({});
     if (!preserveInputs) {
+      nodes.newsletterPrime.checked = state.profile.newsletterOnboardingCompleted ? preferences.prime !== false : state.profile.prime;
       nodes.newsletterEmail.value = state.profile.newsletterEmail || subscriber.email || "";
       nodes.newsletterCadence.value = state.profile.newsletterCadence || subscriber.cadence || "daily";
       nodes.newsletterFavoriteBrands.value = (preferences.favoriteBrands || []).join(", ");
@@ -530,6 +536,7 @@
   async function saveNewsletterPreferences() {
     const currentPreferences = normalizeNewsletterPreferences({
       ...(state.profile.newsletterPreferences || {}),
+      prime: nodes.newsletterPrime.checked,
       favoriteBrands: parseCsvList(nodes.newsletterFavoriteBrands.value),
       hiddenBrands: parseCsvList(nodes.newsletterHiddenBrands.value),
       budgetSensitivity: nodes.newsletterBudgetSensitivity.value,
@@ -684,6 +691,7 @@
     if (state.activeRetailer !== "All" && product.retailer !== state.activeRetailer) {
       return false;
     }
+    if (product.offer_kind !== "promotion" && !product.discount_percent && state.viewMode !== "saved") return false;
     if (!productVisibleForStores(product)) {
       return false;
     }
@@ -703,7 +711,7 @@
   }
 
   function scopedProducts() {
-    return products.filter((product) => {
+    return products.map(product => OfferPricing.select(product, state.profile.prime, state.profile.selectedStoreIds || [])).filter(Boolean).filter((product) => {
       if (state.viewMode === "saved" && !(state.profile.savedKeys || []).includes(product.key)) {
         return false;
       }
@@ -1044,6 +1052,7 @@
   }
 
   function renderStatus() {
+    nodes.primeToggle.checked = state.profile.prime !== false;
     const visible = scopedProducts();
     const savedCount = (state.profile.savedKeys || []).length;
     nodes.searchMeta.textContent = state.viewMode === "saved"
@@ -1083,10 +1092,16 @@
   }
 
   function priceLabel(product) {
-    return product.prime_price ? `<p class="prime">${escapeHtml(product.prime_price)}</p>` : "";
+    if (product.offer_kind === "promotion") {
+      const terms = product.promotion_terms || {};
+      const value = (state.profile.prime && terms.prime) || terms.sale;
+      return `<p class="prime">${escapeHtml(value || "See offer")}</p><small>${state.profile.prime && terms.prime ? "Prime · " : ""}Weekly flyer promotion</small>`;
+    }
+    return `<p class="prime">${escapeHtml(product.display_price || product.current_price || "Price unavailable")}</p><small>${product.is_prime ? "Prime price" : product.retailer === "Whole Foods" ? "Non-Prime price" : "Sale price"}</small>`;
   }
 
   function regularLabel(product) {
+    if (!product.discount_percent || product.offer_kind === "promotion") return "";
     if (!product.basis_price) {
       return "";
     }
@@ -1099,6 +1114,7 @@
   }
 
   function discountLabel(product) {
+    if (product.offer_kind === "promotion") return "";
     if (!product.discount) {
       return "";
     }
@@ -1136,6 +1152,8 @@
           ${discountLabel(product)}
         </div>
         ${regularLabel(product)}
+        <p class="offer-context">${escapeHtml([product.source_store_name || stores.find(store => String(store.id) === String(product.store_id))?.name, product.price_context, product.observed_at ? `Checked ${new Date(product.observed_at).toLocaleDateString()}` : ''].filter(Boolean).join(' · '))}</p>
+        ${product.offer_kind === "promotion" ? '<p class="offer-context">Applies to the advertised selection. Online pickup and delivery prices can differ.</p>' : ''}
         <div class="deal-actions">
           <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">More</button>
           <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">Less</button>
@@ -1598,7 +1616,14 @@
     nodes.newsletterDiscoveryMix.addEventListener("input", syncNewsletterRangeLabels);
   }
 
+  nodes.newsletterPrime.addEventListener("change", renderNewsletterSamples);
   renderFeed();
   loadRemoteProfile();
   if (window.location.hash === "#newsletter") openNewsletterSheet();
+  nodes.primeToggle.checked = state.profile.prime !== false;
+  nodes.primeToggle.addEventListener('change', () => {
+    state.profile.prime = nodes.primeToggle.checked;
+    OfferPricing.savePrime(state.profile.prime);
+    saveProfile(); renderFeed();
+  });
 })();
