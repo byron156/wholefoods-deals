@@ -1,3 +1,4 @@
+from offer_quality import stamp_products
 import json
 import os
 import argparse
@@ -168,7 +169,7 @@ def main():
                 )
                 continue
 
-            all_search_products.extend(search_result["products"])
+            all_search_products.extend(stamp_products(search_result["products"], "Search Deals", "Pickup"))
             search_store_runs.append(
                 {
                     "store_id": search_result.get("store_id"),
@@ -195,11 +196,20 @@ def main():
         all_deals_products = []
         all_deals_batches = []
         all_deals_store_runs = []
+        previous_all_deals = load_json(DISCOVERED_PRODUCTS_FILE, [])
         for store in wf_stores:
             print(f"Refreshing all deals for {store.get('name')}...")
-            all_deals_result = discover_all_deals(store=store)
+            try:
+                all_deals_result = discover_all_deals(store=store)
+            except Exception as exc:
+                # One failing browser source must not prevent HTTP sources from refreshing.
+                fallback = filter_products_for_store(previous_all_deals, store.get("id"))
+                all_deals_products.extend(fallback)
+                all_deals_store_runs.append({"store_id": store.get("id"), "reused_previous": True, "error": str(exc)})
+                print(f"All Deals failed for {store.get('name')}; retained evidence keeps its original timestamp: {exc}")
+                continue
             all_deals_recommendations.extend(all_deals_result["recommendations"])
-            all_deals_products.extend(all_deals_result["products"])
+            all_deals_products.extend(stamp_products(all_deals_result["products"], "All Deals", "Pickup"))
             all_deals_batches.extend(all_deals_result["captured_batches"])
             all_deals_store_runs.append(
                 {
@@ -253,6 +263,8 @@ def main():
                 "reused_previous": True,
                 "error": str(exc),
             }
+        if not target_result.get("reused_previous"):
+            stamp_products(target_result["products"], "Target", "Online")
         write_json(TARGET_DEALS_PRODUCTS_FILE, target_result["products"])
         write_json(
             TARGET_DEALS_REPORT_FILE,
@@ -267,14 +279,22 @@ def main():
         )
 
         print("Refreshing H Mart deals...")
-        hmart_result = discover_hmart_deals()
+        try:
+            hmart_result = discover_hmart_deals()
+            stamp_products(hmart_result["products"], "H Mart", "Online")
+        except Exception as exc:
+            hmart_result = dict(load_json(HMART_DEALS_REPORT_FILE, {}), products=load_json(HMART_DEALS_PRODUCTS_FILE, []), reused_previous=True, error=str(exc))
+            hmart_result["product_count"] = len(hmart_result["products"])
+            print(f"H Mart failed; retained prices keep their original timestamp: {exc}")
         write_json(HMART_DEALS_PRODUCTS_FILE, hmart_result["products"])
         write_json(
             HMART_DEALS_REPORT_FILE,
             {
-                "source_urls": hmart_result["source_urls"],
+                "reused_previous": hmart_result.get("reused_previous", False),
+                "error": hmart_result.get("error"),
+                "source_urls": hmart_result.get("source_urls", []),
                 "product_count": hmart_result["product_count"],
-                "runs": hmart_result["runs"],
+                "runs": hmart_result.get("runs", []),
             },
         )
         write_json(

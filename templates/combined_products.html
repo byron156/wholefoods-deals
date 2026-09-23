@@ -7,22 +7,24 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260921a">
+<link rel="stylesheet" href="/static/styles.css?v=20260922a">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260921a">
+<link rel="manifest" href="/manifest.webmanifest?v=20260922a">
 </head>
 
 <body class="app-body">
 <div class="app-shell">
     {% if last_updated %}
-    <div class="last-updated-pill" title="{{ last_updated.iso }}">Last updated: {{ last_updated.display }}</div>
+    <div class="last-updated-pill" title="{{ last_updated.iso }}">Latest source check: {{ last_updated.display }}</div>
     {% endif %}
     <section class="search-panel">
         <label class="sr-only" for="global-search">Search deals</label>
         <input id="global-search" class="search-input app-search" type="search" placeholder="Search grocery deals">
         <div class="chip-row" id="retailer-chip-row"></div>
         <div class="store-row" id="store-chip-row"></div>
+        <label class="price-toggle"><input type="checkbox" id="prime-toggle" checked> Use Prime prices</label>
+        <p class="offer-note">Prices are tied to the location and offer type shown on each card. Unverified and stale offers are withheld.</p>
         <div class="filter-drawer" id="filter-drawer" aria-label="Filter deals">
             <div class="filter-grid">
                 <label>
@@ -93,7 +95,7 @@
     <div class="sheet-header">
         <div>
             <h3 id="newsletter-sheet-title">Your best deals, in your inbox</h3>
-            <p id="newsletter-sheet-copy">Choose your stores, favorite foods, and delivery schedule. Get a short list of relevant deals with Prime prices where available.</p>
+            <p id="newsletter-sheet-copy">Choose your stores, favorite foods, and delivery schedule. Get a short list of relevant deals with prices matched to your membership.</p>
         </div>
         <button class="ghost-button" type="button" id="newsletter-sheet-close">Close</button>
     </div>
@@ -102,6 +104,7 @@
         <input id="newsletter-email" class="search-input" type="email" autocomplete="email" placeholder="you@example.com">
     </div>
     <div class="sheet-field">
+        <label class="price-toggle"><input type="checkbox" id="newsletter-prime" checked> Use Prime prices in my digest</label>
         <label for="newsletter-cadence">How often should we send it?</label>
         <select id="newsletter-cadence" class="sheet-select">
             <option value="daily">Up to once a day</option>
@@ -188,7 +191,8 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/app-shell.js?v=20260921a"></script>
+<script src="/static/offer-pricing.js?v=20260922a"></script>
+<script src="/static/app-shell.js?v=20260922a"></script>
 
 <noscript>
     <section class="noscript-fallback">

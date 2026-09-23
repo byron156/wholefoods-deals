@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b6b45"><title>Weekly Meal Plan · Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260920b"><link rel="stylesheet" href="/static/meal-plan.css?v=20260920b">
+<link rel="stylesheet" href="/static/styles.css?v=20260922a"><link rel="stylesheet" href="/static/meal-plan.css?v=20260922a">
 <link rel="icon" href="/static/favicon.ico">
 </head>
 <body>
@@ -19,12 +19,15 @@
     <button class="primary-button" type="submit">Build my week</button>
   </form>
   <aside class="planner-notice">{{ catalog_note }} Sale matches use recorded prices, exclude expired dated offers, and require a discount against the regular price. Check current price and availability at your store.</aside>
-  <p id="planner-status" role="status" aria-live="polite"></p>
+  <p id="planner-status" role="status" aria-live="polite">Choose your preferences, then click Build my week to create your menu and grocery list.</p>
+  <div id="planner-results" hidden>
   <div class="planner-actions"><a class="ghost-button" href="#grocery-title">Jump to grocery list ↓</a><button id="download-plan" class="ghost-button" type="button">Download plan & list</button><button id="print-plan" class="ghost-button" type="button">Print</button></div>
   <section aria-labelledby="week-title"><h2 id="week-title">Your seven-day menu</h2><p class="section-note">Open a meal for ingredients and cooking steps. Quantities are for everyone at the table.</p><div id="week-grid" class="week-grid"></div></section>
   <section class="grocery-section" aria-labelledby="grocery-title"><h2 id="grocery-title">Your grocery list</h2><p class="section-note">Check off items as you shop, or mark ingredients you already have. Amounts are recipe quantities, not package counts; buy enough packages to cover them. Canned bean quantities are drained weights. Prices shown are per listed offer, not a weekly total.</p><p id="grocery-progress" role="status" aria-live="polite"></p><div id="grocery-list"></div></section>
+  </div>
   <noscript><p>Enable JavaScript to generate your weekly meal plan and grocery list.</p></noscript>
 </main>
 <script id="planner-data" type="application/json">{{ {"products": products, "catalog_note": catalog_note}|tojson }}</script>
-<script src="/static/meal-planner.js?v=20260920b"></script><script src="/static/meal-plan-ui.js?v=20260920b"></script>
+<script src="/static/offer-pricing.js?v=20260922a"></script>
+<script src="/static/meal-planner.js?v=20260922a"></script><script src="/static/meal-plan-ui.js?v=20260922a"></script>
 </body></html>

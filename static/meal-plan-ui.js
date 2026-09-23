@@ -17,7 +17,7 @@
     if (saved.options?.[name] !== undefined) form.elements[name].value = saved.options[name];
   }
   // Migrate the previous automatic non-Prime default once; preserve future choices.
-  form.elements.prime.checked = saved.version === 2 ? saved.options?.prime !== false : true;
+  form.elements.prime.checked = OfferPricing.readPrime(saved.version === 2 ? saved.options?.prime !== false : true);
   function options() {
     return {servings:Number(form.elements.servings.value),retailer:form.elements.retailer.value || 'Whole Foods',store:form.elements.store.value,vegetarian:form.elements.diet.value === 'vegetarian',diet:form.elements.diet.value,prime:form.elements.prime.checked,pantry:[...pantry]};
   }
@@ -40,6 +40,8 @@
   }
   function build(resetChecks) {
     if (resetChecks) checked.clear();
+    OfferPricing.savePrime(form.elements.prime.checked);
+    document.getElementById("planner-results").hidden = false;
     form.elements.store.disabled = !['All','Whole Foods'].includes(form.elements.retailer.value);
     plan = MealPlanner.generate(data.products,options());
     signature = JSON.stringify([plan.days.map(day=>day.meals.map(meal=>meal.id)),plan.options.servings,plan.options.retailer,plan.options.store,plan.options.prime]);
@@ -80,5 +82,11 @@
     const url = URL.createObjectURL(new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'}));
     const a = document.createElement('a');a.href=url;a.download='weekly-meal-plan.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
-  build(false);
+  form.addEventListener('change', () => {
+    if (plan) {
+      document.getElementById('planner-results').hidden = true;
+      document.getElementById('planner-status').textContent = 'Preferences changed. Click Build my week to update your menu and grocery list.';
+    }
+  });
+  form.elements.store.disabled = !['All','Whole Foods'].includes(form.elements.retailer.value);
 })();

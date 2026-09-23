@@ -221,8 +221,8 @@ def wait_for_store_iframe(page, timeout_ms: int = 10000):
 
     while remaining > 0:
         try:
-            if page.locator('iframe[title="stores-modal"]').count() > 0:
-                return page.frame_locator('iframe[title="stores-modal"]')
+            if page.locator('iframe[title="stores-modal"], iframe[name="store-web-page"]').count() > 0:
+                return page.frame_locator('iframe[title="stores-modal"], iframe[name="store-web-page"]')
         except Exception:
             pass
 
@@ -852,36 +852,12 @@ def get_page_store_context(page) -> dict:
 def wait_for_selected_store(page, store: Optional[dict], timeout_ms: int = 8000) -> bool:
     remaining = timeout_ms
     target_pattern = re.compile(store_selected_pattern(store), re.I)
-    target_store_id = str((store or {}).get("id") or "").strip()
-    target_terms = [normalize_text(term) for term in store_search_terms(store) if normalize_text(term)]
-
     while remaining > 0:
         selected_store = get_selected_store_text(page)
-        if selected_store and (
+        # Catering cookies can name a different store from the grocery channel.
+        if selected_store and "pickup" in selected_store.lower() and (
             target_pattern.search(selected_store)
             or target_pattern.search(normalize_text(selected_store))
-        ):
-            return True
-
-        page_context = get_page_store_context(page)
-        page_store_id = page_context.get("store_id") or ""
-        page_store_name = normalize_text(page_context.get("store_name") or "")
-        page_postal_code = normalize_text(page_context.get("postal_code") or "")
-        page_street_address = normalize_text(page_context.get("street_address") or "")
-
-        if target_store_id and page_store_id == target_store_id:
-            return True
-
-        if page_store_name and normalize_text(store_display_name(store)) == page_store_name:
-            return True
-
-        if target_terms and any(
-            term and (
-                term == page_postal_code
-                or term in page_store_name
-                or term in page_street_address
-            )
-            for term in target_terms
         ):
             return True
 
@@ -1331,18 +1307,27 @@ def normalize_products_api_item(item: dict) -> Optional[dict]:
 
     url = f"https://www.wholefoodsmarket.com/grocery/product/{asin}"
 
+    pricing_uom = (item.get("variableUnitOfMeasure") or {}).get("pricingUom") or {}
+    unit = str(pricing_uom.get("unit") or "").upper()
+    suffix = {"POUNDS": "/lb", "POUND": "/lb", "LB": "/lb", "OUNCES": "/oz", "KILOGRAMS": "/kg", "GRAMS": "/g"}.get(unit, "")
+    def selling_price(value):
+        rendered = format_money(value)
+        return rendered + suffix if rendered else None
+
     return {
         "asin": asin,
         "brand": item.get("brandName"),
         "name": item.get("name"),
         "image": image,
         "url": url,
-        "current_price": format_money(price.get("priceAmount")),
-        "basis_price": format_money(price.get("basisPriceAmount")),
-        "prime_price": format_money(prime_benefit.get("priceAmount")),
+        "current_price": selling_price(price.get("priceAmount")),
+        "basis_price": selling_price(price.get("basisPriceAmount")),
+        "prime_price": selling_price(prime_benefit.get("priceAmount")),
         "discount": discount,
         "unit_price": format_unit_price(offer_details.get("unitPrice")),
         "availability": item.get("availability"),
+        "pricing_uom": pricing_uom,
+        "price_verified": bool(pricing_uom) and (pricing_uom.get("dimension") != "WEIGHT" or bool(suffix)),
     }
 
 
@@ -1636,6 +1621,11 @@ def merge_product(existing: Optional[dict], new_product: dict) -> dict:
         return dict(new_product)
 
     merged = dict(existing)
+    # A new price snapshot replaces all price fields, including explicit nulls.
+    if "current_price" in new_product or new_product.get("availability") in ("OUT_OF_STOCK", "UNAVAILABLE"):
+        from offer_quality import PRICE_FIELDS
+        for key in (*PRICE_FIELDS, "availability", "pricing_uom", "unit_evidence", "price_verified"):
+            merged[key] = new_product.get(key)
     for key, value in new_product.items():
         if value in (None, "", []):
             continue
@@ -2075,6 +2065,10 @@ def run_store_selection_cycle(
         used_direct_modal_fallback = "modalView=true" in (page.url or "")
         page.wait_for_timeout(600)
         modal = wait_for_store_modal(page, timeout_ms=8000)
+    # The current location sheet defaults to Delivery (ZIP entry), not store search.
+    pickup = page.get_by_role("radio", name="Pickup", exact=True)
+    if pickup.count() and pickup.is_visible():
+        pickup.check()
     selector_available = wait_for_store_iframe_text(
         page,
         rf"Find a Whole Foods Market|Find a store near you|Locate a store|{target_pattern}",
@@ -2085,6 +2079,13 @@ def run_store_selection_cycle(
             "Location modal did not appear, so the scraper refused to use the page-level search box."
         )
 
+    # Nearby stores may already be listed. Expand the exact card to reveal Shop Store.
+    iframe = wait_for_store_iframe(page, timeout_ms=5000)
+    heading = iframe.get_by_role("heading", name=f"Whole Foods Market - {target_store}", exact=True) if iframe else None
+    if heading is not None and heading.count():
+        heading.click()
+        iframe.get_by_role("button", name="Shop Store", exact=True).click()
+        return
     search_ok = False
     for query in target_searches:
         if len(target_searches) > 1:
@@ -2104,6 +2105,12 @@ def run_store_selection_cycle(
     if not search_ok:
         raise RuntimeError(f"Could not search for {target_store} inside the location modal.")
 
+    if iframe:
+        heading = iframe.get_by_role("heading", name=f"Whole Foods Market - {target_store}", exact=True)
+        if heading.count():
+            heading.click()
+            iframe.get_by_role("button", name="Shop Store", exact=True).click()
+            return
     made_store = click_make_this_my_store_for_store(page, store)
     if not made_store:
         raise RuntimeError(f'Could not click the {target_store} store CTA.')
@@ -2314,6 +2321,7 @@ def crawl_current_sort_via_network(
     sort_label: str,
     sort_rank: str,
     extra_rh_values: Optional[list[str]] = None,
+    expected_store_id: Optional[str] = None,
 ) -> dict:
     page.wait_for_timeout(1200)
     dismiss_popups(page)
@@ -2323,6 +2331,8 @@ def crawl_current_sort_via_network(
     print(f"{sort_label}: initial products captured {len(products_by_asin)} (+{initial_added}) from page payload")
 
     html = page.content()
+    if expected_store_id and get_page_store_context(page).get("store_id") != str(expected_store_id):
+        raise RuntimeError("Product API location does not match the selected pickup store; refusing mixed-location prices.")
     offer_listing_discriminator = extract_offer_listing_discriminator(html)
     if not offer_listing_discriminator:
         raise RuntimeError(f'Could not find the offer listing discriminator for "{sort_label}".')
@@ -2604,6 +2614,7 @@ def discover_search_deals(store: Optional[dict] = None) -> dict:
                         run_label,
                         sort_rank,
                         extra_rh_values=rh_values,
+                        expected_store_id=target_store_id,
                     )
                     replayed_network_batches += crawl_summary["request_count"]
                 else:

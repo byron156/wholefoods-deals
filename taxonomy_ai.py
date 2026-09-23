@@ -18,7 +18,7 @@ from fixed_taxonomy import FIXED_TAXONOMY_VERSION, build_fixed_taxonomy
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:4b")
-MODEL_VERSION = "taxonomy-local-ml-v17"
+MODEL_VERSION = "taxonomy-local-ml-v18"
 PROMPT_VERSION = f"taxonomy-prompt-{FIXED_TAXONOMY_VERSION}-local-ml-v17"
 OLLAMA_CHAT_TIMEOUT = int(os.getenv("OLLAMA_CHAT_TIMEOUT", "420"))
 CLASSIFICATION_BATCH_SIZE = int(os.getenv("TAXONOMY_CLASSIFICATION_BATCH_SIZE", "20"))
@@ -720,7 +720,7 @@ def clip_audit_label_for_product(product, clip_index):
 
 
 def text_has_any(text, terms):
-    return any(term in text for term in terms)
+    return any(re.search(r"(?<!\w)" + re.escape(term.strip()) + r"(?!\w)", text) for term in terms)
 
 
 PACKAGED_PRODUCE_BLOCKERS = [
@@ -919,6 +919,11 @@ def fresh_produce_source_classification(product, taxonomy):
 
 
 def source_backed_classification(product, taxonomy):
+    from catalog_rules import source_pair
+    chosen = source_pair(product)
+    if chosen:
+        (category, subcategory), reason = chosen
+        return local_result(taxonomy, category, subcategory, reason=reason)
     return fresh_produce_source_classification(product, taxonomy)
 
 
@@ -1620,7 +1625,7 @@ def hydrate_product_with_classification(product, result, fingerprint):
 def is_failed_classification_record(product):
     category = product.get("category") or product.get("ai_category")
     subcategory = product.get("subcategory") or product.get("ai_subcategory")
-    return not category or not subcategory
+    return not category or not subcategory or category == FAILED_CATEGORY or (product.get("ai_label_source") != "gold" and float(product.get("ai_confidence", 1) or 0) < 0.55)
 
 
 def apply_failed_classification_bucket(product):
@@ -1766,7 +1771,7 @@ def ml_classification(product, model, taxonomy):
         product,
         model,
         taxonomy,
-        min_confidence=0.2,
+        min_confidence=0.55,
         reason="Local text classifier prediction.",
     )
 
@@ -1776,7 +1781,7 @@ def best_effort_ml_classification(product, model, taxonomy):
         product,
         model,
         taxonomy,
-        min_confidence=0.0,
+        min_confidence=0.55,
         reason="Best-effort local text classifier rescue after deterministic and CLIP fallback.",
     )
 
@@ -2086,7 +2091,8 @@ def classify_products(base_dir, products, force_rediscover=False):
                 result["taxonomy_version"] = taxonomy.get("taxonomy_version")
                 cache.setdefault("items", {})[fingerprint] = result
                 changed.append(product.get("raw_name") or product.get("name"))
-                save_json_file(cache_path, cache)
+                if index % 100 == 0:
+                    save_json_file(cache_path, cache)
                 save_classification_progress(
                     report_path,
                     taxonomy=taxonomy,

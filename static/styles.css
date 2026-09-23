@@ -1389,3 +1389,10 @@ p {
 .shelf-more-arrow { font-size: 32px; }
 .shelf-more-card:hover { background: #cce6d8; }
 .shelf-more-card:focus-visible { outline: 3px solid var(--brand); outline-offset: -4px; }
+
+[hidden] { display: none !important; }
+.price-toggle { display: inline-flex; align-items: center; gap: 10px; margin: 12px 0; font-weight: 700; color: var(--brand-strong); cursor: pointer; }
+.price-toggle input { width: 20px; height: 20px; accent-color: var(--brand); }
+.offer-note, .offer-context { font-size: 12px; line-height: 1.5; color: #52645a; }
+.offer-context { margin: 8px 0; }
+.deal-price-row { flex-wrap: wrap; }

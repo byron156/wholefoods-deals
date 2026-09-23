@@ -7,7 +7,7 @@ import app
 
 def product(index, **kwargs):
     return dict(key=f'p{index}', name=f'Item {index}', retailer='Whole Foods', category='Pantry',
-                brand='Example', current_price='$4.00', prime_price='$3.60', basis_price='$5.00', **kwargs)
+                brand='Example', observed_at=app.iso_utc(app.utcnow()),price_verified=True,price_context='Pickup', current_price='$4.00', prime_price='$3.60', basis_price='$5.00', **kwargs)
 
 
 class DigestTests(unittest.TestCase):
@@ -31,7 +31,7 @@ class DigestTests(unittest.TestCase):
         items[1]['category'] = 'Snacks'
         items[2]['expires'] = '2020-01-01'
         items[3]['prime_price'] = '$8.00'
-        items[4]['store_offers'] = [{'store_id':'a','prime_price':'$2.00','basis_price':'$5.00'}]
+        items[4]['store_offers'] = [{'observed_at':app.iso_utc(app.utcnow()),'price_verified':True,'price_context':'Pickup','store_id':'a','prime_price':'$2.00','basis_price':'$5.00'}]
         profile = {'newsletterPreferences': {'hiddenBrands':['hidden'],'dislikedCategories':['Snacks'],'preferredStoreIds':['a']}}
         result = app.newsletter_candidates(items,profile)
         self.assertEqual([p['key'] for p in result], ['p4'])

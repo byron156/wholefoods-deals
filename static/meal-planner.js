@@ -1,6 +1,7 @@
 /* Shared, dependency-free planner: used by the static site and Node tests. */
 (function (root) {
   'use strict';
+  const pricing = typeof module !== 'undefined' && module.exports ? require('./offer-pricing.js') : root.OfferPricing;
   const ingredients = {
     oats: ['Rolled oats', 'g', /\b(rolled oats|old fashioned oats|quick oats)\b/, 'Pantry'],
     milk: ['Milk', 'ml', /\b(milk)\b/, 'Dairy & Eggs'],
@@ -90,21 +91,18 @@
     return !rejects[id]?.test(name);
   }
   function analyze(products, options) {
-    const now = options.today || new Date().toISOString().slice(0,10);
+    const now = options.today || new Date().toISOString();
     const eligible = products.flatMap(original => {
       if (options.retailer !== 'All' && original.retailer !== options.retailer) return [];
-      let p = original;
-      if (options.store && p.retailer === 'Whole Foods') {
-        const offer = (p.store_offers || []).find(o => String(o.store_id) === options.store);
-        if (!offer) return []; // Never substitute another location's price.
-        p = {...p, current_price:null, sale_price:null, prime_price:null, basis_price:null, ...offer};
-      }
+      if (original.offer_kind === 'promotion') return [];
+      const p = pricing.select(original, options.prime, options.store ? [options.store] : []);
+      if (!p || !pricing.usable(p, Date.parse(now))) return [];
       if (p.expires) {
         const expiry = Date.parse(p.expires);
         if (Number.isFinite(expiry) && expiry < Date.parse(now)) return [];
       }
       const priceText = options.prime ? (p.prime_price || p.current_price || p.sale_price) : (p.current_price || p.sale_price);
-      const price = money(priceText), regular = money(p.basis_price);
+      const price = pricing.money(priceText), regular = pricing.money(p.basis_price || (options.prime && p.prime_price ? p.current_price : null));
       if (!(price > 0 && regular > price)) return [];
       return [{...p,priceText,price,isPrime:Boolean(options.prime && p.prime_price && p.retailer === 'Whole Foods'),discount:Math.round((1-price/regular)*100)}];
     });

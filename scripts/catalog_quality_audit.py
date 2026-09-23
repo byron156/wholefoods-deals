@@ -4,12 +4,16 @@ import html
 import json
 import os
 import re
+import sys
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(BASE_DIR))
+from offer_quality import offer_issues, money, EVIDENCE_FIELDS
+
 DEFAULT_REPORTS_DIR = BASE_DIR / "reports"
 FAILED_CATEGORY = "Other/Failed"
 FAILED_SUBCATEGORY = "Needs Review"
@@ -23,7 +27,7 @@ SOURCE_FILES = {
     "H Mart Deals": "hmart_deals_products.json",
 }
 
-IMPORTANT_FIELDS = [
+IMPORTANT_FIELDS = list(EVIDENCE_FIELDS) + [
     "asin",
     "asins",
     "name",
@@ -250,7 +254,7 @@ def suspicious_category_reason(product):
         return "Failed fallback bucket."
     if category == "Produce" and re.search(r"\b(gummy|gummies|soda|coffee|tea|shampoo|serum|capsule|tablet|supplement|extract|shot|water|juice|spray)\b", text):
         return "Produce label with packaged/drink/supplement/personal-care words."
-    if category == "Pantry" and re.search(r"\b(shampoo|conditioner|serum|cream|spray|capsule|tablet|collagen|magnesium|probiotic|vitamin|extract|oil)\b", text):
+    if category == "Pantry" and re.search(r"\b(shampoo|conditioner|serum|cream|spray|capsule|tablet|collagen|magnesium|probiotic|vitamin)\b", text):
         return "Pantry label with likely wellness or personal-care words."
     if category == "Beverages" and re.search(r"\b(shampoo|conditioner|serum|cream|spray|capsule|tablet|essential oil)\b", text):
         return "Beverage label with non-drink words."
@@ -264,7 +268,7 @@ def suspicious_category_reason(product):
 def brand_quality_reason(product):
     brand = product.get("brand") or ""
     source_brand = product.get("source_brand") or ""
-    if not brand:
+    if not brand and product.get("category") not in {"Produce", "Meat & Seafood"} and product.get("offer_kind") != "promotion":
         return "Missing brand."
     if brand.lower() in {"fresh produce", "produce", "unknown", "none", "select"}:
         return "Suspicious generic brand."
@@ -275,15 +279,14 @@ def brand_quality_reason(product):
 
 
 def data_quality_reasons(product):
-    reasons = []
+    reasons = sorted({reason for offer in (product.get("store_offers") or [product]) for reason in offer_issues(offer)})
     if not product.get("image"):
         reasons.append("Missing image")
     if not product.get("url"):
         reasons.append("Missing product URL")
-    if not (product.get("prime_price") or product.get("current_price")):
+    if product.get("offer_kind") != "promotion" and not (money(product.get("prime_price")) or money(product.get("current_price"))):
         reasons.append("Missing sale/current price")
-    if not product.get("discount"):
-        reasons.append("Missing discount text")
+    # No discount is legitimate when a product is not on sale; do not count it as corruption.
     try:
         discount = float(product.get("discount_percent") or 0)
     except (TypeError, ValueError):
@@ -542,6 +545,8 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "summary": {
             "total_products": total,
+            "publishable_products": sum(not is_failed_product(p) and any(not offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
+            "withheld_products": sum(is_failed_product(p) or all(offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
             "failed_products": len(failed),
             "failed_percent": pct(len(failed), total),
             "clip_covered_products": len(products_with_clip),
@@ -623,6 +628,8 @@ def render_html(audit, products):
     stat_cards = "".join(
         f"<div class=\"stat\"><strong>{esc(value)}</strong><span>{esc(label)}</span></div>"
         for label, value in [
+            ("Publishable", f"{summary['publishable_products']:,}"),
+            ("Withheld from shoppers", f"{summary['withheld_products']:,}"),
             ("Products", f"{summary['total_products']:,}"),
             ("Failed", f"{summary['failed_products']:,} ({summary['failed_percent']})"),
             ("CLIP missing", f"{summary['clip_missing_products']:,} ({summary['clip_missing_percent']})"),
@@ -718,12 +725,12 @@ def render_html(audit, products):
 <main>
   <header>
     <h1>🧪 Catalog Quality Audit</h1>
-    <p class="muted">Generated {esc(audit['generated_at'])}. This is the “show me the weird stuff” dashboard: failed taxonomy, CLIP behavior, source overlap, brand weirdness, and product evidence.</p>
+    <p class="muted">Generated {esc(audit['generated_at'])}. Audits the full retained catalog, including records withheld from shoppers. Publishable records must have a supported category and verified offer context, a collection timestamp within 72 hours, and a valid price or explicitly scoped flyer promotion. Rebuilding the site does not refresh prices.</p>
     <div class="stats">{stat_cards}</div>
   </header>
 
   <section class="callout">
-    <h2>🚑 How we get failed numbers down</h2>
+    <h2>🚑 Quality checks and remaining work</h2>
     <ol>{recommendation_html}</ol>
   </section>
 
@@ -824,7 +831,7 @@ def main():
     json_path = output_dir / "catalog_quality_audit.json"
     queue_path = output_dir / "failed_products_review_queue.json"
 
-    html_path.write_text(html_report, encoding="utf-8")
+    html_path.write_text("\n".join(line.rstrip() for line in html_report.splitlines()) + "\n", encoding="utf-8")
     write_json(json_path, strip_runtime(audit))
     write_json(queue_path, audit["findings"]["failed_products"])
 

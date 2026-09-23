@@ -1,3 +1,5 @@
+from catalog_rules import apply_source_rules
+from offer_quality import PRICE_FIELDS, EVIDENCE_FIELDS, evidence, clean_prices, offer_issues, stamp_products, timestamp, money as exact_money
 import json
 import re
 import requests
@@ -883,6 +885,8 @@ def build_store_offer(product, store_id=None, source=None):
     offer_store_id = str(store_id or (product.get("available_store_ids") or DEFAULT_STORE_IDS)[0])
     return {
         "store_id": offer_store_id,
+        **evidence(product),
+        "promotion_terms": product.get("promotion_terms"),
         "current_price": product.get("current_price"),
         "basis_price": product.get("basis_price"),
         "prime_price": product.get("prime_price"),
@@ -903,16 +907,11 @@ def merge_store_offers(existing_offers, incoming_offer):
     if incoming_offer and incoming_offer.get("store_id"):
         store_id = str(incoming_offer["store_id"])
         current = offers_by_store.get(store_id, {})
-        merged = dict(current)
-        for key, value in incoming_offer.items():
-            if key == "sources":
-                sources = []
-                for source in (current.get("sources") or []) + (value or []):
-                    if source and source not in sources:
-                        sources.append(source)
-                merged["sources"] = sources
-            elif value not in (None, "", []):
-                merged[key] = value
+        # Replace the entire offer. Missing new values must clear old sale fields.
+        # Prefer dated, verified evidence, then the latest observation.
+        def priority(offer):
+            return ((timestamp(offer.get("observed_at")) or datetime.min.replace(tzinfo=timezone.utc)).timestamp(), offer.get("price_verified") is True, "Search Deals" in (offer.get("sources") or []))
+        merged = dict(incoming_offer if not current or priority(incoming_offer) >= priority(current) else current)
         offers_by_store[store_id] = merged
     return list(offers_by_store.values())
 
@@ -927,9 +926,8 @@ def apply_primary_store_offer(product):
         if selected:
             break
     selected = selected or offers[0]
-    for key in ["current_price", "basis_price", "prime_price", "discount", "discount_percent", "unit_price", "url"]:
-        if selected.get(key) not in (None, "", []):
-            product[key] = selected[key]
+    for key in (*PRICE_FIELDS, *EVIDENCE_FIELDS, "url", "promotion_terms"):
+        product[key] = selected.get(key)
     return product
 
 
@@ -1419,7 +1417,7 @@ def clean_display_name(name, brand=None):
     comma_parts = [part.strip() for part in cleaned.split(",") if part.strip()]
     if len(comma_parts) > 1:
         trailing = ", ".join(comma_parts[1:]).lower()
-        if len(cleaned) > 60 or any(marker in trailing for marker in DISPLAY_NAME_CLAIM_MARKERS):
+        if any(marker in trailing for marker in DISPLAY_NAME_CLAIM_MARKERS) and not (brand and normalize_text_key(comma_parts[0]) == normalize_text_key(brand)):
             cleaned = comma_parts[0]
 
     cleaned = re.sub(r"\s*\((?:\d+\s*servings?|pack of \d+|[0-9.]+\s*(?:oz|fl oz|lb|g|kg).*)\)\s*$", "", cleaned, flags=re.IGNORECASE)
@@ -2141,12 +2139,11 @@ def standardize_product_record(
     extra_fields=None,
 ):
     source_name = raw_name or name
-    display_regular_price, display_prime_price, final_discount = resolve_display_pricing(
-        regular_price=regular_price,
-        prime_price=prime_price,
-        current_price=current_price,
-        discount_text=discount_text,
-    )
+    pricing = clean_prices({"basis_price": regular_price, "prime_price": prime_price, "current_price": current_price})
+    display_regular_price = pricing["basis_price"]
+    display_prime_price = pricing["prime_price"]
+    final_discount = pricing["discount"]
+    current_price = pricing["current_price"]
     if brand_source == "source":
         normalized_source_brand = clean_source_brand_display(source_brand or brand)
         normalized_brand = normalized_source_brand
@@ -2255,6 +2252,7 @@ def load_all_deals():
                 discount_text=p.get("discount"),
                 emoji=p.get("emoji"),
                 extra_fields={
+                    **evidence(p),
                     "retailer": p.get("retailer") or WHOLE_FOODS_RETAILER,
                     "available_store_ids": list(p.get("available_store_ids") or []),
                     "store_offers": list(p.get("store_offers") or []),
@@ -2284,7 +2282,7 @@ def load_search_deals():
     for p in raw_products:
         source_categories = []
         brand = p.get("brand")
-        if normalize_text_key(brand) == "fresh produce":
+        if normalize_text_key(brand).startswith("fresh produce"):
             source_categories.append("Fresh Produce")
             brand = None
         product = standardize_product_record(
@@ -2303,6 +2301,7 @@ def load_search_deals():
             emoji=p.get("emoji"),
             classification_context=source_categories,
             extra_fields={
+                **evidence(p),
                 "retailer": p.get("retailer") or "Whole Foods",
                 "source_categories": source_categories,
                 "available_store_ids": list(p.get("available_store_ids") or []),
@@ -2335,6 +2334,9 @@ def load_saved_flyer_products():
     products = []
     for p in raw_products:
         extra_fields = {
+            **evidence(p),
+            "promotion_terms": p.get("promotion_terms"),
+            "brand_is_generic": p.get("brand_is_generic"),
             "rank": p.get("rank"),
             "sale_price": p.get("sale_price"),
         }
@@ -2409,6 +2411,7 @@ def load_target_deals():
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 extra_fields={
+                    **evidence(p),
                     "retailer": "Target",
                     "expires": p.get("expires"),
                 },
@@ -2447,6 +2450,7 @@ def load_hmart_deals():
                 prime_price=p.get("prime_price"),
                 discount_text=p.get("discount"),
                 extra_fields={
+                    **evidence(p),
                     "retailer": "H Mart",
                     "retail_source_url": p.get("retail_source_url"),
                     "source_categories": p.get("categories") or [],
@@ -2550,6 +2554,8 @@ def merge_combined_product(existing, incoming):
 
 
 def combined_key_for_product(product):
+    if product.get("offer_kind") == "promotion":
+        return "promotion:" + normalize_text_key(product.get("raw_name") or product.get("name")) + ":" + normalize_text_key(product.get("brand"))
     asins = product.get("asins") or []
     asins = sorted(str(asin).strip() for asin in asins if asin)
     if len(asins) > 1:
@@ -2744,8 +2750,12 @@ def latest_feed_updated_at():
     ]
     if not candidates:
         return None
-    newest_mtime = max(os.path.getmtime(path) for path in candidates)
-    updated = datetime.fromtimestamp(newest_mtime, timezone.utc).astimezone(DISPLAY_TIMEZONE)
+    observations = [timestamp(offer.get("observed_at")) for product in load_base_combined_products()
+                    for offer in (product.get("store_offers") or [product])]
+    observations = [value for value in observations if value]
+    if not observations:
+        return None
+    updated = max(observations).astimezone(DISPLAY_TIMEZONE)
     return {
         "iso": updated.isoformat(),
         "display": updated.strftime("%b %-d, %-I:%M %p %Z"),
@@ -2811,6 +2821,7 @@ def clamp_int(value, default, min_value, max_value):
 def normalize_newsletter_preferences(preferences):
     source = preferences or {}
     normalized = default_newsletter_preferences()
+    normalized["prime"] = source.get("prime") is not False
     normalized["preferredCategories"] = normalize_string_list(source.get("preferredCategories"))
     normalized["dislikedCategories"] = normalize_string_list(source.get("dislikedCategories"))
     normalized["favoriteBrands"] = normalize_string_list(source.get("favoriteBrands"))
@@ -2843,6 +2854,7 @@ def normalize_newsletter_preferences(preferences):
 def normalize_profile_payload(profile):
     source = profile or {}
     return {
+        "prime": source.get("prime") is not False,
         "selectedStoreIds": source.get("selectedStoreIds") or [],
         "likedKeys": source.get("likedKeys") or [],
         "dislikedKeys": source.get("dislikedKeys") or [],
@@ -3402,6 +3414,9 @@ def normalized_product_for_source(product, source_name):
         emoji=product.get("emoji"),
         classification_context=product.get("source_categories") or [],
         extra_fields={
+            **evidence(product),
+            "promotion_terms": product.get("promotion_terms"),
+            "brand_is_generic": product.get("brand_is_generic"),
             "retailer": retailer,
             "expires": product.get("expires"),
             "retail_source_url": product.get("retail_source_url"),
@@ -3497,7 +3512,7 @@ def build_combined_products(
             normalize_text_key(product.get("name")),
         )
     )
-    return ordered
+    return [apply_source_rules(product) for product in ordered]
 
 
 def sample_products_for_taxonomy_testing(products, sample_size):
@@ -3593,7 +3608,7 @@ def hydrate_combined_product_record(product, index=0):
             prime_price=hydrated.get("prime_price"),
         )
     apply_failed_classification_bucket(hydrated)
-    return hydrated
+    return apply_source_rules(hydrated)
 
 
 @lru_cache(maxsize=1)
@@ -3623,7 +3638,24 @@ def load_base_combined_products():
 
 
 def load_combined_products():
-    return [dict(product) for product in load_base_combined_products()]
+    usable = []
+    for original in load_base_combined_products():
+        product = dict(original)
+        if product.get("classification_status") == "failed":
+            continue
+        if product.get("store_offers"):
+            product["store_offers"] = [clean_prices(offer) for offer in product["store_offers"] if not offer_issues(offer)]
+            if not product["store_offers"]:
+                continue
+            product["available_store_ids"] = [offer["store_id"] for offer in product["store_offers"]]
+            apply_primary_store_offer(product)
+        elif offer_issues(product):
+            continue
+        product = clean_prices(product)
+        if str(product.get("brand") or "").lower().startswith("fresh produce"):
+            product["brand"] = None
+        usable.append(product)
+    return usable
 
 
 def load_active_taxonomy():
@@ -3644,25 +3676,22 @@ def active_taxonomy_subcategory_options():
 def build_flyer_display_product(p):
     store_id = str(p.get("store_id") or DEFAULT_STORE_IDS[0])
     store_name = p.get("store_name")
+    terms = {"sale": p.get("salePrice"), "prime": p.get("primePrice"), "regular": p.get("regularPrice"), "description": p.get("description")}
     return standardize_product_record(
-        name=p.get("productName", "Unknown Product"),
+        asin=f"flyer:{p.get('promotionId')}",
+        name=p.get("productName", "Weekly promotion"),
         brand=p.get("brandName") or p.get("originBrandName"),
         image=p.get("productImage"),
-        regular_price=p.get("regularPrice"),
-        current_price=p.get("salePrice"),
-        prime_price=p.get("primePrice"),
-        asins=p.get("asinsList", []),
-        emoji=emoji_for_product(p.get("productName", "Unknown Product")),
+        url=build_flyer_promotion_url(p, store_id),
+        regular_price=p.get("regularPrice"), current_price=p.get("salePrice"), prime_price=p.get("primePrice"),
         extra_fields={
-            "rank": p.get("rank"),
-            "sale_price": p.get("salePrice"),
-            "available_store_ids": [store_id],
-            "flyer_promotion_id": p.get("promotionId"),
-            "flyer_promotion_grouping": p.get("promotionGrouping"),
-            "flyer_source": "display-promotion",
-            "source_store_id": store_id,
-            "source_store_name": store_name,
-            "retailer": "Whole Foods",
+            "rank": p.get("rank"), "available_store_ids": [store_id],
+            "flyer_promotion_id": p.get("promotionId"), "flyer_source": "display-promotion",
+            "source_store_id": store_id, "source_store_name": store_name, "retailer": "Whole Foods",
+            "offer_kind": "promotion", "promotion_terms": terms,
+            "brand_is_generic": normalize_text_key(p.get("brandName") or p.get("originBrandName")) in {"organic", "fresh produce", "prepared foods", "no antibiotics ever", ""},
+            "observed_at": iso_utc(utcnow()), "expires": p.get("endDate"), "starts_at": p.get("startDate"),
+            "price_source": "Weekly flyer", "price_context": "Weekly flyer", "price_verified": True,
         },
     )
 
@@ -3792,7 +3821,7 @@ def standardize_flyer_detail_product(p, detail_product, detail_index, detail_cou
     store_name = p.get("store_name")
     raw_brand = detail_product.get("brand") or p.get("brandName") or p.get("originBrandName")
     source_categories = []
-    if normalize_text_key(raw_brand) == "fresh produce":
+    if normalize_text_key(raw_brand).startswith("fresh produce"):
         source_categories.append("Fresh Produce")
 
     brand = None if source_categories else raw_brand
@@ -3806,15 +3835,16 @@ def standardize_flyer_detail_product(p, detail_product, detail_index, detail_cou
         brand=brand,
         image=detail_product.get("image") or p.get("productImage"),
         url=detail_product.get("url") or build_flyer_promotion_url(p),
-        regular_price=p.get("regularPrice"),
-        current_price=p.get("salePrice"),
-        prime_price=p.get("primePrice"),
+        regular_price=detail_product.get("basis_price"),
+        current_price=detail_product.get("current_price"),
+        prime_price=detail_product.get("prime_price"),
         classification_context=source_categories,
         emoji=emoji_for_product(detail_product.get("name") or p.get("productName", "Unknown Product")),
         extra_fields={
             "rank": detail_rank,
             "flyer_rank": rank,
-            "sale_price": p.get("salePrice"),
+            "sale_price": detail_product.get("current_price"),
+            "price_verified": False,
             "available_store_ids": [store_id],
             "flyer_promotion_id": p.get("promotionId"),
             "flyer_promotion_grouping": p.get("promotionGrouping"),
@@ -3852,80 +3882,9 @@ def fetch_products(store=None):
         or []
     )
 
-    products = []
-    hydrate_details = os.getenv("WFM_FLYER_HYDRATE_DETAILS", "1").strip().lower() not in {"0", "false", "no"}
-    max_promotions_raw = os.getenv("WFM_FLYER_MAX_PROMOTIONS", "").strip()
-    max_promotions = int(max_promotions_raw) if max_promotions_raw.isdigit() else None
-
-    if not hydrate_details:
-        products = [build_flyer_display_product(p) for p in promotions]
-    else:
-        try:
-            from playwright.sync_api import sync_playwright
-
-            with sync_playwright() as playwright:
-                browser = playwright.chromium.launch(headless=True)
-                page = browser.new_page(
-                    viewport={"width": 1440, "height": 1800},
-                    user_agent=(
-                        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-                    ),
-                    locale="en-US",
-                    timezone_id="America/New_York",
-                )
-
-                selected_promotions = promotions[:max_promotions] if max_promotions else promotions
-                for index, p in enumerate(selected_promotions, start=1):
-                    p = dict(p)
-                    p["store_id"] = store_id
-                    p["store_name"] = store_name
-                    promotion_url = build_flyer_promotion_url(p, store_id=store_id)
-                    detail_products = []
-                    if promotion_url:
-                        try:
-                            print(
-                                f"Flyer detail {index}/{len(selected_promotions)}: "
-                                f"{p.get('productName', 'Unknown Product')} [{store_name or store_id}]"
-                            )
-                            page.goto(promotion_url, wait_until="domcontentloaded", timeout=90000)
-                            try:
-                                page.locator('a[data-csa-c-type="productTile"][href*="/grocery/product/"]').first.wait_for(
-                                    timeout=12000
-                                )
-                            except Exception:
-                                pass
-                            load_more_clicks = expand_flyer_promotion_detail_page(page)
-                            if load_more_clicks:
-                                print(
-                                    f"Flyer detail expanded {p.get('productName', 'Unknown Product')}: "
-                                    f"clicked Load more {load_more_clicks} time(s)"
-                                )
-                            detail_products = parse_flyer_promotion_detail_products(page.content())
-                        except Exception as exc:
-                            print(
-                                "Flyer detail scrape failed; falling back to display promo "
-                                f"for {p.get('productName', 'Unknown Product')}: {exc}"
-                            )
-
-                    if detail_products:
-                        for detail_index, detail_product in enumerate(detail_products, start=1):
-                            products.append(
-                                standardize_flyer_detail_product(
-                                    p,
-                                    detail_product,
-                                    detail_index,
-                                    len(detail_products),
-                                )
-                            )
-                    else:
-                        products.append(build_flyer_display_product(p))
-
-                browser.close()
-        except Exception as exc:
-            print(f"Flyer detail hydration unavailable; using display promotions only: {exc}")
-            products = [build_flyer_display_product(p) for p in promotions]
-
+    # Weekly flyer amounts describe the promotion, not every ASIN in its detail page.
+    # Keep the advertised scope and source URL rather than inventing product prices.
+    products = [build_flyer_display_product(dict(p, store_id=store_id, store_name=store_name)) for p in promotions]
     products.sort(key=lambda x: x["rank"] if x["rank"] is not None else 9999)
     return products
 
@@ -4183,6 +4142,7 @@ def product_permalink(product):
 def newsletter_candidates(products, profile):
     """Select usable discounted offers before applying personalization ranking."""
     preferences = normalize_newsletter_preferences(profile.get("newsletterPreferences") or {})
+    use_prime = preferences["prime"]
     stores = preferences.get("preferredStoreIds") or profile.get("selectedStoreIds") or []
     hidden = {str(brand).strip().casefold() for brand in preferences.get("hiddenBrands") or []}
     excluded = set(preferences.get("dislikedCategories") or [])
@@ -4200,14 +4160,16 @@ def newsletter_candidates(products, profile):
             continue
         if product.get("category") == FAILED_CATEGORY:
             continue
-        if stores and product.get("retailer") == WHOLE_FOODS_RETAILER:
-            offers = [offer for offer in product.get("store_offers") or [] if str(offer.get("store_id")) in stores]
+        if product.get("retailer") == WHOLE_FOODS_RETAILER and (stores or product.get("store_offers")):
+            offers = [offer for offer in product.get("store_offers") or [] if (not stores or str(offer.get("store_id")) in stores) and not offer_issues(offer)]
             if not offers:
                 continue
-            offer = min(offers, key=lambda row: parse_price_sort_value(row.get("prime_price") or row.get("current_price")))
-            product.update({field: None for field in ("current_price", "sale_price", "prime_price", "basis_price")})
+            offer = min(offers, key=lambda row: parse_price_sort_value((row.get("prime_price") if use_prime else None) or row.get("current_price")))
+            product.update({field: None for field in ("current_price", "sale_price", "prime_price", "basis_price", *EVIDENCE_FIELDS)})
             product.update(offer)
             product["store_label"] = next((store.get("name") for store in SUPPORTED_STORES if str(store.get("id")) == str(offer.get("store_id"))), str(offer.get("store_id")))
+        if product.get("offer_kind") == "promotion" or offer_issues(product):
+            continue
         expiry = str(product.get("expires") or "")
         if expiry:
             try:
@@ -4215,13 +4177,13 @@ def newsletter_candidates(products, profile):
                     continue
             except ValueError:
                 pass
-        price = parse_price_sort_value(product.get("prime_price") or product.get("current_price") or product.get("sale_price"))
-        regular = parse_price_sort_value(product.get("basis_price"))
+        price = exact_money((product.get("prime_price") if use_prime else None) or product.get("current_price") or product.get("sale_price")) or math.inf
+        regular = exact_money(product.get("basis_price") or (product.get("current_price") if use_prime and product.get("prime_price") else None)) or math.inf
         if not (math.isfinite(price) and math.isfinite(regular) and 0 < price < regular):
             continue
         product["discount_percent"] = round((1 - price / regular) * 100)
-        product["newsletter_price"] = product.get("prime_price") or product.get("current_price") or product.get("sale_price")
-        product["newsletter_price_label"] = "Prime price" if product.get("prime_price") and product.get("retailer") == WHOLE_FOODS_RETAILER else "Sale price"
+        product["newsletter_price"] = (product.get("prime_price") if use_prime else None) or product.get("current_price") or product.get("sale_price")
+        product["newsletter_price_label"] = "Prime price" if use_prime and product.get("prime_price") and product.get("retailer") == WHOLE_FOODS_RETAILER else "Sale price"
         seen.add(key)
         result.append(product)
     return result
@@ -5016,14 +4978,14 @@ def api_fixes_to_deploy():
 @app.route("/meal-plan/")
 def weekly_meal_plan():
     fields = ("name", "category", "retailer", "current_price", "sale_price",
-              "prime_price", "basis_price", "expires", "url", "store_offers")
+              "prime_price", "basis_price", "expires", "url", "store_offers", *EVIDENCE_FIELDS)
     products = [{key: product.get(key) for key in fields} for product in load_combined_products()]
-    note = "Built from the saved deal catalog."
+    note = "Uses recent, verified product offers. Weekly flyer promotions are shown on the home page, but are not assigned to individual meal ingredients."
     try:
         with open(os.path.join(BASE_DIR, "search_deals_report.json"), encoding="utf-8") as handle:
             report = json.load(handle)
         if any(store.get("reused_previous") for store in report.get("stores", [])):
-            note += " The latest Whole Foods collection reused earlier results after a refresh failure; those prices have not been freshly verified."
+            note += " A location refresh failed. Offers without a recent verified observation are withheld; coverage may be incomplete."
     except (OSError, ValueError, TypeError):
         note += " The latest collection status is unavailable."
     return render_template("meal_plan.html", products=products, stores=SUPPORTED_STORES, catalog_note=note)

@@ -696,6 +696,9 @@ def discover_all_deals(store: Optional[dict] = None) -> dict:
         set_store_via_store_modal_url(page, progress, store=store, start_progress=0.07, end_progress=SET_STORE_PROGRESS)
 
         page.goto(ALL_DEALS_URL, wait_until="domcontentloaded")
+        from discover_search_deals import wait_for_selected_store
+        if not wait_for_selected_store(page, store, timeout_ms=6000):
+            raise RuntimeError("All Deals did not confirm Pickup at the requested store; prices were not imported.")
         progress.animate_wait(SET_STORE_PROGRESS, OPEN_DEALS_PROGRESS, 2500, steps=10)
 
         displayed_scroll_progress = SCROLL_PROGRESS_START

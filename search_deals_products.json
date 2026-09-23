@@ -395,7 +395,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0006MVRK4",
@@ -795,7 +800,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000NRV018",
@@ -839,7 +849,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000O6EG6O",
@@ -861,7 +876,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B000OD6642",
@@ -993,7 +1009,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000P6J1P4",
@@ -1024,9 +1045,9 @@
     "name": "Organic Yellow Peach, 1 Each",
     "image": "https://m.media-amazon.com/images/I/81nxM8O2EmL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B000P6L4BI",
-    "current_price": "$3.88",
-    "basis_price": "$4.99",
-    "prime_price": "$3.49",
+    "current_price": "$3.88/lb",
+    "basis_price": "$4.99/lb",
+    "prime_price": "$3.49/lb",
     "discount": "22%",
     "unit_price": "$1.44/each",
     "availability": "IN_STOCK",
@@ -1038,7 +1059,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000P6X5A6",
@@ -1149,7 +1175,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000QJIQ0G",
@@ -1171,7 +1202,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B000QJIQ10",
@@ -1193,7 +1225,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B000QSOC4Q",
@@ -1480,7 +1513,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000RETB3Q",
@@ -1593,7 +1631,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000SE9NUG",
@@ -1861,7 +1904,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000VK86NW",
@@ -2018,7 +2066,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000WD5OX8",
@@ -2041,7 +2094,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000WDOW7W",
@@ -2108,7 +2166,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000WS09OW",
@@ -2219,7 +2282,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B000YN1JY4",
@@ -2307,7 +2375,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B001001KC6",
@@ -2351,7 +2424,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0010ED368",
@@ -2939,9 +3017,9 @@
     "name": "Organic Gala Apple",
     "image": "https://m.media-amazon.com/images/I/81Ofs9N2dQL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B001GIP5CI",
-    "current_price": "$2.21",
-    "basis_price": "$2.69",
-    "prime_price": "$1.99",
+    "current_price": "$2.21/lb",
+    "basis_price": "$2.69/lb",
+    "prime_price": "$1.99/lb",
     "discount": "18%",
     "unit_price": "$0.95/each",
     "availability": "IN_STOCK",
@@ -2953,7 +3031,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B001I4G3XU",
@@ -2997,7 +3080,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B001MA3W02",
@@ -3019,7 +3107,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B001O8R9T2",
@@ -3371,7 +3460,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B002L9TQ3A",
@@ -3459,7 +3553,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B002LGOPXE",
@@ -3503,7 +3602,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B002M3ZBNO",
@@ -3525,7 +3629,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B002M3ZBPW",
@@ -3547,7 +3652,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B002N3NRIO",
@@ -3613,7 +3723,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B002WTCLIQ",
@@ -3688,9 +3803,9 @@
     "name": "Organic Yellow Squash, 1 LB",
     "image": "https://m.media-amazon.com/images/I/71bLHLe+HqL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B003AYHE7U",
-    "current_price": "$2.77",
-    "basis_price": "$3.29",
-    "prime_price": "$2.49",
+    "current_price": "$2.77/lb",
+    "basis_price": "$3.29/lb",
+    "prime_price": "$2.49/lb",
     "discount": "16%",
     "unit_price": "$1.36/each",
     "availability": "IN_STOCK",
@@ -3702,7 +3817,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B003B6RB98",
@@ -4020,9 +4140,9 @@
     "name": "Organic Yellow Bell Pepper",
     "image": "https://m.media-amazon.com/images/I/71-Q7Qj4JWL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B003TQ59WQ",
-    "current_price": "$4.77",
+    "current_price": "$4.77/lb",
     "basis_price": null,
-    "prime_price": "$4.29",
+    "prime_price": "$4.29/lb",
     "discount": null,
     "unit_price": "$2.00/each",
     "availability": "IN_STOCK",
@@ -4034,7 +4154,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B003TQ6IY4",
@@ -4042,9 +4167,9 @@
     "name": "Organic Yellow Nectarine",
     "image": "https://m.media-amazon.com/images/I/71qULTmNm+L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B003TQ6IY4",
-    "current_price": "$3.88",
-    "basis_price": "$4.99",
-    "prime_price": "$3.49",
+    "current_price": "$3.88/lb",
+    "basis_price": "$4.99/lb",
+    "prime_price": "$3.49/lb",
     "discount": "22%",
     "unit_price": "$1.55/each",
     "availability": "IN_STOCK",
@@ -4056,7 +4181,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B003UKJ22Y",
@@ -4500,7 +4630,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0052P24CA",
@@ -4632,7 +4767,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B005IXSS4O",
@@ -4684,9 +4824,9 @@
     "name": "Organic Cripps Pink Apple",
     "image": "https://m.media-amazon.com/images/I/8142OOSOQwL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B005KCIHTY",
-    "current_price": "$2.77",
-    "basis_price": "$2.99",
-    "prime_price": "$2.49",
+    "current_price": "$2.77/lb",
+    "basis_price": "$2.99/lb",
+    "prime_price": "$2.49/lb",
     "discount": "7%",
     "unit_price": "$1.16/each",
     "availability": "IN_STOCK",
@@ -4698,7 +4838,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B005M4AMYI",
@@ -4941,7 +5086,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0065626RS",
@@ -4964,7 +5114,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0068VWY22",
@@ -5341,7 +5496,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B006Z6MBKK",
@@ -5628,7 +5788,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B007M8FRTW",
@@ -5650,7 +5815,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B007M8FRV0",
@@ -5984,7 +6154,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0089VPTVM",
@@ -6692,7 +6867,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00CIJM0PO",
@@ -6714,7 +6894,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00CIZCX5K",
@@ -6736,7 +6921,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B00CJ8JJ6W",
@@ -6758,7 +6944,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00CJ8JM28",
@@ -6824,7 +7015,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00CQBOJRQ",
@@ -6964,9 +7160,9 @@
     "name": "Organic Orange Bell Pepper",
     "image": "https://m.media-amazon.com/images/I/71zZCdYar8L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B00E3J97TE",
-    "current_price": "$4.77",
+    "current_price": "$4.77/lb",
     "basis_price": null,
-    "prime_price": "$4.29",
+    "prime_price": "$4.29/lb",
     "discount": null,
     "unit_price": "$1.19/each",
     "availability": "IN_STOCK",
@@ -6978,7 +7174,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00E3JM7UU",
@@ -7001,7 +7202,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00E3JU09K",
@@ -7023,7 +7229,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00EE2VFXQ",
@@ -7291,7 +7502,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00FTBHLYS",
@@ -7357,7 +7573,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00FYD3JFG",
@@ -7423,7 +7644,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00GJXMPVY",
@@ -8151,7 +8377,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00NKMZ08C",
@@ -8263,7 +8494,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B00PG32AZO",
@@ -9147,7 +9383,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B011YJQ4B4",
@@ -9169,7 +9410,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B011YJQBRG",
@@ -9191,7 +9437,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0121K0MM2",
@@ -9702,7 +9953,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0178ENI4K",
@@ -10253,7 +10509,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B01E8THWMM",
@@ -10563,7 +10820,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B01GJA9CN0",
@@ -10739,7 +11001,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B01ITDJA1Y",
@@ -11027,7 +11294,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B01LXMSGP4",
@@ -11116,7 +11388,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B01LYTQTOD",
@@ -11183,7 +11460,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B01M4JSAAV",
@@ -11381,7 +11663,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B01MT54WWF",
@@ -11625,7 +11912,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B06XDML4LM",
@@ -11647,7 +11939,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B06XF78YDG",
@@ -11779,7 +12076,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B06XRZ3GZ3",
@@ -11845,7 +12147,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B06XWSDFP9",
@@ -12022,7 +12329,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B071KTZJ3N",
@@ -12066,7 +12378,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B071RF5JJP",
@@ -12088,7 +12405,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B071RNMRBK",
@@ -12110,7 +12432,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B071RNXH5N",
@@ -12132,7 +12459,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B071W25G4R",
@@ -12198,7 +12530,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B071Z2HWYC",
@@ -12242,7 +12579,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0728PFB8K",
@@ -12330,7 +12672,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B074H4WS24",
@@ -12793,7 +13140,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B074H6ZXPS",
@@ -13280,7 +13632,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B074VCL8Y2",
@@ -13302,7 +13655,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B074VD6R4R",
@@ -13324,7 +13682,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B074VDHXD2",
@@ -13368,7 +13731,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B074XXNDRC",
@@ -13610,7 +13978,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B076CHDX7P",
@@ -13787,7 +14160,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B077THJ5SB",
@@ -13809,7 +14187,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B077TZPVX7",
@@ -13920,7 +14303,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07813H9N8",
@@ -13942,7 +14330,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07814J83H",
@@ -13964,7 +14357,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07814JTRV",
@@ -13987,7 +14385,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07815Q1RJ",
@@ -14031,7 +14434,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0781C4W81",
@@ -14097,7 +14505,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0785XZY9X",
@@ -14119,7 +14528,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0786Q851W",
@@ -14150,9 +14564,9 @@
     "name": "Somerdale Coopers Hill",
     "image": "https://m.media-amazon.com/images/I/61Ii6b2f2uL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787VGWSG",
-    "current_price": "$17.39",
-    "basis_price": "$19.99",
-    "prime_price": "$15.65",
+    "current_price": "$17.39/lb",
+    "basis_price": "$19.99/lb",
+    "prime_price": "$15.65/lb",
     "discount": "13%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -14164,7 +14578,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787W8P65",
@@ -14172,9 +14591,9 @@
     "name": "Point Reyes Farmstead, Original Blue",
     "image": "https://m.media-amazon.com/images/I/511xBTUowXL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787W8P65",
-    "current_price": "$21.35",
-    "basis_price": "$23.99",
-    "prime_price": "$19.22",
+    "current_price": "$21.35/lb",
+    "basis_price": "$23.99/lb",
+    "prime_price": "$19.22/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -14186,7 +14605,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787W8PJ3",
@@ -14194,9 +14618,9 @@
     "name": "Whole Black Bass",
     "image": "https://m.media-amazon.com/images/I/51r+6a7pxWL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787W8PJ3",
-    "current_price": "$11.32",
-    "basis_price": "$11.99",
-    "prime_price": "$10.19",
+    "current_price": "$11.32/lb",
+    "basis_price": "$11.99/lb",
+    "prime_price": "$10.19/lb",
     "discount": "6%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -14208,7 +14632,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787WTY4C",
@@ -14216,9 +14645,9 @@
     "name": "Boneless Skinless Chicken Breast",
     "image": "https://m.media-amazon.com/images/I/61fW5t1cdkL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787WTY4C",
-    "current_price": "$6.64",
-    "basis_price": "$6.99",
-    "prime_price": "$5.98",
+    "current_price": "$6.64/lb",
+    "basis_price": "$6.99/lb",
+    "prime_price": "$5.98/lb",
     "discount": "5%",
     "unit_price": "$9.69/each",
     "availability": "IN_STOCK",
@@ -14231,7 +14660,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787Y4DR1",
@@ -14239,9 +14673,9 @@
     "name": "PRODUCE Organic Red Pear",
     "image": "https://m.media-amazon.com/images/I/71nDfQ3aHwL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787Y4DR1",
-    "current_price": "$2.77",
-    "basis_price": "$3.09",
-    "prime_price": "$2.49",
+    "current_price": "$2.77/lb",
+    "basis_price": "$3.09/lb",
+    "prime_price": "$2.49/lb",
     "discount": "10%",
     "unit_price": "$1.19/each",
     "availability": "IN_STOCK",
@@ -14253,7 +14687,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787Y4X59",
@@ -14261,9 +14700,9 @@
     "name": "Bell & Evans Boneless Skinless Chicken Breast",
     "image": "https://m.media-amazon.com/images/I/61kppe8HJAL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787Y4X59",
-    "current_price": "$5.69",
-    "basis_price": "$5.99",
-    "prime_price": "$5.12",
+    "current_price": "$5.69/lb",
+    "basis_price": "$5.99/lb",
+    "prime_price": "$5.12/lb",
     "discount": "5%",
     "unit_price": "$21.79/each",
     "availability": "IN_STOCK",
@@ -14275,7 +14714,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787Y5F15",
@@ -14283,9 +14727,9 @@
     "name": "Ashley Chase Estate Seaside Cheddar",
     "image": "https://m.media-amazon.com/images/I/515ESjFwU+L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787Y5F15",
-    "current_price": "$13.34",
-    "basis_price": "$14.99",
-    "prime_price": "$12.01",
+    "current_price": "$13.34/lb",
+    "basis_price": "$14.99/lb",
+    "prime_price": "$12.01/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -14297,7 +14741,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787Y5FB2",
@@ -14305,9 +14754,9 @@
     "name": "Chicken Breast Boneless Marinated Bourbon Step 2",
     "image": "https://m.media-amazon.com/images/I/51QwX2VL0ML.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0787Y5FB2",
-    "current_price": "$5.83",
-    "basis_price": "$6.99",
-    "prime_price": "$5.25",
+    "current_price": "$5.83/lb",
+    "basis_price": "$6.99/lb",
+    "prime_price": "$5.25/lb",
     "discount": "17%",
     "unit_price": "$5.83/each",
     "availability": "IN_STOCK",
@@ -14319,7 +14768,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0787Y63TN",
@@ -14416,9 +14870,9 @@
     "name": "Neals Yard Colston Basset Stilton",
     "image": "https://m.media-amazon.com/images/I/51Id9c1RAnL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0788HT5QF",
-    "current_price": "$26.99",
-    "basis_price": "$33.99",
-    "prime_price": "$24.29",
+    "current_price": "$26.99/lb",
+    "basis_price": "$33.99/lb",
+    "prime_price": "$24.29/lb",
     "discount": "21%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -14430,7 +14884,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0788PQPHD",
@@ -14474,7 +14933,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B078B5C1F6",
@@ -14496,7 +14960,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B078B9JPN3",
@@ -14518,7 +14987,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B078BBZM8S",
@@ -14607,7 +15081,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B078DF8PZ8",
@@ -14630,7 +15109,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B078FBYJHS",
@@ -14829,7 +15309,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B078K6HYDT",
@@ -14917,7 +15402,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B078THZBRT",
@@ -15251,7 +15741,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B079VF7P64",
@@ -15281,9 +15776,9 @@
     "name": "Fromageries Papillon Revelation Roquefort",
     "image": "https://m.media-amazon.com/images/I/5148aTXvdTL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B079VMFCCJ",
-    "current_price": "$28.47",
-    "basis_price": "$31.99",
-    "prime_price": "$25.62",
+    "current_price": "$28.47/lb",
+    "basis_price": "$31.99/lb",
+    "prime_price": "$25.62/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -15295,7 +15790,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B079VRD7X9",
@@ -15317,7 +15817,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B079W28NJW",
@@ -15325,9 +15826,9 @@
     "name": "Atlantic Salmon Fillet",
     "image": "https://m.media-amazon.com/images/I/51l3V5KgNWL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B079W28NJW",
-    "current_price": "$12.79",
-    "basis_price": "$15.99",
-    "prime_price": "$11.51",
+    "current_price": "$12.79/lb",
+    "basis_price": "$15.99/lb",
+    "prime_price": "$11.51/lb",
     "discount": "20%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -15339,7 +15840,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B079YV41VC",
@@ -15384,7 +15890,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07B3YK2SH",
@@ -15660,9 +16167,9 @@
     "name": "White Peach",
     "image": "https://m.media-amazon.com/images/I/51iKD8SWDkL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07CMDG98V",
-    "current_price": "$3.10",
-    "basis_price": "$3.49",
-    "prime_price": "$2.79",
+    "current_price": "$3.10/lb",
+    "basis_price": "$3.49/lb",
+    "prime_price": "$2.79/lb",
     "discount": "11%",
     "unit_price": "$1.36/each",
     "availability": "IN_STOCK",
@@ -15674,7 +16181,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07CVN4J96",
@@ -15770,9 +16282,9 @@
     "name": "Agour 6 Month Aged Ossau Iraty",
     "image": "https://m.media-amazon.com/images/I/51c+X8oLkZL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07D6V7NLV",
-    "current_price": "$30.25",
-    "basis_price": "$33.99",
-    "prime_price": "$27.23",
+    "current_price": "$30.25/lb",
+    "basis_price": "$33.99/lb",
+    "prime_price": "$27.23/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -15784,7 +16296,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07D768N8Z",
@@ -16115,7 +16632,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07F17QBC4",
@@ -16137,7 +16655,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07F49L57C",
@@ -16384,7 +16903,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07FV2PB14",
@@ -16561,7 +17081,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYCB4WX",
@@ -16584,7 +17109,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYDLWQ8",
@@ -16606,7 +17136,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYH7W7N",
@@ -16628,7 +17163,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYLMVJM",
@@ -16716,7 +17256,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYTPK5C",
@@ -16760,7 +17305,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYWBB2Q",
@@ -16804,7 +17354,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FYZHWCX",
@@ -16848,7 +17403,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZ1JHLF",
@@ -16870,7 +17430,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZ74Q71",
@@ -16892,7 +17457,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZ82XN3",
@@ -16914,7 +17484,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZ84BDS",
@@ -16922,9 +17497,9 @@
     "name": "Cotton Candy Grapes",
     "image": "https://m.media-amazon.com/images/I/715FRD85cbL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07FZ84BDS",
-    "current_price": "$5.54",
-    "basis_price": "$5.99",
-    "prime_price": "$4.99",
+    "current_price": "$5.54/lb",
+    "basis_price": "$5.99/lb",
+    "prime_price": "$4.99/lb",
     "discount": "8%",
     "unit_price": "$11.91/each",
     "availability": "IN_STOCK",
@@ -16936,7 +17511,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZGK294",
@@ -16944,9 +17524,9 @@
     "name": "Spicy Italian Chicken Sausage",
     "image": "https://m.media-amazon.com/images/I/51MJ8BUQJEL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07FZGK294",
-    "current_price": "$6.21",
-    "basis_price": "$6.99",
-    "prime_price": "$5.59",
+    "current_price": "$6.21/lb",
+    "basis_price": "$6.99/lb",
+    "prime_price": "$5.59/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -16958,7 +17538,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZHQ5L8",
@@ -16980,7 +17565,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07FZJPMWP",
@@ -16988,9 +17574,9 @@
     "name": "365 By Wfm Sliced 1 Year Sharp Cheddar",
     "image": "https://m.media-amazon.com/images/I/61dOdDAmnIL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07FZJPMWP",
-    "current_price": "$8.00",
-    "basis_price": "$8.99",
-    "prime_price": "$7.20",
+    "current_price": "$8.00/lb",
+    "basis_price": "$8.99/lb",
+    "prime_price": "$7.20/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -17002,7 +17588,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07FZJXGGK",
@@ -17010,9 +17601,9 @@
     "name": "Mild Italian Chicken Sausage",
     "image": "https://m.media-amazon.com/images/I/61UD6cFv+wL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07FZJXGGK",
-    "current_price": "$6.21",
-    "basis_price": "$6.99",
-    "prime_price": "$5.59",
+    "current_price": "$6.21/lb",
+    "basis_price": "$6.99/lb",
+    "prime_price": "$5.59/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -17024,7 +17615,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07G1F2BXH",
@@ -17135,7 +17731,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07G4RK4X9",
@@ -17157,7 +17754,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07G4VQMHS",
@@ -17179,7 +17781,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07G5Q7RLC",
@@ -17187,9 +17794,9 @@
     "name": "Sandwich Focaccia Proscuitto Italian Half, 8 Ounce",
     "image": "https://m.media-amazon.com/images/I/41mvR8BMZiL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07G5Q7RLC",
-    "current_price": "$9.97",
-    "basis_price": "$10.49",
-    "prime_price": "$8.97",
+    "current_price": "$9.97/lb",
+    "basis_price": "$10.49/lb",
+    "prime_price": "$8.97/lb",
     "discount": "5%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -17201,7 +17808,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07GJPG6HW",
@@ -17400,7 +18012,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07GT6857V",
@@ -17422,7 +18039,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07GXYF3VH",
@@ -17444,7 +18066,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07H3SDKDP",
@@ -17577,7 +18204,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07J1LR67X",
@@ -17621,7 +18249,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07JK519V7",
@@ -17709,7 +18342,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07JP2CW4Z",
@@ -17731,7 +18369,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07JPG4QK7",
@@ -17753,7 +18396,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07JQ2V2KQ",
@@ -17951,7 +18599,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07M6V8Z4L",
@@ -17973,7 +18626,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07M886YXK",
@@ -17995,7 +18653,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07M9ZJCPF",
@@ -18106,7 +18765,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07N6RRDDN",
@@ -18437,7 +19101,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07NW1DM9C",
@@ -18556,9 +19225,9 @@
     "name": "Spicy Italian Pork Sausage",
     "image": "https://m.media-amazon.com/images/I/51-YYXA8XPS.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07PK4W2K7",
-    "current_price": "$6.21",
-    "basis_price": "$6.99",
-    "prime_price": "$5.59",
+    "current_price": "$6.21/lb",
+    "basis_price": "$6.99/lb",
+    "prime_price": "$5.59/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -18570,7 +19239,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07PMFDTTQ",
@@ -18592,7 +19266,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07PN733FR",
@@ -18702,7 +19377,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07PZDNT4H",
@@ -18812,7 +19488,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07Q6553J1",
@@ -18923,7 +19600,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07QHKJSXT",
@@ -18999,9 +19677,9 @@
     "name": "Jumbo Cooked White Shrimp 13/15 Count",
     "image": "https://m.media-amazon.com/images/I/51pbv1hkaHL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B07R7CVMM4",
-    "current_price": "$20.77",
-    "basis_price": "$21.99",
-    "prime_price": "$18.69",
+    "current_price": "$20.77/lb",
+    "basis_price": "$21.99/lb",
+    "prime_price": "$18.69/lb",
     "discount": "6%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -19013,7 +19691,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07RBLLJ1P",
@@ -19035,7 +19718,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07RCNGXJW",
@@ -19233,7 +19917,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07TJK5JRM",
@@ -19255,7 +19944,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07TXGX42X",
@@ -19299,7 +19989,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B07V2J8WM7",
@@ -19409,7 +20100,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07WMX9N2D",
@@ -19497,7 +20193,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07XFY6QK4",
@@ -19520,7 +20221,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07XHD313N",
@@ -19853,7 +20559,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07YLBFQJ9",
@@ -19919,7 +20630,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07YQGK9TW",
@@ -19941,7 +20657,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B07Z1377JX",
@@ -20227,7 +20948,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B082VWHV2G",
@@ -20249,7 +20975,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0837HHNSN",
@@ -20271,7 +21002,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0837HKFFM",
@@ -20293,7 +21029,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B083CHH3Q9",
@@ -20624,7 +21365,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B084Q2NNV7",
@@ -20867,7 +21613,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B086F6J7JY",
@@ -20890,7 +21641,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B086F7426Y",
@@ -21266,7 +22022,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0884P2JXP",
@@ -21403,7 +22164,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B088546RH9",
@@ -21447,7 +22213,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B088B84SRX",
@@ -21469,7 +22240,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B088GJ7BV6",
@@ -21782,7 +22558,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B089PNFH1Y",
@@ -21827,7 +22608,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08B6XPDBV",
@@ -21916,7 +22702,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B08CVZNJLW",
@@ -21984,7 +22771,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08DKBPHM5",
@@ -22072,7 +22864,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08DYZR5GS",
@@ -22103,9 +22900,9 @@
     "name": "Tomato Cherry Sungold Organic, 1 Basket",
     "image": "https://m.media-amazon.com/images/I/71kSf8FD9PL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B08F2P9BP3",
-    "current_price": "$4.43",
-    "basis_price": "$5.99",
-    "prime_price": "$3.99",
+    "current_price": "$4.43/lb",
+    "basis_price": "$5.99/lb",
+    "prime_price": "$3.99/lb",
     "discount": "26%",
     "unit_price": "$3.99/each",
     "availability": "IN_STOCK",
@@ -22117,7 +22914,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08FNB39LW",
@@ -22139,7 +22941,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08FS8QD5V",
@@ -22161,7 +22968,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08FS8XLX7",
@@ -22183,7 +22995,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08FSBJQ5H",
@@ -22205,7 +23022,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08FWS92TL",
@@ -22513,7 +23335,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08JPV256C",
@@ -22801,7 +23628,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08M1L3XMF",
@@ -22823,7 +23655,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B08M3L44SS",
@@ -22867,7 +23700,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08M7FY9DX",
@@ -22999,7 +23837,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B08MQWKGX3",
@@ -23243,7 +24082,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08NGCN3P8",
@@ -23266,7 +24110,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08NGDKSPW",
@@ -23288,7 +24137,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08P4N7ZYK",
@@ -23399,7 +24253,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08PM863M3",
@@ -23708,7 +24567,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08QH1XTSX",
@@ -23730,7 +24594,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08QH2HK28",
@@ -23752,7 +24621,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B08QYB28ZW",
@@ -24171,7 +25041,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08V8CJMLZ",
@@ -24193,7 +25068,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B08VG5MJWR",
@@ -24215,7 +25091,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08VNQCXCL",
@@ -24391,7 +25272,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B08X6CNLS2",
@@ -24656,7 +25542,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B092L9WWC8",
@@ -24900,7 +25787,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0943BDRKZ",
@@ -24922,7 +25814,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B094Q8WFJQ",
@@ -25123,7 +26020,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B097J31VQJ",
@@ -25676,7 +26578,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09FRF67Y2",
@@ -25765,7 +26672,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09GZF142F",
@@ -26139,7 +27051,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09JZRKKT5",
@@ -26161,7 +27078,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09K4QDQQG",
@@ -26205,7 +27127,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09K8HXWZ9",
@@ -26293,7 +27216,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09L63136S",
@@ -26381,7 +27309,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09LW9DVT1",
@@ -26535,7 +27468,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09NMYN61V",
@@ -26712,7 +27650,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09Q64Y3ND",
@@ -26734,7 +27673,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09Q6VRWM6",
@@ -26866,7 +27806,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09R2NWWL1",
@@ -27197,7 +28138,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09SKZH9TG",
@@ -27264,7 +28206,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09TMFQTNT",
@@ -27316,9 +28263,9 @@
     "name": "Watermelon Chunks Medium",
     "image": "https://m.media-amazon.com/images/I/51Ca0k1ksyL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3BV6BN",
-    "current_price": "$5.42",
-    "basis_price": "$6.09",
-    "prime_price": "$4.88",
+    "current_price": "$5.42/lb",
+    "basis_price": "$6.09/lb",
+    "prime_price": "$4.88/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -27330,7 +28277,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09V3F4J9L",
@@ -27338,9 +28290,9 @@
     "name": "Watermelon Chunks Value Pack",
     "image": "https://m.media-amazon.com/images/I/51yb-174XpL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3F4J9L",
-    "current_price": "$4.53",
-    "basis_price": "$5.09",
-    "prime_price": "$4.08",
+    "current_price": "$4.53/lb",
+    "basis_price": "$5.09/lb",
+    "prime_price": "$4.08/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -27352,7 +28304,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09V3F71WW",
@@ -27360,9 +28317,9 @@
     "name": "Watermelon Chunks Small",
     "image": "https://m.media-amazon.com/images/I/515X7u+CxkL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3F71WW",
-    "current_price": "$5.42",
-    "basis_price": "$6.09",
-    "prime_price": "$4.88",
+    "current_price": "$5.42/lb",
+    "basis_price": "$6.09/lb",
+    "prime_price": "$4.88/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -27374,7 +28331,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09V3LKPCH",
@@ -27382,9 +28344,9 @@
     "name": "Cantaloupe Chunks Small",
     "image": "https://m.media-amazon.com/images/I/41B3qCrw0QL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3LKPCH",
-    "current_price": "$5.42",
-    "basis_price": "$6.09",
-    "prime_price": "$4.88",
+    "current_price": "$5.42/lb",
+    "basis_price": "$6.09/lb",
+    "prime_price": "$4.88/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -27396,7 +28358,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product page, Pickup at Columbus Circle, 2026-09-22"
   },
   {
     "asin": "B09V3M5VL5",
@@ -27418,7 +28385,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09V3MWWH4",
@@ -27440,7 +28408,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09V3NQ5B3",
@@ -27448,9 +28417,9 @@
     "name": "Cantaloupe Chunks Medium",
     "image": "https://m.media-amazon.com/images/I/41Ffr4Fq2ML.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09V3NQ5B3",
-    "current_price": "$5.69",
-    "basis_price": "$6.39",
-    "prime_price": "$5.12",
+    "current_price": "$5.69/lb",
+    "basis_price": "$6.39/lb",
+    "prime_price": "$5.12/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -27462,7 +28431,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09V6M399L",
@@ -27663,7 +28637,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09WNG76GN",
@@ -27685,7 +28660,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09WNNQCB5",
@@ -27707,7 +28683,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09WT8QXMX",
@@ -27751,7 +28728,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B09X8P5MT5",
@@ -27883,7 +28861,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09YKCDD75",
@@ -27949,7 +28932,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09Z72W3ZH",
@@ -27957,9 +28945,9 @@
     "name": "Teriyaki Atlantic Salmon",
     "image": "https://m.media-amazon.com/images/I/51e14RycVHL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B09Z72W3ZH",
-    "current_price": "$14.21",
-    "basis_price": "$15.99",
-    "prime_price": "$12.79",
+    "current_price": "$14.21/lb",
+    "basis_price": "$15.99/lb",
+    "prime_price": "$12.79/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -27971,7 +28959,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZFP9XLC",
@@ -27994,7 +28987,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZHX8Y9V",
@@ -28017,7 +29015,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZJHFH2D",
@@ -28061,7 +29064,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZPXMSXC",
@@ -28105,7 +29113,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZQ83RXB",
@@ -28127,7 +29140,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZVJN941",
@@ -28150,7 +29168,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B09ZVLWPP3",
@@ -28415,7 +29438,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0B3Q1HNQ5",
@@ -28636,7 +29660,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0B5VTJD2S",
@@ -28658,7 +29687,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0B5VTPT3G",
@@ -28791,7 +29825,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0B6GP7PB5",
@@ -29545,7 +30584,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0BFK9X2W3",
@@ -29589,7 +30633,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0BFSFGNHR",
@@ -29633,7 +30678,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0BG6SN2F5",
@@ -29787,7 +30833,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0BHFCW63Z",
@@ -30338,7 +31389,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0BNNZ7CY8",
@@ -30492,7 +31548,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0BQ51M53L",
@@ -30735,7 +31796,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0BR3DPLGN",
@@ -30757,7 +31819,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0BR6FKVVX",
@@ -30890,7 +31953,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0BRTGRRMY",
@@ -31044,7 +32112,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0BV4F17B4",
@@ -31663,7 +32736,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0C1TPSD37",
@@ -31686,7 +32764,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0C21TZBX3",
@@ -31796,7 +32879,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0C2J6FN6Z",
@@ -32214,7 +33302,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0C9W19DCZ",
@@ -32236,7 +33329,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0C9ZWTP9K",
@@ -32258,7 +33356,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CB1RQ9RH",
@@ -32324,7 +33427,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0CB1T768P",
@@ -32346,7 +33450,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0CB1V1X5S",
@@ -32412,7 +33517,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CB4RMZCK",
@@ -32500,7 +33610,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0CBNMJ4PW",
@@ -32544,7 +33655,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CCK8F4QC",
@@ -32588,7 +33704,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0CDCBN4F2",
@@ -33096,7 +34213,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CGW2YQFN",
@@ -33118,7 +34240,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CH1QYLPB",
@@ -33140,7 +34267,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CH7S7K38",
@@ -33184,7 +34316,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CHMXNHD5",
@@ -33670,7 +34807,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CLVSC522",
@@ -33780,7 +34922,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CLYZJHGK",
@@ -33802,7 +34949,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CLYZKBSZ",
@@ -33824,7 +34976,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0CMB5RVHY",
@@ -34044,7 +35197,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CN74ZMT3",
@@ -34309,7 +35467,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CPKQG8G1",
@@ -34464,7 +35627,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0CQMF3RV4",
@@ -34486,7 +35650,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CQPKDDDF",
@@ -34662,7 +35831,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CR6W1FYT",
@@ -34706,7 +35880,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CR96TRH2",
@@ -35260,7 +36439,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CTPL91DT",
@@ -35282,7 +36466,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CTPML3NM",
@@ -35304,7 +36493,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CTVGVMNF",
@@ -35524,7 +36718,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CWMSZFZ1",
@@ -35554,9 +36753,9 @@
     "name": "Igor Mini Provolone Dolce",
     "image": "https://m.media-amazon.com/images/I/61Qh52Wra3L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0CWPF9KPJ",
-    "current_price": "$17.79",
-    "basis_price": "$19.99",
-    "prime_price": "$16.01",
+    "current_price": "$17.79/lb",
+    "basis_price": "$19.99/lb",
+    "prime_price": "$16.01/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -35568,7 +36767,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CWS5QP8F",
@@ -35635,7 +36839,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CX9BHDZ7",
@@ -36231,7 +37440,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CZS8J17Z",
@@ -36254,7 +37468,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0CZYCRGCV",
@@ -36566,7 +37785,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2JKGCQP",
@@ -36632,7 +37856,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2JMQJ8R",
@@ -36676,7 +37905,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2N6KFM5",
@@ -36764,7 +37998,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2RR35NV",
@@ -36808,7 +38047,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2Y4PYCM",
@@ -36831,7 +38075,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2Y59KDG",
@@ -36853,7 +38102,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D2Y5V3NK",
@@ -37139,7 +38393,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D3VLF7Q5",
@@ -37381,7 +38640,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D5B8BRMH",
@@ -37523,9 +38787,9 @@
     "name": "Jean Perrin Morbier de Scey",
     "image": "https://m.media-amazon.com/images/I/51o3cybytnL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0D813ND8M",
-    "current_price": "$25.80",
-    "basis_price": "$28.99",
-    "prime_price": "$23.22",
+    "current_price": "$25.80/lb",
+    "basis_price": "$28.99/lb",
+    "prime_price": "$23.22/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -37537,7 +38801,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D823B1Y3",
@@ -37691,7 +38960,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D82HYNZ2",
@@ -37713,7 +38987,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0D82LNVLC",
@@ -37779,7 +39054,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0D84DFBF1",
@@ -38243,7 +39519,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D9PMHK61",
@@ -38287,7 +39568,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D9W8VL6M",
@@ -38309,7 +39595,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0D9WK5VL9",
@@ -38397,7 +39688,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DB2GP18V",
@@ -38419,7 +39715,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DB2ZY8VF",
@@ -38859,7 +40160,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DDTF5HRD",
@@ -39101,7 +40403,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DH8LBGK7",
@@ -39256,7 +40563,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DJDJVX7Z",
@@ -39322,7 +40630,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DJRGG8LW",
@@ -39454,7 +40763,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DK22NJM3",
@@ -40207,7 +41517,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DLCPKKZN",
@@ -40340,7 +41655,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DLP4LLDS",
@@ -41861,7 +43181,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DQLGHRRK",
@@ -42412,7 +43737,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DSWJNXTV",
@@ -42434,7 +43764,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DSWNMBZV",
@@ -42874,7 +44205,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DVMQCKVX",
@@ -42896,7 +44232,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DVV82T2X",
@@ -43340,7 +44677,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DYF66SYY",
@@ -43450,7 +44792,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0DYK3CSNF",
@@ -43473,7 +44820,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0DYVR2QX4",
@@ -43826,7 +45174,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0F334SDNZ",
@@ -43936,7 +45289,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0F3G5RZLR",
@@ -44068,7 +45422,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0F4HJ5MJF",
@@ -44112,7 +45471,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0F4LQ9XV9",
@@ -44156,7 +45520,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0F4M3826G",
@@ -45278,7 +46647,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FBH7MHQ7",
@@ -45344,7 +46718,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FBT88SN2",
@@ -45455,7 +46834,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0FC6TDF32",
@@ -45807,7 +47187,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FH5SKYTG",
@@ -45852,7 +47237,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FHKS1QG2",
@@ -45874,7 +47264,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FHKTX9W6",
@@ -45896,7 +47291,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FJCBS8ZZ",
@@ -45904,9 +47304,9 @@
     "name": "Kerrygold Cheddar Kilaree 15 Month",
     "image": "https://m.media-amazon.com/images/I/51Hl0eV+I3L.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0FJCBS8ZZ",
-    "current_price": "$15.12",
-    "basis_price": "$16.99",
-    "prime_price": "$13.61",
+    "current_price": "$15.12/lb",
+    "basis_price": "$16.99/lb",
+    "prime_price": "$13.61/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -45918,7 +47318,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FJFH9W74",
@@ -45962,7 +47367,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FK5HX14D",
@@ -45970,9 +47380,9 @@
     "name": "Beef Chuck Stew Meat",
     "image": "https://m.media-amazon.com/images/I/61ci0LM3ZOL.jpg",
     "url": "https://www.wholefoodsmarket.com/grocery/product/B0FK5HX14D",
-    "current_price": "$9.77",
-    "basis_price": "$10.99",
-    "prime_price": "$8.79",
+    "current_price": "$9.77/lb",
+    "basis_price": "$10.99/lb",
+    "prime_price": "$8.79/lb",
     "discount": "11%",
     "unit_price": null,
     "availability": "IN_STOCK",
@@ -45984,7 +47394,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "WEIGHT",
+      "unit": "POUNDS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FKR1SFV4",
@@ -46006,7 +47421,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FL8694TD",
@@ -46028,7 +47448,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FL88GPF7",
@@ -46050,7 +47475,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0FM4FTCXW",
@@ -46072,7 +47498,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FM4FX69L",
@@ -46315,7 +47746,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FMT9CWR6",
@@ -46557,7 +47993,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0FN89Z9CT",
@@ -46579,7 +48016,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FN8BBFCJ",
@@ -46844,7 +48286,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FP384C4Z",
@@ -47064,7 +48511,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FQ4MPWBK",
@@ -47306,7 +48758,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FQ82YHSR",
@@ -47572,7 +49029,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0FR7LTGG9",
@@ -47616,7 +49074,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0FR7XTM8Z",
@@ -47836,7 +49295,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FRT2HWX7",
@@ -48321,7 +49785,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FVNF8L7T",
@@ -48739,7 +50208,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FXYGCM5C",
@@ -48761,7 +50235,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0FXYGDBDM",
@@ -48783,7 +50258,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FXYGLS2F",
@@ -48805,7 +50285,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0FZL2CSLM",
@@ -49246,7 +50731,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0G2YYG473",
@@ -49755,7 +51241,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0G4X41J3W",
@@ -49799,7 +51286,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0G4XFJFD8",
@@ -49865,7 +51357,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0G5PT8ZL5",
@@ -50042,7 +51539,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0G5ZRXYK1",
@@ -50373,7 +51875,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0GCPNWN4S",
@@ -50903,7 +52406,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0GN3TKG1Y",
@@ -50991,7 +52499,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0GP97BKMH",
@@ -51035,7 +52548,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0GQDDPNP7",
@@ -51101,7 +52615,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0GR1P2JT6",
@@ -51344,7 +52863,12 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": true,
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "unit_evidence": "Retailer product metadata; prices and their original store observation retained"
   },
   {
     "asin": "B0GSX3XLTR",
@@ -51367,7 +52891,8 @@
     "observed_at": "2026-09-22T13:13:30.679917+00:00",
     "price_source": "Search Deals",
     "price_context": "Pickup",
-    "price_verified": true
+    "price_verified": false,
+    "unit_evidence": "Selling unit could not be verified; withheld pending refresh"
   },
   {
     "asin": "B0GT72Z3ZV",

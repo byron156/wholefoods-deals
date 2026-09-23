@@ -58,8 +58,9 @@ in the browser. Rebuilding the menu resets shopping checkmarks.
 Recipe selection favors matching discounted ingredients while varying meals.
 Missing deals become explicit regular-price purchases. Prices are recorded offer
 prices, not a basket estimate; quantities describe recipe needs, not package counts.
-The planner excludes dated expired offers and reports known collection failures,
-but cannot verify undated offers or guarantee current availability. Rebuild the
+The planner starts empty until Build my week is submitted. It excludes undated,
+stale, expired, unavailable and unverified offers and reports collection failures.
+Current availability can still change after collection. Rebuild the
 static site after refreshing the catalog to update its embedded deals.
 
 Validate the planner with `node --test tests/meal-planner.test.js`.

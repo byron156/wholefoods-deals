@@ -1,7 +1,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const planner = require('../static/meal-planner');
-const deal = (name, extra={}) => ({name,category:'Produce',retailer:'Whole Foods',current_price:'$3.00',basis_price:'$6.00',...extra});
+const evidence = {observed_at:new Date().toISOString(),price_verified:true,price_context:'Pickup'};
+const deal = (name, extra={}) => ({...evidence,name,category:'Produce',retailer:'Whole Foods',current_price:'$3.00',basis_price:'$6.00',...extra});
 
 test('complete week, diverse dinners, and exact consolidated quantities', () => {
   const plan = planner.generate([],{servings:3});
@@ -23,7 +24,7 @@ test('sales influence the menu and vegetarian plans exclude meat', () => {
   assert.ok(!vegetarian.groceries.some(i=>['chicken','salmon'].includes(i.id)));
 });
 test('location, retailer, Prime, expired offers, and missing prices are respected', () => {
-  const p = deal('Broccoli',{store_offers:[{store_id:'a',current_price:'$5.00',basis_price:'$6.00',prime_price:'$4.00'}]});
+  const p = deal('Broccoli',{store_offers:[{...evidence,store_id:'a',current_price:'$5.00',basis_price:'$6.00',prime_price:'$4.00'}]});
   assert.equal(planner.generate([p],{store:'a',prime:false}).groceries.find(i=>i.id==='broccoli').deal.price,5);
   assert.equal(planner.generate([p],{store:'a',prime:true}).groceries.find(i=>i.id==='broccoli').deal.price,4);
   for (const opts of [{store:'b'},{retailer:'Target'}]) assert.equal(planner.generate([p],opts).matchedCount,0);
@@ -66,7 +67,7 @@ test('Prime prices are the default with a non-Prime opt-out', () => {
 });
 
 test('missing location Prime price never falls back to another store', () => {
-  const item=deal('Broccoli',{prime_price:'$1.00',store_offers:[{store_id:'a',current_price:'$4.00',basis_price:'$5.00'}]});
+  const item=deal('Broccoli',{prime_price:'$1.00',store_offers:[{...evidence,store_id:'a',current_price:'$4.00',basis_price:'$5.00'}]});
   const matched=planner.generate([item],{store:'a'}).groceries.find(i=>i.id==='broccoli').deal;
   assert.equal(matched.price,4);
   assert.equal(matched.isPrime,false);
