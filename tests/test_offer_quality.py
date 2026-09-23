@@ -109,12 +109,12 @@ class TaxonomyRegressionTests(unittest.TestCase):
         for name,category in cases:
             self.assertEqual(source_backed_classification({'name':name}, FIXED_TAXONOMY)['category'],category,name)
 
-    def test_low_confidence_guesses_are_failed_and_withheld(self):
+    def test_low_confidence_category_does_not_discard_verified_price(self):
         from taxonomy_ai import apply_failed_classification_bucket
         p=apply_failed_classification_bucket(dict(category='Dairy & Eggs',subcategory='Cheese',ai_confidence=0.035,**offer()))
         self.assertEqual(p['classification_status'],'failed')
         with patch('app.load_base_combined_products',return_value=[p]):
-            self.assertEqual(app.load_combined_products(),[])
+            self.assertEqual(app.load_combined_products()[0]["category"],"Needs category review")
 
 class ScrapeMergeTests(unittest.TestCase):
     def test_new_scrape_snapshot_clears_discontinued_prime_offer(self):

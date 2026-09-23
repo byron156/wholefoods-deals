@@ -1327,6 +1327,10 @@ def normalize_products_api_item(item: dict) -> Optional[dict]:
         "unit_price": format_unit_price(offer_details.get("unitPrice")),
         "availability": item.get("availability"),
         "pricing_uom": pricing_uom,
+        "retailer_product_type": (item.get("category") or {}).get("productType"),
+        "retailer_department": (item.get("category") or {}).get("glProductGroupSymbol"),
+        "retailer_description": item.get("description"),
+        "retailer_ingredients": item.get("ingredients"),
         "price_verified": bool(pricing_uom) and (pricing_uom.get("dimension") != "WEIGHT" or bool(suffix)),
     }
 

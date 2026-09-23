@@ -4,7 +4,7 @@
   const money = text => {const m = String(text || '').match(/^\s*\$(\d+(?:\.\d{1,2})?)(?:\s*(?:\/\s*(?:lb|oz|kg|g|each)|ea|each))?\s*$/i);return m ? Number(m[1]) : null;};
   function usable(offer, now = Date.now()) {
     const observed = Date.parse(offer.observed_at);
-    return offer.price_verified === true && Boolean(offer.price_context) && Number.isFinite(observed) && now-observed <= 72*3600000 && observed-now <= 300000 && (!offer.expires || (Number.isFinite(Date.parse(offer.expires)) && Date.parse(offer.expires)>now)) && (!offer.starts_at || Date.parse(offer.starts_at)<=now) && !['OUT_OF_STOCK','UNAVAILABLE'].includes(offer.availability);
+    return offer.price_verified === true && Boolean(offer.price_context) && Number.isFinite(observed) && now-observed <= 72*3600000 && observed-now <= 300000 && (!offer.expires || (Number.isFinite(Date.parse(offer.expires)) && Date.parse(offer.expires)>now)) && (!offer.starts_at || Date.parse(offer.starts_at)<=now) && !['OUT_OF_STOCK','UNAVAILABLE','NO_CURRENT_OFFER'].includes(offer.availability);
   }
   function select(product, prime = true, storeIds = []) {
     let offer = product;

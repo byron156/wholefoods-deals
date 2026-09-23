@@ -94,7 +94,7 @@
     const now = options.today || new Date().toISOString();
     const eligible = products.flatMap(original => {
       if (options.retailer !== 'All' && original.retailer !== options.retailer) return [];
-      if (original.offer_kind === 'promotion') return [];
+      if (original.offer_kind === 'promotion' || original.classification_status === 'failed') return [];
       const p = pricing.select(original, options.prime, options.store ? [options.store] : []);
       if (!p || !pricing.usable(p, Date.parse(now))) return [];
       if (p.expires) {

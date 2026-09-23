@@ -136,6 +136,8 @@ git add \
   captured_batches.json \
   search_deals_products.json \
   search_deals_report.json \
+  retailer_product_metadata.json \
+  reports/catalog_recovery.json \
   target_deals_products.json \
   target_deals_report.json \
   hmart_deals_products.json \

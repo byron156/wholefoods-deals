@@ -211,47 +211,30 @@ def parse_offer_card(card, page) -> Optional[dict[str, Any]]:
     }
 
 
+def normalize_promotion_text(text):
+    text = re.sub(r"\s+", " ", text.replace("", " ")).strip()
+    # The visual percent icon repeats its accessible label in innerText.
+    text = re.sub(r"^(?:BOGO\s+)?\d+\s+(?=(?:BOGO\s+)?\d+%\s+off)", "", text, flags=re.I)
+    match = re.match(r"((?:BOGO\s+)?\d+%\s+off)\s+(.+)", text, re.I)
+    if not match:
+        return None
+    return match[2].strip(), match[1].strip()
+
+
 def parse_multistory_deal_link(link) -> Optional[dict[str, Any]]:
-    text = re.sub(r"\s+", " ", link.inner_text().replace("", " ")).strip()
-    if not text:
-        return None
-
+    parsed = normalize_promotion_text(link.inner_text())
     href = normalize_target_url(link.get_attribute("href"))
-    parts = [part.strip(" *") for part in re.split(r"\s{2,}|\s+\|\s+", text) if part.strip(" *")]
-    if not parts:
-        parts = [text]
-
-    value_text = None
-    name = None
-    for part in parts:
-        lowered = part.lower()
-        if re.search(r"\d+\s*%|bogo|\$\d+|\d+/\$\d+|save when|buy \d+", lowered):
-            value_text = value_text or part
-        elif part:
-            name = part
-
-    name = name or parts[-1]
-    if not name:
+    if not parsed or not href:
         return None
-
-    current_price, discount = parse_offer_value(value_text or text)
-    discount = discount or value_text or text
-
+    name, terms = parsed
+    image = link.locator("img").first
     return {
-        "asin": build_offer_id(name, value_text or text, None),
-        "name": name,
-        "brand": None,
-        "variation": None,
-        "image": None,
-        "url": href or build_target_search_url(name),
-        "current_price": current_price,
-        "basis_price": None,
-        "prime_price": None,
-        "discount": discount,
-        "unit_price": None,
-        "retailer": "Target",
-        "expires": None,
-        "target_value_text": value_text or text,
+        "asin": build_offer_id(name, terms, None), "name": name,
+        "brand": None, "image": image.get_attribute("src") if image.count() else None,
+        "url": href, "current_price": None, "basis_price": None,
+        "prime_price": None, "discount": None, "retailer": "Target",
+        "expires": None, "target_value_text": terms,
+        "offer_kind": "promotion", "promotion_terms": {"sale": terms},
     }
 
 
@@ -343,6 +326,7 @@ def discover_target_deals() -> dict[str, Any]:
         "product_count": len(products),
         "load_more_clicks": load_more_clicks,
         "products": products,
+        "coverage": "partial" if not result_count_text or "0 results" in result_count_text else "listing",
     }
 
 

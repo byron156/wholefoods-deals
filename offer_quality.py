@@ -4,6 +4,11 @@ from datetime import datetime, timedelta, timezone
 
 PRICE_FIELDS = ('current_price', 'prime_price', 'basis_price', 'sale_price', 'discount', 'discount_percent', 'unit_price')
 EVIDENCE_FIELDS = ('observed_at', 'expires', 'starts_at', 'price_context', 'price_source', 'price_verified', 'offer_kind', 'source_store_name', 'availability', 'pricing_uom', 'unit_evidence')
+METADATA_FIELDS = ('retailer_product_type', 'retailer_department', 'retailer_description', 'retailer_ingredients', 'metadata_observed_at')
+
+def metadata(product):
+    return {key: product.get(key) for key in METADATA_FIELDS}
+
 MAX_AGE = timedelta(hours=72)
 
 
@@ -27,6 +32,8 @@ def evidence(product):
 def stamp_products(products, source, context):
     now = datetime.now(timezone.utc).isoformat()
     for product in products:
+        if product.get("retailer_product_type"):
+            product["metadata_observed_at"] = now
         product.update(observed_at=now, price_source=source, price_context=context, price_verified=product.get("price_verified") is not False)
     return products
 
@@ -52,7 +59,7 @@ def offer_issues(offer, now=None):
     starts = timestamp(offer.get('starts_at'))
     if starts and starts > now:
         issues.append('Offer has not started')
-    if offer.get('availability') in ('OUT_OF_STOCK', 'UNAVAILABLE'):
+    if offer.get('availability') in ('OUT_OF_STOCK', 'UNAVAILABLE', 'NO_CURRENT_OFFER'):
         issues.append('Unavailable')
     if offer.get('offer_kind') != 'promotion' and not any(money(offer.get(k)) for k in ('current_price', 'prime_price')):
         issues.append('Missing exact selling price')
@@ -78,3 +85,15 @@ def clean_prices(product):
     if out.get('offer_kind') == 'promotion':
         out['promotion_terms'] = product.get('promotion_terms') or {}
     return out
+
+
+def offer_data_issues(offer, now=None):
+    """Acquisition/validation failures, distinct from a known offer lifecycle."""
+    issues = offer_issues(offer, now)
+    known_absence = offer.get('availability') in ('OUT_OF_STOCK', 'UNAVAILABLE', 'NO_CURRENT_OFFER')
+    lifecycle = {'Unavailable', 'Expired offer', 'Offer has not started'}
+    if 'Expired offer' in issues and offer.get('price_verified') is True and timestamp(offer.get('observed_at')):
+        lifecycle.add('Stale observation')
+    if known_absence and offer.get('price_verified') is True:
+        lifecycle.add('Missing exact selling price')
+    return [issue for issue in issues if issue not in lifecycle]

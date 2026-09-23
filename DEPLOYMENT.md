@@ -116,3 +116,27 @@ and unsubscribe links. Keep `APP_SECRET_KEY` stable across deployments so signed
 links remain valid. Newsletter cadence uses successful deliveries, and digests
 skip missing, expired dated, non-discounted, hidden, and out-of-store offers.
 Run `python -m unittest discover -s tests -p 'test_*.py'` for newsletter checks.
+
+## Catalog recovery and quality evidence
+
+The daily refresh now rechecks every known Whole Foods ASIN against both supported
+store-specific product API contexts before classification. Run
+`.venv/bin/python scripts/recover_catalog.py` for a standalone recovery. Missing
+responses retain the previous observation timestamp; they are never stamped as
+fresh. `reports/catalog_recovery.json` records coverage and unresolved identities.
+A retailer response without an offer clears obsolete prices and records
+`NO_CURRENT_OFFER`. It does not prove the product has permanently disappeared.
+
+Retailer product types and descriptions are retained and used alongside explicit
+product forms. Broad FOOD/GROCERY types do not force a category. The audit separates
+known unavailable/expired offers from missing data and retains the full catalog.
+Verified offers with uncertain categories remain under **Needs category review**;
+they are excluded from automatic meal matching. “Current offers” includes valid
+regular prices, while the shopper feed filters for discounts.
+
+Target's redesigned grocery listing currently exposes scoped promotions rather
+than the former full offer-card feed. Partial refreshes preserve prior records
+with their original evidence, so they remain visible in the audit as unresolved.
+BOGO/percent promotions retain their terms and eligible-item link, never a guessed
+unit price. `dist/build-meta.json` includes build time and a catalog checksum to
+make deployment freshness verifiable.

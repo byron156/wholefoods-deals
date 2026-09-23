@@ -3950,5 +3950,93 @@
     "retailer": "Target",
     "expires": "Expires May 30",
     "target_value_text": "$9.99 sale"
+  },
+  {
+    "asin": "target:ab988f6364d17432",
+    "name": "candy corn*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_4205e58c-9b69-41c1-8980-f2eada4fca61?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/499656668?content_id=STORY-47559",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-09-23T17:10:21.745708+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:3b5189d938df6a3b",
+    "name": "chocolate & candy*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_94259e8f-fd59-4716-b9aa-6ad7a8fa4969?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/396860723?content_id=STORY-47553",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-09-23T17:10:21.745708+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:c6295726d86cc86c",
+    "name": "Favorite Day™ & Good & Gather™ trail mix*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_21281913-38c4-4dd5-90f8-3efae5d16609?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/935695030?content_id=STORY-47558",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "10% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "10% off"
+    },
+    "observed_at": "2026-09-23T17:10:21.745708+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:64928e87ede18c51",
+    "name": "Ryze mushroom coffee*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_8c7bb57c-b299-42fd-bac2-f54f996586fe?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/802242399?content_id=STORY-47552",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "10% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "10% off"
+    },
+    "observed_at": "2026-09-23T17:10:21.745708+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
   }
 ]

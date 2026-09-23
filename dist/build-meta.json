@@ -1,4 +1,6 @@
 {
+  "built_at": "2026-09-23T17:17:17.126549+00:00",
+  "catalog_sha256": "069ad1636ca333dd5bf7a04ef6621adc8be74ab2e5f74cd160225c41cf8dee2c",
   "routes": [
     "/",
     "/meal-plan/"
@@ -27,6 +29,7 @@
   ],
   "copied_report_files": [
     "catalog_quality_audit.html",
+    "catalog_recovery.json",
     "catalog_quality_audit.json",
     "failed_products_review_queue.json",
     "ui_concepts/deal-radar.html",

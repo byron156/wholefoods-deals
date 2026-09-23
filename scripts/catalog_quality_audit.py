@@ -12,7 +12,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE_DIR))
-from offer_quality import offer_issues, money, EVIDENCE_FIELDS
+from offer_quality import offer_issues, offer_data_issues, money, clean_prices, EVIDENCE_FIELDS, METADATA_FIELDS
 
 DEFAULT_REPORTS_DIR = BASE_DIR / "reports"
 FAILED_CATEGORY = "Other/Failed"
@@ -27,7 +27,7 @@ SOURCE_FILES = {
     "H Mart Deals": "hmart_deals_products.json",
 }
 
-IMPORTANT_FIELDS = list(EVIDENCE_FIELDS) + [
+IMPORTANT_FIELDS = list(EVIDENCE_FIELDS) + list(METADATA_FIELDS) + [
     "asin",
     "asins",
     "name",
@@ -250,17 +250,23 @@ def words_for_product(product):
 def suspicious_category_reason(product):
     text = normalize_text(" ".join(str(product.get(field) or "") for field in ("name", "raw_name", "brand", "source_brand")))
     category = product.get("category")
+    from retailer_categories import TYPE_PAIRS
+    kind = product.get("retailer_product_type")
+    if kind in {"CHOCOLATE_CANDY", "SUGAR_CANDY", "COOKIE", "PROTEIN_SUPPLEMENT_POWDER", "NON_DAIRY_YOGURT", "NON_DAIRY_CHEESE"}:
+        expected = TYPE_PAIRS[kind][0]
+        if category != expected and category != FAILED_CATEGORY:
+            return f"Retailer product type {kind} conflicts with category {category}."
     if category == FAILED_CATEGORY:
-        return "Failed fallback bucket."
+        return None  # Counted separately as category review; not a second defect.
     if category == "Produce" and re.search(r"\b(gummy|gummies|soda|coffee|tea|shampoo|serum|capsule|tablet|supplement|extract|shot|water|juice|spray)\b", text):
         return "Produce label with packaged/drink/supplement/personal-care words."
-    if category == "Pantry" and re.search(r"\b(shampoo|conditioner|serum|cream|spray|capsule|tablet|collagen|magnesium|probiotic|vitamin)\b", text):
+    if category == "Pantry" and re.search(r"\b(shampoo|conditioner|serum|capsule|tablet|collagen|magnesium|probiotic|vitamin)\b", text):
         return "Pantry label with likely wellness or personal-care words."
-    if category == "Beverages" and re.search(r"\b(shampoo|conditioner|serum|cream|spray|capsule|tablet|essential oil)\b", text):
+    if category == "Beverages" and re.search(r"\b(shampoo|conditioner|serum|capsule|tablet|essential oil)\b", text):
         return "Beverage label with non-drink words."
-    if category == "Dairy & Eggs" and re.search(r"\b(pizza|pasta|snack|bar|vegan cheese|dairy free)\b", text):
+    if category == "Dairy & Eggs" and product.get("subcategory") not in {"Dairy Alternatives", "Plant-Based Milk", "Plant-Based Yogurt"} and re.search(r"\b(pizza|pasta|snack|bar)\b", text) and not re.search(r"\b(cheese|cheddar|yogurt)\b", text):
         return "Dairy label with possible prepared/frozen/snack/dairy-alternative ambiguity."
-    if category == "Alcohol" and re.search(r"\b(hummus|snack|salami|seltzer water|water)\b", text):
+    if category == "Alcohol" and product.get("subcategory") != "Hard Seltzer" and re.search(r"\b(hummus|snack|salami|seltzer water|water)\b", text):
         return "Alcohol label with likely non-alcohol product words."
     return None
 
@@ -279,13 +285,11 @@ def brand_quality_reason(product):
 
 
 def data_quality_reasons(product):
-    reasons = sorted({reason for offer in (product.get("store_offers") or [product]) for reason in offer_issues(offer)})
+    reasons = sorted({reason for offer in (product.get("store_offers") or [product]) for reason in offer_data_issues(offer)})
     if not product.get("image"):
         reasons.append("Missing image")
     if not product.get("url"):
         reasons.append("Missing product URL")
-    if product.get("offer_kind") != "promotion" and not (money(product.get("prime_price")) or money(product.get("current_price"))):
-        reasons.append("Missing sale/current price")
     # No discount is legitimate when a product is not on sale; do not count it as corruption.
     try:
         discount = float(product.get("discount_percent") or 0)
@@ -524,12 +528,12 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
 
     recommendations = [
         {
-            "title": "Review the failed bucket first",
-            "detail": f"{len(failed):,} products are in {FAILED_CATEGORY}. Gold-labeling the top brand/token clusters will reduce visible failures fastest.",
+            "title": "Resolve category uncertainty without discarding verified offers",
+            "detail": f"{len(failed):,} products still need category evidence. Their valid offers remain browsable under Needs category review; they are excluded from automatic meal matching.",
         },
         {
-            "title": "Refresh CLIP coverage after big scrapes",
-            "detail": f"{len(products_missing_clip):,} products have no matching CLIP audit row. Those cannot benefit from the vision fallback until `vision_category_audit.full.json` is regenerated.",
+            "title": "Recover source data before guessing from images",
+            "detail": f"{len(products_missing_clip):,} products have no image-classifier row. Retailer product types, descriptions and explicit product forms take precedence over image guesses.",
         },
         {
             "title": "Prefer source-backed rules over broad keyword guessing",
@@ -545,8 +549,13 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "summary": {
             "total_products": total,
-            "publishable_products": sum(not is_failed_product(p) and any(not offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
-            "withheld_products": sum(is_failed_product(p) or all(offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
+            "verified_sales_prime": sum(any(not offer_issues(o) and (o.get("offer_kind") == "promotion" or clean_prices(o).get("discount_percent", 0) > 0) for o in (p.get("store_offers") or [p])) for p in products),
+            "publishable_products": sum(any(not offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
+            "withheld_products": sum(all(offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
+            "category_review_with_usable_offer": sum(is_failed_product(p) and any(not offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
+            "confirmed_unavailable_store_offers": sum(o.get("availability") in ("NO_CURRENT_OFFER", "UNAVAILABLE", "OUT_OF_STOCK") and not offer_data_issues(o) for p in products for o in (p.get("store_offers") or [p])),
+            "expired_store_offers": sum("Expired offer" in offer_issues(o) for p in products for o in (p.get("store_offers") or [p])),
+            "products_with_usable_offer_and_data_gap": sum(any(not offer_issues(o) for o in (p.get("store_offers") or [p])) and bool(data_quality_reasons(p)) for p in products),
             "failed_products": len(failed),
             "failed_percent": pct(len(failed), total),
             "clip_covered_products": len(products_with_clip),
@@ -628,14 +637,15 @@ def render_html(audit, products):
     stat_cards = "".join(
         f"<div class=\"stat\"><strong>{esc(value)}</strong><span>{esc(label)}</span></div>"
         for label, value in [
-            ("Publishable", f"{summary['publishable_products']:,}"),
-            ("Withheld from shoppers", f"{summary['withheld_products']:,}"),
+            ("Verified sales · Prime", f"{summary['verified_sales_prime']:,}"),
+            ("Current offers", f"{summary['publishable_products']:,}"),
+            ("No usable offer", f"{summary['withheld_products']:,}"),
             ("Products", f"{summary['total_products']:,}"),
-            ("Failed", f"{summary['failed_products']:,} ({summary['failed_percent']})"),
+            ("Category review", f"{summary['failed_products']:,} ({summary['failed_percent']})"),
             ("CLIP missing", f"{summary['clip_missing_products']:,} ({summary['clip_missing_percent']})"),
             ("Suspicious category", f"{summary['suspicious_category_products']:,}"),
             ("Brand issues", f"{summary['brand_issue_products']:,}"),
-            ("Data issues", f"{summary['data_issue_products']:,}"),
+            ("Products with data gaps", f"{summary['data_issue_products']:,}"),
         ]
     )
     recommendation_html = "".join(
@@ -725,8 +735,9 @@ def render_html(audit, products):
 <main>
   <header>
     <h1>🧪 Catalog Quality Audit</h1>
-    <p class="muted">Generated {esc(audit['generated_at'])}. Audits the full retained catalog, including records withheld from shoppers. Publishable records must have a supported category and verified offer context, a collection timestamp within 72 hours, and a valid price or explicitly scoped flyer promotion. Rebuilding the site does not refresh prices.</p>
+    <p class="muted">Generated {esc(audit['generated_at'])}. Audits the full retained catalog, including records withheld from shoppers. Publishable records must have verified offer context, a collection timestamp within 72 hours, and a valid price or explicitly scoped flyer promotion. Rebuilding the site does not refresh prices.</p>
     <div class="stats">{stat_cards}</div>
+    <p class="muted">{summary['confirmed_unavailable_store_offers']:,} store offers are confirmed unavailable, and {summary['expired_store_offers']:,} have expired. These are offer states, not missing-data errors. {summary['products_with_usable_offer_and_data_gap']:,} products with data gaps still have a usable offer at another store. {summary['category_review_with_usable_offer']:,} products have usable prices and appear under “Needs category review” while their classification is investigated. Current offers include regular-price items; shopper deal filters show only actual discounts.</p>
   </header>
 
   <section class="callout">

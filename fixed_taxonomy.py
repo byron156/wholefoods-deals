@@ -1,7 +1,7 @@
 from copy import deepcopy
 
 
-FIXED_TAXONOMY_VERSION = "fixed-taxonomy-v5"
+FIXED_TAXONOMY_VERSION = "fixed-taxonomy-v6"
 
 
 FIXED_TAXONOMY = {
@@ -89,6 +89,7 @@ FIXED_TAXONOMY = {
                 {"name": "Beans & Legumes", "slug": "beans-legumes"},
                 {"name": "Soup & Broth", "slug": "soup-broth"},
                 {"name": "Canned Vegetables", "slug": "canned-vegetables"},
+                {"name": "Dried Vegetables & Mushrooms", "slug": "dried-vegetables-mushrooms"},
                 {"name": "Canned Fruit", "slug": "canned-fruit"},
                 {"name": "Canned Fish & Meat", "slug": "canned-fish-meat"},
                 {"name": "Tomatoes & Tomato Products", "slug": "tomatoes-tomato-products"},
@@ -223,6 +224,8 @@ FIXED_TAXONOMY = {
             "name": "Supplements & Wellness",
             "slug": "supplements-wellness",
             "subcategories": [
+                {"name": "Medicines & First Aid", "slug": "medicines-first-aid"},
+                {"name": "Dietary Supplements", "slug": "dietary-supplements"},
                 {"name": "Multivitamins", "slug": "multivitamins"},
                 {"name": "Vitamins", "slug": "vitamins"},
                 {"name": "Minerals", "slug": "minerals"},

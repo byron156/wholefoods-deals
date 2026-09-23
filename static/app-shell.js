@@ -15,7 +15,7 @@
   const initialCategoryOrder = rawData.category_order || {};
   const stores = rawData.stores || [];
   const retailerOrder = ["All", "Whole Foods", "Target", "H Mart"];
-  const failedCategory = "Other/Failed";
+  const failedCategory = "Needs category review";
   const preferredCategoryOrder = [
     "Produce",
     "Meat & Seafood",
@@ -1095,7 +1095,7 @@
     if (product.offer_kind === "promotion") {
       const terms = product.promotion_terms || {};
       const value = (state.profile.prime && terms.prime) || terms.sale;
-      return `<p class="prime">${escapeHtml(value || "See offer")}</p><small>${state.profile.prime && terms.prime ? "Prime · " : ""}Weekly flyer promotion</small>`;
+      return `<p class="prime">${escapeHtml(value || "See offer")}</p><small>${state.profile.prime && terms.prime ? "Prime · " : ""}${product.retailer === "Whole Foods" ? "Weekly flyer promotion" : "Retailer promotion"}</small>`;
     }
     return `<p class="prime">${escapeHtml(product.display_price || product.current_price || "Price unavailable")}</p><small>${product.is_prime ? "Prime price" : product.retailer === "Whole Foods" ? "Non-Prime price" : "Sale price"}</small>`;
   }
@@ -1138,7 +1138,7 @@
       ? `<h3 class="deal-title"><a href="${escapeHtml(product.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(product.name)}</a></h3>`
       : `<h3 class="deal-title">${escapeHtml(product.name)}</h3>`;
     const failedMarkup = isFailedProduct(product)
-      ? `<p class="classification-warning">Was ${escapeHtml(product.failed_from_category || "Unknown")} · ${escapeHtml(product.failed_from_subcategory || "Unknown")}</p>`
+      ? `<p class="classification-warning">Category awaiting verification</p>`
       : "";
 
     return `

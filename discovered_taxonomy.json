@@ -1,10 +1,10 @@
 {
-  "taxonomy_version": "fixed-taxonomy-v5",
+  "taxonomy_version": "fixed-taxonomy-v6",
   "model_name": "fixed-taxonomy",
-  "model_version": "taxonomy-local-ml-v5",
-  "prompt_version": "taxonomy-prompt-fixed-taxonomy-v5-local-ml-v5",
+  "model_version": "fixed-taxonomy-v6",
+  "prompt_version": "fixed-taxonomy-v6",
   "discovery_mode": "fixed",
-  "generated_at": "2026-04-18T18:00:30.964381+00:00",
+  "generated_at": null,
   "categories": [
     {
       "name": "Produce",
@@ -229,6 +229,10 @@
         {
           "name": "Canned Vegetables",
           "slug": "canned-vegetables"
+        },
+        {
+          "name": "Dried Vegetables & Mushrooms",
+          "slug": "dried-vegetables-mushrooms"
         },
         {
           "name": "Canned Fruit",
@@ -640,6 +644,14 @@
       "name": "Supplements & Wellness",
       "slug": "supplements-wellness",
       "subcategories": [
+        {
+          "name": "Medicines & First Aid",
+          "slug": "medicines-first-aid"
+        },
+        {
+          "name": "Dietary Supplements",
+          "slug": "dietary-supplements"
+        },
         {
           "name": "Multivitamins",
           "slug": "multivitamins"

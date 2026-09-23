@@ -265,6 +265,11 @@ def main():
             }
         if not target_result.get("reused_previous"):
             stamp_products(target_result["products"], "Target", "Online")
+        if target_result.get("coverage") == "partial":
+            # A redesigned listing is not proof old identities ceased to exist.
+            prior = {p["asin"]: p for p in load_json(TARGET_DEALS_PRODUCTS_FILE, [])}
+            prior.update({p["asin"]: p for p in target_result["products"]})
+            target_result["products"] = list(prior.values())
         write_json(TARGET_DEALS_PRODUCTS_FILE, target_result["products"])
         write_json(
             TARGET_DEALS_REPORT_FILE,
@@ -275,6 +280,7 @@ def main():
                 "load_more_clicks": target_result["load_more_clicks"],
                 "reused_previous": target_result.get("reused_previous", False),
                 "error": target_result.get("error"),
+                "coverage": target_result.get("coverage"),
             },
         )
 
@@ -286,6 +292,11 @@ def main():
             hmart_result = dict(load_json(HMART_DEALS_REPORT_FILE, {}), products=load_json(HMART_DEALS_PRODUCTS_FILE, []), reused_previous=True, error=str(exc))
             hmart_result["product_count"] = len(hmart_result["products"])
             print(f"H Mart failed; retained prices keep their original timestamp: {exc}")
+        previous_hmart = {p["asin"]: p for p in load_json(HMART_DEALS_PRODUCTS_FILE, [])}
+        fresh_hmart = {p["asin"]: p for p in hmart_result["products"]}
+        hmart_result["retained_previous_count"] = len(previous_hmart.keys() - fresh_hmart.keys())
+        previous_hmart.update(fresh_hmart)
+        hmart_result["products"] = list(previous_hmart.values())
         write_json(HMART_DEALS_PRODUCTS_FILE, hmart_result["products"])
         write_json(
             HMART_DEALS_REPORT_FILE,
@@ -295,6 +306,7 @@ def main():
                 "source_urls": hmart_result.get("source_urls", []),
                 "product_count": hmart_result["product_count"],
                 "runs": hmart_result.get("runs", []),
+                "retained_previous_count": hmart_result.get("retained_previous_count", 0),
             },
         )
         write_json(
@@ -309,6 +321,11 @@ def main():
                 "flyer_count": len(flyer_products),
             },
         )
+
+    if not args.skip_refresh:
+        from scripts.recover_catalog import main as recover_catalog
+        print("Recovering known Whole Foods identities and retailer metadata...")
+        recover_catalog()
 
     print("Building combined products...")
     normalized_flyer_products = load_saved_flyer_products()

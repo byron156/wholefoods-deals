@@ -72,3 +72,7 @@ test('missing location Prime price never falls back to another store', () => {
   assert.equal(matched.price,4);
   assert.equal(matched.isPrime,false);
 });
+
+test('category review preserves browsing but excludes automatic ingredient matching', () => {
+  assert.equal(planner.generate([deal('Broccoli', {classification_status:'failed'})]).matchedCount,0);
+});

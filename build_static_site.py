@@ -1,4 +1,6 @@
 import json
+import hashlib
+from datetime import datetime, timezone
 import os
 import shutil
 from pathlib import Path
@@ -29,6 +31,7 @@ ROOT_STATIC_FILES = [
 ]
 REPORT_FILES = [
     "catalog_quality_audit.html",
+    "catalog_recovery.json",
     "catalog_quality_audit.json",
     "failed_products_review_queue.json",
 ]
@@ -116,6 +119,8 @@ def write_metadata() -> None:
             if path.is_file()
         )
     metadata = {
+        "built_at": datetime.now(timezone.utc).isoformat(),
+        "catalog_sha256": hashlib.sha256((BASE_DIR / "combined_products.json").read_bytes()).hexdigest(),
         "routes": sorted(ROUTES.keys()),
         "copied_data_files": [name for name in DATA_FILES if (BASE_DIR / name).exists()],
         "copied_report_files": copied_report_files,
@@ -140,6 +145,9 @@ def main() -> None:
     copy_data_files()
     copy_report_files()
     write_metadata()
+    oversized = [str(p.relative_to(DIST_DIR)) for p in DIST_DIR.rglob('*') if p.is_file() and p.stat().st_size > 25 * 1024 * 1024]
+    if oversized:
+        raise RuntimeError("Cloudflare asset size limit exceeded: " + ", ".join(oversized))
     print(f"\nStatic site built at {DIST_DIR}")
 
 

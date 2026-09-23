@@ -1,5 +1,5 @@
 from catalog_rules import apply_source_rules
-from offer_quality import PRICE_FIELDS, EVIDENCE_FIELDS, evidence, clean_prices, offer_issues, stamp_products, timestamp, money as exact_money
+from offer_quality import metadata, PRICE_FIELDS, EVIDENCE_FIELDS, evidence, clean_prices, offer_issues, stamp_products, timestamp, money as exact_money
 import json
 import re
 import requests
@@ -2253,6 +2253,7 @@ def load_all_deals():
                 emoji=p.get("emoji"),
                 extra_fields={
                     **evidence(p),
+            **metadata(p),
                     "retailer": p.get("retailer") or WHOLE_FOODS_RETAILER,
                     "available_store_ids": list(p.get("available_store_ids") or []),
                     "store_offers": list(p.get("store_offers") or []),
@@ -2302,6 +2303,7 @@ def load_search_deals():
             classification_context=source_categories,
             extra_fields={
                 **evidence(p),
+                **metadata(p),
                 "retailer": p.get("retailer") or "Whole Foods",
                 "source_categories": source_categories,
                 "available_store_ids": list(p.get("available_store_ids") or []),
@@ -2335,6 +2337,7 @@ def load_saved_flyer_products():
     for p in raw_products:
         extra_fields = {
             **evidence(p),
+            **metadata(p),
             "promotion_terms": p.get("promotion_terms"),
             "brand_is_generic": p.get("brand_is_generic"),
             "rank": p.get("rank"),
@@ -2412,7 +2415,9 @@ def load_target_deals():
                 discount_text=p.get("discount"),
                 extra_fields={
                     **evidence(p),
+            **metadata(p),
                     "retailer": "Target",
+                    "promotion_terms": p.get("promotion_terms"),
                     "expires": p.get("expires"),
                 },
             )
@@ -2451,6 +2456,7 @@ def load_hmart_deals():
                 discount_text=p.get("discount"),
                 extra_fields={
                     **evidence(p),
+            **metadata(p),
                     "retailer": "H Mart",
                     "retail_source_url": p.get("retail_source_url"),
                     "source_categories": p.get("categories") or [],
@@ -2496,6 +2502,12 @@ def merge_combined_product(existing, incoming):
             continue
         if merged.get(key) in (None, "", []):
             merged[key] = value
+
+    if incoming.get("metadata_observed_at") and (incoming.get("metadata_observed_at") or "") >= (merged.get("metadata_observed_at") or ""):
+        merged.update(metadata(incoming))
+        # Prefer the freshly observed retailer title and brand over old inferred fields.
+        for field in ("name", "raw_name", "brand", "source_brand", "brand_source"):
+            merged[field] = incoming.get(field)
 
     incoming_has_source_brand = incoming.get("brand") and incoming.get("brand_source") == "source"
     existing_has_source_brand = merged.get("brand") and merged.get("brand_source") == "source"
@@ -3415,6 +3427,7 @@ def normalized_product_for_source(product, source_name):
         classification_context=product.get("source_categories") or [],
         extra_fields={
             **evidence(product),
+            **metadata(product),
             "promotion_terms": product.get("promotion_terms"),
             "brand_is_generic": product.get("brand_is_generic"),
             "retailer": retailer,
@@ -3472,6 +3485,19 @@ def build_combined_products(
             normalized = normalized_product_for_source(product, source_name)
             key = combined_key_for_product(normalized)
             combined[key] = merge_combined_product(combined.get(key), normalized)
+
+    # Preserve prior promotion identities for the audit when a weekly flyer rolls
+    # over. Their original expiry and observation stay intact, so expired offers
+    # never become current simply because we rebuilt the catalog.
+    try:
+        with open(COMBINED_PRODUCTS_FILE, encoding="utf-8") as handle:
+            prior_catalog = json.load(handle)
+    except (FileNotFoundError, ValueError):
+        prior_catalog = []
+    present_ids = {p.get("asin") for p in combined.values()}
+    for prior in prior_catalog:
+        if prior.get("offer_kind") == "promotion" and prior.get("asin") not in present_ids:
+            combined[combined_key_for_product(prior)] = dict(prior)
 
     ordered = list(combined.values())
     for product in ordered:
@@ -3642,7 +3668,10 @@ def load_combined_products():
     for original in load_base_combined_products():
         product = dict(original)
         if product.get("classification_status") == "failed":
-            continue
+            product["category"] = "Needs category review"
+            product["subcategory"] = "Uncategorized"
+            product["ai_category"] = product["category"]
+            product["ai_subcategory"] = product["subcategory"]
         if product.get("store_offers"):
             product["store_offers"] = [clean_prices(offer) for offer in product["store_offers"] if not offer_issues(offer)]
             if not product["store_offers"]:

@@ -1,318 +1,240 @@
 {
-  "product_count": 4692,
+  "generated_at": "2026-09-23T17:10:36.625067+00:00",
+  "requested_identities": 3329,
+  "observations": 6649,
+  "fresh_observations": 6648,
+  "retained_previous_observations": 1,
+  "failures": [
+    {
+      "store_id": "10160",
+      "asin": "B0019DKT1W",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B01I50FFC4",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B01I3JTQVI",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B01N3N0911",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B0F29N597D",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0019DKT1W",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B01I50FFC4",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B01I3JTQVI",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B01N3N0911",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F29N597D",
+      "reason": "Product missing from retailer response"
+    }
+  ],
+  "product_types": {
+    "SHAMPOO": 38,
+    "SKIN_MOISTURIZER": 134,
+    "LIP_BALM": 22,
+    "SEASONING": 58,
+    "ESSENTIAL_OIL": 78,
+    "TEA": 260,
+    "NUTRITIONAL_SUPPLEMENT": 630,
+    "HERBAL_SUPPLEMENT": 96,
+    "MINERAL_SUPPLEMENT": 84,
+    "VITAMIN": 180,
+    "JUICE_AND_JUICE_DRINK": 140,
+    "DISHWASHER_DETERGENT": 22,
+    "WATER": 160,
+    "NOODLE": 150,
+    "CHOCOLATE_CANDY": 166,
+    "SKIN_CLEANING_AGENT": 130,
+    "CLEANING_AGENT": 34,
+    "FOOD": 344,
+    "MEDICATION": 42,
+    "PAPER_TOWEL": 2,
+    "FRUIT": 108,
+    "VEGETABLE": 112,
+    "DAIRY_BASED_CHEESE": 136,
+    "SNACK_CHIP_AND_CRISP": 154,
+    "HAIR_COLORING_AGENT": 20,
+    "BODY_LUBRICANT": 4,
+    "CONDITIONER": 60,
+    "BEVERAGE": 48,
+    "CRACKER": 114,
+    "MILK_SUBSTITUTE": 46,
+    "EDIBLE_OIL_VEGETABLE": 56,
+    "CEREAL": 28,
+    "BLEACH": 2,
+    "DAIRY_BASED_ICE_CREAM": 56,
+    "SKIN_PROTECTANT": 4,
+    "NUT_BUTTER": 46,
+    "VINEGAR": 38,
+    "BREAKFAST_CEREAL": 98,
+    "SAUCE": 234,
+    "SALAD_DRESSING": 70,
+    "CONDIMENT": 64,
+    "MEAT": 70,
+    "PICKLE": 14,
+    "DENTAL_FLOSS": 2,
+    "HEALTH_PERSONAL_CARE": 54,
+    "EDIBLE_OIL_FAT": 18,
+    "BODY_DEODORANT": 30,
+    "SUNSCREEN": 28,
+    "BEAUTY": 22,
+    "BREAD": 52,
+    "POULTRY": 46,
+    "TOOTH_CLEANING_AGENT": 30,
+    "PROTEIN_SUPPLEMENT_POWDER": 100,
+    "WINE": 54,
+    "DAIRY_BASED_YOGURT": 72,
+    "DRINK_FLAVORED": 158,
+    "SNACK_FOOD_BAR": 210,
+    "FRUIT_SNACK": 84,
+    "FABRIC_SOFTENER": 14,
+    "SKIN_EXFOLIANT": 10,
+    "SUGAR_CANDY": 22,
+    "RICE_MIX": 22,
+    "HONEY": 22,
+    "COOKIE": 58,
+    "FISH": 74,
+    "SKIN_CARE_AGENT": 16,
+    "HAND_SANITIZER": 12,
+    "GROCERY": 72,
+    "BEER": 54,
+    "SUGAR_SUBSTITUTE": 8,
+    "SNACK_MIX": 8,
+    "SKIN_SERUM": 34,
+    "ASTRINGENT_SUBSTANCE": 4,
+    "PRETZEL": 28,
+    "MEAL_REPLACEMENT_BEVERAGE": 20,
+    "HERB": 6,
+    "NUT_AND_SEED": 62,
+    "NAIL_POLISH_REMOVER": 2,
+    "CULINARY_MUSHROOM": 2,
+    "LAUNDRY_DETERGENT": 24,
+    "JERKY": 18,
+    "COFFEE": 60,
+    "BABY_PRODUCT": 2,
+    "THICKENING_AGENT": 2,
+    "BAKING_MIX": 20,
+    "DAIRY_BASED_CREAM": 10,
+    "BATHWATER_ADDITIVE": 16,
+    "FOOD_GRATER": 6,
+    "SKIN_TREATMENT_MASK": 6,
+    "DRY_SHAMPOO": 2,
+    "DAIRY_BASED_BUTTER": 14,
+    "MEAT_ALTERNATIVE": 10,
+    "POPCORN": 14,
+    "FOOD_SLICER": 6,
+    "JUICER": 4,
+    "PUFFED_SNACK": 20,
+    "DAIRY_BASED_DRINK": 14,
+    "NON_DAIRY_CREAM": 34,
+    "PIZZA": 6,
+    "LEGUME": 26,
+    "SYRUP": 6,
+    "SUGAR": 4,
+    "SPOON": 2,
+    "PROTEIN_DRINK": 38,
+    "SHELLFISH": 12,
+    "PACKAGED_SOUP_AND_STEW": 80,
+    "NON_DAIRY_YOGURT": 16,
+    "FLAVORED_DRINK_CONCENTRATE": 26,
+    "TOFU": 2,
+    "NON_DAIRY_CHEESE": 6,
+    "CANDY": 16,
+    "WASTE_BAG": 2,
+    "OLIVE": 4,
+    "PREPARED_AND_PRESERVED_FOOD": 10,
+    "PET_FOOD": 24,
+    "FLOUR": 4,
+    "HAIR_CLEANER_CONDITIONER": 6,
+    "PASTRY": 8,
+    "LIP_COLOR": 16,
+    "MOUTHWASH": 2,
+    "SKIN_CLEANING_WIPE": 2,
+    "HAIR_STYLING_AGENT": 8,
+    "MENSTRUAL_CUP": 4,
+    "SANITARY_NAPKIN": 4,
+    "SURFACE_CLEANING_WIPE": 6,
+    "NAIL_POLISH": 14,
+    "EYELID_COLOR": 4,
+    "WHISK_UTENSIL": 2,
+    "CAKE": 6,
+    "SEAFOOD": 4,
+    "COSMETIC_POWDER": 2,
+    "MASCARA": 2,
+    "CUTTING_BOARD": 2,
+    "FLATWARE": 2,
+    "ROLLING_PIN": 2,
+    "FRESH_CUT_FLOWERS_PLANTS": 4,
+    "CANDLE": 34,
+    "EYEBROW_COLOR": 2,
+    "BAKING_CHOCOLATE": 4,
+    "DEHUMIDIFIER": 2,
+    "SCULPTURE": 2,
+    "PREPARED_DOUGH": 2,
+    "VEGETARIAN_EGG_SUBSTITUTE": 2,
+    "TOOTH_WHITENER": 2,
+    "TOILET_PAPER": 2,
+    "COCKTAIL_MIX": 2,
+    "WOUND_DRESSING": 2,
+    "DISHWARE_PLATE": 2,
+    "BABY_FORMULA": 2,
+    "BLADED_FOOD_PEELER": 2,
+    "ANIMAL_NUTRITIONAL_SUPPLEMENT": 2,
+    "CULINARY_SALT": 8,
+    "DIETARY_SUPPLEMENTS": 2,
+    "SHAVING_AGENT": 2,
+    "FOOD_STORAGE_CONTAINER": 2,
+    "SHEET_PAN": 2,
+    "UNDERPANTS": 2,
+    "SPIRITS": 2,
+    "PERSONAL_FRAGRANCE": 24,
+    "OTC_MEDICATION": 2,
+    "TOOTHBRUSH": 6,
+    "MEAL_HOLDER": 4,
+    "MISSING": 1
+  },
   "stores": [
     {
       "store_id": "10160",
       "store_name": "Columbus Circle",
-      "search_url": "https://www.wholefoodsmarket.com/grocery/search?k=&rh=p_n_deal_type%3A23566065011&s=relevanceblender",
-      "product_count": 2336,
-      "network_batch_count": 149,
-      "sort_runs": [
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Relevance",
-          "new_products_found": 368,
-          "captured_events": 368,
-          "collection_request_count": 17,
-          "total_products_after_sort": 368,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Price: Low to High",
-          "sort_rank": "price-asc-rank",
-          "run_label": "Price: Low to High",
-          "new_products_found": 238,
-          "captured_events": 238,
-          "collection_request_count": 10,
-          "total_products_after_sort": 606,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Price: High to Low",
-          "sort_rank": "price-desc-rank",
-          "run_label": "Price: High to Low",
-          "new_products_found": 374,
-          "captured_events": 374,
-          "collection_request_count": 17,
-          "total_products_after_sort": 980,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Newest Arrivals",
-          "sort_rank": "date-desc-rank",
-          "run_label": "Newest Arrivals",
-          "new_products_found": 378,
-          "captured_events": 378,
-          "collection_request_count": 17,
-          "total_products_after_sort": 1358,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Get it fast",
-          "sort_rank": "get-it-fast-rank",
-          "run_label": "Get it fast",
-          "new_products_found": 240,
-          "captured_events": 240,
-          "collection_request_count": 17,
-          "total_products_after_sort": 1598,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Most purchased",
-          "sort_rank": "most-purchased-rank",
-          "run_label": "Most purchased",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "collection_request_count": 2,
-          "total_products_after_sort": 1598,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Low prices",
-          "sort_rank": "low-prices-rank",
-          "run_label": "Low prices",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "collection_request_count": 1,
-          "total_products_after_sort": 1598,
-          "skipped": false
-        },
-        {
-          "filter_label": null,
-          "rh_values": [],
-          "sort_label": "Best Sellers",
-          "sort_rank": "exact-aware-popularity-rank",
-          "run_label": "Best Sellers",
-          "new_products_found": 162,
-          "captured_events": 162,
-          "collection_request_count": 17,
-          "total_products_after_sort": 1760,
-          "skipped": false
-        },
-        {
-          "filter_label": "Amazon Brands",
-          "rh_values": [
-            "p_n_g-1001321510111:24677333011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Amazon Brands / Relevance",
-          "new_products_found": 54,
-          "captured_events": 54,
-          "collection_request_count": 3,
-          "total_products_after_sort": 1814,
-          "skipped": false
-        },
-        {
-          "filter_label": "FSA or HSA Eligible",
-          "rh_values": [
-            "p_n_hba_program:17904039011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "FSA or HSA Eligible / Relevance",
-          "new_products_found": 17,
-          "captured_events": 17,
-          "collection_request_count": 2,
-          "total_products_after_sort": 1831,
-          "skipped": false
-        },
-        {
-          "filter_label": "Any Feature",
-          "rh_values": [
-            "p_n_cpf_labels:121136630011"
-          ],
-          "sort_label": "Price: Low to High",
-          "sort_rank": "price-asc-rank",
-          "run_label": "Any Feature / Price: Low to High",
-          "new_products_found": 283,
-          "captured_events": 283,
-          "collection_request_count": 17,
-          "total_products_after_sort": 2114,
-          "skipped": false
-        },
-        {
-          "filter_label": "Any Feature",
-          "rh_values": [
-            "p_n_cpf_labels:121136630011"
-          ],
-          "sort_label": "Price: High to Low",
-          "sort_rank": "price-desc-rank",
-          "run_label": "Any Feature / Price: High to Low",
-          "new_products_found": 11,
-          "captured_events": 11,
-          "collection_request_count": 0,
-          "total_products_after_sort": 2125,
-          "skipped": false
-        },
-        {
-          "filter_label": "Biodiversity",
-          "rh_values": [
-            "p_n_cpf_labels:116845691011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Biodiversity / Relevance",
-          "new_products_found": 3,
-          "captured_events": 3,
-          "collection_request_count": 0,
-          "total_products_after_sort": 2128,
-          "skipped": false
-        },
-        {
-          "filter_label": "Carbon Impact",
-          "rh_values": [
-            "p_n_cpf_labels:116845688011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Carbon Impact / Relevance",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "total_products_after_sort": 2128,
-          "skipped": true,
-          "error": "Products did not render for the run \"Carbon Impact / Relevance\"."
-        },
-        {
-          "filter_label": "Farming Practices",
-          "rh_values": [
-            "p_n_cpf_labels:121191385011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Farming Practices / Relevance",
-          "new_products_found": 34,
-          "captured_events": 34,
-          "collection_request_count": 4,
-          "total_products_after_sort": 2162,
-          "skipped": false
-        },
-        {
-          "filter_label": "Forestry Practices",
-          "rh_values": [
-            "p_n_cpf_labels:116845687011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Forestry Practices / Relevance",
-          "new_products_found": 3,
-          "captured_events": 3,
-          "collection_request_count": 4,
-          "total_products_after_sort": 2165,
-          "skipped": false
-        },
-        {
-          "filter_label": "Manufacturing Practices",
-          "rh_values": [
-            "p_n_cpf_labels:116845690011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Manufacturing Practices / Relevance",
-          "new_products_found": 5,
-          "captured_events": 5,
-          "collection_request_count": 1,
-          "total_products_after_sort": 2170,
-          "skipped": false
-        },
-        {
-          "filter_label": "Organic Content",
-          "rh_values": [
-            "p_n_cpf_labels:116845684011"
-          ],
-          "sort_label": "Price: Low to High",
-          "sort_rank": "price-asc-rank",
-          "run_label": "Organic Content / Price: Low to High",
-          "new_products_found": 4,
-          "captured_events": 4,
-          "collection_request_count": 0,
-          "total_products_after_sort": 2174,
-          "skipped": false
-        },
-        {
-          "filter_label": "Organic Content",
-          "rh_values": [
-            "p_n_cpf_labels:116845684011"
-          ],
-          "sort_label": "Price: High to Low",
-          "sort_rank": "price-desc-rank",
-          "run_label": "Organic Content / Price: High to Low",
-          "new_products_found": 158,
-          "captured_events": 158,
-          "collection_request_count": 17,
-          "total_products_after_sort": 2332,
-          "skipped": false
-        },
-        {
-          "filter_label": "Packaging Efficiency",
-          "rh_values": [
-            "p_n_cpf_labels:116845682011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Packaging Efficiency / Relevance",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "total_products_after_sort": 2332,
-          "skipped": true,
-          "error": "Products did not render for the run \"Packaging Efficiency / Relevance\"."
-        },
-        {
-          "filter_label": "Safer Chemicals",
-          "rh_values": [
-            "p_n_cpf_labels:116845683011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Safer Chemicals / Relevance",
-          "new_products_found": 0,
-          "captured_events": 0,
-          "total_products_after_sort": 2332,
-          "skipped": true,
-          "error": "Products did not render for the run \"Safer Chemicals / Relevance\"."
-        },
-        {
-          "filter_label": "Worker Wellbeing",
-          "rh_values": [
-            "p_n_cpf_labels:116845686011"
-          ],
-          "sort_label": "Relevance",
-          "sort_rank": "relevanceblender",
-          "run_label": "Worker Wellbeing / Relevance",
-          "new_products_found": 4,
-          "captured_events": 4,
-          "collection_request_count": 3,
-          "total_products_after_sort": 2336,
-          "skipped": false
-        }
-      ],
-      "reused_previous": false,
-      "error": null
+      "product_count": 3324,
+      "reused_previous": true,
+      "source": "Store-scoped product API"
     },
     {
       "store_id": "10328",
       "store_name": "Upper West Side",
-      "search_url": null,
-      "product_count": 2356,
-      "network_batch_count": 0,
-      "sort_runs": [],
+      "product_count": 3325,
       "reused_previous": true,
-      "error": "Products did not render for the run \"Newest Arrivals\"."
+      "source": "Store-scoped product API"
     }
   ]
 }
