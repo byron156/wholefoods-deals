@@ -1,6 +1,6 @@
 [
   {
-    "observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
     "price_context": "Store-specific online",
     "price_source": "Whole Foods product API",
     "price_verified": true,
@@ -9,7 +9,7 @@
     "retailer_product_type": "BEAUTY",
     "retailer_department": "gl_beauty",
     "retailer_description": "Body Care",
-    "metadata_observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
     "asin": "B0DMFN2PZ8",
     "name": "Here We Flo to Go Trial Pads 5CT, 5 CT",
     "raw_name": "Here we Flo To Go Trial Pads 5Ct, 5 CT",
@@ -47,7 +47,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -72,7 +72,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -93,108 +93,6 @@
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0DMFN2PZ8",
         "sources": [
           "Search Deals"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-23T17:08:18.989549+00:00",
-    "expires": "2026-09-29T05:00:00Z",
-    "starts_at": "2026-09-23T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:038de727-d8e2-47ed-b5e3-dd9cb0c520b5",
-    "name": "All Packaged Coffee",
-    "raw_name": "All Packaged Coffee",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/71YEUJx6APL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/038de727-d8e2-47ed-b5e3-dd9cb0c520b5?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.989549+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "22% off",
-          "prime": "30% off",
-          "regular": "$4.89 to $29.49",
-          "description": "Excludes coffee filters, bulk coffee and ready-to-drink coffee items. While supplies last. Quantity limits apply. Quantities limited. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/038de727-d8e2-47ed-b5e3-dd9cb0c520b5?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.555172+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "22% off",
-          "prime": "30% off",
-          "regular": "$4.89 to $29.49",
-          "description": "Excludes coffee filters, bulk coffee and ready-to-drink coffee items. While supplies last. Quantity limits apply. Quantities limited. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/ad240bcb-1715-4f3c-9096-86c32b5675b9?store-id=10328",
-        "sources": [
-          "Flyer"
         ]
       }
     ]
@@ -227,7 +125,110 @@
     "url": "https://www.target.com/s?searchTerm=AriZona+Hard+Iced+Teas"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.974362+00:00",
+    "observed_at": "2026-09-22T13:17:36.306715+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:3d1978eb-de8b-4d9b-a16e-9e6ee607d054",
+    "name": "Baby Broccolini Bunch",
+    "raw_name": "Baby Broccolini Bunch",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.35,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.35,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "basis_price": "$3.99",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/51hr5ox52NL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/3d1978eb-de8b-4d9b-a16e-9e6ee607d054?store-id=10160",
+    "tags": [
+      "flyer-only deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.306715+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "2 for $6.67",
+          "prime": "2 for $6",
+          "regular": "$3.99",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": "$3.99",
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/3d1978eb-de8b-4d9b-a16e-9e6ee607d054?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.503710+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "2 for $6.67",
+          "prime": "2 for $6",
+          "regular": "$3.99",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": "$3.99",
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/67cf9a9c-17f5-4df7-80cc-f25613c648bc?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:08:30.331649+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -273,7 +274,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.974362+00:00",
+        "observed_at": "2026-09-24T15:08:30.331649+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -303,7 +304,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.539741+00:00",
+        "observed_at": "2026-09-24T15:08:30.868867+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -363,7 +364,7 @@
     "url": "https://www.target.com/s?searchTerm=Barebells+nutrition+bars"
   },
   {
-    "observed_at": "2026-09-23T17:08:19.006333+00:00",
+    "observed_at": "2026-09-24T15:08:30.364606+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -407,7 +408,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:19.006333+00:00",
+        "observed_at": "2026-09-24T15:08:30.364606+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -437,7 +438,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.571988+00:00",
+        "observed_at": "2026-09-24T15:08:30.900854+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -468,7 +469,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:19.006954+00:00",
+    "observed_at": "2026-09-24T15:08:30.365233+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -512,7 +513,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:19.006954+00:00",
+        "observed_at": "2026-09-24T15:08:30.365233+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -542,7 +543,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.572618+00:00",
+        "observed_at": "2026-09-24T15:08:30.901515+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -689,6 +690,100 @@
     "url": "https://www.target.com/s?searchTerm=BLOOM+NUTRITION+energy+stick+packs"
   },
   {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "NO_CURRENT_OFFER",
+    "retailer_product_type": "BOTTLE",
+    "retailer_department": "gl_home",
+    "retailer_description": "Lifestyle",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0854774LF",
+    "name": "Bottle Swing Top with Hinged Stopper 16 Ounce",
+    "raw_name": "Bottle Swing Top with Hinged Stopper 16 Ounce",
+    "brand": "Le Parfait",
+    "source_brand": "Le Parfait",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/410Wksa7ejL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0854774LF",
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0854774LF",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0854774LF",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
     "expires": "Expires May 25",
     "asin": "target:dbb578dd68fb8e0d",
     "name": "Bubba Burger Patties - 32OZ/6CT",
@@ -716,6 +811,339 @@
     "discount_percent": 0,
     "image": "https://target.scene7.com/is/image/Target/GUEST_6e043744-b597-4a89-9416-f23531de9125?wid=324&hei=324&qlt=45&fmt=jpeg",
     "url": "https://www.target.com/s?searchTerm=Bubba+Burger+patties+-+32oz%2F6ct"
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "FOOD",
+    "retailer_department": "gl_fresh_perishable",
+    "retailer_description": "We’ve created an organic cultured coconut treat that tastes as groovy as it looks. We only use clean organic ingredients and ingenious probiotic bacteria, the result is the most creamy and delicious plant-based yogurt around.",
+    "retailer_ingredients": "BIFIDOBACTERIUM ANIM, S, LACTIS BB-12, LACTOBACILLUS ACIDOPHILUS LA-5, LACTOBACILLUS PARACASEI CRL 431, L, DEL, S, BULGARICUS, S, THERMOPHILUS, L, RHAMNOSUS, ORGANIC COCONUTS, WATER, ORGANIC TAPIOCA, VEGAN PROBIOTIC CULTURES",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B08L95VY38",
+    "name": "Cocojune Organic Pure Coconut, White, 4 Ounce",
+    "raw_name": "Cocojune Organic Pure Coconut, White, 4 Ounce (Pack of 1)",
+    "brand": "Cocojune",
+    "source_brand": "Cocojune",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$2.22",
+    "basis_price": "$2.79",
+    "prime_price": "$2.00 ea",
+    "discount": "28% off",
+    "discount_percent": 28,
+    "unit_price": "$0.56/ounce",
+    "image": "https://m.media-amazon.com/images/I/71kCDhq50PL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08L95VY38",
+    "tags": [
+      "organic",
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$2.22",
+        "basis_price": "$2.79",
+        "prime_price": "$2.00",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "unit_price": "$0.56/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08L95VY38",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$2.22",
+        "basis_price": "$2.79",
+        "prime_price": "$2.00",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "unit_price": "$0.56/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08L95VY38",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "FOOD",
+    "retailer_department": "gl_fresh_perishable",
+    "retailer_description": "We combine sweet strawberries, tart rhubarb and fluffy coconut yogurt to create this delicious organic treat. Think summertime strawberries with fresh cream and warm grass under your feet.",
+    "retailer_ingredients": "BIFIDOBACTERIUM ANIM, S, LACTIS BB-12, LACTOBACILLUS ACIDOPHILUS LA-5, LACTOBACILLUS PARACASEI CRL 431, L, DEL, S, BULGARICUS, S, THERMOPHILUS, L, RHAMNOSUS, ORGANIC COCONUTS, WATER, ORGANIC STRAWBERRIES, ORGANIC RHUBARB, ORGANIC CANE SUGAR, ORGANIC TAPIOCA, VEGAN PROBIOTIC CULTURES",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B08L95Z1XP",
+    "name": "Cocojune Organic Strawberry & Rhubarb, Pink, 4 Ounce",
+    "raw_name": "Cocojune Organic Strawberry & Rhubarb, Pink, 4 Ounce (Pack of 1)",
+    "brand": "Cocojune",
+    "source_brand": "Cocojune",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$2.22",
+    "basis_price": "$2.79",
+    "prime_price": "$2.00 ea",
+    "discount": "28% off",
+    "discount_percent": 28,
+    "unit_price": "$0.56/ounce",
+    "image": "https://m.media-amazon.com/images/I/71ve9IBA+zL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B08L95Z1XP",
+    "tags": [
+      "organic",
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$2.22",
+        "basis_price": "$2.79",
+        "prime_price": "$2.00",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "unit_price": "$0.56/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08L95Z1XP",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$2.22",
+        "basis_price": "$2.79",
+        "prime_price": "$2.00",
+        "discount": "28% off",
+        "discount_percent": 28,
+        "unit_price": "$0.56/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08L95Z1XP",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-22T13:17:36.322153+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:20b1d47e-ab7e-4a34-8a44-80d134e4f093",
+    "name": "Condiments and Dips",
+    "raw_name": "Condiments and Dips",
+    "brand": "Primal Kitchen",
+    "source_brand": "Primal Kitchen",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/71lXW+9HNEL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/20b1d47e-ab7e-4a34-8a44-80d134e4f093?store-id=10160",
+    "tags": [
+      "flyer-only deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.322153+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "22% off",
+          "prime": "30% off",
+          "regular": "$5.49 to $11.49",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/20b1d47e-ab7e-4a34-8a44-80d134e4f093?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.518965+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "22% off",
+          "prime": "30% off",
+          "regular": "$5.49 to $15.99",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/689f0e52-97da-49bc-9998-82e6746e040f?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
   },
   {
     "expires": "Expires July 4",
@@ -776,6 +1204,119 @@
     "url": "https://www.target.com/s?searchTerm=De+Soi+non-alcoholic+drinks+-+6pk"
   },
   {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "GROCERY",
+    "retailer_department": "gl_grocery",
+    "retailer_description": "Divina Olive Bruschetta, 7 Ounce",
+    "retailer_ingredients": "Organic Olives (Green Olives, Kalamata), Organic Sunflower Oil, Organic Red Pepper Strips, Organic Capers, Organic Garlic, Organic Red Wine Vinegar, Organic Spices, Sea Salt, Citric Acid (Acidity Regulator).",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0F5DWQFBQ",
+    "name": "Divina Olive Bruschetta, 7 Ounce",
+    "raw_name": "Divina Olive Bruschetta, 7 Ounce",
+    "brand": "Divina",
+    "source_brand": "Divina",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$6.19",
+    "basis_price": "$7.29",
+    "prime_price": "$5.57 ea",
+    "discount": "24% off",
+    "discount_percent": 24,
+    "unit_price": "$6.19/ounce",
+    "image": "https://m.media-amazon.com/images/I/81d45J-PysL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0F5DWQFBQ",
+    "tags": [
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$6.19",
+        "basis_price": "$7.29",
+        "prime_price": "$5.57",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "$6.19/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0F5DWQFBQ",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$6.19",
+        "basis_price": "$7.29",
+        "prime_price": "$5.57",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "$6.19/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0F5DWQFBQ",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
     "expires": "Eligible with Target Circle membership",
     "asin": "target:50d84e32de6b42c5",
     "name": "Dripdrop",
@@ -801,6 +1342,119 @@
     "discount_percent": 0,
     "image": "https://target.scene7.com/is/image/Target/GUEST_8e9993b0-eacf-4e8b-8289-e53ffa6a1fec?wid=324&hei=324&qlt=45&fmt=jpeg",
     "url": "https://www.target.com/s?searchTerm=DripDrop"
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "PET_FOOD",
+    "retailer_department": "gl_grocery",
+    "retailer_description": "Yummy EARTH’S BEST ORGANIC Munchy Fingers are a fun + wholesome way to help little ones learn to self-feed. Our play + learn line of finger foods is a three stage platform designed specifically to support motor skill development throughout the weaning journey.",
+    "retailer_ingredients": "Organic corn, organic chickpea flour, organic sunflower oil and/or organic canola oil, organic strawberry powder, organic raspberry powder, organic banana powder, organic rosemary extract (to preserve freshness). Manufactured in a facility that processes milk, soy, and wheat.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0FCSJ68GX",
+    "name": "Earth's Best Munchy Fingers, Mixed Berry, 1 Oz",
+    "raw_name": "Earth's Best Munchy Fingers, Mixed Berry, 1 Oz (Pack of 4)",
+    "brand": "Earth's Best",
+    "source_brand": "Earth's Best",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$4.47",
+    "basis_price": "$5.39",
+    "prime_price": "$4.02 ea",
+    "discount": "25% off",
+    "discount_percent": 25,
+    "unit_price": "$4.26/ounce",
+    "image": "https://m.media-amazon.com/images/I/71xnguMpo+L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FCSJ68GX",
+    "tags": [
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$4.47",
+        "basis_price": "$5.39",
+        "prime_price": "$4.02",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "unit_price": "$4.26/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FCSJ68GX",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$4.47",
+        "basis_price": "$5.39",
+        "prime_price": "$4.02",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "unit_price": "$4.26/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FCSJ68GX",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
   },
   {
     "expires": "Expires May 30",
@@ -859,6 +1513,120 @@
     "discount_percent": 0,
     "image": "https://target.scene7.com/is/image/Target/GUEST_7e7aa706-95b1-4d8a-9e03-143fa8f751e8?wid=324&hei=324&qlt=45&fmt=jpeg",
     "url": "https://www.target.com/s?searchTerm=Fancy+Sprinkles+edible+glitters"
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "FOOD",
+    "retailer_department": "gl_grocery",
+    "retailer_description": "Farmers Market Foods Squash Butternut Canned organic . This product contains Natural Ingredients. This product is manufactured in United States. Freezing and Chilling Temperature of the product is Ambient: Room Temperature.",
+    "retailer_ingredients": "Certified Organic Butternut Squash",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B000WDP7ZI",
+    "name": "Farmer's Market Foods, Organic Canned Butternut Squash Puree, 15 Oz",
+    "raw_name": "Farmer's Market Foods, Organic Canned Butternut Squash Puree, 15 oz",
+    "brand": "Farmer's Market",
+    "source_brand": "Farmer's Market",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$3.91",
+    "basis_price": "$4.69",
+    "prime_price": "$3.52 ea",
+    "discount": "25% off",
+    "discount_percent": 25,
+    "unit_price": "$0.26/ounce",
+    "image": "https://m.media-amazon.com/images/I/81GbeO7+qML.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B000WDP7ZI",
+    "tags": [
+      "organic",
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$3.91",
+        "basis_price": "$4.69",
+        "prime_price": "$3.52",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "unit_price": "$0.26/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B000WDP7ZI",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$3.91",
+        "basis_price": "$4.69",
+        "prime_price": "$3.52",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "unit_price": "$0.26/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B000WDP7ZI",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
   },
   {
     "expires": "Expires May 25",
@@ -1002,7 +1770,7 @@
     "url": "https://www.target.com/s?searchTerm=fresh+mini+watermelon+-+each"
   },
   {
-    "observed_at": "2026-09-23T17:08:19.001627+00:00",
+    "observed_at": "2026-09-24T15:08:30.359539+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -1046,7 +1814,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:19.001627+00:00",
+        "observed_at": "2026-09-24T15:08:30.359539+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1076,7 +1844,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.567283+00:00",
+        "observed_at": "2026-09-24T15:08:30.896142+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1107,7 +1875,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:18.907250+00:00",
+    "observed_at": "2026-09-24T15:08:30.286331+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -1151,7 +1919,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.907250+00:00",
+        "observed_at": "2026-09-24T15:08:30.286331+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1181,7 +1949,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.466990+00:00",
+        "observed_at": "2026-09-24T15:08:30.792526+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1212,7 +1980,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:18.981966+00:00",
+    "observed_at": "2026-09-24T15:08:30.339311+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -1233,10 +2001,10 @@
     "classification_status": "failed",
     "failed_from_category": "Pantry",
     "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
+    "category_confidence": 0.35,
     "ai_category": "Other/Failed",
     "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
+    "ai_confidence": 0.35,
     "ai_label_source": "model",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v18",
@@ -1258,7 +2026,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.981966+00:00",
+        "observed_at": "2026-09-24T15:08:30.339311+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1288,7 +2056,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.547458+00:00",
+        "observed_at": "2026-09-24T15:08:30.876464+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1347,7 +2115,7 @@
     "url": "https://www.target.com/s?searchTerm=Glucerna+meal+replacement+drinks"
   },
   {
-    "observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
     "price_context": "Store-specific online",
     "price_source": "Whole Foods product API",
     "price_verified": true,
@@ -1361,7 +2129,7 @@
     "retailer_department": "gl_grocery",
     "retailer_description": "Baking",
     "retailer_ingredients": "Organic Boulder Berry: Organic Apple, Organic Carrot, Organic Apple Puree Concentrate, Organic Raspberry, Organic Strawberry, Organic Blackberry, Organic Lemon Juice Concentrate.;organic Pedal Peach: Organic Apple, Organic Peach, Organic Sweet Potato, Organic Apple Puree Concentrate, Organic Lemon Juice Concentrate.",
-    "metadata_observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
     "asin": "B0CWMSZFZ1",
     "name": "Gogo Squeez, Fruit and Veggies Blend Berry Boulder Pedal Peach, 38.4 Ounce",
     "raw_name": "Gogo Squeez, Fruit And Veggies Blend Berry Boulder Pedal Peach, 38.4 Ounce",
@@ -1397,7 +2165,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -1425,7 +2193,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -1454,7 +2222,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:18.986987+00:00",
+    "observed_at": "2026-09-24T15:08:30.344553+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -1475,10 +2243,10 @@
     "classification_status": "failed",
     "failed_from_category": "Pantry",
     "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
+    "category_confidence": 0.35,
     "ai_category": "Other/Failed",
     "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
+    "ai_confidence": 0.35,
     "ai_label_source": "model",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v18",
@@ -1500,7 +2268,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.986987+00:00",
+        "observed_at": "2026-09-24T15:08:30.344553+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1530,7 +2298,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.552616+00:00",
+        "observed_at": "2026-09-24T15:08:30.881545+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1589,7 +2357,7 @@
     "url": "https://www.target.com/s?searchTerm=Goldfish+Harry+Potter+baked+graham"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.966233+00:00",
+    "observed_at": "2026-09-24T15:08:30.323621+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -1610,10 +2378,10 @@
     "classification_status": "failed",
     "failed_from_category": "Pantry",
     "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
+    "category_confidence": 0.35,
     "ai_category": "Other/Failed",
     "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
+    "ai_confidence": 0.35,
     "ai_label_source": "model",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v18",
@@ -1634,7 +2402,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.966233+00:00",
+        "observed_at": "2026-09-24T15:08:30.323621+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1664,7 +2432,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.531115+00:00",
+        "observed_at": "2026-09-24T15:08:30.860640+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -1751,6 +2519,194 @@
     "url": "https://www.target.com/s?searchTerm=Hormel+Gatherings+party+trays"
   },
   {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "NO_CURRENT_OFFER",
+    "retailer_product_type": "HEALTH_PERSONAL_CARE",
+    "retailer_department": "gl_drugstore",
+    "retailer_description": "Supplements",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0DGW2JZ6G",
+    "name": "Huel Watermelon Daily Greens 20 SRV, 6 OZ",
+    "raw_name": "Huel Watermelon Daily Greens 20 SRV, 6 OZ",
+    "brand": "Huel",
+    "source_brand": "Huel",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/81JSLSAXuyL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DGW2JZ6G",
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DGW2JZ6G",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DGW2JZ6G",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "NO_CURRENT_OFFER",
+    "retailer_product_type": "BOTTLE",
+    "retailer_department": "gl_luggage",
+    "retailer_description": "Introducing the GoToob+, the new standard in silicone bottles. The first GoToob was the original, patented soft travel bottle, and it set the standard in this category for a decade. While others have been busy trying to copy the original GoToob, we’ve been busy making something even better. As with all humangear products, the GoToob+ comes with a lifetime warranty.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0793FCG66",
+    "name": "Humangear Gotoob+ (Small)",
+    "raw_name": "humangear GoToob+ (Small) | Refillable Silicone Travel Bottle | Locking Lid | Food-Safe Material | Purple, Small (1.7 fl.oz; 53ml)",
+    "brand": "Humangear",
+    "source_brand": "Humangear",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/61B5vQWTvwL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0793FCG66",
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0793FCG66",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0793FCG66",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
     "expires": "Eligible with Target Circle membership",
     "asin": "target:d8e3ad89ce5fc3d5",
     "name": "Impossible",
@@ -1805,6 +2761,194 @@
     "discount_percent": 0,
     "image": "https://target.scene7.com/is/image/Target/GUEST_8e1fd7c6-665a-4974-9aaa-94562b6ecf68?wid=324&hei=324&qlt=45&fmt=jpeg",
     "url": "https://www.target.com/s?searchTerm=JonnyPops+freezer+pops+-+20ct"
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "NO_CURRENT_OFFER",
+    "retailer_product_type": "CLEANING_BRUSH",
+    "retailer_department": "gl_home",
+    "retailer_description": "This distinctive dish brush helps make full use of space around the sink by conveniently storing inside it. The design has a non-slip resting point that enables it to be stored on the inside edge of the sink, thereby saving space and allowing excess water and soap suds to drain neatly away. The non-scratch brush head is curved to help clean in the corners of trays and pans and has an integrated pan scraper for tough food deposits. Dishwasher safe.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B00DS3JPT8",
+    "name": "Joseph Joseph Edge Dish Brush with Integrated Sink Rest, Green",
+    "raw_name": "Joseph Joseph Edge Dish Brush with Integrated Sink Rest, Green",
+    "brand": "Joseph Joseph",
+    "source_brand": "Joseph Joseph",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/41VGAAVPp7L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B00DS3JPT8",
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00DS3JPT8",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00DS3JPT8",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "NO_CURRENT_OFFER",
+    "retailer_product_type": "FOOD_STRAINER",
+    "retailer_department": "gl_kitchen",
+    "retailer_description": "This clever design combines the features of a salad spinner and a colander in one, thereby saving you precious cupboard space. For preparing salads, simply attach the spindle and suction cup to the basket, add the food and rinse as normal under the tap. Next fix the colander to the base of the sink with the suction cup and then pump the spindle up and down to rotate the basket and expel the excess water. To use as a conventional colander, simply remove the spindle and suction cup and hold using the side handles. When finished, the spindle and suction cup fit neatly together for easy storage. Dishwasher safe.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B09WG2KJLG",
+    "name": "Joseph Joseph Spindola In-Sink Salad Spinning Colander",
+    "raw_name": "Joseph Joseph Spindola In-sink Salad Spinning Colander",
+    "brand": "Joseph Joseph",
+    "source_brand": "Joseph Joseph",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/51ho7Qvr5UL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B09WG2KJLG",
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B09WG2KJLG",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B09WG2KJLG",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
   },
   {
     "expires": "Eligible with Target Circle membership",
@@ -2088,7 +3232,7 @@
     "url": "https://www.target.com/s?searchTerm=Mighty+Spark+Food+Co.+patties"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.994705+00:00",
+    "observed_at": "2026-09-24T15:08:30.352279+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -2133,7 +3277,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.994705+00:00",
+        "observed_at": "2026-09-24T15:08:30.352279+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2163,7 +3307,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.560318+00:00",
+        "observed_at": "2026-09-24T15:08:30.889149+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2194,7 +3338,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:19.004110+00:00",
+    "observed_at": "2026-09-24T15:08:30.362342+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -2238,7 +3382,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:19.004110+00:00",
+        "observed_at": "2026-09-24T15:08:30.362342+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2268,7 +3412,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.569779+00:00",
+        "observed_at": "2026-09-24T15:08:30.898613+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2411,23 +3555,233 @@
     "url": "https://www.target.com/s?searchTerm=noosa+cheesecake+bites"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.950525+00:00",
-    "expires": "2026-09-29T05:00:00Z",
-    "starts_at": "2026-09-23T05:00:00Z",
+    "observed_at": "2026-09-22T13:17:36.344328+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
     "price_context": "Weekly flyer",
     "price_source": "Weekly flyer",
     "price_verified": true,
     "offer_kind": "promotion",
     "source_store_name": "Columbus Circle",
-    "asin": "flyer:051323ce-0bf7-4119-9ad8-8ab6dc1949fb",
-    "name": "Oktoberfest Sausages",
-    "raw_name": "Oktoberfest Sausages",
-    "brand": "North Country Smokehouse and Olympia Provisions",
-    "source_brand": "North Country Smokehouse and Olympia Provisions",
+    "asin": "flyer:afe106d5-b0a5-427d-98a5-a8166376ed2e",
+    "name": "Nuts",
+    "raw_name": "Nuts ",
+    "brand": "GoodSAM",
+    "source_brand": "GoodSAM",
     "brand_source": "source",
     "retailer": "Whole Foods",
     "sources": [
       "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/7137u4Wb3PL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/afe106d5-b0a5-427d-98a5-a8166376ed2e?store-id=10160",
+    "tags": [
+      "flyer-only deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.344328+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "14% off",
+          "prime": "23% off",
+          "regular": "$9.69 to $17.99",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/afe106d5-b0a5-427d-98a5-a8166376ed2e?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.539628+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "14% off",
+          "prime": "23% off",
+          "regular": "$5.79 to $17.99",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/23331afa-4c88-4b16-a76e-cec8b5f00e4f?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-22T13:17:36.280937+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:0144fd5f-6b90-4c18-a4a8-79a3d446daec",
+    "name": "Organic Ground Turkey Tray Pack",
+    "raw_name": "Organic Ground Turkey Tray Pack",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/91+8iXP74GL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/0144fd5f-6b90-4c18-a4a8-79a3d446daec?store-id=10160",
+    "tags": [
+      "flyer-only deal",
+      "organic"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.280937+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "",
+          "prime": "Buy 2, Get 1 Free",
+          "regular": "Regular prices vary",
+          "description": "Excludes kosher, pasture-raised, heritage-breed, heirloom-breed, marinated and cooked. Must purchase in multiples of 3 to receive discount. Discount applied on lower-priced item. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/0144fd5f-6b90-4c18-a4a8-79a3d446daec?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.477920+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "",
+          "prime": "Buy 2, Get 1 Free",
+          "regular": "$9.99",
+          "description": "Excludes kosher, pasture-raised, heritage-breed, heirloom-breed, marinated and cooked. Must purchase in multiples of 3 to receive discount. Discount applied on lower-priced item. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": "$9.99",
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/09fc0a62-d65a-42e5-b661-391bb114a905?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "NO_CURRENT_OFFER",
+    "retailer_product_type": "BAKING_PAN",
+    "retailer_department": "gl_kitchen",
+    "retailer_description": "The OXO Good Grips Non-Stick Pro Ceramic Coated Metal Bakeware 12-Cup Muffin Pan is a bakeware solution that’s beautiful, durable and easy to clean. The muffin pan is perfect for making a dozen sweet or savory muffins, each sized about 2.75 inches. The efficient ceramic non-stick coating heats quickly and evenly, allows for easy food release and protects against scratching, staining, corrosion and abrasion. Get consistent results – the light interior coating color has been optimized for even browning for both sweet and savory baking. The bakeware is constructed from heavy-gauge aluminized steel for stability, even heat distribution and durability for years to come. The square-rolled edge adds structure and strength to the bakeware, and the wide rims provide a secure grip for easier handling in and around the oven. Each pan features pan dimension markings on the top surface, so you can find the right bakeware item for your recipe. Zero-draft walls on our cake pans allow for straight and uniform cake layers. Rounded interior corners allow for easier cleaning. Hand wash for best results.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0DQDZ16D9",
+    "name": "OXO Good Grips Non-Stick Pro Ceramic Coated Metal Bakeware, 12-CUP Muffin",
+    "raw_name": "OXO Good Grips Non-Stick Pro Ceramic Coated Metal Bakeware, 12-Cup Muffin | Baking Essentials, Baking Sheet, Ideal for Muffins and Cupcakes, Even Browning Every Time",
+    "brand": "OXO",
+    "source_brand": "OXO",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
     ],
     "source_count": 1,
     "category": "Other/Failed",
@@ -2442,13 +3796,9 @@
     "ai_label_source": "model",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v18",
-    "basis_price": "$7.49",
     "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/C1SpAWIHyGL.png",
-    "url": "https://www.wholefoodsmarket.com/promotion/051323ce-0bf7-4119-9ad8-8ab6dc1949fb?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
+    "image": "https://m.media-amazon.com/images/I/61GEkUDeIJL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQDZ16D9",
     "available_store_ids": [
       "10160",
       "10328"
@@ -2456,62 +3806,52 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.950525+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
         "price_verified": true,
-        "offer_kind": "promotion",
+        "offer_kind": null,
         "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
         "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "11% off",
-          "prime": "20% off",
-          "regular": "$7.49",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$7.49",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/051323ce-0bf7-4119-9ad8-8ab6dc1949fb?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.514875+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "11% off",
-          "prime": "20% off",
-          "regular": "$7.49 to $8.49",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
+        "promotion_terms": null,
         "current_price": null,
         "basis_price": null,
         "prime_price": null,
         "discount": null,
         "discount_percent": 0,
         "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/0fb8b29a-654f-4ae5-8f50-c4fdf55e21d7?store-id=10328",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQDZ16D9",
         "sources": [
-          "Flyer"
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "NO_CURRENT_OFFER",
+        "pricing_uom": {},
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DQDZ16D9",
+        "sources": [
+          "Search Deals"
         ]
       }
     ]
@@ -2545,7 +3885,7 @@
     "url": "https://www.target.com/s?searchTerm=Pedialyte+electrolyte+drinks"
   },
   {
-    "observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
     "price_context": "Store-specific online",
     "price_source": "Whole Foods product API",
     "price_verified": true,
@@ -2554,7 +3894,7 @@
     "retailer_product_type": "PET_FOOD",
     "retailer_department": "gl_grocery",
     "retailer_description": "Simply Smart Nuggets",
-    "metadata_observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
     "asin": "B0DY9C6XQ9",
     "name": "Perdue Organic Simply Smart Nuggets, 22 OZ",
     "raw_name": "Perdue Organic Simply Smart Nuggets, 22 OZ",
@@ -2591,7 +3931,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -2616,7 +3956,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -2635,6 +3975,119 @@
         "discount_percent": 0,
         "unit_price": null,
         "url": "https://www.wholefoodsmarket.com/grocery/product/B0DY9C6XQ9",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "FOOD",
+    "retailer_department": "gl_fresh_perishable",
+    "retailer_description": "Certified Humane Pasture-Raised Eggs from small family farms.",
+    "retailer_ingredients": "Egg",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0BT377KP2",
+    "name": "Pete & Gerrys Pasture-Raised Large 12 CT",
+    "raw_name": "Pete & Gerrys Pasture-Raised Large 12 CT",
+    "brand": "Pete & Gerry's",
+    "source_brand": "Pete & Gerry's",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$6.20",
+    "basis_price": "$6.99",
+    "prime_price": "$5.58 ea",
+    "discount": "20% off",
+    "discount_percent": 20,
+    "unit_price": "$0.24/ounce",
+    "image": "https://m.media-amazon.com/images/I/71AhWracHPL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0BT377KP2",
+    "tags": [
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$6.20",
+        "basis_price": "$6.99",
+        "prime_price": "$5.58",
+        "discount": "20% off",
+        "discount_percent": 20,
+        "unit_price": "$0.24/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BT377KP2",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$6.20",
+        "basis_price": "$6.99",
+        "prime_price": "$5.58",
+        "discount": "20% off",
+        "discount_percent": 20,
+        "unit_price": "$0.24/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BT377KP2",
         "sources": [
           "Search Deals"
         ]
@@ -2673,7 +4126,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:19.006630+00:00",
+    "observed_at": "2026-09-24T15:08:30.364906+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -2717,7 +4170,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:19.006630+00:00",
+        "observed_at": "2026-09-24T15:08:30.364906+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2747,7 +4200,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.572282+00:00",
+        "observed_at": "2026-09-24T15:08:30.901152+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2773,6 +4226,225 @@
         "url": "https://www.wholefoodsmarket.com/promotion/dc58f8dd-981f-4d53-9164-dae3d516925d?store-id=10328",
         "sources": [
           "Flyer"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-22T13:17:36.393451+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:41ec61e1-96bc-41e8-a305-84e8a163fc55",
+    "name": "Proteins and Sports Nutrition Supplements",
+    "raw_name": "Proteins and Sports Nutrition Supplements",
+    "brand": "Vega",
+    "source_brand": "Vega",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/716fm5yj3fL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/41ec61e1-96bc-41e8-a305-84e8a163fc55?store-id=10160",
+    "tags": [
+      "flyer-only deal",
+      "high-protein"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.393451+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "15% off",
+          "prime": "23% off",
+          "regular": "Regular prices vary",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/41ec61e1-96bc-41e8-a305-84e8a163fc55?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.587723+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "15% off",
+          "prime": "23% off",
+          "regular": "Regular prices vary",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/40181795-16b0-4514-8a52-43fbe44c0a7c?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "PUFFED_SNACK",
+    "retailer_department": "gl_grocery",
+    "retailer_description": "PUFFS SNACK PNUT BTR",
+    "retailer_ingredients": "ORGANIC PEANUT BUTTER (ORGANIC ROASTED PEANUTS), ORGANIC DEGERMED CORNMEAL, ORGANIC PEANUT FLOUR, ORGANIC COCONUT OIL, SEA SALT.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0C4C5MTBZ",
+    "name": "Puffs Snack PNUT BTR",
+    "raw_name": "PUFFS SNACK PNUT BTR",
+    "brand": "Earth's Best",
+    "source_brand": "Earth's Best",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$3.72",
+    "basis_price": "$4.49",
+    "prime_price": "$3.35 ea",
+    "discount": "25% off",
+    "discount_percent": 25,
+    "unit_price": "$1.86/ounce",
+    "image": "https://m.media-amazon.com/images/I/813OHZgJdPL.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0C4C5MTBZ",
+    "tags": [
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$3.72",
+        "basis_price": "$4.49",
+        "prime_price": "$3.35",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "unit_price": "$1.86/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0C4C5MTBZ",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$3.72",
+        "basis_price": "$4.49",
+        "prime_price": "$3.35",
+        "discount": "25% off",
+        "discount_percent": 25,
+        "unit_price": "$1.86/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0C4C5MTBZ",
+        "sources": [
+          "Search Deals"
         ]
       }
     ]
@@ -2835,7 +4507,7 @@
     "url": "https://www.target.com/s?searchTerm=Queso+Mama+white+queso+dips"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.946679+00:00",
+    "observed_at": "2026-09-24T15:08:30.308269+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -2856,10 +4528,10 @@
     "classification_status": "failed",
     "failed_from_category": "Pantry",
     "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
+    "category_confidence": 0.35,
     "ai_category": "Other/Failed",
     "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
+    "ai_confidence": 0.35,
     "ai_label_source": "model",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v18",
@@ -2880,7 +4552,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.946679+00:00",
+        "observed_at": "2026-09-24T15:08:30.308269+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2910,7 +4582,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.510716+00:00",
+        "observed_at": "2026-09-24T15:08:30.839676+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -2941,7 +4613,7 @@
     ]
   },
   {
-    "observed_at": "2026-09-23T17:08:18.969054+00:00",
+    "observed_at": "2026-09-24T15:08:30.326215+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -2962,10 +4634,10 @@
     "classification_status": "failed",
     "failed_from_category": "Pantry",
     "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
+    "category_confidence": 0.35,
     "ai_category": "Other/Failed",
     "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
+    "ai_confidence": 0.35,
     "ai_label_source": "model",
     "ai_model_name": "local-taxonomy-classifier",
     "ai_model_version": "taxonomy-local-ml-v18",
@@ -2986,7 +4658,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.969054+00:00",
+        "observed_at": "2026-09-24T15:08:30.326215+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -3016,7 +4688,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.534064+00:00",
+        "observed_at": "2026-09-24T15:08:30.863465+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -3040,109 +4712,6 @@
         "discount_percent": 10,
         "unit_price": null,
         "url": "https://www.wholefoodsmarket.com/promotion/be40ae3b-cb1c-46d9-b0c0-566849dbe317?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-23T17:08:18.979445+00:00",
-    "expires": "2026-09-29T05:00:00Z",
-    "starts_at": "2026-09-23T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:f4e70858-43bc-41e9-8f4e-47a6a8ade40b",
-    "name": "Red Raspberries, 6 Oz",
-    "raw_name": "Red Raspberries, 6 oz",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "basis_price": "$4.99",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/61nG75S1-OL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/f4e70858-43bc-41e9-8f4e-47a6a8ade40b?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.979445+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "2 for $7.78",
-          "prime": "2 for $7",
-          "regular": "$4.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$4.99",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/f4e70858-43bc-41e9-8f4e-47a6a8ade40b?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.544909+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "2 for $7.78",
-          "prime": "2 for $7",
-          "regular": "$4.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$4.99",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/82e55b77-3ec0-42ff-b8fc-b8766b3dbf4e?store-id=10328",
         "sources": [
           "Flyer"
         ]
@@ -3445,7 +5014,7 @@
     "url": "https://www.target.com/s?searchTerm=select+Good+%26+Gather%E2%84%A2+meat"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.920806+00:00",
+    "observed_at": "2026-09-24T15:08:30.292975+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -3486,7 +5055,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.920806+00:00",
+        "observed_at": "2026-09-24T15:08:30.292975+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -3516,7 +5085,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.483002+00:00",
+        "observed_at": "2026-09-24T15:08:30.809043+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -3601,7 +5170,7 @@
     "url": "https://www.target.com/s?searchTerm=select+Jimmy+Dean+breakfast+items"
   },
   {
-    "observed_at": "2026-09-23T17:08:18.990453+00:00",
+    "observed_at": "2026-09-24T15:08:30.347996+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -3646,7 +5215,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:18.990453+00:00",
+        "observed_at": "2026-09-24T15:08:30.347996+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -3676,7 +5245,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.556086+00:00",
+        "observed_at": "2026-09-24T15:08:30.884954+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -3896,6 +5465,113 @@
     "url": "https://www.target.com/s?searchTerm=select+RYSE+%26+Oath+nutrition"
   },
   {
+    "observed_at": "2026-09-22T13:17:36.369990+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:07a77169-f116-4e61-b06a-410290431a45",
+    "name": "Select Single-Serve Protein Shakes, 12 Fl Oz",
+    "raw_name": "Select Single-Serve Protein Shakes, 12 fl oz",
+    "brand": "Koia",
+    "source_brand": "Koia",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "basis_price": "$4.79",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/713Ru9nQwwL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/07a77169-f116-4e61-b06a-410290431a45?store-id=10160",
+    "tags": [
+      "flyer-only deal",
+      "high-protein"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.369990+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "2 for $7.78",
+          "prime": "2 for $7",
+          "regular": "$4.79",
+          "description": "Excludes ELITE protein shakes. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": "$4.79",
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/07a77169-f116-4e61-b06a-410290431a45?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.564783+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "2 for $7.78",
+          "prime": "2 for $7",
+          "regular": "$4.79 to $5.29",
+          "description": "Excludes ELITE protein shakes. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/fa2d310d-3013-4685-a548-5e88e01a413f?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
     "expires": "Expires May 30",
     "asin": "target:56222779318af30b",
     "name": "Select Smash Kitchen Condiments",
@@ -3979,6 +5655,115 @@
     ]
   },
   {
+    "observed_at": "2026-09-22T13:17:36.363068+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:10c728d4-28c7-41a4-83a6-2f1ad84160e3",
+    "name": "Sodas, 4 Pk",
+    "raw_name": "Sodas, 4 pk",
+    "brand": "Nixie",
+    "source_brand": "Nixie",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$6.99 ea",
+    "prime_price": "$6.29 ea",
+    "discount": "10% off",
+    "discount_percent": 10,
+    "image": "https://m.media-amazon.com/images/I/712Zj23ytxL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/10c728d4-28c7-41a4-83a6-2f1ad84160e3?store-id=10160",
+    "tags": [
+      "flyer-only deal",
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.363068+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "$6.99 ea",
+          "prime": "$6.29 ea",
+          "regular": "Regular prices vary",
+          "description": "Excludes single 12-fl-oz items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": "$6.99 ea",
+        "basis_price": null,
+        "prime_price": "$6.29 ea",
+        "discount": "10% off",
+        "discount_percent": 10,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/10c728d4-28c7-41a4-83a6-2f1ad84160e3?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.558181+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "$6.99 ea",
+          "prime": "$6.29 ea",
+          "regular": "$9.49",
+          "description": "Excludes single 12-fl-oz items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": "$6.99 ea",
+        "basis_price": "$9.49",
+        "prime_price": "$6.29 ea",
+        "discount": "34% off",
+        "discount_percent": 34,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/788f318f-88c2-42cf-9e4a-71765bb3e676?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
     "expires": "Expires May 30",
     "asin": "target:e2aa6a97d60f462b",
     "name": "Stonefire Artisan Flatbreads",
@@ -4037,7 +5822,121 @@
     "url": "https://www.target.com/s?searchTerm=Stonefire+original+naan+dippers"
   },
   {
-    "observed_at": "2026-09-23T17:08:19.007253+00:00",
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "price_context": "Store-specific online",
+    "price_source": "Whole Foods product API",
+    "price_verified": true,
+    "source_store_name": "Columbus Circle",
+    "availability": "IN_STOCK",
+    "pricing_uom": {
+      "dimension": "COUNT",
+      "unit": "UNITS"
+    },
+    "retailer_product_type": "HEALTH_PERSONAL_CARE",
+    "retailer_department": "gl_drugstore",
+    "retailer_description": "organic protein powder",
+    "retailer_ingredients": "PROPRIETARY PROTEIN BLEND (ORGANIC PEA PROTEIN, ORGANIC MUNG BEAN PROTEIN, ORGANIC FAVA BEAN PROTEIN, ORGANIC CHIA SEED POWDER), ORGANIC FLAVOR, ORGANIC DUTCH COCOA, ORGANIC MEDIUM-CHAIN TRIGLYCERIDES OIL, ORGANIC OAT MILK POWDER, ORGANIC ACACIA FIBER, ORGANIC STEVIOL GLYCOSIDES (REBAUDIOSIDE A), SEA SALT, ORGANIC GUAR GUM, ORGANIC MONK FRUIT EXTRACT.",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
+    "asin": "B0FH5VBJQC",
+    "name": "Sunwarrior Warrior Blend Protein (35.5 Ounce)",
+    "raw_name": "Sunwarrior Warrior Blend Protein (35.5 Ounce)",
+    "brand": "Sunwarrior",
+    "source_brand": "Sunwarrior",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Search Deals"
+    ],
+    "source_count": 1,
+    "category": "Other/Failed",
+    "subcategory": "Needs Review",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Other/Failed",
+    "ai_subcategory": "Needs Review",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "current_price": "$42.49",
+    "basis_price": "$49.99",
+    "prime_price": "$38.24 ea",
+    "discount": "24% off",
+    "discount_percent": 24,
+    "unit_price": "$1.20/ounce",
+    "image": "https://m.media-amazon.com/images/I/717rRNBph+L.jpg",
+    "url": "https://www.wholefoodsmarket.com/grocery/product/B0FH5VBJQC",
+    "tags": [
+      "high-protein",
+      "prime deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$42.49",
+        "basis_price": "$49.99",
+        "prime_price": "$38.24",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "$1.20/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FH5VBJQC",
+        "sources": [
+          "Search Deals"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
+        "expires": null,
+        "starts_at": null,
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "offer_kind": null,
+        "source_store_name": "Upper West Side",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "unit_evidence": null,
+        "promotion_terms": null,
+        "current_price": "$42.49",
+        "basis_price": "$49.99",
+        "prime_price": "$38.24",
+        "discount": "24% off",
+        "discount_percent": 24,
+        "unit_price": "$1.20/ounce",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FH5VBJQC",
+        "sources": [
+          "Search Deals"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:08:30.365537+00:00",
     "expires": "2026-09-29T05:00:00Z",
     "starts_at": "2026-09-23T05:00:00Z",
     "price_context": "Weekly flyer",
@@ -4082,7 +5981,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:08:19.007253+00:00",
+        "observed_at": "2026-09-24T15:08:30.365537+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -4112,7 +6011,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:08:19.572916+00:00",
+        "observed_at": "2026-09-24T15:08:30.901805+00:00",
         "expires": "2026-09-29T05:00:00Z",
         "starts_at": "2026-09-23T05:00:00Z",
         "price_context": "Weekly flyer",
@@ -4169,7 +6068,112 @@
     "url": "https://www.target.com/s?searchTerm=Sweet+Craft+Dolceria+pudding"
   },
   {
-    "observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "observed_at": "2026-09-22T13:17:36.334022+00:00",
+    "expires": "2026-09-22T05:00:00Z",
+    "starts_at": "2026-09-16T05:00:00Z",
+    "price_context": "Weekly flyer",
+    "price_source": "Weekly flyer",
+    "price_verified": true,
+    "offer_kind": "promotion",
+    "source_store_name": "Columbus Circle",
+    "asin": "flyer:1867834a-b05f-4abc-ac0b-878447c4f1d2",
+    "name": "Sweeteners",
+    "raw_name": "Sweeteners",
+    "brand": "In the Raw",
+    "source_brand": "In the Raw",
+    "brand_source": "source",
+    "retailer": "Whole Foods",
+    "sources": [
+      "Flyer"
+    ],
+    "source_count": 1,
+    "category": "Pantry",
+    "subcategory": "Meal Kits & Sides",
+    "classification_status": "failed",
+    "failed_from_category": "Pantry",
+    "failed_from_subcategory": "Meal Kits & Sides",
+    "category_confidence": 0.25,
+    "ai_category": "Pantry",
+    "ai_subcategory": "Meal Kits & Sides",
+    "ai_confidence": 0.25,
+    "ai_label_source": "model",
+    "ai_model_name": "local-taxonomy-classifier",
+    "ai_model_version": "taxonomy-local-ml-v18",
+    "discount_percent": 0,
+    "image": "https://m.media-amazon.com/images/I/713uKzY-kXL.jpg",
+    "url": "https://www.wholefoodsmarket.com/promotion/1867834a-b05f-4abc-ac0b-878447c4f1d2?store-id=10160",
+    "tags": [
+      "flyer-only deal"
+    ],
+    "available_store_ids": [
+      "10160",
+      "10328"
+    ],
+    "store_offers": [
+      {
+        "store_id": "10160",
+        "observed_at": "2026-09-22T13:17:36.334022+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "14% off",
+          "prime": "23% off",
+          "regular": "$4.49 to $4.99",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/1867834a-b05f-4abc-ac0b-878447c4f1d2?store-id=10160",
+        "sources": [
+          "Flyer"
+        ]
+      },
+      {
+        "store_id": "10328",
+        "observed_at": "2026-09-22T13:17:36.529509+00:00",
+        "expires": "2026-09-22T05:00:00Z",
+        "starts_at": "2026-09-16T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "availability": null,
+        "pricing_uom": null,
+        "unit_evidence": null,
+        "promotion_terms": {
+          "sale": "14% off",
+          "prime": "23% off",
+          "regular": "$4.49 to $10.49",
+          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+        },
+        "current_price": null,
+        "basis_price": null,
+        "prime_price": null,
+        "discount": null,
+        "discount_percent": 0,
+        "unit_price": null,
+        "url": "https://www.wholefoodsmarket.com/promotion/5de8818f-a85c-48fd-a684-0f64c2817424?store-id=10328",
+        "sources": [
+          "Flyer"
+        ]
+      }
+    ]
+  },
+  {
+    "observed_at": "2026-09-24T15:09:31.142197+00:00",
     "price_context": "Store-specific online",
     "price_source": "Whole Foods product API",
     "price_verified": true,
@@ -4183,7 +6187,7 @@
     "retailer_department": "gl_drugstore",
     "retailer_description": "Canned And Jarred Vegetables",
     "retailer_ingredients": "PURIFIED WATER, PINEAPPLE PUREE, MANGO PUREE, DEHYDRATED SEA MOSS, MONK FRUIT JUICE CONCENTRATE, ASCORBIC ACID",
-    "metadata_observed_at": "2026-09-23T17:10:36.625067+00:00",
+    "metadata_observed_at": "2026-09-24T15:09:31.142197+00:00",
     "asin": "B0BKFS4488",
     "name": "Trueseamoss Wildcrafted Irish Sea Moss Gel",
     "raw_name": "TrueSeaMoss Wildcrafted Irish Sea Moss Gel – All 7 Flavors, 12 ounce",
@@ -4225,7 +6229,7 @@
     "store_offers": [
       {
         "store_id": "10160",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -4253,7 +6257,7 @@
       },
       {
         "store_id": "10328",
-        "observed_at": "2026-09-23T17:10:36.625067+00:00",
+        "observed_at": "2026-09-24T15:09:31.142197+00:00",
         "expires": null,
         "starts_at": null,
         "price_context": "Store-specific online",
@@ -4396,848 +6400,5 @@
     "discount_percent": 0,
     "image": "https://target.scene7.com/is/image/Target/GUEST_fa80a1df-5869-47eb-84f3-23fcc7d013bb?wid=324&hei=324&qlt=45&fmt=jpeg",
     "url": "https://www.target.com/s?searchTerm=White+Claw%C2%AE+Clawtails"
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.306715+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:3d1978eb-de8b-4d9b-a16e-9e6ee607d054",
-    "name": "Baby Broccolini Bunch",
-    "raw_name": "Baby Broccolini Bunch",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.35,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.35,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "basis_price": "$3.99",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/51hr5ox52NL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/3d1978eb-de8b-4d9b-a16e-9e6ee607d054?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.306715+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "2 for $6.67",
-          "prime": "2 for $6",
-          "regular": "$3.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$3.99",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/3d1978eb-de8b-4d9b-a16e-9e6ee607d054?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.503710+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "2 for $6.67",
-          "prime": "2 for $6",
-          "regular": "$3.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$3.99",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/67cf9a9c-17f5-4df7-80cc-f25613c648bc?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.322153+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:20b1d47e-ab7e-4a34-8a44-80d134e4f093",
-    "name": "Condiments and Dips",
-    "raw_name": "Condiments and Dips",
-    "brand": "Primal Kitchen",
-    "source_brand": "Primal Kitchen",
-    "brand_source": "source",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/71lXW+9HNEL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/20b1d47e-ab7e-4a34-8a44-80d134e4f093?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.322153+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "22% off",
-          "prime": "30% off",
-          "regular": "$5.49 to $11.49",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/20b1d47e-ab7e-4a34-8a44-80d134e4f093?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.518965+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "22% off",
-          "prime": "30% off",
-          "regular": "$5.49 to $15.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/689f0e52-97da-49bc-9998-82e6746e040f?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.344328+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:afe106d5-b0a5-427d-98a5-a8166376ed2e",
-    "name": "Nuts",
-    "raw_name": "Nuts ",
-    "brand": "GoodSAM",
-    "source_brand": "GoodSAM",
-    "brand_source": "source",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/7137u4Wb3PL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/afe106d5-b0a5-427d-98a5-a8166376ed2e?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.344328+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "14% off",
-          "prime": "23% off",
-          "regular": "$9.69 to $17.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/afe106d5-b0a5-427d-98a5-a8166376ed2e?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.539628+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "14% off",
-          "prime": "23% off",
-          "regular": "$5.79 to $17.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/23331afa-4c88-4b16-a76e-cec8b5f00e4f?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.280937+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:0144fd5f-6b90-4c18-a4a8-79a3d446daec",
-    "name": "Organic Ground Turkey Tray Pack",
-    "raw_name": "Organic Ground Turkey Tray Pack",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/91+8iXP74GL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/0144fd5f-6b90-4c18-a4a8-79a3d446daec?store-id=10160",
-    "tags": [
-      "flyer-only deal",
-      "organic"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.280937+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "",
-          "prime": "Buy 2, Get 1 Free",
-          "regular": "Regular prices vary",
-          "description": "Excludes kosher, pasture-raised, heritage-breed, heirloom-breed, marinated and cooked. Must purchase in multiples of 3 to receive discount. Discount applied on lower-priced item. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/0144fd5f-6b90-4c18-a4a8-79a3d446daec?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.477920+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "",
-          "prime": "Buy 2, Get 1 Free",
-          "regular": "$9.99",
-          "description": "Excludes kosher, pasture-raised, heritage-breed, heirloom-breed, marinated and cooked. Must purchase in multiples of 3 to receive discount. Discount applied on lower-priced item. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$9.99",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/09fc0a62-d65a-42e5-b661-391bb114a905?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.393451+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:41ec61e1-96bc-41e8-a305-84e8a163fc55",
-    "name": "Proteins and Sports Nutrition Supplements",
-    "raw_name": "Proteins and Sports Nutrition Supplements",
-    "brand": "Vega",
-    "source_brand": "Vega",
-    "brand_source": "source",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/716fm5yj3fL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/41ec61e1-96bc-41e8-a305-84e8a163fc55?store-id=10160",
-    "tags": [
-      "flyer-only deal",
-      "high-protein"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.393451+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "15% off",
-          "prime": "23% off",
-          "regular": "Regular prices vary",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/41ec61e1-96bc-41e8-a305-84e8a163fc55?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.587723+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "15% off",
-          "prime": "23% off",
-          "regular": "Regular prices vary",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/40181795-16b0-4514-8a52-43fbe44c0a7c?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.369990+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:07a77169-f116-4e61-b06a-410290431a45",
-    "name": "Select Single-Serve Protein Shakes, 12 Fl Oz",
-    "raw_name": "Select Single-Serve Protein Shakes, 12 fl oz",
-    "brand": "Koia",
-    "source_brand": "Koia",
-    "brand_source": "source",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "basis_price": "$4.79",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/713Ru9nQwwL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/07a77169-f116-4e61-b06a-410290431a45?store-id=10160",
-    "tags": [
-      "flyer-only deal",
-      "high-protein"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.369990+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "2 for $7.78",
-          "prime": "2 for $7",
-          "regular": "$4.79",
-          "description": "Excludes ELITE protein shakes. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": "$4.79",
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/07a77169-f116-4e61-b06a-410290431a45?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.564783+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "2 for $7.78",
-          "prime": "2 for $7",
-          "regular": "$4.79 to $5.29",
-          "description": "Excludes ELITE protein shakes. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/fa2d310d-3013-4685-a548-5e88e01a413f?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.363068+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:10c728d4-28c7-41a4-83a6-2f1ad84160e3",
-    "name": "Sodas, 4 Pk",
-    "raw_name": "Sodas, 4 pk",
-    "brand": "Nixie",
-    "source_brand": "Nixie",
-    "brand_source": "source",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "current_price": "$6.99 ea",
-    "prime_price": "$6.29 ea",
-    "discount": "10% off",
-    "discount_percent": 10,
-    "image": "https://m.media-amazon.com/images/I/712Zj23ytxL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/10c728d4-28c7-41a4-83a6-2f1ad84160e3?store-id=10160",
-    "tags": [
-      "flyer-only deal",
-      "prime deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.363068+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "$6.99 ea",
-          "prime": "$6.29 ea",
-          "regular": "Regular prices vary",
-          "description": "Excludes single 12-fl-oz items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": "$6.99 ea",
-        "basis_price": null,
-        "prime_price": "$6.29 ea",
-        "discount": "10% off",
-        "discount_percent": 10,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/10c728d4-28c7-41a4-83a6-2f1ad84160e3?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.558181+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "$6.99 ea",
-          "prime": "$6.29 ea",
-          "regular": "$9.49",
-          "description": "Excludes single 12-fl-oz items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": "$6.99 ea",
-        "basis_price": "$9.49",
-        "prime_price": "$6.29 ea",
-        "discount": "34% off",
-        "discount_percent": 34,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/788f318f-88c2-42cf-9e4a-71765bb3e676?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
-  },
-  {
-    "observed_at": "2026-09-22T13:17:36.334022+00:00",
-    "expires": "2026-09-22T05:00:00Z",
-    "starts_at": "2026-09-16T05:00:00Z",
-    "price_context": "Weekly flyer",
-    "price_source": "Weekly flyer",
-    "price_verified": true,
-    "offer_kind": "promotion",
-    "source_store_name": "Columbus Circle",
-    "asin": "flyer:1867834a-b05f-4abc-ac0b-878447c4f1d2",
-    "name": "Sweeteners",
-    "raw_name": "Sweeteners",
-    "brand": "In the Raw",
-    "source_brand": "In the Raw",
-    "brand_source": "source",
-    "retailer": "Whole Foods",
-    "sources": [
-      "Flyer"
-    ],
-    "source_count": 1,
-    "category": "Other/Failed",
-    "subcategory": "Needs Review",
-    "classification_status": "failed",
-    "failed_from_category": "Pantry",
-    "failed_from_subcategory": "Meal Kits & Sides",
-    "category_confidence": 0.25,
-    "ai_category": "Other/Failed",
-    "ai_subcategory": "Needs Review",
-    "ai_confidence": 0.25,
-    "ai_label_source": "model",
-    "ai_model_name": "local-taxonomy-classifier",
-    "ai_model_version": "taxonomy-local-ml-v18",
-    "discount_percent": 0,
-    "image": "https://m.media-amazon.com/images/I/713uKzY-kXL.jpg",
-    "url": "https://www.wholefoodsmarket.com/promotion/1867834a-b05f-4abc-ac0b-878447c4f1d2?store-id=10160",
-    "tags": [
-      "flyer-only deal"
-    ],
-    "available_store_ids": [
-      "10160",
-      "10328"
-    ],
-    "store_offers": [
-      {
-        "store_id": "10160",
-        "observed_at": "2026-09-22T13:17:36.334022+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "14% off",
-          "prime": "23% off",
-          "regular": "$4.49 to $4.99",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/1867834a-b05f-4abc-ac0b-878447c4f1d2?store-id=10160",
-        "sources": [
-          "Flyer"
-        ]
-      },
-      {
-        "store_id": "10328",
-        "observed_at": "2026-09-22T13:17:36.529509+00:00",
-        "expires": "2026-09-22T05:00:00Z",
-        "starts_at": "2026-09-16T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "availability": null,
-        "pricing_uom": null,
-        "unit_evidence": null,
-        "promotion_terms": {
-          "sale": "14% off",
-          "prime": "23% off",
-          "regular": "$4.49 to $10.49",
-          "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-        },
-        "current_price": null,
-        "basis_price": null,
-        "prime_price": null,
-        "discount": null,
-        "discount_percent": 0,
-        "unit_price": null,
-        "url": "https://www.wholefoodsmarket.com/promotion/5de8818f-a85c-48fd-a684-0f64c2817424?store-id=10328",
-        "sources": [
-          "Flyer"
-        ]
-      }
-    ]
   }
 ]

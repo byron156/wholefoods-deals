@@ -1,18 +1,8 @@
 {
-  "whole_foods_stores": [
-    {
-      "store_id": "10160",
-      "store_name": "Columbus Circle"
-    },
-    {
-      "store_id": "10328",
-      "store_name": "Upper West Side"
-    }
-  ],
-  "search_deals_count": 6649,
-  "all_deals_count": 1000,
   "flyer_count": 89,
-  "combined_unique_count": 3810,
+  "all_deals_count": 1000,
+  "search_deals_count": 7931,
   "target_deals_count": 251,
-  "hmart_deals_count": 118
+  "hmart_deals_count": 118,
+  "combined_unique_count": 4447
 }
