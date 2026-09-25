@@ -43,6 +43,10 @@ class RetailerEvidenceTests(unittest.TestCase):
                 self.assertEqual((p.get('category'),p.get('subcategory')),(category,subcategory))
                 self.assertEqual(p['classification_status'],'classified')
 
+    def test_hard_iced_tea_is_not_classified_as_a_soft_drink(self):
+        p=apply_source_rules(dict(name='Hard Iced Tea',category='Alcohol',subcategory='Cocktails & Mixers'))
+        self.assertEqual(p['category'],'Alcohol')
+
     def test_generic_source_type_does_not_manufacture_category(self):
         p=apply_source_rules(dict(name='Mystery Blend',retailer_product_type='FOOD',metadata_observed_at=datetime.now(timezone.utc).isoformat(),classification_status='failed'))
         self.assertEqual(p['classification_status'],'failed')

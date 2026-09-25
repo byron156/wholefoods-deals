@@ -18,7 +18,7 @@ def source_pair(product):
     forms = [
         (r'\b(?:hummus|tzatziki|green goddess dip)\b', ('Produce','Fresh Salsa & Dips')),
         (r'\b(?:cocktail blini)\b', ('Bakery','Bread')),
-        (r'\b(?:iced tea)\b', ('Beverages','Ready-to-Drink Tea')),
+        (r'^(?!.*\bhard\b).*\biced tea\b', ('Beverages','Ready-to-Drink Tea')),
         (r'\b(?:coffee filters?)\b', ('Household','Kitchen Supplies')),
         (r'\b(?:peanut butter filled nuggets)\b', ('Snacks','Pretzels')),
         (r'\bsparkling hop water\b', ('Beverages','Sparkling Water')),
