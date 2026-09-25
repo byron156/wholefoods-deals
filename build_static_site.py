@@ -32,6 +32,7 @@ ROOT_STATIC_FILES = [
 REPORT_FILES = [
     "catalog_quality_audit.html",
     "catalog_recovery.json",
+    "sale_coverage.json",
     "catalog_quality_audit.json",
     "failed_products_review_queue.json",
 ]
@@ -92,7 +93,7 @@ def copy_data_files() -> None:
     for filename in DATA_FILES:
         src = BASE_DIR / filename
         if src.exists():
-            shutil.copy2(src, data_dir / filename)
+            (data_dir / filename).write_text(json.dumps(json.loads(src.read_text()), ensure_ascii=False, separators=(',', ':')))
 
 
 def copy_report_files() -> None:
@@ -102,7 +103,10 @@ def copy_report_files() -> None:
     for filename in REPORT_FILES:
         src = BASE_DIR / "reports" / filename
         if src.exists():
-            shutil.copy2(src, reports_dir / filename)
+            if src.suffix == '.json':
+                (reports_dir / filename).write_text(json.dumps(json.loads(src.read_text()), ensure_ascii=False, separators=(',', ':')))
+            else:
+                shutil.copy2(src, reports_dir / filename)
 
     concepts_src = BASE_DIR / "reports" / "ui_concepts"
     if concepts_src.exists():
@@ -130,6 +134,14 @@ def write_metadata() -> None:
 
 
 def main() -> None:
+    from app import load_combined_products
+    from scripts.sale_coverage import reconcile
+    coverage_path = BASE_DIR / 'reports' / 'sale_coverage.json'
+    if coverage_path.exists():
+        coverage = reconcile(json.loads(coverage_path.read_text()), load_combined_products())
+        coverage_path.write_text(json.dumps(coverage, indent=2) + '\n')
+        if coverage['missing_from_catalog']:
+            raise RuntimeError('Advertised promotions disappeared from shopper catalog: ' + str(coverage['missing_from_catalog']))
     if DIST_DIR.exists():
         shutil.rmtree(DIST_DIR)
 

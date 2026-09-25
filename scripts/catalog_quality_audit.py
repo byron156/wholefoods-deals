@@ -142,7 +142,7 @@ def product_identity(product):
 
 def product_clip_keys(product):
     keys = set()
-    for value in [product.get("asin"), *(product.get("asins") or [])]:
+    for value in [product.get("eligible_asin"), product.get("asin"), *(product.get("asins") or [])]:
         if value:
             keys.add(f"asin:{value}")
             keys.add(str(value))
@@ -258,6 +258,12 @@ def suspicious_category_reason(product):
             return f"Retailer product type {kind} conflicts with category {category}."
     if category == FAILED_CATEGORY:
         return None  # Counted separately as category review; not a second defect.
+    # Product form matters: a coffee capsule is not a wellness capsule, and
+    # naturally occurring vitamin E does not turn culinary oil into a supplement.
+    if kind == 'COFFEE' and product.get('subcategory') == 'Coffee Pods & K-Cups':
+        text = re.sub(r'\bcapsules?\b', '', text)
+    if kind == 'EDIBLE_OIL_FAT' and product.get('subcategory') == 'Oils & Vinegars' and 'cooking' in text:
+        text = re.sub(r'\bvitamin e\b', '', text)
     if category == "Produce" and re.search(r"\b(gummy|gummies|soda|coffee|tea|shampoo|serum|capsule|tablet|supplement|extract|shot|water|juice|spray)\b", text):
         return "Produce label with packaged/drink/supplement/personal-care words."
     if category == "Pantry" and re.search(r"\b(shampoo|conditioner|serum|capsule|tablet|collagen|magnesium|probiotic|vitamin)\b", text):
@@ -549,7 +555,9 @@ def build_audit(products, clip_report, combined_report, taxonomy_report, source_
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "summary": {
             "total_products": total,
-            "verified_sales_prime": sum(any(not offer_issues(o) and (o.get("offer_kind") == "promotion" or clean_prices(o).get("discount_percent", 0) > 0) for o in (p.get("store_offers") or [p])) for p in products),
+            "verified_sales_prime": len({(p.get('retailer'), p.get('eligible_asin') or p.get('asin') or p.get('name'))
+                for p in products if (p.get('offer_kind') != 'promotion' or p.get('eligible_asin'))
+                and any(not offer_issues(o) and (o.get('offer_kind') == 'promotion' or clean_prices(o).get('discount_percent', 0) > 0) for o in (p.get('store_offers') or [p]))}),
             "publishable_products": sum(any(not offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
             "withheld_products": sum(all(offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
             "category_review_with_usable_offer": sum(is_failed_product(p) and any(not offer_issues(o) for o in (p.get("store_offers") or [p])) for p in products),
@@ -637,10 +645,10 @@ def render_html(audit, products):
     stat_cards = "".join(
         f"<div class=\"stat\"><strong>{esc(value)}</strong><span>{esc(label)}</span></div>"
         for label, value in [
-            ("Verified sales · Prime", f"{summary['verified_sales_prime']:,}"),
-            ("Current offers", f"{summary['publishable_products']:,}"),
+            ("Sale products · Prime", f"{summary['verified_sales_prime']:,}"),
+            ("Current offer records", f"{summary['publishable_products']:,}"),
             ("No usable offer", f"{summary['withheld_products']:,}"),
-            ("Products", f"{summary['total_products']:,}"),
+            ("Catalog records", f"{summary['total_products']:,}"),
             ("Category review", f"{summary['failed_products']:,} ({summary['failed_percent']})"),
             ("CLIP missing", f"{summary['clip_missing_products']:,} ({summary['clip_missing_percent']})"),
             ("Suspicious category", f"{summary['suspicious_category_products']:,}"),
@@ -737,7 +745,7 @@ def render_html(audit, products):
     <h1>🧪 Catalog Quality Audit</h1>
     <p class="muted">Generated {esc(audit['generated_at'])}. Audits the full retained catalog, including records withheld from shoppers. Publishable records must have verified offer context, a collection timestamp within 72 hours, and a valid price or explicitly scoped flyer promotion. Rebuilding the site does not refresh prices.</p>
     <div class="stats">{stat_cards}</div>
-    <p class="muted">{summary['confirmed_unavailable_store_offers']:,} store offers are confirmed unavailable, and {summary['expired_store_offers']:,} have expired. These are offer states, not missing-data errors. {summary['products_with_usable_offer_and_data_gap']:,} products with data gaps still have a usable offer at another store. {summary['category_review_with_usable_offer']:,} products have usable prices and appear under “Needs category review” while their classification is investigated. Current offers include regular-price items; shopper deal filters show only actual discounts.</p>
+    <p class="muted">{summary['confirmed_unavailable_store_offers']:,} store offers are confirmed unavailable, and {summary['expired_store_offers']:,} have expired. These are offer states, not missing-data errors. {summary['products_with_usable_offer_and_data_gap']:,} products with data gaps still have a usable offer at another store. {summary['category_review_with_usable_offer']:,} products have usable prices and appear under “Needs category review” while their classification is investigated. Current offer records include regular-price items and separate online/flyer offers. Sale products are deduplicated by retailer and product identity; advertised group promotions are counted separately below.</p>
   </header>
 
   <section class="callout">
@@ -836,7 +844,12 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
 
     audit = build_audit(products, clip_report, combined_report, taxonomy_report, source_counts)
-    html_report = render_html(audit, products)
+    from scripts.sale_coverage import reconcile, render_coverage
+    coverage = load_json(BASE_DIR / 'reports' / 'sale_coverage.json', {})
+    if coverage:
+        coverage = reconcile(coverage, products)
+        write_json(BASE_DIR / 'reports' / 'sale_coverage.json', coverage)
+    html_report = render_html(audit, products).replace('</header>', '</header>' + render_coverage(coverage), 1)
 
     html_path = output_dir / "catalog_quality_audit.html"
     json_path = output_dir / "catalog_quality_audit.json"

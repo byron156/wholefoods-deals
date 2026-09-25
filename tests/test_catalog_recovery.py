@@ -16,6 +16,11 @@ class RetailerEvidenceTests(unittest.TestCase):
 
     def test_retailer_type_recovers_failed_labels_without_trusting_bad_types(self):
         cases = [
+            ('Bonne Nuit Coffee Capsule, 12 Count','COFFEE','Beverages','Coffee Pods & K-Cups'),
+            ('CAVA Traditional Hummus, 16 OZ','WINE','Produce','Fresh Salsa & Dips'),
+            ('Cava Mezze Greek Green Goddess Dip, 8 OZ','WINE','Produce','Fresh Salsa & Dips'),
+            ('Cocktail Blini, 3.5 Ounce','FOOD','Bakery','Bread'),
+            ('Coffee Filters No. 2, 100 Count','COFFEE','Household','Kitchen Supplies'),
             ('Organic Zucchini Squash','VEGETABLE','Produce','Vegetables'),
             ('Organic Frozen Broccoli','VEGETABLE','Frozen','Frozen Vegetables'),
             ('Cold Smoked Salmon','PET_FOOD','Meat & Seafood','Smoked Seafood'),

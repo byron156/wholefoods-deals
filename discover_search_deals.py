@@ -2319,6 +2319,13 @@ def crawl_current_sort(page, products_by_asin: dict, sort_label: str) -> dict:
     return {"added_count": total_added_for_sort, "request_count": 0}
 
 
+def network_offsets(window_limit, page_size=SEARCH_RESULTS_PAGE_SIZE):
+    # The retailer accepts offset=500 even though offset=510 returns HTTP 400.
+    # Include the boundary explicitly when page size does not divide it.
+    ceiling = window_limit or page_size * MAX_ACTION_ROUNDS
+    return sorted(set(range(0, ceiling, page_size)) | {ceiling})
+
+
 def crawl_current_sort_via_network(
     page,
     products_by_asin: dict,
@@ -2346,10 +2353,11 @@ def crawl_current_sort_via_network(
     successful_batches = 0
     expected_total = None
     previous_batch_signature = None
+    listed_asins = set()
     result_window_limit = parse_positive_int_env("WHOLEFOODS_SEARCH_RESULT_WINDOW_LIMIT") or NETWORK_RESULT_WINDOW_LIMIT
 
-    for offset in range(0, SEARCH_RESULTS_PAGE_SIZE * MAX_ACTION_ROUNDS, SEARCH_RESULTS_PAGE_SIZE):
-        if result_window_limit and offset >= result_window_limit:
+    for offset in network_offsets(result_window_limit):
+        if result_window_limit and offset > result_window_limit:
             print(
                 f"{sort_label}: stopping network fetch before offset {offset} "
                 f"because the Whole Foods result window is capped at {result_window_limit}."
@@ -2375,7 +2383,7 @@ def crawl_current_sort_via_network(
             if successful_batches > 0 and rsi_status in {404, 429, 500, 502, 503, 504}:
                 print(
                     f"{sort_label}: stopping network fetch after HTTP {rsi_status} at offset {offset}; "
-                    "treating it as the end of paginated results."
+                    "retaining captured results and reporting incomplete collection."
                 )
                 break
             raise RuntimeError(f'{sort_label}: rsi/search returned HTTP {rsi_status} at offset {offset}.')
@@ -2390,6 +2398,7 @@ def crawl_current_sort_via_network(
             print(f"{sort_label}: stopping network fetch because rsi/search repeated the same ASIN batch at offset {offset}.")
             break
         previous_batch_signature = batch_signature
+        listed_asins.update(asins)
 
         products_url = build_products_url(offer_listing_discriminator, asins)
         product_status = 0
@@ -2408,7 +2417,7 @@ def crawl_current_sort_via_network(
             if successful_batches > 0 and product_status in {404, 429, 500, 502, 503, 504}:
                 print(
                     f"{sort_label}: stopping network fetch after products API HTTP {product_status} at offset {offset}; "
-                    "treating it as the end of paginated results."
+                    "retaining captured results and reporting incomplete collection."
                 )
                 break
             raise RuntimeError(f'{sort_label}: products API returned HTTP {product_status} at offset {offset}.')
@@ -2447,7 +2456,7 @@ def crawl_current_sort_via_network(
             print(f"{sort_label}: stopping network fetch because the batch was short at offset {offset}.")
             break
 
-        if result_window_limit and (offset + used_batch_size) >= result_window_limit:
+        if result_window_limit and offset >= result_window_limit:
             print(
                 f"{sort_label}: stopping network fetch after offset {offset} "
                 f"because the next page would move past the Whole Foods result window cap of {result_window_limit}."
@@ -2461,14 +2470,16 @@ def crawl_current_sort_via_network(
             )
             break
 
-        if stale_batches >= NETWORK_STALE_BATCH_LIMIT:
-            print(f"{sort_label}: stopping network fetch because consecutive batches added no new products.")
-            break
+        # Overlap with earlier sorts is not the end of this listing. Later
+        # pages may contain identities that earlier sorts never exposed.
 
     final_added = merge_products_from_current_page(page, products_by_asin)
     total_added_for_sort += final_added
     print(f"{sort_label}: final settle captured +{final_added}; total unique products now {len(products_by_asin)}")
-    return {"added_count": total_added_for_sort, "request_count": successful_batches}
+    return {"added_count": total_added_for_sort, "request_count": successful_batches,
+            "listed_asins": sorted(listed_asins), "reported_total": expected_total,
+            "listing_complete": expected_total is not None and len(listed_asins) >= expected_total,
+            "missing_metadata_asins": sorted(listed_asins - set(products_by_asin))}
 
 
 def discover_search_deals(store: Optional[dict] = None) -> dict:
@@ -2634,6 +2645,10 @@ def discover_search_deals(store: Optional[dict] = None) -> dict:
                         "new_products_found": new_products_found,
                         "captured_events": crawl_summary["added_count"],
                         "collection_request_count": crawl_summary["request_count"],
+                        "listed_asins": crawl_summary.get("listed_asins"),
+                        "reported_total": crawl_summary.get("reported_total"),
+                        "listing_complete": crawl_summary.get("listing_complete"),
+                        "missing_metadata_asins": crawl_summary.get("missing_metadata_asins"),
                         "total_products_after_sort": len(products_by_asin),
                         "skipped": False,
                     }

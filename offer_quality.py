@@ -3,7 +3,7 @@ import re
 from datetime import datetime, timedelta, timezone
 
 PRICE_FIELDS = ('current_price', 'prime_price', 'basis_price', 'sale_price', 'discount', 'discount_percent', 'unit_price')
-EVIDENCE_FIELDS = ('observed_at', 'expires', 'starts_at', 'price_context', 'price_source', 'price_verified', 'offer_kind', 'source_store_name', 'availability', 'pricing_uom', 'unit_evidence')
+EVIDENCE_FIELDS = ('eligible_asins', 'unresolved_eligible_asins', 'eligible_asin', 'observed_at', 'expires', 'starts_at', 'price_context', 'price_source', 'price_verified', 'offer_kind', 'source_store_name', 'availability', 'pricing_uom', 'unit_evidence')
 METADATA_FIELDS = ('retailer_product_type', 'retailer_department', 'retailer_description', 'retailer_ingredients', 'metadata_observed_at')
 
 def metadata(product):

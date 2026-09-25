@@ -16,6 +16,11 @@ def source_pair(product):
             return specific
     # Explicit product form outranks flavor, wellness claims, and model guesses.
     forms = [
+        (r'\b(?:hummus|tzatziki|green goddess dip)\b', ('Produce','Fresh Salsa & Dips')),
+        (r'\b(?:cocktail blini)\b', ('Bakery','Bread')),
+        (r'\b(?:iced tea)\b', ('Beverages','Ready-to-Drink Tea')),
+        (r'\b(?:coffee filters?)\b', ('Household','Kitchen Supplies')),
+        (r'\b(?:peanut butter filled nuggets)\b', ('Snacks','Pretzels')),
         (r'\bsparkling hop water\b', ('Beverages','Sparkling Water')),
         (r'\b(?:tempeh)\b', ('Prepared Foods','Tofu & Plant-Based Proteins')),
         (r'\b(?:kombucha)\b', ('Beverages','Kombucha')),
@@ -150,8 +155,8 @@ def source_pair(product):
                 return pair, 'Retailer category: ' + source.strip('/')
     if product.get('offer_kind') == 'promotion':
         rules = [
-            (r'^(?:organic )?(?:yellow peaches|honeycrisp apples|gala apples|organic green kiwis|seedless red or green grapes)',('Produce','Fruits')),
-            (r'^(?:organic )?(?:heirloom tomatoes|cherry tomato|cauliflower|zucchini|corn,)',('Produce','Vegetables')),
+            (r'^(?:organic )?(?:yellow peaches|honeycrisp apples|fuji apples|bagged mandarins|golden kiwis|red and bartlett pears|gala apples|organic green kiwis|seedless red or green grapes)',('Produce','Fruits')),
+            (r'^(?:organic )?(?:heirloom tomatoes|hard squashes|red, green and romaine lettuces|cherry tomato|cauliflower|zucchini|corn,)',('Produce','Vegetables')),
             (r'hummus and dairy dips',('Produce','Fresh Salsa & Dips')),
             (r'cut cantaloupe',('Produce','Cut Fruit & Veg')),
             (r'wellness teas',('Beverages','Tea')),

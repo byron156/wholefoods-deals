@@ -323,6 +323,8 @@ def main():
         )
 
     if not args.skip_refresh:
+        from scripts.collect_sale_coverage import main as collect_sale_coverage
+        collect_sale_coverage()
         from scripts.recover_catalog import main as recover_catalog
         print("Recovering known Whole Foods identities and retailer metadata...")
         recover_catalog()

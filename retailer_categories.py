@@ -131,7 +131,7 @@ def retailer_pair(product):
     elif kind == 'NUT_AND_SEED': pair = ('Produce','Nuts & Seeds')
     elif kind == 'WATER': pair = ('Beverages','Sparkling Water' if re.search('sparkling|seltzer',name) else 'Coconut Water' if 'coconut' in name else 'Water')
     elif kind == 'TEA': pair = ('Beverages','Ready-to-Drink Tea' if re.search(r'\b(fl|fz|ml)\b',name) else 'Tea')
-    elif kind == 'COFFEE': pair = ('Beverages','Coffee Pods & K-Cups' if re.search('pods|k-cup',name) else 'Ready-to-Drink Coffee' if re.search(r'\b(fl|fz|ml)\b',name) else 'Coffee Beans & Grounds')
+    elif kind == 'COFFEE': pair = ('Beverages','Coffee Pods & K-Cups' if re.search(r'\b(?:pods?|k-cups?|capsules?)\b',name) else 'Ready-to-Drink Coffee' if re.search(r'\b(fl|fz|ml)\b',name) else 'Coffee Beans & Grounds')
     elif kind == 'NOODLE': pair = ('Pantry','Pasta')
     elif kind == 'FISH': pair = ('Pantry','Canned Fish & Meat') if re.search(r'\b(can|canned|tinned)\b',name) else ('Meat & Seafood','Smoked Seafood' if 'smoked' in name else 'Fish Fillets')
     elif kind in ('SEAFOOD','SHELLFISH'): pair = ('Meat & Seafood','Shrimp' if re.search('shrimp|prawn',name) else 'Crab & Lobster' if re.search('crab|lobster',name) else 'Seafood')

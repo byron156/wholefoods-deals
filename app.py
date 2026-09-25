@@ -2566,6 +2566,8 @@ def merge_combined_product(existing, incoming):
 
 
 def combined_key_for_product(product):
+    if product.get("offer_kind") == "promotion" and product.get("asin"):
+        return "promotion-id:" + product["asin"]
     if product.get("offer_kind") == "promotion":
         return "promotion:" + normalize_text_key(product.get("raw_name") or product.get("name")) + ":" + normalize_text_key(product.get("brand"))
     asins = product.get("asins") or []

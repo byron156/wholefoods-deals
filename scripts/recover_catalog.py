@@ -37,12 +37,32 @@ def fetch_batch(store_id, asins):
     return store_id, asins, [], error
 
 
+def normalize_observation(raw, sid, checked):
+    """Keep metadata and prices attached to their store-scoped observation."""
+    p=normalize_products_api_item(raw)
+    p.update(available_store_ids=[sid],source_store_id=sid,source_store_name=STORE_CONTEXTS[sid][0],
+             observed_at=checked,price_context='Store-specific online',price_source='Whole Foods product API',
+             retailer='Whole Foods',retailer_product_type=(raw.get('category') or {}).get('productType'),
+             retailer_department=(raw.get('category') or {}).get('glProductGroupSymbol'),
+             retailer_description=raw.get('description'),retailer_ingredients=raw.get('ingredients'),
+             metadata_observed_at=checked,offer_listing_discriminator=STORE_CONTEXTS[sid][1])
+    if not raw.get('offerDetails'):
+        p['availability']='NO_CURRENT_OFFER'
+        p['price_verified']=True # Retailer explicitly returned no offer; not a parser failure.
+    return p
+
+
 def main():
     catalog = json.loads((ROOT / 'combined_products.json').read_text())
     previous = json.loads((ROOT / 'search_deals_products.json').read_text())
+    prior_report = json.loads((ROOT / 'search_deals_report.json').read_text())
+    listing_runs = prior_report.get('listing_runs') or [s for s in prior_report.get('stores', []) if s.get('sort_runs')]
     asins = sorted({p.get('asin') for p in catalog if p.get('retailer') == 'Whole Foods' and re.fullmatch(r'[A-Z0-9]{10}', p.get('asin') or '')})
     # Include prior identities even if classification/merging excluded them.
     asins = sorted(set(asins) | {p['asin'] for p in previous if re.fullmatch(r'[A-Z0-9]{10}',p.get('asin') or '')})
+    flyer = json.loads((ROOT / 'flyer_products.json').read_text())
+    asins = sorted(set(asins) | {p['eligible_asin'] for p in flyer if p.get('eligible_asin')}
+                   | {a for p in flyer for a in (p.get('eligible_asins') or [])})
     existing = {(str((p.get('available_store_ids') or [''])[0]), p.get('asin')):p for p in previous}
     products, metadata, failures = [], {}, []
     checked = datetime.now(timezone.utc).isoformat()
@@ -54,16 +74,7 @@ def main():
             for raw in rows:
                 if not isinstance(raw,dict) or raw.get('asin') not in requested: continue
                 asin=raw['asin']; received.add(asin)
-                p=normalize_products_api_item(raw)
-                p.update(available_store_ids=[sid],source_store_id=sid,source_store_name=STORE_CONTEXTS[sid][0],
-                         observed_at=checked,price_context='Store-specific online',price_source='Whole Foods product API',
-                         retailer='Whole Foods',retailer_product_type=(raw.get('category') or {}).get('productType'),
-                         retailer_department=(raw.get('category') or {}).get('glProductGroupSymbol'),
-                         retailer_description=raw.get('description'),retailer_ingredients=raw.get('ingredients'),
-                         metadata_observed_at=checked,offer_listing_discriminator=STORE_CONTEXTS[sid][1])
-                if not raw.get('offerDetails'):
-                    p['availability']='NO_CURRENT_OFFER'
-                    p['price_verified']=True # Retailer explicitly returned no offer; not a parser failure.
+                p=normalize_observation(raw, sid, checked)
                 products.append(p)
                 metadata[asin]={k:p.get(k) for k in ('retailer_product_type','retailer_department','retailer_description','retailer_ingredients','metadata_observed_at')}
             for asin in set(requested)-received:
@@ -72,7 +83,7 @@ def main():
             if index % 20 == 0: print(f'{index}/{len(jobs)} batches; {len(products)} store observations',flush=True)
     products.sort(key=lambda p:(p.get('source_store_id') or '',p['asin']))
     (ROOT/'search_deals_products.json').write_text(json.dumps(products,indent=2,ensure_ascii=False)+'\n')
-    report={'generated_at':checked,'requested_identities':len(asins),'observations':len(products),'fresh_observations':sum(p.get('observed_at') == checked for p in products),'retained_previous_observations':sum(p.get('observed_at') != checked for p in products),'failures':failures,
+    report={'generated_at':checked,'listing_runs':listing_runs,'requested_identities':len(asins),'observations':len(products),'fresh_observations':sum(p.get('observed_at') == checked for p in products),'retained_previous_observations':sum(p.get('observed_at') != checked for p in products),'failures':failures,
             'product_types':dict(Counter(p.get('retailer_product_type') or 'MISSING' for p in products)),
             'stores':[{'store_id':sid,'store_name':name,'product_count':sum(p.get('source_store_id')==sid for p in products),
                        'reused_previous':any(f['store_id']==sid for f in failures),'source':'Store-scoped product API'} for sid,(name,_) in STORE_CONTEXTS.items()]}

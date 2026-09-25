@@ -1094,8 +1094,9 @@
   function priceLabel(product) {
     if (product.offer_kind === "promotion") {
       const terms = product.promotion_terms || {};
-      const value = (state.profile.prime && terms.prime) || terms.sale;
-      return `<p class="prime">${escapeHtml(value || "See offer")}</p><small>${state.profile.prime && terms.prime ? "Prime · " : ""}${product.retailer === "Whole Foods" ? "Weekly flyer promotion" : "Retailer promotion"}</small>`;
+      const primeApplies = state.profile.prime && terms.prime && !/excluded|not eligible/i.test(terms.prime);
+      const value = (primeApplies && terms.prime) || terms.sale;
+      return `<p class="prime">${escapeHtml(value || "See offer")}</p><small>${primeApplies ? "Prime · " : ""}${product.retailer === "Whole Foods" ? "Weekly flyer promotion" : "Retailer promotion"}</small>`;
     }
     return `<p class="prime">${escapeHtml(product.display_price || product.current_price || "Price unavailable")}</p><small>${product.is_prime ? "Prime price" : product.retailer === "Whole Foods" ? "Non-Prime price" : "Sale price"}</small>`;
   }
@@ -1153,7 +1154,7 @@
         </div>
         ${regularLabel(product)}
         <p class="offer-context">${escapeHtml([product.source_store_name || stores.find(store => String(store.id) === String(product.store_id))?.name, product.price_context, product.observed_at ? `Checked ${new Date(product.observed_at).toLocaleDateString()}` : ''].filter(Boolean).join(' · '))}</p>
-        ${product.offer_kind === "promotion" ? '<p class="offer-context">Applies to the advertised selection. Online pickup and delivery prices can differ.</p>' : ''}
+        ${product.offer_kind === "promotion" ? `<p class="offer-context">${product.eligible_asin ? 'This product is listed as eligible by the retailer.' : product.eligible_asins?.length ? `${product.eligible_asins.length} retailer-listed eligible product${product.eligible_asins.length === 1 ? '' : 's'}.` : 'Applies to the advertised selection.'} Online pickup and delivery prices can differ.</p>${product.promotion_terms?.description ? `<details><summary>Offer terms</summary><p>${escapeHtml(product.promotion_terms.description)}</p></details>` : ''}` : ''}
         <div class="deal-actions">
           <button class="deal-action ${liked ? "is-active" : ""}" data-action="more-like-this" data-key="${escapeHtml(product.key)}" type="button">More</button>
           <button class="deal-action is-subtle ${disliked ? "is-active" : ""}" data-action="less-like-this" data-key="${escapeHtml(product.key)}" type="button">Less</button>

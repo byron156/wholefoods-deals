@@ -30,3 +30,31 @@ The API importer also dropped `variableUnitOfMeasure.pricingUom`, losing per-pou
 - The audit reports publishable and withheld records separately. `Latest source check` is an actual observation time, not a build timestamp.
 
 The published catalog is deliberately smaller until additional product offers are collected with verified context. No claim is made that every retained record or every retailer's full catalog has been repaired. Unit, merge, stale-data, pricing-mode and meal-selection regression tests cover the reported failure paths.
+
+### Complete weekly-promotion coverage
+
+`scripts/collect_sale_coverage.py` reads each supported store's flyer, then pages
+`/api/wwos/sales-flyer/grouped-promotion` through its reported total. Flyer and
+promotion-page previews are not complete eligibility lists. Source row totals
+include duplicates, so the report keeps source rows and unique ASINs separate.
+A changed total, repeated page, truncated response, or wrong store fails collection.
+The previous collection is replaced only after both stores finish successfully.
+
+Eligible products carry the retailer's promotion terms and store context. Their
+online prices are refreshed independently by `scripts/recover_catalog.py`.
+An absent online price does not cancel an advertised flyer promotion, and a
+flyer percentage never becomes a guessed dollar price. If identity metadata is
+absent from the retailer API, the ASIN remains in the parent promotion's full
+eligibility list; the metadata gap remains explicit in the coverage report.
+
+`reports/sale_coverage.json` reconciles the advertised identities against the
+shopper catalog. Static builds fail if any advertised promotion or membership
+is lost. The quality audit shows this scoped coverage separately from its
+identity-deduplicated sale-product count. This proves coverage of the two-store
+weekly flyer, not completeness of online-only sales or other retailers.
+
+Online search now includes the valid offset=500 boundary page. A page containing
+only products seen in earlier sorts no longer stops collection; later pages can
+contain new identities. Each sort reports its own listed ASINs and reported total.
+HTTP errors and server result-window limits must not be called complete listings.
+Price recovery preserves these listing reports instead of overwriting them.
