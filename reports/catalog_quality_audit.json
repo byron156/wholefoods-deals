@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:18:48.778581+00:00",
+  "generated_at": "2026-09-26T13:10:57.022648+00:00",
   "summary": {
     "total_products": 5507,
     "verified_sales_prime": 2005,
@@ -35,215 +35,14 @@
     "combined_unique_count": 5507
   },
   "taxonomy_report": {
-    "generated_at": "2026-09-25T17:18:46.575707+00:00",
+    "generated_at": "2026-09-26T13:10:55.063438+00:00",
     "taxonomy_version": "fixed-taxonomy-v6",
     "model_name": "fixed-taxonomy",
     "model_version": "taxonomy-local-ml-v18",
     "product_count": 5507,
     "completed_count": 5507,
-    "changed_count": 5364,
-    "changed_examples": [
-      "Bone-In Beef Short Ribs",
-      "Beef Chuck Short Rib Bone-In",
-      "Beef Chuck Short Rib Bone-In Flanken",
-      "Bone-In Beef Short Ribs",
-      "Beef Chuck Short Rib Bone-In",
-      "Honeycrisp Apples",
-      "Organic Honeycrisp Apple",
-      "Honeycrisp Apples",
-      "Organic Honeycrisp Apple",
-      "Frizzle, Sizzle and Drizzle Olive Oils",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil - High Polyphenol Early Harvest EVOO Finishing Oil in a Squeeze Bottle - Single Origin Olive Oils from Spain - 16.9 Fl Oz (500ml)",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Origin Olive Oils from Spain - 25.3 Fl Oz (750ml)",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 25.3 Fl Oz (750ml) Refill Can",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil - High Polyphenol Early Harvest EVOO Finishing Oil in a Squeeze Bottle - Single Farm Olives from Spain - 16.9 Fl Oz (500ml) Refill Can",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 16.9 Fl Oz (500ml)",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil - High Polyphenol Early Harvest EVOO Finishing Oil in a Squeeze Bottle - Single Farm Olives from Spain - 11.8 Fl Oz (350ml)",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 33.8 Fl Oz (1L)",
-      "Graza Frizzle High Heat Cooking Oil, Frying Oil, 25.3 Fl Oz (750ml) | Cooking Oil with High Smoke Point & Neutral Flavor in a Large Bottle for Frying, Baking & Grilling - Made from 100% Olives",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Glass Bottle - Single Origin Olive Oils from Spain - 25.3 Fl Oz (750ml)",
-      "Graza Frizzle High Heat Cooking Oil Spray, Frying Oil, 5 Fl Oz (148ml) | Cooking Oil with a High Smoke Point & Neutral Flavor in a Spray Bottle for Frying, Baking & Grilling - Made from 100% Olives",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil, 16.9 Fl Oz (500ml) | High Polyphenol Early Harvest EVOO Finishing Oil in a Glass Bottle - Single Origin Olive Oils from Spain",
-      "Graza Sizzle Extra Virgin Olive Oil Spray, Cooking Oil, 5 Fl Oz | High Polyphenol Peak Harvest EVOO Cooking Oil in a Spray Bottle - Single Origin Olive Oils from Spain",
-      "Graza Original Olive Oil Mayonnaise in Squeeze Bottle | Rich & Creamy Classic Mayo Made with Cage Free Eggs, Extra Virgin Olive Oil & Pomace Oil, Free from Seed Oils",
-      "Graza Fancy Mayo in Squeeze Bottle | Rich & Creamy Classic Mayo Made with Cage Free Eggs, Extra Virgin Olive Oil & Pomace Oil, Free from Seed Oils",
-      "Graza Garlic Mayo Aioli Dip Sauce with 100% Olive Oil in Squeeze Bottle | Mayonnaise Aioli with Real Chopped Garlic - Made with Cage Free Eggs & Free from Seed Oils - Zesty Garlicky Mayo Spread & Dip",
-      "Frizzle Cooking Oil Refill",
-      "Original Mayo Jar",
-      "Frizzle, Sizzle and Drizzle Olive Oils",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil - High Polyphenol Early Harvest EVOO Finishing Oil in a Squeeze Bottle - Single Origin Olive Oils from Spain - 16.9 Fl Oz (500ml)",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Origin Olive Oils from Spain - 25.3 Fl Oz (750ml)",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 25.3 Fl Oz (750ml) Refill Can",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil - High Polyphenol Early Harvest EVOO Finishing Oil in a Squeeze Bottle - Single Farm Olives from Spain - 16.9 Fl Oz (500ml) Refill Can",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 16.9 Fl Oz (500ml)",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil - High Polyphenol Early Harvest EVOO Finishing Oil in a Squeeze Bottle - Single Farm Olives from Spain - 11.8 Fl Oz (350ml)",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Squeeze Bottle - Single Farm Olives from Spain - 33.8 Fl Oz (1L)",
-      "Graza Frizzle High Heat Cooking Oil, Frying Oil, 25.3 Fl Oz (750ml) | Cooking Oil with High Smoke Point & Neutral Flavor in a Large Bottle for Frying, Baking & Grilling - Made from 100% Olives",
-      "Graza Sizzle Extra Virgin Olive Oil, Cooking Oil - High Polyphenol Peak Harvest EVOO Cooking Oil in a Glass Bottle - Single Origin Olive Oils from Spain - 25.3 Fl Oz (750ml)",
-      "Graza Frizzle High Heat Cooking Oil Spray, Frying Oil, 5 Fl Oz (148ml) | Cooking Oil with a High Smoke Point & Neutral Flavor in a Spray Bottle for Frying, Baking & Grilling - Made from 100% Olives",
-      "Graza Drizzle Extra Virgin Olive Oil, Finishing Oil, 16.9 Fl Oz (500ml) | High Polyphenol Early Harvest EVOO Finishing Oil in a Glass Bottle - Single Origin Olive Oils from Spain",
-      "Graza Sizzle Extra Virgin Olive Oil Spray, Cooking Oil, 5 Fl Oz | High Polyphenol Peak Harvest EVOO Cooking Oil in a Spray Bottle - Single Origin Olive Oils from Spain",
-      "Graza Original Olive Oil Mayonnaise in Squeeze Bottle | Rich & Creamy Classic Mayo Made with Cage Free Eggs, Extra Virgin Olive Oil & Pomace Oil, Free from Seed Oils",
-      "Graza Fancy Mayo in Squeeze Bottle | Rich & Creamy Classic Mayo Made with Cage Free Eggs, Extra Virgin Olive Oil & Pomace Oil, Free from Seed Oils",
-      "Graza Garlic Mayo Aioli Dip Sauce with 100% Olive Oil in Squeeze Bottle | Mayonnaise Aioli with Real Chopped Garlic - Made with Cage Free Eggs & Free from Seed Oils - Zesty Garlicky Mayo Spread & Dip",
-      "Frizzle Cooking Oil Refill",
-      "Original Mayo Jar",
-      "Packaged Rice",
-      "Lundberg Basmati Rice, Long Grain White - Non-Sticky, Fluffy, Nutty, Vegan Food, Healthy Meals, Gluten-Free Rice Grown in California, 32 Oz",
-      "Lundberg Organic Jasmine Brown Rice – Long-Grain, Fluffy & Aromatic, Responsibly Grown in California, 32 Oz",
-      "Lundberg Family Farms - Organic Brown Short Grain Rice, Subtle Nutty Aroma, Clings When Cooked, 100% Whole Grain, High Fiber, Pantry Staple, USDA Certified Organic, Gluten-Free, Vegan (32 oz, 1-Pack)",
-      "Lundberg Organic Long Grain White Rice, Regenerative Organic Certified, Resealable 2lb Bag",
-      "Lundberg Basmati Rice, Organic Long Grain Brown Rice - Non-Sticky, Fluffy Aromatic Rice Grown in California, Pantry Staples, 32 Oz",
-      "Lundberg Wild Blend Rice – Long-Grain Brown, Sweet Brown, Red & Black Rice, Certified Gluten-Free Whole Grains, 16 Oz",
-      "Lundberg Jasmine Rice, Long Grain White Rice - Non-Sticky, Fluffy Aromatic Rice, Sustainably Grown in California, Pantry Staples, 32 Oz",
-      "Lundberg White Arborio Rice - Short-Grain White Rice, Creamy Texture for Making Risotto, Rice Pudding, Healthy Food Recipes, Vegan Food, Gluten-Free Rice Grown in California, 32 Oz",
-      "Lundberg Basmati Rice, Organic Long Grain White Rice - Non-Sticky, Fluffy Aromatic Rice, Vegan Food, Healthy Meals, Gluten-Free Rice Grown in California, 32 Oz",
-      "Lundberg Sushi Rice, Sticky White Japanese-Style Short Grains, Regenerative Organic Certified, 32 Oz",
-      "Lundberg Regenerative Organic Brown Rice Long Grain, Kosher, USDA Certified Organic, Gluten Free & Non-GMO, 32 Ounce (Pack of 1)",
-      "Lundberg Family Farms - Traditional Italian Risotto, Alfredo, Convenient Side Dish, 20 Minute Cook Time, Pantry Staple, Non-GMO, Gluten-Free, USDA Certified Organic (5.5 oz, 6-Pack)",
-      "Lundberg Sushi Rice, Sticky White Japanese-Style Short Grains, Regenerative Organic Certified, 64 Oz",
-      "Lundberg Basmati Rice, Organic Long Grain White Rice - Non-Sticky, Fluffy, Nutty, Aromatic Rice, Vegan Food, Healthy Meals, Gluten-Free Rice Grown in California, 64 Oz",
-      "Lundberg Black Pearl Rice, Regenerative Organic Certified – Full-Bodied Black Rice, Responsibly Grown in California, 16 Oz",
-      "Lundberg Organic Jasmine Rice, Long Grain White Rice, 8oz | Microwave Ready in 90 Seconds, Regenerative Organic Certified, Gluten Free, Non-GMO, Non-Sticky, Fluffy & Aromatic",
-      "Lundberg Family Farms, Mix Rice Whole Grain Yellow Organic, 6 Ounce",
-      "Lundberg Organic Creamy Parmesan Risotto Seasoned Rice - Regenerative Organic Certified Arborio Rice & Seasoning Mix, Gluten Free, 5.5 Ounce Box",
-      "LUNDBERG RICE WHT SPANSH STYLE ENT 5.5 OZ",
-      "Lundberg Cilantro Lime White Rice 5.5 OZ",
-      "Lundberg Regenerative Organic Certified Wild Blend Rice – Brown, Red & Black Varieties, 32 Oz",
-      "Lundberg Jasmine Rice, Regenerative Organic Certified – Non-Sticky, Aromatic Long-Grain White Rice, Responsibly Grown in California, 64 Oz",
-      "Lundberg Organic Arborio Rice, Rich Flavor, Creamy Texture, Perfect for Risotto, Rice Pudding & Soups, Pantry Staple, Sustainably Farmed, Gluten-Free, Non-GMO, Vegan, 4 lbs.",
-      "Lundberg Coconut Rice, Regenerative Organic White Jasmine Rice, Ready in 90 Seconds, Microwave or Stovetop, 8 Oz Pouch - Packaging May Vary",
-      "Lundberg Value Size Regenerative Jasmine Rice 17.3 OZ",
-      "Lundberg Organic Cilantro Lime Rice, 8oz | Microwave Ready in 90 Seconds, Regenerative Organic Rice, Gluten Free, Non-GMO",
-      "Lundberg Organic Chicken & Herb Seasoned Rice – Regenerative Organic Certified Long Grain White Rice & Seasoning Mix, Gluten Free, 5.5 Oz",
-      "Lundberg X Fly By Jing Chili Crisp Rice – Microwave Ready in 90 Seconds, Regenerative Organic Jasmine Rice with chili crisp seasoning, Gluten-Free, 8oz Pouch",
-      "Lundberg Upcycled Organic Jasmine White Rice - Light & Fluffy, Gluten Free, Resealable 2lb Bag (Pack of 1)",
-      "Lundberg Organic Spanish Rice - Microwave Ready in 90 Seconds, Regenerative Organic Lightly Seasoned White Jasmine Rice, Gluten-Free, 8oz Pouch",
-      "Packaged Rice",
-      "Lundberg Basmati Rice, Long Grain White - Non-Sticky, Fluffy, Nutty, Vegan Food, Healthy Meals, Gluten-Free Rice Grown in California, 32 Oz",
-      "Lundberg Organic Jasmine Brown Rice – Long-Grain, Fluffy & Aromatic, Responsibly Grown in California, 32 Oz",
-      "Lundberg Family Farms - Organic Brown Short Grain Rice, Subtle Nutty Aroma, Clings When Cooked, 100% Whole Grain, High Fiber, Pantry Staple, USDA Certified Organic, Gluten-Free, Vegan (32 oz, 1-Pack)",
-      "Lundberg Organic Long Grain White Rice, Regenerative Organic Certified, Resealable 2lb Bag",
-      "Lundberg Basmati Rice, Organic Long Grain Brown Rice - Non-Sticky, Fluffy Aromatic Rice Grown in California, Pantry Staples, 32 Oz",
-      "Lundberg Wild Blend Rice – Long-Grain Brown, Sweet Brown, Red & Black Rice, Certified Gluten-Free Whole Grains, 16 Oz",
-      "Lundberg Jasmine Rice, Long Grain White Rice - Non-Sticky, Fluffy Aromatic Rice, Sustainably Grown in California, Pantry Staples, 32 Oz",
-      "Lundberg White Arborio Rice - Short-Grain White Rice, Creamy Texture for Making Risotto, Rice Pudding, Healthy Food Recipes, Vegan Food, Gluten-Free Rice Grown in California, 32 Oz",
-      "Lundberg Basmati Rice, Organic Long Grain White Rice - Non-Sticky, Fluffy Aromatic Rice, Vegan Food, Healthy Meals, Gluten-Free Rice Grown in California, 32 Oz",
-      "Lundberg Sushi Rice, Sticky White Japanese-Style Short Grains, Regenerative Organic Certified, 32 Oz",
-      "Lundberg Wild Rice, Regenerative Organic Certified – 100% Natural California Cultivated Wild Black Rice, 8 Oz",
-      "Lundberg Regenerative Organic Brown Rice Long Grain, Kosher, USDA Certified Organic, Gluten Free & Non-GMO, 32 Ounce (Pack of 1)",
-      "Lundberg Family Farms - Traditional Italian Risotto, Alfredo, Convenient Side Dish, 20 Minute Cook Time, Pantry Staple, Non-GMO, Gluten-Free, USDA Certified Organic (5.5 oz, 6-Pack)",
-      "Lundberg Sushi Rice, Sticky White Japanese-Style Short Grains, Regenerative Organic Certified, 64 Oz",
-      "Lundberg Basmati Rice, Organic Long Grain White Rice - Non-Sticky, Fluffy, Nutty, Aromatic Rice, Vegan Food, Healthy Meals, Gluten-Free Rice Grown in California, 64 Oz",
-      "Lundberg Black Pearl Rice, Regenerative Organic Certified – Full-Bodied Black Rice, Responsibly Grown in California, 16 Oz",
-      "Lundberg Organic Jasmine Rice, Long Grain White Rice, 8oz | Microwave Ready in 90 Seconds, Regenerative Organic Certified, Gluten Free, Non-GMO, Non-Sticky, Fluffy & Aromatic",
-      "Lundberg Family Farms, Mix Rice Whole Grain Yellow Organic, 6 Ounce",
-      "Lundberg Organic Creamy Parmesan Risotto Seasoned Rice - Regenerative Organic Certified Arborio Rice & Seasoning Mix, Gluten Free, 5.5 Ounce Box",
-      "LUNDBERG RICE WHT SPANSH STYLE ENT 5.5 OZ",
-      "Lundberg Cilantro Lime White Rice 5.5 OZ",
-      "Lundberg Regenerative Organic Certified Wild Blend Rice – Brown, Red & Black Varieties, 32 Oz",
-      "Lundberg Jasmine Rice, Regenerative Organic Certified – Non-Sticky, Aromatic Long-Grain White Rice, Responsibly Grown in California, 64 Oz",
-      "Lundberg Organic Arborio Rice, Rich Flavor, Creamy Texture, Perfect for Risotto, Rice Pudding & Soups, Pantry Staple, Sustainably Farmed, Gluten-Free, Non-GMO, Vegan, 4 lbs.",
-      "Lundberg Coconut Rice, Regenerative Organic White Jasmine Rice, Ready in 90 Seconds, Microwave or Stovetop, 8 Oz Pouch - Packaging May Vary",
-      "Lundberg Value Size Regenerative Jasmine Rice 17.3 OZ",
-      "Lundberg Organic Cilantro Lime Rice, 8oz | Microwave Ready in 90 Seconds, Regenerative Organic Rice, Gluten Free, Non-GMO",
-      "Lundberg Organic Chicken & Herb Seasoned Rice – Regenerative Organic Certified Long Grain White Rice & Seasoning Mix, Gluten Free, 5.5 Oz",
-      "Lundberg X Fly By Jing Chili Crisp Rice – Microwave Ready in 90 Seconds, Regenerative Organic Jasmine Rice with chili crisp seasoning, Gluten-Free, 8oz Pouch",
-      "Lundberg Upcycled Organic Jasmine White Rice - Light & Fluffy, Gluten Free, Resealable 2lb Bag (Pack of 1)",
-      "Lundberg Organic Spanish Rice - Microwave Ready in 90 Seconds, Regenerative Organic Lightly Seasoned White Jasmine Rice, Gluten-Free, 8oz Pouch",
-      "Sweet Potatoes",
-      "Organic Sweet Potatoes (White to Cream Flesh), 2 lb",
-      "Organic Japanese Sweet Potato",
-      "Organic Red Sweet Potato",
-      "Potato Sweet Orange Organic",
-      "Organic Purple Stokes Sweet Potato",
-      "Sweet Potatoes",
-      "Organic Sweet Potatoes (White to Cream Flesh), 2 lb",
-      "Organic Japanese Sweet Potato",
-      "Organic Red Sweet Potato",
-      "Potato Sweet Orange Organic",
-      "Organic Purple Stokes Sweet Potato",
-      "Select Goudas",
-      "Dutch Cheese Makers, Gouda Goat Spring Koe",
-      "Spring Koe, Gouda Creamy Red Wax",
-      "Raw Gouda Truffle",
-      "Artikaas, 36 Month Aged Gouda",
-      "Kaasaggio Robusto Gouda",
-      "Kaasaggio Originale Cubes Gouda Cheese, 8 Ounce (Pack Of 1)",
-      "Kaasaggio Robusto Cubes Gouda-Cheese, 4 Ounce (Pack Of 1)",
-      "Artikaas, Gouda Youngsters Smoked",
-      "Select Goudas",
-      "Dutch Cheese Makers, Gouda Goat Spring Koe",
-      "Spring Koe, Gouda Creamy Red Wax",
-      "Raw Gouda Truffle",
-      "Artikaas, 36 Month Aged Gouda",
-      "Kaasaggio Robusto Gouda",
-      "Kaasaggio Originale Cubes Gouda Cheese, 8 Ounce (Pack Of 1)",
-      "Kaasaggio Robusto Cubes Gouda-Cheese, 4 Ounce (Pack Of 1)",
-      "Artikaas, Gouda Youngsters Smoked",
-      "Artikaas, 36 Month Aged Gouda Cubes, 16 Ounce",
-      "Artikaas, 18 Month Aged Gouda Cubes, 16 Ounce",
-      "All Caviar and Blinis",
-      "Siberian Osetra Caviar, 1 Ounce",
-      "Cocktail Blini, 3.5 Ounce",
-      "Caspian Sea Osetra Caviar, 1 Ounce",
-      "Blister Golden Osetra Caviar, 1 Ounce",
-      "Whole Foods Market Lake Whitefish Caviar, 1.75 OZ",
-      "Whole Foods Market White Sturgeon Caviar, 1 OZ",
-      "Whole Foods Market Keta Salmon Caviar, 1.75 OZ",
-      "All Caviar and Blinis",
-      "Siberian Osetra Caviar, 1 Ounce",
-      "Cocktail Blini, 3.5 Ounce",
-      "Caspian Sea Osetra Caviar, 1 Ounce",
-      "Blister Golden Osetra Caviar, 1 Ounce",
-      "Whole Foods Market Lake Whitefish Caviar, 1.75 OZ",
-      "Whole Foods Market White Sturgeon Caviar, 1 OZ",
-      "Whole Foods Market Keta Salmon Caviar, 1.75 OZ",
-      "Boneless Pork Loin Chops",
-      "Pork Loin Chop Boneless",
-      "Boneless Pork Loin Roast",
-      "Boneless Pork Loin Chops",
-      "Pork Loin Chop Boneless",
-      "Boneless Pork Loin Roast",
-      "Large Hass Avocados",
-      "Large Organic Hass Avocado",
-      "Large Hass Avocados",
-      "Large Organic Hass Avocado",
-      "Broccoli",
-      "Broccoli Crowns, 1 Each",
-      "Broccoli",
-      "Broccoli Crowns, 1 Each",
-      "Seedless Red or Green Grapes",
-      "Organic Red Seedless Grapes",
-      "Organic Green Seedless Grapes",
-      "Seedless Red or Green Grapes",
-      "Organic Red Seedless Grapes",
-      "Organic Green Seedless Grapes",
-      "Red and Bartlett Pears",
-      "Organic Bartlett Pear",
-      "PRODUCE Organic Red Pear",
-      "Red and Bartlett Pears",
-      "Organic Bartlett Pear",
-      "PRODUCE Organic Red Pear",
-      "Oktoberfest Sausages",
-      "Pork Bier Brat, 12 Ounce",
-      "Oktoberfest Pork Brat, 12 Ounce",
-      "North Country Smokehouse Organic Oktoberfest Sausage, 12 OZ",
-      "North Country Smokehouse Organic Bier Brat Sausage, 12 OZ",
-      "Sausage Pork Speckwurst, 12 Ounce",
-      "Oktoberfest Sausages",
-      "Pork Bier Brat, 12 Ounce",
-      "Oktoberfest Pork Brat, 12 Ounce",
-      "North Country Smokehouse Organic Oktoberfest Sausage, 12 OZ",
-      "North Country Smokehouse Organic Bier Brat Sausage, 12 OZ",
-      "Sausage Pork Speckwurst, 12 Ounce",
-      "Pork Bacon or Ham Steaks",
-      "North Country Smokehouse Organic Bacon, 8 Ounce",
-      "North Country Smokehouse Applewood Smoked Pork Bacon, 12 Ounce",
-      "Organic Uncured Canadian Applewood Smoked Bacon, 7 oz",
-      "Organic Reduced Sodium Applewood Smoked Uncured Bacon, 8 Ounce",
-      "North Country Smokehouse Organic Applewood Smoked Pork Ham Steak, 6 OZ"
-    ],
+    "changed_count": 0,
+    "changed_examples": [],
     "last_product": "Yellow Peaches"
   },
   "counts": {
@@ -15162,120 +14961,6 @@
         "price_source": "Whole Foods product API",
         "price_verified": true,
         "source_store_name": "Columbus Circle",
-        "availability": "IN_STOCK",
-        "pricing_uom": {
-          "dimension": "COUNT",
-          "unit": "UNITS"
-        },
-        "retailer_product_type": "SNACK_FOOD_BAR",
-        "retailer_department": "gl_grocery",
-        "retailer_description": "Simple, delicious ingredients make RXBAR protein bars a satisfying way to fuel your day. These wholesome peanut butter protein bars are filled with ingredients you can recognize. Each snack bar is made with egg whites for protein, crunchy peanuts, with dates to bind it all together, and no B.S. Enjoy the taste of real ingredients that will crush any sweet cravings you have during the day; Just the right amount to fill you up, each serving contains 12g of protein (19% daily value) and is gluten free and ready to help you take on the day. Enjoy wholesome goodness worth snacking on. On your way to the gym, in the office or paired with your morning cup of joe, improve your daily routine with RXBAR Peanut Butter protein bars.",
-        "retailer_ingredients": "Dates, Peanuts, Egg Whites, Natural Flavors, Sea Salt.",
-        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "asin": "B0143NQVP2",
-        "name": "Rxbar Protein Bars",
-        "raw_name": "RXBAR Protein Bars, 12g Protein, Gluten Free Snacks, Peanut Butter, 22oz Box (12 Bars)",
-        "brand": "Rxbar",
-        "source_brand": "Rxbar",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Nut Butters & Spreads",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Nut Butters & Spreads",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$25.99",
-        "discount_percent": 0,
-        "unit_price": "$1.18/ounce",
-        "image": "https://m.media-amazon.com/images/I/61jbGTZzmdL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0143NQVP2",
-        "tags": [
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Columbus Circle",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$25.99",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$1.18/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0143NQVP2",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Upper West Side",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$25.99",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$1.18/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0143NQVP2",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "price_context": "Store-specific online",
-        "price_source": "Whole Foods product API",
-        "price_verified": true,
-        "source_store_name": "Columbus Circle",
         "availability": "NO_CURRENT_OFFER",
         "retailer_product_type": "SNACK_FOOD_BAR",
         "retailer_department": "gl_grocery",
@@ -19610,122 +19295,6 @@
             "discount_percent": 0,
             "unit_price": "$2.15/count",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0CNTQT33J",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "price_context": "Store-specific online",
-        "price_source": "Whole Foods product API",
-        "price_verified": true,
-        "source_store_name": "Columbus Circle",
-        "availability": "IN_STOCK",
-        "pricing_uom": {
-          "dimension": "COUNT",
-          "unit": "UNITS"
-        },
-        "retailer_product_type": "FOOD",
-        "retailer_department": "gl_grocery",
-        "retailer_description": "Babylife Pouch Apl Crt Spnc Kale is a premium product made with quality ingredients. A versatile pantry staple perfect for a variety of culinary uses.",
-        "retailer_ingredients": "Organic Apple, Organic Carrot, Organic Spinach, Organic Kale, Organic Lemon Juice.",
-        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "asin": "B0DBMCRH47",
-        "name": "Babylife Organics Stage 2",
-        "raw_name": "Babylife Organics Stage 2 - Apple, Carrot, Spinach & Kale, 3.5 Ounce Pouch (1 Pack) - Heavy Metal Safe, Organic Baby Food",
-        "brand": "Babylife Organics",
-        "source_brand": "Babylife Organics",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "All Deals",
-          "Search Deals"
-        ],
-        "source_count": 2,
-        "category": "Baby",
-        "subcategory": "Baby Food",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Baby",
-        "ai_subcategory": "Baby Food",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$2.99",
-        "discount_percent": 0,
-        "unit_price": "$0.85/ounce",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/71e-433aPiL.AC_SL300_.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0DBMCRH47",
-        "tags": [
-          "multi-source deal",
-          "organic"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Columbus Circle",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$2.99",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$0.85/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DBMCRH47",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Upper West Side",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$2.99",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$0.85/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0DBMCRH47",
             "sources": [
               "Search Deals"
             ]
@@ -27734,6 +27303,122 @@
             "discount_percent": 24,
             "unit_price": "$0.53/ounce",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B09PFRTS11",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "retailer_product_type": "UNDERPANTS",
+        "retailer_department": "gl_beauty",
+        "retailer_ingredients": "BODY: 95% ORGANIC COTTON, 5% ELASTANE. GUSSET LINING: 95% ORGANIC COTTON, 5% ELASTANE. GUSSET INNER: 87% POLYESTER, 13% POLYAMIDE. LOWER GUSSET: 100% POLYESTER WITH TPU LAYER",
+        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "asin": "B0FP47KN38",
+        "name": "FLO Period Underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
+        "raw_name": "FLO Period underwear Heavy Flow, Organic Cotton Reusable + Washable Period Underwear",
+        "brand": "FLO",
+        "source_brand": "FLO",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Beauty & Personal Care",
+        "subcategory": "Feminine Care",
+        "classification_status": "classified",
+        "category_confidence": 0.78,
+        "ai_category": "Beauty & Personal Care",
+        "ai_subcategory": "Feminine Care",
+        "ai_confidence": 0.78,
+        "ai_label_source": "clip-primary",
+        "ai_model_name": "local-clip-audit",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "ai_clip_score": 0.6438,
+        "ai_clip_source": "subcategory-first",
+        "current_price": "$24.99",
+        "discount_percent": 0,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71DJpydVkyL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FP47KN38",
+        "tags": [
+          "multi-source deal",
+          "organic"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Columbus Circle",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$24.99",
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FP47KN38",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Upper West Side",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$24.99",
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FP47KN38",
             "sources": [
               "Search Deals"
             ]
@@ -40034,6 +39719,108 @@
             "discount_percent": 0,
             "unit_price": "$0.39/fluid ounce",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0C7RHZZKX",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "retailer_product_type": "VITAMIN",
+        "retailer_department": "gl_drugstore",
+        "retailer_description": "Jarrow Formulas MK-7 is made via fermentation by Bacillus subtilus natto. MK-7 (Menaquinone-7) is an enhanced bioactive form of vitamin K2 found naturally occurring in Natto and is ten times better absorbed than K1 from spinach. MK-7 is responsible for the carboxylation of specific bone proteins needed for building bones.",
+        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "asin": "B00E3B67KY",
+        "name": "MK-7 Vitamin K-2 90-MCG, 60 Count",
+        "raw_name": "MK-7 Vitamin K-2 90-Mcg, 60 Count",
+        "brand": "Jarrow Formulas",
+        "source_brand": "Jarrow Formulas",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "All Deals",
+          "Search Deals"
+        ],
+        "source_count": 2,
+        "category": "Supplements & Wellness",
+        "subcategory": "Vitamins",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Supplements & Wellness",
+        "ai_subcategory": "Vitamins",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71a944SPVTL.AC_SL300_.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B00E3B67KY",
+        "tags": [
+          "multi-source deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Columbus Circle",
+            "availability": "NO_CURRENT_OFFER",
+            "pricing_uom": {},
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00E3B67KY",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Upper West Side",
+            "availability": "NO_CURRENT_OFFER",
+            "pricing_uom": {},
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B00E3B67KY",
             "sources": [
               "Search Deals"
             ]
@@ -165295,289 +165082,6 @@
         ]
       },
       {
-        "eligible_asin": "B0043ERL4C",
-        "observed_at": "2026-09-25T17:12:56.241352+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Columbus Circle",
-        "retailer_product_type": "NUTRITIONAL_SUPPLEMENT",
-        "retailer_department": "gl_drugstore",
-        "retailer_description": "Jarrow Formulas Jarro-Dophilus EPS Probiotic Capsules provide a carefully selected mixture of probiotic strains to maintain gut balance and support intestinal tract health and overall wellness.(1) Made with non-GMO ingredients, this vegetarian and gluten-free product does not contain wheat, egg, fish, shellfish, peanuts, tree nuts, or sesame, making it ideal for vegetarians. A suitable choice for a health enthusiast interested in digestive health and used as a daily supplement at home, each serving delivers 10 billion CFU from eight clinically-studied probiotic strains. The capsule is designed to help protect the probiotics as they pass through the stomach to the small intestine to help maintain and regulate gut health.(1) The strains include Lactobacillus rhamnosus R0011 which supports a healthy gut microbiome and helps maintain normal immune function. Bifidobacteria longum BB536 to promote the growth of beneficial bacteria, and Lactobacillus helveticus R0052 supports healthy digestion of dairy foods and promotes digestive comfort.(1) Each capsule is blister-packed to protect from moisture and features the proprietary Enteroguard coating that helps the probiotics survive stomach acid. Suggested use as women's and men's probiotics for gut health.",
-        "metadata_observed_at": "2026-09-25T17:12:56.241352+00:00",
-        "asin": "flyer:3a886044-bef4-4114-9d3c-8ad3ae3b8ac4:B0043ERL4C",
-        "asins": [
-          "flyer:3a886044-bef4-4114-9d3c-8ad3ae3b8ac4:B0043ERL4C"
-        ],
-        "name": "Jarrow Formulas Jarro Dophilus Probiotics 10 Billion CFU",
-        "raw_name": "Jarrow Formulas Jarro Dophilus Probiotics 10 Billion CFU - Probiotic Supplement Capsules for Digestive Health & Gut Health for Women and Men, 120 Veggie Capsules, Up to 60 Days, Shelf Stable",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Probiotics",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Probiotics",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71W4gRiqODL.jpg",
-        "url": "https://www.wholefoodsmarket.com/promotion/3a886044-bef4-4114-9d3c-8ad3ae3b8ac4?store-id=10160",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10160"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": "B0043ERL4C",
-            "observed_at": "2026-09-25T17:12:56.241352+00:00",
-            "expires": "2026-09-29T05:00:00Z",
-            "starts_at": "2026-09-23T05:00:00Z",
-            "price_context": "Weekly flyer",
-            "price_source": "Weekly flyer",
-            "price_verified": true,
-            "offer_kind": "promotion",
-            "source_store_name": "Columbus Circle",
-            "availability": null,
-            "pricing_uom": null,
-            "unit_evidence": null,
-            "promotion_terms": {
-              "sale": "15% off",
-              "prime": "23% off",
-              "regular": "Regular prices vary",
-              "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-            },
-            "current_price": null,
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": null,
-            "url": "https://www.wholefoodsmarket.com/promotion/3a886044-bef4-4114-9d3c-8ad3ae3b8ac4?store-id=10160",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "eligible_asin": "B0043ERL4C",
-        "observed_at": "2026-09-25T17:12:56.645125+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "retailer_product_type": "NUTRITIONAL_SUPPLEMENT",
-        "retailer_department": "gl_drugstore",
-        "retailer_description": "Jarrow Formulas Jarro-Dophilus EPS Probiotic Capsules provide a carefully selected mixture of probiotic strains to maintain gut balance and support intestinal tract health and overall wellness.(1) Made with non-GMO ingredients, this vegetarian and gluten-free product does not contain wheat, egg, fish, shellfish, peanuts, tree nuts, or sesame, making it ideal for vegetarians. A suitable choice for a health enthusiast interested in digestive health and used as a daily supplement at home, each serving delivers 10 billion CFU from eight clinically-studied probiotic strains. The capsule is designed to help protect the probiotics as they pass through the stomach to the small intestine to help maintain and regulate gut health.(1) The strains include Lactobacillus rhamnosus R0011 which supports a healthy gut microbiome and helps maintain normal immune function. Bifidobacteria longum BB536 to promote the growth of beneficial bacteria, and Lactobacillus helveticus R0052 supports healthy digestion of dairy foods and promotes digestive comfort.(1) Each capsule is blister-packed to protect from moisture and features the proprietary Enteroguard coating that helps the probiotics survive stomach acid. Suggested use as women's and men's probiotics for gut health.",
-        "metadata_observed_at": "2026-09-25T17:12:56.645125+00:00",
-        "asin": "flyer:dc58f8dd-981f-4d53-9164-dae3d516925d:B0043ERL4C",
-        "asins": [
-          "flyer:dc58f8dd-981f-4d53-9164-dae3d516925d:B0043ERL4C"
-        ],
-        "name": "Jarrow Formulas Jarro Dophilus Probiotics 10 Billion CFU",
-        "raw_name": "Jarrow Formulas Jarro Dophilus Probiotics 10 Billion CFU - Probiotic Supplement Capsules for Digestive Health & Gut Health for Women and Men, 120 Veggie Capsules, Up to 60 Days, Shelf Stable",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Probiotics",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Probiotics",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71W4gRiqODL.jpg",
-        "url": "https://www.wholefoodsmarket.com/promotion/dc58f8dd-981f-4d53-9164-dae3d516925d?store-id=10328",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": "B0043ERL4C",
-            "observed_at": "2026-09-25T17:12:56.645125+00:00",
-            "expires": "2026-09-29T05:00:00Z",
-            "starts_at": "2026-09-23T05:00:00Z",
-            "price_context": "Weekly flyer",
-            "price_source": "Weekly flyer",
-            "price_verified": true,
-            "offer_kind": "promotion",
-            "source_store_name": "Upper West Side",
-            "availability": null,
-            "pricing_uom": null,
-            "unit_evidence": null,
-            "promotion_terms": {
-              "sale": "15% off",
-              "prime": "23% off",
-              "regular": "Regular prices vary",
-              "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-            },
-            "current_price": null,
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": null,
-            "url": "https://www.wholefoodsmarket.com/promotion/dc58f8dd-981f-4d53-9164-dae3d516925d?store-id=10328",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "price_context": "Store-specific online",
-        "price_source": "Whole Foods product API",
-        "price_verified": true,
-        "source_store_name": "Columbus Circle",
-        "availability": "IN_STOCK",
-        "pricing_uom": {
-          "dimension": "COUNT",
-          "unit": "UNITS"
-        },
-        "retailer_product_type": "NUTRITIONAL_SUPPLEMENT",
-        "retailer_department": "gl_drugstore",
-        "retailer_description": "Jarrow Formulas Jarro-Dophilus EPS Probiotic Capsules provide a carefully selected mixture of probiotic strains to maintain gut balance and support intestinal tract health and overall wellness.(1) Made with non-GMO ingredients, this vegetarian and gluten-free product does not contain wheat, egg, fish, shellfish, peanuts, tree nuts, or sesame, making it ideal for vegetarians. A suitable choice for a health enthusiast interested in digestive health and used as a daily supplement at home, each serving delivers 10 billion CFU from eight clinically-studied probiotic strains. The capsule is designed to help protect the probiotics as they pass through the stomach to the small intestine to help maintain and regulate gut health.(1) The strains include Lactobacillus rhamnosus R0011 which supports a healthy gut microbiome and helps maintain normal immune function. Bifidobacteria longum BB536 to promote the growth of beneficial bacteria, and Lactobacillus helveticus R0052 supports healthy digestion of dairy foods and promotes digestive comfort.(1) Each capsule is blister-packed to protect from moisture and features the proprietary Enteroguard coating that helps the probiotics survive stomach acid. Suggested use as women's and men's probiotics for gut health.",
-        "retailer_ingredients": "Proprietary Probiotic Blend (Lacticaseibacillus rhamnosus R0011, Lactobacillus helveticus R0052, Pediococcus acidilactici R1001, Lacticaseibacillus casei R0215, Bifidobacterium longum BB536, Lactiplantibacillus plantarum R1012, Bifidobacterium breve R0070, Lactococcus lactis subsp. lactis R1058), Other Ingredients: Potato starch, vegetarian capsule (hydroxy-propylmethylcellulose, water, aqueous-based enteric coating),magnesium stearate (vegetable source) and vitamin C (antioxidant). Contains: Milk and soy (in trace amounts)",
-        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "asin": "B0043ERL4C",
-        "name": "Jarrow Formulas Jarro Dophilus Probiotics 10 Billion CFU",
-        "raw_name": "Jarrow Formulas Jarro Dophilus Probiotics 10 Billion CFU - Probiotic Supplement Capsules for Digestive Health & Gut Health for Women and Men, 120 Veggie Capsules, Up to 60 Days, Shelf Stable",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Probiotics",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Probiotics",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$42.49",
-        "basis_price": "$49.99",
-        "prime_price": "$38.24 ea",
-        "discount": "24% off",
-        "discount_percent": 24,
-        "unit_price": "$0.35/count",
-        "image": "https://m.media-amazon.com/images/I/71W4gRiqODL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0043ERL4C",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Columbus Circle",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$42.49",
-            "basis_price": "$49.99",
-            "prime_price": "$38.24",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "$0.35/count",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0043ERL4C",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Upper West Side",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$42.49",
-            "basis_price": "$49.99",
-            "prime_price": "$38.24",
-            "discount": "24% off",
-            "discount_percent": 24,
-            "unit_price": "$0.35/count",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0043ERL4C",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
         "eligible_asin": "B002FJW3ZY",
         "observed_at": "2026-09-25T17:12:56.241352+00:00",
         "expires": "2026-09-29T05:00:00Z",
@@ -168861,89 +168365,6 @@
             "discount_percent": 0,
             "unit_price": null,
             "url": "https://www.wholefoodsmarket.com/promotion/3a886044-bef4-4114-9d3c-8ad3ae3b8ac4?store-id=10160",
-            "sources": [
-              "Flyer"
-            ]
-          }
-        ]
-      },
-      {
-        "eligible_asin": "B00DTQTZK8",
-        "observed_at": "2026-09-25T17:12:56.645125+00:00",
-        "expires": "2026-09-29T05:00:00Z",
-        "starts_at": "2026-09-23T05:00:00Z",
-        "price_context": "Weekly flyer",
-        "price_source": "Weekly flyer",
-        "price_verified": true,
-        "offer_kind": "promotion",
-        "source_store_name": "Upper West Side",
-        "retailer_product_type": "VITAMIN",
-        "retailer_department": "gl_drugstore",
-        "retailer_description": "Jarrow Formulas Vitamin D3 is formulated with cholecalciferol, the form of vitamin D that may improve vitamin D status better than equivalent amounts of ergocalciferol (D2).* Each serving of Jarrow Formulas Vitamin D3 contains 62.5 mcg (2,500 IU) of vitamin D3, so you receive the amount of this essential nutrient to support your health. Jarrow Formulas Vitamin D3 (cholecalciferol) may help improve vitamin D status better than equivalent amounts of ergocalciferol (D2).* D3 is also the form produced by skin with UVB exposure (sunlight). Vitamin D3 is converted to its hormonally-active form, calcitriol, which enhances dietary calcium and phosphorous absorption, supports the production of osteocalcin (a structural protein in bone), and stimulates the vitamin D receptor in innate immune cells to support a healthy immune response.* Our Vitamin D3 contains no wheat, gluten, soybeans, dairy, egg, fish/shellfish, peanuts/tree nuts, or sesame. To experience the benefits of Jarrow Formulas Vitamin D3, adults should take 1 softgel once a day with a fat-containing meal or as directed by your qualified healthcare professional. *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
-        "metadata_observed_at": "2026-09-25T17:12:56.645125+00:00",
-        "asin": "flyer:dc58f8dd-981f-4d53-9164-dae3d516925d:B00DTQTZK8",
-        "asins": [
-          "flyer:dc58f8dd-981f-4d53-9164-dae3d516925d:B00DTQTZK8"
-        ],
-        "name": "Jarrow Vitamin D3 Supplements 62.5 Mcg (2,500 IU), 100 Softgels",
-        "raw_name": "Jarrow Vitamin D3 Supplements 62.5 mcg (2,500 IU), 100 Softgels | Vitamin D Supplement For Bone Health, Immune Support & Calcium Metabolism Support, Gluten Free, D3 Vitamins, 100 Servings",
-        "brand": "Jarrow Formulas",
-        "source_brand": "Jarrow Formulas",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Flyer"
-        ],
-        "source_count": 1,
-        "category": "Supplements & Wellness",
-        "subcategory": "Vitamins",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Supplements & Wellness",
-        "ai_subcategory": "Vitamins",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "discount_percent": 0,
-        "image": "https://m.media-amazon.com/images/I/71fYlf8hlIL.jpg",
-        "url": "https://www.wholefoodsmarket.com/promotion/dc58f8dd-981f-4d53-9164-dae3d516925d?store-id=10328",
-        "tags": [
-          "flyer-only deal"
-        ],
-        "available_store_ids": [
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": "B00DTQTZK8",
-            "observed_at": "2026-09-25T17:12:56.645125+00:00",
-            "expires": "2026-09-29T05:00:00Z",
-            "starts_at": "2026-09-23T05:00:00Z",
-            "price_context": "Weekly flyer",
-            "price_source": "Weekly flyer",
-            "price_verified": true,
-            "offer_kind": "promotion",
-            "source_store_name": "Upper West Side",
-            "availability": null,
-            "pricing_uom": null,
-            "unit_evidence": null,
-            "promotion_terms": {
-              "sale": "15% off",
-              "prime": "23% off",
-              "regular": "Regular prices vary",
-              "description": "While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
-            },
-            "current_price": null,
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": null,
-            "url": "https://www.wholefoodsmarket.com/promotion/dc58f8dd-981f-4d53-9164-dae3d516925d?store-id=10328",
             "sources": [
               "Flyer"
             ]
@@ -178169,120 +177590,6 @@
             "discount_percent": 0,
             "unit_price": "$1.08/count",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS81NN9X",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "price_context": "Store-specific online",
-        "price_source": "Whole Foods product API",
-        "price_verified": true,
-        "source_store_name": "Columbus Circle",
-        "availability": "IN_STOCK",
-        "pricing_uom": {
-          "dimension": "COUNT",
-          "unit": "UNITS"
-        },
-        "retailer_product_type": "SNACK_FOOD_BAR",
-        "retailer_department": "gl_grocery",
-        "retailer_description": "NEW KIND Breakfast Protein Bars, 8g Protein, Gluten Free, Honey Oat, 6 Count",
-        "retailer_ingredients": "Oats, tapioca syrup, canola oil, soy protein isolate, cane sugar, raisin paste, honey, millet, buckwheat, amaranth, quinoa, natural flavor, cinnamon, salt, Vitamin E (mixed tocopherols for freshness).",
-        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "asin": "B0FS82Z95B",
-        "name": "KIND Breakfast Protein Bars",
-        "raw_name": "KIND Breakfast Protein Bars, Honey Oat, Gluten Free, Low Sodium, Healthy Snacks, 8g Protein, 6 Count (6 Packs of 2 Bars)",
-        "brand": "Kind",
-        "source_brand": "Kind",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Protein Bars",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Protein Bars",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$6.49",
-        "discount_percent": 0,
-        "unit_price": "$1.08/count",
-        "image": "https://m.media-amazon.com/images/I/51cgO+wJaKL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS82Z95B",
-        "tags": [
-          "high-protein"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Columbus Circle",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$6.49",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$1.08/count",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS82Z95B",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Upper West Side",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$6.49",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$1.08/count",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0FS82Z95B",
             "sources": [
               "Search Deals"
             ]
@@ -309375,31 +308682,6 @@
       },
       {
         "expires": "Expires June 20",
-        "asin": "target:72c6b79f9a59a3cc",
-        "name": "Select Clover Sonoma Milk",
-        "raw_name": "select Clover Sonoma milk",
-        "retailer": "Target",
-        "sources": [
-          "Target Deals"
-        ],
-        "source_count": 1,
-        "category": "Dairy & Eggs",
-        "subcategory": "Milk",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Dairy & Eggs",
-        "ai_subcategory": "Milk",
-        "ai_confidence": 0.99,
-        "ai_label_source": "model",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$5.49",
-        "discount_percent": 0,
-        "image": "https://target.scene7.com/is/image/Target/GUEST_dafad149-f302-4378-b7b3-62a9cd51932c?wid=324&hei=324&qlt=45&fmt=jpeg",
-        "url": "https://www.target.com/s?searchTerm=select+Clover+Sonoma+milk"
-      },
-      {
-        "expires": "Expires June 20",
         "asin": "target:6e834d55852daeae",
         "name": "Select Clover Sonoma Milk - 0.5gal",
         "raw_name": "select Clover Sonoma milk - 0.5gal",
@@ -337673,6 +336955,1119 @@
         ]
       },
       {
+        "eligible_asin": "B000QJ8CLO",
+        "observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Pure Kombucha is crafted by nature for the living body. This raw kombucha highlights the natural flavors of the fermented tea base without any frills—just pure, simple, and delicious kombucha. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "asin": "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B000QJ8CLO",
+        "asins": [
+          "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B000QJ8CLO"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Pure - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71UmeF4CqzL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B000QJ8CLO",
+            "observed_at": "2026-09-25T17:12:56.219961+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Columbus Circle",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B000QJAG7W",
+        "observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "retailer_product_type": "BEVERAGE",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Marine Greens Kombucha is crafted by nature for the living body. Go beneath the surface for superior health with a therapeutic dose of the most powerful aquatic superfoods: antioxidant rich blue-green algae, anti-inflammatory spirulina, and detoxifying chlorella. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "asin": "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B000QJAG7W",
+        "asins": [
+          "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B000QJAG7W"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Marine Greens - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71yAgoLoPOL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B000QJAG7W",
+            "observed_at": "2026-09-25T17:12:56.219961+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Columbus Circle",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B089CCL9B4",
+        "observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Golden Pineapple Kombucha is crafted by nature for the living body. Fresh, cold-pressed pineapple juice is paired with a subtle hint of sage for a deliciously refreshing and pineapple-forward raw kombucha. Tropical, fruity, and absolutely golden. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "asin": "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B089CCL9B4",
+        "asins": [
+          "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B089CCL9B4"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Golden Pineapple - 16 fl oz Bottle | Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/716MH80doBL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B089CCL9B4",
+            "observed_at": "2026-09-25T17:12:56.219961+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Columbus Circle",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B08TGWS7ZS",
+        "observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Columbus Circle",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Lemon Berry Kombucha is crafted by nature for the living body. Sweet berries paired with tart lemon for a delicious raw kombucha that will make every day feel like berry season. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.219961+00:00",
+        "asin": "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B08TGWS7ZS",
+        "asins": [
+          "flyer:17f76fe6-7669-4b00-b9bf-9584256b7a78:B08TGWS7ZS"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Lemon Berry - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71L3EIxL0VL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10160"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B08TGWS7ZS",
+            "observed_at": "2026-09-25T17:12:56.219961+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Columbus Circle",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/17f76fe6-7669-4b00-b9bf-9584256b7a78?store-id=10160",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B000QJ8CLO",
+        "observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Pure Kombucha is crafted by nature for the living body. This raw kombucha highlights the natural flavors of the fermented tea base without any frills—just pure, simple, and delicious kombucha. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "asin": "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B000QJ8CLO",
+        "asins": [
+          "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B000QJ8CLO"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Pure - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71UmeF4CqzL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B000QJ8CLO",
+            "observed_at": "2026-09-25T17:12:56.628831+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Upper West Side",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B000QJAG7W",
+        "observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "retailer_product_type": "BEVERAGE",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Marine Greens Kombucha is crafted by nature for the living body. Go beneath the surface for superior health with a therapeutic dose of the most powerful aquatic superfoods: antioxidant rich blue-green algae, anti-inflammatory spirulina, and detoxifying chlorella. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "asin": "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B000QJAG7W",
+        "asins": [
+          "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B000QJAG7W"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Marine Greens - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71yAgoLoPOL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B000QJAG7W",
+            "observed_at": "2026-09-25T17:12:56.628831+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Upper West Side",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B089CCL9B4",
+        "observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Golden Pineapple Kombucha is crafted by nature for the living body. Fresh, cold-pressed pineapple juice is paired with a subtle hint of sage for a deliciously refreshing and pineapple-forward raw kombucha. Tropical, fruity, and absolutely golden. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "asin": "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B089CCL9B4",
+        "asins": [
+          "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B089CCL9B4"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Golden Pineapple - 16 fl oz Bottle | Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/716MH80doBL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B089CCL9B4",
+            "observed_at": "2026-09-25T17:12:56.628831+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Upper West Side",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "eligible_asin": "B08TGWS7ZS",
+        "observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "expires": "2026-09-29T05:00:00Z",
+        "starts_at": "2026-09-23T05:00:00Z",
+        "price_context": "Weekly flyer",
+        "price_source": "Weekly flyer",
+        "price_verified": true,
+        "offer_kind": "promotion",
+        "source_store_name": "Upper West Side",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Lemon Berry Kombucha is crafted by nature for the living body. Sweet berries paired with tart lemon for a delicious raw kombucha that will make every day feel like berry season. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.628831+00:00",
+        "asin": "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B08TGWS7ZS",
+        "asins": [
+          "flyer:cb4c4899-0057-4fb4-aca4-37b6e8e8737b:B08TGWS7ZS"
+        ],
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Lemon Berry - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Flyer"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/71L3EIxL0VL.jpg",
+        "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+        "tags": [
+          "flyer-only deal"
+        ],
+        "available_store_ids": [
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": "B08TGWS7ZS",
+            "observed_at": "2026-09-25T17:12:56.628831+00:00",
+            "expires": "2026-09-29T05:00:00Z",
+            "starts_at": "2026-09-23T05:00:00Z",
+            "price_context": "Weekly flyer",
+            "price_source": "Weekly flyer",
+            "price_verified": true,
+            "offer_kind": "promotion",
+            "source_store_name": "Upper West Side",
+            "availability": null,
+            "pricing_uom": null,
+            "unit_evidence": null,
+            "promotion_terms": {
+              "sale": "2 for $6",
+              "prime": "2 for $5.40",
+              "regular": "$4.39",
+              "description": "Excludes multi-serve items. While supplies last. Quantity limits apply. Quantities limited. No rain checks except where required by law. Must be current Prime member to get Prime price."
+            },
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/promotion/cb4c4899-0057-4fb4-aca4-37b6e8e8737b?store-id=10328",
+            "sources": [
+              "Flyer"
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Pure Kombucha is crafted by nature for the living body. This raw kombucha highlights the natural flavors of the fermented tea base without any frills—just pure, simple, and delicious kombucha. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "retailer_ingredients": "GT'S ORGANIC RAW KOMBUCHA* .",
+        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "asin": "B000QJ8CLO",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Pure - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "current_price": "$3.00",
+        "basis_price": "$4.29",
+        "prime_price": "$2.70 ea",
+        "discount": "37% off",
+        "discount_percent": 37,
+        "unit_price": "$0.19/fluid ounce",
+        "image": "https://m.media-amazon.com/images/I/71UmeF4CqzL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Columbus Circle",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$3.00",
+            "basis_price": "$4.29",
+            "prime_price": "$2.70",
+            "discount": "37% off",
+            "discount_percent": 37,
+            "unit_price": "$0.19/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Upper West Side",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$3.00",
+            "basis_price": "$4.29",
+            "prime_price": "$2.70",
+            "discount": "37% off",
+            "discount_percent": 37,
+            "unit_price": "$0.19/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJ8CLO",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "retailer_product_type": "BEVERAGE",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Marine Greens Kombucha is crafted by nature for the living body. Go beneath the surface for superior health with a therapeutic dose of the most powerful aquatic superfoods: antioxidant rich blue-green algae, anti-inflammatory spirulina, and detoxifying chlorella. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "retailer_ingredients": "GT'S KOMBUCHA*-, KLAMATH LAKE BLUE-GREEN ALGAE, SPIRULINA, AND CHLORELLA",
+        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "asin": "B000QJAG7W",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Marine Greens - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "current_price": "$3.00",
+        "basis_price": "$4.29",
+        "prime_price": "$2.70 ea",
+        "discount": "37% off",
+        "discount_percent": 37,
+        "unit_price": "$0.19/fluid ounce",
+        "image": "https://m.media-amazon.com/images/I/71yAgoLoPOL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJAG7W",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Columbus Circle",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$3.00",
+            "basis_price": "$4.29",
+            "prime_price": "$2.70",
+            "discount": "37% off",
+            "discount_percent": 37,
+            "unit_price": "$0.19/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJAG7W",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Upper West Side",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$3.00",
+            "basis_price": "$4.29",
+            "prime_price": "$2.70",
+            "discount": "37% off",
+            "discount_percent": 37,
+            "unit_price": "$0.19/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B000QJAG7W",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "source_store_name": "Columbus Circle",
+        "availability": "NO_CURRENT_OFFER",
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Golden Pineapple Kombucha is crafted by nature for the living body. Fresh, cold-pressed pineapple juice is paired with a subtle hint of sage for a deliciously refreshing and pineapple-forward raw kombucha. Tropical, fruity, and absolutely golden. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "asin": "B089CCL9B4",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Golden Pineapple - 16 fl oz Bottle | Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "discount_percent": 0,
+        "image": "https://m.media-amazon.com/images/I/716MH80doBL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B089CCL9B4",
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Columbus Circle",
+            "availability": "NO_CURRENT_OFFER",
+            "pricing_uom": {},
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B089CCL9B4",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Upper West Side",
+            "availability": "NO_CURRENT_OFFER",
+            "pricing_uom": {},
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": null,
+            "basis_price": null,
+            "prime_price": null,
+            "discount": null,
+            "discount_percent": 0,
+            "unit_price": null,
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B089CCL9B4",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
+        "observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "price_context": "Store-specific online",
+        "price_source": "Whole Foods product API",
+        "price_verified": true,
+        "source_store_name": "Columbus Circle",
+        "availability": "IN_STOCK",
+        "pricing_uom": {
+          "dimension": "COUNT",
+          "unit": "UNITS"
+        },
+        "retailer_product_type": "TEA",
+        "retailer_department": "gl_fresh_perishable",
+        "retailer_description": "GT's SYNERGY Lemon Berry Kombucha is crafted by nature for the living body. Sweet berries paired with tart lemon for a delicious raw kombucha that will make every day feel like berry season. Traditionally fermented in small batches for weeks—not days—using heirloom Himalayan cultures, it delivers billions of living probiotics to support gut health, immunity, brain function, and protein absorption. Since 1995, GT's Living Foods has been crafting functional recipes inspired by nature's healing properties. The family-owned and operated company has created a diverse portfolio of delicious and efficacious living foods for the living body. Each is made with the same unwavering commitment to real fermentation, real function, and real benefits as SYNERGY.",
+        "retailer_ingredients": "GT'S KOMBUCHA*-, STRAWBERRY JUICE, BLUEBERRY JUICE, RASPBERRY JUICE, MEYER LEMON JUICE, AND COLD PRESSED LIME JUICE",
+        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
+        "asin": "B08TGWS7ZS",
+        "name": "Synergy the Real Kombucha",
+        "raw_name": "SYNERGY The Real Kombucha - Lemon Berry - 16 fl oz Bottle - Raw Probiotic Drink for Gut Health and Immune Support",
+        "brand": "Synergy",
+        "source_brand": "Synergy",
+        "brand_source": "source",
+        "retailer": "Whole Foods",
+        "sources": [
+          "Search Deals"
+        ],
+        "source_count": 1,
+        "category": "Beverages",
+        "subcategory": "Kombucha",
+        "classification_status": "classified",
+        "category_confidence": 0.99,
+        "ai_category": "Beverages",
+        "ai_subcategory": "Kombucha",
+        "ai_confidence": 0.99,
+        "ai_label_source": "source-rule",
+        "ai_model_name": "local-taxonomy-classifier",
+        "ai_model_version": "taxonomy-local-ml-v18",
+        "current_price": "$3.00",
+        "basis_price": "$4.29",
+        "prime_price": "$2.70 ea",
+        "discount": "37% off",
+        "discount_percent": 37,
+        "unit_price": "$0.19/fluid ounce",
+        "image": "https://m.media-amazon.com/images/I/71L3EIxL0VL.jpg",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+        "tags": [
+          "prime deal"
+        ],
+        "available_store_ids": [
+          "10160",
+          "10328"
+        ],
+        "store_offers": [
+          {
+            "store_id": "10160",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Columbus Circle",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$3.00",
+            "basis_price": "$4.29",
+            "prime_price": "$2.70",
+            "discount": "37% off",
+            "discount_percent": 37,
+            "unit_price": "$0.19/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          },
+          {
+            "store_id": "10328",
+            "eligible_asins": null,
+            "unresolved_eligible_asins": null,
+            "eligible_asin": null,
+            "observed_at": "2026-09-25T17:12:56.979546+00:00",
+            "expires": null,
+            "starts_at": null,
+            "price_context": "Store-specific online",
+            "price_source": "Whole Foods product API",
+            "price_verified": true,
+            "offer_kind": null,
+            "source_store_name": "Upper West Side",
+            "availability": "IN_STOCK",
+            "pricing_uom": {
+              "dimension": "COUNT",
+              "unit": "UNITS"
+            },
+            "unit_evidence": null,
+            "promotion_terms": null,
+            "current_price": "$3.00",
+            "basis_price": "$4.29",
+            "prime_price": "$2.70",
+            "discount": "37% off",
+            "discount_percent": 37,
+            "unit_price": "$0.19/fluid ounce",
+            "url": "https://www.wholefoodsmarket.com/grocery/product/B08TGWS7ZS",
+            "sources": [
+              "Search Deals"
+            ]
+          }
+        ]
+      },
+      {
         "observed_at": "2026-09-25T17:12:56.979546+00:00",
         "price_context": "Store-specific online",
         "price_source": "Whole Foods product API",
@@ -340555,117 +340950,6 @@
             "discount_percent": 0,
             "unit_price": "$0.19/fluid ounce",
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0CSLGMC1P",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "price_context": "Store-specific online",
-        "price_source": "Whole Foods product API",
-        "price_verified": true,
-        "source_store_name": "Columbus Circle",
-        "availability": "IN_STOCK",
-        "pricing_uom": {
-          "dimension": "COUNT",
-          "unit": "UNITS"
-        },
-        "retailer_product_type": "NUT_BUTTER",
-        "retailer_department": "gl_grocery",
-        "retailer_description": "Teddie All-Natural Smooth Peanut Butter is a delicious and nutritious peanut butter that available today. Made with just dry roasted peanuts, it comes in SALTED and UNSALTED varieties. Enjoy Teddie on a sandwich, in a smoothie, with dessert or even by the spoonful. If you are not familiar with natural peanut butter, the oil separation occurs naturally. You don’t need to refrigerate Teddie, but to slow the oil separation just stir the jar contents, tighten the cap and then place it in the refrigerator. You may also keep your jar in the pantry at room temperature, but we suggest stirring it before each use to incorporate the oil back into the peanut butter.",
-        "retailer_ingredients": "Dry Roasted Peanuts, Salt",
-        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "asin": "B001RO6Z3O",
-        "name": "Teddie All Natural Peanut Butter",
-        "raw_name": "Teddie All Natural Peanut Butter, Smooth, Gluten Free & Vegan, 16 Ounce Glass (Smooth, Pack of 1)",
-        "brand": "Teddie",
-        "source_brand": "Teddie",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Pantry",
-        "subcategory": "Nut Butters & Spreads",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Pantry",
-        "ai_subcategory": "Nut Butters & Spreads",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$5.29",
-        "discount_percent": 0,
-        "unit_price": "$0.33/ounce",
-        "image": "https://m.media-amazon.com/images/I/81He8IuxVpL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B001RO6Z3O",
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Columbus Circle",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$5.29",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$0.33/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B001RO6Z3O",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Upper West Side",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$5.29",
-            "basis_price": null,
-            "prime_price": null,
-            "discount": null,
-            "discount_percent": 0,
-            "unit_price": "$0.33/ounce",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B001RO6Z3O",
             "sources": [
               "Search Deals"
             ]
@@ -356684,123 +356968,6 @@
             "discount_percent": 0,
             "unit_price": null,
             "url": "https://www.wholefoodsmarket.com/grocery/product/B0F8PF5KJ9",
-            "sources": [
-              "Search Deals"
-            ]
-          }
-        ]
-      },
-      {
-        "observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "price_context": "Store-specific online",
-        "price_source": "Whole Foods product API",
-        "price_verified": true,
-        "source_store_name": "Columbus Circle",
-        "availability": "IN_STOCK",
-        "pricing_uom": {
-          "dimension": "COUNT",
-          "unit": "UNITS"
-        },
-        "retailer_product_type": "SNACK_FOOD_BAR",
-        "retailer_department": "gl_grocery",
-        "retailer_description": "Truvani Plant Based Snack Bars | Oatmeal Chocolate Chip 1 Pack | 6g Protein | USDA Organic and Vegan | The Only Bar | Dairy, Soy, and Gluten Free | Individually Wrapped",
-        "retailer_ingredients": "Organic Almonds, Organic Dates, Organic Maple Syrup, Organic Semi-sweet Chocolate (Organic Coconut Sugar, Organic Chocolate, Organic Cocoa Butter), Organic Oats, Organic Cacao Nibs, Organic Cinnamon, Sea Salt, Organic Bourbon Vanilla Powder (Organic Cane Sugar, Organic Vanilla Bean Extractives).",
-        "metadata_observed_at": "2026-09-25T17:12:56.979546+00:00",
-        "asin": "B0BSK4YX5Q",
-        "name": "Truvani Plant Based Snack Bars",
-        "raw_name": "Truvani Plant Based Snack Bars | Oatmeal Chocolate Chip | 1 Pack | Vegan | 6g Protein | USDA Organic and Vegan | Dairy, Soy, and Gluten Free | Individually Wrapped",
-        "brand": "Truvani",
-        "source_brand": "Truvani",
-        "brand_source": "source",
-        "retailer": "Whole Foods",
-        "sources": [
-          "Search Deals"
-        ],
-        "source_count": 1,
-        "category": "Snacks",
-        "subcategory": "Snack Bars",
-        "classification_status": "classified",
-        "category_confidence": 0.99,
-        "ai_category": "Snacks",
-        "ai_subcategory": "Snack Bars",
-        "ai_confidence": 0.99,
-        "ai_label_source": "source-rule",
-        "ai_model_name": "local-taxonomy-classifier",
-        "ai_model_version": "taxonomy-local-ml-v18",
-        "current_price": "$2.32",
-        "basis_price": "$2.69",
-        "prime_price": "$2.09 ea",
-        "discount": "22% off",
-        "discount_percent": 22,
-        "unit_price": "$2.32/count",
-        "image": "https://m.media-amazon.com/images/I/51dL5j0DUZL.jpg",
-        "url": "https://www.wholefoodsmarket.com/grocery/product/B0BSK4YX5Q",
-        "tags": [
-          "prime deal"
-        ],
-        "available_store_ids": [
-          "10160",
-          "10328"
-        ],
-        "store_offers": [
-          {
-            "store_id": "10160",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Columbus Circle",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$2.32",
-            "basis_price": "$2.69",
-            "prime_price": "$2.09",
-            "discount": "22% off",
-            "discount_percent": 22,
-            "unit_price": "$2.32/count",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BSK4YX5Q",
-            "sources": [
-              "Search Deals"
-            ]
-          },
-          {
-            "store_id": "10328",
-            "eligible_asins": null,
-            "unresolved_eligible_asins": null,
-            "eligible_asin": null,
-            "observed_at": "2026-09-25T17:12:56.979546+00:00",
-            "expires": null,
-            "starts_at": null,
-            "price_context": "Store-specific online",
-            "price_source": "Whole Foods product API",
-            "price_verified": true,
-            "offer_kind": null,
-            "source_store_name": "Upper West Side",
-            "availability": "IN_STOCK",
-            "pricing_uom": {
-              "dimension": "COUNT",
-              "unit": "UNITS"
-            },
-            "unit_evidence": null,
-            "promotion_terms": null,
-            "current_price": "$2.32",
-            "basis_price": "$2.69",
-            "prime_price": "$2.09",
-            "discount": "22% off",
-            "discount_percent": 22,
-            "unit_price": "$2.32/count",
-            "url": "https://www.wholefoodsmarket.com/grocery/product/B0BSK4YX5Q",
             "sources": [
               "Search Deals"
             ]
