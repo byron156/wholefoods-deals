@@ -4038,5 +4038,49 @@
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
+  },
+  {
+    "asin": "target:64dbf1f9e55b4c02",
+    "name": "Favorite Day™ and Good & Gather™ snacks & candy*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_29b4b46f-718a-4899-a8ef-9382bcf2e017?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/275785826?content_id=STORY-47892",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-09-27T13:23:08.096343+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:a5586fdbd54c7d83",
+    "name": "Pillsbury dough*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_7bea128b-42a2-4f00-b46b-c23ac7fad7d0?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/122012179?content_id=STORY-47890",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-09-27T13:23:08.096343+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
   }
 ]
