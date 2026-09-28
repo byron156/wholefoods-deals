@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-27T13:29:38.884235+00:00",
+  "generated_at": "2026-09-28T14:25:36.818672+00:00",
   "taxonomy_version": "fixed-taxonomy-v6",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v18",
-  "product_count": 6043,
-  "completed_count": 6043,
-  "changed_count": 5888,
+  "product_count": 6407,
+  "completed_count": 6407,
+  "changed_count": 6241,
   "changed_examples": [
     "Bone-In Beef Short Ribs",
     "Beef Chuck Short Rib Bone-In",

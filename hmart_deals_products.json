@@ -18,7 +18,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -66,7 +66,7 @@
       "/Beauty/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -84,13 +84,13 @@
     "discount": "40% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
     "categories": [
       "/Beauty/Makeup/",
       "/Beauty/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -162,7 +162,7 @@
       "/Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -186,7 +186,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -234,7 +234,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -306,7 +306,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -330,7 +330,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -378,7 +378,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -402,7 +402,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -450,7 +450,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -474,7 +474,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -498,7 +498,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -522,7 +522,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -690,7 +690,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -714,7 +714,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -810,7 +810,7 @@
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -858,7 +858,7 @@
       "/Health/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -882,7 +882,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -906,7 +906,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -930,7 +930,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -954,7 +954,7 @@
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1050,7 +1050,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1098,7 +1098,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1170,7 +1170,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1218,7 +1218,7 @@
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1242,7 +1242,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1362,7 +1362,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1386,7 +1386,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1458,7 +1458,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1626,7 +1626,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1650,7 +1650,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1698,7 +1698,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1746,7 +1746,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1770,7 +1770,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2010,7 +2010,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2094,10 +2094,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/178312/490177723553.png?v=639083181581830000",
     "url": "https://www.hmart.com/sesame-barley-tea-11-8-fl-oz--350ml--1/p",
-    "current_price": "$1.99",
+    "current_price": "$2.49",
     "basis_price": "$2.99",
     "prime_price": null,
-    "discount": "33% off",
+    "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
@@ -2106,7 +2106,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2298,7 +2298,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2310,10 +2310,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/180709/880111417189.png?v=639177636274830000",
     "url": "https://www.hmart.com/steamed-dumpling-chive-and-king-oyster-mushroom-35-97-oz--1-02kg-/p",
-    "current_price": "$9.99",
-    "basis_price": "$12.99",
+    "current_price": "$8.49",
+    "basis_price": "$9.99",
     "prime_price": null,
-    "discount": "23% off",
+    "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=1",
@@ -2322,7 +2322,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2346,7 +2346,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2454,10 +2454,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/181958/76641814395.png?v=639239314920230000",
     "url": "https://www.hmart.com/taro-pastry-gift-box--8-pcs--2-05-lb--930g-/p",
-    "current_price": "$22.99",
+    "current_price": "$34.99",
     "basis_price": "$38.99",
     "prime_price": null,
-    "discount": "41% off",
+    "discount": "10% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
@@ -2466,7 +2466,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2478,10 +2478,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/165273/753214741473.png?v=638454319587370000",
     "url": "https://www.hmart.com/tofu-soft--16oz-454g--1/p",
-    "current_price": "$0.99",
+    "current_price": "$1.79",
     "basis_price": "$1.99",
     "prime_price": null,
-    "discount": "50% off",
+    "discount": "10% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
@@ -2490,7 +2490,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2514,7 +2514,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2538,7 +2538,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2562,7 +2562,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2586,7 +2586,7 @@
       "/Flour & Baking/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2658,7 +2658,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2706,7 +2706,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2826,7 +2826,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2850,7 +2850,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2898,7 +2898,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2922,7 +2922,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2946,7 +2946,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2970,7 +2970,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2988,13 +2988,13 @@
     "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Ramen & Noodle/Cold Noodles & Naengmyeon/",
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3018,7 +3018,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3042,7 +3042,7 @@
       "/Rice & Grain/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3066,7 +3066,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3090,7 +3090,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3103,18 +3103,18 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160557/0846034000872.png?v=638448905182570000",
     "url": "https://www.hmart.com/chestnut-bundle-pack-28-02oz-800g--1/p",
     "current_price": "$10.99",
-    "basis_price": "$12.99",
+    "basis_price": "$14.99",
     "prime_price": null,
-    "discount": "15% off",
+    "discount": "27% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Snacks & Candy & Nuts/Multi Snack/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3126,19 +3126,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161509/71668088681_1.png?v=638448908841330000",
     "url": "https://www.hmart.com/choco-pie-1-37oz-39g--12-packs-1/p",
-    "current_price": "$4.99",
-    "basis_price": "$5.99",
+    "current_price": "$4.79",
+    "basis_price": "$4.99",
     "prime_price": null,
-    "discount": "17% off",
+    "discount": "4% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3156,13 +3156,13 @@
     "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3186,7 +3186,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3210,7 +3210,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3234,7 +3234,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3258,7 +3258,7 @@
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3282,7 +3282,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3306,7 +3306,7 @@
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3330,7 +3330,7 @@
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3354,7 +3354,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3378,7 +3378,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3402,7 +3402,7 @@
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3426,7 +3426,7 @@
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3450,7 +3450,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3474,7 +3474,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3498,7 +3498,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3522,7 +3522,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3570,7 +3570,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3594,7 +3594,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3618,7 +3618,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3642,7 +3642,7 @@
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3666,7 +3666,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3690,7 +3690,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3714,7 +3714,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3738,7 +3738,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3762,7 +3762,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3810,7 +3810,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3834,7 +3834,7 @@
       "/Rice & Grain/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3858,7 +3858,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3882,7 +3882,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3906,7 +3906,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3930,7 +3930,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3954,7 +3954,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3978,7 +3978,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4002,7 +4002,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4026,7 +4026,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4050,7 +4050,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4074,7 +4074,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4092,13 +4092,13 @@
     "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Ramen & Noodle/Cold Noodles & Naengmyeon/",
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4122,7 +4122,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4170,7 +4170,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4194,7 +4194,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4218,7 +4218,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4242,7 +4242,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4266,7 +4266,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4290,7 +4290,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4314,7 +4314,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4338,7 +4338,7 @@
       "/Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4410,7 +4410,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4422,19 +4422,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/178727/7175708007.png?v=639094380865230000",
     "url": "https://www.hmart.com/pork---chicken-gyoza-family-pack-1-54lb-700g--1/p",
-    "current_price": "$11.49",
-    "basis_price": "$13.99",
+    "current_price": "$7.69",
+    "basis_price": "$10.99",
     "prime_price": null,
-    "discount": "18% off",
+    "discount": "30% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4458,7 +4458,7 @@
       "/Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4482,7 +4482,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4506,7 +4506,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4530,7 +4530,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4554,7 +4554,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4578,7 +4578,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4602,7 +4602,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4626,7 +4626,7 @@
       "/Rice & Grain/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4650,7 +4650,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4674,7 +4674,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4722,7 +4722,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4866,7 +4866,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4878,19 +4878,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161994/846034024113.png?v=638448910740300000",
     "url": "https://www.hmart.com/sliced-rice-cakes-2-2lb-1kg--1/p",
-    "current_price": "$3.99",
-    "basis_price": "$4.99",
+    "current_price": "$3.69",
+    "basis_price": "$3.99",
     "prime_price": null,
-    "discount": "20% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4914,7 +4914,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4938,7 +4938,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4962,7 +4962,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4986,7 +4986,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5010,7 +5010,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5034,7 +5034,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5058,7 +5058,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5082,7 +5082,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5106,7 +5106,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5130,7 +5130,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5154,7 +5154,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5172,13 +5172,13 @@
     "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Oil & Seasoning & Canned Food/Canned Foods/",
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5202,7 +5202,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5226,7 +5226,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5250,7 +5250,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5274,7 +5274,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5298,7 +5298,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5322,7 +5322,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5346,7 +5346,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5370,7 +5370,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5394,7 +5394,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5406,19 +5406,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162127/8801007498812_1.png?v=638448911264200000",
     "url": "https://www.hmart.com/whole-cabbage-kimchi-4-4lb-2kg--1/p",
-    "current_price": "$19.99",
-    "basis_price": "$20.09",
+    "current_price": "$17.49",
+    "basis_price": "$17.99",
     "prime_price": null,
-    "discount": "0% off",
+    "discount": "3% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=4",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Kimchi & SideDish & Deli/Kimchi/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5466,7 +5466,7 @@
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5490,7 +5490,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5532,13 +5532,13 @@
     "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-27T13:23:27.764381+00:00",
+    "observed_at": "2026-09-28T14:17:24.641283+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
