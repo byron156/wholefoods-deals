@@ -7,6 +7,15 @@
   const STORAGE_KEY = "wholefoods-deals-profile-v8";
   const DEVICE_ID_KEY = "wholefoods-deals-device-id-v1";
   const rawData = JSON.parse(appDataNode.textContent || "{}");
+  const checkedAt = Date.parse(rawData.source_checked_at || "");
+  const staleCatalog = !Number.isFinite(checkedAt) || Date.now() - checkedAt > 72 * 60 * 60 * 1000;
+  if (staleCatalog) {
+    const notice = document.createElement("p");
+    notice.className = "offer-note";
+    notice.setAttribute("role", "status");
+    notice.textContent = "The catalog refresh is overdue. Prices need to be refreshed before current deals can be shown.";
+    document.querySelector(".search-panel")?.prepend(notice);
+  }
   const feedbackEndpoint = rawData.feedback_endpoint || "/api/fixes";
   const profileEndpoint = rawData.profile_endpoint || "/api/profile";
   const newsletterSignupEndpoint = rawData.newsletter_signup_endpoint || "/api/newsletter/signup";
@@ -1193,7 +1202,9 @@
   function renderShelves() {
     const shelves = buildCategoryShelves();
     if (!shelves.length) {
-      renderEmpty(state.viewMode === "saved" ? "No saved items match these filters yet." : "No deals are available for these filters right now.");
+      renderEmpty(state.viewMode === "saved" ? "No saved items match these filters yet." : staleCatalog
+        ? "The catalog refresh is overdue. Current deals are temporarily unavailable until prices are refreshed."
+        : "No deals are available for these filters right now.");
       return;
     }
 

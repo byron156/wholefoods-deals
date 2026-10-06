@@ -45,6 +45,14 @@ That generates:
 - `dist/static/*`
 - `dist/data/*`
 
+Raw research exports that exceed Cloudflare's 25 MiB per-file limit are written
+as deterministic `.json.gz` downloads. Decompress them to read the complete
+catalog; no records are removed. `dist/build-meta.json` lists the actual filenames.
+The shopper pages embed their own current offers and do not fetch these archives.
+
+For a manual data refresh that must not send emails, pass `--skip-newsletter` to
+`refresh_and_post_results.py`. Rebuilding alone does not update source prices.
+
 ## Weekly Meal Planner
 
 Open `/meal-plan/` or select **Weekly meal plan** in the deal browser. The planner

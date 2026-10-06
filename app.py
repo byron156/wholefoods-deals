@@ -1,5 +1,5 @@
 from catalog_rules import apply_source_rules
-from offer_quality import metadata, PRICE_FIELDS, EVIDENCE_FIELDS, evidence, clean_prices, offer_issues, stamp_products, timestamp, money as exact_money
+from offer_quality import flyer_expiry, metadata, PRICE_FIELDS, EVIDENCE_FIELDS, evidence, clean_prices, offer_issues, stamp_products, timestamp, money as exact_money
 import json
 import re
 import requests
@@ -3707,7 +3707,7 @@ def active_taxonomy_subcategory_options():
 def build_flyer_display_product(p):
     store_id = str(p.get("store_id") or DEFAULT_STORE_IDS[0])
     store_name = p.get("store_name")
-    terms = {"sale": p.get("salePrice"), "prime": p.get("primePrice"), "regular": p.get("regularPrice"), "description": p.get("description")}
+    terms = {"sale": p.get("salePrice"), "prime": p.get("primePrice"), "regular": p.get("regularPrice"), "description": p.get("description"), "retailer_end_date": p.get("endDate")}
     return standardize_product_record(
         asin=f"flyer:{p.get('promotionId')}",
         name=p.get("productName", "Weekly promotion"),
@@ -3721,7 +3721,7 @@ def build_flyer_display_product(p):
             "source_store_id": store_id, "source_store_name": store_name, "retailer": "Whole Foods",
             "offer_kind": "promotion", "promotion_terms": terms,
             "brand_is_generic": normalize_text_key(p.get("brandName") or p.get("originBrandName")) in {"organic", "fresh produce", "prepared foods", "no antibiotics ever", ""},
-            "observed_at": iso_utc(utcnow()), "expires": p.get("endDate"), "starts_at": p.get("startDate"),
+            "observed_at": iso_utc(utcnow()), "expires": flyer_expiry(p.get("endDate")), "starts_at": p.get("startDate"),
             "price_source": "Weekly flyer", "price_context": "Weekly flyer", "price_verified": True,
         },
     )
@@ -5038,6 +5038,12 @@ def combined_products_home():
         )
 
     products = sort_products_for_display(load_combined_products())
+    # Research metadata stays in the retained catalog export. It is not used by
+    # the deal browser and can overwhelm the static host's per-page size limit.
+    research_fields = {"retailer_description", "retailer_ingredients", "category_signals",
+                       "ai_reasoning", "ai_fingerprint"}
+    products = [{key: value for key, value in product.items() if key not in research_fields}
+                for product in products]
     taxonomy = load_active_taxonomy()
     deal_count = len(products)
     return render_template(

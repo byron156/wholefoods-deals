@@ -86,7 +86,7 @@ def wait_for_target_deals_surface(page, timeout_ms: int = 45000) -> None:
     while time.monotonic() < deadline:
         dismiss_target_popups(page)
         offer_count = page.locator('[data-test="offer-card"]').count()
-        if offer_count:
+        if offer_count or page.locator(MULTISTORY_LINK_SELECTOR).count():
             return
 
         result_texts = [
@@ -253,7 +253,6 @@ def discover_target_deals() -> dict[str, Any]:
         page.goto(TARGET_GROCERY_DEALS_URL, wait_until="domcontentloaded", timeout=120000)
         wait_for_target_deals_surface(page)
         dismiss_target_popups(page)
-        page.locator("text=/\\d+ results/i").first.wait_for(timeout=30000)
 
         offer_cards = page.locator('[data-test="offer-card"]')
         multistory_links = page.locator(MULTISTORY_LINK_SELECTOR)
@@ -300,7 +299,8 @@ def discover_target_deals() -> dict[str, Any]:
                 print("Target: stopping because Load more no longer reveals new offer cards.")
                 break
 
-        result_count_text = page.locator("text=/\\d+ results/i").first.inner_text().strip()
+        count_label = page.locator("text=/\\d+ results/i").first
+        result_count_text = count_label.inner_text().strip() if count_label.count() else ""
         parsed: dict[str, dict[str, Any]] = {}
         if offer_cards.count():
             for index in range(offer_cards.count()):

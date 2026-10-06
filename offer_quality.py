@@ -1,5 +1,6 @@
 """Offer validation: keep price, location, channel and observation time together."""
 import re
+from zoneinfo import ZoneInfo
 from datetime import datetime, timedelta, timezone
 
 PRICE_FIELDS = ('current_price', 'prime_price', 'basis_price', 'sale_price', 'discount', 'discount_percent', 'unit_price')
@@ -10,6 +11,20 @@ def metadata(product):
     return {key: product.get(key) for key in METADATA_FIELDS}
 
 MAX_AGE = timedelta(hours=72)
+
+
+def flyer_expiry(end_date, store_timezone="America/New_York"):
+    """Retailer flyer endDate labels an inclusive calendar day, not an instant.
+
+    Whole Foods displays e.g. Valid 09/30–10/06 for endDate Oct 6 05:00Z.
+    Supported NYC stores honor that promotion through the end of October 6.
+    Other offer types keep their original timestamp semantics.
+    """
+    parsed = timestamp(end_date)
+    if parsed is None:
+        return end_date
+    next_day = parsed.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=1)
+    return next_day.replace(tzinfo=ZoneInfo(store_timezone)).astimezone(timezone.utc).isoformat()
 
 
 def money(value):

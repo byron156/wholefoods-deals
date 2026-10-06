@@ -1,4 +1,5 @@
 import json
+import gzip
 import hashlib
 from datetime import datetime, timezone
 import os
@@ -9,6 +10,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 DIST_DIR = BASE_DIR / "dist"
 STATIC_DIR = BASE_DIR / "static"
+MAX_ASSET_BYTES = 25 * 1024 * 1024
 
 
 def load_dotenv_file() -> None:
@@ -86,14 +88,29 @@ def copy_static_assets() -> None:
             shutil.copy2(src, DIST_DIR / filename)
 
 
+def write_json_export(source: Path, destination: Path) -> Path:
+    """Keep the complete research export without exceeding the host asset limit.
+
+    Shopper pages embed their own current offers; these files are downloadable
+    raw archives, not frontend dependencies. Oversized archives are gzip files.
+    """
+    payload = json.dumps(json.loads(source.read_text()), ensure_ascii=False, separators=(',', ':')).encode('utf-8')
+    if len(payload) > MAX_ASSET_BYTES:
+        destination = destination.with_suffix(destination.suffix + '.gz')
+        payload = gzip.compress(payload, mtime=0)
+    if len(payload) > MAX_ASSET_BYTES:
+        raise RuntimeError(f"Compressed export exceeds asset limit: {source.name}")
+    destination.write_bytes(payload)
+    return destination
+
+
 def copy_data_files() -> None:
     data_dir = DIST_DIR / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
-
     for filename in DATA_FILES:
         src = BASE_DIR / filename
         if src.exists():
-            (data_dir / filename).write_text(json.dumps(json.loads(src.read_text()), ensure_ascii=False, separators=(',', ':')))
+            write_json_export(src, data_dir / filename)
 
 
 def copy_report_files() -> None:
@@ -104,7 +121,7 @@ def copy_report_files() -> None:
         src = BASE_DIR / "reports" / filename
         if src.exists():
             if src.suffix == '.json':
-                (reports_dir / filename).write_text(json.dumps(json.loads(src.read_text()), ensure_ascii=False, separators=(',', ':')))
+                write_json_export(src, reports_dir / filename)
             else:
                 shutil.copy2(src, reports_dir / filename)
 
@@ -126,8 +143,9 @@ def write_metadata() -> None:
         "built_at": datetime.now(timezone.utc).isoformat(),
         "catalog_sha256": hashlib.sha256((BASE_DIR / "combined_products.json").read_bytes()).hexdigest(),
         "routes": sorted(ROUTES.keys()),
-        "copied_data_files": [name for name in DATA_FILES if (BASE_DIR / name).exists()],
-        "copied_report_files": copied_report_files,
+        "copied_data_files": sorted(p.name for p in (DIST_DIR / "data").iterdir()),
+        "export_note": "Oversized raw JSON archives use .json.gz; decompress to read the complete retained catalog.",
+        "copied_report_files": [name if (DIST_DIR / "reports" / name).exists() else name + ".gz" for name in copied_report_files],
         "root_static_files": [name for name in ROOT_STATIC_FILES if (STATIC_DIR / name).exists()],
     }
     write_text(DIST_DIR / "build-meta.json", json.dumps(metadata, indent=2))
@@ -157,7 +175,7 @@ def main() -> None:
     copy_data_files()
     copy_report_files()
     write_metadata()
-    oversized = [str(p.relative_to(DIST_DIR)) for p in DIST_DIR.rglob('*') if p.is_file() and p.stat().st_size > 25 * 1024 * 1024]
+    oversized = [str(p.relative_to(DIST_DIR)) for p in DIST_DIR.rglob('*') if p.is_file() and p.stat().st_size > MAX_ASSET_BYTES]
     if oversized:
         raise RuntimeError("Cloudflare asset size limit exceeded: " + ", ".join(oversized))
     print(f"\nStatic site built at {DIST_DIR}")

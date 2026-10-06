@@ -130,6 +130,7 @@ def main():
         default="",
         help="Limit newsletter dispatch to one subscriber email address.",
     )
+    parser.add_argument("--skip-newsletter", action="store_true", help="Refresh data without sending subscriber emails.")
     args = parser.parse_args()
 
     if args.skip_refresh:
@@ -385,6 +386,10 @@ def main():
     print(f"Combined unique products: {len(combined_products)}")
     if args.sample_size:
         print(f"Sample size used for taxonomy/classification: {args.sample_size}")
+
+    if args.skip_newsletter:
+        print("Newsletter dispatch skipped.")
+        return
 
     try:
         newsletter_results = send_newsletter_digests(

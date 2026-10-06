@@ -7,10 +7,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0b6b45">
 <title>Grocery Deals</title>
-<link rel="stylesheet" href="/static/styles.css?v=20260923a">
+<link rel="stylesheet" href="/static/styles.css?v=20261006a">
 <link rel="icon" href="/static/favicon.ico">
 <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
-<link rel="manifest" href="/manifest.webmanifest?v=20260923a">
+<link rel="manifest" href="/manifest.webmanifest?v=20261006a">
 </head>
 
 <body class="app-body">
@@ -173,7 +173,7 @@
 </section>
 
 <script id="app-data" type="application/json">
-{{ {"products": products, "stores": available_stores, "categories": category_names, "subcategory_options": subcategory_options, "category_order": category_order, "feedback_endpoint": feedback_endpoint, "profile_endpoint": profile_endpoint, "feed_endpoint": feed_endpoint, "newsletter_signup_endpoint": newsletter_signup_endpoint, "newsletter_onboarding_endpoint": newsletter_onboarding_endpoint}|tojson }}
+{{ {"source_checked_at": last_updated.iso if last_updated else none, "products": products, "stores": available_stores, "categories": category_names, "subcategory_options": subcategory_options, "category_order": category_order, "feedback_endpoint": feedback_endpoint, "profile_endpoint": profile_endpoint, "feed_endpoint": feed_endpoint, "newsletter_signup_endpoint": newsletter_signup_endpoint, "newsletter_onboarding_endpoint": newsletter_onboarding_endpoint}|tojson }}
 </script>
 <script>
 if ("serviceWorker" in navigator) {
@@ -191,8 +191,8 @@ if ("caches" in window) {
   }).catch(() => {});
 }
 </script>
-<script src="/static/offer-pricing.js?v=20260923a"></script>
-<script src="/static/app-shell.js?v=20260923a"></script>
+<script src="/static/offer-pricing.js?v=20261006a"></script>
+<script src="/static/app-shell.js?v=20261006a"></script>
 
 <noscript>
     <section class="noscript-fallback">
