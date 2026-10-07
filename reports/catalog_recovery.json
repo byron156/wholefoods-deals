@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-06T23:18:36.264308+00:00",
+  "generated_at": "2026-10-07T14:08:06.762415+00:00",
   "listing_runs": [],
-  "requested_identities": 5810,
-  "observations": 11596,
-  "fresh_observations": 11596,
-  "retained_previous_observations": 0,
+  "requested_identities": 6239,
+  "observations": 12391,
+  "fresh_observations": 11612,
+  "retained_previous_observations": 779,
   "failures": [
     {
       "store_id": "10160",
-      "asin": "B0013OXAE0",
+      "asin": "B000SRKCW6",
       "reason": "Product missing from retailer response"
     },
     {
@@ -23,6 +23,26 @@
     },
     {
       "store_id": "10160",
+      "asin": "B00F43LEKS",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B00JSCH7N4",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B00JSCH2RA",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
+      "asin": "B01I50BGRW",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10160",
       "asin": "B01I3JTQVI",
       "reason": "Product missing from retailer response"
     },
@@ -33,27 +53,22 @@
     },
     {
       "store_id": "10160",
-      "asin": "B07G9PLLQM",
+      "asin": "B08N3D7S61",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10160",
-      "asin": "B07G9NZWYH",
+      "asin": "B08N2QD4YG",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10160",
-      "asin": "B07WLK1GM2",
+      "asin": "B0B588FR8J",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10160",
-      "asin": "B086ZFPJZB",
-      "reason": "Product missing from retailer response"
-    },
-    {
-      "store_id": "10160",
-      "asin": "B08PX1JM86",
+      "asin": "B0DQ5W5Y8P",
       "reason": "Product missing from retailer response"
     },
     {
@@ -62,13 +77,8 @@
       "reason": "Product missing from retailer response"
     },
     {
-      "store_id": "10160",
-      "asin": "B0FT8W7CVG",
-      "reason": "Product missing from retailer response"
-    },
-    {
       "store_id": "10328",
-      "asin": "B0013OXAE0",
+      "asin": "B000SRKCW6",
       "reason": "Product missing from retailer response"
     },
     {
@@ -83,6 +93,26 @@
     },
     {
       "store_id": "10328",
+      "asin": "B00F43LEKS",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B00JSCH7N4",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B00JSCH2RA",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B01I50BGRW",
+      "reason": "Product missing from retailer response"
+    },
+    {
+      "store_id": "10328",
       "asin": "B01I3JTQVI",
       "reason": "Product missing from retailer response"
     },
@@ -93,84 +123,4265 @@
     },
     {
       "store_id": "10328",
-      "asin": "B07G9PLLQM",
+      "asin": "B08N3D7S61",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10328",
-      "asin": "B07G9NZWYH",
+      "asin": "B08N2QD4YG",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10328",
-      "asin": "B07WLK1GM2",
+      "asin": "B0B588FR8J",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10328",
-      "asin": "B086ZFPJZB",
+      "asin": "B0DQ5W5Y8P",
       "reason": "Product missing from retailer response"
     },
     {
       "store_id": "10328",
-      "asin": "B08PX1JM86",
-      "reason": "Product missing from retailer response"
+      "asin": "B0DYPWWRDN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYF74QYG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY9CGD14",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY1V2T7H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYGGVBQ2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYFX82QR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYF73F67",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYK3CSNF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DXVXY2XS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY9C6XQ9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYG374WD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYPHLGTH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYPD6D23",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYF66SYY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY8K5C7K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY95G1X3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY9CGGZV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DY1N4MJF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYFDGX6F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYPKSMD1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYQMTGMQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYQB69LS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVMS6TB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZ3W5VM4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZDGZJM9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZJ1TJBR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVQJJDT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZ4972LX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVQ82D8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYQ7DS51",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVR2QX4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZDK9JL3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZF1WHWP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVV55TZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYQNF34Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZJ1C3PH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZDXM7GT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVP65P1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYQS1GVX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DYVPTPJ1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F22HYMC7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZXMQ9G2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZZ4KB2M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F1Z68WNQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F149M7Y7",
+      "reason": "HTTPError"
     },
     {
       "store_id": "10328",
       "asin": "B0F29N597D",
-      "reason": "Product missing from retailer response"
+      "reason": "HTTPError"
     },
     {
       "store_id": "10328",
-      "asin": "B0FT8W7CVG",
-      "reason": "Product missing from retailer response"
+      "asin": "B0F1V93TK9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZXZTSGS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F22H217B",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F22QP7ND",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F24X2BWF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F1Z47SNB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZXZ48J3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F147YN5F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZXMF54N",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F24SJSRT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F24Y2WF1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F148N2G1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F1476XYV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0DZXXVLP3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F334SDNZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F39RXJNV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F2B51QDT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F2QC2KYK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F2HZSR7Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3B9BJGQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F39X3XRL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F334WZW1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F2BK3SVD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F342QX7G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3DP2D5S",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3BCHP9T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3BGBSHW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3DKKC5L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F38LS6V4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3DVGX92",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3B935Z3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F32RW323",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F38NCZV5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F2TB54PP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3PHK24K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4KWV418",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3XWHJRY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F496NR5W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F44BYG2V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4HJ5MJF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3PGTTZR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4LQ9XV9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3G5RZLR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3PDRV87",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F44G6C64",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F44H689V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4M3826G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4GY18YX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4L46NCB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4LYBPSP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3XK74B2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F3XYSF98",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F499RYJ3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4482BMN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4M4PNYG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6D8YVB8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5L8Q7BM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F54QTBN1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5ZJVNTB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5LFQZ14",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F54SX9YZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F56VDKDR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F54QT5K8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5188SVD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6D5TJ86",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6374CL4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6GTNGFN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F54SNP46",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5DWQFBQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5X68TX8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5J3GV2V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F5L2J19J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F4RLRNN8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F55XDYRY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F79YMC6K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F7B2FFG4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F7HX782K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6H9H2J6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F84HHSL4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F7CL6RSY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F85QTXQ2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6GYL4PV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F79XHLBK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6NXRHW3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F79YPVFG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F84GXHX2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F85QHXHQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F858812Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F6YYG9X1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F814L4G9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F79XVPXT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F7B21YPM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F79LKH8X",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F85LN8LF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8NSWSHX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8P89KM4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8NWHJFR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8NSS523",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8F6883R",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8NWL5X8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F88Q3R5T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8DYJGMS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8NZMF5S",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8C36DN7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8P3S7QH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8P8J7KN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8PBXGW4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F85X248Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8D58FJM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8JKWY94",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8NSG4KP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8J6BCJM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F85ZS1CJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F86F2CN7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9B9JZP5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8PH23F5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9BBL2NV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9HDX9MN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9FW32RD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9B6KXPG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8PKX2XS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9HQXNT2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PJQ1R1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8WB32M4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8XG28JK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F94LFLHT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9H4KHMF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8PK5H7M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9B7SDY4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9LSMRN1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9FWP38Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8WCCYX9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F8PF5KJ9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9B8CJSN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PZ1XZD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PVDZ2D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBH7MHQ7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PWHZHX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PY5HDX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBB8S97Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBHD44M5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PSW7L4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PSJBHV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PKD4F9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PTK64V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBHXMKY3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PTK3W2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBHXPH7V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9QZK5MQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PWJ6VF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PW9JM1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBS54MTL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PV33W1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0F9PSTMWH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSKMFPV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC3M6R27",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCPS44J3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC48CYFC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCS6QW4Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC6SXWWJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC6V1FKL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC6TDF32",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCS9S3LP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSGZDLS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSJ68GX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCG4LF2K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSRK28H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC2SVX3H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSPJVQG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FBT88SN2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FC44QB6P",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSMS6JF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSHV3GD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSQ1G7T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDH22SP1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDJ9MVY8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTNBMTM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTN23RY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTMX4KC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTMDB1Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTMHSMC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSRL56Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFBBVC6J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCVZQ4DJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDH11PK7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDX3QGHJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDGZJHMS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFBCHB7V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFBGH2DF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFBCJZ3P",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FCSSHFKS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDNFQB8X",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FDLF1R1K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTM1J6V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGQDWRVK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2J7ZXS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2JQSQZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGQJHP3L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGQH474Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTNGT12",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGQCGWKV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTNFLHR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGQGZHMF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2L1W25",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTNPVB9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTNVM59",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGQFLTDJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2JS4LX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2K9N7F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2LGGBK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTPTX9J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTPKPWK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FFTPTX9G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FGFH52QK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHKRG4BF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHBM2XX9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2LLSF8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHKV13T8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHKS5T75",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FK5HMQJT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FJFH9W74",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FK5GSR8T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FJFJRYVY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FK5FTMG4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FJN9DWSK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHKTHX2Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2MGYK3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH2MMGXL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FJCBS8ZZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH5SKYTG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHKS1QG2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FH5VBJQC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHKTX9W6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FHBJC66G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKTS2LNG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FK5KJSP7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FK5HX14D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FL88GPF7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FLQLQ1Q6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FL882PXL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FL892Y1G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FL86JB2Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKV5RGR7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKTV6Z32",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKTRM5M3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FL2WKNJ8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKK1YWV6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FL8694TD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKR1SFV4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FLKL6881",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FK5JT2SM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKJF5VW8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FLF59455",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FKJSGC3W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FM4HDWKH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMBQ59FT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FM4FX69L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMJN7SGQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMC23RZP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMKMXS8R",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMKM5GBS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMBQ9QQ9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMT4MHZ1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FM4FTCXW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMKR7MN5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMB2SL37",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMBLF4ZP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMT2SQZN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FM4GXPCG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMBRCXC5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMKLFVTY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FM4DF7JQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMKMWGGB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMSQW4XV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8BJ6MP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMYNF1SZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMT8J9MP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8BGDPW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8BBFCJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8BKTDQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN89RZP9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN89Z9CT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN5F7GWK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN1N8612",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMT9CWR6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMY9499G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN88W5HK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN1D6MPG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN18QX7Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN6XM2XT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN89HPLB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMTCTN7D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN63STGP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FMT9CDZC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8BV62H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FP47KN38",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPDJFPD9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FP3PTGTM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FNRXRF8B",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPDD3H5V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FNYMYCBW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FNH95JYC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8G5Y6V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FP384C4Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8CFPWW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8CC9QB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8GBPJ4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FP5Q8NKS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FNLV3R21",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FNRX3VKR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPG8JSLV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FN8CSQPB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FP2YGM3T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FP6KY3T5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPPC88BY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ81ZVKZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPRNTC4K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7YKF33",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPPXDJSW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPGDLYZ9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7VKRYM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPPX2JW6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7Z2XQ7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ821HDN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7RYLZ4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPGBGXQ1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7VQX5M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPPFCY5J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7VTGL5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPRHS6P9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPJ5S6RP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FPPGYCG2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ7Q7BRJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ4MPWBK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQQ4S6TW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR7XTM8Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQR5Z8SL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQQMHBS7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQQVYXKZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ82YHSR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR7RK7KK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQQNX2QW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR4C2FV9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR7LTGG9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ85P2CW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQKPZ3FQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQ82G24W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQQ5MTV5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQRB3Q89",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQPL927H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQTK6PVC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQPWKTMN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQPPRDWW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FQPR8SFW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR8YY3WT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR88P8Z2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS28GQX2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2BKMS2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRNBG23W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2BHLT6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRCC25VJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2BV4SF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRGH3ZGD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRT1VF76",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRNPZM4Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRSZS2C3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRDFBCHY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRNNJGJP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRB1CVBF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRNTKZ8Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRSYTMZ5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR9MT5Y2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FRT2HWX7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FR8HRG1L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS85YMWC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2DLGL9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSFNLGXQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS9137MK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSGSX1S5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS8SW2V4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2C4BBS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2CJ4ZZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2CJ9JS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2BYDYL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS98RB8G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSF22Z8F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS7XNWS3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSH2MT8N",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2C1Y7P",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS81NN9X",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2CWYST",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS82Z95B",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS31Q9YW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FS2T3FJ8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTDFSDXW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTZXPYHR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSH3RMB5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FT5NJQ1G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FT5P81JY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTJLXMMQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FT8TQ6GF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTJG7TK4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSM86CZP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FT98SH75",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTK1CFW6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSMD8NKS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSSD124Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FT98GN3C",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTT24HGQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTPZHN16",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTJJYVZM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FSSDHXMV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTJV9QJ3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FT8SKT33",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWD88LSJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWDBGRML",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWDZF99H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTZZ1468",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWDS1PXL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FVMNPSM4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWDCR21Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FTZY493Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWFPKY3M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWGKQMMN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FVMJX6ZG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWRWJ7YJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FV11R7L9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWDSBH9K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWKY2F3M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FVMK1G71",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FV12SHMM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FVNF8L7T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FW1L9TB8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FWDWH611",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FY7L5V7S",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXYF5TXH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FX65JMP4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXBQHCDC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXYGLS2F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXH2L1B4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FX5JGYWG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FX641S3Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FY7FW7PZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXMWSZ3V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FY3V8BBC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FX5RYSMC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXYGDBDM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXXV5CDN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXBS92PS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXH4VB37",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FX5TDBR2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXP5123Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FXYGCM5C",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FX5FSD4X",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZLCGZLC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZM7R3BT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZL9S8NJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZX7S5VD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZM9LYBF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FYJ7TW37",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZM352M2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZW3GJSZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZW3FZ66",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZW1G26D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FY7L7F9W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FYRC1QPZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZL2CSLM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZM4F1B3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZLBRN55",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZL63M7T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZX62DV6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZMNY19V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZX3FHY6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FY7MS7B9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZXC8WQT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZXSV2RQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1D4JVDJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G16ZM7JP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G16457S2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1D8W9JS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1CRRL58",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZXSRDQY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZXSS25J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1D84XDK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0FZXVGDRG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1DM9LPN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1MXKCXT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G16W1JB9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1NKHZ5R",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1FJ9HP2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1N1C5PZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1D4C4H7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1CSHNMT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1N8ZMT2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1THR8L1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1TKQHKM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G35S41LF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1V897HL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G35SQ28V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2YYG473",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1TM99T3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2Z31XZB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1NKVRS2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2YZ55SX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2JFP4CY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2N2DH4W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2Z1GMY2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1TJLY7L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2Z2T98X",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G35TGVVX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G22PP9NF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2YZBTQY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G1P17WRM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G2YZL72Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3XXLP96",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B7KQGF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G367CF7M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B6FL9T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3C23G1G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3B6T8TT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3XYZQV5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G44ZZN8W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3QKBQ2X",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3XVZZ2J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G453D2MN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B6CXFL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3BDNT8F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3QP6S3D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G39V6W23",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3CGLZRM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3B6TPZT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G35V72W7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G3CTSMLG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B5KNCG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B82TQY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4FBLVDM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4DWFWHS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4X41J3W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B7P61F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B87BMT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4XCH2Y7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4FBKV1F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B8L7QJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4FB3ZQN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B9GY8W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B7NT89",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B9PQ1R",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B871G8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4RWYTDJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4DX3P3W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4DR4JBM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B8JZ9Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4B8Q9RL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4XFJFD8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5PT8ZL5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G675VFMV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5ZRXYK1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QL394P",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G54BFBKX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5BK42N2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5PXVCQH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QLHR89",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G4XGJV83",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G66YGG7L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QCHGS8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G61N9Z96",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G65QRCTB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QLGMQ8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QKL1PN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G672334B",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5PZCXHH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5BJSTGP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QHZL1K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G5QMD6QL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6HSTF9K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G96BGW38",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G75XMFLF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G8RS5G16",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6JPP74Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G761PHCC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G7M2Z5QS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G954YDDM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6GMBF4J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G877G23K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6K1CN26",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G765NKDJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G71ZV5XL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G72BSHFM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G99BQNQ4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G8TXWKBH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G8QP5X3J",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6NXHLKQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6MRWD7L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G6GDF3D4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCHR56KK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCG7TWD5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0G9B23GH2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCJJRNN2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCK5ZQTT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKPVTJG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKR2SKR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCH2KN84",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKFNFYT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCGHVJRL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKKTXZ9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKTHLHM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCFNVFGQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCC4DGXQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKQJT1D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GC7R51ZY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCK71HM1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCGHXMX7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCKJ7SDX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCFN7RTB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD9564L7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDGVZFQS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDP8552Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD9434DH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD2KN3R5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD92XL8V",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD2493V1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDNTJR9H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDH3YH72",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD915DL3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD8YHQ6G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCL3JGQG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD2FWT8M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GD2T4YMJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDNCMYCK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDH2TRSX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDNCSNHJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDHB718M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GCPNWN4S",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDNCZM1K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGDQM8VV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GFXRZ3V4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGJVXGJH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGJJ5WKS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GF46KGY7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GF499PWP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GF46KD5L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GFTJNCM6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GFXP6GQH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GF4CS4TC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GF46KD5M",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGJGJG3Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGJH47M5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDQZQFYV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GF3PYY73",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GFXLPZYC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGJF886Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGC3ZBDK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GDR72CMN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GFSSXDG7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH2H3379",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH8P61LG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGKDVLH2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH9BG6N4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GHZGD86H",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GJTHH21Q",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GJ6L49TN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGKQQYGM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GJTMFFX4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH2BZJBW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GHZTH3RG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH26GYPW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH2JWYDF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GJTTF9F4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGL1ZRCR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH2J89G4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GH939DFL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGKLRMT7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGLCCNHB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GGL7F9HY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GK9W99FJ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GN27Q5JC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GK2XNGDF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GN2SDC1N",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GM28YP1P",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GP19P2FW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GM2SSMZQ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GNMQSF85",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GKQJ7SSH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GNC8J7LM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GN3J432L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GN3P4RPR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GL9JC81W",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GL9R6QCY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GNNNTRZL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GLR8TFKY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GMK1HGZ1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GN3TKG1Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GN3VT5DS",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GKD2XP4G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GPDP9QKT",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GPDRW272",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GP51NMKN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQCH8BK3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQDRR1ZF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQJCGRTL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GP9R7PD5",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GP95P3JL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GPFCCX1F",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GPF9B8CV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GPDYYT4K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQD992ZK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GP97BKMH",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQ5KVRNP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQDDPNP7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQD2WHG9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQJFCP17",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQHQM24D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQCYNS44",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQD9HDZ6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSCXKB1T",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GS3C1QN1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GRJS3L2R",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GR1QFNDL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSWC538Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQV77D38",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSHJB8RK",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GR1PQ3LZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GS33XS97",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GS3GXVBG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GR1P2JT6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GS6V5RN1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GRJRZVMR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GS3B2SCM",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GQVLKG17",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GS3G3K6Z",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSVQYQT8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSVSMJTF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSX1HQQN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GRJKHBLG",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GV173YL7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GT772CD7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GVW2NWZY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GVKLF1Q7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTWHWGXC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GVKHNT4R",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GSX3XLTR",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTRD9GWF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTMQQNJX",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GT74YD8S",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GV1C6H3D",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GV17KGN2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GT72Z3ZV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTMY83Y2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GV1CWZSZ",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTN1JNP1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTMZ2K36",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GWJWKMGB",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GWJT6GND",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GTMQQNK4",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GZHH6215",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GZY7WCSD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GX7T9GT2",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GXWPW25N",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GWJZ9B7L",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GZL8WDT8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GY5ZD24B",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GXWBMMYV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GWJX3M4C",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GXC8PQ36",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GZDZ3RLD",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GXWG5QQP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GY9Q528Y",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GWN9HPV6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GX7JHDKN",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GWJZ3YBC",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GYZL8PFL",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GYSZ6C7G",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GYZR1HMW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0GYZMWGGP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H3C7FS9S",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H2N6NRXP",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H34H1K9K",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0HBR476ZW",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H31THKBY",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H9P356M9",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H5XDLPR3",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H5XB9GLF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H5X9DZW6",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H46THC6B",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H37DKLV1",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H2N91TRV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H2N1TDGF",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H5XF71D8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H2WYFYP7",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H2X5JRPV",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H4RGFKB8",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H37GCD29",
+      "reason": "HTTPError"
+    },
+    {
+      "store_id": "10328",
+      "asin": "B0H4SCHSFP",
+      "reason": "HTTPError"
     }
   ],
   "product_types": {
     "SHAMPOO": 56,
     "SKIN_MOISTURIZER": 172,
     "LIP_BALM": 26,
-    "SEASONING": 58,
+    "SEASONING": 70,
     "COFFEE": 726,
+    "TEA": 475,
+    "VITAMIN": 258,
     "ESSENTIAL_OIL": 122,
-    "TEA": 434,
-    "HERBAL_SUPPLEMENT": 150,
-    "NUTRITIONAL_SUPPLEMENT": 828,
-    "FOOD": 678,
+    "HERBAL_SUPPLEMENT": 182,
+    "NUTRITIONAL_SUPPLEMENT": 886,
+    "FOOD": 783,
     "HAIR_COLORING_AGENT": 32,
     "MINERAL_SUPPLEMENT": 116,
-    "VITAMIN": 244,
-    "NOODLE": 252,
-    "JUICE_AND_JUICE_DRINK": 254,
+    "NOODLE": 268,
+    "JUICE_AND_JUICE_DRINK": 280,
     "DISHWASHER_DETERGENT": 26,
     "WATER": 210,
+    "PACKAGED_SOUP_AND_STEW": 370,
     "SKIN_CARE_AGENT": 22,
     "CHOCOLATE_CANDY": 338,
     "SKIN_CLEANING_AGENT": 170,
     "CLEANING_AGENT": 46,
-    "HEALTH_PERSONAL_CARE": 88,
+    "HEALTH_PERSONAL_CARE": 90,
     "TAMPON": 2,
     "COFFEE_FILTER": 6,
     "SUGAR_SUBSTITUTE": 32,
     "PASTRY_BASTING_BRUSH": 2,
     "MEDICATION": 42,
     "PAPER_TOWEL": 4,
-    "FRUIT": 156,
-    "VEGETABLE": 242,
-    "DAIRY_BASED_CHEESE": 264,
+    "FRUIT": 167,
+    "VEGETABLE": 244,
+    "DAIRY_BASED_CHEESE": 265,
     "DAIRY_BASED_BUTTER": 28,
     "DAIRY_BASED_DRINK": 36,
-    "SNACK_CHIP_AND_CRISP": 240,
+    "SNACK_CHIP_AND_CRISP": 246,
     "BODY_LUBRICANT": 6,
     "CONDITIONER": 78,
-    "BEVERAGE": 80,
-    "DAIRY_BASED_YOGURT": 144,
-    "FRUIT_SNACK": 116,
+    "BEVERAGE": 82,
+    "DAIRY_BASED_YOGURT": 172,
+    "FRUIT_SNACK": 125,
     "CRACKER": 162,
-    "MILK_SUBSTITUTE": 122,
+    "MILK_SUBSTITUTE": 123,
     "EDIBLE_OIL_VEGETABLE": 104,
-    "CEREAL": 106,
+    "CEREAL": 110,
     "SANITARY_NAPKIN": 14,
     "BLEACH": 2,
     "DAIRY_BASED_ICE_CREAM": 116,
@@ -178,31 +4389,31 @@
     "BAKING_PAPER": 6,
     "SKIN_PROTECTANT": 4,
     "NUT_BUTTER": 68,
-    "VINEGAR": 50,
-    "SAUCE": 356,
-    "BREAKFAST_CEREAL": 234,
+    "VINEGAR": 51,
+    "SAUCE": 394,
+    "BREAKFAST_CEREAL": 252,
     "SALAD_DRESSING": 78,
-    "CONDIMENT": 88,
+    "CONDIMENT": 96,
     "OLIVE": 12,
     "RICE_MIX": 46,
-    "MEAT": 140,
+    "MEAT": 150,
     "PICKLE": 26,
     "DENTAL_FLOSS": 2,
-    "SHELLFISH": 36,
+    "SHELLFISH": 37,
     "CONCENTRATED_FLAVORING_SUBSTANCE": 2,
-    "SNACK_FOOD_BAR": 324,
-    "EDIBLE_OIL_FAT": 22,
+    "SNACK_FOOD_BAR": 340,
+    "EDIBLE_OIL_FAT": 26,
     "SUGAR": 12,
     "BODY_DEODORANT": 38,
-    "PUFFED_SNACK": 48,
+    "PUFFED_SNACK": 52,
     "SUNSCREEN": 48,
     "BEAUTY": 22,
     "WINE": 116,
-    "BREAD": 82,
-    "POULTRY": 100,
+    "BREAD": 89,
+    "POULTRY": 104,
     "PROTEIN_SUPPLEMENT_POWDER": 162,
-    "GROCERY": 144,
-    "DRINK_FLAVORED": 250,
+    "GROCERY": 153,
+    "DRINK_FLAVORED": 252,
     "NON_DAIRY_CREAM": 66,
     "FABRIC_SOFTENER": 14,
     "FOOD_STORAGE_BAG": 6,
@@ -213,10 +4424,9 @@
     "NUT_AND_SEED": 76,
     "ROLLING_PIN": 4,
     "SYRUP": 32,
-    "PACKAGED_SOUP_AND_STEW": 136,
     "HONEY": 46,
-    "COOKIE": 112,
-    "FISH": 118,
+    "COOKIE": 118,
+    "FISH": 129,
     "PROTECTIVE_GLOVE": 2,
     "HAND_SANITIZER": 12,
     "BEER": 74,
@@ -229,6 +4439,7 @@
     "HAIR_STYLING_AGENT": 14,
     "RELISH": 2,
     "CUTTING_BOARD": 6,
+    "POPCORN": 22,
     "BAKING_CHOCOLATE": 18,
     "CHEWING_GUM": 6,
     "NAIL_POLISH_REMOVER": 2,
@@ -236,15 +4447,14 @@
     "LAUNDRY_DETERGENT": 40,
     "JERKY": 44,
     "CLEANING_BRUSH": 2,
-    "LEGUME": 50,
+    "LEGUME": 72,
     "TOFU": 8,
     "BABY_PRODUCT": 4,
     "FLOUR": 14,
     "FOOD_STRAINER": 10,
     "EGG": 10,
-    "POPCORN": 18,
     "THICKENING_AGENT": 2,
-    "BAKING_MIX": 28,
+    "BAKING_MIX": 33,
     "RICE_COOKERS": 2,
     "DAIRY_BASED_CREAM": 14,
     "BATHWATER_ADDITIVE": 22,
@@ -264,25 +4474,26 @@
     "FOOD_WRAP": 2,
     "FLAVORED_DRINK_CONCENTRATE": 22,
     "SPOON": 4,
-    "NON_DAIRY_YOGURT": 42,
+    "NON_DAIRY_YOGURT": 49,
     "FRESH_CUT_FLOWERS_PLANTS": 8,
-    "PROTEIN_DRINK": 42,
+    "PROTEIN_DRINK": 47,
     "BOTTLE": 10,
     "SEAFOOD": 26,
     "CANDY": 20,
-    "CAKE": 22,
+    "CAKE": 24,
     "PET_FOOD": 60,
     "CONTAINER_LID": 2,
     "NON_DAIRY_CHEESE": 6,
     "PLANT_SEED": 4,
     "WASTE_BAG": 4,
     "COUNTERTOP_FOOD_STEAMER": 2,
-    "PREPARED_AND_PRESERVED_FOOD": 18,
+    "PREPARED_AND_PRESERVED_FOOD": 20,
     "FOOD_STORAGE_CONTAINER": 4,
     "HAIR_CLEANER_CONDITIONER": 6,
     "FOOD_SPATULA": 2,
     "PASTRY": 10,
     "PIE": 2,
+    "COSMETIC_POWDER": 6,
     "LIP_COLOR": 20,
     "GARLIC_PRESS": 2,
     "MEASURING_CUP": 2,
@@ -295,7 +4506,6 @@
     "WHISK_UTENSIL": 2,
     "SWEATER": 2,
     "TOILET_PAPER": 6,
-    "COSMETIC_POWDER": 4,
     "MASCARA": 2,
     "FLATWARE": 2,
     "EYEBROW_COLOR": 2,
@@ -315,6 +4525,7 @@
     "ANIMAL_NUTRITIONAL_SUPPLEMENT": 2,
     "DIETARY_SUPPLEMENTS": 2,
     "MEAT_AND_POULTRY": 2,
+    "EDIBLE_OIL_ANIMAL": 2,
     "SHAVING_AGENT": 2,
     "SHEET_PAN": 6,
     "AROMA_DIFFUSER": 2,
@@ -325,6 +4536,7 @@
     "PERSONAL_FRAGRANCE": 24,
     "OTC_MEDICATION": 2,
     "TOOTHBRUSH": 6,
+    "BABY_FOOD": 1,
     "TOPICAL_HAIR_REGROWTH_TREATMENT": 2,
     "MEAL_HOLDER": 4,
     "INCONTINENCE_PROTECTOR": 6
@@ -333,14 +4545,14 @@
     {
       "store_id": "10160",
       "store_name": "Columbus Circle",
-      "product_count": 5798,
+      "product_count": 6225,
       "reused_previous": true,
       "source": "Store-scoped product API"
     },
     {
       "store_id": "10328",
       "store_name": "Upper West Side",
-      "product_count": 5798,
+      "product_count": 6166,
       "reused_previous": true,
       "source": "Store-scoped product API"
     }
