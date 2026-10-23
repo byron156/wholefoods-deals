@@ -4100,7 +4100,7 @@
     "promotion_terms": {
       "sale": "BOGO 25% off"
     },
-    "observed_at": "2026-10-07T14:07:26.636726+00:00",
+    "observed_at": "2026-10-10T14:59:13.593416+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
@@ -4122,7 +4122,7 @@
     "promotion_terms": {
       "sale": "BOGO 25% off"
     },
-    "observed_at": "2026-10-07T14:07:26.636726+00:00",
+    "observed_at": "2026-10-10T14:59:13.593416+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
@@ -4144,7 +4144,7 @@
     "promotion_terms": {
       "sale": "BOGO 25% off"
     },
-    "observed_at": "2026-10-07T14:07:26.636726+00:00",
+    "observed_at": "2026-10-10T14:59:13.593416+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
@@ -4167,6 +4167,94 @@
       "sale": "BOGO 30% off"
     },
     "observed_at": "2026-10-07T14:07:26.636726+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:9a69831fbec20c85",
+    "name": "Favorite Day™ seasonal bakery items*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_836903de-e70c-4c0b-bb44-2c10dba154ba?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/679968374?content_id=STORY-47745",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-10-10T14:59:13.593416+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:95bac11993d8c7ea",
+    "name": "Magnolia Table items*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_cfbae8cb-9a11-4f0a-9777-695a727b848b?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/942657373?content_id=STORY-48075",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "10% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "10% off"
+    },
+    "observed_at": "2026-10-17T13:33:38.857475+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:1c73667b4d67887a",
+    "name": "Favorite Day™ and Good & Gather™ trail mix*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_b7b52f0d-158e-4e57-b8b3-ee14744fac9f?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/800662217?content_id=STORY-48161",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-10-23T13:15:19.957474+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:0ce0daf021496736",
+    "name": "Favorite Day™ Halloween mini cupcakes & frosted cookies*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_68fe86f5-6655-44f8-becd-8a6684773dec?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/930304480?content_id=STORY-48153",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-10-23T13:15:19.957474+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
