@@ -4258,5 +4258,71 @@
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
+  },
+  {
+    "asin": "target:15db812646534390",
+    "name": "Favorite Day™ seasonal Halloween bakery*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_3ec21b5b-437d-4809-9cbf-5f591f024a0c?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/646248625?content_id=STORY-48321",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-10-28T13:30:53.016229+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:08431185fe3033ee",
+    "name": "frozen pizza*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_3652beb0-776e-4e93-b233-b710ca5bda8a?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/786530532?content_id=STORY-48318",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-10-28T13:30:53.016229+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:f325d7faa6b09fbb",
+    "name": "Pillsbury & Sweet Loren’s baked goods*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_0aa366ff-e1e7-4c51-b5c2-72904362b496?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/902525943?content_id=STORY-48322",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-10-28T13:30:53.016229+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
   }
 ]
