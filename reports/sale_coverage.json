@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-28T13:31:47.283997+00:00",
+  "generated_at": "2026-10-29T13:15:44.203429+00:00",
   "scope": "Whole Foods weekly promotions at the two supported stores",
   "advertised_store_promotions": 91,
   "captured_store_promotions": 91,
-  "eligible_store_products": 544,
-  "unique_eligible_products": 278,
-  "resolved_product_memberships": 544,
+  "eligible_store_products": 541,
+  "unique_eligible_products": 276,
+  "resolved_product_memberships": 541,
   "metadata_gaps": 0,
   "missing_store_promotions": 0,
   "promotions": [
@@ -878,15 +878,13 @@
       "promotion_id": "e4d5ce7f-06fe-4be5-927e-16388c1246db",
       "name": "Sliced-in-House Muenster Cheese",
       "url": "https://www.wholefoodsmarket.com/promotion/e4d5ce7f-06fe-4be5-927e-16388c1246db?store-id=10160",
-      "source_rows": 3,
-      "expected_rows": 3,
+      "source_rows": 1,
+      "expected_rows": 1,
       "duplicate_source_rows": 0,
       "eligible_asins": [
-        "B079VRDK84",
-        "B0B6CTNFQR",
         "B0G65QRCTB"
       ],
-      "resolved_products": 3,
+      "resolved_products": 1,
       "unresolved_metadata_asins": [],
       "captured": true
     },
@@ -1774,14 +1772,13 @@
       "promotion_id": "26a6f887-f347-40a9-a03f-46241af8238d",
       "name": "Sliced-in-House Muenster Cheese",
       "url": "https://www.wholefoodsmarket.com/promotion/26a6f887-f347-40a9-a03f-46241af8238d?store-id=10328",
-      "source_rows": 2,
-      "expected_rows": 2,
+      "source_rows": 1,
+      "expected_rows": 1,
       "duplicate_source_rows": 0,
       "eligible_asins": [
-        "B0B6CTNFQR",
         "B0G65QRCTB"
       ],
-      "resolved_products": 2,
+      "resolved_products": 1,
       "unresolved_metadata_asins": [],
       "captured": true
     },
