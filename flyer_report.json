@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-29T13:15:44.203429+00:00",
-  "product_count": 632,
+  "generated_at": "2026-10-30T13:46:18.120287+00:00",
+  "product_count": 638,
   "stores": [
     {
       "store_id": "10160",
       "store_name": "Columbus Circle",
-      "product_count": 317,
+      "product_count": 320,
       "reused_previous": false
     },
     {
       "store_id": "10328",
       "store_name": "Upper West Side",
-      "product_count": 315,
+      "product_count": 318,
       "reused_previous": false
     }
   ],

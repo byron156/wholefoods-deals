@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-29T13:15:44.203429+00:00",
+  "generated_at": "2026-10-30T13:46:18.120287+00:00",
   "scope": "Whole Foods weekly promotions at the two supported stores",
-  "advertised_store_promotions": 91,
-  "captured_store_promotions": 91,
-  "eligible_store_products": 541,
-  "unique_eligible_products": 276,
-  "resolved_product_memberships": 541,
+  "advertised_store_promotions": 93,
+  "captured_store_promotions": 93,
+  "eligible_store_products": 545,
+  "unique_eligible_products": 278,
+  "resolved_product_memberships": 545,
   "metadata_gaps": 0,
   "missing_store_promotions": 0,
   "promotions": [
@@ -814,6 +814,22 @@
         "B0DJPQ5T1X"
       ],
       "resolved_products": 6,
+      "unresolved_metadata_asins": [],
+      "captured": true
+    },
+    {
+      "store_id": "10160",
+      "promotion_id": "7076aa5c-45cd-445d-a7f4-40fb88a0f108",
+      "name": "Mix and Match Cookies",
+      "url": "https://www.wholefoodsmarket.com/promotion/7076aa5c-45cd-445d-a7f4-40fb88a0f108?store-id=10160",
+      "source_rows": 2,
+      "expected_rows": 2,
+      "duplicate_source_rows": 0,
+      "eligible_asins": [
+        "B07FZ1BT2N",
+        "B07GBHBRSB"
+      ],
+      "resolved_products": 2,
       "unresolved_metadata_asins": [],
       "captured": true
     },
@@ -1713,6 +1729,22 @@
     },
     {
       "store_id": "10328",
+      "promotion_id": "fca73afb-8a6a-43f4-be8d-3f1fe31ce408",
+      "name": "Mix and Match Cookies",
+      "url": "https://www.wholefoodsmarket.com/promotion/fca73afb-8a6a-43f4-be8d-3f1fe31ce408?store-id=10328",
+      "source_rows": 2,
+      "expected_rows": 2,
+      "duplicate_source_rows": 0,
+      "eligible_asins": [
+        "B07FZ1BT2N",
+        "B07GBHBRSB"
+      ],
+      "resolved_products": 2,
+      "unresolved_metadata_asins": [],
+      "captured": true
+    },
+    {
+      "store_id": "10328",
       "promotion_id": "408943c7-40d7-4d0a-a87a-21df095997ce",
       "name": "Chocolate or Vanilla Cupcakes, 6 pk",
       "url": "https://www.wholefoodsmarket.com/promotion/408943c7-40d7-4d0a-a87a-21df095997ce?store-id=10328",
@@ -1815,5 +1847,5 @@
     }
   ],
   "missing_from_catalog": [],
-  "displayed_store_promotions": 91
+  "displayed_store_promotions": 93
 }

@@ -5,7 +5,7 @@
   "model_version": "taxonomy-local-ml-v18",
   "gold_labels_digest": "336cd82bd9869c62",
   "silver_labels_digest": "670a54b02fa26423",
-  "clip_audit_digest": "709957c80895192d",
+  "clip_audit_digest": "f78f1c1610cdab00",
   "clip_primary_min_score": 0.55,
   "clip_rescue_min_score": 0.4,
   "items": {
@@ -3185,7 +3185,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "d8713aa8f32f9f18d8b26eba78f70556f32dc7e93e900d799b011f2b832cc1e4": {
+    "91639b643e2669cea8644bfb2db83ca9e24cd8d75ce3def62662e47d284d53d4": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
@@ -3194,7 +3194,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "bacb6b9910275b2792a9ef47265faefad4d6b3a495af54821861ce806b048bbd": {
+    "2fcdf4741368f536782ac79d7f2cfd069566d7fd1de14ee87bbfb936bc96d560": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
@@ -3743,7 +3743,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "f4a37226f8f97531d9c91fe0cb99315fd554fb4253b4373c2a43fc79b55bebab": {
+    "6c95d5e4b9c0511909aa41addf0cb68bdf2a07c04aa025da21616d6f76c438b3": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
@@ -3752,7 +3752,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "a9cc0a751c0f4c6dbf94e8dcce0c47450bcc439d7a8be6003d746e77d9b876d1": {
+    "1e4277bb46adfc436187020a151622f15a3219071da2c8692594880966fb4edf": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
@@ -5749,6 +5749,72 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "475fb76d76e6eecd64db5954a023ed7d2a44191d74e7fbba8f9e86911bdc2ed5": {
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6902. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.6902,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "cdd68ae233184e5c8203a2f81a8a2ff6fd1e5e7a7040c4bc08e799fcab7d3a55": {
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7597. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7597,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "075c128a7ca95153b4dd3b8225b02b2e784c92e4fca7c3afdf920e199bd9ee48": {
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SNACK_FOOD_BAR",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "48aef444036ec80ac1b22c9b436fb53653255c09fbd71ad99441d8b55a154ded": {
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6902. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.6902,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "530defdd45ca69251a790eb478ca382031d5601fbf22a799443c7d546b6c9ccc": {
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7597. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7597,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "834b6a4f2520e7d898d65b1069e1f3c34377155bd53fc198c94735432e465653": {
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SNACK_FOOD_BAR",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "84fb1514e267f3bb066fbf4d8e9c537c7a2cbec960e7ab269baa37c8b740cb12": {
       "category": "Bakery",
       "subcategory": "Cakes & Cupcakes",
@@ -6428,7 +6494,7 @@
     "b241f5d26ed31a92f0acd15da83fb21e7e85df89e390acc3b82226742b4f472d": {
       "category": "Pantry",
       "subcategory": "Jams & Honey",
-      "confidence": 0.5703,
+      "confidence": 0.5738,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -11049,6 +11115,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "c1774de3d857e979b3490d9c6ab5e4e76c5cd53be88dd7dc683a14528ef6bde2": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Soap & Hand Wash",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_CLEANING_AGENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "905c33899522fbbec069c3e3a55108c5303f881c6b1474146c7cb3fc5547312a": {
       "category": "Supplements & Wellness",
       "subcategory": "Essential Oils",
@@ -11118,6 +11193,15 @@
       "subcategory": "Tea",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "07b00756353399f1fc3a7da652a8e2385b5e09a77c449357a4401e0f50257ab4": {
+      "category": "Household",
+      "subcategory": "Paper Products",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: PAPER_TOWEL",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -11368,6 +11452,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "6d1a3f8b9d3e2fe8bc06d340fb1eaa5fb53b2eca5036c6741b721a810aebd57e": {
+      "category": "Produce",
+      "subcategory": "Fruits",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: FRUIT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "f802f9c6b84b63a63932b7df740a09ed0392b6077dd249c5feb983b5d1faed54": {
       "category": "Beverages",
       "subcategory": "Coffee Beans & Grounds",
@@ -11557,11 +11650,38 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "98be5c1cb2a2446a4002dca91a9360b77324a6824e062b5c6bb1aa256fe915fd": {
+      "category": "Snacks",
+      "subcategory": "Chips",
+      "confidence": 0.99,
+      "reasoning": "Packaged snack wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "72cb29d1c509962b980b38d047cb218d5f6ed6e0aa5f402ea558385b1d75d521": {
       "category": "Produce",
       "subcategory": "Vegetables",
       "confidence": 0.99,
       "reasoning": "Retailer product type: VEGETABLE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "df5b12eb7d6c8af6dea1adfd2eb692852512a1bbbfae7b1b912ccb7fde96a2bc": {
+      "category": "Bakery",
+      "subcategory": "Pies & Tarts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "5c111b4855d9441603d4892ffc2239da07cd2b6f8d3ee496292b05f30d722873": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.25,
+      "reasoning": "Local model produced a low-confidence general pantry label.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -11582,6 +11702,18 @@
       "reasoning": "Retailer product type: WATER",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "e73e2b4c32ea2df44bb9589219e1b990cf8fe5a424215cb48464ae8638520e68": {
+      "category": "Pantry",
+      "subcategory": "Jams & Honey",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.6514. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.6514,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "7d759afa019f90c9282768c4e179b5e409cff0b95d112f4628f3c2afb8768c6a": {
@@ -11807,6 +11939,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "48c7b6648c509b07709d84b1df804d6260d871cba999680598b3ddf89e23a002": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Body Care",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "2a24332d30cb0d5b365d835e670b2d01e136bdc39c4a1bae956fcf52fdf7dcb2": {
       "category": "Produce",
       "subcategory": "Fruits",
@@ -11866,6 +12007,15 @@
       "subcategory": "Wine",
       "confidence": 0.99,
       "reasoning": "Retailer product type: WINE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "11ef9c9bb4dd5d2ad53a3177957e19b266f637b20ba88e07eca90fbafa4a8277": {
+      "category": "Alcohol",
+      "subcategory": "Beer",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: BEER",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -12203,9 +12353,9 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "d3154e0cda2ff5465ac8acdc891841efefd0d931edbee57833d695f2a81bb46f": {
+    "4b841b1cafb34599ab05ca1e4766eb14af7f127fb3299f60d74c56d8738221f4": {
       "category": "Supplements & Wellness",
-      "subcategory": "Minerals",
+      "subcategory": "Dietary Supplements",
       "confidence": 0.99,
       "reasoning": "Retailer product type: NUTRITIONAL_SUPPLEMENT",
       "model_name": "local-taxonomy-classifier",
@@ -12502,6 +12652,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "8ec8cac46965a079fbd826fbceab2f873506d0b61d56881b8c9b892f4f42cdbc": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Body Care",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "fb2e81a9ca0d7ddf5823587d15ce049ac12d3050a54f7589d8d3a579f4e208e6": {
       "category": "Supplements & Wellness",
       "subcategory": "Vitamins",
@@ -12725,6 +12884,15 @@
     "e5e14d4693ed0512b3d434db9d312554a75d622fd4ae71a75bc1c089aa500dc5": {
       "category": "Pantry",
       "subcategory": "Nut Butters & Spreads",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "a81809307b445c83782a01bf02b965144d10be1f138cadb200a8da4840fda58f": {
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
@@ -13041,7 +13209,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "020e1cc1efadb83e436595fa93a3855f9f027e86be9f2d39b25b978954747315": {
+    "f2de8f02d17b17d6aced13fdce6c320cad71d34abb9248ddd4ccbf55e89656ef": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
@@ -13243,6 +13411,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "fc1520b81292005d664e5e8efd3875d404bd84766d5c0d5e5441c210215bb184": {
+      "category": "Alcohol",
+      "subcategory": "Wine",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: WINE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "ffc10e8854636326ab28ea836fb1257b697b6d690e02b599729e59c3eb56a50c": {
       "category": "Alcohol",
       "subcategory": "Spirits",
@@ -13262,6 +13439,15 @@
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "93e5bdd853eca8885d50d26768880957b79650c0f0bd0e50af6d36949c660431": {
+      "category": "Alcohol",
+      "subcategory": "Wine",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: WINE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "7fb1d4ea175c7d442349d09c3e38420be63019f6725e0ed07ebb34ccf9715b1b": {
       "category": "Alcohol",
       "subcategory": "Wine",
       "confidence": 0.99,
@@ -13335,6 +13521,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "e6c704ad5b88981f1e86cb06065bd8ff931f0d69e62b86e45c59a88d81d98f43": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Herbal Supplements",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: HERBAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "02f32bf2bc972a9019810bd999683adbc8883dc0aa1c29267acdbed17a1dda9e": {
       "category": "Dairy & Eggs",
       "subcategory": "Yogurt",
@@ -13376,6 +13571,15 @@
       "subcategory": "Soap & Hand Wash",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "039dd6b15a581d5a850199e676138bfac4c9d9658721b08050aff1f2ffdef14c": {
+      "category": "Alcohol",
+      "subcategory": "Wine",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: WINE",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -13970,7 +14174,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "f6cd6e4a6b5c3b4879e8ed81ee34b0769eb70569498e4e5d69bb009eba0fc019": {
+    "493192475bc43940461dd72f0a504b4b37193f5fc5b1cbf27f76d55fc12b3b80": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
@@ -13988,11 +14192,11 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "8d6c4956940236b9bf9f136605908138cffe1cf78da995a71b96504e9f9fc81a": {
+    "706a51ef8a79415b02c655474dc7784c9fdab643e473fc9415b383ffa7f1c0fe": {
       "category": "Beauty & Personal Care",
       "subcategory": "Soap & Hand Wash",
       "confidence": 0.99,
-      "reasoning": "Explicit product form in retailer title",
+      "reasoning": "Retailer product type: SKIN_CLEANING_AGENT",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -14056,6 +14260,15 @@
       "subcategory": "Dietary Supplements",
       "confidence": 0.99,
       "reasoning": "Retailer product type: NUTRITIONAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "93d1cc059ead105c4d97c8c9ad2e2bbeaf01b825e082ffd21759f62ab88de8ae": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Cream & Creamers",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: DAIRY_BASED_CREAM",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -14286,6 +14499,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "14c5d43e5933bb247f867794b122f37e8bb2bc2ceb0270043ffcb367636415ea": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.25,
+      "reasoning": "Local model produced a low-confidence general pantry label.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "bc3cfd52ef77ce5f179401ba990ad9aae6590ced1beff31ed6783b897517a8a0": {
       "category": "Pantry",
       "subcategory": "Beans & Legumes",
@@ -14412,6 +14634,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "de45c3db597c83aab60df21ce35feda12b2459534ef08dcc8b7c2255ea087fc5": {
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "05abad452b52bdcd7e4a94980d46143f1fead129af41b133e0880092becd60f1": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
@@ -14449,6 +14680,16 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "e2384e328e0e0cddd5eef682a4fbd2eeb2d2b37071e22a64f150edbf6c1a8f20": {
+      "category": "Snacks",
+      "subcategory": "Crackers",
+      "confidence": 1.0,
+      "reasoning": "Manual gold taxonomy label.",
+      "model_name": "manual-gold-label",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "gold",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "a2233ca90c609be4a814609224f45338905964b58378c6776a07f88d38b80031": {
       "category": "Supplements & Wellness",
       "subcategory": "Probiotics",
@@ -14474,6 +14715,18 @@
       "reasoning": "Retailer product type: ESSENTIAL_OIL",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "b9bc397e89dbca9f95f821bc7aedf224a82af82d6588e4a3845f799bdbd2ab70": {
+      "category": "Household",
+      "subcategory": "Insect Repellent",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9374. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9374,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "f9799d62d8d7b6fd1a2bfaa8e80e92b997223f8cdcc25e594feba31e08242b6b": {
@@ -14557,6 +14810,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "18795de66e5c9d704b6ed9f601eee264875bdf4073b233689d846f850f544151": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Dietary Supplements",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: NUTRITIONAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "e8a3dde4948643886265cbb7d44f1732abb51ad90f8931f91cbe2500d56c4958": {
       "category": "Supplements & Wellness",
       "subcategory": "Dietary Supplements",
@@ -14571,6 +14833,15 @@
       "subcategory": "Juice",
       "confidence": 0.99,
       "reasoning": "Retailer product type: JUICE_AND_JUICE_DRINK",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "f2b14d8c46406a513d67443459c80f5bb718287ef74c14f0979d1202a1e916bf": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Candy wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -14913,6 +15184,18 @@
       "reasoning": "Baking extract wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "6cfc8611b7dc15b2fbd8042d3b109d794d4044e45ddc62bfea630a2ac40acebe": {
+      "category": "Snacks",
+      "subcategory": "Crackers",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.8860. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.886,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "1e0971df6999b2c7da8fffa11b377aa74acc9fe2d9173631b21305420bf6be1c": {
@@ -15273,6 +15556,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "e5bf19f706944c3b4a6e606775a915417c204b529e350c38a79d9490bfba4be4": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Vitamins",
+      "confidence": 0.99,
+      "reasoning": "Vitamin or immune supplement wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "c1954482ed29366f51a960af62ed3c3d8f60fc310d73ae3c1c122cc485a14e6e": {
       "category": "Supplements & Wellness",
       "subcategory": "Dietary Supplements",
@@ -15547,6 +15839,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "7d3b7a4e63f40e69e04d7c9b0f1955e503ae9167d32a6749d974756e95fc0695": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "4772c4f4c3678a1d43703692d30182c587573a861ef1acfd176d36fdef9daa34": {
       "category": "Supplements & Wellness",
       "subcategory": "Protein & Collagen",
@@ -15572,6 +15873,18 @@
       "reasoning": "Retailer product type: SNACK_FOOD_BAR",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "305ae07c30e19897deae4972f30335ba181fa00fa7466b963605cd0921801a99": {
+      "category": "Pantry",
+      "subcategory": "Jams & Honey",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.5624. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.5624,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "d6e7a92b7c5d3c1a68a75e1ed25132973aef778899fdc74048ae008abf8eb9fb": {
@@ -15774,6 +16087,15 @@
       "model_name": "manual-gold-label",
       "model_version": "taxonomy-local-ml-v18",
       "label_source": "gold",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "3f272f74a06b92f7c4697da8b8637497324cbf632477469cffaa18152c0e1cd8": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Dietary Supplements",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: NUTRITIONAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "fe29bbedfa601e346b42702e56f45f47a47075d31783a1a1bee213166b0a497b": {
@@ -16217,6 +16539,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "1096cbf266747bfde45ab9ffbedf5f33fc0308a83ab66a3fbdeb1c9b992a8934": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Protein & Collagen",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: PROTEIN_SUPPLEMENT_POWDER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "d22b39189df151f749300dbfcc55a99dcf57c64b4048e2dbace21379ce953a1b": {
       "category": "Bakery",
       "subcategory": "Bread",
@@ -16337,6 +16668,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "9a41ef48a45d6d94dd2e63e2e218ca8f42aa5bcb70329d24d72316672fc68d7e": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "c6718fbd3fcc376f6c4cb9f9f6d9c2cb948a9eaa6bf7aba53c3a817354a443d9": {
       "category": "Pantry",
       "subcategory": "Cereal & Breakfast",
@@ -16358,6 +16698,15 @@
     "634216de85e732022dda58c1f855d9f010f50bf57933284dff4d1e05a6932dca": {
       "category": "Pantry",
       "subcategory": "Nut Butters & Spreads",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "386025738c1ccb4576c23b3b30e99111fc42887bab46bfdab4174fa195165f22": {
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
@@ -16783,6 +17132,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "ad3ee4e389485df4e75d2202dd0d3d06d06bedbf1ae99263091052392019ece4": {
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "44f88ced51fb6a2edc6a29d79d023e2546a7e6aa16f123a090e5dc98a357c6b5": {
       "category": "Pantry",
       "subcategory": "Nut Butters & Spreads",
@@ -17104,6 +17462,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "592eeb4a71f0652d31255de62742b5f75b330854d4a93bd4ee9a35cacf549a86": {
+      "category": "Snacks",
+      "subcategory": "Protein Bars",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SNACK_FOOD_BAR",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "97e9f63ddbafb172fdbd619cacce1ab1223ff7c733db5ead23e1c23c49bd8cad": {
       "category": "Alcohol",
       "subcategory": "Wine",
@@ -17141,6 +17508,15 @@
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "e1d4a414c0ff5db36bdcd58240fe1b67ef28b2a7f570a901609f83c81afff7a5": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: CHOCOLATE_CANDY",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "363ebb94fc2c0c89e16031dacc7f9d89a185877841f750412771e4d59c55a5c0": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
       "confidence": 0.99,
@@ -17215,6 +17591,24 @@
       "clip_score": 0.7592,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "43e8118b1d2db56e3f9f94caacfa17aee7d9dfadb908b19c83cdd77b2effb09a": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "316d76ae71b218609bfa253651c348b440e00a713e40cd1904a23dfd85391315": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "c4e1c37eeb8919848b2458577a14d388ce5bed85ab1cd7211d3a4e706e02b500": {
       "category": "Beverages",
       "subcategory": "Coffee Beans & Grounds",
@@ -17242,6 +17636,33 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "2c1ac62ebfb7871c3f122a379c05e40fda8c5e9ed1e09d85592cf5e208d5c5ce": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "2876f4a2382d6ac062482380b5323092b1d0d63b10ea1ec40c6b6308f52f3893": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "c1ad40e4ceaac82d983bf6d4e89ce0880ee34d297b461d460281ad531adec274": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "1034b7fedbc1a4c9d0f864d9579d273932ded6dfac94ae3cf24578500ea5ca34": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
@@ -17256,6 +17677,15 @@
       "subcategory": "Jams & Honey",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "23f4310495035ac653c46b94fc19e46fcb6b28289542b35c52890b580cfd5f17": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -17356,6 +17786,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "009e818d6d0bfb813f05ea9b1aec9aff43745289db0cd2927756eb8e62e69d11": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "ab1763ef0f1ce143a7989d81222bda327bde5f08af07e589cef92e6fba75073a": {
       "category": "Beverages",
       "subcategory": "Coffee Beans & Grounds",
@@ -17383,11 +17822,29 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "87622cacb455511c0ceb1f574ed46014f70d8a19817cbef4c322e9412c94e41b": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "fa4279b58be2e9a2e5b82f874c7213156fdcd3ac32ad17a5da76c9518cd9e48a": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "afbb2bccceecd70222b4ba32546578823cc6ce27e1575b96f211b70a36561125": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_MOISTURIZER",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -18154,6 +18611,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "3627edc79a2bf6b0dcbc78eaf17324b046d8c864c2efb15f2e346161295ea00c": {
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "746d9ff2aaa8709efaa5f7e32f07ceb7cb0530b904850cb9fd24458ace78e022": {
       "category": "Pantry",
       "subcategory": "Pasta",
@@ -18889,6 +19355,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "cab21d156576cb947e9124ca600af666868e1bcbb4db2d3e1a0cc441cbd3948e": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.25,
+      "reasoning": "Local model produced a low-confidence general pantry label.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "e8b315a6abec343a78dd4c00098d6a7b4ce086add78988271a73a52f5d209945": {
       "category": "Supplements & Wellness",
       "subcategory": "Essential Oils",
@@ -19039,6 +19514,24 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "ed54a072b5d8558327c4b8a8c6f975e3396e998c2b9bdba64ba38171eadfc987": {
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SNACK_FOOD_BAR",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "089a537793ce3f52ab9f2b57432773b75908830fee937313444fcde81197fac4": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: CHOCOLATE_CANDY",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "1d4fba766f7c341b6c23e0b2d9a576cbb4d047dde548ea600c7fd756c7950f8b": {
       "category": "Pantry",
       "subcategory": "Pasta Sauces",
@@ -19053,6 +19546,24 @@
       "subcategory": "Chicken",
       "confidence": 0.99,
       "reasoning": "Retailer product type: POULTRY",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "200645b5dd6d95ad39d6a1372b32c9760f956c2263296bd5de1348ac3edd338a": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Yogurt",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "5477d04fae004e0bd9aa4b96d37da02e5a899f9f636309c4690a8d7ea4e4a691": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Yogurt",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -19383,6 +19894,18 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "ee1716888cd996609d3b870122e8b11304ede854affb1e084c4b4cad8a86a26e": {
+      "category": "Bakery",
+      "subcategory": "Cookies & Brownies",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7597. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7597,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "21c2c02faa64eabcc174de2e684af271f2170530e13488633b59d3cd2e2cc3f8": {
       "category": "Produce",
       "subcategory": "Fruits",
@@ -19572,6 +20095,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "e3bbf8202cded7a4ecfacc105e402bc1709031e92562047bf24b3a2007a82dae": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_MOISTURIZER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "0ed0a1604d692902b37c15a96df0852dcd7ec7c2dec8228072250d04968181e8": {
       "category": "Supplements & Wellness",
       "subcategory": "Vitamins",
@@ -19735,6 +20267,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "b4614e7666780ceb2aa6829b03bce761a7a77ca81247112b004365635036e5c4": {
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SNACK_FOOD_BAR",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "8e68200cbd746f94238e0ddb4e8111a88ee7338bf5b8e9e98c88d5dba328cda3": {
       "category": "Household",
       "subcategory": "Home Essentials",
@@ -19812,6 +20353,15 @@
       "subcategory": "Butter & Margarine",
       "confidence": 0.99,
       "reasoning": "Retailer product type: DAIRY_BASED_BUTTER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "8ac21c0ab9e5eed957880620eeb0c3232fb5a220fa1379e9f2fa35d39142dba0": {
+      "category": "Pantry",
+      "subcategory": "Cereal & Breakfast",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -19951,6 +20501,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "ec7effdd14be78cb3a00ebdff3cc73e138f0a541379b4ceb930004281f723fde": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Protein & Collagen",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: PROTEIN_SUPPLEMENT_POWDER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "dcd2ce2ea810cb9fc77d40b6a202fb4a111348462823ddaa61c895c39c791e2a": {
       "category": "Beverages",
       "subcategory": "Juice",
@@ -20028,6 +20587,15 @@
       "subcategory": "Herbal Supplements",
       "confidence": 0.99,
       "reasoning": "Retailer product type: HERBAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "ab43d008bbc1f5fce07970be6e4f480a59697b13c16604c903620aade84836a4": {
+      "category": "Produce",
+      "subcategory": "Fruits",
+      "confidence": 0.9,
+      "reasoning": "Whole Foods source labeled this card Fresh Produce; subcategory defaulted to fruit.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -20114,6 +20682,15 @@
       "label_source": "silver",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "3c7470b53d7ef3c764796905805cc6221b4e0325b9dc70d01abc7c12e2328fdb": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_TREATMENT_MASK",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "ee7796e43cf7be24e05ac8afd2468499d6635df2e04d9bb644efe558ea473495": {
       "category": "Meat & Seafood",
       "subcategory": "Shrimp",
@@ -20141,6 +20718,16 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "9f9cdd5cf9193bcb52a15958942139b5f7d014ba9a9b3bf200fef9a8f6f91d61": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Wellness Shots",
+      "confidence": 1.0,
+      "reasoning": "Manual gold taxonomy label.",
+      "model_name": "manual-gold-label",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "gold",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "de7bc7f010bae90a98802fe14518fc57e63b0f89b3b91b06d379010fe2f26ae6": {
       "category": "Meat & Seafood",
       "subcategory": "Pork",
@@ -20151,6 +20738,15 @@
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "582946066242d93e24a2ac3a362c632f115ebc5a6b7e407893e498ede459c59b": {
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "confidence": 0.99,
+      "reasoning": "Baby or pouch food wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "74a21696f648acca4b3f835be34b03ca4f2952049afb4a44864845e4cd2145a1": {
       "category": "Baby",
       "subcategory": "Baby Food",
       "confidence": 0.99,
@@ -20338,6 +20934,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "ba935dd6469c9e7b81305a29260b969f702892b2763eb6996efce7e1cef22404": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: CHOCOLATE_CANDY",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "3c899cb308df9fb7fd11b75c8f0b67b0f097a79242558027800fd29a79d9489e": {
       "category": "Alcohol",
       "subcategory": "Beer",
@@ -20489,6 +21094,15 @@
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "3eb786ffe42f2c03ccf4c3cfc04bb14a98d618d2e0892c21c1da39b20e932e67": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: CHOCOLATE_CANDY",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "cb8c9c0d6bc4bf4a5255a7caf5729ce53f627f9de117a315e54016f08d632c7e": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
       "confidence": 0.99,
@@ -20982,6 +21596,24 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "7117c07310db366f3e9fa8dde7cd6698618380e4c118c624723f3e25d5725fc4": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "2dd03c12549d8cd120193c8c6f27db8f402d1449eb50ea4a8ced505bec7ba0f6": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Wellness Shots",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "46b627a0a889989f4655f2e85ccd0ccd9f9c8a5af52796f0abfd13a41ffe9ce0": {
       "category": "Beauty & Personal Care",
       "subcategory": "Soap & Hand Wash",
@@ -21000,7 +21632,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "263da555af303d707179755a4c26a78dfa36408a064206b4f3be80de2bb81747": {
+    "a042a4809b057d2d356d72d35070d463b83d54af1e845620349019b3b0635901": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
       "confidence": 0.99,
@@ -22148,6 +22780,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "08c50b0571247c1748f2f561e9ef6e53d5fb9dc461505aa98a03d448feb2fb42": {
+      "category": "Pantry",
+      "subcategory": "Soup & Broth",
+      "confidence": 0.99,
+      "reasoning": "Shelf-stable soup or broth wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "51a111ce649c4131f73095c461fdb85a56cbdf3ab69fce62eb55505b3dfb4d89": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
@@ -22400,6 +23041,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "4c56dc7f7cf5918efd2da2031ab9f3f6b19c980436dc4e62d903bd6cfae20a36": {
+      "category": "Pantry",
+      "subcategory": "Nut Butters & Spreads",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "5e408461f9fa5b8c5291e60bda7209e0eab41bcf91a797efd2bc6ecc76698be3": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
@@ -22640,7 +23290,7 @@
     "ed9deaf76bc36a8312bfc13b892ce35cc702a271b5876b46e411944cf392042d": {
       "category": "Dairy & Eggs",
       "subcategory": "Plant-Based Yogurt",
-      "confidence": 0.6093,
+      "confidence": 0.6109,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -23109,6 +23759,16 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "8ba0919977375d5709b98ca583f7a61cb61117363d9613c104f38d3e559bcdf6": {
+      "category": "Snacks",
+      "subcategory": "Snack Bars",
+      "confidence": 1.0,
+      "reasoning": "Manual gold taxonomy label.",
+      "model_name": "manual-gold-label",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "gold",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "430479e33e04e68c63afd76220bf382fff890f65507db2201cd914e51492a7cf": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
@@ -23141,6 +23801,15 @@
       "subcategory": "Herbal Supplements",
       "confidence": 0.99,
       "reasoning": "Retailer product type: HERBAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "015979baed0f8635326549c44db5939d6833e2fa5d6649497ae3e4b9697f7d15": {
+      "category": "Beverages",
+      "subcategory": "Juice",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: JUICE_AND_JUICE_DRINK",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -23208,6 +23877,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "39c7c899793e72e26a7fcbefc35938a764a2cc96accc961f7a53956c96389700": {
+      "category": "Frozen",
+      "subcategory": "Frozen Meals",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: FOOD",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "76b226217627ff39b3037222527c29a43eb618bf7d200ee09d8e5f0195874eb0": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
@@ -23222,6 +23900,24 @@
       "subcategory": "Non-Alcoholic Beer & Wine",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "1c7f5f30c45f3fd7e040830b48c029813a0e1b30e8538a9824f59c29ca0cb659": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "3a971e220541b70d98f593a70945b20530585bb79dbb266865b8016195763a7d": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -23352,11 +24048,29 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "bb2b9b4f2eeeb148f1894659783b52e055aac947536bf66d4eb6c83b0e337646": {
+      "category": "Household",
+      "subcategory": "Dishwashing",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "c0b697948015a69e421b55ece1b7028c4a6d4de2cb8ad6afc215970c05866ba9": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
       "reasoning": "Retailer product type: SKIN_MOISTURIZER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "5c177eee742d9b8344447756450f29489a445930671dcce0b684e22efcd7c252": {
+      "category": "Pantry",
+      "subcategory": "Pasta Sauces",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -23472,6 +24186,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "83eb0f9aeda7d139a055b722970be5d9449acbeeb79b9a7f3ec8a9d2cc1e1888": {
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "confidence": 0.99,
+      "reasoning": "Baby or pouch food wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "9a1a2c4afdd4e9dc752134a145f7d4836b4dc8701706c623657208506a8e1ecb": {
       "category": "Snacks",
       "subcategory": "Chips",
@@ -23544,6 +24267,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "5c04b883f4c34e8741b54b4dd19dd3679013fa64cd6928acc6d8979bacf7435c": {
+      "category": "Beverages",
+      "subcategory": "Water",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: WATER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "05bb203206ad18f9d540241e8278049defc784a8c1b1b2ec6618f61cee4e3500": {
       "category": "Bakery",
       "subcategory": "Pies & Tarts",
@@ -23571,9 +24303,27 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "eb81b9e7c41d7880026b391121f7c6f62bf4dcde317f898020b2eddbbc4cd5d1": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_MOISTURIZER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "83e9b07fe7677a8c9c5adde48aaad39665358dff1ec050562029eae4b90d6a71": {
       "category": "Supplements & Wellness",
       "subcategory": "Multivitamins",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "40e02fd69340b3e5c35aa784cc3835488a6057f71d5902324f756a8ab5c7965d": {
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
@@ -23810,6 +24560,15 @@
       "subcategory": "Pasta",
       "confidence": 0.99,
       "reasoning": "Retailer product type: NOODLE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "546adfee0282911b5f55e54620dcf3d7f2c9a8743032959fa3637ffa13383f01": {
+      "category": "Prepared Foods",
+      "subcategory": "Refrigerated Pasta & Noodles",
+      "confidence": 0.99,
+      "reasoning": "Refrigerated filled-pasta wording matched.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -24383,6 +25142,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "17f3ed7bbc2c9459216b6c8cc6a6768b2f32fe94a05d2cb20d9c46b49d438db6": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_MOISTURIZER",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "d6fd20aabcb42607288dcf9c3dcc15f042365698f061346f28af0e3518b0d69d": {
       "category": "Beauty & Personal Care",
       "subcategory": "Soap & Hand Wash",
@@ -24452,6 +25220,15 @@
       "subcategory": "Plant-Based Yogurt",
       "confidence": 0.99,
       "reasoning": "Retailer product type: NON_DAIRY_YOGURT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "5fc263382d1c04641eb1c360f8a2f749490f094ea3490670df2d2c1477584d63": {
+      "category": "Beverages",
+      "subcategory": "Water",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: WATER",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -25217,6 +25994,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "1484db7f8284c0ceb7415fbb5376894b2058652dc23acfe5818ee650aa8a81b7": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Skin Care",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SKIN_SERUM",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "3352b3296472f8b1d35beb56d42ed1643333365ee0b25ee201020208646d2cf0": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
@@ -25367,6 +26153,15 @@
       "subcategory": "Coffee Beans & Grounds",
       "confidence": 0.99,
       "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "02128222e923057da142fd501145a2d9eac6e138cd748990be316bcee1eb471b": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: CANDY",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -25785,6 +26580,213 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "28e1906118d3eca2c5f5f5a1f25008ff881eea956c51f47b820052ae1172931c": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "b103e17d0c3e2f364643bfd085913fe0d7381e600e26c49a3d6f89d8306c28e7": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "d70230da5c04aee68d475098c386aa159578a2739eeb41d74f17f3fc31e8438a": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Coffee bean or ground coffee wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "ccc139c7aa621be2df52c179b45cf02768e02d953110de66978dc5299db85981": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "052f635c9c3ee2de5017e83f969d4ef22da5a92525f429980ed5a56b3c1093b5": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "642504bc1dfb6e27b07678f69db170cb5b5836d8653d95a645ada3426847e669": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "8474f78bca7855a79c290bc23a57751b52cc151bf90bd73191f1c393056112a8": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "37a2da4dc92f821abc20e5483edf00dcd71793471ed5322355a9bef710e5ad43": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "6c6d17d17557c344a2bf9e9ee2a512b4e3379febe88c912f3b3d7a0da211c13a": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "a99f52e3c6df33a210db909947fcb2334c45c38929cb204fa3fff794fe35c051": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "9f93ee0501eb8888046605088c6a9b5936e2a2c1b46014d48ff8d6c8140a2ebb": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "e54577d38ce2dc0d75c3787d2da092065bd7abd2241da00dde8248362eade599": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "e4b1de40fa36dedb5369b4516060ab791188dcd69456be4364512cc24fc8c8fc": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "d0658517dd4c867337ad95056b6b1a26244eacb4ced1d867fdb2f66f0b574c59": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "ca3efa8aa705f5b5afd2a10d480f47dd754fb2f14c4db0cda2e02f5878c767de": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "5928802092a4b1645f4454b432b617adb95e11d5456d5c0f3ebc882bc7b62ef0": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "1226980ed936f4e6b5e43fe7773f2053fa5edd0ed033abbbcf3b2571d7d0d822": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "4efff4d623b4239c9dc35a3582f389d0ed6e76030fe3f6e3444a375f877ec936": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "1e2c3de1006856af6587e3784d7a76e539c81d12ad2aaaca9588cf88fa9cb112": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "95c260f60f7bc8a0e0a68c9344104e977aabb2e26445e6d320e6ce50c9c77e81": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "9aac53ac97eee9aeeac5aace880232e956d0e4e260ac8ae2809522427784a35c": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "b4508d4eff6f640a397208676741c00c9ee63cae68893cb01c2af3022e1adac5": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "3105b1a35b6634620a2a8c726a95e42e254bda60c83209f4d4be9ac0cf05e4e4": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "033d27df129c7e46a5b29291067a39cd41ff6347685004a7dd4d08403a431226": {
       "category": "Beverages",
       "subcategory": "Functional Drinks",
@@ -26037,6 +27039,15 @@
       "subcategory": "Ready-to-Drink Coffee",
       "confidence": 0.99,
       "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "0051d1debb9769eb05357f0483c6d50014a728009ab02d12d1da582113559be8": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Essential Oils",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: ESSENTIAL_OIL",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -26586,7 +27597,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "adf2184f50b662892651fcc68b1f4d6ff62daf64b3d5ff45ff6018ad912301b1": {
+    "8bf08b087a2e8cd2c46b1fc942176a0475bb3bb74560ccfcecb8bcb5bb8348c6": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
@@ -26595,11 +27606,20 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "b71346f4953163a334f4479b1fbb4057e1641cb90bc651cec6769d6c54e3c695": {
+    "762289a50b9abf79f9f812efd7adf8add5e5950644043b63102bf2ad55de32fa": {
       "category": "Pantry",
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "cd8e0e3d296e29cdc02c8c40c1ed435d4c1ac38b012836abd0c6b1b64bb34260": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.25,
+      "reasoning": "Local model produced a low-confidence general pantry label.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -26871,6 +27891,15 @@
     "9cb18040ba1bd8c68a65ff9a3783bf3803300bf7e972117f5e456140c3176215": {
       "category": "Pantry",
       "subcategory": "Hot Sauce & BBQ Sauce",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "e0846af7f2b1351c8587336b3df5ca3219664b5a911cb878f14f9b864dcf5076": {
+      "category": "Dairy & Eggs",
+      "subcategory": "Plant-Based Milk",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
@@ -27456,6 +28485,15 @@
       "subcategory": "Home Essentials",
       "confidence": 0.99,
       "reasoning": "Retailer product type: CANDLE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "dab1bddc807456733427013fc86887ed787dc9d20d3434885aa7bd69da2f3e76": {
+      "category": "Pantry",
+      "subcategory": "Meal Kits & Sides",
+      "confidence": 0.25,
+      "reasoning": "Local model produced a low-confidence general pantry label.",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -28154,6 +29192,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "653a108e1e5a1456d968526d0616fbbfa589f68e5f40615a722b689113d7984a": {
+      "category": "Snacks",
+      "subcategory": "Nuts & Trail Mix",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SNACK_MIX",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "477a736c2ea9790c7724d3a5033ee2d66b480e914ec14e70969b48fdc71a908f": {
       "category": "Snacks",
       "subcategory": "Nuts & Trail Mix",
@@ -28209,6 +29256,18 @@
       "label_source": "clip-primary",
       "clip_source": "category-first",
       "clip_score": 0.8583,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "fd65d2460d01d34f7304115747453c223faab17600d08f463baa7b1474b6431c": {
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7186. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7186,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "a808804909d6976f992958b23bc6f7215105651d4cc4a2e125ad30703aa7463d": {
@@ -28492,6 +29551,15 @@
       "subcategory": "Marinades & Cooking Sauces",
       "confidence": 0.99,
       "reasoning": "Retailer product type: SAUCE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "e0be677b8148f630c5373da98bd0362acb314ad6c0fbb5691312943eefd93e8d": {
+      "category": "Pantry",
+      "subcategory": "Pasta",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -29536,7 +30604,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "856e4ff2d5ea1d162a88e41241cb1878abf02100f2e99bf8386d8c0b7e4ff5a5": {
+    "0d41bff2e819b1918cb65fc6a68ecb452e00815f1edc044fa9b2a29a177028f1": {
       "category": "Meat & Seafood",
       "subcategory": "Fish Fillets",
       "confidence": 0.99,
@@ -30397,6 +31465,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "0fd1bf92d0d667376c53e5ddb0e53a53da32937ca79b7b570e8bc3eaa41aff88": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SUGAR_CANDY",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "0af2f233014f1953e5feaeb2520b440d9233023a89e462994a6164c86f7db997": {
       "category": "Supplements & Wellness",
       "subcategory": "Mushroom Supplements",
@@ -30690,6 +31767,15 @@
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "ea8233cd58c2ed8bd8a5e3b7d69f7d4c80fd11ce1f85397a3c7228b8a8604649": {
+      "category": "Beverages",
+      "subcategory": "Ready-to-Drink Coffee",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "37deffa5cc7ba35e2c77dfd51002d13b83bb85548ef26db8d72cd1f72b160b8f": {
       "category": "Beverages",
       "subcategory": "Ready-to-Drink Coffee",
       "confidence": 0.99,
@@ -31073,6 +32159,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "5e4f196e25673a5d9e7daf2eb61839fc4ee84051e609ccfd428532cd0a46b690": {
+      "category": "Beauty & Personal Care",
+      "subcategory": "Soap & Hand Wash",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "867d7dc4c91026ae5dbeca4304d29be1703d03980ee84d5050af67e4c65d0e23": {
       "category": "Beauty & Personal Care",
       "subcategory": "Soap & Hand Wash",
@@ -31324,6 +32419,15 @@
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.25,
       "reasoning": "Local model produced a low-confidence general pantry label.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "81eece221023d236339ce942bdea7d471f244f05ce3fd1c04a63b19790770271": {
+      "category": "Beverages",
+      "subcategory": "Syrups & Mixers",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -31724,7 +32828,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "a1b5d3228beb6a5a58e196aa4997d5f153ebc57116fc5dd451774ee27cb62a1a": {
+    "d8b18c92062a97c29ff6d4cfd2870415152f7f3c494f5fda90eca8e59c6c1e7c": {
       "category": "Beauty & Personal Care",
       "subcategory": "Skin Care",
       "confidence": 0.99,
@@ -31769,7 +32873,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "05a04c24c0492407cfcda06af809e1fa9bddc61f6ec1e5c797117a2041a9ab30": {
+    "98ff1477c99a3809d7d70faea53bcd3cf2c2275a74c34a4e121db9fe2cf91ab7": {
       "category": "Pantry",
       "subcategory": "Condiments",
       "confidence": 0.99,
@@ -31778,7 +32882,7 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
-    "fd71caa2974dfc99bdd59fa623b353bf9abe4b790dbaa49616073bb426fd835c": {
+    "3ea091f07fcdbf4ff1472bc959c5c707e36f5f235608db236f36a8da4b8eeee7": {
       "category": "Pantry",
       "subcategory": "Condiments",
       "confidence": 0.99,
@@ -31958,6 +33062,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "68aa149cbbc415f98e12328be675c7f67b6b65daab7869c71cdd8f535828aafc": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "df68dc674e10246047258d9c1f11028f2ddbb74dde829bc6b4d7c51b1e5a5c86": {
       "category": "Snacks",
       "subcategory": "Candy & Chocolate",
@@ -32049,6 +33162,36 @@
       "reasoning": "Retailer product type: DAIRY_BASED_CHEESE",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "0e6d097d79ce75436c0a010f8d72bd80cc0742abb611a3b9f4bf330cb4cdbd15": {
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "confidence": 0.99,
+      "reasoning": "Baby or pouch food wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "4ecbc296e32d8d32a7595f974049f6383b211c25085d25401db33b205efa016d": {
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "confidence": 0.99,
+      "reasoning": "Baby or pouch food wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "6c953edf51327214d88c4382000f1284d322f0fc28283544c544a76c0e07521f": {
+      "category": "Baby",
+      "subcategory": "Baby Food",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.6244. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.6244,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "4dea50089bab6a12171d0a47bcfc4f50644b2ff444fbc014734b0b4a0c9d01eb": {
@@ -32224,6 +33367,15 @@
       "subcategory": "Bread",
       "confidence": 0.99,
       "reasoning": "Retailer product type: BREAD",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "45f8cfa0d3334c432360b4dab276478c92c7fe193bbaa2eb9f437d4a146e3b28": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Protein & Collagen",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: PROTEIN_SUPPLEMENT_POWDER",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -32435,6 +33587,33 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "2d50002c825c15d874c7fb2fd9cec20c0ab742b35f5bb8a38b5dd09baaf546c4": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "a0f661cacc157028bac3450e071f273bf17ff00bea70537205a0ea62749354a6": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "77cb2e52f30ae136a1f6b011f5e9c67fb942e7c38eb64c0d3af0bd04141f440a": {
+      "category": "Beverages",
+      "subcategory": "Coffee Beans & Grounds",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: COFFEE",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "0b2a56c3a3ecc6b18dcb5b8831eed0fbefb7a8b0b1634ab67c82a286c1a40dc8": {
       "category": "Snacks",
       "subcategory": "Snack Bars",
@@ -32476,6 +33655,15 @@
       "subcategory": "Meal Kits & Sides",
       "confidence": 0.99,
       "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "cafa6927c322afe184345063410c89643ce58736ea4e476e7b3de143023d1b54": {
+      "category": "Snacks",
+      "subcategory": "Fruit Snacks",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: FRUIT_SNACK",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -32681,7 +33869,7 @@
     "eabd7ac6b74e8cb998b0010c813e76d7750acd395e1627e3a14e521121b26b80": {
       "category": "Beauty & Personal Care",
       "subcategory": "Feminine Care",
-      "confidence": 0.6646,
+      "confidence": 0.6655,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -32690,7 +33878,7 @@
     "91d1063548a87e7ff6f106cb4017642b9b1aa24417a40d3497fc01c8879879a3": {
       "category": "Beauty & Personal Care",
       "subcategory": "Feminine Care",
-      "confidence": 0.6626,
+      "confidence": 0.6631,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -32710,6 +33898,15 @@
       "subcategory": "Feminine Care",
       "confidence": 0.99,
       "reasoning": "Retailer product type: SANITARY_NAPKIN",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "965146f6d2ee2b0185e7c8986b611b1b053a947f1049d383b92bd405516224b3": {
+      "category": "Snacks",
+      "subcategory": "Candy & Chocolate",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: SUGAR_CANDY",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -32840,6 +34037,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "6c872af1a31f4e4a1d574c71c12338bab2e966558f50269c9226961ac0418e59": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Dietary Supplements",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: NUTRITIONAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "333c12293c30e40ab61673ad86f08a14d1ebefbdd03d098892384c01af0c31f8": {
       "category": "Pantry",
       "subcategory": "Pasta",
@@ -32935,6 +34141,15 @@
       "subcategory": "Herbal Supplements",
       "confidence": 0.99,
       "reasoning": "Retailer product type: HERBAL_SUPPLEMENT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "60cc898052d8220af125387a1fbd5ced30a5b2cda699866087814aa666055e2b": {
+      "category": "Produce",
+      "subcategory": "Vegetables",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: VEGETABLE",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -33105,6 +34320,18 @@
       "reasoning": "Explicit product form in retailer title",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "4c3ac0e918366da829b3c791c1b11eedaa9aa7ac8dd23e069f43ac7898c01c97": {
+      "category": "Supplements & Wellness",
+      "subcategory": "Probiotics",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=category-first, score=0.7928. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "category-first",
+      "clip_score": 0.7928,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "cfa48759ad4777e98b6b1fc100bcbfedfc0eae0580bca156e8f3590909d619e8": {
@@ -33554,6 +34781,15 @@
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
+    "2c03765b72b0944a697b020700870e12395908dbdccb1762ddcd3183dd188f7e": {
+      "category": "Bakery",
+      "subcategory": "Pies & Tarts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
     "58a84366289bfe19c4c9e7a9a47e4080fc6576d90b00da09cf812de63bf304fc": {
       "category": "Snacks",
       "subcategory": "Cookies",
@@ -33573,6 +34809,15 @@
       "label_source": "clip-primary",
       "clip_source": "subcategory-first",
       "clip_score": 0.7546,
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "710ee0c6faad6124013125308d1287c9e533525ea019646cf8643c1235f2c226": {
+      "category": "Snacks",
+      "subcategory": "Chips",
+      "confidence": 0.99,
+      "reasoning": "Packaged snack wording matched.",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "5a4e1c1e09bd3e82207830eab33cd0cdea787bee56d19589fd33a4247517eed1": {
@@ -33680,6 +34925,15 @@
       "subcategory": "Sausage",
       "confidence": 0.99,
       "reasoning": "Retailer product type: MEAT",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "ef7de801b3dc85840843d96a7a362617334474ab4941cfe721095223ccbb2fe6": {
+      "category": "Pantry",
+      "subcategory": "Soup & Broth",
+      "confidence": 0.99,
+      "reasoning": "Retailer product type: PACKAGED_SOUP_AND_STEW",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
       "taxonomy_version": "fixed-taxonomy-v6"
@@ -34823,7 +36077,7 @@
     "ef528e96377e62395f46d69ce73b98f4e2075931fc767de9a2dd029d631d3fae": {
       "category": "Alcohol",
       "subcategory": "Beer",
-      "confidence": 0.572,
+      "confidence": 0.5723,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -35304,7 +36558,7 @@
     "eec1d09d2f6eb1cae02d0ce51391eedf25e70c7307592b4ac5ace481370984e2": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.5865,
+      "confidence": 0.5878,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -35653,7 +36907,7 @@
     "b3ccc53d32f133218317b51df123fcb3659dda9d54f5385826a0c087ccb97b3f": {
       "category": "Alcohol",
       "subcategory": "Hard Seltzer",
-      "confidence": 0.591,
+      "confidence": 0.5914,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -42388,6 +43642,63 @@
       "reasoning": "Retailer category: instant & quick food",
       "model_name": "local-taxonomy-classifier",
       "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "413a62d0d968fbfe1c2c4261da45b89b8218b0227b4893b98f43f6fa3e836019": {
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "cc69dc90278904353f0205263bed5a96ca5e1f251114e4f101cf171f78ec917d": {
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "4fdbb4e54daf9af0e378f3028200123ddc6fd666a8283de73506604950d96353": {
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "042572d917fd1a584efb79ccc76f6338b30e440023da23181b390ba3550849fc": {
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "bbda8bfb100e6bf6d358fd6fcdb16133f6a43c32882b70a2a51087a57eac2fe6": {
+      "category": "Frozen",
+      "subcategory": "Frozen Desserts",
+      "confidence": 0.99,
+      "reasoning": "Explicit product form in retailer title",
+      "model_name": "local-taxonomy-classifier",
+      "model_version": "taxonomy-local-ml-v18",
+      "taxonomy_version": "fixed-taxonomy-v6"
+    },
+    "dc779e5911cb71775a540a4cd0a2933b597e8c74b8616468de35348e6368ec2e": {
+      "category": "Household",
+      "subcategory": "Insect Repellent",
+      "confidence": 0.78,
+      "reasoning": "Primary locked CLIP taxonomy label. Locked pair source=subcategory-first, score=0.9217. Gold/manual labels still override this.",
+      "model_name": "local-clip-audit",
+      "model_version": "taxonomy-local-ml-v18",
+      "label_source": "clip-primary",
+      "clip_source": "subcategory-first",
+      "clip_score": 0.9217,
       "taxonomy_version": "fixed-taxonomy-v6"
     },
     "c01c41411be320a7786ad4c4c1d8a992de5c23cf2ff96ccffa297fa6782823d7": {
@@ -53301,7 +54612,7 @@
     "327a40b32fd927da957fe1d2637203a3a2c10b04c76223b709c6ed8517bffcb5": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.641,
+      "confidence": 0.6424,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -53310,7 +54621,7 @@
     "5a0337cf8d1a3611a2356b4949d28f7443b0b5190ff9e09066dc706cab1db118": {
       "category": "Pantry",
       "subcategory": "Oils & Vinegars",
-      "confidence": 0.6448,
+      "confidence": 0.6463,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -65569,7 +66880,7 @@
     "afb9ab89f3fbe35ff401b47313cd271e23e5d01fbf697e4cb49a687c6516d1dc": {
       "category": "Bakery",
       "subcategory": "Cakes & Cupcakes",
-      "confidence": 0.5994,
+      "confidence": 0.6016,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -65578,7 +66889,7 @@
     "16385bfa68151030f2070c5addef0355b814157e02d695d1bbdce29362e7edfa": {
       "category": "Bakery",
       "subcategory": "Cakes & Cupcakes",
-      "confidence": 0.599,
+      "confidence": 0.6012,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -74788,7 +76099,7 @@
     "a4d36b570cd1766173d1a7b3e5b3fdee940036f123994706dbe5888f40d283e9": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.5744,
+      "confidence": 0.5774,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -74797,7 +76108,7 @@
     "6160919add675eb1da99cfb77c5aee38fd626a68370422cfb35d5856c0efea4b": {
       "category": "Pantry",
       "subcategory": "Soup & Broth",
-      "confidence": 0.5736,
+      "confidence": 0.5766,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -74884,7 +76195,7 @@
     "91abb2f753c3d695f8cc0913cd6a09f27ca4cbb0666124ab6bfbe57a48976139": {
       "category": "Bakery",
       "subcategory": "Baking Mixes",
-      "confidence": 0.5971,
+      "confidence": 0.5979,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -74893,7 +76204,7 @@
     "6c9b6fa58ca600b8ecd8141c48ec8972bde58df442259bade6eb84b04c4d934f": {
       "category": "Bakery",
       "subcategory": "Baking Mixes",
-      "confidence": 0.597,
+      "confidence": 0.5978,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -74902,7 +76213,7 @@
     "b97bb7ea671e2251aa0e7875e50a492750d2272ab36b7351d0132bf0d3f95d32": {
       "category": "Bakery",
       "subcategory": "Baking Mixes",
-      "confidence": 0.5971,
+      "confidence": 0.5978,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
@@ -74911,7 +76222,7 @@
     "f61c50b4c38b3ceb7ad3f7096d8d7d3e79d32c2b483f8e9d80c19a288736e158": {
       "category": "Bakery",
       "subcategory": "Baking Mixes",
-      "confidence": 0.5954,
+      "confidence": 0.5963,
       "reasoning": "Local text classifier prediction.",
       "model_name": "local-sklearn",
       "model_version": "taxonomy-local-ml-v18",
