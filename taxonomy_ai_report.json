@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T13:51:05.343198+00:00",
+  "generated_at": "2026-10-31T14:43:53.615150+00:00",
   "taxonomy_version": "fixed-taxonomy-v6",
   "model_name": "fixed-taxonomy",
   "model_version": "taxonomy-local-ml-v18",
-  "product_count": 10113,
-  "completed_count": 10113,
-  "changed_count": 9954,
+  "product_count": 10487,
+  "completed_count": 10487,
+  "changed_count": 10323,
   "changed_examples": [
     "Frozen Pizzas",
     "Frozen, Dairy Free Cheeze Lover's Gluten Free Vegan Pizza, 15.7 Ounce",
