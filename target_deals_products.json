@@ -4324,5 +4324,93 @@
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
+  },
+  {
+    "asin": "target:f0e811c9215ad864",
+    "name": "family meals*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_d01dbb4e-f40c-4258-91e4-0d67ecd8eede?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/874303664?content_id=STORY-48438",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-11-02T14:27:18.147342+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:0c85016d65082ed5",
+    "name": "Pillsbury products*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_bf99f6ab-4e0c-4c5e-a085-d6b236fb93ed?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/805808162?content_id=STORY-48437",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-11-02T14:27:18.147342+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:1b417908b3cb6f00",
+    "name": "refrigerated snacking products*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_a62d1adb-2cd9-453c-87d7-d16a2547e9dc?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/632097177?content_id=STORY-48436",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-11-02T14:27:18.147342+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:249f7de6aceeae99",
+    "name": "Starbucks coffee & creamer*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_ff1c2b6b-fd60-4eaa-9f0e-ced30b38b1e1?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/497911169?content_id=STORY-48433",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-11-02T14:27:18.147342+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
   }
 ]
