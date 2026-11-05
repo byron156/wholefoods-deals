@@ -150,19 +150,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/163431/avocado.png?v=638448916622300000",
     "url": "https://www.hmart.com/avocado-4-ct-1/p",
-    "current_price": "$2.99",
+    "current_price": "$2.89",
     "basis_price": "$3.99",
     "prime_price": null,
-    "discount": "25% off",
+    "discount": "28% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
     "categories": [
       "/Produce/Fruit/",
       "/Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-04T14:34:00.128208+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -402,7 +402,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -606,19 +606,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161837/840809011551_1.png?v=638448910105700000",
     "url": "https://www.hmart.com/country-style-young-radish-kimchi-26oz-737g--1/p",
-    "current_price": "$9.99",
+    "current_price": "$9.39",
     "basis_price": "$10.99",
     "prime_price": null,
-    "discount": "9% off",
+    "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
     "categories": [
       "/Kimchi & SideDish & Deli/Kimchi/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-29T14:39:02.679300+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1002,7 +1002,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1026,7 +1026,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1134,19 +1134,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/173607/84603404853.jpg?v=639071166785070000",
     "url": "https://www.hmart.com/harvest-whole-cabbage-kimchi-3lb--1-36kg--1/p",
-    "current_price": "$17.99",
+    "current_price": "$17.09",
     "basis_price": "$19.99",
     "prime_price": null,
-    "discount": "10% off",
+    "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
     "categories": [
       "/Kimchi & SideDish & Deli/Kimchi/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-01T15:18:26.905013+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1602,7 +1602,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -1758,19 +1758,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/176998/7637101231-.png?v=639041678144100000",
     "url": "https://www.hmart.com/organic-tofu-extra-firm-12-oz--340g--1/p",
-    "current_price": "$2.49",
+    "current_price": "$2.59",
     "basis_price": "$2.99",
     "prime_price": null,
-    "discount": "17% off",
+    "discount": "13% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
     "categories": [
       "/Kimchi & SideDish & Deli/Tofu/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-06T15:20:03.837155+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2202,7 +2202,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2250,7 +2250,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2514,7 +2514,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2604,13 +2604,13 @@
     "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2874,7 +2874,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2970,7 +2970,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -2994,7 +2994,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3042,7 +3042,7 @@
       "/Rice & Grain/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3066,7 +3066,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3090,7 +3090,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3210,7 +3210,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3282,7 +3282,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3294,19 +3294,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160984/17050002.png?v=638448906824700000",
     "url": "https://www.hmart.com/dried-anchovy-jiri--1lb-454g--1/p",
-    "current_price": "$17.99",
+    "current_price": "$18.49",
     "basis_price": "$21.99",
     "prime_price": null,
-    "discount": "18% off",
+    "discount": "16% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Seafood/Dried Seafood/",
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3342,19 +3342,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162004/84603403023.png?v=638448910780770000",
     "url": "https://www.hmart.com/fish-cakes-assorted-1/p",
-    "current_price": "$4.99",
-    "basis_price": "$5.99",
+    "current_price": "$4.79",
+    "basis_price": "$4.99",
     "prime_price": null,
-    "discount": "17% off",
+    "discount": "4% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Kimchi & SideDish & Deli/Fish cake & Beancurd/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3366,19 +3366,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/179021/84080901515.png?v=639106628742770000",
     "url": "https://www.hmart.com/fresh-kimchi-24-oz--680g--1/p",
-    "current_price": "$5.49",
+    "current_price": "$6.39",
     "basis_price": "$8.99",
     "prime_price": null,
-    "discount": "39% off",
+    "discount": "29% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
     "categories": [
       "/Kimchi & SideDish & Deli/Kimchi/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-30T14:45:27.338034+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3414,19 +3414,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161054/23020024.png?v=638448907092800000",
     "url": "https://www.hmart.com/frozen-salted-mackerel-fillet-13oz-375g--1/p",
-    "current_price": "$8.99",
+    "current_price": "$8.09",
     "basis_price": "$9.99",
     "prime_price": null,
-    "discount": "10% off",
+    "discount": "19% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Seafood/Frozen Seafood/",
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3618,7 +3618,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3660,13 +3660,13 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Ramen & Noodle/Udon & Frozen Noodles/",
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3714,7 +3714,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3834,7 +3834,7 @@
       "/Rice & Grain/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3858,7 +3858,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3906,7 +3906,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3924,13 +3924,13 @@
     "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Paste & Marinade & Sauce/Ketchup & Sriracha & Others/",
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3954,7 +3954,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -3978,7 +3978,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4098,7 +4098,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4122,7 +4122,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4236,13 +4236,13 @@
     "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Pies & Cookies & Biscuit/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4434,7 +4434,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4572,13 +4572,13 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4602,7 +4602,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4614,19 +4614,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160472/0732340200214.png?v=638448904860870000",
     "url": "https://www.hmart.com/rice-rose-15lb--6800g-/p",
-    "current_price": "$24.99",
-    "basis_price": "$27.99",
+    "current_price": "$22.99",
+    "basis_price": "$24.99",
     "prime_price": null,
-    "discount": "11% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Rice & Grain/Rice 11LB or more/",
       "/Rice & Grain/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4638,19 +4638,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/163130/8809398711633_2.png?v=638448915368470000",
     "url": "https://www.hmart.com/ripe-kimchi-egg-kimbap-7-76oz-220g-/p",
-    "current_price": "$3.79",
-    "basis_price": "$3.99",
+    "current_price": "$3.99",
+    "basis_price": "$4.99",
     "prime_price": null,
-    "discount": "5% off",
+    "discount": "20% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Instant & Quick Food/Instant Food/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4674,7 +4674,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -4962,7 +4962,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5250,7 +5250,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5274,7 +5274,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5370,7 +5370,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5430,19 +5430,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/164520/tobagi-kimchi_3lb.png?v=638448921087270000",
     "url": "https://www.hmart.com/whole-cabbage-kimchi-4lb-1-81kg--1/p",
-    "current_price": "$11.99",
-    "basis_price": "$19.99",
+    "current_price": "$17.89",
+    "basis_price": "$20.99",
     "prime_price": null,
-    "discount": "40% off",
+    "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
     "categories": [
       "/Kimchi & SideDish & Deli/Kimchi/",
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-09-25T17:12:34.333524+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5538,7 +5538,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5561,7 +5561,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5584,7 +5584,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5653,7 +5653,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5676,7 +5676,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5699,7 +5699,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5722,7 +5722,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5745,7 +5745,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5768,7 +5768,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5791,7 +5791,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5814,7 +5814,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5860,7 +5860,7 @@
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5872,18 +5872,18 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/181092/880996316313.png?v=639185193896330000",
     "url": "https://www.hmart.com/cool-gel-mat-for-pet/p",
-    "current_price": "$28.99",
+    "current_price": "$29.99",
     "basis_price": "$32.99",
     "prime_price": null,
-    "discount": "12% off",
+    "discount": "9% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Pet Supply & Accessory/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-16T14:10:30.354755+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5895,19 +5895,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/181080/880996316200.png?v=639185191235730000",
     "url": "https://www.hmart.com/happy-party-b-day-set-beige/p",
-    "current_price": "$10.99",
+    "current_price": "$11.99",
     "basis_price": "$12.99",
     "prime_price": null,
-    "discount": "15% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Book & Stationery & Hobby/Stationery/",
       "/Book & Stationery & Hobby/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-16T14:10:30.354755+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -5919,19 +5919,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/181082/880996316201.png?v=639185192644330000",
     "url": "https://www.hmart.com/happy-party-b-day-set-blue/p",
-    "current_price": "$10.99",
+    "current_price": "$11.99",
     "basis_price": "$12.99",
     "prime_price": null,
-    "discount": "15% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Book & Stationery & Hobby/Stationery/",
       "/Book & Stationery & Hobby/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-16T14:10:30.354755+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -6333,13 +6333,13 @@
     "discount": "10% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
     "categories": [
       "/Ramen & Noodle/Large Cup/",
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -6531,7 +6531,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -6699,7 +6699,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -7317,13 +7317,13 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Snacks & Candy & Nuts/Snacks/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -8516,13 +8516,13 @@
     "discount": "42% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=6",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
     "categories": [
       "/Snacks & Candy & Nuts/Multi Snack/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -9092,13 +9092,13 @@
     "discount": "10% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=8",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=5",
     "categories": [
       "/Household & Home/Kitchenware/",
       "/Household & Home/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -9398,19 +9398,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/177641/880130145512.png?v=639063370210900000",
     "url": "https://www.hmart.com/mala-spicy-soy-sacue-12-34-oz--350g--1/p",
-    "current_price": "$4.99",
+    "current_price": "$4.69",
     "basis_price": "$5.49",
     "prime_price": null,
-    "discount": "9% off",
+    "discount": "15% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
     "categories": [
       "/Paste & Marinade & Sauce/Soy Sauce/",
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -9602,7 +9602,7 @@
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -9854,19 +9854,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161533/73033758.png?v=638448908931830000",
     "url": "https://www.hmart.com/multi-purpose-kimchi-bag-large-2-bags-1/p",
-    "current_price": "$1.59",
+    "current_price": "$1.49",
     "basis_price": "$1.99",
     "prime_price": null,
-    "discount": "20% off",
+    "discount": "25% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=8",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
     "categories": [
       "/Household & Home/Kitchenware/",
       "/Household & Home/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -10418,7 +10418,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -11401,7 +11401,7 @@
       "/Seafood/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -12192,7 +12192,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -12264,7 +12264,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -12336,7 +12336,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -12708,19 +12708,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/163846/copy-of-735407001076.png?v=638448918372400000",
     "url": "https://www.hmart.com/yakinori-tokusen-10-sheets-0-75oz-21g--1/p",
-    "current_price": "$3.19",
+    "current_price": "$2.89",
     "basis_price": "$3.99",
     "prime_price": null,
-    "discount": "20% off",
+    "discount": "28% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
     "categories": [
       "/Seaweed & Dried Produce/Laver/",
       "/Seaweed & Dried Produce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -13548,19 +13548,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/181053/880996317622.png?v=639185185802330000",
     "url": "https://www.hmart.com/kids-mermaid-beach-poncho/p",
-    "current_price": "$16.19",
+    "current_price": "$15.99",
     "basis_price": "$17.99",
     "prime_price": null,
-    "discount": "10% off",
+    "discount": "11% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Baby & Kids/Baby Products/",
       "/Baby & Kids/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -13572,10 +13572,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/181056/880996317623.png?v=639185188899070000",
     "url": "https://www.hmart.com/kids-shark-beach-poncho/p",
-    "current_price": "$16.19",
+    "current_price": "$15.99",
     "basis_price": "$17.99",
     "prime_price": null,
-    "discount": "10% off",
+    "discount": "11% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
@@ -13584,7 +13584,7 @@
       "/Baby & Kids/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14615,7 +14615,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14783,7 +14783,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14825,13 +14825,13 @@
     "discount": "6% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Household & Home/Kitchen Appliances/",
       "/Household & Home/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14855,7 +14855,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14879,7 +14879,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14903,7 +14903,7 @@
       "/Beauty/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14927,7 +14927,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14951,7 +14951,7 @@
       "/Meat/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14963,10 +14963,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/160350/_1_5_1_1.jpg?v=638448904386270000",
     "url": "https://www.hmart.com/biofeel-yogurt-plain-2-2-fl-oz-65ml--25-packs-1/p",
-    "current_price": "$5.99",
-    "basis_price": "$6.29",
+    "current_price": "$5.49",
+    "basis_price": "$5.99",
     "prime_price": null,
-    "discount": "5% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
@@ -14975,7 +14975,7 @@
       "/Dairy & Egg/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -14999,7 +14999,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15023,7 +15023,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15035,10 +15035,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161028/2091481636.png?v=638448906999270000",
     "url": "https://www.hmart.com/cooked-loach-soup-17-64oz-500g--1/p",
-    "current_price": "$5.49",
+    "current_price": "$4.94",
     "basis_price": "$6.99",
     "prime_price": null,
-    "discount": "21% off",
+    "discount": "29% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
@@ -15047,7 +15047,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15059,10 +15059,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162533/8801111611329.png?v=638448912899300000",
     "url": "https://www.hmart.com/corn-chip-big-size-5-22oz-148g--1/p",
-    "current_price": "$2.99",
-    "basis_price": "$4.99",
+    "current_price": "$2.49",
+    "basis_price": "$3.49",
     "prime_price": null,
-    "discount": "40% off",
+    "discount": "29% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
@@ -15071,7 +15071,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15095,7 +15095,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15107,10 +15107,10 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161102/28010005.png?v=638448907275200000",
     "url": "https://www.hmart.com/dukboki-original-spicy-1-32lb-600g-/p",
-    "current_price": "$6.49",
+    "current_price": "$5.99",
     "basis_price": "$6.99",
     "prime_price": null,
-    "discount": "7% off",
+    "discount": "14% off",
     "unit_price": null,
     "retailer": "H Mart",
     "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
@@ -15119,7 +15119,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15132,18 +15132,18 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/180015/84603408065.png?v=639126519774300000",
     "url": "https://www.hmart.com/frozen-bun--taro--13-76-oz--390g--/p",
     "current_price": "$5.49",
-    "basis_price": "$6.99",
+    "basis_price": "$5.99",
     "prime_price": null,
-    "discount": "21% off",
+    "discount": "8% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Snacks & Candy & Nuts/Bread & Dessert/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15167,7 +15167,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15192,7 +15192,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15216,7 +15216,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15240,7 +15240,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-31T14:37:15.967008+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15264,7 +15264,7 @@
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15288,7 +15288,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15312,7 +15312,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15336,7 +15336,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15349,18 +15349,18 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161881/84603400336_2.png?v=638448910299800000",
     "url": "https://www.hmart.com/jujube-tea-with-honey-2-2lb-1kg--1/p",
     "current_price": "$7.49",
-    "basis_price": "$7.99",
+    "basis_price": "$8.99",
     "prime_price": null,
-    "discount": "6% off",
+    "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Beverage & Coffee & Tea & Honey/Tea/",
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15378,13 +15378,13 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15408,7 +15408,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15432,7 +15432,7 @@
       "/Kimchi & SideDish & Deli/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15456,7 +15456,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15480,7 +15480,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15504,7 +15504,7 @@
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15522,13 +15522,13 @@
     "discount": "17% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
     "categories": [
       "/Snacks & Candy & Nuts/Multi Snack/",
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15552,7 +15552,7 @@
       "/Household & Home/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15576,7 +15576,7 @@
       "/Beverage & Coffee & Tea & Honey/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15600,7 +15600,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15624,7 +15624,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15648,7 +15648,7 @@
       "/Beauty/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15661,18 +15661,18 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/163495/copy-of-0012822009253__1.png?v=638448916896800000",
     "url": "https://www.hmart.com/sesame-oil-22-1fl-oz-654ml--1/p",
     "current_price": "$13.99",
-    "basis_price": "$14.99",
+    "basis_price": "$16.99",
     "prime_price": null,
-    "discount": "7% off",
+    "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
       "/Oil & Seasoning & Canned Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15696,7 +15696,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15720,7 +15720,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-10-29T13:15:25.834139+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15744,7 +15744,7 @@
       "/Ramen & Noodle/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15756,19 +15756,19 @@
     "variation": null,
     "image": "https://hmartus.vtexassets.com/arquivos/ids/161191/3314301135.png?v=638448907620470000",
     "url": "https://www.hmart.com/spicy-seafood---fish-roe-soup-19-40oz-550g--1/p",
-    "current_price": "$5.79",
-    "basis_price": "$5.99",
+    "current_price": "$5.84",
+    "basis_price": "$7.99",
     "prime_price": null,
-    "discount": "3% off",
+    "discount": "27% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Instant & Quick Food/Instant Soup & Stew & Porridge/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15781,18 +15781,18 @@
     "image": "https://hmartus.vtexassets.com/arquivos/ids/162367/880105243502_1.jpg?v=638448912229670000",
     "url": "https://www.hmart.com/sunchang-100--brown-rice-red-pepper-paste-2-2lb-1kg--1/p",
     "current_price": "$8.99",
-    "basis_price": "$9.99",
+    "basis_price": "$10.99",
     "prime_price": null,
-    "discount": "10% off",
+    "discount": "18% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=1",
     "categories": [
       "/Paste & Marinade & Sauce/Gochujang & Red Pepper Paste/",
       "/Paste & Marinade & Sauce/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15816,7 +15816,7 @@
       "/Household & Home/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15840,7 +15840,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15864,7 +15864,7 @@
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15882,13 +15882,13 @@
     "discount": "9% off",
     "unit_price": null,
     "retailer": "H Mart",
-    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=2",
+    "retail_source_url": "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC&page=3",
     "categories": [
       "/Instant & Quick Food/Tteokbokki & Dumpling & Katsu/",
       "/Instant & Quick Food/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15912,7 +15912,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -15936,7 +15936,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -16008,7 +16008,7 @@
       "/Snacks & Candy & Nuts/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
@@ -16032,7 +16032,1325 @@
       "/Household & Home/"
     ],
     "available_quantity": 10000,
-    "observed_at": "2026-11-02T14:27:52.183616+00:00",
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13573",
+    "name": "Acrylic Ice Cream Cup Blue",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180899/8809836104683.png?v=639183574447000000",
+    "url": "https://www.hmart.com/acrylic-ice-cream-cup-blue/p",
+    "current_price": "$6.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13547",
+    "name": "Bakery Brunch Tableware Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180840/8800252072501.png?v=639183555821470000",
+    "url": "https://www.hmart.com/bakery-brunch-tableware-set/p",
+    "current_price": "$13.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13548",
+    "name": "Bead Handle Espresso Mug Cream Pink",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180843/8800252087079.png?v=639183556083170000",
+    "url": "https://www.hmart.com/bead-handle-espresso-mug-cream-pink/p",
+    "current_price": "$4.99",
+    "basis_price": "$5.99",
+    "prime_price": null,
+    "discount": "17% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13549",
+    "name": "Bead Handle Espresso Mug Yellow Blue",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180844/8800252087086.png?v=639183556284670000",
+    "url": "https://www.hmart.com/bead-handle-espresso-mug-yellow-blue/p",
+    "current_price": "$4.99",
+    "basis_price": "$5.99",
+    "prime_price": null,
+    "discount": "17% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4524",
+    "name": "Beef Leg Bones, Frozen 4lb (1.8kg)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172252/2301001400000.png?v=638845603632170000",
+    "url": "https://www.hmart.com/beef-leg-bones--frozen-4lb--1-8kg--1/p",
+    "current_price": "$8.99",
+    "basis_price": "$9.96",
+    "prime_price": null,
+    "discount": "10% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
+    "categories": [
+      "/Meat/Beef/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4525",
+    "name": "Beef Ox Feet, Frozen 2.5lb(1.14kg)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172261/2301003200000.png?v=638845604385100000",
+    "url": "https://www.hmart.com/beef-ox-feet--frozen-2-5lb-1-14kg--1/p",
+    "current_price": "$7.79",
+    "basis_price": "$10.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Meat/Beef/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4527",
+    "name": "Beef Sliced Ribeye Bulgogi, Frozen 1lb(454g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172254/2301001900000.png?v=638845603798100000",
+    "url": "https://www.hmart.com/beef-sliced-ribeye-bulgogi--frozen-1lb-454g--1/p",
+    "current_price": "$9.89",
+    "basis_price": "$13.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=5",
+    "categories": [
+      "/Meat/Beef/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4529",
+    "name": "Beef Sliced Short Plate, Frozen 2lb(907g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172259/2301002900000.png?v=638845604213370000",
+    "url": "https://www.hmart.com/beef-sliced-short-plate--frozen-2lb-907g--1/p",
+    "current_price": "$25.29",
+    "basis_price": "$35.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
+    "categories": [
+      "/Meat/Beef/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4533",
+    "name": "Beef Thin&Roll Ribeye Roll 1lb(454g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172278/2301008300000.png?v=638845605633500000",
+    "url": "https://www.hmart.com/beef-thin-roll-ribeye-roll-1lb-454g--1/p",
+    "current_price": "$17.99",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "10% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=5",
+    "categories": [
+      "/Meat/Beef/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13673",
+    "name": "Big Bear Silicon Ice Tray",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181068/880996318445.png?v=639185190060370000",
+    "url": "https://www.hmart.com/big-bear-silicon-ice-tray/p",
+    "current_price": "$7.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "11% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4541",
+    "name": "Duck Thin&Roll Boneless Breast 1lb(454g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172284/2301008600000.png?v=638845606047630000",
+    "url": "https://www.hmart.com/duck-thin-roll-boneless-breast-1lb-454g--1/p",
+    "current_price": "$19.99",
+    "basis_price": "$25.99",
+    "prime_price": null,
+    "discount": "23% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Meat/Duck,Others/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13429",
+    "name": "Frozen Marinated Beef  /Sliced /Short Ribs /LA Style 1.5lb (680g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180512/31101293002075.png?v=639162415198000000",
+    "url": "https://www.hmart.com/frozen-marinated-beef--sliced--short-ribs--la-style/p",
+    "current_price": "$18.99",
+    "basis_price": "$26.99",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
+    "categories": [
+      "/Meat/Marinated Meat/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13431",
+    "name": "Frozen Marinated Pork /Bulgogi /Boneless Shoulder Butt /Thin 1.5lb (680g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180516/31215493002631.png?v=639162418081730000",
+    "url": "https://www.hmart.com/frozen-marinated-pork--bulgogi--bnls-shoulder-butt--thin/p",
+    "current_price": "$7.39",
+    "basis_price": "$10.49",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
+    "categories": [
+      "/Meat/Marinated Meat/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:10107",
+    "name": "Green Onion Kimchi 12 Oz (340g)",
+    "brand": "Tobagi",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/176535/67001001004.png?v=639008876475230000",
+    "url": "https://www.hmart.com/green-onion-kimchi-12-oz--340g--1/p",
+    "current_price": "$6.89",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:6861",
+    "name": "Green Onion Kimchi 300g",
+    "brand": "Bibigo",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/168742/880139202975--1-.png?v=638567371341300000",
+    "url": "https://www.hmart.com/green-onion-kimchi-300g-1/p",
+    "current_price": "$5.99",
+    "basis_price": "$6.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:10111",
+    "name": "Harvest White Kimchi 3 Lb (1361g)",
+    "brand": "Tobagi",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/179023/84603404855.png?v=639106629041600000",
+    "url": "https://www.hmart.com/harvest-white-kimchi-3-lb--1361g--1/p",
+    "current_price": "$12.69",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13562",
+    "name": "Heart Shaped Bowl Blue",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180876/8800317178070.png?v=639183567141870000",
+    "url": "https://www.hmart.com/heart-shaped-bowl-blue/p",
+    "current_price": "$4.99",
+    "basis_price": "$5.99",
+    "prime_price": null,
+    "discount": "17% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=1",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13574",
+    "name": "Ice Cream Bar Shaped Silicone Mold",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180901/8809836111827.png?v=639183574652270000",
+    "url": "https://www.hmart.com/ice-cream-bar-shaped-silicone-mold/p",
+    "current_price": "$6.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13554",
+    "name": "Keep-going Shaker Container 16.9 Oz (500ML)",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180858/8800284769905.png?v=639183563770570000",
+    "url": "https://www.hmart.com/keep-going-shaker-container-16-9-oz--500ml-/p",
+    "current_price": "$6.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13695",
+    "name": "Kids Gym Racquetball Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181114/880025207909-1.png?v=639185196937530000",
+    "url": "https://www.hmart.com/kids-gym-racquetball-set/p",
+    "current_price": "$11.99",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "8% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Book & Stationery & Hobby/ETC/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13696",
+    "name": "Kids Gym Sparkling LED Kingminton Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181117/880028474650-1.png?v=639185197216570000",
+    "url": "https://www.hmart.com/kids-gym-sparkling-led-kingminton-set/p",
+    "current_price": "$15.99",
+    "basis_price": "$17.99",
+    "prime_price": null,
+    "discount": "11% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Book & Stationery & Hobby/ETC/",
+      "/Book & Stationery & Hobby/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:3922",
+    "name": "Korean Pear Box",
+    "brand": "K-Pear",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/182123/2200211400-2.png?v=639261786825430000",
+    "url": "https://www.hmart.com/-new-crop--korean-won-hwang-pear-korea-1cs--7-9-ea--1/p",
+    "current_price": "$32.99",
+    "basis_price": "$35.99",
+    "prime_price": null,
+    "discount": "8% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "categories": [
+      "/Produce/Fruit/",
+      "/Produce/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4542",
+    "name": "Lamb Thin&Roll Boneless Leg Meat 1lb(454g)",
+    "brand": "H Mart",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/172286/2301008700000.png?v=638845606194970000",
+    "url": "https://www.hmart.com/lamb-thin-roll-boneless-leg-meat-1lb-454g--1/p",
+    "current_price": "$11.99",
+    "basis_price": "$13.19",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Meat/Duck,Others/",
+      "/Meat/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13575",
+    "name": "Melamine Picnic Plate 4p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180903/8809963188136.png?v=639183574881230000",
+    "url": "https://www.hmart.com/melamine-picnic-plate-4p-set/p",
+    "current_price": "$11.99",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "8% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13685",
+    "name": "Mellow Small Walking Bag Blue",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181096/880034546677.png?v=639185194439630000",
+    "url": "https://www.hmart.com/mellow-small-walking-bag-blue/p",
+    "current_price": "$20.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Pet Supply & Accessory/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13684",
+    "name": "Mellow Small Walking Bag Pink",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181094/880034546676.png?v=639185194178200000",
+    "url": "https://www.hmart.com/mellow-small-walking-bag-pink/p",
+    "current_price": "$20.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Pet Supply & Accessory/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13563",
+    "name": "Minhwa Plate 2p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180878/8800345461410.png?v=639183567356770000",
+    "url": "https://www.hmart.com/minhwa-plate-2p-set/p",
+    "current_price": "$13.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13566",
+    "name": "Minhwa Sauce Dish 3p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180883/8800345461441.png?v=639183572503070000",
+    "url": "https://www.hmart.com/minhwa-sauce-dish-3p-set/p",
+    "current_price": "$13.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13565",
+    "name": "Minhwa Soju Glass 2p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180881/8800345461434.png?v=639183572234330000",
+    "url": "https://www.hmart.com/minhwa-soju-glass-2p-set/p",
+    "current_price": "$7.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "11% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13568",
+    "name": "Minhwa Soju Glass 4p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180886/8800345461953.png?v=639183573124630000",
+    "url": "https://www.hmart.com/minhwa-soju-glass-4p-set/p",
+    "current_price": "$13.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13567",
+    "name": "Minhwa Spoon Rest 4p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180885/8800345461458.png?v=639183572750430000",
+    "url": "https://www.hmart.com/minhwa-spoon-rest-4p-set/p",
+    "current_price": "$11.99",
+    "basis_price": "$12.99",
+    "prime_price": null,
+    "discount": "8% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13561",
+    "name": "On Smile Dumpling Plate Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180875/8800317170128.png?v=639183566778070000",
+    "url": "https://www.hmart.com/on-smile-dumpling-plate-set/p",
+    "current_price": "$19.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13551",
+    "name": "On Smile Melamine 4p Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180848/8800284735825-1.png?v=639183562739300000",
+    "url": "https://www.hmart.com/on-smile-melamine-4p-set/p",
+    "current_price": "$20.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13557",
+    "name": "Party Bear Melamine Divided Plate Bowl Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180864/8800317151615.png?v=639183564621530000",
+    "url": "https://www.hmart.com/party-bear-melamine-divided-plate-bowl-set/p",
+    "current_price": "$13.99",
+    "basis_price": "$15.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4467",
+    "name": "Picked Cucumber 8.5 Oz (240 G)",
+    "brand": "Pulmuone",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/165278/8801114304150--1-.png?v=638454333348070000",
+    "url": "https://www.hmart.com/picked-cucumber-8-5-oz--240-g--1/p",
+    "current_price": "$4.29",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Pickle/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:9098",
+    "name": "Pickled Garlic Leaves 4 Oz (113g)",
+    "brand": "Jinga",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/173910/26705100699-exp-date.png?v=638902586095230000",
+    "url": "https://www.hmart.com/pickled-garlic-leaves-4-oz--113g--1/p",
+    "current_price": "$4.99",
+    "basis_price": "$6.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Side Dish/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:2664",
+    "name": "Pickled Radish For Seaweed Roll 6.98 OZ (198 G)",
+    "brand": "Pulmuone",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/175781/880111411370--1-.png?v=638984841686570000",
+    "url": "https://www.hmart.com/pickled-radish-for-seaweed-roll-6-98-oz--198-g--1/p",
+    "current_price": "$4.29",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Pickle/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13571",
+    "name": "Platinum Silicone Baby Food Rice Cooker Divider",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180892/8800345470313.png?v=639183573858570000",
+    "url": "https://www.hmart.com/platinum-silicone-baby-food-rice-cooker-divider/p",
+    "current_price": "$20.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:10097",
+    "name": "Premium Sliced Kimchi 24 Oz (680g)",
+    "brand": "Tobagi",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/177142/26567000000.png?v=639050629346970000",
+    "url": "https://www.hmart.com/premium-sliced-kimchi-24-oz--680g--1/p",
+    "current_price": "$5.69",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13670",
+    "name": "Rabbit Cool Quick Dry Towel",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181059/880996318938-1.png?v=639185189256870000",
+    "url": "https://www.hmart.com/rabbit-cool-quick-dry-towel/p",
+    "current_price": "$6.99",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "13% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:9101",
+    "name": "Seasoned Dried Radish 4 Oz (113g)",
+    "brand": "Jinga",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/173912/26733800499-exp-date.png?v=638902587025470000",
+    "url": "https://www.hmart.com/seasoned-dried-radish-4-oz--113g--1/p",
+    "current_price": "$3.59",
+    "basis_price": "$4.99",
+    "prime_price": null,
+    "discount": "28% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Side Dish/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:3182",
+    "name": "Seasoned Dried Radish 9oz(255g)",
+    "brand": "Jinga",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/161353/5338_1.jpg?v=638448908242570000",
+    "url": "https://www.hmart.com/seasoned-dried-radish-9oz-255g--1/p",
+    "current_price": "$5.29",
+    "basis_price": "$7.49",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Side Dish/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:9080",
+    "name": "Seasoned Dried Squid & File Fish 8 Oz (226g)",
+    "brand": "Jinga",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/173895/26535900999.png?v=638902568736700000",
+    "url": "https://www.hmart.com/seasoned-dried-squid---file-fish-7-oz--198g--1/p",
+    "current_price": "$7.79",
+    "basis_price": "$10.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Side Dish/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:5460",
+    "name": "Seasoned File Fish",
+    "brand": "Jinga",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/167907/26535401149--1-.png?v=638495896066530000",
+    "url": "https://www.hmart.com/seasoned-file-fish-1/p",
+    "current_price": "$6.39",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "29% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Side Dish/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13553",
+    "name": "Silicon Bear Ice Mold",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180855/8800284766539.png?v=639183563540200000",
+    "url": "https://www.hmart.com/silicon-bear-ice-mold/p",
+    "current_price": "$8.99",
+    "basis_price": "$9.99",
+    "prime_price": null,
+    "discount": "10% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13556",
+    "name": "Silicone Icecream Mold Fruit",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180862/8800284771601.png?v=639183564370300000",
+    "url": "https://www.hmart.com/silicone-icecream-mold-fruit/p",
+    "current_price": "$7.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "11% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13555",
+    "name": "Silicone Icecream Mold Rocket",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180860/8800284771595.png?v=639183564053800000",
+    "url": "https://www.hmart.com/silicone-icecream-mold-rocket/p",
+    "current_price": "$7.99",
+    "basis_price": "$8.99",
+    "prime_price": null,
+    "discount": "11% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13559",
+    "name": "Silicone Plate With Storage Container Set",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/180871/880031715440-1.jpg?v=639183565889270000",
+    "url": "https://www.hmart.com/silicone-plate-with-storage-container-set/p",
+    "current_price": "$29.99",
+    "basis_price": "$32.99",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Kitchenware/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:10112",
+    "name": "Sliced Kimchi 3 Lb (1361g)",
+    "brand": "1000 Year",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/177002/84080902024.png?v=639041679108100000",
+    "url": "https://www.hmart.com/sliced-kimchi-3-lb--1361g--1/p",
+    "current_price": "$17.09",
+    "basis_price": "$19.99",
+    "prime_price": null,
+    "discount": "15% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:2683",
+    "name": "Sliced Radish Kimchi 15.87oz(450g)",
+    "brand": "CJ",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/162142/8801007856742_1.png?v=638448911320470000",
+    "url": "https://www.hmart.com/sliced-radish-kimchi-15-87oz-450g--1/p",
+    "current_price": "$5.99",
+    "basis_price": "$6.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=2",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Kimchi/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:5443",
+    "name": "Smoked Dried Anchovy 7oz(200g)",
+    "brand": "Paranhae",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/169197/88091184103_nutr.png?v=638636654411500000",
+    "url": "https://www.hmart.com/smoked-dried-anchovy-7oz-200g--1/p",
+    "current_price": "$6.89",
+    "basis_price": "$7.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=3",
+    "categories": [
+      "/Seafood/Dried Seafood/",
+      "/Seafood/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:4452",
+    "name": "Stir-fried Tiny Anchovies",
+    "brand": "Jinga",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/161342/5148_1.jpg?v=638448908200670000",
+    "url": "https://www.hmart.com/stir-fried-tiny-anchovies-1/p",
+    "current_price": "$8.09",
+    "basis_price": "$11.49",
+    "prime_price": null,
+    "discount": "30% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=1",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Side Dish/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:9631",
+    "name": "Sweet Pickled Ginger Amasu Shoga 12 Oz (340g)",
+    "brand": "Shirakiku",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/175319/7441013060.png?v=638963210854300000",
+    "url": "https://www.hmart.com/sweet-pickled-ginger-amasu-shoga-12-oz--340g--1/p",
+    "current_price": "$4.69",
+    "basis_price": "$5.49",
+    "prime_price": null,
+    "discount": "15% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/237?map=productClusterIds&page=4",
+    "categories": [
+      "/Kimchi & SideDish & Deli/Pickle/",
+      "/Kimchi & SideDish & Deli/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13671",
+    "name": "Toy Organizer Zipper Storage Bag",
+    "brand": "Modern House",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181062/880031718838.png?v=639185189565270000",
+    "url": "https://www.hmart.com/toy-organizer-zipper-storage-bag/p",
+    "current_price": "$20.99",
+    "basis_price": "$22.99",
+    "prime_price": null,
+    "discount": "9% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=3",
+    "categories": [
+      "/Household & Home/Houseware & Living/",
+      "/Household & Home/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
+    "price_source": "H Mart",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "hmart:13579",
+    "name": "Umami Topping Crunchy Garlic With Chili Oil Yuzu 3.88 Oz (110g)",
+    "brand": "S & B",
+    "variation": null,
+    "image": "https://hmartus.vtexassets.com/arquivos/ids/181145/74880191585.png?v=639190922529870000",
+    "url": "https://www.hmart.com/umami-topping-crunchy-garlic-with-chili-oil-yuzu-3-88-oz--110g-/p",
+    "current_price": "$5.99",
+    "basis_price": "$6.99",
+    "prime_price": null,
+    "discount": "14% off",
+    "unit_price": null,
+    "retailer": "H Mart",
+    "retail_source_url": "https://www.hmart.com/166?map=productClusterIds&order=OrderByBestDiscountDESC&page=2",
+    "categories": [
+      "/Oil & Seasoning & Canned Food/Cooking Oil & Sesame Oil/",
+      "/Oil & Seasoning & Canned Food/"
+    ],
+    "available_quantity": 10000,
+    "observed_at": "2026-11-04T14:15:49.828154+00:00",
     "price_source": "H Mart",
     "price_context": "Online",
     "price_verified": true
