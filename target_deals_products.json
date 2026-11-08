@@ -4021,8 +4021,8 @@
     "asin": "target:64928e87ede18c51",
     "name": "Ryze mushroom coffee*",
     "brand": null,
-    "image": "https://target.scene7.com/is/image/Target/GUEST_8c7bb57c-b299-42fd-bac2-f54f996586fe?fmt=webp&qlt=80&wid=600",
-    "url": "https://www.target.com/pl/802242399?content_id=STORY-47552",
+    "image": "https://target.scene7.com/is/image/Target/GUEST_ca72001a-8306-414c-87e6-5953a42747dc?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/434921798?content_id=STORY-48472",
     "current_price": null,
     "basis_price": null,
     "prime_price": null,
@@ -4034,7 +4034,7 @@
     "promotion_terms": {
       "sale": "10% off"
     },
-    "observed_at": "2026-09-25T17:12:13.547629+00:00",
+    "observed_at": "2026-11-08T18:31:46.804712+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
@@ -4409,6 +4409,28 @@
       "sale": "BOGO 25% off"
     },
     "observed_at": "2026-11-06T14:23:59.645431+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:0d3822d51f4ce223",
+    "name": "chocolate packs*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_c518a9c8-6e80-4a29-b765-06ba1f117a08?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/198649378?content_id=STORY-48460",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-11-08T18:31:46.804712+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
