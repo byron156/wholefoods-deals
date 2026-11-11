@@ -1,6 +1,6 @@
 {
-  "built_at": "2026-11-10T14:59:20.777485+00:00",
-  "catalog_sha256": "063d0911325c7878f213d1a7b41d4b8459a8fab19a7787a25fd40dcb74321ce7",
+  "built_at": "2026-11-11T18:16:41.876124+00:00",
+  "catalog_sha256": "d6317b20718f7420d83571a575e663fab4c69a53483624b6b9ab74af4bd87f3b",
   "routes": [
     "/",
     "/meal-plan/"

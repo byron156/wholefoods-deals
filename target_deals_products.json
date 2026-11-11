@@ -4034,7 +4034,7 @@
     "promotion_terms": {
       "sale": "10% off"
     },
-    "observed_at": "2026-11-08T18:31:46.804712+00:00",
+    "observed_at": "2026-11-11T16:11:07.725011+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
@@ -4430,7 +4430,51 @@
     "promotion_terms": {
       "sale": "BOGO 50% off"
     },
-    "observed_at": "2026-11-08T18:31:46.804712+00:00",
+    "observed_at": "2026-11-11T16:11:07.725011+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:fe975b571b4fb4b7",
+    "name": "packaged sugar*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_59db3dd3-eb9e-4982-83bf-e3b3b6d176c5?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/910694384?content_id=STORY-48463",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 50% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 50% off"
+    },
+    "observed_at": "2026-11-11T16:11:07.725011+00:00",
+    "price_source": "Target",
+    "price_context": "Online",
+    "price_verified": true
+  },
+  {
+    "asin": "target:bcc78d76139927d6",
+    "name": "Stars + Honey & Built protein bars*",
+    "brand": null,
+    "image": "https://target.scene7.com/is/image/Target/GUEST_7ea0f5c4-aa05-436f-b4cb-cfce50cb02a4?fmt=webp&qlt=80&wid=600",
+    "url": "https://www.target.com/pl/978602253?content_id=STORY-48467",
+    "current_price": null,
+    "basis_price": null,
+    "prime_price": null,
+    "discount": null,
+    "retailer": "Target",
+    "expires": null,
+    "target_value_text": "BOGO 25% off",
+    "offer_kind": "promotion",
+    "promotion_terms": {
+      "sale": "BOGO 25% off"
+    },
+    "observed_at": "2026-11-11T16:11:07.725011+00:00",
     "price_source": "Target",
     "price_context": "Online",
     "price_verified": true
