@@ -1,6 +1,6 @@
 {
   "reused_previous": true,
-  "error": "HTTPSConnectionPool(host='www.hmart.com', port=443): Read timed out.",
+  "error": "HTTPSConnectionPool(host='www.hmart.com', port=443): Read timed out. (read timeout=30)",
   "source_urls": [
     "https://www.hmart.com/weekly-sale?map=productClusterNames&order=OrderByBestDiscountDESC",
     "https://www.hmart.com/237?map=productClusterIds&page=1",
